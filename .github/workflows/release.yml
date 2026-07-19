@@ -1,0 +1,64 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - 'v*'
+
+jobs:
+  release:
+    name: Create Release
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    steps:
+      - uses: actions/checkout@v3
+        with:
+          fetch-depth: 0
+      
+      - name: Generate changelog
+        id: changelog
+        run: |
+          # Get the latest tag
+          LATEST_TAG=$(git describe --tags --abbrev=0 HEAD~1 2>/dev/null || echo "")
+          
+          # Generate changelog
+          if [ -z "$LATEST_TAG" ]; then
+            CHANGES=$(git log --oneline --no-merges HEAD)
+          else
+            CHANGES=$(git log --oneline --no-merges ${LATEST_TAG}..HEAD)
+          fi
+          
+          # Write to output
+          echo "changes<<EOF" >> $GITHUB_OUTPUT
+          echo "$CHANGES" >> $GITHUB_OUTPUT
+          echo "EOF" >> $GITHUB_OUTPUT
+      
+      - name: Create GitHub Release
+        uses: actions/github-script@v6
+        with:
+          script: |
+            const version = context.ref.replace('refs/tags/', '');
+            const changelog = `${{ steps.changelog.outputs.changes }}`;
+            
+            await github.rest.repos.createRelease({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              tag_name: version,
+              name: `Release ${version}`,
+              body: `## Changes\n\n${changelog}`,
+              draft: false,
+              prerelease: false
+            });
+      
+      - name: Upload assets
+        uses: actions/upload-artifact@v3
+        with:
+          name: release-assets
+          path: |
+            skills/
+            agents/
+            templates/
+            prompts/
+            context/
+            scripts/
