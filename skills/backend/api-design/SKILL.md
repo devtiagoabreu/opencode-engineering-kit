@@ -2,7 +2,7 @@
 name: api-design
 description: Complete guide for RESTful API design
 category: backend
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [api, rest, backend, design]
 compatible:

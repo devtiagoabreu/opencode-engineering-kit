@@ -1,7 +1,7 @@
 ---
 name: devops-engineer
 description: DevOps Engineer specialized in infrastructure, CI/CD, and automation
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [devops, infrastructure, cicd, automation]
 compatible:

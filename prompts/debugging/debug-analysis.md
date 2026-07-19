@@ -2,7 +2,7 @@
 name: debug-analysis
 description: Prompt for bug analysis and diagnosis
 category: debugging
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [debugging, error-analysis, troubleshooting]
 compatible:

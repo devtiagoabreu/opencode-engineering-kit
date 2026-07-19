@@ -2,7 +2,7 @@
 name: decisions-context
 description: Architectural decisions for OpenCode Engineering Kit
 type: decisions
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 ---
 

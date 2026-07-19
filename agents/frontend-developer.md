@@ -1,7 +1,7 @@
 ---
 name: frontend-developer
 description: Frontend Developer specialized in UI/UX and modern frameworks
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [frontend, ui, ux, react, javascript]
 compatible:

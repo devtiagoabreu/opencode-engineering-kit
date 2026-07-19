@@ -2,7 +2,7 @@
 name: git-workflow
 description: Complete guide to Git workflow and best practices
 category: git
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [git, workflow, version-control, branching]
 compatible:

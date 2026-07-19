@@ -1,7 +1,7 @@
 ---
 name: lint
 description: Command to check code linting
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [linting, code-quality]
 compatible:

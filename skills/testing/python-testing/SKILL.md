@@ -2,7 +2,7 @@
 name: python-testing
 description: Complete guide to Python testing with pytest
 category: testing
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [python, testing, pytest, unit-tests]
 compatible:

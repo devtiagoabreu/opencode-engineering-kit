@@ -2,7 +2,7 @@
 name: docker-best-practices
 description: Complete guide for Docker and containers best practices in production
 category: devops
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [docker, containers, devops, production]
 compatible:

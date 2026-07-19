@@ -1,7 +1,7 @@
 ---
 name: backend-developer
 description: Backend Developer specialized in APIs and distributed systems
-version: 1.0.0
+version: 0.1.0
 author: OpenCode Community
 tags: [backend, api, database, microservices]
 compatible:
