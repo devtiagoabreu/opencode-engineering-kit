@@ -8,10 +8,7 @@ compatible:
   - opencode
   - claude-code
   - cursor
-skills:
-  - react-best-practices
-  - css-modern
-  - javascript-patterns
+skills: []
 personas:
   - Desenvolvedor Frontend sênior
   - Especialista em UI/UX

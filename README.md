@@ -3,7 +3,7 @@
 > Skills, Agents, Commands, Prompts, Templates, and Context for the OpenCode ecosystem.
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![Version](https://img.shields.io/badge/version-2.0.0-blue.svg)](https://github.com/opencode-ai/opencode-engineering-kit)
+[![Version](https://img.shields.io/badge/version-0.1.0-blue.svg)](https://github.com/opencode-ai/opencode-engineering-kit)
 [![OpenCode](https://img.shields.io/badge/OpenCode-compatible-brightgreen.svg)](https://opencode.ai)
 
 ## Overview

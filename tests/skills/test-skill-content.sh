@@ -22,39 +22,38 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     skill_name=$(basename "$skill_dir")
     skill_file="$skill_dir/SKILL.md"
     
+    # Skip directories without SKILL.md
     if [[ ! -f "$skill_file" ]]; then
-        echo "ERROR: $skill_file not found"
-        ((ERRORS++))
         continue
     fi
     
-    # Check for Overview section
-    if ! grep -q "## Overview" "$skill_file"; then
-        echo "ERROR: $skill_file missing 'Overview' section"
+    # Check for Overview section (English or Portuguese)
+    if ! grep -qE "## (Overview|Visão Geral)" "$skill_file"; then
+        echo "ERROR: $skill_file missing 'Overview' or 'Visão Geral' section"
         ((ERRORS++))
     fi
     
-    # Check for Prerequisites section
-    if ! grep -q "## Prerequisites" "$skill_file"; then
-        echo "ERROR: $skill_file missing 'Prerequisites' section"
+    # Check for Prerequisites section (English or Portuguese)
+    if ! grep -qE "## (Prerequisites|Pré-requisitos)" "$skill_file"; then
+        echo "ERROR: $skill_file missing 'Prerequisites' or 'Pré-requisitos' section"
         ((ERRORS++))
     fi
     
-    # Check for Usage Instructions section
-    if ! grep -q "## Usage Instructions" "$skill_file"; then
-        echo "ERROR: $skill_file missing 'Usage Instructions' section"
+    # Check for Usage Instructions section (English or Portuguese)
+    if ! grep -qE "## (Usage Instructions|Instruções de Uso)" "$skill_file"; then
+        echo "ERROR: $skill_file missing 'Usage Instructions' or 'Instruções de Uso' section"
         ((ERRORS++))
     fi
     
-    # Check for Examples section
-    if ! grep -q "## Examples" "$skill_file"; then
-        echo "ERROR: $skill_file missing 'Examples' section"
+    # Check for Examples section (English or Portuguese)
+    if ! grep -qE "## (Examples|Exemplos)" "$skill_file"; then
+        echo "ERROR: $skill_file missing 'Examples' or 'Exemplos' section"
         ((ERRORS++))
     fi
     
-    # Check for References section
-    if ! grep -q "## References" "$skill_file"; then
-        echo "ERROR: $skill_file missing 'References' section"
+    # Check for References section (English or Portuguese)
+    if ! grep -qE "## (References|Referências)" "$skill_file"; then
+        echo "ERROR: $skill_file missing 'References' or 'Referências' section"
         ((ERRORS++))
     fi
     

@@ -1,13 +1,13 @@
 #!/bin/bash
 set -euo pipefail
 
-# Template format tests
-# Verifies that all templates follow the standard format
+# Template content tests
+# Verifies that templates have adequate content
 
 TEMPLATES_DIR="templates"
 ERRORS=0
 
-echo "=== Testing Template Format ==="
+echo "=== Testing Template Content ==="
 
 if [[ ! -d "$TEMPLATES_DIR" ]]; then
     echo "ERROR: Directory $TEMPLATES_DIR not found"
@@ -37,6 +37,11 @@ for template_dir in "$TEMPLATES_DIR"/*/; do
         echo "WARNING: $template_dir missing template variables"
     fi
     
+    # Check for Usage section (English or Portuguese)
+    if ! grep -rqE "## (Usage|Uso|Instructions|Instruções)" "$template_dir"; then
+        echo "WARNING: $template_dir missing usage instructions"
+    fi
+    
     echo "OK: $template_name"
 done
 
@@ -45,5 +50,5 @@ if (( ERRORS > 0 )); then
     exit 1
 fi
 
-echo "=== All format tests passed ==="
+echo "=== All content tests passed ==="
 exit 0

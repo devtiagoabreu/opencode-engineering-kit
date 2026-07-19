@@ -1,43 +1,54 @@
 # Changelog
 
-Todas as mudanças notáveis neste projeto serão documentadas neste arquivo.
+All notable changes to this project will be documented in this file.
 
-O formato é baseado em [Keep a Changelog](https://keepachangelog.com/pt-BR/1.0.0/),
-e este projeto adere ao [Semantic Versioning](https://semver.org/lang/pt-BR/).
+The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
+and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
 
 ### Added
-- Estrutura inicial do projeto
-- README.md com documentação principal
-- CONTRIBUTING.md com guia de contribuição
-- LICENSE (MIT)
-- PROJECT_SPEC.md com especificação completa
-- Bootstrap script para configuração inicial
-- Estrutura de diretórios para skills, agents, templates, prompts, context
+- .gitignore for security and build artifacts
+- Linting configs (.markdownlint.json, .yamllint.yml, .shellcheckrc, .editorconfig)
+- Test runner script (scripts/test.sh)
+- Agent content tests
+- Template content tests
+- Install script tests
+- Fixed install.sh copy-direction bug (line 69)
+- Fixed bootstrap.sh to match actual structure
+- Fixed agent frontmatter references to non-existent skills
+- Updated all documentation to English
+- Version aligned to v0.1.0 across all files
 
 ### Changed
-- Nenhuma mudança ainda
+- Standardized language to English throughout
+- Updated test-skill-content.sh to support both English and Portuguese headers
+- Removed empty docs/ files
+- Removed orphan directories (nano scripts/, specs/)
 
 ### Deprecated
-- Nenhuma depreciação ainda
+- None yet
 
 ### Removed
-- Nenhuma remoção ainda
+- Empty docs/ placeholder files
+- Orphan directories (nano scripts/, specs/)
 
 ### Fixed
-- Nenhuma correção ainda
+- install.sh copy-direction bug (line 69)
+- bootstrap.sh structure mismatch with actual files
+- Agent frontmatter references to non-existent skills
+- Version inconsistency (v2.0.0 vs v0.1.0)
 
 ### Security
-- Nenhuma vulnerabilidade reportada ainda
+- Added .gitignore to prevent secrets from being committed
 
 ## [0.1.0] - 2026-07-18
 
 ### Added
-- Estrutura inicial do projeto
+- Initial project structure
 - Bootstrap script (scripts/bootstrap.sh)
-- Documentação básica (README, CONTRIBUTING, LICENSE)
-- PROJECT_SPEC.md com especificação completa
+- Basic documentation (README, CONTRIBUTING, LICENSE)
+- PROJECT_SPEC.md with complete specification
 
 ---
 

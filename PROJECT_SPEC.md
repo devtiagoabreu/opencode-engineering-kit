@@ -1,6 +1,6 @@
 # PROJECT_SPEC.md — OpenCode Engineering Kit
 
-> **Version:** 2.0.0 | **Date:** 2026-07-18 | **Status:** Draft
+> **Version:** 0.1.0 | **Date:** 2026-07-18 | **Status:** Draft
 >
 > This document is the **single source of truth** for all project implementation.
 > Any implementation must strictly follow this document.

@@ -10,8 +10,7 @@ compatible:
   - cursor
 skills:
   - docker-best-practices
-  - kubernetes-deployment
-  - ci-cd-pipeline
+  - git-workflow
 personas:
   - Engenheiro DevOps sênior
   - Especialista em infraestrutura

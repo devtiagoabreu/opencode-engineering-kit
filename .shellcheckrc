@@ -1,0 +1,7 @@
+# ShellCheck configuration
+# https://www.shellcheck.net/wiki/
+
+# Don't warn about:
+# - Variables starting with uppercase (our convention)
+# - Optional arguments in functions
+# - Using $1, $2, etc. without checking if they exist

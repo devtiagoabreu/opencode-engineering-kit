@@ -10,7 +10,6 @@ compatible:
   - cursor
 skills:
   - api-design
-  - database-optimization
   - python-testing
 personas:
   - Desenvolvedor Backend sênior

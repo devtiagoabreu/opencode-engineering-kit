@@ -1,0 +1,72 @@
+# Secrets
+.env
+.env.*
+*.pem
+*.key
+*.p12
+*.pfx
+*.crt
+*.csr
+
+# API keys and tokens
+*_api_key*
+*_token*
+*_secret*
+*_password*
+
+# Dependencies
+node_modules/
+venv/
+__pycache__/
+*.pyc
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Build
+dist/
+build/
+*.log
+*.tmp
+*.temp
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+
+# OS
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Desktop.ini
+
+# Testing
+coverage/
+*.cover
+*.gcov
+*.gcno
+*.gcda
+
+# Environment
+*.env.local
+*.env.development
+*.env.test
+*.env.production
+
+# Backup
+*.bak
+*.backup
+*.orig
+
+# Cache
+.cache/
+*.cache
+tmp/

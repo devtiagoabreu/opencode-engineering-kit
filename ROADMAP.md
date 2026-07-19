@@ -1,90 +1,95 @@
 # Roadmap
 
-Visão geral do desenvolvimento planejado para o OpenCode Engineering Kit.
+Overview of planned development for the OpenCode Engineering Kit.
 
-## Versão Atual
+## Current Version
 
-**v0.1.0** — Em desenvolvimento
+**v0.1.0** — In development
 
-## Marcos Planejados
+## Planned Milestones
 
-### v0.1.0 — Fundação (Q3 2026)
+### v0.1.0 — Foundation (Q3 2026)
 
-- [x] Estrutura de diretórios
+- [x] Directory structure
 - [x] Bootstrap script
 - [x] README.md
 - [x] CONTRIBUTING.md
-- [x] LICENSE
+- [x] LICENSE (MIT)
 - [x] PROJECT_SPEC.md
-- [ ] GitHub Actions CI
-- [ ] Testes básicos
+- [x] .gitignore
+- [x] Linting configs (.markdownlint.json, .yamllint.yml, .shellcheckrc, .editorconfig)
+- [x] GitHub Actions CI
+- [x] Basic tests (skills, agents, templates, scripts)
+- [x] Test runner script
 
 ### v0.2.0 — Core Skills (Q3 2026)
 
-- [ ] docker-best-practices
+- [x] docker-best-practices
+- [x] code-review-checklist
+- [x] python-testing
+- [x] git-workflow
+- [x] api-design
 - [ ] kubernetes-deployment
 - [ ] ci-cd-pipeline
-- [ ] code-review-checklist
-- [ ] python-testing
 - [ ] javascript-testing
-- [ ] git-workflow
-- [ ] api-design
 
 ### v0.3.0 — Agents (Q4 2026)
 
-- [ ] devops-engineer
-- [ ] frontend-developer
-- [ ] backend-developer
+- [x] devops-engineer
+- [x] frontend-developer
+- [x] backend-developer
 - [ ] fullstack-developer
 - [ ] mobile-developer
 - [ ] security-engineer
 - [ ] qa-engineer
 
-### v0.4.0 — Templates e Prompts (Q4 2026)
+### v0.4.0 — Templates and Prompts (Q4 2026)
 
-- [ ] new-project template
+- [x] new-project template
+- [x] skill template
+- [x] agent template
+- [x] prompt template
+- [x] code-review prompts
+- [x] debugging prompts
+- [x] architecture prompts
 - [ ] opencode-config template
-- [ ] skill template
-- [ ] code-review prompts
-- [ ] debugging prompts
-- [ ] architecture prompts
 
-### v1.0.0 — Release Estável (Q1 2027)
+### v1.0.0 — Stable Release (Q1 2027)
 
 - [ ] 50+ skills
 - [ ] 20+ agents
 - [ ] 30+ templates
-- [ ] Documentação completa
-- [ ] CI/CD completo
-- [ ] Comunidade ativa
+- [ ] Complete documentation
+- [ ] Complete CI/CD
+- [ ] Active community
 
-## Visão de Longo Prazo
+## Long-Term Vision
 
 ### 2027
 
-- Integração com mais plataformas AI
-- Marketplace de skills da comunidade
-- Suporte a múltiplos idiomas
-- Ferramentas CLI para gerenciamento
+- Integration with more AI platforms
+- Community skills marketplace
+- Multi-language support
+- CLI tools for management
 
 ### 2028
 
-- Editor visual de skills
-- IA para sugestão de skills
-- Integração com IDEs populares
-- Certificações para contribuidores
+- Visual skill editor
+- AI for skill suggestions
+- Integration with popular IDEs
+- Contributor certifications
 
-## Como Contribuir para o Roadmap
+## How to Contribute to the Roadmap
 
-1. Abra uma issue com a tag `enhancement`
-2. Discuta a proposta com a comunidade
-3. Após aprovação, implemente a feature
-4. Submeta um PR
+1. Open an issue with the `enhancement` tag
+2. Discuss the proposal with the community
+3. After approval, implement the feature
+4. Submit a PR
 
-## Prioridades
+## Priorities
 
-| Prioridade | Descrição |
-|-----------|-----------|
-| Alta | Funcionalidades core, segurança |
-| Média | Features novas, melhorias |
-| Baixa | Nice-to-have, experimentos |
+| Priority | Description |
+|----------|-------------|
+| High | Core features, security |
+| Medium | New features, improvements |
+| Low | Nice-to-have, experiments |

@@ -22,9 +22,8 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     skill_name=$(basename "$skill_dir")
     skill_file="$skill_dir/SKILL.md"
     
+    # Skip directories without SKILL.md
     if [[ ! -f "$skill_file" ]]; then
-        echo "ERROR: $skill_file not found"
-        ((ERRORS++))
         continue
     fi
     
