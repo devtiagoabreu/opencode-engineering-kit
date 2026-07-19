@@ -20,30 +20,6 @@ OpenCode Engineering Kit is an open source library providing Skills, Agents, Com
 4. Create reusable Prompts
 5. Maintain compatibility with OpenCode, Claude Code, and Cursor
 
-## Tech Stack
-
-- **Format:** Markdown + YAML
-- **Scripts:** Bash
-- **CI/CD:** GitHub Actions
-- **Documentation:** Markdown
-- **Version Control:** Git
-
-## Conventions
-
-- All files use kebab-case
-- Skills follow SKILL.md format
-- Agents are .md files
-- Templates include {{variable}} variables
-- Commits follow Conventional Commits
-
-## Architectural Decisions
-
-1. Skills in markdown format (AD-001)
-2. Category organization (AD-002)
-3. Agents as .md files (AD-003)
-4. Context as separate files (AD-004)
-5. Bash scripts (AD-005)
-
 ## Target Audience
 
 - Developers using OpenCode
@@ -58,3 +34,11 @@ OpenCode Engineering Kit is an open source library providing Skills, Agents, Com
 - **Community:** Open source, contributions welcome
 - **Quality:** Tests, review, documentation
 - **Security:** No exposure of secrets
+
+## References
+
+- [Architecture](./architecture.md) - Architectural principles
+- [Decisions](./decisions.md) - Architecture Decision Records
+- [Stack](./stack.md) - Tech stack details
+- [Conventions](./conventions.md) - Code conventions
+- [Naming](./naming.md) - Naming conventions

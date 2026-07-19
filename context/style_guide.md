@@ -138,36 +138,10 @@ if is_valid "test"; then
 fi
 ```
 
-## Naming Conventions
+## References
 
-### Files
-
-| Type | Format | Example |
-|------|--------|---------|
-| Skill | kebab-case.md | `docker-best-practices.md` |
-| Agent | kebab-case.md | `devops-engineer.md` |
-| Template | kebab-case/ | `new-project/` |
-| Prompt | kebab-case.md | `code-review-checklist.md` |
-| Command | kebab-case.md | `/review` |
-| Context | kebab-case.md | `project.md` |
-| Script | kebab-case.sh | `bootstrap.sh` |
-| Document | kebab-case.md | `getting-started.md` |
-
-### Directories
-
-| Type | Format | Example |
-|------|--------|---------|
-| Category | kebab-case | `code-quality/` |
-| Project | kebab-case | `opencode-engineering-kit/` |
-| Template | kebab-case | `new-project/` |
-
-### Variables
-
-| Context | Format | Example |
-|---------|--------|---------|
-| YAML | snake_case | `skill_name` |
-| Bash | UPPER_SNAKE | `SKILL_NAME` |
-| Markdown | {{snake_case}} | `{{skill_name}}` |
+- [Naming](./naming.md) - Naming conventions
+- [Conventions](./conventions.md) - Code conventions
 
 ## Anti-Patterns
 
@@ -178,3 +152,24 @@ fi
 | Generic names | Descriptive names | Readability |
 | Long functions | Small functions | Comprehension |
 | Excessive comments | Self-documenting code | Maintenance |
+| Silent errors | Explicit handling | Debugging |
+| Magic numbers | Named constants | Readability |
+
+## Quality Metrics
+
+| Metric | Minimum | Ideal |
+|--------|---------|-------|
+| Test coverage | 80% | 90%+ |
+| Cyclomatic complexity | < 10 | < 5 |
+| Duplication | < 5% | 0% |
+| Documentation | 100% | 100% |
+
+## Quality Checklist
+
+- [ ] Code is readable
+- [ ] Names are descriptive
+- [ ] Functions are small
+- [ ] No duplicated code
+- [ ] Error handling adequate
+- [ ] Tests present
+- [ ] Documentation updated

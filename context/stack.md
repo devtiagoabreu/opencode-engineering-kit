@@ -95,24 +95,8 @@ author: OpenCode Community
 | Bash | .sh | Scripts |
 | JSON | .json | Configuration |
 
-## Best Practices
+## References
 
-### Security
-
-- Never commit secrets
-- Use environment variables
-- Validate input
-- Sanitize output
-
-### Performance
-
-- Compress assets when necessary
-- Use lazy loading
-- Minimize dependencies
-
-### Maintenance
-
-- Document decisions
-- Keep changelog updated
-- Version appropriately
-- Test regularly
+- [Security](./security.md) - Security best practices
+- [Performance](./performance.md) - Performance guidelines
+- [Decisions](./decisions.md) - Architecture decisions

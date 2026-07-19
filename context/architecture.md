@@ -84,12 +84,8 @@ Contributor → Fork → Feature Branch → Implement →
 Test → Document → Submit PR → Code Review → Merge
 ```
 
-## Architectural Decisions
+## References
 
-See [PROJECT_SPEC.md](../PROJECT_SPEC.md#5-architecture) for detailed decisions.
-
-- AD-001: SKILL.md Format
-- AD-002: Category Organization
-- AD-003: Agents as .md Files
-- AD-004: Context as Separate Files
-- AD-005: Bash Scripts
+- [Decisions](./decisions.md) - Architecture Decision Records
+- [Stack](./stack.md) - Tech stack details
+- [Project](./project.md) - Project overview
