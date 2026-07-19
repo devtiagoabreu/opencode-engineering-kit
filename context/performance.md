@@ -1,78 +1,78 @@
 ---
 name: performance-context
-description: Contexto de performance do OpenCode Engineering Kit
+description: Performance context for OpenCode Engineering Kit
 type: project
 version: 1.0.0
 author: OpenCode Community
 ---
 
-# Contexto de Performance
+# Performance Context
 
-## Objetivos de Performance
+## Performance Goals
 
-| Métrica | Meta | Medição |
-|---------|------|---------|
-| Tempo de carregamento | < 1s | Medição manual |
-| Tamanho de arquivo | < 1MB | wc -c |
-| Complexidade | O(n) | Análise de código |
-| Memória | < 100MB | top/htop |
+| Metric | Target | Measurement |
+|--------|--------|-------------|
+| Load time | < 1s | Manual measurement |
+| File size | < 1MB | wc -c |
+| Complexity | O(n) | Code analysis |
+| Memory | < 100MB | top/htop |
 
-## Limites
+## Limits
 
-| Recurso | Limite | Ação |
-|---------|--------|------|
-| Tamanho de skill | 500 linhas | Dividir em múltiplas |
-| Tamanho de agent | 200 linhas | Simplificar |
-| Tamanho de prompt | 100 linhas | Simplificar |
-| Total de skills | 100+ | Organizar melhor |
-| Total de agents | 50+ | Consolidar |
+| Resource | Limit | Action |
+|----------|-------|--------|
+| Skill size | 500 lines | Split into multiple |
+| Agent size | 200 lines | Simplify |
+| Prompt size | 100 lines | Simplify |
+| Total skills | 100+ | Better organization |
+| Total agents | 50+ | Consolidate |
 
-## Otimizações
+## Optimizations
 
-### Arquivos
+### Files
 
-- Usar compressão para arquivos grandes
-- Dividir arquivos muito longos
-- Usar lazy loading quando possível
+- Use compression for large files
+- Split very long files
+- Use lazy loading when possible
 
 ### Scripts
 
-- Evitar loops desnecessários
-- Usar comandos eficientes do shell
-- Minimizar chamadas ao sistema
+- Avoid unnecessary loops
+- Use efficient shell commands
+- Minimize system calls
 
-### Documentação
+### Documentation
 
-- Usar links de referência
-- Evitar imagens grandes
-- Comprimir assets quando necessário
+- Use reference links
+- Avoid large images
+- Compress assets when needed
 
 ## Benchmarks
 
 ```bash
-# Medir tempo de execução
+# Measure execution time
 time ./scripts/bootstrap.sh
 
-# Medir tamanho
+# Measure size
 du -sh skills/
 du -sh agents/
 du -sh templates/
 
-# Medir complexidade
+# Measure complexity
 find . -name "*.md" | wc -l
 find . -name "*.sh" | wc -l
 ```
 
-## Monetização
+## Monitoring
 
 ### Performance
 
-- Monitorar tempo de carregamento
-- Rastrear tamanho dos arquivos
-- Medir uso de memória
+- Monitor load time
+- Track file sizes
+- Measure memory usage
 
-### Qualidade
+### Quality
 
-- Verificar cobertura de testes
-- Medir taxa de erros
-- Rastrear satisfação do usuário
+- Check test coverage
+- Measure error rate
+- Track user satisfaction
