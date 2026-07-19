@@ -1,6 +1,6 @@
 ---
 name: debug-analysis
-description: Prompt para análise e diagnóstico de bugs
+description: Prompt for bug analysis and diagnosis
 category: debugging
 version: 1.0.0
 author: OpenCode Community
@@ -11,78 +11,78 @@ compatible:
   - cursor
 variables:
   - name: error_message
-    description: Mensagem de erro
+    description: Error message
   - name: code_context
-    description: Código onde ocorre o erro
+    description: Code where the error occurs
 ---
 
 # Debug Analysis
 
-## Objetivo
+## Objective
 
-Analisan e diagnosticar bugs de forma sistemática, identificando a causa raiz
-e propondo soluções.
+Analyze and diagnose bugs systematically, identifying the root cause
+and proposing solutions.
 
-## Instruções
+## Instructions
 
-### Contexto
+### Context
 
-Você é um engenheiro de software experiente em debug. Analise o erro
-fornecido e identifique a causa raiz.
+You are an experienced software engineer in debugging. Analyze the provided
+error and identify the root cause.
 
-### Tarefa
+### Task
 
-1. Analisar a mensagem de erro
-2. Identificar a causa raiz
-3. Propor solução
-4. Sugerir prevenção
+1. Analyze the error message
+2. Identify the root cause
+3. Propose a solution
+4. Suggest prevention
 
-### Critérios
+### Criteria
 
-1. **Causa raiz:** Identificada corretamente?
-2. **Solução:** Viável e testada?
-3. **Prevenção:** Como evitar no futuro?
+1. **Root cause:** Identified correctly?
+2. **Solution:** Feasible and tested?
+3. **Prevention:** How to avoid in the future?
 
-## Exemplo de Uso
+## Usage Example
 
 ```
-Analise o seguinte erro:
+Analyze the following error:
 
-Mensagem de erro: {{error_message}}
+Error message: {{error_message}}
 
-Código onde ocorre:
+Code where it occurs:
 ```{{language}}
 {{code_context}}
 ```
 
-Por favor:
-1. Identifique a causa raiz
-2. Proponha uma solução
-3. Sugira como prevenir no futuro
+Please:
+1. Identify the root cause
+2. Propose a solution
+3. Suggest how to prevent it in the future
 ```
 
-## Variações
+## Variations
 
-### Variação 1: Análise de Erro de Runtime
-
-```
-Analise este erro de runtime:
-1. O que causou o erro?
-2. Onde exatamente ocorreu?
-3. Quais variáveis estavam envolvidas?
-4. Como corrigir?
-```
-
-### Variação 2: Análise de Erro de Compilação
+### Variation 1: Runtime Error Analysis
 
 ```
-Analise este erro de compilação:
-1. O que o erro significa?
-2. Qual linha causa o problema?
-3. Como corrigir a sintaxe?
+Analyze this runtime error:
+1. What caused the error?
+2. Where exactly did it occur?
+3. What variables were involved?
+4. How to fix it?
 ```
 
-## Referências
+### Variation 2: Compilation Error Analysis
+
+```
+Analyze this compilation error:
+1. What does the error mean?
+2. Which line causes the problem?
+3. How to fix the syntax?
+```
+
+## References
 
 - [Debugging Best Practices](https://stackoverflow.com/questions/2112975/debugging-best-practices)
 - [Rubber Duck Debugging](https://en.wikipedia.org/wiki/Rubber_duck_debugging)

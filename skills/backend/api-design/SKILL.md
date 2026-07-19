@@ -1,6 +1,6 @@
 ---
 name: api-design
-description: Guia completo de design de APIs RESTful
+description: Complete guide for RESTful API design
 category: backend
 version: 1.0.0
 author: OpenCode Community
@@ -10,92 +10,92 @@ compatible:
   - claude-code
   - cursor
 requires:
-  - Conhecimento básico de HTTP
+  - Basic HTTP knowledge
 provides:
-  - Padrões de design de API
-  - Convenções REST
-  - Melhores práticas
+  - API design patterns
+  - REST conventions
+  - Best practices
 ---
 
 # API Design
 
-## Visão Geral
+## Overview
 
-Esta skill fornece guia completo para design de APIs RESTful, incluindo
-convenções, padrões e melhores práticas.
+This skill provides a complete guide for RESTful API design, including
+conventions, patterns, and best practices.
 
-## Pré-requisitos
+## Prerequisites
 
-- Conhecimento básico de HTTP
-- Entender verbos HTTP
-- Conhecimento de status codes
+- Basic HTTP knowledge
+- Understanding of HTTP verbs
+- Knowledge of status codes
 
-## Instruções de Uso
+## Usage Instructions
 
-### 1. Convenções de URL
+### 1. URL Conventions
 
 ```
-# Recursos no plural
-GET    /api/v1/usuarios
-GET    /api/v1/usuarios/123
-POST   /api/v1/usuarios
-PUT    /api/v1/usuarios/123
-DELETE /api/v1/usuarios/123
+# Resources in plural
+GET    /api/v1/users
+GET    /api/v1/users/123
+POST   /api/v1/users
+PUT    /api/v1/users/123
+DELETE /api/v1/users/123
 
-# Sub-recursos
-GET    /api/v1/usuarios/123/posts
-GET    /api/v1/usuarios/123/posts/456
+# Sub-resources
+GET    /api/v1/users/123/posts
+GET    /api/v1/users/123/posts/456
 
-# Ações específicas
-POST   /api/v1/usuarios/123/ativar
-POST   /api/v1/usuarios/123/desativar
+# Specific actions
+POST   /api/v1/users/123/activate
+POST   /api/v1/users/123/deactivate
 ```
 
-### 2. Verbos HTTP
+### 2. HTTP Verbs
 
-| Verbo | Uso | Idempotente |
-|-------|-----|-------------|
-| GET | Ler recurso | Sim |
-| POST | Criar recurso | Não |
-| PUT | Atualizar recurso completo | Sim |
-| PATCH | Atualizar parcialmente | Não |
-| DELETE | Deletar recurso | Sim |
+| Verb | Usage | Idempotent |
+|------|-------|------------|
+| GET | Read resource | Yes |
+| POST | Create resource | No |
+| PUT | Update entire resource | Yes |
+| PATCH | Partial update | No |
+| DELETE | Delete resource | Yes |
 
 ### 3. Status Codes
 
-| Código | Uso |
-|--------|-----|
-| 200 | Sucesso |
-| 201 | Criado |
-| 204 | Sem conteúdo |
+| Code | Usage |
+|------|-------|
+| 200 | Success |
+| 201 | Created |
+| 204 | No Content |
 | 400 | Bad Request |
-| 401 | Não autenticado |
-| 403 | Não autorizado |
-| 404 | Não encontrado |
-| 409 | Conflito |
+| 401 | Unauthenticated |
+| 403 | Unauthorized |
+| 404 | Not Found |
+| 409 | Conflict |
 | 422 | Unprocessable Entity |
-| 500 | Erro interno |
+| 500 | Internal Server Error |
 
-### 4. Formato de Resposta
+### 4. Response Format
 
 ```json
-// Sucesso
+// Success
 {
   "data": {
     "id": 123,
-    "nome": "João",
-    "email": "joao@email.com"
+    "name": "John",
+    "email": "john@email.com"
   },
   "meta": {
     "timestamp": "2026-07-18T10:00:00Z"
   }
 }
 
-// Lista
+// List
 {
   "data": [
-    {"id": 1, "nome": "João"},
-    {"id": 2, "nome": "Maria"}
+    {"id": 1, "name": "John"},
+    {"id": 2, "name": "Jane"}
   ],
   "meta": {
     "total": 2,
@@ -104,38 +104,38 @@ POST   /api/v1/usuarios/123/desativar
   }
 }
 
-// Erro
+// Error
 {
   "error": {
     "code": "VALIDATION_ERROR",
-    "message": "Email inválido",
+    "message": "Invalid email",
     "details": [
       {
         "field": "email",
-        "message": "Formato de email inválido"
+        "message": "Invalid email format"
       }
     ]
   }
 }
 ```
 
-### 5. Versionamento
+### 5. Versioning
 
 ```
-# Via URL (recomendado)
-/api/v1/usuarios
-/api/v2/usuarios
+# Via URL (recommended)
+/api/v1/users
+/api/v2/users
 
 # Via header
 Accept: application/vnd.api.v1+json
 ```
 
-### 6. Paginação
+### 6. Pagination
 
 ```
-GET /api/v1/usuarios?page=2&per_page=10
+GET /api/v1/users?page=2&per_page=10
 
-# Resposta
+# Response
 {
   "data": [...],
   "meta": {
@@ -145,77 +145,77 @@ GET /api/v1/usuarios?page=2&per_page=10
     "total_pages": 10
   },
   "links": {
-    "self": "/api/v1/usuarios?page=2&per_page=10",
-    "next": "/api/v1/usuarios?page=3&per_page=10",
-    "prev": "/api/v1/usuarios?page=1&per_page=10"
+    "self": "/api/v1/users?page=2&per_page=10",
+    "next": "/api/v1/users?page=3&per_page=10",
+    "prev": "/api/v1/users?page=1&per_page=10"
   }
 }
 ```
 
-### 7. Filtros e Busca
+### 7. Filters and Search
 
 ```
-# Filtros
-GET /api/v1/usuarios?status=ativo&role=admin
+# Filters
+GET /api/v1/users?status=active&role=admin
 
-# Busca
-GET /api/v1/usuarios?search=joao
+# Search
+GET /api/v1/users?search=john
 
-# Ordenação
-GET /api/v1/usuarios?sort=nome&order=asc
+# Sorting
+GET /api/v1/users?sort=name&order=asc
 
-# Campos específicos
-GET /api/v1/usuarios?fields=id,nome,email
+# Specific fields
+GET /api/v1/users?fields=id,name,email
 ```
 
-## Exemplos
+## Examples
 
-### Exemplo 1: CRUD Completo
+### Example 1: Complete CRUD
 
 ```python
-# routes/usuarios.py
+# routes/users.py
 from fastapi import APIRouter, HTTPException
 
-router = APIRouter(prefix="/api/v1/usuarios", tags=["usuarios"])
+router = APIRouter(prefix="/api/v1/users", tags=["users"])
 
 @router.get("/")
-async def listar_usuarios():
-    return {"data": usuarios}
+async def list_users():
+    return {"data": users}
 
 @router.get("/{id}")
-async def obter_usuario(id: int):
-    usuario = buscar_usuario(id)
-    if not usuario:
-        raise HTTPException(status_code=404, detail="Usuário não encontrado")
-    return {"data": usuario}
+async def get_user(id: int):
+    user = find_user(id)
+    if not user:
+        raise HTTPException(status_code=404, detail="User not found")
+    return {"data": user}
 
 @router.post("/")
-async def criar_usuario(usuario: CriarUsuario):
-    novo_usuario = criar(usuario)
-    return {"data": novo_usuario}, 201
+async def create_user(user: CreateUser):
+    new_user = create(user)
+    return {"data": new_user}, 201
 
 @router.put("/{id}")
-async def atualizar_usuario(id: int, usuario: AtualizarUsuario):
-    usuario_atualizado = atualizar(id, usuario)
-    return {"data": usuario_atualizado}
+async def update_user(id: int, user: UpdateUser):
+    updated_user = update(id, user)
+    return {"data": updated_user}
 
 @router.delete("/{id}")
-async def deletar_usuario(id: int):
-    deletar(id)
+async def delete_user(id: int):
+    delete(id)
     return None, 204
 ```
 
-## Referências
+## References
 
 - [Microsoft REST API Guidelines](https://github.com/microsoft/api-guidelines)
 - [JSON:API Specification](https://jsonapi.org/)
 - [RESTful API Design - Best Practices](https://hackernoon.com/restful-api-designing-guidelines-the-best-practices-60e1d954e7c9)
 
-## Notas
+## Notes
 
-- Use nouns, não verbos nas URLs
-- Mantenha consistência em nomes
-- Documente tudo com OpenAPI/Swagger
-- Use versionamento desde o início
-- Implemente rate limiting
-- Valide todos os inputs
+- Use nouns, not verbs in URLs
+- Maintain consistency in naming
+- Document everything with OpenAPI/Swagger
+- Use versioning from the start
+- Implement rate limiting
+- Validate all inputs

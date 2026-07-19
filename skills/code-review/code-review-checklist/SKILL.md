@@ -1,6 +1,6 @@
 ---
 name: code-review-checklist
-description: Checklist completo para revisão de código de alta qualidade
+description: Comprehensive checklist for high-quality code review
 category: code-review
 version: 1.0.0
 author: OpenCode Community
@@ -11,156 +11,156 @@ compatible:
   - cursor
 requires: []
 provides:
-  - Checklist de review
-  - Critérios de avaliação
-  - Melhores práticas
+  - Review checklist
+  - Evaluation criteria
+  - Best practices
 ---
 
 # Code Review Checklist
 
-## Visão Geral
+## Overview
 
-Esta skill fornece um checklist completo e abrangente para revisão de código,
-ajudando a garantir qualidade, consistência e ausência de bugs.
+This skill provides a complete and comprehensive checklist for code review,
+helping to ensure quality, consistency, and absence of bugs.
 
-## Pré-requisitos
+## Prerequisites
 
-- Acesso ao código a ser revisado
-- Conhecimento da stack tecnológica
-- Entender os requisitos do ticket/issue
+- Access to the code being reviewed
+- Knowledge of the technology stack
+- Understanding of ticket/issue requirements
 
-## Instruções de Uso
+## Usage Instructions
 
-### 1. Checklist Funcional
+### 1. Functional Checklist
 
-- [ ] Código atende aos requisitos especificados
-- [ ] A lógica está correta
-- [ ] Edge cases são tratados
-- [ ] Erros são tratados adequadamente
-- [ ] Validação de input presente
-- [ ] Tratamento de exceções adequado
+- [ ] Code meets specified requirements
+- [ ] Logic is correct
+- [ ] Edge cases are handled
+- [ ] Errors are handled properly
+- [ ] Input validation present
+- [ ] Exception handling adequate
 
-### 2. Checklist Qualidade
+### 2. Quality Checklist
 
-- [ ] Código é legível e compreensível
-- [ ] Nomes são descritivos e consistentes
-- [ ] Funções são coesas e pequenas
-- [ ] Não há código duplicado
-- [ ] Princípio DRY aplicado
-- [ ] Princípio SRP aplicado
+- [ ] Code is readable and understandable
+- [ ] Names are descriptive and consistent
+- [ ] Functions are cohesive and small
+- [ ] No duplicated code
+- [ ] DRY principle applied
+- [ ] SRP principle applied
 
-### 3. Checklist Segurança
+### 3. Security Checklist
 
-- [ ] Não há hardcoded secrets
-- [ ] Input está validado
-- [ ] Output está sanitizado
-- [ ] SQL injection prevenido
-- [ ] XSS prevenido
-- [ ] Autenticação adequada
+- [ ] No hardcoded secrets
+- [ ] Input is validated
+- [ ] Output is sanitized
+- [ ] SQL injection prevented
+- [ ] XSS prevented
+- [ ] Authentication adequate
 
-### 4. Checklist Performance
+### 4. Performance Checklist
 
-- [ ] Não há N+1 queries
-- [ ] Cache é usado adequadamente
-- [ ] Não há memory leaks
-- [ ] Queries são otimizadas
-- [ ] Assets são comprimidos
-- [ ] Lazy loading implementado
+- [ ] No N+1 queries
+- [ ] Cache is used appropriately
+- [ ] No memory leaks
+- [ ] Queries are optimized
+- [ ] Assets are compressed
+- [ ] Lazy loading implemented
 
-### 5. Checklist Testes
+### 5. Testing Checklist
 
-- [ ] Testes unitários presentes
-- [ ] Testes de integração presentes
-- [ ] Cobertura de código adequada
-- [ ] Testes são independentes
-- [ ] Testes são reproduzíveis
-- [ ] Mocks são adequados
+- [ ] Unit tests present
+- [ ] Integration tests present
+- [ ] Code coverage adequate
+- [ ] Tests are independent
+- [ ] Tests are reproducible
+- [ ] Mocks are appropriate
 
-### 6. Checklist Documentação
+### 6. Documentation Checklist
 
-- [ ] Código é autoexplicativo
-- [ ] Comentários explicam "porquê", não "o quê"
-- [ ] README atualizado
-- [ ] API documentada
-- [ ] Changelog atualizado
-- [ ] Examples atualizados
+- [ ] Code is self-explanatory
+- [ ] Comments explain "why", not "what"
+- [ ] README updated
+- [ ] API documented
+- [ ] Changelog updated
+- [ ] Examples updated
 
-### 7. Checklist Estilo
+### 7. Style Checklist
 
-- [ ] Segue o guia de estilo
-- [ ] Formatação está correta
-- [ ] Indentação é consistente
-- [ ] Espaçamento está adequado
-- [ ] Linhas não excedem 80 caracteres
-- [ ] Imports são organizados
+- [ ] Follows style guide
+- [ ] Formatting is correct
+- [ ] Indentation is consistent
+- [ ] Spacing is appropriate
+- [ ] Lines don't exceed 80 characters
+- [ ] Imports are organized
 
-## Exemplos
+## Examples
 
-### Exemplo 1: Review de Pull Request
+### Example 1: Pull Request Review
 
 ```markdown
 ## Code Review - PR #123
 
-### Resumo
-Implementa autenticação JWT para a API.
+### Summary
+Implements JWT authentication for the API.
 
 ### Checklist
 
-#### Funcionalidade
-- [x] Requisitos atendidos
-- [x] Lógica correta
-- [x] Edge cases tratados
+#### Functionality
+- [x] Requirements met
+- [x] Logic correct
+- [x] Edge cases handled
 
-#### Qualidade
-- [x] Código legível
-- [x] Nomes descritivos
-- [x] Funções coesas
+#### Quality
+- [x] Code readable
+- [x] Names descriptive
+- [x] Functions cohesive
 
-#### Segurança
-- [x] Secrets não hardcoded
-- [x] Input validado
-- [x] Output sanitizado
+#### Security
+- [x] No hardcoded secrets
+- [x] Input validated
+- [x] Output sanitized
 
-### Comentários
-- Sugestão: usar constante para tempo de expiração
-- Poderia extrair lógica de validação para função separada
+### Comments
+- Suggestion: use constant for expiration time
+- Could extract validation logic to separate function
 
-### Aprovação
-✅ Aprovado com minor changes
+### Approval
+✅ Approved with minor changes
 ```
 
-### Exemplo 2: Comentários de Review
+### Example 2: Review Comments
 
 ```markdown
-**Blocker:** Esta função não trata erro de rede.
+**Blocker:** This function doesn't handle network errors.
 
 ```javascript
-// Ruim
+// Bad
 fetch(url).then(data => processData(data));
 
-// Bom
+// Good
 fetch(url)
   .then(data => processData(data))
   .catch(error => handleError(error));
 ```
 
-**Major:** Função muito longa, sugerir refatoração.
+**Major:** Function too long, suggest refactoring.
 
-**Minor:** Estilo - espaço extra após vírgula.
+**Minor:** Style - extra space after comma.
 
-**Nit:** Nome da variável poderia ser mais descritivo.
+**Nit:** Variable name could be more descriptive.
 ```
 
-## Referências
+## References
 
 - [Google Code Review Guide](https://google.github.io/eng-practices/review/)
 - [Best Practices for Code Reviews](https://smartbear.com/best-practices-for-code-reviews/)
 - [Code Review Checklist](https://www.pullrequest.com/blog/code-review-checklist/)
 
-## Notas
+## Notes
 
-- Foque no código, não na pessoa
-- Seja construtivo e respeitoso
-- Priorize issues por severidade
-- Documente decisões importantes
-- Use ferramentas de linting quando possível
+- Focus on the code, not the person
+- Be constructive and respectful
+- Prioritize issues by severity
+- Document important decisions
+- Use linting tools when possible

@@ -1,6 +1,6 @@
 ---
 name: docker-best-practices
-description: Guia completo de boas práticas para Docker e containers em produção
+description: Complete guide for Docker and containers best practices in production
 category: devops
 version: 1.0.0
 author: OpenCode Community
@@ -10,32 +10,32 @@ compatible:
   - claude-code
   - cursor
 requires:
-  - Docker 20.10+ instalado
-  - Docker Compose v2+ (opcional)
+  - Docker 20.10+ installed
+  - Docker Compose v2+ (optional)
 provides:
-  - Dockerfile otimizado
+  - Optimized Dockerfile
   - docker-compose.yml
   - .dockerignore
 ---
 
 # Docker Best Practices
 
-## Visão Geral
+## Overview
 
-Esta skill fornece guia completo de boas práticas para criar, otimizar e
-gerenciar containers Docker em ambiente de produção.
+This skill provides a complete guide of best practices for creating, optimizing,
+and managing Docker containers in a production environment.
 
-## Pré-requisitos
+## Prerequisites
 
-- Docker 20.10 ou superior
-- Docker Compose v2 ou superior (opcional, para multi-container)
-- Conhecimento básico de containers
+- Docker 20.10 or higher
+- Docker Compose v2 or higher (optional, for multi-container)
+- Basic container knowledge
 
-## Instruções de Uso
+## Usage Instructions
 
-### 1. Criando Dockerfile Otimizado
+### 1. Creating an Optimized Dockerfile
 
-Use multi-stage builds para reduzir o tamanho da imagem:
+Use multi-stage builds to reduce image size:
 
 ```dockerfile
 # Stage 1: Build
@@ -55,7 +55,7 @@ EXPOSE 3000
 CMD ["node", "dist/main.js"]
 ```
 
-### 2. Usando .dockerignore
+### 2. Using .dockerignore
 
 ```
 node_modules
@@ -65,10 +65,10 @@ node_modules
 docker-compose*.yml
 ```
 
-### 3. Gerenciando Variáveis de Ambiente
+### 3. Managing Environment Variables
 
 ```bash
-# Nunca hardcode secrets
+# Never hardcode secrets
 docker run -e DATABASE_URL=$DATABASE_URL myapp
 ```
 
@@ -79,18 +79,18 @@ HEALTHCHECK --interval=30s --timeout=3s --start-period=5s --retries=3 \
   CMD curl -f http://localhost:3000/health || exit 1
 ```
 
-### 5. Segurança
+### 5. Security
 
 ```dockerfile
-# Executar como usuário não-root
+# Run as non-root user
 RUN addgroup -g 1001 -S appgroup
 RUN adduser -S appuser -u 1001 -G appgroup
 USER appuser
 ```
 
-## Exemplos
+## Examples
 
-### Exemplo 1: Node.js API
+### Example 1: Node.js API
 
 ```dockerfile
 FROM node:18-alpine
@@ -103,7 +103,7 @@ USER node
 CMD ["node", "server.js"]
 ```
 
-### Exemplo 2: Python Flask
+### Example 2: Python Flask
 
 ```dockerfile
 FROM python:3.11-slim
@@ -115,7 +115,7 @@ EXPOSE 5000
 CMD ["python", "app.py"]
 ```
 
-### Exemplo 3: Docker Compose Multi-Service
+### Example 3: Docker Compose Multi-Service
 
 ```yaml
 version: '3.8'
@@ -140,17 +140,17 @@ volumes:
   postgres_data:
 ```
 
-## Referências
+## References
 
 - [Docker Official Docs](https://docs.docker.com/)
 - [Dockerfile Best Practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/)
 - [Docker Compose](https://docs.docker.com/compose/)
 - [Docker Security](https://docs.docker.com/engine/security/)
 
-## Notas
+## Notes
 
-- Sempre use imagens base oficiais
-- Execute como usuário não-root
-- Use health checks em produção
-- Minimize camadas do Dockerfile
-- Use .dockerignore para ignorar arquivos desnecessários
+- Always use official base images
+- Run as non-root user
+- Use health checks in production
+- Minimize Dockerfile layers
+- Use .dockerignore to ignore unnecessary files

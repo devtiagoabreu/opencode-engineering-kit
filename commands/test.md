@@ -1,6 +1,6 @@
 ---
 name: test
-description: Comando para executar testes
+description: Command to run tests
 version: 1.0.0
 author: OpenCode Community
 tags: [testing, automation]
@@ -12,24 +12,24 @@ compatible:
 
 # /test
 
-## Uso
+## Usage
 
 ```
-/test [tipo] [filtro]
+/test [type] [filter]
 ```
 
-## Descrição
+## Description
 
-Executa testes do projeto, permitindo filtrar por tipo e/arquivo.
+Runs project tests, allowing filtering by type and/or file.
 
-## Argumentos
+## Arguments
 
-| Argumento | Obrigatório | Descrição | Padrão |
-|-----------|-------------|-----------|--------|
-| tipo | Não | Tipo de teste (unit, integration, all) | all |
-| filtro | Não | Filtro para testes específicos | Todos |
+| Argument | Required | Description | Default |
+|-----------|----------|-------------|---------|
+| type | No | Test type (unit, integration, all) | all |
+| filter | No | Filter for specific tests | All |
 
-## Exemplos
+## Examples
 
 ```bash
 /test
@@ -38,8 +38,8 @@ Executa testes do projeto, permitindo filtrar por tipo e/arquivo.
 /test unit test_main
 ```
 
-## Notas
+## Notes
 
-- Detecta automaticamente o framework de testes
-- Fornece relatório de cobertura
-- Mostra testes que falharam
+- Automatically detects the test framework
+- Provides coverage report
+- Shows tests that failed

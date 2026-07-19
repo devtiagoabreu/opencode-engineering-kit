@@ -1,6 +1,6 @@
 ---
 name: lint
-description: Comando para verificar linting de código
+description: Command to check code linting
 version: 1.0.0
 author: OpenCode Community
 tags: [linting, code-quality]
@@ -12,24 +12,23 @@ compatible:
 
 # /lint
 
-## Uso
+## Usage
 
 ```
-/lint [arquivo_ou_diretorio]
+/lint [file_or_directory]
 ```
 
-## Descrição
+## Description
 
-Executa ferramentas de linting no código, verificando formatação,
-estilo e possíveis erros.
+Runs linting tools on the code, checking formatting, style, and possible errors.
 
-## Argumentos
+## Arguments
 
-| Argumento | Obrigatório | Descrição | Padrão |
-|-----------|-------------|-----------|--------|
-| arquivo | Não | Arquivo ou diretório a verificar | Todo o projeto |
+| Argument | Required | Description | Default |
+|-----------|----------|-------------|---------|
+| file | No | File or directory to check | Entire project |
 
-## Exemplos
+## Examples
 
 ```bash
 /lint
@@ -37,8 +36,8 @@ estilo e possíveis erros.
 /lint ./src/
 ```
 
-## Notas
+## Notes
 
-- Detecta automaticamente as ferramentas de linting disponíveis
-- Reporta erros e warnings
-- Sugere correções quando possível
+- Automatically detects available linting tools
+- Reports errors and warnings
+- Suggests fixes when possible

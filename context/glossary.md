@@ -1,37 +1,37 @@
 ---
 name: glossary-context
-description: Glossário do OpenCode Engineering Kit
+description: Glossary for OpenCode Engineering Kit
 type: project
 version: 1.0.0
 author: OpenCode Community
 ---
 
-# Glossário
+# Glossary
 
-## Termos do Projeto
+## Project Terms
 
-| Termo | Definição |
-|-------|-----------|
-| **Skill** | Conjunto de instruções para executar uma tarefa específica |
-| **Agent** | Persona configurada com habilidades e comportamento específicos |
-| **Template** | Modelo pré-configurado para criar novos componentes |
-| **Prompt** | Instruções projetadas para guiar AI em uma tarefa |
-| **Command** | Comando customizado executado no OpenCode |
-| **Context** | Conjunto de arquivos que fornece contexto sobre o projeto |
-| **Frontmatter** | Metadados YAML no início de arquivos markdown |
-| **Kebab-case** | Formato de nomes com hífens (ex: my-skill) |
-| **Snake_case** | Formato de nomes com underscores (ex: my_skill) |
-| **PascalCase** | Formato de nomes com iniciais maiúsculas (ex: MySkill) |
-| **CamelCase** | Formato de nomes com iniciais minúsculas (ex: mySkill) |
-| **Semver** | Versionamento semântico (MAJOR.MINOR.PATCH) |
-| **Conventional Commits** | Padrão de mensagens de commit |
+| Term | Definition |
+|------|------------|
+| **Skill** | A set of instructions for executing a specific task |
+| **Agent** | A persona configured with specific skills and behavior |
+| **Template** | A pre-configured model for creating new components |
+| **Prompt** | Instructions designed to guide AI in a task |
+| **Command** | A custom command executed in OpenCode |
+| **Context** | A set of files that provides context about the project |
+| **Frontmatter** | YAML metadata at the beginning of markdown files |
+| **Kebab-case** | Naming format with hyphens (e.g., my-skill) |
+| **Snake_case** | Naming format with underscores (e.g., my_skill) |
+| **PascalCase** | Naming format with capitalized initials (e.g., MySkill) |
+| **CamelCase** | Naming format with lowercase initials (e.g., mySkill) |
+| **Semver** | Semantic versioning (MAJOR.MINOR.PATCH) |
+| **Conventional Commits** | Commit message standard |
 
-## Termos Técnicos
+## Technical Terms
 
-| Termo | Definição |
-|-------|-----------|
-| **LLM** | Large Language Model (Modelo de Linguagem Grande) |
-| **AI** | Artificial Intelligence (Inteligência Artificial) |
+| Term | Definition |
+|------|------------|
+| **LLM** | Large Language Model |
+| **AI** | Artificial Intelligence |
 | **CI/CD** | Continuous Integration / Continuous Deployment |
 | **PR** | Pull Request |
 | **CR** | Code Review |
@@ -45,10 +45,10 @@ author: OpenCode Community
 | **IaC** | Infrastructure as Code |
 | **GitOps** | Git Operations |
 
-## Ferramentas
+## Tools
 
-| Ferramenta | Uso | Link |
-|------------|-----|------|
+| Tool | Usage | Link |
+|------|-------|------|
 | OpenCode | IDE/AI assistant | opencode.ai |
 | Claude Code | AI coding tool | anthropic.com |
 | Cursor | AI-powered IDE | cursor.sh |
@@ -57,14 +57,14 @@ author: OpenCode Community
 | markdownlint | Markdown linting | github.com/igorshubovych/markdownlint-cli |
 | yamllint | YAML linting | yamllint.readthedocs.io |
 
-## Referências
+## References
 
-| Referência | Descrição | Link |
-|------------|-----------|------|
-| OpenCode Docs | Documentação oficial | docs.opencode.ai |
-| Open Agent Skills Specification | Especificação de skills | github.com/open-agent-skills |
-| Shokunin | 62 skills para AI | github.com/hirefrank/shokunin |
-| The Hive Skill | 79 skills para AI | github.com/beingaivanshoo/the-hive-skill |
-| Conventional Commits | Padrão de commits | conventionalcommits.org |
-| Semantic Versioning | Versionamento semântico | semver.org |
-| MIT License | Licença do projeto |opensource.org/licenses/MIT |
+| Reference | Description | Link |
+|-----------|-------------|------|
+| OpenCode Docs | Official documentation | docs.opencode.ai |
+| Open Agent Skills Specification | Skills specification | github.com/open-agent-skills |
+| Shokunin | 62 skills for AI | github.com/hirefrank/shokunin |
+| The Hive Skill | 79 skills for AI | github.com/beingaivanshoo/the-hive-skill |
+| Conventional Commits | Commit standard | conventionalcommits.org |
+| Semantic Versioning | Semantic versioning | semver.org |
+| MIT License | Project license | opensource.org/licenses/MIT |

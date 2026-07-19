@@ -1,71 +1,71 @@
 ---
 name: documentation-context
-description: Convenções de documentação do OpenCode Engineering Kit
+description: Documentation conventions for OpenCode Engineering Kit
 type: conventions
 version: 1.0.0
 author: OpenCode Community
 ---
 
-# Convenções de Documentação
+# Documentation Conventions
 
-## Tipos de Documentação
+## Documentation Types
 
-| Tipo | Localização | Objetivo |
-|------|-------------|----------|
-| README | Raiz do projeto | Visão geral |
-| CONTRIBUTING | Raiz do projeto | Como contribuir |
-| CHANGELOG | Raiz do projeto | Histórico |
-| PROJECT_SPEC | Raiz do projeto | Especificação |
-| ROADMAP | Raiz do projeto | Roadmap |
-| API Docs | docs/api.md | Referência API |
-| Skills Docs | Em cada skill | Uso da skill |
-| Agent Docs | Em cada agent | Uso do agent |
+| Type | Location | Purpose |
+|------|----------|---------|
+| README | Project root | Overview |
+| CONTRIBUTING | Project root | How to contribute |
+| CHANGELOG | Project root | History |
+| PROJECT_SPEC | Project root | Specification |
+| ROADMAP | Project root | Roadmap |
+| API Docs | docs/api.md | API reference |
+| Skills Docs | In each skill | Skill usage |
+| Agent Docs | In each agent | Agent usage |
 
-## Padrões de Documentação
+## Documentation Patterns
 
 ### README.md
 
 ```markdown
-# Nome do Projeto
+# Project Name
 
-> Breve descrição
+> Brief description
 
-## Visão Geral
+## Overview
 
-Descrição detalhada...
+Detailed description...
 
-## Instalação
+## Installation
 
-### Pré-requisitos
+### Prerequisites
 
-- Requisito 1
-- Requisito 2
+- Requirement 1
+- Requirement 2
 
-### Instalação
-
-```bash
-comando
-```
-
-## Uso
-
-### Exemplo Básico
+### Installation
 
 ```bash
-comando
+command
 ```
 
-### Exemplo Avançado
+## Usage
+
+### Basic Example
 
 ```bash
-comando
+command
 ```
 
-## Contribuindo
+### Advanced Example
 
-Leia [CONTRIBUTING.md](./CONTRIBUTING.md)
+```bash
+command
+```
 
-## Licença
+## Contributing
+
+See [CONTRIBUTING.md](./CONTRIBUTING.md)
+
+## License
 
 [MIT](./LICENSE)
 ```
@@ -73,22 +73,22 @@ Leia [CONTRIBUTING.md](./CONTRIBUTING.md)
 ### CONTRIBUTING.md
 
 ```markdown
-# Contribuindo
+# Contributing
 
-## Como Contribuir
+## How to Contribute
 
-1. Fork o projeto
-2. Crie uma branch
-3. Implemente sua feature
-4. Adicione testes
-5. Atualize documentação
-6. Crie um PR
+1. Fork the project
+2. Create a branch
+3. Implement your feature
+4. Add tests
+5. Update documentation
+6. Create a PR
 
 ## Branch Naming
 
-- `feature/<nome>` - Nova feature
-- `bugfix/<nome>` - Correção de bug
-- `hotfix/<nome>` - Correção urgente
+- `feature/<name>` - New feature
+- `bugfix/<name>` - Bug fix
+- `hotfix/<name>` - Urgent fix
 
 ## Commit Messages
 
@@ -102,44 +102,44 @@ docs: update installation guide
 
 ## Code Review
 
-Todo PR precisa de pelo menos 1 aprovação.
+Every PR needs at least 1 approval.
 
-## Testes
+## Tests
 
-Execute testes antes de submeter PR:
+Run tests before submitting PR:
 
 ```bash
 ./scripts/test.sh
 ```
 ```
 
-## Geração de Documentação
+## Documentation Generation
 
-| Ferramenta | Uso | Automação |
-|------------|-----|-----------|
-| Markdown lint | Verificar formatação | GitHub Actions |
-| Link checker | Verificar links | GitHub Actions |
-| Spell check | Verificar ortografia | Manual |
-| Screenshot | Capturar imagens | Manual |
+| Tool | Usage | Automation |
+|------|-------|------------|
+| Markdown lint | Check formatting | GitHub Actions |
+| Link checker | Check links | GitHub Actions |
+| Spell check | Check spelling | Manual |
+| Screenshot | Capture images | Manual |
 
-## Manutenção de Documentação
+## Documentation Maintenance
 
-1. **Atualização automática:** CHANGELOG via commits
-2. **Revisão manual:** README e CONTRIBUTING
-3. **Validação:** Links e exemplos
-4. **Versionamento:** Sincronizado com releases
+1. **Auto-update:** CHANGELOG via commits
+2. **Manual review:** README and CONTRIBUTING
+3. **Validation:** Links and examples
+4. **Versioning:** Synced with releases
 
-## Formato de Arquivos
+## File Formats
 
 ### Skills
 
 ```markdown
 ---
 name: skill-name
-description: Descrição
-category: categoria
+description: Description
+category: category
 version: 1.0.0
-author: Autor
+author: Author
 tags: [tag1, tag2]
 compatible:
   - opencode
@@ -147,14 +147,14 @@ compatible:
   - cursor
 ---
 
-# Nome da Skill
+# Skill Name
 
-## Visão Geral
-## Pré-requisitos
-## Instruções de Uso
-## Exemplos
-## Referências
-## Notas
+## Overview
+## Prerequisites
+## Usage Instructions
+## Examples
+## References
+## Notes
 ```
 
 ### Agents
@@ -162,9 +162,9 @@ compatible:
 ```markdown
 ---
 name: agent-name
-description: Descrição
+description: Description
 version: 1.0.0
-author: Autor
+author: Author
 tags: [tag1, tag2]
 compatible:
   - opencode
@@ -174,13 +174,13 @@ skills: []
 personas: []
 ---
 
-# Nome do Agent
+# Agent Name
 
 ## Persona
-## Capacidades
-## Contexto
-## Exemplos de Uso
-## Referências
+## Capabilities
+## Context
+## Usage Examples
+## References
 ```
 
 ### Templates
@@ -188,10 +188,10 @@ personas: []
 ```markdown
 ---
 name: template-name
-description: Descrição
-category: categoria
+description: Description
+category: category
 version: 1.0.0
-author: Autor
+author: Author
 tags: [tag1, tag2]
 compatible:
   - opencode
@@ -200,12 +200,12 @@ compatible:
 variables: []
 ---
 
-# Nome do Template
+# Template Name
 
-## Visão Geral
-## Uso
-## Estrutura
-## Variáveis
-## Exemplo
-## Referências
+## Overview
+## Usage
+## Structure
+## Variables
+## Example
+## References
 ```

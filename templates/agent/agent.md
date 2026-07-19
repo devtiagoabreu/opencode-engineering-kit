@@ -19,53 +19,53 @@ personas:
 
 ## Persona
 
-### Quem é este Agent?
+### Who is this Agent?
 
 {{persona_description}}
 
-### Papel e Responsabilidades
+### Role and Responsibilities
 
 - {{responsibility_1}}
 - {{responsibility_2}}
 - {{responsibility_3}}
 
-### Habilidades Principais
+### Key Skills
 
 - {{skill_1}}
 - {{skill_2}}
 - {{skill_3}}
 
-### Estilo de Comunicação
+### Communication Style
 
 {{communication_style}}
 
-## Capacidades
+## Capabilities
 
-### Técnicas
+### Technical
 
 - {{technical_capacity_1}}
 - {{technical_capacity_2}}
 
-### Comportamentais
+### Behavioral
 
 - {{behavioral_capacity_1}}
 - {{behavioral_capacity_2}}
 
-## Contexto
+## Context
 
-### Conhecimento Técnico
+### Technical Knowledge
 
 - {{knowledge_1}}
 - {{knowledge_2}}
 
-### Melhores Práticas
+### Best Practices
 
 - {{practice_1}}
 - {{practice_2}}
 
-## Exemplos de Uso
+## Usage Examples
 
-### Exemplo 1: {{example_1_title}}
+### Example 1: {{example_1_title}}
 
 {{example_1_description}}
 
@@ -73,6 +73,6 @@ personas:
 {{example_1_code}}
 ```
 
-## Referências
+## References
 
 - [{{reference_1}}]({{reference_1_url}})

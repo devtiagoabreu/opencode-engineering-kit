@@ -1,49 +1,49 @@
-# Código de Conduta
+# Code of Conduct
 
-## Nosso Compromisso
+## Our Pledge
 
-Nós, como membros, contribuidores e líderes, nos comprometemos a tornar a participação em nossa comunidade uma experiência livre de assédio para todos, independentemente de idade, tamanho corporal, deficiência visível ou invisível, etnia, características sexuais, identidade e expressão de gênero, nível de experiência, educação, socioeconômico, nacionalidade, aparência pessoal, raça, religião ou identidade e orientação sexual.
+We, as members, contributors, and leaders, pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
 
-## Nossos Padrões
+## Our Standards
 
-Exemplos de comportamentos que contribuem para um ambiente positivo em nossa comunidade:
+Examples of behavior that contributes to a positive environment in our community:
 
-- Usar linguagem acolhedora e inclusiva
-- Respeitar diferentes pontos de vista e experiências
-- Aceitar criticismo construtiva graciosamente
-- Focar no que é melhor para a comunidade
-- Mostrar empatia com outros membros da comunidade
+- Using welcoming and inclusive language
+- Respecting different viewpoints and experiences
+- Accepting constructive criticism gracefully
+- Focusing on what is best for the community
+- Showing empathy with other community members
 
-Exemplos de comportamentos inaceitáveis:
+Examples of unacceptable behavior:
 
-- O uso de linguagem sexualizada e atenção sexual de qualquer tipo
-- Comentários ofensivos, insultos ou xingamentos
-- Ataques públicos ou privados
-- Publicar informações privadas de outras pessoas sem permissão
-- Outra conduta que poderia ser razoavelmente considerada inapropriada
+- The use of sexualized language and attention of any kind
+- Offensive comments, insults, or slurs
+- Public or private attacks
+- Publishing other people's private information without permission
+- Other conduct that could reasonably be considered inappropriate
 
-## Responsabilidades de Aplicação
+## Enforcement Responsibilities
 
-Os líderes da comunidade são responsáveis por esclarecer e aplicar nossos padrões de comportamento aceitável e tomarão ações apropriadas e corretivas em resposta a qualquer comportamento que considerem inapropriado, ameaçador, ofensivo ou prejudicial.
+Community leaders are responsible for clarifying and enforcing our standards of acceptable behavior and will take appropriate and corrective action in response to any behavior that they consider inappropriate, threatening, offensive, or harmful.
 
-Os líderes da comunidade têm o direito e a responsabilidade de remover, editar ou rejeitar comentários, commits, code, edições de wiki, issues e outras contribuições que não estejam alinhadas a este Código de Conduta, e comunicarão razões para suas decisões de moderação quando apropriado.
+Community leaders have the right and responsibility to remove, edit, or reject comments, commits, code, wiki edits, issues, and other contributions that are not aligned with this Code of Conduct, and will communicate reasons for moderation decisions when appropriate.
 
-## Escopo
+## Scope
 
-Este Código de Conduta se aplica a todos os espaços da comunidade e também se aplica quando um indivíduo representa oficialmente a comunidade em espaços públicos.
+This Code of Conduct applies within all community spaces and also applies when an individual is officially representing the community in public spaces.
 
-## Aplicação
+## Enforcement
 
-Exemplos de abuso, assédio ou outro comportamento inaceitável podem ser reportados através do sistema de issues do GitHub.
+Examples of abuse, harassment, or other unacceptable behavior may be reported through the GitHub issue system.
 
-Todos os relatos serão investigados e analisados de forma rápida e justa.
+All reports will be investigated and reviewed promptly and fairly.
 
-Todos os líderes da comunidade são obrigados a respeitar a privacidade e segurança de quem reportar qualquer incidente.
+All community leaders are obligated to respect the privacy and security of anyone who reports any incident.
 
-## Referências
+## References
 
-Este Código de Conduta é adaptado do [Contributor Covenant](https://www.contributor-covenant.org), versão 2.0, disponível em https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
+This Code of Conduct is adapted from the [Contributor Covenant](https://www.contributor-covenant.org), version 2.0, available at https://www.contributor-covenant.org/version/2/0/code_of_conduct.html.
 
-## Agradecimentos
+## Acknowledgments
 
-O Contributor Covenant é inspirado na [Declaração de Autonomia dos Mantenedores](https://github.com/maintainers/declarations/blob/main/declaration-of-interdependence.md).
+The Contributor Covenant is inspired by the [Maintainers Declaration of Independence](https://github.com/maintainers/declarations/blob/main/declaration-of-interdependence.md).

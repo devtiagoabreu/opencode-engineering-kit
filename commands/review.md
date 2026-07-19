@@ -1,6 +1,6 @@
 ---
 name: review
-description: Comando para revisar código atual
+description: Command to review current code
 version: 1.0.0
 author: OpenCode Community
 tags: [code-review, quality]
@@ -12,24 +12,24 @@ compatible:
 
 # /review
 
-## Uso
+## Usage
 
 ```
-/review [arquivo_ou_diretorio]
+/review [file_or_directory]
 ```
 
-## Descrição
+## Description
 
-Revisa o código especificado ou o código atual, fornecendo feedback
-sobre qualidade, segurança e boas práticas.
+Reviews the specified code or the current code, providing feedback
+on quality, security, and best practices.
 
-## Argumentos
+## Arguments
 
-| Argumento | Obrigatório | Descrição | Padrão |
-|-----------|-------------|-----------|--------|
-| arquivo | Não | Arquivo ou diretório a revisar | Código atual |
+| Argument | Required | Description | Default |
+|-----------|----------|-------------|---------|
+| file | No | File or directory to review | Current code |
 
-## Exemplos
+## Examples
 
 ```bash
 /review
@@ -37,8 +37,8 @@ sobre qualidade, segurança e boas práticas.
 /review ./src/
 ```
 
-## Notas
+## Notes
 
-- Se nenhum arquivo for especificado, revisa o código atual
-- Usa o checklist de code review
-- Fornece feedback estruturado
+- If no file is specified, reviews the current code
+- Uses the code review checklist
+- Provides structured feedback

@@ -1,6 +1,6 @@
 ---
 name: code-review-checklist
-description: Prompt para revisão de código usando checklist abrangente
+description: Prompt for code review using comprehensive checklist
 category: code-review
 version: 1.0.0
 author: OpenCode Community
@@ -11,77 +11,77 @@ compatible:
   - cursor
 variables:
   - name: code
-    description: Código a ser revisado
+    description: Code to be reviewed
   - name: language
-    description: Linguagem de programação
+    description: Programming language
 ---
 
 # Code Review Checklist
 
-## Objetivo
+## Objective
 
-Revisar código de forma sistemática e abrangente, garantindo qualidade,
-segurança e boas práticas.
+Review code systematically and comprehensively, ensuring quality,
+security, and best practices.
 
-## Instruções
+## Instructions
 
-### Contexto
+### Context
 
-Você é um revisor de código experiente. Analise o código fornecido
-seguindo o checklist abaixo.
+You are an experienced code reviewer. Analyze the provided code
+following the checklist below.
 
-### Tarefa
+### Task
 
-Revisar o código e fornecer feedback estruturado.
+Review the code and provide structured feedback.
 
-### Critérios
+### Criteria
 
-1. **Funcionalidade:** Código atende aos requisitos?
-2. **Qualidade:** Código é legível e mantível?
-3. **Segurança:** Há vulnerabilidades?
-4. **Performance:** Há problemas de performance?
-5. **Testes:** Há testes adequados?
+1. **Functionality:** Does code meet requirements?
+2. **Quality:** Is code readable and maintainable?
+3. **Security:** Are there vulnerabilities?
+4. **Performance:** Are there performance issues?
+5. **Tests:** Are there adequate tests?
 
-## Exemplo de Uso
+## Usage Example
 
 ```
-Por favor, revise o seguinte código usando o checklist de code review:
+Please review the following code using the code review checklist:
 
-[código aqui]
+[code here]
 
-Forneça feedback para cada item do checklist:
-1. Funcionalidade
-2. Qualidade
-3. Segurança
+Provide feedback for each checklist item:
+1. Functionality
+2. Quality
+3. Security
 4. Performance
-5. Testes
+5. Tests
 ```
 
-## Variações
+## Variations
 
-### Variação 1: Review Focado em Segurança
-
-```
-Analise o código focando especificamente em segurança:
-1. Há hardcoded secrets?
-2. Input está validado?
-3. Output está sanitizado?
-4. Há vulnerabilities conhecidas?
-5. Autenticação está implementada?
-```
-
-### Variação 2: Review Focado em Performance
+### Variation 1: Security-Focused Review
 
 ```
-Analise o código focando especificamente em performance:
-1. Há O(n²) ou pior?
-2. Queries são otimizadas?
-3. Cache é usado adequadamente?
-4. Há memory leaks?
-5. Assets são comprimidos?
+Analyze the code focusing specifically on security:
+1. Are there hardcoded secrets?
+2. Is input validated?
+3. Is output sanitized?
+4. Are there known vulnerabilities?
+5. Is authentication implemented?
 ```
 
-## Referências
+### Variation 2: Performance-Focused Review
+
+```
+Analyze the code focusing specifically on performance:
+1. Is there O(n²) or worse?
+2. Are queries optimized?
+3. Is cache used appropriately?
+4. Are there memory leaks?
+5. Are assets compressed?
+```
+
+## References
 
 - [Code Review Checklist](../skills/code-review/code-review-checklist/SKILL.md)
 - [Google Code Review Guide](https://google.github.io/eng-practices/review/)

@@ -1,6 +1,6 @@
 ---
 name: python-testing
-description: Guia completo de testes em Python com pytest
+description: Complete guide to Python testing with pytest
 category: testing
 version: 1.0.0
 author: OpenCode Community
@@ -10,36 +10,36 @@ compatible:
   - claude-code
   - cursor
 requires:
-  - Python 3.7+ instalado
-  - pytest instalado
+  - Python 3.7+ installed
+  - pytest installed
 provides:
-  - Configuração de testes
-  - Exemplos de testes
-  - Melhores práticas
+  - Test configuration
+  - Test examples
+  - Best practices
 ---
 
 # Python Testing
 
-## Visão Geral
+## Overview
 
-Esta skill fornece guia completo para escrever testes em Python usando pytest,
-incluindo testes unitários, de integração e mocks.
+This skill provides a complete guide for writing tests in Python using pytest,
+including unit tests, integration tests, and mocks.
 
-## Pré-requisitos
+## Prerequisites
 
-- Python 3.7 ou superior
-- pytest instalado (`pip install pytest`)
-- pytest-cov para cobertura (`pip install pytest-cov`)
+- Python 3.7 or higher
+- pytest installed (`pip install pytest`)
+- pytest-cov for coverage (`pip install pytest-cov`)
 
-## Instruções de Uso
+## Usage Instructions
 
-### 1. Configuração
+### 1. Configuration
 
 ```bash
-# Instalar dependências
+# Install dependencies
 pip install pytest pytest-cov
 
-# Criar pytest.ini
+# Create pytest.ini
 cat > pytest.ini << 'EOF'
 [pytest]
 testpaths = tests
@@ -49,82 +49,82 @@ addopts = -v --tb=short
 EOF
 ```
 
-### 2. Estrutura de Testes
+### 2. Test Structure
 
 ```
-meu_projeto/
+my_project/
 ├── src/
-│   └── meu_modulo.py
+│   └── my_module.py
 ├── tests/
 │   ├── __init__.py
-│   ├── test_meu_modulo.py
+│   ├── test_my_module.py
 │   └── conftest.py
 └── pytest.ini
 ```
 
-### 3. Testes Unitários
+### 3. Unit Tests
 
 ```python
-# tests/test_meu_modulo.py
+# tests/test_my_module.py
 import pytest
-from src.meu_modulo import somar, subtrair
+from src.my_module import add, subtract
 
-class TestSomar:
-    def test_somar_positivos(self):
-        assert somar(2, 3) == 5
+class TestAdd:
+    def test_add_positive(self):
+        assert add(2, 3) == 5
     
-    def test_somar_negativos(self):
-        assert somar(-1, -1) == -2
+    def test_add_negative(self):
+        assert add(-1, -1) == -2
     
-    def test_somar_zero(self):
-        assert somar(0, 5) == 5
+    def test_add_zero(self):
+        assert add(0, 5) == 5
 
-class TestSubtrair:
-    def test_subtrair_basico(self):
-        assert subtrair(5, 3) == 2
+class TestSubtract:
+    def test_subtract_basic(self):
+        assert subtract(5, 3) == 2
     
-    def test_subtrair_resultado_negativo(self):
-        assert subtrair(3, 5) == -2
+    def test_subtract_negative_result(self):
+        assert subtract(3, 5) == -2
 ```
 
-### 4. Testes com Fixtures
+### 4. Tests with Fixtures
 
 ```python
 # tests/conftest.py
 import pytest
 
 @pytest.fixture
-def dados_validos():
+def valid_data():
     return {
-        "nome": "João",
-        "email": "joao@email.com",
-        "idade": 30
+        "name": "John",
+        "email": "john@example.com",
+        "age": 30
     }
 
 @pytest.fixture
-def cliente_mock(mocker):
-    return mocker.patch('src.cliente.Cliente')
+def mock_client(mocker):
+    return mocker.patch('src.client.Client')
 ```
 
-### 5. Testes com Parametrize
+### 5. Tests with Parametrize
 
 ```python
-@pytest.mark.parametrize("a, b, esperado", [
+@pytest.mark.parametrize("a, b, expected", [
     (1, 2, 3),
     (0, 0, 0),
     (-1, 1, 0),
     (10, -5, 5),
 ])
-def test_somar_parametrizado(a, b, esperado):
-    assert somar(a, b) == esperado
+def test_add_parametrized(a, b, expected):
+    assert add(a, b) == expected
 ```
 
-### 6. Testes de Exceção
+### 6. Exception Tests
 
 ```python
-def test_dividir_por_zero():
+def test_divide_by_zero():
     with pytest.raises(ZeroDivisionError):
-        dividir(10, 0)
+        divide(10, 0)
 ```
 
 ### 7. Mocking
@@ -132,55 +132,55 @@ def test_dividir_por_zero():
 ```python
 from unittest.mock import Mock, patch
 
-def test_chamar_api():
+def test_call_api():
     with patch('src.api.requests.get') as mock_get:
         mock_get.return_value.json.return_value = {"status": "ok"}
-        resultado = chamar_api()
-        assert resultado["status"] == "ok"
+        result = call_api()
+        assert result["status"] == "ok"
         mock_get.assert_called_once()
 ```
 
-## Exemplos
+## Examples
 
-### Exemplo 1: Teste de Classe
+### Example 1: Class Test
 
 ```python
-# src/calculadora.py
-class Calculadora:
+# src/calculator.py
+class Calculator:
     def __init__(self):
-        self.historico = []
+        self.history = []
     
-    def somar(self, a, b):
-        resultado = a + b
-        self.historico.append(f"{a} + {b} = {resultado}")
-        return resultado
+    def add(self, a, b):
+        result = a + b
+        self.history.append(f"{a} + {b} = {result}")
+        return result
     
-    def obter_historico(self):
-        return self.historico.copy()
+    def get_history(self):
+        return self.history.copy()
 
-# tests/test_calculadora.py
+# tests/test_calculator.py
 import pytest
-from src.calculadora import Calculadora
+from src.calculator import Calculator
 
 @pytest.fixture
 def calc():
-    return Calculadora()
+    return Calculator()
 
-def test_somar(calc):
-    assert calc.somar(2, 3) == 5
+def test_add(calc):
+    assert calc.add(2, 3) == 5
 
-def test_historico(calc):
-    calc.somar(1, 2)
-    calc.somar(3, 4)
-    assert len(calc.obter_historico()) == 2
+def test_history(calc):
+    calc.add(1, 2)
+    calc.add(3, 4)
+    assert len(calc.get_history()) == 2
 ```
 
-### Exemplo 2: Teste de Integração
+### Example 2: Integration Test
 
 ```python
-# tests/test_integracao.py
+# tests/test_integration.py
 import pytest
-from src.banco import Database
+from src.database import Database
 
 @pytest.fixture
 def db():
@@ -188,50 +188,50 @@ def db():
     yield database
     database.close()
 
-def test_criar_tabela(db):
-    db.criar_tabela("usuarios")
-    assert "usuarios" in db.listar_tabelas()
+def test_create_table(db):
+    db.create_table("users")
+    assert "users" in db.list_tables()
 
-def test_inserir_usuario(db):
-    db.criar_tabela("usuarios")
-    db.inserir("usuarios", {"nome": "João"})
-    usuarios = db.selecionar("usuarios")
-    assert len(usuarios) == 1
+def test_insert_user(db):
+    db.create_table("users")
+    db.insert("users", {"name": "John"})
+    users = db.select("users")
+    assert len(users) == 1
 ```
 
-## Comandos Úteis
+## Useful Commands
 
 ```bash
-# Executar todos os testes
+# Run all tests
 pytest
 
-# Executar com verbose
+# Run with verbose
 pytest -v
 
-# Executar com cobertura
+# Run with coverage
 pytest --cov=src
 
-# Executar teste específico
-pytest tests/test_meu_modulo.py
+# Run specific test
+pytest tests/test_my_module.py
 
-# Executar teste específico
-pytest tests/test_meu_modulo.py::TestSomar::test_somar_positivos
+# Run specific test
+pytest tests/test_my_module.py::TestAdd::test_add_positive
 
-# Executar testes que correspondem a padrão
-pytest -k "somar"
+# Run tests matching pattern
+pytest -k "add"
 ```
 
-## Referências
+## References
 
 - [pytest Documentation](https://docs.pytest.org/)
 - [Python Testing with pytest](https://www.amazon.com/Python-Testing-pytest-Brian-Okken/dp/1680502409)
 - [Real Python - Testing](https://realpython.com/testing-in-python/)
 
-## Notas
+## Notes
 
-- Escreva testes antes do código (TDD)
-- Mantenha testes independentes
-- Use nomes descritivos para testes
-- Teste edge cases e exceções
-- Use fixtures para setup compartilhado
-- Mantenha testes rápidos
+- Write tests before code (TDD)
+- Keep tests independent
+- Use descriptive names for tests
+- Test edge cases and exceptions
+- Use fixtures for shared setup
+- Keep tests fast

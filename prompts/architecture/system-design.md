@@ -1,6 +1,6 @@
 ---
 name: system-design
-description: Prompt para design de sistemas e arquitetura
+description: Prompt for system design and architecture
 category: architecture
 version: 1.0.0
 author: OpenCode Community
@@ -11,78 +11,78 @@ compatible:
   - cursor
 variables:
   - name: requirements
-    description: Requisitos do sistema
+    description: System requirements
   - name: constraints
-    description: Restrições e limitações
+    description: Constraints and limitations
 ---
 
 # System Design
 
-## Objetivo
+## Objective
 
-Projetar sistemas escaláveis, mantíveis e robustos, considerando
-requisitos funcionais e não-funcionais.
+Design scalable, maintainable, and robust systems, considering
+functional and non-functional requirements.
 
-## Instruções
+## Instructions
 
-### Contexto
+### Context
 
-Você é um arquiteto de sistemas experiente. Analise os requisitos
-e projete uma arquitetura adequada.
+You are an experienced systems architect. Analyze the requirements
+and design an appropriate architecture.
 
-### Tarefa
+### Task
 
-1. Analisar requisitos
-2. Definir componentes
-3. Projetar interações
-4. Considerar trade-offs
+1. Analyze requirements
+2. Define components
+3. Design interactions
+4. Consider trade-offs
 
-### Critérios
+### Criteria
 
-1. **Escalabilidade:** Sistema suporta crescimento?
-2. **Disponibilidade:** Sistema é confiável?
-3. **Manutenibilidade:** Código é mantível?
-4. **Segurança:** Sistema é seguro?
+1. **Scalability:** Does the system support growth?
+2. **Availability:** Is the system reliable?
+3. **Maintainability:** Is the code maintainable?
+4. **Security:** Is the system secure?
 
-## Exemplo de Uso
-
-```
-Projete um sistema para:
-
-Requisitos: {{requirements}}
-
-Restrições: {{constraints}}
-
-Por favor:
-1. Defina os componentes principais
-2. Descreva as interações
-3. Considere trade-offs
-4. Sugira tecnologias
-```
-
-## Variações
-
-### Variação 1: Design de API
+## Usage Example
 
 ```
-Projete uma API para:
-1. Defina os endpoints
-2. Descreva o contrato
-3. Considere versionamento
-4. Planeje rate limiting
+Design a system for:
+
+Requirements: {{requirements}}
+
+Constraints: {{constraints}}
+
+Please:
+1. Define main components
+2. Describe interactions
+3. Consider trade-offs
+4. Suggest technologies
 ```
 
-### Variação 2: Design de Banco de Dados
+## Variations
+
+### Variation 1: API Design
 
 ```
-Projete o banco de dados para:
-1. Modele as entidades
-2. Defina relacionamentos
-3. Considere índices
-4. Planeje migrações
+Design an API for:
+1. Define endpoints
+2. Describe contract
+3. Consider versioning
+4. Plan rate limiting
 ```
 
-## Referências
+### Variation 2: Database Design
+
+```
+Design the database for:
+1. Model entities
+2. Define relationships
+3. Consider indexes
+4. Plan migrations
+```
+
+## References
 
 - [System Design Primer](https://github.com/donnemartin/system-design-primer)
 - [Designing Data-Intensive Applications](https://dataintensive.net/)

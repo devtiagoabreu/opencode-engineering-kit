@@ -2,38 +2,38 @@
 
 > {{description}}
 
-## Visão Geral
+## Overview
 
 {{overview}}
 
-## Instalação
+## Installation
 
-### Pré-requisitos
+### Prerequisites
 
 - {{prerequisite_1}}
 - {{prerequisite_2}}
 
-### Instalação
+### Installation
 
 ```bash
 {{install_command}}
 ```
 
-## Uso
+## Usage
 
-### Exemplo Básico
+### Basic Example
 
 ```bash
 {{basic_usage}}
 ```
 
-### Exemplo Avançado
+### Advanced Example
 
 ```bash
 {{advanced_usage}}
 ```
 
-## Estrutura do Projeto
+## Project Structure
 
 ```
 {{project_name}}/
@@ -43,10 +43,10 @@
 └── README.md
 ```
 
-## Contribuindo
+## Contributing
 
-Leia [CONTRIBUTING.md](./CONTRIBUTING.md) para guia de contribuição.
+See [CONTRIBUTING.md](./CONTRIBUTING.md) for contribution guide.
 
-## Licença
+## License
 
 [{{license}}](./LICENSE)
