@@ -157,6 +157,4 @@ CMD ["node", "dist/main.js"]
 ## References
 
 - [Docker Best Practices](../skills/devops/docker-best-practices/SKILL.md)
-- [Kubernetes Deployment](../skills/devops/kubernetes-deployment/SKILL.md)
-- [CI/CD Pipeline](../skills/devops/ci-cd-pipeline/SKILL.md)
 - [Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/)
