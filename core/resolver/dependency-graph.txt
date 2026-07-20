@@ -1,0 +1,76 @@
+# Dependency Graph
+# Generated: seg 20 jul 2026 00:47:33 -03
+
+## frontend/css-best-practices
+  (no dependencies)
+
+## frontend/accessibility
+  (no dependencies)
+
+## frontend/state-management
+  (no dependencies)
+
+## frontend/react-patterns
+  (no dependencies)
+
+## frontend/performance
+  (no dependencies)
+
+## code-review/code-review-checklist
+  (no dependencies)
+
+## devops/terraform-aws
+  (no dependencies)
+
+## devops/incident-response
+  (no dependencies)
+
+## devops/kubernetes-best-practices
+  (no dependencies)
+
+## devops/ci-cd-pipeline
+
+## devops/monitoring-observability
+  (no dependencies)
+
+## devops/docker-best-practices
+  (no dependencies)
+
+## security/secure-coding
+  (no dependencies)
+
+## security/owasp-top-10
+  (no dependencies)
+
+## backend/rest-api-design
+  (no dependencies)
+
+## backend/api-design
+  (no dependencies)
+
+## backend/database-design
+  (no dependencies)
+
+## backend/authentication
+  (no dependencies)
+
+## backend/graphql-api
+  (no dependencies)
+
+## backend/caching-strategies
+  (no dependencies)
+
+## testing/integration-testing
+  (no dependencies)
+
+## testing/unit-testing
+
+## testing/e2e-testing
+  (no dependencies)
+
+## testing/python-testing
+  (no dependencies)
+
+## git/git-workflow
+  (no dependencies)
+
