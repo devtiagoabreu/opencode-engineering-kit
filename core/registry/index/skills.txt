@@ -1,0 +1,5 @@
+  - code-review-checklist
+  - docker-best-practices
+  - api-design
+  - python-testing
+  - git-workflow
