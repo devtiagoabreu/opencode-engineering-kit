@@ -1,0 +1,26 @@
+#!/bin/bash
+set -euo pipefail
+
+# Pre-push Hook
+# Runs comprehensive tests before pushing
+
+SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+ROOT_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
+
+echo "Running pre-push checks..."
+
+# Run all tests
+echo "Running tests..."
+if ! "$ROOT_DIR/scripts/test.sh"; then
+  echo "Tests failed!"
+  exit 1
+fi
+
+# Run quality gates
+echo "Running quality gates..."
+if ! "$ROOT_DIR/core/quality/validate.sh"; then
+  echo "Quality gates failed!"
+  exit 1
+fi
+
+echo "Pre-push checks passed!"
