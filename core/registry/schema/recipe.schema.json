@@ -1,0 +1,98 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Recipe",
+  "description": "Schema for OpenCode Engineering Kit Recipes",
+  "type": "object",
+  "required": ["name", "description", "version", "author", "ingredients"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique recipe identifier"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 200,
+      "description": "Brief description of the recipe"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version"
+    },
+    "author": {
+      "type": "string",
+      "description": "Recipe author"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Searchable tags"
+    },
+    "category": {
+      "type": "string",
+      "enum": ["project-setup", "feature-implementation", "bug-fix", "refactoring", "testing", "deployment"],
+      "description": "Recipe category"
+    },
+    "ingredients": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "name"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["skill", "agent", "template", "prompt", "command"],
+            "description": "Ingredient type"
+          },
+          "name": {
+            "type": "string",
+            "description": "Ingredient name"
+          },
+          "version": {
+            "type": "string",
+            "description": "Required version"
+          },
+          "optional": {
+            "type": "boolean",
+            "description": "Is this ingredient optional?"
+          }
+        }
+      },
+      "description": "Required components"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["description"],
+        "properties": {
+          "description": {
+            "type": "string",
+            "description": "Step description"
+          },
+          "commands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Commands to execute"
+          }
+        }
+      },
+      "description": "Recipe steps"
+    },
+    "outcome": {
+      "type": "string",
+      "description": "Expected outcome"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Recipe difficulty level"
+    }
+  }
+}

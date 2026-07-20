@@ -1,0 +1,85 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Playbook",
+  "description": "Schema for OpenCode Engineering Kit Playbooks",
+  "type": "object",
+  "required": ["name", "description", "version", "author", "steps"],
+  "properties": {
+    "name": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$",
+      "description": "Unique playbook identifier"
+    },
+    "description": {
+      "type": "string",
+      "minLength": 10,
+      "maxLength": 200,
+      "description": "Brief description of the playbook"
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version"
+    },
+    "author": {
+      "type": "string",
+      "description": "Playbook author"
+    },
+    "tags": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      },
+      "description": "Searchable tags"
+    },
+    "compatible": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "enum": ["opencode", "claude-code", "cursor", "copilot"]
+      },
+      "description": "Compatible platforms"
+    },
+    "steps": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["title", "description"],
+        "properties": {
+          "title": {
+            "type": "string",
+            "description": "Step title"
+          },
+          "description": {
+            "type": "string",
+            "description": "Step description"
+          },
+          "commands": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Commands to execute"
+          },
+          "skills": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            },
+            "description": "Skills to use"
+          }
+        }
+      },
+      "description": "Playbook steps"
+    },
+    "estimatedTime": {
+      "type": "string",
+      "description": "Estimated completion time"
+    },
+    "difficulty": {
+      "type": "string",
+      "enum": ["beginner", "intermediate", "advanced"],
+      "description": "Playbook difficulty level"
+    }
+  }
+}
