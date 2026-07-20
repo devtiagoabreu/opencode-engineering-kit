@@ -11,7 +11,7 @@ jobs:
     name: Lint
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Check Markdown
         uses: avto-dev/markdown-lint@v1
@@ -34,28 +34,16 @@ jobs:
     name: Test
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
-      - name: Test skill format
-        run: bash tests/skills/test-skill-format.sh
-      
-      - name: Test skill content
-        run: bash tests/skills/test-skill-content.sh
-      
-      - name: Test agent format
-        run: bash tests/agents/test-agent-format.sh
-      
-      - name: Test template format
-        run: bash tests/templates/test-template-format.sh
-      
-      - name: Test bootstrap script
-        run: bash tests/scripts/test-bootstrap.sh
+      - name: Run all tests
+        run: ./scripts/test.sh
 
   validate:
     name: Validate
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       
       - name: Validate frontmatter
         run: |
@@ -79,3 +67,15 @@ jobs:
             fi
           done
           echo "All files within size limits"
+      
+      - name: Validate metadata
+        run: |
+          echo "Validating metadata..."
+          find skills -name "metadata.json" | while read file; do
+            echo "Checking $file..."
+            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
+              echo "ERROR: $file is not valid JSON"
+              exit 1
+            fi
+          done
+          echo "All metadata files are valid"
