@@ -14,7 +14,7 @@ compatible:
 
 ## Usage
 
-```
+```text
 /test [type] [filter]
 ```
 
@@ -24,10 +24,10 @@ Runs project tests, allowing filtering by type and/or file.
 
 ## Arguments
 
-| Argument | Required | Description | Default |
-|-----------|----------|-------------|---------|
-| type | No | Test type (unit, integration, all) | all |
-| filter | No | Filter for specific tests | All |
+| Argument  | Required  | Description | Default        |
+| --------- | --------- | ----------- | -------------- |
+| type      | No        | Test type (unit, integration, all) | all            |
+| filter    | No        | Filter for specific tests | All            |
 
 ## Examples
 

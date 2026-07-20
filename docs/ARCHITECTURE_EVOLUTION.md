@@ -19,12 +19,14 @@ The OpenCode Engineering Kit must evolve from a collection of markdown files int
 ## Current Architecture Assessment
 
 ### Strengths
+
 - Clear component taxonomy (Skills, Agents, Prompts, Templates, Commands, Context)
 - Well-defined SKILL.md format with YAML frontmatter
 - Multi-platform compatibility strategy
 - Thorough PROJECT_SPEC.md (1632 lines)
 
 ### Weaknesses
+
 - No separation between core infrastructure and content
 - No registry or discovery system
 - No dependency management
@@ -39,24 +41,31 @@ The OpenCode Engineering Kit must evolve from a collection of markdown files int
 ## Proposed Architecture Principles
 
 ### 1. Separation of Concerns
+
 Core infrastructure must be clearly separated from content assets.
 
 ### 2. Registry-First Design
+
 Every asset must be registered, discoverable, and versioned.
 
 ### 3. Dependency Awareness
+
 Assets must declare dependencies. The system must resolve them.
 
 ### 4. Plugin Ready
+
 External packages must be installable without modifying core.
 
 ### 5. Marketplace Prepared
+
 Architecture must support future asset marketplace.
 
 ### 6. Schema Validated
+
 All assets must conform to published schemas.
 
 ### 7. API Driven
+
 All operations must be scriptable and automatable.
 
 ---
@@ -182,6 +191,7 @@ User Request
 The migration will be incremental, following these phases:
 
 ### Phase 1: Foundation (v0.2.0)
+
 - Standardize language to English
 - Fix all broken references
 - Deduplicate context files
@@ -189,6 +199,7 @@ The migration will be incremental, following these phases:
 - Create registry MVP
 
 ### Phase 2: Infrastructure (v0.3.0)
+
 - Implement discovery system
 - Add dependency management
 - Create plugin architecture
@@ -196,6 +207,7 @@ The migration will be incremental, following these phases:
 - Populate documentation
 
 ### Phase 3: Scale (v1.0.0)
+
 - Implement marketplace preparation
 - Add 50+ skills
 - Add 20+ agents

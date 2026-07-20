@@ -132,6 +132,7 @@ Each result receives a score based on:
 ### Ranking
 
 Results are ranked by:
+
 1. Score (descending)
 2. Version (newest first)
 3. Name (alphabetical)

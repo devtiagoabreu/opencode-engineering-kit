@@ -46,7 +46,7 @@ OpenCode Engineering Kit follows a modular architecture based on markdown compon
 
 ## Components
 
-```
+```text
 ┌─────────────────────────────────────────────────┐
 │                OpenCode Engineering Kit          │
 │  ┌─────────┐ ┌─────────┐ ┌─────────┐           │
@@ -63,7 +63,7 @@ OpenCode Engineering Kit follows a modular architecture based on markdown compon
 
 ### Installation Flow
 
-```
+```text
 User → Clone Repo → Run bootstrap.sh →
 Copy Skills/Agents/Prompts → Configure OpenCode →
 Use resources
@@ -71,7 +71,7 @@ Use resources
 
 ### Usage Flow
 
-```
+```text
 User → OpenCode → Load Skills → Select Skill →
 Execute Agent → Use Prompts → Apply Templates →
 Generate Code → Review → Commit
@@ -79,7 +79,7 @@ Generate Code → Review → Commit
 
 ### Contribution Flow
 
-```
+```text
 Contributor → Fork → Feature Branch → Implement →
 Test → Document → Submit PR → Code Review → Merge
 ```

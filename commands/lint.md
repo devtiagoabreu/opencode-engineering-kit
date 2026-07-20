@@ -14,7 +14,7 @@ compatible:
 
 ## Usage
 
-```
+```text
 /lint [file_or_directory]
 ```
 
@@ -24,9 +24,9 @@ Runs linting tools on the code, checking formatting, style, and possible errors.
 
 ## Arguments
 
-| Argument | Required | Description | Default |
-|-----------|----------|-------------|---------|
-| file | No | File or directory to check | Entire project |
+| Argument  | Required  | Description | Default        |
+| --------- | --------- | ----------- | -------------- |
+| file      | No        | File or directory to check | Entire project |
 
 ## Examples
 

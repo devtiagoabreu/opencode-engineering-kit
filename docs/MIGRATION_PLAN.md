@@ -30,6 +30,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Translate all content to English
 
 **Files to modify:**
+
 - `skills/devops/docker-best-practices/SKILL.md`
 - `skills/code-review/code-review-checklist/SKILL.md`
 - `skills/testing/python-testing/SKILL.md`
@@ -60,6 +61,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - All files in English
 - Tests pass
 - No Portuguese content remains
@@ -71,10 +73,12 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Rename files with underscores to kebab-case
 
 **Files to rename:**
+
 - `context/coding_rules.md` → `context/coding-rules.md`
 - `context/style_guide.md` → `context/style-guide.md`
 
 **Files to update:**
+
 - All references to these files
 - `scripts/bootstrap.sh`
 - Tests
@@ -83,6 +87,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - Files renamed
 - All references updated
 - Tests pass
@@ -94,6 +99,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Align all versions to 0.1.0
 
 **Files to modify:**
+
 - `agents/devops-engineer.md` (version: 1.0.0 → 0.1.0)
 - `agents/backend-developer.md` (version: 1.0.0 → 0.1.0)
 - `agents/frontend-developer.md` (version: 1.0.0 → 0.1.0)
@@ -104,6 +110,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - All components at version 0.1.0
 - PROJECT_SPEC.md matches
 
@@ -114,18 +121,21 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Merge duplicated context files
 
 **Current state:**
+
 - `conventions.md` (144 lines)
 - `naming.md` (115 lines)
 - `style_guide.md` (180 lines)
 - `coding_rules.md` (125 lines)
 
 **Proposed state:**
+
 - `conventions.md` (merged, ~200 lines)
 
 **Effort:** 2-3 hours  
 **Risk:** Medium  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - Single conventions file
 - No duplicated content
 - All references updated
@@ -138,6 +148,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Fix all broken cross-references
 
 **Files to fix:**
+
 - `agents/devops-engineer.md` (references non-existent skills)
 - `prompts/code-review/code-review-checklist.md` (verify reference)
 
@@ -145,6 +156,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - All references point to existing files
 - Cross-reference validator passes
 
@@ -155,6 +167,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Fix bootstrap.sh to match actual structure
 
 **Changes:**
+
 - Update skill categories
 - Update agent list
 - Update template list
@@ -165,6 +178,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Git revert  
 **Acceptance criteria:**
+
 - Bootstrap creates correct structure
 - All tests pass
 
@@ -177,6 +191,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Create core/ directory structure
 
 **Directories to create:**
+
 - `core/registry/`
 - `core/discovery/`
 - `core/resolver/`
@@ -188,6 +203,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Remove directory  
 **Acceptance criteria:**
+
 - Directory structure exists
 - README in each directory
 
@@ -198,6 +214,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Define schemas for all asset types
 
 **Files to create:**
+
 - `core/registry/schema/skill.schema.json`
 - `core/registry/schema/agent.schema.json`
 - `core/registry/schema/prompt.schema.json`
@@ -210,6 +227,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - All schemas valid JSON
 - Schemas validate existing assets
 - Documentation complete
@@ -221,6 +239,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Implement basic registry system
 
 **Files to create:**
+
 - `core/registry/generate.sh`
 - `core/registry/index/skills.json`
 - `core/registry/index/agents.json`
@@ -232,6 +251,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Registry generates correct indexes
 - Indexes contain all assets
 - Indexes are valid JSON
@@ -243,6 +263,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Implement schema validation
 
 **Files to create:**
+
 - `core/validator/validate.sh`
 - `core/validator/validate-all.sh`
 
@@ -250,6 +271,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Validator catches invalid frontmatter
 - Validator catches missing required fields
 - Validator runs in CI
@@ -261,16 +283,19 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Add local validation before commit
 
 **Files to create:**
+
 - `tooling/hooks/pre-commit`
 - `tooling/hooks/pre-push`
 
 **Files to modify:**
+
 - `CONTRIBUTING.md` (add hook installation instructions)
 
 **Effort:** 2-3 hours  
 **Risk:** Low  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Hooks run automatically
 - Hooks catch common errors
 - Documentation updated
@@ -282,6 +307,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Move content to assets/ directory
 
 **Directories to create:**
+
 - `assets/skills/`
 - `assets/agents/`
 - `assets/prompts/`
@@ -291,6 +317,7 @@ This document describes the incremental migration from the current structure (v0
 - `assets/recipes/`
 
 **Files to move:**
+
 - `skills/` → `assets/skills/`
 - `agents/` → `assets/agents/`
 - `prompts/` → `assets/prompts/`
@@ -301,6 +328,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** High  
 **Rollback:** Move files back  
 **Acceptance criteria:**
+
 - All files moved
 - All references updated
 - All tests pass
@@ -315,6 +343,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Create 20 new skills
 
 **Categories to populate:**
+
 - devops (5 skills)
 - backend (5 skills)
 - frontend (5 skills)
@@ -325,6 +354,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - All skills pass validation
 - All skills have examples
 - Documentation complete
@@ -336,6 +366,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Create 10 new agents
 
 **Agents to create:**
+
 - fullstack-developer
 - mobile-developer
 - security-engineer
@@ -351,6 +382,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - All agents pass validation
 - All agents have examples
 - Documentation complete
@@ -362,6 +394,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Implement search and filtering
 
 **Files to create:**
+
 - `core/discovery/search.sh`
 - `core/discovery/filter.sh`
 - `core/discovery/index.sh`
@@ -370,6 +403,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Medium  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Search by category works
 - Search by tags works
 - Search by framework works
@@ -382,6 +416,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Implement dependency management
 
 **Files to create:**
+
 - `core/resolver/resolve.sh`
 - `core/resolver/graph.sh`
 - `core/resolver/validate.sh`
@@ -390,6 +425,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** High  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Dependencies declared in metadata
 - Dependencies resolved correctly
 - Circular dependencies detected
@@ -402,11 +438,13 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Implement plugin architecture
 
 **Files to create:**
+
 - `core/plugin/loader.sh`
 - `core/plugin/installer.sh`
 - `core/plugin/uninstaller.sh`
 
 **Directories to create:**
+
 - `plugins/community/`
 - `plugins/enterprise/`
 
@@ -414,6 +452,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** High  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - External plugins loadable
 - Plugin metadata validated
 - Plugin conflicts detected
@@ -426,6 +465,7 @@ This document describes the incremental migration from the current structure (v0
 **Objective:** Prepare architecture for future marketplace
 
 **Files to create:**
+
 - `core/marketplace/README.md`
 - `core/marketplace/install.sh`
 - `core/marketplace/search.sh`
@@ -434,6 +474,7 @@ This document describes the incremental migration from the current structure (v0
 **Risk:** Low  
 **Rollback:** Remove files  
 **Acceptance criteria:**
+
 - Installation by name works
 - Search by criteria works
 - Version resolution works

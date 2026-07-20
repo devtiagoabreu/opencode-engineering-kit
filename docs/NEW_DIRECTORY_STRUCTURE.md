@@ -27,6 +27,7 @@ opencode-engineering-kit/
 ```
 
 **Problems:**
+
 - No separation between core and content
 - Empty directories create confusion
 - No registry or index

@@ -131,7 +131,7 @@ Implements JWT authentication for the API.
 
 ### Example 2: Review Comments
 
-```markdown
+````markdown
 **Blocker:** This function doesn't handle network errors.
 
 ```javascript
@@ -149,7 +149,7 @@ fetch(url)
 **Minor:** Style - extra space after comma.
 
 **Nit:** Variable name could be more descriptive.
-```
+````
 
 ## References
 

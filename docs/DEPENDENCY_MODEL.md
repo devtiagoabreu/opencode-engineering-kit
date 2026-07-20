@@ -31,7 +31,7 @@ The Dependency Model manages relationships between assets, enabling dependency r
 | recommends | Nice to have | recommends: docker-compose |
 | conflicts | Cannot coexist | conflicts: docker-legacy |
 | provides | Alternative | provides: container-runtime |
-| peer | Must match version | peer: react@18.x |
+| peer | Must match version | `react@18.x` |
 
 ---
 

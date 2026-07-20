@@ -25,7 +25,7 @@ author: OpenCode Community
 
 ### README.md
 
-```markdown
+````markdown
 # Project Name
 
 > Brief description
@@ -68,11 +68,11 @@ See [CONTRIBUTING.md](./CONTRIBUTING.md)
 ## License
 
 [MIT](./LICENSE)
-```
+````
 
 ### CONTRIBUTING.md
 
-```markdown
+````markdown
 # Contributing
 
 ## How to Contribute
@@ -111,7 +111,7 @@ Run tests before submitting PR:
 ```bash
 ./scripts/test.sh
 ```
-```
+````
 
 ## Documentation Generation
 

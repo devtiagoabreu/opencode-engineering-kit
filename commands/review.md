@@ -14,7 +14,7 @@ compatible:
 
 ## Usage
 
-```
+```text
 /review [file_or_directory]
 ```
 
@@ -25,9 +25,9 @@ on quality, security, and best practices.
 
 ## Arguments
 
-| Argument | Required | Description | Default |
-|-----------|----------|-------------|---------|
-| file | No | File or directory to review | Current code |
+| Argument  | Required  | Description | Default        |
+| --------- | --------- | ----------- | -------------- |
+| file      | No        | File or directory to review | Current code   |
 
 ## Examples
 

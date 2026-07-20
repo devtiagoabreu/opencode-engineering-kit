@@ -27,8 +27,6 @@
 16. [Licensing](#16-licensing)
 17. [Roadmap](#17-roadmap)
 18. [Glossary](#18-glossary)
-19. [Appendix A: Skill Examples](#appendix-a-skill-examples)
-20. [Appendix B: Agent Examples](#appendix-b-agent-examples)
 
 ---
 
@@ -192,12 +190,14 @@ The project does **not** intend to:
 **Decision:** Skills use markdown format with YAML frontmatter.
 
 **Rationale:**
+
 - Markdown is readable by humans and machines
 - YAML frontmatter enables structured metadata
 - Compatible with OpenCode, Claude Code, and Cursor
 - Easy to version and review
 
 **Consequences:**
+
 - YAML parser required for metadata
 - 500-line limit per SKILL.md (justified: keeps skills focused and scannable)
 - Standard format for all skills
@@ -209,12 +209,14 @@ The project does **not** intend to:
 **Decision:** Skills are organized in directories by category.
 
 **Rationale:**
+
 - Facilitates navigation and discovery
 - Groups related skills
 - Categories are expandable (see AD-002b)
 - Follows Shokunin pattern
 
 **Consequences:**
+
 - Directory structure is fixed
 - Categories are pre-defined in bootstrap
 - New category requires bootstrap update
@@ -226,11 +228,13 @@ The project does **not** intend to:
 **Decision:** New categories can be added by creating a new directory under `skills/`. No bootstrap update required for new categories.
 
 **Rationale:**
+
 - Avoids rigidity of fixed categories
 - Allows organic growth
 - Maintains discoverability
 
 **Consequences:**
+
 - Categories must follow naming conventions
 - New categories should be documented in README
 
@@ -241,12 +245,14 @@ The project does **not** intend to:
 **Decision:** Agents are markdown files with personas.
 
 **Rationale:**
+
 - Consistent with Skills format
 - Easy to edit and maintain
 - Can include usage examples
 - Compatible with OpenCode
 
 **Consequences:**
+
 - 200-line limit per agent (justified: agents should be focused personas)
 - Persona defined in content
 - Skills referenced in frontmatter
@@ -258,12 +264,14 @@ The project does **not** intend to:
 **Decision:** Context consists of independent .md files.
 
 **Rationale:**
+
 - Enables partial updates
 - Facilitates caching per section
 - Can be combined dynamically
 - Separation of concerns
 
 **Consequences:**
+
 - Multiple files to manage
 - Composition mechanism required
 - Each file has defined scope
@@ -275,12 +283,14 @@ The project does **not** intend to:
 **Decision:** Installation and configuration scripts in Bash.
 
 **Rationale:**
+
 - Available on all Unix systems
 - Easy to understand and modify
 - No external dependencies
 - Can be read and audited
 
 **Consequences:**
+
 - Doesn't work natively on Windows (requires WSL)
 - Error handling required
 - Must be tested on multiple distributions
@@ -325,7 +335,7 @@ A **Skill** is a set of instructions, context, and references that enable AI to 
 
 #### Format
 
-```markdown
+````markdown
 ---
 name: skill-name
 description: Clear description (1-1024 characters)
@@ -379,7 +389,7 @@ example
 
 - Important note
 - Special caution
-```
+````
 
 #### Rules
 
@@ -495,7 +505,7 @@ A **Prompt** is a set of instructions and context designed to guide AI to execut
 
 #### Format
 
-```markdown
+````markdown
 ---
 name: prompt-name
 description: Prompt description
@@ -545,7 +555,7 @@ Success criteria for the task.
 ## References
 
 - [Link 1](url)
-```
+````
 
 #### Rules
 
@@ -563,7 +573,7 @@ A **Template** is a pre-configured model that serves as a starting point for cre
 
 #### Format
 
-```markdown
+````markdown
 ---
 name: template-name
 description: Template description
@@ -619,7 +629,7 @@ Customized template example...
 ## References
 
 - [Link 1](url)
-```
+````
 
 ### 6.5 Commands
 
@@ -629,7 +639,7 @@ A **Command** is a custom command that can be executed in OpenCode to perform a 
 
 #### Format
 
-```markdown
+````markdown
 ---
 name: command-name
 description: Command description
@@ -670,7 +680,7 @@ What this command does.
 ## Notes
 
 - Important notes about the command
-```
+````
 
 ### 6.6 Context
 
@@ -1629,4 +1639,4 @@ Licensed under MIT License
 | The Hive Skill | 79 skills for AI | github.com/beingaivanshoo/the-hive-skill |
 | Conventional Commits | Commit pattern | conventionalcommits.org |
 | Semantic Versioning | Versioning | semver.org |
-| MIT License | Project license | opens
+| MIT License | Project license | opensource.org/licenses/MIT |

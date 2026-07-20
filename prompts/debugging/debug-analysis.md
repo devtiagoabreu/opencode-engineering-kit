@@ -45,7 +45,7 @@ error and identify the root cause.
 
 ## Usage Example
 
-```
+````
 Analyze the following error:
 
 Error message: {{error_message}}
@@ -59,7 +59,7 @@ Please:
 1. Identify the root cause
 2. Propose a solution
 3. Suggest how to prevent it in the future
-```
+````
 
 ## Variations
 
