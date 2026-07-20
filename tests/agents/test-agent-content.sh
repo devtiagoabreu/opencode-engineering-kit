@@ -27,15 +27,15 @@ for agent_file in "$AGENTS_DIR"/*.md; do
         ((ERRORS++))
     fi
     
-    # Check for Skills section (English or Portuguese)
-    if ! grep -qE "## (Skills|Habilidades)" "$agent_file"; then
-        echo "ERROR: $agent_file missing 'Skills' or 'Habilidades' section"
+    # Check for Skills/Capabilities section (English or Portuguese)
+    if ! grep -qE "## (Skills|Habilidades|Capabilities)" "$agent_file"; then
+        echo "ERROR: $agent_file missing 'Skills', 'Habilidades', or 'Capabilities' section"
         ((ERRORS++))
     fi
     
     # Check for Examples section (English or Portuguese)
-    if ! grep -qE "## (Examples|Exemplos)" "$agent_file"; then
-        echo "ERROR: $agent_file missing 'Examples' or 'Exemplos' section"
+    if ! grep -qE "## (Examples|Exemplos|Usage Examples)" "$agent_file"; then
+        echo "ERROR: $agent_file missing 'Examples', 'Exemplos', or 'Usage Examples' section"
         ((ERRORS++))
     fi
     
