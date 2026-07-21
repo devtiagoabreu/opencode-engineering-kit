@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>OpenCode Engineering Kit Marketplace</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>OpenCode Engineering Kit Marketplace</h1>
+            <p>Discover and install skills, agents, prompts, and templates</p>
+        </div>
+    </header>
+    
+    <main class="container">
+        <section class="search-section">
+            <input type="text" id="search-input" placeholder="Search for skills, agents, prompts...">
+            <button id="search-btn">Search</button>
+        </section>
+        
+        <section class="filters-section">
+            <h3>Filters</h3>
+            <div class="filters">
+                <select id="type-filter">
+                    <option value="all">All Types</option>
+                    <option value="skill">Skills</option>
+                    <option value="agent">Agents</option>
+                    <option value="prompt">Prompts</option>
+                    <option value="template">Templates</option>
+                </select>
+                
+                <select id="category-filter">
+                    <option value="all">All Categories</option>
+                    <option value="devops">DevOps</option>
+                    <option value="backend">Backend</option>
+                    <option value="frontend">Frontend</option>
+                    <option value="testing">Testing</option>
+                    <option value="security">Security</option>
+                </select>
+                
+                <select id="compatibility-filter">
+                    <option value="all">All Platforms</option>
+                    <option value="opencode">OpenCode</option>
+                    <option value="claude-code">Claude Code</option>
+                    <option value="cursor">Cursor</option>
+                </select>
+            </div>
+        </section>
+        
+        <section class="results-section">
+            <h2>Available Assets</h2>
+            <div id="results" class="results-grid">
+                <!-- Results will be loaded here -->
+            </div>
+        </section>
+        
+        <section class="stats-section">
+            <h2>Marketplace Statistics</h2>
+            <div class="stats-grid">
+                <div class="stat-card">
+                    <h3 id="total-skills">0</h3>
+                    <p>Skills</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-agents">0</h3>
+                    <p>Agents</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-prompts">0</h3>
+                    <p>Prompts</p>
+                </div>
+                <div class="stat-card">
+                    <h3 id="total-templates">0</h3>
+                    <p>Templates</p>
+                </div>
+            </div>
+        </section>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>&copy; 2026 OpenCode Engineering Kit. All rights reserved.</p>
+        </div>
+    </footer>
+    
+    <script src="app.js"></script>
+</body>
+</html>
