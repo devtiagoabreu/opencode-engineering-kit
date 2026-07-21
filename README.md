@@ -157,6 +157,16 @@ See [docs/ARCHITECTURE_EVOLUTION.md](./docs/ARCHITECTURE_EVOLUTION.md) for the v
 
 See [SECURITY.md](./SECURITY.md) for security policies and reporting.
 
+## Documentation
+
+### English
+- [User Guide](./docs/USER_GUIDE.md) - Complete guide for using the kit
+- [Quick Reference](./docs/QUICK_REFERENCE.md) - One-page reference card
+
+### Português
+- [Guia do Usuário](./docs/GUIA_USUARIO.md) - Guia completo para usar o kit
+- [Cartão de Referência](./docs/CARTAO_REFERENCIA.md) - Referência rápida
+
 ## License
 
 This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
