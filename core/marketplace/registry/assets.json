@@ -1,0 +1,32 @@
+{
+  "assets": [
+    {
+      "name": "docker-best-practices",
+      "type": "skill",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/skills/devops/docker-best-practices",
+      "publisher": "john-doe",
+      "published": "",
+      "quality": "community",
+      "downloads": 0,
+      "rating": null,
+      "reviews": 0,
+      "version": "0.1.0",
+      "description": "Complete guide for Docker and containers best practices in production",
+      "category": "devops"
+    },
+    {
+      "name": "unit-testing",
+      "type": "skill",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/skills/testing/unit-testing",
+      "publisher": "john-doe",
+      "published": "",
+      "quality": "community",
+      "downloads": 0,
+      "rating": null,
+      "reviews": 0,
+      "version": "0.1.0",
+      "description": "Best practices for unit testing and test-driven development",
+      "category": "testing"
+    }
+  ]
+}

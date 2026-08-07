@@ -21,7 +21,7 @@ log_error() { echo -e "${RED}[ERROR]${NC} $1"; }
 # Check arguments
 if [ $# -eq 0 ]; then
     echo "Usage: $0 <asset-path>"
-    echo "Example: $0 skills/devops/docker-best-practices"
+    echo "Example: $0 assets/skills/devops/docker-best-practices"
     exit 1
 fi
 
@@ -43,6 +43,35 @@ if [ ! -f "$ROOT_DIR/$ASSET_PATH/metadata.json" ]; then
     exit 0
 fi
 
+# Resolve dependencies from metadata.json
+log_info "Resolving dependencies from metadata.json..."
+metadata_deps="$(python3 -c "
+import json, sys
+with open('$ROOT_DIR/$ASSET_PATH/metadata.json') as f:
+    meta = json.load(f)
+for d in meta.get('dependencies', []):
+    print(d.get('name', ''), d.get('version', '*'))
+" 2>/dev/null || true)"
+
+if [ -n "$metadata_deps" ]; then
+    while read -r dep_name dep_version; do
+        [ -z "$dep_name" ] && continue
+        log_info "  - $dep_name ($dep_version)"
+
+        found=false
+        for dir in "$ROOT_DIR"/assets/skills/*/"$dep_name"; do
+            if [ -d "$dir" ]; then
+                found=true
+                break
+            fi
+        done
+
+        if [ "$found" = false ]; then
+            log_warn "    Dependency not found: $dep_name"
+        fi
+    done <<< "$metadata_deps"
+fi
+
 # Check if SKILL.md exists
 if [ -f "$ROOT_DIR/$ASSET_PATH/SKILL.md" ]; then
     # Extract dependencies from SKILL.md
@@ -55,7 +84,7 @@ if [ -f "$ROOT_DIR/$ASSET_PATH/SKILL.md" ]; then
                 
                 # Check if dependency exists
                 found=false
-                for dir in "$ROOT_DIR"/skills/*/"$dep_name" "$ROOT_DIR"/agents/"$dep_name".md; do
+                for dir in "$ROOT_DIR"/assets/skills/*/"$dep_name" "$ROOT_DIR"/assets/agents/"$dep_name".md; do
                     if [ -e "$dir" ]; then
                         found=true
                         break

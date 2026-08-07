@@ -1,0 +1,744 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-08-07T03:14:11Z",
+  "platforms": [
+    "opencode",
+    "claude-code",
+    "cursor",
+    "copilot"
+  ],
+  "assets": {
+    "clean-architecture": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "ject-oriented or functional programming experience",
+        "sic understanding of dependency injection",
+        "miliarity with at least one backend framework",
+        "yered project structure templates",
+        "pendency rule enforcement patterns",
+        "e case and domain model design guidance",
+        "rts-and-adapters (hexagonal) implementation examples"
+      ]
+    },
+    "microservices-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "stributed systems fundamentals",
+        "derstanding of REST or message queue basics",
+        "miliarity with domain-driven design concepts",
+        "rvice decomposition guidance via bounded contexts",
+        "ent-driven and CQRS pattern templates",
+        "ga coordination patterns for distributed transactions",
+        "ntract and versioning strategies for service APIs"
+      ]
+    },
+    "api-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "sic HTTP knowledge",
+        "I design patterns",
+        "ST conventions",
+        "st practices"
+      ]
+    },
+    "authentication": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "caching-strategies": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "database-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "graphql-api": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "rest-api-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "code-review-checklist": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "view checklist",
+        "aluation criteria",
+        "st practices"
+      ]
+    },
+    "open-source-contributing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "t and GitHub account",
+        "sic understanding of PRs",
+        "ntribution checklist",
+        "template",
+        "sue triage workflow"
+      ]
+    },
+    "nosql-modeling": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "derstanding of relational modeling concepts",
+        "sic familiarity with JSON and map/dict structures",
+        "target NoSQL engine (MongoDB, Redis, Neo4j) for experiments",
+        "ore selection guidance per access pattern",
+        "cument schema design and embedding rules",
+        "y-value design patterns (cache, counter, session)",
+        "aph modeling with nodes, edges, and traversal examples"
+      ]
+    },
+    "sql-optimization": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "sic SQL (SELECT, JOIN, WHERE)",
+        "cess to a relational database to run EXPLAIN",
+        "derstanding of primary keys and foreign keys",
+        "dex selection and design guidelines",
+        "PLAIN/EXPLAIN ANALYZE interpretation guidance",
+        "ery rewriting patterns to avoid slow scans",
+        "rmalization and denormalization decision guidance"
+      ]
+    },
+    "ci-cd-pipeline": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "docker-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "cker 20.10+ installed",
+        "cker Compose v2+ (optional)",
+        "timized Dockerfile",
+        "cker-compose.yml",
+        "ockerignore"
+      ]
+    },
+    "incident-response": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "kubernetes-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "monitoring-observability": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "terraform-aws": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "esp32-development": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "programming fundamentals",
+        "ESP32 development board (e.g. ESP32-DevKitC)",
+        "B cable and esptool or Espressif IDE",
+        "rking ESP-IDF installation",
+        "P-IDF project scaffolding and build workflow",
+        "IO, PWM, and interrupt examples",
+        "Fi station and SoftAP connection patterns",
+        "eeRTOS task and event loop integration for ESP32"
+      ]
+    },
+    "rtos-basics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "programming fundamentals",
+        "derstanding of threading and concurrency concepts",
+        "cess to an RTOS demo project (FreeRTOS or Zephyr)",
+        "sk creation and lifecycle management patterns",
+        "iority-based and preemptive scheduling guidance",
+        "maphore, mutex, and queue synchronization examples",
+        "al-time constraints analysis (deadlines, priority inversion)"
+      ]
+    },
+    "accessibility": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "css-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "performance": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "react-patterns": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "state-management": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "git-workflow": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "t 2.0+ installed",
+        "anching strategy",
+        "mmit conventions",
+        "st practices"
+      ]
+    },
+    "mqtt-protocol": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "sic networking concepts (TCP/IP)",
+        "miliarity with JSON payloads",
+        "terminal and access to install clients (mosquitto-clients or paho)",
+        "oker setup and security configuration steps",
+        "pic design and wildcard usage guidance",
+        "S semantics and message flow explanations",
+        "blisher and subscriber client examples in multiple languages"
+      ]
+    },
+    "sensor-integration": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "microcontroller board (ESP32 or similar) with I2C/SPI peripherals",
+        "sensor module with a documented register map (e.g. BME280, MPU6050, TSL2591)",
+        "sic C or MicroPython skills and wiring (pull-ups, level shifting)",
+        "C and SPI bus fundamentals and driver examples",
+        "nsor initialization, reading, and calibration patterns",
+        "lemetry pipeline design from device to cloud",
+        "ta validation and edge batching best practices"
+      ]
+    },
+    "python-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.9 or newer",
+        "p and venv available",
+        "sic familiarity with Python syntax",
+        "idelines for static typing with PEP 484 annotations",
+        "rkflow for virtual environments and dependency pinning",
+        "oject packaging setup with pyproject.toml",
+        "de style and linting conventions (PEP 8, ruff, black)"
+      ]
+    },
+    "typescript-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "de.js 18 or newer",
+        "m, yarn, pnpm, or bun package manager",
+        "sic familiarity with JavaScript/TypeScript",
+        "rict TypeScript compiler configuration",
+        "tterns for type safety, generics, and unions",
+        "les for ergonomic typing without ceremony",
+        "oject setup with tsconfig and package scripts"
+      ]
+    },
+    "agile-scrum": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "product team with a Product Owner and Scrum Master roles",
+        "shared backlog management tool (Jira, Linear, Trello, GitHub Issues)",
+        "mmitment to fixed-length sprints",
+        "fined Scrum roles and their responsibilities",
+        "ady-to-run ceremony agendas with timeboxes",
+        "mplates for user stories and sprint planning",
+        "idance on retrospectives and continuous improvement"
+      ]
+    },
+    "project-setup": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "t 2.0 or newer",
+        "language runtime and package manager for the chosen stack",
+        "de.js 18+ or Python 3.9+ (depending on stack)",
+        "andard repository directory layout",
+        "itor, lint, and format configuration templates",
+        "t and CI/CD baseline (branching, hooks, actions)",
+        "ecklist to bootstrap a new project in minutes"
+      ]
+    },
+    "code-review-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "git-based workflow with pull requests or merge requests",
+        "code review tool (GitHub, GitLab, Bitbucket)",
+        "shared Definition of Done",
+        "inciples for constructive, blame-free review feedback",
+        "reusable review checklist covering correctness and security",
+        "idance on review scope, speed, and prioritization",
+        "mplates for common review comments"
+      ]
+    },
+    "refactoring-techniques": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "working codebase with tests (or willingness to add them first)",
+        "t for safe rollback of each step",
+        "miliarity with the language's unit test framework",
+        "catalog of proven refactoring patterns with examples",
+        "step-by-step safety process for behavior-preserving changes",
+        "idance on when to refactor and when to stop",
+        "chniques to reduce risk during large restructures"
+      ]
+    },
+    "owasp-top-10": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "secure-coding": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "e2e-testing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "integration-testing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "python-testing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.7+ installed",
+        "test installed",
+        "st configuration",
+        "st examples",
+        "st practices"
+      ]
+    },
+    "unit-testing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor"
+      ]
+    },
+    "git-advanced": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "t 2.30 or newer",
+        "mfort with basic Git (commit, branch, merge, push)",
+        "cess to a remote repository (GitHub, GitLab, or self-hosted)",
+        "rkflows for clean history with interactive rebase and fixup",
+        "eps to bisect and pinpoint regressions automatically",
+        "rallel development using linked worktrees",
+        "stom git hooks for automation and safety gates"
+      ]
+    },
+    "terminal-productivity": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "POSIX shell (bash or zsh) with a modern terminal emulator",
+        "mebrew, apt, or dnf for installing CLI tools",
+        "ux, fzf, and ripgrep installed (see usage)",
+        "ux session and pane management workflow",
+        "zzy finding for files, history, and processes with fzf",
+        "starter library of safe, high-value shell aliases",
+        "nfiguration snippets for bash and zsh"
+      ]
+    },
+    "opencv-basics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.8 or newer",
+        "enCV installed (`pip install opencv-python`)",
+        "mPy for array manipulation",
+        "image file or webcam for experimentation",
+        "re image I/O and color space conversion recipes",
+        "ltering, thresholding, and edge detection workflows",
+        "ntour detection and analysis for object boundaries",
+        "awing and annotation helpers for visualization"
+      ]
+    },
+    "backend-developer": {
+      "type": "backend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "ml-engineer": {
+      "type": "backend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "data-engineer": {
+      "type": "database",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "devops-engineer": {
+      "type": "devops",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "site-reliability-engineer": {
+      "type": "devops",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "technical-writer": {
+      "type": "documentation",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "frontend-developer": {
+      "type": "frontend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "fullstack-developer": {
+      "type": "frontend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "mobile-developer": {
+      "type": "frontend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "ui-designer": {
+      "type": "frontend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "product-manager": {
+      "type": "planner",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "qa-engineer": {
+      "type": "qa",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "security-engineer": {
+      "type": "security",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "architecture": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "code-review": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "debugging": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "documentation": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "performance-review": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "planning": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "refactoring": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "security": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "testing": {
+      "type": "prompts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    }
+  }
+}

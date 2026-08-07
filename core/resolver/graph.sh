@@ -24,7 +24,7 @@ echo "# Generated: $(date)" >> "$GRAPH_FILE"
 echo "" >> "$GRAPH_FILE"
 
 # Scan all skills
-find "$ROOT_DIR/skills" -name "SKILL.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/skills" -name "SKILL.md" -type f | while read -r file; do
     skill_dir="$(dirname "$file")"
     skill_name="$(basename "$skill_dir")"
     category="$(dirname "$skill_dir" | xargs basename)"

@@ -38,6 +38,12 @@ jobs:
       
       - name: Run all tests
         run: ./scripts/test.sh
+      
+      - name: Run type checks
+        run: ./scripts/typecheck.sh
+
+      - name: Run quality gates
+        run: ./core/quality/validate.sh
 
   validate:
     name: Validate
@@ -48,7 +54,7 @@ jobs:
       - name: Validate frontmatter
         run: |
           echo "Validating YAML frontmatter..."
-          find skills agents templates prompts -name "*.md" | while read file; do
+          find assets/skills assets/agents assets/templates assets/prompts -name "*.md" | while read file; do
             if head -1 "$file" | grep -q "^---"; then
               echo "Checking $file..."
               # Basic YAML validation
@@ -59,7 +65,7 @@ jobs:
       - name: Check file sizes
         run: |
           echo "Checking file sizes..."
-          find skills -name "SKILL.md" | while read file; do
+          find assets/skills -name "SKILL.md" | while read file; do
             lines=$(wc -l < "$file")
             if [ "$lines" -gt 500 ]; then
               echo "ERROR: $file exceeds 500 lines ($lines)"
@@ -71,7 +77,7 @@ jobs:
       - name: Validate metadata
         run: |
           echo "Validating metadata..."
-          find skills -name "metadata.json" | while read file; do
+          find assets/skills -name "metadata.json" | while read file; do
             echo "Checking $file..."
             if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
               echo "ERROR: $file is not valid JSON"

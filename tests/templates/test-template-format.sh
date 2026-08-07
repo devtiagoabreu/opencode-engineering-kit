@@ -4,7 +4,7 @@ set -euo pipefail
 # Template format tests
 # Verifies that all templates follow the standard format
 
-TEMPLATES_DIR="templates"
+TEMPLATES_DIR="assets/templates"
 ERRORS=0
 
 echo "=== Testing Template Format ==="

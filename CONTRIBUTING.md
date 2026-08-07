@@ -10,7 +10,7 @@ To create a new skill:
 
 1. Check if a similar skill already exists
 2. Choose the appropriate category
-3. Create a directory in `skills/<category>/`
+3. Create a directory in `assets/skills/<category>/`
 4. Create the `SKILL.md` file following the template
 5. Add practical examples
 6. Submit a PR
@@ -61,7 +61,7 @@ compatible:
 ### 2. New Agent
 
 1. Define the persona and skills
-2. Create the file `agents/<name>.md`
+2. Create the file `assets/agents/<category>/<name>.md`
 3. Document capabilities and context
 4. Add usage examples
 5. Submit a PR
@@ -69,7 +69,7 @@ compatible:
 ### 3. New Template
 
 1. Identify the use case
-2. Create the directory in `templates/<type>/`
+2. Create the directory in `assets/templates/<type>/`
 3. Define variables with `{{name}}`
 4. Document usage and examples
 5. Submit a PR

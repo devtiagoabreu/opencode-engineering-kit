@@ -64,11 +64,7 @@ install() {
     
     # Copy files
     log "Copying files..."
-    cp -r "$TEMP_DIR/skills" "$INSTALL_DIR/"
-    cp -r "$TEMP_DIR/agents" "$INSTALL_DIR/"
-    cp -r "$TEMP_DIR/templates" "$INSTALL_DIR/"
-    cp -r "$TEMP_DIR/prompts" "$INSTALL_DIR/"
-    cp -r "$TEMP_DIR/commands" "$INSTALL_DIR/"
+    cp -r "$TEMP_DIR/assets" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/context" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/scripts" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/docs" "$INSTALL_DIR/"

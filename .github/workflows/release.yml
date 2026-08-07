@@ -56,9 +56,6 @@ jobs:
         with:
           name: release-assets
           path: |
-            skills/
-            agents/
-            templates/
-            prompts/
+            assets/
             context/
             scripts/

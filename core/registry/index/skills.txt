@@ -1,5 +1,43 @@
+  - agile-scrum
+  - project-setup
+  - open-source-contributing
+  - microservices-design
+  - clean-architecture
+  - css-best-practices
+  - accessibility
+  - state-management
+  - react-patterns
+  - performance
+  - esp32-development
+  - rtos-basics
+  - terminal-productivity
+  - git-advanced
   - code-review-checklist
+  - opencv-basics
+  - nosql-modeling
+  - sql-optimization
+  - terraform-aws
+  - incident-response
+  - kubernetes-best-practices
+  - ci-cd-pipeline
+  - monitoring-observability
   - docker-best-practices
+  - sensor-integration
+  - mqtt-protocol
+  - code-review-best-practices
+  - refactoring-techniques
+  - secure-coding
+  - owasp-top-10
+  - rest-api-design
   - api-design
+  - database-design
+  - authentication
+  - graphql-api
+  - caching-strategies
+  - typescript-best-practices
+  - python-best-practices
+  - integration-testing
+  - unit-testing
+  - e2e-testing
   - python-testing
   - git-workflow

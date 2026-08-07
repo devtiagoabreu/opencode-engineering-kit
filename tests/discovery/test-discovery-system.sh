@@ -61,6 +61,24 @@ run_test "search for docker" "bash -c '$ROOT_DIR/core/discovery/search.sh docker
 # Test filter by category
 run_test "filter by devops category" "bash -c '$ROOT_DIR/core/discovery/filter.sh --category=devops 2>&1 | grep -q docker-best-practices'"
 
+# Test related script exists
+run_test "related.sh exists" "[ -f '$ROOT_DIR/core/discovery/related.sh' ]"
+
+# Test related script is executable
+run_test "related.sh is executable" "[ -x '$ROOT_DIR/core/discovery/related.sh' ]"
+
+# Test related finder returns results
+run_test "related finds related assets" "bash -c '$ROOT_DIR/core/discovery/related.sh docker-best-practices 2>&1 | grep -q ci-cd-pipeline'"
+
+# Test recommend script exists
+run_test "recommend.sh exists" "[ -f '$ROOT_DIR/core/discovery/recommend.sh' ]"
+
+# Test recommend script is executable
+run_test "recommend.sh is executable" "[ -x '$ROOT_DIR/core/discovery/recommend.sh' ]"
+
+# Test recommendation engine returns recommendations
+run_test "recommend returns skills" "bash -c '$ROOT_DIR/core/discovery/recommend.sh --type skill 2>&1 | grep -q unit-testing'"
+
 echo ""
 echo "=== Test Summary ==="
 echo "Total: $TOTAL"

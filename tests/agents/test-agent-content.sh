@@ -4,7 +4,7 @@ set -euo pipefail
 # Agent content tests
 # Verifies that agents have adequate content
 
-AGENTS_DIR="agents"
+AGENTS_DIR="assets/agents"
 ERRORS=0
 
 echo "=== Testing Agent Content ==="
@@ -14,7 +14,7 @@ if [[ ! -d "$AGENTS_DIR" ]]; then
     exit 1
 fi
 
-for agent_file in "$AGENTS_DIR"/*.md; do
+for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f | sort); do
     if [[ ! -f "$agent_file" ]]; then
         continue
     fi

@@ -55,10 +55,34 @@ run_test "validate.sh exists" "[ -f '$ROOT_DIR/core/resolver/validate.sh' ]"
 run_test "validate.sh is executable" "[ -x '$ROOT_DIR/core/resolver/validate.sh' ]"
 
 # Test resolve for docker skill
-run_test "resolve docker skill" "$ROOT_DIR/core/resolver/resolve.sh skills/devops/docker-best-practices | grep -q 'Dependency resolution'"
+run_test "resolve docker skill" "$ROOT_DIR/core/resolver/resolve.sh assets/skills/devops/docker-best-practices | grep -q 'Dependency resolution'"
 
 # Test graph generation
 run_test "generate dependency graph" "$ROOT_DIR/core/resolver/graph.sh | grep -q 'Dependency Graph'"
+
+# Test parser script exists
+run_test "parser.sh exists" "[ -f '$ROOT_DIR/core/resolver/parser.sh' ]"
+
+# Test parser script is executable
+run_test "parser.sh is executable" "[ -x '$ROOT_DIR/core/resolver/parser.sh' ]"
+
+# Test parser validates all dependencies
+run_test "parser validates dependencies" "$ROOT_DIR/core/resolver/parser.sh | grep -q 'All dependencies are resolvable'"
+
+# Test lock script exists
+run_test "lock.sh exists" "[ -f '$ROOT_DIR/core/resolver/lock.sh' ]"
+
+# Test lock script is executable
+run_test "lock.sh is executable" "[ -x '$ROOT_DIR/core/resolver/lock.sh' ]"
+
+# Test lock generates a valid lock file
+run_test "lock generates valid lockfile" "bash -c '$ROOT_DIR/core/resolver/lock.sh > /dev/null 2>&1 && python3 -m json.tool $ROOT_DIR/core/resolver/lockfile.json > /dev/null 2>&1'"
+
+# Test lockfile resolves all assets
+run_test "lockfile resolves all assets" "bash -c 'python3 -c \"import json; d=json.load(open(\\\"$ROOT_DIR/core/resolver/lockfile.json\\\")); assert all(a[\\\"resolved\\\"] for a in d[\\\"assets\\\"].values())\"'"
+
+# Test metadata dependencies_resolved is set
+run_test "metadata marks dependencies resolved" "bash -c 'python3 -c \"import json; m=json.load(open(\\\"$ROOT_DIR/assets/skills/frontend/react-patterns/metadata.json\\\")); assert m[\\\"dependencies_resolved\\\"] is True\"'"
 
 echo ""
 echo "=== Test Summary ==="

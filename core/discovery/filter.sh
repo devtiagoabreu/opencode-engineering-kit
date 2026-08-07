@@ -70,7 +70,7 @@ echo ""
 # Filter skills
 if [ "$ASSET_TYPE" = "" ] || [ "$ASSET_TYPE" = "skill" ]; then
     echo "=== Skills ==="
-    find "$ROOT_DIR/skills" -name "SKILL.md" -type f | while read -r file; do
+    find "$ROOT_DIR/assets/skills" -name "SKILL.md" -type f | while read -r file; do
         skill_dir="$(dirname "$file")"
         skill_name="$(basename "$skill_dir")"
         
@@ -104,7 +104,7 @@ fi
 # Filter agents
 if [ "$ASSET_TYPE" = "" ] || [ "$ASSET_TYPE" = "agent" ]; then
     echo "=== Agents ==="
-    find "$ROOT_DIR/agents" -name "*.md" -type f | while read -r file; do
+    find "$ROOT_DIR/assets/agents" -name "*.md" -type f | while read -r file; do
         agent_name="$(basename "$file" .md)"
         log_info "Found: $agent_name"
         echo "  Path: $file"
@@ -115,7 +115,7 @@ fi
 # Filter prompts
 if [ "$ASSET_TYPE" = "" ] || [ "$ASSET_TYPE" = "prompt" ]; then
     echo "=== Prompts ==="
-    find "$ROOT_DIR/prompts" -name "*.md" -type f | while read -r file; do
+    find "$ROOT_DIR/assets/prompts" -name "*.md" -type f | while read -r file; do
         prompt_name="$(basename "$file" .md)"
         log_info "Found: $prompt_name"
         echo "  Path: $file"
@@ -126,7 +126,7 @@ fi
 # Filter templates
 if [ "$ASSET_TYPE" = "" ] || [ "$ASSET_TYPE" = "template" ]; then
     echo "=== Templates ==="
-    find "$ROOT_DIR/templates" -name "*.md" -type f | while read -r file; do
+    find "$ROOT_DIR/assets/templates" -name "*.md" -type f | while read -r file; do
         template_name="$(basename "$file" .md)"
         log_info "Found: $template_name"
         echo "  Path: $file"

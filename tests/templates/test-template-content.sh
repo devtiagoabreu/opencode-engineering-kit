@@ -4,7 +4,7 @@ set -euo pipefail
 # Template content tests
 # Verifies that templates have adequate content
 
-TEMPLATES_DIR="templates"
+TEMPLATES_DIR="assets/templates"
 ERRORS=0
 
 echo "=== Testing Template Content ==="

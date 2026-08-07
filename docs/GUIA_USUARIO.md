@@ -78,7 +78,7 @@ cd opencode-engineering-kit
 1. Navegue até o diretório de skills:
 
 ```bash
-cd skills/devops/docker-best-practices
+cd assets/skills/devops/docker-best-practices
 ```
 
 2. Leia o arquivo SKILL.md:
@@ -171,7 +171,7 @@ Skills são melhores práticas e guias para tecnologias ou tarefas específicas.
 2. **Leia a documentação** da skill:
 
 ```bash
-cat skills/devops/docker-best-practices/SKILL.md
+cat assets/skills/devops/docker-best-practices/SKILL.md
 ```
 
 3. **Siga as instruções** na skill
@@ -213,7 +213,7 @@ Agents são personas de IA especializadas para diferentes funções.
 2. **Leia a documentação** do agent:
 
 ```bash
-cat agents/backend-developer.md
+cat assets/assets/agents/backend/backend-developer.md
 ```
 
 3. **Use a persona** nas suas conversas com assistentes de IA
@@ -243,7 +243,7 @@ Prompts são modelos reutilizáveis para tarefas comuns.
 2. **Leia o prompt**:
 
 ```bash
-cat prompts/code-review/code-review-checklist.md
+cat assets/prompts/code-review/code-review-checklist.md
 ```
 
 3. **Copie o prompt** para sua área de transferência
@@ -268,13 +268,13 @@ Templates são pontos de partida para novos projetos e assets.
 1. **Encontre o template** que você precisa:
 
 ```bash
-ls templates/
+ls assets/templates/
 ```
 
 2. **Copie o template** para seu projeto:
 
 ```bash
-cp -r templates/new-project /seu/projeto/
+cp -r assets/templates/new-project /seu/projeto/
 ```
 
 3. **Customize** os arquivos conforme necessário
@@ -296,13 +296,13 @@ Commands são ações rápidas para tarefas comuns.
 1. **Encontre o command** que você precisa:
 
 ```bash
-ls commands/
+ls assets/commands/
 ```
 
 2. **Leia a documentação** do command:
 
 ```bash
-cat commands/review/review.md
+cat assets/assets/commands/review.md
 ```
 
 3. **Execute o command** conforme descrito

@@ -1,0 +1,12 @@
+{
+  "publishers": [
+    {
+      "id": "john-doe",
+      "name": "John Doe",
+      "email": "john@example.com",
+      "created": "2026-08-06",
+      "verified": true,
+      "assets_published": 0
+    }
+  ]
+}

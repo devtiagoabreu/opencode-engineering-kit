@@ -30,7 +30,7 @@ echo ""
 
 # Search in skills
 echo "=== Skills ==="
-find "$ROOT_DIR/skills" -name "SKILL.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/skills" -name "SKILL.md" -type f | while read -r file; do
     if grep -qi "$SEARCH_TERM" "$file"; then
         skill_dir="$(dirname "$file")"
         skill_name="$(basename "$skill_dir")"
@@ -48,7 +48,7 @@ done
 
 # Search in agents
 echo "=== Agents ==="
-find "$ROOT_DIR/agents" -name "*.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/agents" -name "*.md" -type f | while read -r file; do
     if grep -qi "$SEARCH_TERM" "$file"; then
         agent_name="$(basename "$file" .md)"
         
@@ -64,7 +64,7 @@ done
 
 # Search in prompts
 echo "=== Prompts ==="
-find "$ROOT_DIR/prompts" -name "*.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/prompts" -name "*.md" -type f | while read -r file; do
     if grep -qi "$SEARCH_TERM" "$file"; then
         prompt_name="$(basename "$file" .md)"
         
@@ -80,7 +80,7 @@ done
 
 # Search in templates
 echo "=== Templates ==="
-find "$ROOT_DIR/templates" -name "*.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/templates" -name "*.md" -type f | while read -r file; do
     if grep -qi "$SEARCH_TERM" "$file"; then
         template_name="$(basename "$file" .md)"
         

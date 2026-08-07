@@ -225,7 +225,7 @@ The project does **not** intend to:
 
 **Status:** Approved
 
-**Decision:** New categories can be added by creating a new directory under `skills/`. No bootstrap update required for new categories.
+**Decision:** New categories can be added by creating a new directory under `assets/skills/`. No bootstrap update required for new categories.
 
 **Rationale:**
 
@@ -420,7 +420,7 @@ example
 | `testing` | Software testing | Unit, integration, e2e |
 | `security` | Software security | OWASP, vulnerabilities, auditing |
 
-**Adding new categories:** Create a new directory under `skills/` following the naming convention. Document in README.
+**Adding new categories:** Create a new directory under `assets/skills/` following the naming convention. Document in README.
 
 ### 6.2 Agents
 
@@ -599,7 +599,7 @@ Template description and purpose.
 ### Step 1: Copy Template
 
 ```bash
-cp -r templates/template-name /path/to/destination
+cp -r assets/templates/template-name /path/to/destination
 ```
 
 ### Step 2: Customize
@@ -741,34 +741,32 @@ opencode-engineering-kit/
 │   ├── PULL_REQUEST_TEMPLATE/  # PR templates
 │   ├── workflows/              # GitHub Actions
 │   └── FUNDING.yml             # Funding
-├── agents/                     # Agents (13 personas)
-│   ├── devops-engineer.md
-│   ├── frontend-developer.md
-│   ├── backend-developer.md
-│   ├── fullstack-developer.md
-│   ├── mobile-developer.md
-│   ├── data-engineer.md
-│   ├── ml-engineer.md
-│   ├── security-engineer.md
-│   ├── qa-engineer.md
-│   ├── technical-writer.md
-│   ├── product-manager.md
-│   ├── ui-designer.md
-│   └── site-reliability-engineer.md
-├── assets/                     # Static assets
-│   ├── images/                 # Images
-│   └── icons/                  # Icons
-├── commands/                   # OpenCode commands
-│   └── (custom commands)
+├── assets/                     # All reusable assets
+│   ├── skills/                 # Skills organized by category
+│   │   ├── backend/            # Backend skills
+│   │   ├── frontend/           # Frontend skills
+│   │   ├── devops/             # DevOps skills
+│   │   ├── testing/            # Testing skills
+│   │   ├── security/           # Security skills
+│   │   └── git/                # Git skills
+│   ├── agents/                 # Agents by category (personas)
+│   │   ├── backend/            # Backend agents
+│   │   ├── frontend/           # Frontend agents
+│   │   ├── devops/             # DevOps agents
+│   │   ├── security/           # Security agents
+│   │   └── qa/                 # QA agents
+│   ├── prompts/                # Reusable prompts
+│   ├── templates/              # Project templates
+│   ├── commands/               # OpenCode commands
+│   ├── playbooks/              # Multi-step workflows
+│   └── recipes/                # Complete solutions
 ├── context/                    # Project context
 │   ├── project.md              # Project overview
 │   ├── stack.md                # Tech stack
 │   ├── conventions.md          # Code conventions
 │   ├── architecture.md         # Architecture
 │   ├── decisions.md            # Architectural decisions
-│   ├── glossary.md             # Glossary
-│   ├── troubleshooting.md      # Troubleshooting
-│   └── changelog.md            # Change history
+│   └── glossary.md             # Glossary
 ├── docs/                       # Documentation
 │   ├── getting-started.md      # Getting started
 │   ├── installation.md         # Installation
@@ -779,49 +777,20 @@ opencode-engineering-kit/
 │   ├── basic/                  # Basic examples
 │   ├── advanced/               # Advanced examples
 │   └── real-world/             # Real-world cases
-├── prompts/                    # Reusable prompts
-│   ├── code-review/            # Code Review
-│   ├── debugging/              # Debugging
-│   ├── architecture/           # Architecture
-│   ├── testing/                # Testing
-│   ├── documentation/          # Documentation
-│   ├── refactoring/            # Refactoring
-│   ├── security/               # Security
-│   ├── performance/            # Performance
-│   ├── database/               # Database
-│   └── api-design/             # API Design
+├── core/                       # Core infrastructure
+│   ├── registry/               # Asset registry
+│   ├── discovery/              # Search & discovery
+│   ├── resolver/               # Dependency resolution
+│   ├── version/                # Version management
+│   ├── plugin/                 # Plugin system
+│   ├── marketplace/            # Marketplace
+│   ├── security/               # Security scanning
+│   └── quality/                # Quality gates
 ├── scripts/                    # Auxiliary scripts
 │   ├── bootstrap.sh            # Initial setup
 │   ├── install.sh              # Installation
 │   ├── update.sh               # Update
 │   └── uninstall.sh            # Uninstall
-├── skills/                     # Skills organized by category
-│   ├── code-quality/           # Code quality
-│   ├── code-review/            # Code review
-│   ├── collaboration/          # Collaboration
-│   ├── database/               # Database
-│   ├── debugging/              # Debugging
-│   ├── devops/                 # DevOps
-│   ├── documentation/          # Documentation
-│   ├── frontend/               # Frontend
-│   ├── git/                    # Git
-│   ├── mobile/                 # Mobile
-│   ├── backend/                # Backend
-│   ├── testing/                # Testing
-│   └── security/               # Security
-├── templates/                  # Project templates
-│   ├── new-project/            # New project
-│   ├── opencode-config/        # OpenCode configuration
-│   ├── skill/                  # New skill
-│   ├── agent/                  # New agent
-│   ├── prompt/                 # New prompt
-│   ├── command/                # New command
-│   ├── context/                # New context
-│   ├── workflow/               # CI/CD workflow
-│   ├── readme/                 # README
-│   ├── contributing/           # CONTRIBUTING
-│   ├── changelog/              # CHANGELOG
-│   └── license/                # LICENSE
 ├── tests/                      # Tests
 │   ├── skills/                 # Skill tests
 │   ├── agents/                 # Agent tests
@@ -843,11 +812,11 @@ opencode-engineering-kit/
 
 | Directory | Content | Format | Limit |
 |-----------|---------|--------|-------|
-| `skills/` | Skills organized by category | SKILL.md | 500 lines |
-| `agents/` | Agents with personas | .md | 200 lines |
-| `templates/` | Project templates | .md | No limit |
-| `prompts/` | Reusable prompts | .md | 100 lines |
-| `commands/` | OpenCode commands | .md | 50 lines |
+| `assets/skills/` | Skills organized by category | SKILL.md | 500 lines |
+| `assets/agents/` | Agents with personas | .md | 200 lines |
+| `assets/templates/` | Project templates | .md | No limit |
+| `assets/prompts/` | Reusable prompts | .md | 100 lines |
+| `assets/commands/` | OpenCode commands | .md | 50 lines |
 | `context/` | Project context | .md | 200 lines |
 | `scripts/` | Automation scripts | .sh | No limit |
 | `docs/` | Documentation | .md | No limit |
@@ -1219,7 +1188,7 @@ tests/
 
 set -euo pipefail
 
-SKILLS_DIR="skills"
+SKILLS_DIR="assets/skills"
 ERRORS=0
 
 echo "=== Testing Skill Format ==="

@@ -39,7 +39,7 @@ cd opencode-engineering-kit
 ./core/validator/validate-all.sh
 
 # Validar asset específico
-./core/validator/validate.sh skills/devops/docker-best-practices
+./core/validator/validate.sh assets/skills/devops/docker-best-practices
 ```
 
 ### Testes
@@ -92,7 +92,7 @@ open marketplace-web/index.html
 
 ```bash
 # Resolver dependências
-./core/resolver/resolve.sh skills/devops/docker-best-practices
+./core/resolver/resolve.sh assets/skills/devops/docker-best-practices
 
 # Gerar gráfico de dependências
 ./core/resolver/graph.sh
@@ -120,16 +120,16 @@ open marketplace-web/index.html
 
 ```
 opencode-engineering-kit/
-├── skills/              # Skills organizadas por categoria
+├── assets/            # Todos os recursos reutilizáveis
 │   ├── devops/
 │   ├── backend/
 │   ├── frontend/
 │   ├── testing/
 │   └── security/
-├── agents/              # Agents com personas
-├── prompts/             # Prompts reutilizáveis
-├── templates/           # Modelos de projeto
-├── commands/            # Comandos customizados
+│   ├── skills/       # Skills por categoria
+│   ├── agents/       # Agents por categoria
+│   ├── prompts/      # Prompts reutilizáveis
+│   ├── templates/    # Modelos de projeto
 ├── playbooks/           # Passo a passo
 ├── recipes/             # Configurações completas
 ├── context/             # Contexto do projeto
@@ -208,7 +208,7 @@ personas:
 1. Copie o modelo de skill:
 
 ```bash
-cp -r templates/skill skills/categoria/nova-skill
+cp -r assets/assets/templates/skill skills/categoria/nova-skill
 ```
 
 2. Edite `SKILL.md` com seu conteúdo
@@ -216,7 +216,7 @@ cp -r templates/skill skills/categoria/nova-skill
 3. Execute a validação:
 
 ```bash
-./core/validator/validate.sh skills/categoria/nova-skill
+./core/validator/validate.sh assets/skills/categoria/nova-skill
 ```
 
 ### Criar um Agent
@@ -224,7 +224,7 @@ cp -r templates/skill skills/categoria/nova-skill
 1. Copie o modelo de agent:
 
 ```bash
-cp templates/agent/agent.md agents/novo-agent.md
+cp assets/assets/templates/agent/agent.md assets/agents/novo-agent.md
 ```
 
 2. Edite o arquivo do agent com seu conteúdo
@@ -232,7 +232,7 @@ cp templates/agent/agent.md agents/novo-agent.md
 3. Execute a validação:
 
 ```bash
-./core/validator/validate.sh agents/novo-agent.md
+./core/validator/validate.sh assets/assets/agents/novo-agent.md
 ```
 
 ---

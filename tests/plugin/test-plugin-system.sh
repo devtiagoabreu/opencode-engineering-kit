@@ -57,6 +57,33 @@ run_test "uninstaller.sh is executable" "[ -x '$ROOT_DIR/core/plugin/uninstaller
 # Test loader runs
 run_test "loader runs" "bash -c '$ROOT_DIR/core/plugin/loader.sh 2>&1 | grep -q Loading'"
 
+# Test loader detects example plugin
+run_test "loader detects asset-linter" "bash -c '$ROOT_DIR/core/plugin/loader.sh 2>&1 | grep -q asset-linter'"
+
+# Test loader --check passes
+run_test "loader --check passes" "bash '$ROOT_DIR/core/plugin/loader.sh' --check"
+
+# Test sdk.sh exists
+run_test "sdk.sh exists" "[ -f '$ROOT_DIR/core/plugin/sdk.sh' ]"
+
+# Test sdk validates valid manifest
+run_test "sdk validates valid manifest" "bash -c 'source $ROOT_DIR/core/plugin/sdk.sh && sdk_validate_manifest $ROOT_DIR/plugins/community/asset-linter/plugin.json | grep -q asset-linter'"
+
+# Test hooks.sh exists
+run_test "hooks.sh exists" "[ -f '$ROOT_DIR/core/plugin/hooks.sh' ]"
+
+# Test hooks.sh --list
+run_test "hooks.sh --list runs" "bash -c '$ROOT_DIR/core/plugin/hooks.sh --list 2>&1 | grep -q before-validate'"
+
+# Test hooks.sh runs before-validate handler
+run_test "hooks.sh before-validate runs" "bash -c '$ROOT_DIR/core/plugin/hooks.sh before-validate assets/skills/devops/docker-best-practices 2>&1 | grep -q asset-linter'"
+
+# Test hooks.sh --describe
+run_test "hooks.sh --describe" "bash -c '$ROOT_DIR/core/plugin/hooks.sh --describe before-validate 2>&1 | grep -q before'"
+
+# Test hooks.sh fails on kebab-case violation
+run_test "hooks.sh rejects bad name" "bash -c '! $ROOT_DIR/core/plugin/hooks.sh before-validate assets/skills/Bad_Asset 2>&1 | grep -q PASSES'"
+
 echo ""
 echo "=== Test Summary ==="
 echo "Total: $TOTAL"

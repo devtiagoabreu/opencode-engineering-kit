@@ -63,7 +63,7 @@ run_test "Index generation" "$ROOT_DIR/core/discovery/index.sh" 2000
 run_test "Validation execution" "$ROOT_DIR/core/validator/validate-all.sh" 5000
 
 # Test dependency resolution performance
-run_test "Dependency resolution" "$ROOT_DIR/core/resolver/resolve.sh skills/devops/docker-best-practices" 1000
+run_test "Dependency resolution" "$ROOT_DIR/core/resolver/resolve.sh assets/skills/devops/docker-best-practices" 1000
 
 echo ""
 echo "=== Test Summary ==="

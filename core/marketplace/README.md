@@ -2,17 +2,19 @@
 
 This directory contains the marketplace infrastructure for the OpenCode Engineering Kit.
 
-## Overview
+## Components
 
-The marketplace enables users to discover, install, and share assets (skills, agents, prompts, templates, commands) with the community.
+```
+core/marketplace/
+├── install.sh       # Install assets into the kit
+├── search.sh        # Search assets by keyword
+├── publish.sh       # Publish assets to the registry
+├── publisher.sh     # Manage publisher accounts
+├── rate.sh          # Ratings and reviews
+└── README.md
+```
 
-## Features
-
-- **Asset Discovery**: Search and browse assets
-- **One-Click Install**: Install assets with a single command
-- **Version Management**: Manage asset versions
-- **Dependency Resolution**: Automatically resolve dependencies
-- **Quality Assurance**: All assets pass quality gates
+Registry data lives in `core/marketplace/registry/` (`assets.json`, `publishers.json`, `reviews.json`).
 
 ## Usage
 
@@ -28,45 +30,38 @@ The marketplace enables users to discover, install, and share assets (skills, ag
 ./core/marketplace/install.sh skill docker-best-practices
 ```
 
-### List Installed Assets
+### Publish an Asset
 
 ```bash
-./core/marketplace/list.sh
+# Create a publisher account (once)
+./core/marketplace/publisher.sh create --name "John Doe" --email john@example.com
+./core/marketplace/publisher.sh verify --publisher john-doe
+
+# Publish an asset
+./core/marketplace/publish.sh --type skill --path ./assets/skills/my-skill --publisher john-doe
+
+# List published assets
+./core/marketplace/publish.sh --list
 ```
 
-## Asset Structure
+### Rate an Asset
 
-Assets in the marketplace follow the standard structure:
-
-```
-asset-name/
-├── SKILL.md or agent.md or prompt.md
-├── metadata.json
-├── README.md
-└── examples/
+```bash
+./core/marketplace/rate.sh add --asset docker-best-practices --reviewer jane-doe --rating 5 --title "Excellent"
+./core/marketplace/rate.sh summary --asset docker-best-practices
+./core/marketplace/rate.sh list --asset docker-best-practices
 ```
 
-## Quality Gates
+## Publishing Workflow
 
-All assets must pass the following quality gates:
-
-- Schema validation
-- Content validation
-- Security scanning
-- Documentation review
-
-## Publishing
-
-To publish an asset to the marketplace:
-
-1. Create the asset following the structure
-2. Run validation: `./core/validator/validate.sh <asset-path>`
-3. Submit a pull request
-4. Wait for review and approval
+1. Author creates the asset following the standard structure.
+2. Author runs validation: `./core/quality/validate.sh <asset-path>` (run automatically on publish).
+3. Author publishes: `./core/marketplace/publish.sh --type <type> --path <path> --publisher <name>`.
+4. The asset appears in the registry (`./core/marketplace/publish.sh --list`).
+5. Community members rate and review the asset.
 
 ## Future Enhancements
 
 - Web-based marketplace
-- User reviews and ratings
 - Asset analytics
 - Monetization options

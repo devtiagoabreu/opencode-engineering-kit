@@ -1,5 +1,20 @@
 # Dependency Graph
-# Generated: seg 20 jul 2026 23:32:09 -03
+# Generated: sex 07 ago 2026 00:13:58 -03
+
+## projects/agile-scrum
+  (no dependencies)
+
+## projects/project-setup
+  (no dependencies)
+
+## community/open-source-contributing
+  (no dependencies)
+
+## architecture/microservices-design
+  (no dependencies)
+
+## architecture/clean-architecture
+  (no dependencies)
 
 ## frontend/css-best-practices
   (no dependencies)
@@ -16,7 +31,28 @@
 ## frontend/performance
   (no dependencies)
 
+## embedded/esp32-development
+  (no dependencies)
+
+## embedded/rtos-basics
+  (no dependencies)
+
+## tools/terminal-productivity
+  (no dependencies)
+
+## tools/git-advanced
+  (no dependencies)
+
 ## code-review/code-review-checklist
+  (no dependencies)
+
+## vision/opencv-basics
+  (no dependencies)
+
+## database/nosql-modeling
+  (no dependencies)
+
+## database/sql-optimization
   (no dependencies)
 
 ## devops/terraform-aws
@@ -34,6 +70,18 @@
   (no dependencies)
 
 ## devops/docker-best-practices
+  (no dependencies)
+
+## iot/sensor-integration
+  (no dependencies)
+
+## iot/mqtt-protocol
+  (no dependencies)
+
+## quality/code-review-best-practices
+  (no dependencies)
+
+## quality/refactoring-techniques
   (no dependencies)
 
 ## security/secure-coding
@@ -58,6 +106,12 @@
   (no dependencies)
 
 ## backend/caching-strategies
+  (no dependencies)
+
+## languages/typescript-best-practices
+  (no dependencies)
+
+## languages/python-best-practices
   (no dependencies)
 
 ## testing/integration-testing

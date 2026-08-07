@@ -53,16 +53,23 @@ curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode-engineering-ki
 
 ```
 opencode-engineering-kit/
-├── skills/          # Skills organized by category
-├── agents/          # Agents with personas
-├── templates/       # Project templates
-├── prompts/         # Reusable prompts
-├── commands/        # Custom commands
+├── assets/          # All reusable assets
+│   ├── skills/      # Skills organized by category
+│   ├── agents/      # Agents by category with personas
+│   ├── prompts/     # Reusable prompts
+│   ├── commands/    # Custom commands
+│   ├── templates/   # Project templates
+│   ├── playbooks/   # Multi-step workflows
+│   └── recipes/     # Complete solutions
 ├── context/         # Project context
 ├── scripts/         # Automation scripts
 ├── core/            # Core infrastructure
 │   ├── registry/    # Asset registry
-│   └── quality/     # Quality gates
+│   ├── quality/     # Quality gates
+│   ├── discovery/   # Search & discovery
+│   ├── resolver/    # Dependency resolution
+│   ├── version/     # Version management
+│   └── plugin/      # Plugin system
 ├── docs/            # Documentation
 └── tests/           # Tests
 ```
@@ -73,24 +80,24 @@ opencode-engineering-kit/
 
 ```bash
 # Navigate to the desired skill
-cat skills/devops/docker-best-practices/SKILL.md
+cat assets/skills/devops/docker-best-practices/SKILL.md
 
 # Or copy to your project
-cp -r skills/devops/docker-best-practices/ /your/project/
+cp -r assets/skills/devops/docker-best-practices/ /your/project/
 ```
 
 ### Using an Agent
 
 ```bash
 # View the agent persona
-cat agents/devops-engineer.md
+cat assets/agents/devops/devops-engineer.md
 ```
 
 ### Using Templates
 
 ```bash
 # Create a new project
-cp -r templates/new-project/ /your/new-project/
+cp -r assets/templates/new-project/ /your/new-project/
 cd /your/new-project/
 # Customize the variables
 ```
@@ -114,6 +121,7 @@ cd /your/new-project/
 | `devops-engineer` | Infrastructure and CI/CD |
 | `frontend-developer` | UI/UX and frontend |
 | `backend-developer` | APIs and backend |
+| `security-engineer` | Security and hardening |
 
 ## Quality Gates
 
@@ -162,6 +170,8 @@ See [SECURITY.md](./SECURITY.md) for security policies and reporting.
 ### English
 - [User Guide](./docs/USER_GUIDE.md) - Complete guide for using the kit
 - [Quick Reference](./docs/QUICK_REFERENCE.md) - One-page reference card
+- [API Reference](./docs/API_REFERENCE.md) - Reference for all core scripts and modules
+- [Plugin Guide](./docs/PLUGIN_GUIDE.md) - How to install and write plugins
 
 ### Português
 - [Guia do Usuário](./docs/GUIA_USUARIO.md) - Guia completo para usar o kit

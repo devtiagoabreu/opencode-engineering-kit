@@ -1,3 +1,9 @@
   - system-design
   - debug-analysis
   - code-review-checklist
+  - security-audit
+  - feature-planning
+  - api-documentation
+  - performance-review
+  - refactoring-plan
+  - test-strategy

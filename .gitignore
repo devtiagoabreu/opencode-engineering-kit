@@ -66,6 +66,12 @@ coverage/
 *.backup
 *.orig
 
+# Generated artifacts
+backups/
+releases/
+core/quality/dashboard.html
+core/quality/quality-report.json
+
 # Cache
 .cache/
 *.cache

@@ -7,17 +7,19 @@ echo "============================================"
 
 # Main directories
 DIRS=(
-  agents
-  commands
+  assets
+  assets/skills
+  assets/agents
+  assets/prompts
+  assets/templates
+  assets/commands
+  assets/playbooks
+  assets/recipes
   context
   docs
   examples
-  prompts
-  skills
-  templates
   scripts
   tests
-  assets
   .github
   .github/workflows
 )
@@ -48,27 +50,59 @@ SKILL_CATEGORIES=(
 )
 
 for category in "${SKILL_CATEGORIES[@]}"; do
-  mkdir -p "skills/$category"
-  echo "  skills/$category"
+  mkdir -p "assets/skills/$category"
+  echo "  assets/skills/$category"
 done
 
-# Agent files (flat files, not directories)
+# Agent categories
+AGENT_CATEGORIES=(
+  architect
+  backend
+  database
+  devops
+  documentation
+  embedded
+  frontend
+  performance
+  planner
+  qa
+  reviewer
+  security
+  vision
+)
+
+for category in "${AGENT_CATEGORIES[@]}"; do
+  mkdir -p "assets/agents/$category"
+  echo "  assets/agents/$category"
+done
+
+# Agent files (categorized)
 AGENTS=(
-  backend-developer
-  devops-engineer
-  frontend-developer
+  backend/backend-developer
+  backend/ml-engineer
+  database/data-engineer
+  devops/devops-engineer
+  devops/site-reliability-engineer
+  documentation/technical-writer
+  frontend/frontend-developer
+  frontend/fullstack-developer
+  frontend/mobile-developer
+  frontend/ui-designer
+  planner/product-manager
+  qa/qa-engineer
+  security/security-engineer
 )
 
 for agent in "${AGENTS[@]}"; do
-  if [[ ! -f "agents/$agent.md" ]]; then
-    echo "  agents/$agent.md (new)"
+  if [[ ! -f "assets/agents/$agent.md" ]]; then
+    echo "  assets/agents/$agent.md (new)"
   else
-    echo "  agents/$agent.md (exists)"
+    echo "  assets/agents/$agent.md (exists)"
   fi
 done
 
 # Commands
-mkdir -p commands
+mkdir -p assets/commands
 
 # Templates (matches actual structure)
 TEMPLATES=(
@@ -79,8 +113,8 @@ TEMPLATES=(
 )
 
 for t in "${TEMPLATES[@]}"; do
-  mkdir -p "templates/$t"
-  echo "  templates/$t"
+  mkdir -p "assets/templates/$t"
+  echo "  assets/templates/$t"
 done
 
 # Prompts (matches actual structure)
@@ -91,8 +125,8 @@ PROMPTS=(
 )
 
 for p in "${PROMPTS[@]}"; do
-  mkdir -p "prompts/$p"
-  echo "  prompts/$p"
+  mkdir -p "assets/prompts/$p"
+  echo "  assets/prompts/$p"
 done
 
 # Context files

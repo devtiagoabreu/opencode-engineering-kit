@@ -1,0 +1,325 @@
+{
+  "generated_at": "dashboard",
+  "asset_count": 70,
+  "by_type": {
+    "agent": 18,
+    "prompt": 9,
+    "skill": 43
+  },
+  "by_category": {
+    "agent/architect": 1,
+    "agent/backend": 2,
+    "agent/database": 1,
+    "agent/devops": 2,
+    "agent/documentation": 1,
+    "agent/embedded": 1,
+    "agent/frontend": 4,
+    "agent/performance": 1,
+    "agent/planner": 1,
+    "agent/qa": 1,
+    "agent/reviewer": 1,
+    "agent/security": 1,
+    "agent/vision": 1,
+    "prompt/architecture": 1,
+    "prompt/code-review": 1,
+    "prompt/debugging": 1,
+    "prompt/documentation": 1,
+    "prompt/performance": 1,
+    "prompt/planning": 1,
+    "prompt/refactoring": 1,
+    "prompt/security": 1,
+    "prompt/testing": 1,
+    "skill/architecture": 2,
+    "skill/backend": 6,
+    "skill/code-review": 1,
+    "skill/community": 1,
+    "skill/database": 2,
+    "skill/devops": 6,
+    "skill/embedded": 2,
+    "skill/frontend": 5,
+    "skill/git": 1,
+    "skill/iot": 2,
+    "skill/languages": 2,
+    "skill/projects": 2,
+    "skill/quality": 2,
+    "skill/security": 2,
+    "skill/testing": 4,
+    "skill/tools": 2,
+    "skill/vision": 1
+  },
+  "metadata_completeness": 100.0,
+  "dependencies_resolved": "0/70",
+  "version_distribution": {
+    "0.1.0": 70
+  },
+  "tests": {
+    "exit_code": 0,
+    "summary": "Test Results: 18 passed, 0 failed, 18 total"
+  },
+  "ai_review": {
+    "average_score": 66.5,
+    "asset_count": 70
+  },
+  "lowest_scoring": [
+    {
+      "name": "embedded",
+      "type": "agent",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/agents/embedded",
+      "score": 45,
+      "grade": "D",
+      "checks": [
+        {
+          "label": "content file present",
+          "passed": false
+        },
+        {
+          "label": "content has substance",
+          "passed": false
+        },
+        {
+          "label": "metadata name present",
+          "passed": true
+        },
+        {
+          "label": "metadata version is valid SemVer",
+          "passed": true
+        },
+        {
+          "label": "metadata description present",
+          "passed": true
+        },
+        {
+          "label": "metadata category or tags present",
+          "passed": true
+        },
+        {
+          "label": "README present",
+          "passed": false
+        },
+        {
+          "label": "examples present",
+          "passed": false
+        },
+        {
+          "label": "dependencies declared (may be empty)",
+          "passed": true
+        },
+        {
+          "label": "dependencies resolved",
+          "passed": false
+        }
+      ],
+      "suggestions": [
+        "run core/resolver/lock.sh to resolve dependencies"
+      ]
+    },
+    {
+      "name": "performance",
+      "type": "agent",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/agents/performance",
+      "score": 45,
+      "grade": "D",
+      "checks": [
+        {
+          "label": "content file present",
+          "passed": false
+        },
+        {
+          "label": "content has substance",
+          "passed": false
+        },
+        {
+          "label": "metadata name present",
+          "passed": true
+        },
+        {
+          "label": "metadata version is valid SemVer",
+          "passed": true
+        },
+        {
+          "label": "metadata description present",
+          "passed": true
+        },
+        {
+          "label": "metadata category or tags present",
+          "passed": true
+        },
+        {
+          "label": "README present",
+          "passed": false
+        },
+        {
+          "label": "examples present",
+          "passed": false
+        },
+        {
+          "label": "dependencies declared (may be empty)",
+          "passed": true
+        },
+        {
+          "label": "dependencies resolved",
+          "passed": false
+        }
+      ],
+      "suggestions": [
+        "run core/resolver/lock.sh to resolve dependencies"
+      ]
+    },
+    {
+      "name": "reviewer",
+      "type": "agent",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/agents/reviewer",
+      "score": 45,
+      "grade": "D",
+      "checks": [
+        {
+          "label": "content file present",
+          "passed": false
+        },
+        {
+          "label": "content has substance",
+          "passed": false
+        },
+        {
+          "label": "metadata name present",
+          "passed": true
+        },
+        {
+          "label": "metadata version is valid SemVer",
+          "passed": true
+        },
+        {
+          "label": "metadata description present",
+          "passed": true
+        },
+        {
+          "label": "metadata category or tags present",
+          "passed": true
+        },
+        {
+          "label": "README present",
+          "passed": false
+        },
+        {
+          "label": "examples present",
+          "passed": false
+        },
+        {
+          "label": "dependencies declared (may be empty)",
+          "passed": true
+        },
+        {
+          "label": "dependencies resolved",
+          "passed": false
+        }
+      ],
+      "suggestions": [
+        "run core/resolver/lock.sh to resolve dependencies"
+      ]
+    },
+    {
+      "name": "vision",
+      "type": "agent",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/agents/vision",
+      "score": 45,
+      "grade": "D",
+      "checks": [
+        {
+          "label": "content file present",
+          "passed": false
+        },
+        {
+          "label": "content has substance",
+          "passed": false
+        },
+        {
+          "label": "metadata name present",
+          "passed": true
+        },
+        {
+          "label": "metadata version is valid SemVer",
+          "passed": true
+        },
+        {
+          "label": "metadata description present",
+          "passed": true
+        },
+        {
+          "label": "metadata category or tags present",
+          "passed": true
+        },
+        {
+          "label": "README present",
+          "passed": false
+        },
+        {
+          "label": "examples present",
+          "passed": false
+        },
+        {
+          "label": "dependencies declared (may be empty)",
+          "passed": true
+        },
+        {
+          "label": "dependencies resolved",
+          "passed": false
+        }
+      ],
+      "suggestions": [
+        "run core/resolver/lock.sh to resolve dependencies"
+      ]
+    },
+    {
+      "name": "architecture",
+      "type": "prompt",
+      "path": "/media/geofissura/hd/dev/opencode-engineering-kit/assets/prompts/architecture",
+      "score": 45,
+      "grade": "D",
+      "checks": [
+        {
+          "label": "content file present",
+          "passed": false
+        },
+        {
+          "label": "content has substance",
+          "passed": false
+        },
+        {
+          "label": "metadata name present",
+          "passed": true
+        },
+        {
+          "label": "metadata version is valid SemVer",
+          "passed": true
+        },
+        {
+          "label": "metadata description present",
+          "passed": true
+        },
+        {
+          "label": "metadata category or tags present",
+          "passed": true
+        },
+        {
+          "label": "README present",
+          "passed": false
+        },
+        {
+          "label": "examples present",
+          "passed": false
+        },
+        {
+          "label": "dependencies declared (may be empty)",
+          "passed": true
+        },
+        {
+          "label": "dependencies resolved",
+          "passed": false
+        }
+      ],
+      "suggestions": [
+        "run core/resolver/lock.sh to resolve dependencies"
+      ]
+    }
+  ]
+}

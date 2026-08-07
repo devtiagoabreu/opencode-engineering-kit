@@ -1,0 +1,19 @@
+{
+  "name": "asset-linter",
+  "version": "1.0.0",
+  "description": "Enforces asset naming conventions and file layout during validation",
+  "author": "OpenCode Engineering Kit",
+  "license": "MIT",
+  "opencode": {
+    "minVersion": "0.1.0"
+  },
+  "hooks": [
+    "before-validate",
+    "after-generate"
+  ],
+  "permissions": [
+    "read:assets"
+  ],
+  "dependencies": {},
+  "entry": "index.sh"
+}

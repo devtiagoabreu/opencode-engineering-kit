@@ -25,13 +25,13 @@ check() {
     local name="$1"
     local command="$2"
     
-    ((TOTAL++))
+    TOTAL=$((TOTAL + 1))
     
     if eval "$command" > /dev/null 2>&1; then
-        ((PASSED++))
+        PASSED=$((PASSED + 1))
         echo -e "  ${GREEN}✓${NC} $name"
     else
-        ((FAILED++))
+        FAILED=$((FAILED + 1))
         echo -e "  ${RED}✗${NC} $name"
     fi
 }
@@ -42,8 +42,8 @@ main() {
     
     # Level 1: Schema Validation
     echo "Level 1: Schema Validation"
-    check "All skills have metadata" "test -d $ROOT_DIR/skills && find $ROOT_DIR/skills -name 'metadata.json' | wc -l | grep -q '[1-9]'"
-    check "All agents have frontmatter" "test -d $ROOT_DIR/agents && head -1 $ROOT_DIR/agents/*.md | grep -q '^---'"
+    check "All skills have metadata" "test -d $ROOT_DIR/assets/skills && find $ROOT_DIR/assets/skills -name 'metadata.json' | wc -l | grep -q '[1-9]'"
+    check "All agents have frontmatter" "find $ROOT_DIR/assets/agents -name '*.md' -type f -exec head -1 {} \; | grep -q '^---'"
     echo
     
     # Level 2: Linting

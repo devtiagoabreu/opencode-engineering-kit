@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>Engineering Kit — Quality Dashboard</title>
+<style>
+  body { font-family: system-ui, sans-serif; margin: 2rem; color: #222; }
+  h1 { border-bottom: 3px solid #2563eb; padding-bottom: .5rem; }
+  table { border-collapse: collapse; margin: 1rem 0; min-width: 30rem; }
+  th, td { border: 1px solid #ddd; padding: .4rem .7rem; text-align: left; }
+  th { background: #eff6ff; }
+  .card { background: #f9fafb; border: 1px solid #e5e7eb; border-radius: 8px;
+          padding: 1rem; margin: 1rem 0; display: inline-block; min-width: 14rem; }
+  .ok { color: #16a34a; font-weight: 600; }
+  .warn { color: #d97706; font-weight: 600; }
+</style>
+</head>
+<body>
+<h1>OpenCode Engineering Kit — Quality Dashboard</h1>
+<div class="card"><strong>Assets:</strong> 70</div>
+<div class="card"><strong>Metadata completeness:</strong> 100.0%</div>
+<div class="card"><strong>Dependencies resolved:</strong> 0/70</div>
+<div class="card"><strong>AI review average:</strong> 66.5/100</div>
+<div class="card"><strong>Tests:</strong> <span class="ok">Test Results: 18 passed, 0 failed, 18 total</span></div>
+
+<h2>Assets by type</h2>
+<table><tr><th>Type</th><th>Count</th></tr><tr><td>agent</td><td>18</td></tr><tr><td>prompt</td><td>9</td></tr><tr><td>skill</td><td>43</td></tr></table>
+
+<h2>Assets by category</h2>
+<table><tr><th>Category</th><th>Count</th></tr><tr><td>agent/architect</td><td>1</td></tr><tr><td>agent/backend</td><td>2</td></tr><tr><td>agent/database</td><td>1</td></tr><tr><td>agent/devops</td><td>2</td></tr><tr><td>agent/documentation</td><td>1</td></tr><tr><td>agent/embedded</td><td>1</td></tr><tr><td>agent/frontend</td><td>4</td></tr><tr><td>agent/performance</td><td>1</td></tr><tr><td>agent/planner</td><td>1</td></tr><tr><td>agent/qa</td><td>1</td></tr><tr><td>agent/reviewer</td><td>1</td></tr><tr><td>agent/security</td><td>1</td></tr><tr><td>agent/vision</td><td>1</td></tr><tr><td>prompt/architecture</td><td>1</td></tr><tr><td>prompt/code-review</td><td>1</td></tr><tr><td>prompt/debugging</td><td>1</td></tr><tr><td>prompt/documentation</td><td>1</td></tr><tr><td>prompt/performance</td><td>1</td></tr><tr><td>prompt/planning</td><td>1</td></tr><tr><td>prompt/refactoring</td><td>1</td></tr><tr><td>prompt/security</td><td>1</td></tr><tr><td>prompt/testing</td><td>1</td></tr><tr><td>skill/architecture</td><td>2</td></tr><tr><td>skill/backend</td><td>6</td></tr><tr><td>skill/code-review</td><td>1</td></tr><tr><td>skill/community</td><td>1</td></tr><tr><td>skill/database</td><td>2</td></tr><tr><td>skill/devops</td><td>6</td></tr><tr><td>skill/embedded</td><td>2</td></tr><tr><td>skill/frontend</td><td>5</td></tr><tr><td>skill/git</td><td>1</td></tr><tr><td>skill/iot</td><td>2</td></tr><tr><td>skill/languages</td><td>2</td></tr><tr><td>skill/projects</td><td>2</td></tr><tr><td>skill/quality</td><td>2</td></tr><tr><td>skill/security</td><td>2</td></tr><tr><td>skill/testing</td><td>4</td></tr><tr><td>skill/tools</td><td>2</td></tr><tr><td>skill/vision</td><td>1</td></tr></table>
+
+<h2>Version distribution</h2>
+<table><tr><th>Version</th><th>Count</th></tr><tr><td>0.1.0</td><td>70</td></tr></table>
+
+<h2>Lowest-scoring assets (AI review)</h2>
+<table><tr><th>Name</th><th>Type</th><th>Score</th><th>Grade</th></tr><tr><td>embedded</td><td>agent</td><td>45</td><td>D</td></tr><tr><td>performance</td><td>agent</td><td>45</td><td>D</td></tr><tr><td>reviewer</td><td>agent</td><td>45</td><td>D</td></tr><tr><td>vision</td><td>agent</td><td>45</td><td>D</td></tr><tr><td>architecture</td><td>prompt</td><td>45</td><td>D</td></tr></table>
+</body>
+</html>

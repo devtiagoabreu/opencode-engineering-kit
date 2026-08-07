@@ -1,0 +1,972 @@
+{
+  "version": "1.0.0",
+  "generated": "2026-08-07T03:14:03Z",
+  "assets": {
+    "agents/architect": {
+      "name": "architect",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "api-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "kubernetes-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "terraform-aws",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/backend-developer": {
+      "name": "backend-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "api-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/ml-engineer": {
+      "name": "ml-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/data-engineer": {
+      "name": "data-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/devops-engineer": {
+      "name": "devops-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/site-reliability-engineer": {
+      "name": "site-reliability-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "kubernetes-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "monitoring-observability",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "incident-response",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/technical-writer": {
+      "name": "technical-writer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "code-review-checklist",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/embedded": {
+      "name": "embedded",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/frontend-developer": {
+      "name": "frontend-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "performance",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "accessibility",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "state-management",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/fullstack-developer": {
+      "name": "fullstack-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "rest-api-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/mobile-developer": {
+      "name": "mobile-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "performance",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/ui-designer": {
+      "name": "ui-designer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "accessibility",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/performance-engineer": {
+      "name": "performance-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "performance",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "monitoring-observability",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "caching-strategies",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "e2e-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/product-manager": {
+      "name": "product-manager",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "code-review-checklist",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/qa-engineer": {
+      "name": "qa-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "integration-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "e2e-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/reviewer": {
+      "name": "reviewer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "code-review-checklist",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "owasp-top-10",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/security-engineer": {
+      "name": "security-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "owasp-top-10",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/vision": {
+      "name": "vision",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "performance",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "bundles/backend-starter": {
+      "name": "backend-starter",
+      "type": "bundles",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "bundles/devops-starter": {
+      "name": "devops-starter",
+      "type": "bundles",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "compositions/full-stack-team": {
+      "name": "full-stack-team",
+      "type": "compositions",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "compositions/platform-team": {
+      "name": "platform-team",
+      "type": "compositions",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "prompt-chains/feature-delivery": {
+      "name": "feature-delivery",
+      "type": "prompt-chains",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "prompt-chains/incident-response": {
+      "name": "incident-response",
+      "type": "prompt-chains",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "prompts/architecture": {
+      "name": "architecture",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "clean-architecture",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/code-review": {
+      "name": "code-review",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "code-review-checklist",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/debugging": {
+      "name": "debugging",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/documentation": {
+      "name": "documentation",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "rest-api-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/performance-review": {
+      "name": "performance-review",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "performance",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/planning": {
+      "name": "planning",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "project-setup",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/refactoring": {
+      "name": "refactoring",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "refactoring-techniques",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/security": {
+      "name": "security",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "owasp-top-10",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "prompts/testing": {
+      "name": "testing",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/clean-architecture": {
+      "name": "clean-architecture",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/microservices-design": {
+      "name": "microservices-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "clean-architecture",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/api-design": {
+      "name": "api-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/authentication": {
+      "name": "authentication",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/caching-strategies": {
+      "name": "caching-strategies",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/database-design": {
+      "name": "database-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "sql-optimization",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/graphql-api": {
+      "name": "graphql-api",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "api-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/rest-api-design": {
+      "name": "rest-api-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "api-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/code-review-checklist": {
+      "name": "code-review-checklist",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "code-review-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/open-source-contributing": {
+      "name": "open-source-contributing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/nosql-modeling": {
+      "name": "nosql-modeling",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/sql-optimization": {
+      "name": "sql-optimization",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/ci-cd-pipeline": {
+      "name": "ci-cd-pipeline",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/docker-best-practices": {
+      "name": "docker-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/incident-response": {
+      "name": "incident-response",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "monitoring-observability",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/kubernetes-best-practices": {
+      "name": "kubernetes-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/monitoring-observability": {
+      "name": "monitoring-observability",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "kubernetes-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/terraform-aws": {
+      "name": "terraform-aws",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/esp32-development": {
+      "name": "esp32-development",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "rtos-basics",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/rtos-basics": {
+      "name": "rtos-basics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/accessibility": {
+      "name": "accessibility",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/css-best-practices": {
+      "name": "css-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/performance": {
+      "name": "performance",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/react-patterns": {
+      "name": "react-patterns",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/state-management": {
+      "name": "state-management",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "react-patterns",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/git-workflow": {
+      "name": "git-workflow",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/mqtt-protocol": {
+      "name": "mqtt-protocol",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/sensor-integration": {
+      "name": "sensor-integration",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "mqtt-protocol",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "esp32-development",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/python-best-practices": {
+      "name": "python-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/typescript-best-practices": {
+      "name": "typescript-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/agile-scrum": {
+      "name": "agile-scrum",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/project-setup": {
+      "name": "project-setup",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/code-review-best-practices": {
+      "name": "code-review-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/refactoring-techniques": {
+      "name": "refactoring-techniques",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/owasp-top-10": {
+      "name": "owasp-top-10",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "secure-coding",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/secure-coding": {
+      "name": "secure-coding",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/e2e-testing": {
+      "name": "e2e-testing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "integration-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/integration-testing": {
+      "name": "integration-testing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/python-testing": {
+      "name": "python-testing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/unit-testing": {
+      "name": "unit-testing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/git-advanced": {
+      "name": "git-advanced",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "git-workflow",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/terminal-productivity": {
+      "name": "terminal-productivity",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/opencv-basics": {
+      "name": "opencv-basics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    }
+  }
+}

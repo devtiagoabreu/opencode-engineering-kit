@@ -47,19 +47,19 @@ esac
 # Determine target directory
 case "$ASSET_TYPE" in
     skill)
-        TARGET_DIR="$ROOT_DIR/skills"
+        TARGET_DIR="$ROOT_DIR/assets/skills"
         ;;
     agent)
-        TARGET_DIR="$ROOT_DIR/agents"
+        TARGET_DIR="$ROOT_DIR/assets/agents"
         ;;
     prompt)
-        TARGET_DIR="$ROOT_DIR/prompts"
+        TARGET_DIR="$ROOT_DIR/assets/prompts"
         ;;
     template)
-        TARGET_DIR="$ROOT_DIR/templates"
+        TARGET_DIR="$ROOT_DIR/assets/templates"
         ;;
     command)
-        TARGET_DIR="$ROOT_DIR/commands"
+        TARGET_DIR="$ROOT_DIR/assets/commands"
         ;;
 esac
 

@@ -39,7 +39,7 @@ cd opencode-engineering-kit
 ./core/validator/validate-all.sh
 
 # Validate specific asset
-./core/validator/validate.sh skills/devops/docker-best-practices
+./core/validator/validate.sh assets/skills/devops/docker-best-practices
 ```
 
 ### Testing
@@ -92,7 +92,7 @@ open marketplace-web/index.html
 
 ```bash
 # Resolve dependencies
-./core/resolver/resolve.sh skills/devops/docker-best-practices
+./core/resolver/resolve.sh assets/skills/devops/docker-best-practices
 
 # Generate dependency graph
 ./core/resolver/graph.sh
@@ -208,7 +208,7 @@ personas:
 1. Copy the skill template:
 
 ```bash
-cp -r templates/skill skills/category/new-skill
+cp -r assets/assets/templates/skill skills/category/new-skill
 ```
 
 2. Edit `SKILL.md` with your content
@@ -216,7 +216,7 @@ cp -r templates/skill skills/category/new-skill
 3. Run validation:
 
 ```bash
-./core/validator/validate.sh skills/category/new-skill
+./core/validator/validate.sh assets/skills/category/new-skill
 ```
 
 ### Create an Agent
@@ -224,7 +224,7 @@ cp -r templates/skill skills/category/new-skill
 1. Copy the agent template:
 
 ```bash
-cp templates/agent/agent.md agents/new-agent.md
+cp assets/assets/templates/agent/agent.md agents/new-agent.md
 ```
 
 2. Edit the agent file with your content
@@ -232,7 +232,7 @@ cp templates/agent/agent.md agents/new-agent.md
 3. Run validation:
 
 ```bash
-./core/validator/validate.sh agents/new-agent.md
+./core/validator/validate.sh assets/agents/new-agent.md
 ```
 
 ---

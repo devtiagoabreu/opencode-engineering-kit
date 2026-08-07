@@ -4,7 +4,7 @@ set -euo pipefail
 # Skill format tests
 # Verifies that all skills follow the standard format
 
-SKILLS_DIR="skills"
+SKILLS_DIR="assets/skills"
 ERRORS=0
 
 echo "=== Testing Skill Format ==="

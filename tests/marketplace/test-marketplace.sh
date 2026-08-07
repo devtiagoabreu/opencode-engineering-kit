@@ -51,6 +51,33 @@ run_test "search.sh is executable" "[ -x '$ROOT_DIR/core/marketplace/search.sh' 
 # Test search for docker
 run_test "search for docker" "bash -c '$ROOT_DIR/core/marketplace/search.sh docker 2>&1 | grep -q docker-best-practices'"
 
+# Test publisher script exists
+run_test "publisher.sh exists" "[ -f '$ROOT_DIR/core/marketplace/publisher.sh' ]"
+
+# Test publisher script is executable
+run_test "publisher.sh is executable" "[ -x '$ROOT_DIR/core/marketplace/publisher.sh' ]"
+
+# Test publisher list runs
+run_test "publisher list runs" "bash -c '$ROOT_DIR/core/marketplace/publisher.sh list 2>&1 | grep -q john-doe'"
+
+# Test publish script exists
+run_test "publish.sh exists" "[ -f '$ROOT_DIR/core/marketplace/publish.sh' ]"
+
+# Test publish script is executable
+run_test "publish.sh is executable" "[ -x '$ROOT_DIR/core/marketplace/publish.sh' ]"
+
+# Test publish list shows docker-best-practices
+run_test "publish list shows assets" "bash -c '$ROOT_DIR/core/marketplace/publish.sh --list 2>&1 | grep -q docker-best-practices'"
+
+# Test rate script exists
+run_test "rate.sh exists" "[ -f '$ROOT_DIR/core/marketplace/rate.sh' ]"
+
+# Test rate script is executable
+run_test "rate.sh is executable" "[ -x '$ROOT_DIR/core/marketplace/rate.sh' ]"
+
+# Test rate summary computes average
+run_test "rate summary computes average" "bash -c '$ROOT_DIR/core/marketplace/rate.sh summary --asset docker-best-practices 2>&1 | grep -q \"4.5/5\"'"
+
 echo ""
 echo "=== Test Summary ==="
 echo "Total: $TOTAL"

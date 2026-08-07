@@ -7,7 +7,7 @@ set -euo pipefail
 SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
 ROOT_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
 
-COMMANDS_DIR="$ROOT_DIR/commands"
+COMMANDS_DIR="$ROOT_DIR/assets/commands"
 ERRORS=0
 
 echo "Testing command content..."

@@ -4,7 +4,7 @@ set -euo pipefail
 # Skill content tests
 # Verifies that skills have adequate content
 
-SKILLS_DIR="skills"
+SKILLS_DIR="assets/skills"
 ERRORS=0
 
 echo "=== Testing Skill Content ==="

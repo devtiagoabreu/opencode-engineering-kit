@@ -4,7 +4,7 @@ set -euo pipefail
 # Agent format tests
 # Verifies that all agents follow the standard format
 
-AGENTS_DIR="agents"
+AGENTS_DIR="assets/agents"
 ERRORS=0
 
 echo "=== Testing Agent Format ==="
@@ -14,7 +14,7 @@ if [[ ! -d "$AGENTS_DIR" ]]; then
     exit 1
 fi
 
-for agent_file in "$AGENTS_DIR"/*.md; do
+for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f | sort); do
     if [[ ! -f "$agent_file" ]]; then
         continue
     fi

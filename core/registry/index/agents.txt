@@ -1,3 +1,18 @@
-  - devops-engineer
+  - code-reviewer
+  - architect
+  - ui-designer
   - frontend-developer
+  - fullstack-developer
+  - mobile-developer
+  - embedded-engineer
+  - qa-engineer
+  - product-manager
+  - vision-engineer
+  - data-engineer
+  - site-reliability-engineer
+  - devops-engineer
+  - security-engineer
+  - ml-engineer
   - backend-developer
+  - technical-writer
+  - performance-engineer

@@ -1,0 +1,22 @@
+{
+  "reviews": [
+    {
+      "asset": "docker-best-practices",
+      "reviewer": "jane-doe",
+      "rating": 5,
+      "title": "Excellent Docker practices",
+      "content": "Helped me improve my setup",
+      "verified": false,
+      "date": "2026-08-06"
+    },
+    {
+      "asset": "docker-best-practices",
+      "reviewer": "bob-smith",
+      "rating": 4,
+      "title": "Good but needs more examples",
+      "content": "",
+      "verified": false,
+      "date": "2026-08-06"
+    }
+  ]
+}

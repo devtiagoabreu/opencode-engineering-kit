@@ -28,7 +28,7 @@ echo ""
 
 # Validate skills
 echo "=== Validating Skills ==="
-find "$ROOT_DIR/skills" -name "SKILL.md" -type f | while read -r file; do
+find "$ROOT_DIR/assets/skills" -name "SKILL.md" -type f | while read -r file; do
     skill_dir="$(dirname "$file")"
     skill_name="$(basename "$skill_dir")"
     
@@ -41,7 +41,7 @@ find "$ROOT_DIR/skills" -name "SKILL.md" -type f | while read -r file; do
         for dep in $deps; do
             # Check if dependency exists
             found=false
-            for dir in "$ROOT_DIR"/skills/*/"$dep" "$ROOT_DIR"/agents/"$dep".md; do
+            for dir in "$ROOT_DIR"/assets/skills/*/"$dep" "$ROOT_DIR"/assets/agents/"$dep".md; do
                 if [ -e "$dir" ]; then
                     found=true
                     break
