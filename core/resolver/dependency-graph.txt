@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 08 ago 2026 08:33:07 -03
+# Generated: sáb 08 ago 2026 08:56:22 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -34,6 +34,18 @@
 ## frontend/performance
   (no dependencies)
 
+## engineering/industrial-automation
+  (no dependencies)
+
+## engineering/mechatronics-systems
+  (no dependencies)
+
+## engineering/production-planning
+  (no dependencies)
+
+## engineering/home-automation
+  (no dependencies)
+
 ## embedded/raspberry-pi
   (no dependencies)
 
@@ -49,6 +61,15 @@
 ## embedded/rtos-basics
   (no dependencies)
 
+## science/applied-mathematics
+  (no dependencies)
+
+## science/chemistry-basics
+  (no dependencies)
+
+## science/physics-applied
+  (no dependencies)
+
 ## ai/llm-multi-provider
   (no dependencies)
 
@@ -59,6 +80,24 @@
   (no dependencies)
 
 ## ai/deep-learning
+  (no dependencies)
+
+## marketing/digital-marketing
+  (no dependencies)
+
+## marketing/traffic-management
+  (no dependencies)
+
+## construction/civil-structures
+  (no dependencies)
+
+## construction/construction-execution
+  (no dependencies)
+
+## cloud/google-cloud-architecture
+  (no dependencies)
+
+## cloud/aws-cloud-architecture
   (no dependencies)
 
 ## tools/terminal-productivity
@@ -77,6 +116,9 @@
   (no dependencies)
 
 ## robotics/robotics
+  (no dependencies)
+
+## management/lean-methodology
   (no dependencies)
 
 ## vision/opencv-basics
@@ -105,6 +147,9 @@
 ## devops/docker-best-practices
   (no dependencies)
 
+## logistics/supply-chain-management
+  (no dependencies)
+
 ## iot/sensor-integration
   (no dependencies)
 
@@ -118,6 +163,9 @@
   (no dependencies)
 
 ## quality/context-optimization
+  (no dependencies)
+
+## health/neurodiversity-support
   (no dependencies)
 
 ## security/secure-coding
@@ -147,6 +195,12 @@
 ## backend/caching-strategies
   (no dependencies)
 
+## web/web-scraping
+  (no dependencies)
+
+## web/google-workspace-analytics
+  (no dependencies)
+
 ## automation/n8n-workflow-automation
   (no dependencies)
 
@@ -168,6 +222,12 @@
   (no dependencies)
 
 ## testing/python-testing
+  (no dependencies)
+
+## finance/accounting-basics
+  (no dependencies)
+
+## finance/tax-compliance
   (no dependencies)
 
 ## git/git-workflow

@@ -5,19 +5,50 @@
   - frontend-developer
   - fullstack-developer
   - mobile-developer
+  - especialista-em-automacao-industrial
+  - especialista-em-automacao-residencial
+  - engenheiro-mecatronico
+  - engenheiro-de-producao
   - embedded-engineer
+  - filosofo
+  - historiador
+  - quimico
+  - fisico
+  - matematico
   - ai-engineer
   - data-scientist
+  - gestor-de-trafego
+  - marketing-digital
   - qa-engineer
+  - desenhista-tecnico
+  - pintor
+  - pedreiro
+  - engenheiro-civil
+  - arquiteto
+  - arquiteto-google-cloud
+  - arquiteto-aws-cloud
   - product-manager
   - robotics-engineer
+  - metodologia-lean
   - vision-engineer
   - data-engineer
   - site-reliability-engineer
   - devops-engineer
+  - especialista-em-logistica
+  - psiquiatra
+  - psicologo
+  - especialista-em-autismo
+  - especialista-em-tdah
   - security-engineer
   - ml-engineer
   - backend-developer
+  - webscraper
+  - especialista-google-workspace
   - automation-engineer
   - technical-writer
   - performance-engineer
+  - contador
+  - fiscal
+  - designer-de-tecidos
+  - designer-de-interiores
+  - designer-digital

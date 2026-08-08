@@ -36,24 +36,35 @@ SKILL_CATEGORIES=(
   architecture
   automation
   backend
+  cloud
   code-review
   community
+  construction
   database
   design
   devops
   documentation
   embedded
+  engineering
+  finance
   frontend
   git
+  health
+  humanities
   iot
   languages
+  logistics
+  management
+  marketing
   projects
   quality
   robotics
+  science
   security
   testing
   tools
   vision
+  web
 )
 
 for category in "${SKILL_CATEGORIES[@]}"; do
@@ -68,18 +79,30 @@ AGENT_CATEGORIES=(
   architect
   automation
   backend
+  cloud
+  construction
   database
+  design
   devops
   documentation
   embedded
+  engineering
+  finance
   frontend
+  health
+  humanities
+  logistics
+  management
+  marketing
   performance
   planner
   qa
   reviewer
   robotics
+  science
   security
   vision
+  web
 )
 
 for category in "${AGENT_CATEGORIES[@]}"; do

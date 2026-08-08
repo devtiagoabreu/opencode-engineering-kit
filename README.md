@@ -17,8 +17,8 @@ Inspirado em projetos como [Shokunin](https://github.com/hirefrank/shokunin) e [
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 60 (em 23 categorias) |
-| Agents | 23 (personas em 17 categorias) |
+| Skills | 80 (em 34 categorias) |
+| Agents | 54 (personas em 30 categorias) |
 | Prompts | 10 (em 13 categorias) |
 | Templates | 16 |
 | Playbooks | 3 |
@@ -151,7 +151,7 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 ## O que o kit contém (detalhado)
 
-### Skills — 55 guias prontos
+### Skills — 80 guias prontos
 
 Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 500 linhas.
 
@@ -175,6 +175,16 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `iot` | MQTT, Sensores |
 | `tools` | Git avançado, Terminal, Repo → LLM, Grafo de código (Graphify) |
 | `quality` | Code Review, Refactoring, Otimização de contexto/tokens |
+| `construction` | Execução de obras, estruturas civis |
+| `finance` | Contabilidade, tributos (Simples Nacional) |
+| `marketing` | Marketing digital, gestão de tráfego |
+| `science` | Matemática aplicada, física, química |
+| `engineering` | Mecatrônica, automação industrial, automação residencial, planejamento de produção |
+| `logistics` | Supply chain |
+| `web` | Web scraping, Google Workspace/Looker Studio |
+| `management` | Metodologia Lean |
+| `health` | Suporte à neurodiversidade (TEA/TDAH) |
+| `cloud` | Arquitetura AWS e Google Cloud |
 | + architecture, code-review, community, database, projects | — |
 
 **Foco em contexto para LLMs:** 4 skills novas cobrem o ecossistema de
@@ -191,7 +201,7 @@ Todas as skills são copiadas automaticamente para `.opencode/skills/` na
 instalação via CLI (`npx opencode-engineering-kit install`) — novas categorias
 são detectadas recursivamente, sem configuração extra.
 
-### Agents — 23 personas prontas
+### Agents — 54 personas prontas
 
 Agents são **personas** (papel + contexto + estilo de comunicação) para papéis específicos. Exemplos:
 
@@ -208,6 +218,32 @@ Agents são **personas** (papel + contexto + estilo de comunicação) para papé
 | `bi-analyst` | Dashboards, KPIs e relatórios |
 | `robotics-engineer` | ROS 2 e robótica |
 | + architect, planner, reviewer, qa, performance, documentation, database, embedded, vision | — |
+
+#### Personas de domínio (construção, finanças, design, marketing, ciências, humanas, engenharia, logística, web, saúde, gestão e cloud)
+
+Cada persona de domínio **colabora com as personas de tecnologia**, fornecendo
+parâmetros técnicos da sua área sempre olhando o que o usuário está querendo
+criar (seção "Como ajuda as personas de tecnologia" em cada arquivo). Conteúdo
+em português, com cabeçalhos compatíveis com os testes do kit.
+
+| Categoria | Personas |
+|-----------|----------|
+| `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
+| `finance` | contador, fiscal |
+| `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
+| `marketing` | marketing-digital, gestor-de-trafego |
+| `science` | matematico, fisico, quimico |
+| `humanities` | historiador, filosofo |
+| `engineering` | engenheiro-mecatronico, engenheiro-de-producao, especialista-em-automacao-industrial, especialista-em-automacao-residencial |
+| `logistics` | especialista-em-logistica |
+| `web` | webscraper, especialista-google-workspace |
+| `health` | psicologo, psiquiatra, especialista-em-autismo, especialista-em-tdah |
+| `management` | metodologia-lean |
+| `cloud` | arquiteto-aws-cloud, arquiteto-google-cloud |
+
+> **Nota sobre saúde:** as personas de saúde têm foco **educacional e de
+> apoio**, não substituem profissionais de saúde e não emitem diagnósticos nem
+> prescrições.
 
 ### Prompts — 10 reutilizáveis
 
@@ -234,7 +270,7 @@ Prompts focados para interações únicas: code review, debugging, refatoração
 
 ### Contexto (`context/`)
 
-13 arquivos de contexto otimizados para IA: `project`, `stack`, `architecture`, `conventions`, `decisions`, `documentation`, `git`, `glossary`, `naming`, `performance`, `security`, `style_guide`, `coding_rules`.
+15 arquivos de contexto otimizados para IA: `project`, `stack`, `architecture`, `conventions`, `decisions`, `documentation`, `git`, `glossary`, `naming`, `performance`, `security`, `style_guide`, `coding_rules`, **`personas`** (índice de todas as personas) e **`HISTORY`** (histórico de mudanças do kit). O script `scripts/persona-scaffold.sh` cria uma persona nova com contexto e registra automaticamente no histórico.
 
 ### Plugins
 
@@ -279,8 +315,8 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 60 skills em 23 categorias (SKILL.md)
-│   ├── agents/          # 23 personas por categoria
+│   ├── skills/          # 80 skills em 34 categorias (SKILL.md)
+│   ├── agents/          # 54 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates
 │   ├── commands/        # 3 comandos documentados
@@ -289,7 +325,7 @@ opencode-engineering-kit/
 │   ├── bundles/         # 2 pacotes prontos
 │   ├── compositions/    # 2 equipes de agentes
 │   └── prompt-chains/   # 2 cadeias de prompts
-├── context/             # 13 arquivos de contexto para IA
+├── context/             # 15 arquivos de contexto para IA (inclui personas + HISTORY)
 ├── core/                # Infraestrutura do kit
 │   ├── registry/        # Registro + schema + índices
 │   ├── discovery/       # Busca e descoberta
@@ -302,7 +338,7 @@ opencode-engineering-kit/
 ├── cli/                 # CLI npm (npx opencode-engineering-kit)
 ├── plugins/             # Plugins de exemplo (community, enterprise)
 ├── marketplace-web/     # Interface web do marketplace
-├── scripts/             # bootstrap, test, deploy, monitor, dashboards
+├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
 ├── tests/               # 20 suítes de teste automatizadas
 ├── docs/                # Documentação (EN + PT)
 ├── examples/            # Exemplos de uso
@@ -323,7 +359,10 @@ cat assets/skills/devops/docker-best-practices/SKILL.md
 cp -r assets/skills/devops/docker-best-practices/ /seu/projeto/
 
 # Ver a persona de um agent
-cat assets/agents/devops/devops-engineer.md
+cat assets/agents/devops/devops-engineer/devops-engineer.md
+
+# Criar uma persona de domínio nova com contexto e histórico
+./scripts/persona-scaffold.sh construction mestre-de-obras "Gestão de obras"
 
 # Criar um projeto a partir de um template
 cp -r assets/templates/new-project/ /seu/novo-projeto/

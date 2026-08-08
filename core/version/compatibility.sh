@@ -32,12 +32,13 @@ def parse_frontmatter(path):
     if not m:
         return {}
     front = {}
+    in_compatible = False
     for line in m.group(1).splitlines():
-        if re.match(r"^compatible:", line):
-            front["compatible"] = []
+        if re.match(r"^[a-zA-Z0-9_-]+:", line):
+            in_compatible = (line.split(":", 1)[0].strip() == "compatible")
             continue
-        if re.match(r"^  - ", line):
-            front.setdefault("compatible", []).append(line.strip()[4:].strip())
+        if in_compatible and line.startswith("  - "):
+            front.setdefault("compatible", []).append(line[4:].strip())
     return front
 
 assets = {}

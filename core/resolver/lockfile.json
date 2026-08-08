@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-08T11:33:13Z",
+  "generated": "2026-08-08T11:56:31Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -150,6 +150,55 @@
       ],
       "resolved": true
     },
+    "agents/arquiteto-aws-cloud": {
+      "name": "arquiteto-aws-cloud",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/arquiteto-google-cloud": {
+      "name": "arquiteto-google-cloud",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/arquiteto": {
+      "name": "arquiteto",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/desenhista-tecnico": {
+      "name": "desenhista-tecnico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/engenheiro-civil": {
+      "name": "engenheiro-civil",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/pedreiro": {
+      "name": "pedreiro",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/pintor": {
+      "name": "pintor",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/data-engineer": {
       "name": "data-engineer",
       "type": "agents",
@@ -164,6 +213,27 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/designer-de-interiores": {
+      "name": "designer-de-interiores",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/designer-de-tecidos": {
+      "name": "designer-de-tecidos",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/designer-digital": {
+      "name": "designer-digital",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/devops-engineer": {
@@ -240,6 +310,48 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/engenheiro-de-producao": {
+      "name": "engenheiro-de-producao",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/engenheiro-mecatronico": {
+      "name": "engenheiro-mecatronico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-em-automacao-industrial": {
+      "name": "especialista-em-automacao-industrial",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-em-automacao-residencial": {
+      "name": "especialista-em-automacao-residencial",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/contador": {
+      "name": "contador",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/fiscal": {
+      "name": "fiscal",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/frontend-developer": {
@@ -324,6 +436,76 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/especialista-em-autismo": {
+      "name": "especialista-em-autismo",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-em-tdah": {
+      "name": "especialista-em-tdah",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/psicologo": {
+      "name": "psicologo",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/psiquiatra": {
+      "name": "psiquiatra",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/filosofo": {
+      "name": "filosofo",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/historiador": {
+      "name": "historiador",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-em-logistica": {
+      "name": "especialista-em-logistica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/metodologia-lean": {
+      "name": "metodologia-lean",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/gestor-de-trafego": {
+      "name": "gestor-de-trafego",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/marketing-digital": {
+      "name": "marketing-digital",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/performance-engineer": {
@@ -442,6 +624,27 @@
       ],
       "resolved": true
     },
+    "agents/fisico": {
+      "name": "fisico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/matematico": {
+      "name": "matematico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/quimico": {
+      "name": "quimico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/security-engineer": {
       "name": "security-engineer",
       "type": "agents",
@@ -480,6 +683,20 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/especialista-google-workspace": {
+      "name": "especialista-google-workspace",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/webscraper": {
+      "name": "webscraper",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "bundles/backend-starter": {
@@ -800,6 +1017,20 @@
       ],
       "resolved": true
     },
+    "skills/aws-cloud-architecture": {
+      "name": "aws-cloud-architecture",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/google-cloud-architecture": {
+      "name": "google-cloud-architecture",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/code-review-checklist": {
       "name": "code-review-checklist",
       "type": "skills",
@@ -822,6 +1053,20 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/civil-structures": {
+      "name": "civil-structures",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/construction-execution": {
+      "name": "construction-execution",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/nosql-modeling": {
@@ -1002,6 +1247,48 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/home-automation": {
+      "name": "home-automation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/industrial-automation": {
+      "name": "industrial-automation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/mechatronics-systems": {
+      "name": "mechatronics-systems",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/production-planning": {
+      "name": "production-planning",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/accounting-basics": {
+      "name": "accounting-basics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/tax-compliance": {
+      "name": "tax-compliance",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/accessibility": {
       "name": "accessibility",
       "type": "skills",
@@ -1064,6 +1351,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/neurodiversity-support": {
+      "name": "neurodiversity-support",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/mqtt-protocol": {
       "name": "mqtt-protocol",
       "type": "skills",
@@ -1096,6 +1390,34 @@
     },
     "skills/typescript-best-practices": {
       "name": "typescript-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/supply-chain-management": {
+      "name": "supply-chain-management",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/lean-methodology": {
+      "name": "lean-methodology",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/digital-marketing": {
+      "name": "digital-marketing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/traffic-management": {
+      "name": "traffic-management",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1164,6 +1486,27 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/applied-mathematics": {
+      "name": "applied-mathematics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/chemistry-basics": {
+      "name": "chemistry-basics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/physics-applied": {
+      "name": "physics-applied",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/owasp-top-10": {
@@ -1278,6 +1621,20 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/google-workspace-analytics": {
+      "name": "google-workspace-analytics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/web-scraping": {
+      "name": "web-scraping",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     }
   }

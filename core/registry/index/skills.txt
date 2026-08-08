@@ -9,21 +9,35 @@
   - state-management
   - react-patterns
   - performance
+  - industrial-automation
+  - mechatronics-systems
+  - production-planning
+  - home-automation
   - raspberry-pi
   - esp8266-development
   - arduino-development
   - esp32-development
   - rtos-basics
+  - applied-mathematics
+  - chemistry-basics
+  - physics-applied
   - llm-multi-provider
   - rag-llm
   - evolution-api
   - deep-learning
+  - digital-marketing
+  - traffic-management
+  - civil-structures
+  - construction-execution
+  - google-cloud-architecture
+  - aws-cloud-architecture
   - terminal-productivity
   - repo-to-llm
   - git-advanced
   - code-knowledge-graph
   - code-review-checklist
   - robotics
+  - lean-methodology
   - opencv-basics
   - nosql-modeling
   - sql-optimization
@@ -33,11 +47,13 @@
   - ci-cd-pipeline
   - monitoring-observability
   - docker-best-practices
+  - supply-chain-management
   - sensor-integration
   - mqtt-protocol
   - code-review-best-practices
   - refactoring-techniques
   - context-optimization
+  - neurodiversity-support
   - secure-coding
   - skill-spector
   - owasp-top-10
@@ -47,6 +63,8 @@
   - authentication
   - graphql-api
   - caching-strategies
+  - web-scraping
+  - google-workspace-analytics
   - n8n-workflow-automation
   - doc-to-markdown
   - typescript-best-practices
@@ -55,6 +73,8 @@
   - unit-testing
   - e2e-testing
   - python-testing
+  - accounting-basics
+  - tax-compliance
   - git-workflow
   - ui-ux-design
   - design-system

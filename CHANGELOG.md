@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **31 domain personas** in 12 new agent categories (construction, finance, design, marketing, science, humanities, engineering, logistics, web, health, management, cloud) — each with a "Como ajuda as personas de tecnologia" section and PT-BR content
+- **20 domain skills** in 11 new skill categories (construction, finance, marketing, science, engineering, logistics, web, management, health, cloud)
+- New `context/personas.md` (index of all personas) and `context/HISTORY.md` (change history)
+- New `scripts/persona-scaffold.sh` to create personas with context and history
+- `README_EN.md` (English translation of the README)
+- New agent categories added to `bootstrap.sh` and skill categories to the JSON Schema
+- Fixed `compatibility.sh` frontmatter parser (was truncating values like `opencode`→`encode`)
 - New skills (LLM context & tooling): `doc-to-markdown` (MarkItDown), `repo-to-llm` (gittomd/llms.txt), `code-knowledge-graph` (Graphify), `context-optimization` (Repomix/token economy), `skill-spector` (NVIDIA SkillSpector)
 - New skill category `documentation` (bootstrap.sh + schema)
 - .gitignore for security and build artifacts
