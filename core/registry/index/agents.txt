@@ -1,12 +1,16 @@
   - code-reviewer
   - architect
+  - bi-analyst
   - ui-designer
   - frontend-developer
   - fullstack-developer
   - mobile-developer
   - embedded-engineer
+  - ai-engineer
+  - data-scientist
   - qa-engineer
   - product-manager
+  - robotics-engineer
   - vision-engineer
   - data-engineer
   - site-reliability-engineer
@@ -14,5 +18,6 @@
   - security-engineer
   - ml-engineer
   - backend-developer
+  - automation-engineer
   - technical-writer
   - performance-engineer

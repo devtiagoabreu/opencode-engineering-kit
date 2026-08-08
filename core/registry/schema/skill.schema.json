@@ -18,7 +18,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["devops", "backend", "frontend", "testing", "security", "git", "code-quality", "code-review", "database", "mobile", "documentation", "architecture", "embedded", "iot", "languages", "projects", "quality", "tools", "vision", "community"],
+      "enum": ["ai", "analytics", "architecture", "automation", "backend", "code-quality", "code-review", "community", "database", "design", "devops", "documentation", "embedded", "frontend", "git", "iot", "languages", "mobile", "projects", "quality", "robotics", "security", "testing", "tools", "vision"],
       "description": "Skill category"
     },
     "version": {

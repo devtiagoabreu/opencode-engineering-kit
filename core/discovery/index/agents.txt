@@ -1,7 +1,11 @@
+ai-engineer
 architect
+automation-engineer
 backend-developer
+bi-analyst
 code-reviewer
 data-engineer
+data-scientist
 devops-engineer
 embedded-engineer
 frontend-developer
@@ -11,6 +15,7 @@ mobile-developer
 performance-engineer
 product-manager
 qa-engineer
+robotics-engineer
 security-engineer
 site-reliability-engineer
 technical-writer

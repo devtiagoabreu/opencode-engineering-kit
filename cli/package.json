@@ -1,0 +1,33 @@
+{
+  "name": "opencode-engineering-kit",
+  "version": "0.1.0",
+  "description": "CLI to install the OpenCode Engineering Kit (skills, agents, commands, context) into any existing project via .opencode/.",
+  "type": "module",
+  "bin": {
+    "opencode-engineering-kit": "bin/opencode-engineering-kit.js"
+  },
+  "main": "src/install.js",
+  "exports": {
+    ".": "./src/install.js"
+  },
+  "files": [
+    "bin",
+    "src",
+    "README.md"
+  ],
+  "scripts": {
+    "test": "node --test test/*.test.js"
+  },
+  "engines": {
+    "node": ">=18"
+  },
+  "keywords": [
+    "opencode",
+    "skills",
+    "agents",
+    "ai",
+    "engineering-kit",
+    "cli"
+  ],
+  "license": "MIT"
+}

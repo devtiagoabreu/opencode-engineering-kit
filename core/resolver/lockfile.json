@@ -1,7 +1,71 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-07T03:14:03Z",
+  "generated": "2026-08-08T11:33:13Z",
   "assets": {
+    "agents/ai-engineer": {
+      "name": "ai-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "rag-llm",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "llm-multi-provider",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "evolution-api",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "deep-learning",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/data-scientist": {
+      "name": "data-scientist",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "deep-learning",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "business-intelligence",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/bi-analyst": {
+      "name": "bi-analyst",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "business-intelligence",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "ui-ux-design",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "agents/architect": {
       "name": "architect",
       "type": "agents",
@@ -29,6 +93,26 @@
         },
         {
           "name": "secure-coding",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/automation-engineer": {
+      "name": "automation-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "n8n-workflow-automation",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "evolution-api",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "rag-llm",
           "version": ">=0.1.0"
         }
       ],
@@ -334,6 +418,30 @@
       ],
       "resolved": true
     },
+    "agents/robotics-engineer": {
+      "name": "robotics-engineer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "robotics",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "arduino-development",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "esp32-development",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "raspberry-pi",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "agents/security-engineer": {
       "name": "security-engineer",
       "type": "agents",
@@ -414,6 +522,18 @@
       "type": "prompt-chains",
       "version": "0.1.0",
       "dependencies": [],
+      "resolved": true
+    },
+    "prompts/ai": {
+      "name": "ai",
+      "type": "prompts",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "rag-llm",
+          "version": ">=0.1.0"
+        }
+      ],
       "resolved": true
     },
     "prompts/architecture": {
@@ -524,6 +644,64 @@
       ],
       "resolved": true
     },
+    "skills/deep-learning": {
+      "name": "deep-learning",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/evolution-api": {
+      "name": "evolution-api",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/llm-multi-provider": {
+      "name": "llm-multi-provider",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/rag-llm": {
+      "name": "rag-llm",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "llm-multi-provider",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "python-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/business-intelligence": {
+      "name": "business-intelligence",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "database-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "sql-optimization",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "skills/clean-architecture": {
       "name": "clean-architecture",
       "type": "skills",
@@ -538,6 +716,18 @@
       "dependencies": [
         {
           "name": "clean-architecture",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/n8n-workflow-automation": {
+      "name": "n8n-workflow-automation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "evolution-api",
           "version": ">=0.1.0"
         }
       ],
@@ -648,6 +838,34 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/design-system": {
+      "name": "design-system",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "ui-ux-design",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/ui-ux-design": {
+      "name": "ui-ux-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "css-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "skills/ci-cd-pipeline": {
       "name": "ci-cd-pipeline",
       "type": "skills",
@@ -719,6 +937,20 @@
       ],
       "resolved": true
     },
+    "skills/doc-to-markdown": {
+      "name": "doc-to-markdown",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/arduino-development": {
+      "name": "arduino-development",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/esp32-development": {
       "name": "esp32-development",
       "type": "skills",
@@ -726,6 +958,38 @@
       "dependencies": [
         {
           "name": "rtos-basics",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/esp8266-development": {
+      "name": "esp8266-development",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "arduino-development",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "mqtt-protocol",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/raspberry-pi": {
+      "name": "raspberry-pi",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-best-practices",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "mqtt-protocol",
           "version": ">=0.1.0"
         }
       ],
@@ -863,6 +1127,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/context-optimization": {
+      "name": "context-optimization",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/refactoring-techniques": {
       "name": "refactoring-techniques",
       "type": "skills",
@@ -870,6 +1141,26 @@
       "dependencies": [
         {
           "name": "unit-testing",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/robotics": {
+      "name": "robotics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "arduino-development",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "esp32-development",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "raspberry-pi",
           "version": ">=0.1.0"
         }
       ],
@@ -889,6 +1180,13 @@
     },
     "skills/secure-coding": {
       "name": "secure-coding",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/skill-spector": {
+      "name": "skill-spector",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -937,6 +1235,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/code-knowledge-graph": {
+      "name": "code-knowledge-graph",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/git-advanced": {
       "name": "git-advanced",
       "type": "skills",
@@ -947,6 +1252,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/repo-to-llm": {
+      "name": "repo-to-llm",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/terminal-productivity": {

@@ -3,6 +3,7 @@ code-review-checklist
 debug-analysis
 feature-planning
 performance-review
+rag-system-design
 refactoring-plan
 security-audit
 system-design

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-07T03:14:11Z",
+  "generated": "2026-08-08T11:33:22Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -8,6 +8,96 @@
     "copilot"
   ],
   "assets": {
+    "deep-learning": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.9 or newer",
+        "Torch installed (`pip install torch`)",
+        "CUDA GPU for anything beyond small experiments",
+        "umpy`, `matplotlib` for data handling and visualization",
+        "producible training loop patterns",
+        "N architecture building blocks",
+        "ansfer learning workflows",
+        "gularization and debugging techniques",
+        "del evaluation and checkpointing"
+      ]
+    },
+    "evolution-api": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "Evolution API server (Docker) or the hosted API",
+        "instance created and connected via QR code",
+        "pikey` header for authenticated calls",
+        "webhook URL reachable from the server (https recommended)",
+        "stance lifecycle management (create, connect, QR, restart, logout)",
+        "ssage sending (text, media, buttons, lists, templates)",
+        "bhook configuration and event handling",
+        "at, contact and group operations",
+        "atsApp bot architecture patterns (state machine + retry queue)"
+      ]
+    },
+    "llm-multi-provider": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "I keys for at least one LLM provider",
+        "rver-side storage for keys (never expose on the client)",
+        "`fetch`/HTTP-capable runtime (Node 18+, Python 3.9+)",
+        "ovider abstraction with OpenAI-compatible endpoints",
+        "iority-ordered fallback with failure counting",
+        "y management (multiple keys per provider, test connection)",
+        "reaming and timeouts per provider",
+        "age/cost logging hooks"
+      ]
+    },
+    "rag-llm": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.10+ or a JS/TS runtime (Node 18+)",
+        "LLM provider API key (OpenAI, Anthropic, Groq, Gemini, DeepSeek...)",
+        "embedding model (OpenAI `text-embedding-3`, local `sentence-transformers`, etc.)",
+        "vector store (pgvector, Qdrant, Chroma, Pinecone, Weaviate)",
+        "d-to-end RAG architecture and pipeline",
+        "unking strategies for different document types",
+        "bedding and vector store integration patterns",
+        "trieval, reranking and query strategies",
+        "ounded answer generation and hallucination checks",
+        "aluation harness for RAG quality"
+      ]
+    },
+    "business-intelligence": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "data source (SQL database, Google Sheets, CSV, API)",
+        "charting/BI stack (Recharts/ECharts in-app, Metabase, Power BI, or simple tables)",
+        "derstanding of SQL aggregation (GROUP BY, window functions)",
+        "I definition and metric design",
+        "shboard layout patterns (cards, trends, geo, ABC curve)",
+        "ta modeling and ETL patterns (cache, incremental load)",
+        "L aggregation and window function recipes",
+        "recast and segmentation techniques",
+        "porting export patterns (CSV, Excel, PDF)"
+      ]
+    },
     "clean-architecture": {
       "type": "skill",
       "version": "0.1.0",
@@ -38,6 +128,24 @@
         "ent-driven and CQRS pattern templates",
         "ga coordination patterns for distributed transactions",
         "ntract and versioning strategies for service APIs"
+      ]
+    },
+    "n8n-workflow-automation": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "n8n instance (self-hosted Docker or n8n.cloud)",
+        "edentials for the services you connect",
+        "derstanding of JSON data flow between nodes",
+        "rkflow design patterns (trigger \u2192 process \u2192 act \u2192 notify)",
+        "bhook trigger and response patterns",
+        "TP Request node usage for custom APIs",
+        "ror handling, retries and idempotency",
+        "atsApp/Evolution and CRM integration patterns",
+        "rkflow import/export best practices"
       ]
     },
     "api-design": {
@@ -156,6 +264,39 @@
         "rmalization and denormalization decision guidance"
       ]
     },
+    "design-system": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "styling foundation (Tailwind CSS, vanilla CSS variables, or similar)",
+        "component primitive set (Radix, Base UI, or hand-rolled)",
+        "orybook or equivalent for documentation (optional but recommended)",
+        "sign token architecture (color, spacing, typography, radii)",
+        "mponent API design and naming conventions",
+        "rk mode via CSS variables",
+        "cumentation and usage guidelines",
+        "rsioning and governance of the system"
+      ]
+    },
+    "ui-ux-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "UI framework (React/Tailwind, etc.) and the design system tokens of the project",
+        "sic understanding of HTML/CSS",
+        "sign principles for web interfaces",
+        "reen composition patterns (lists, forms, detail pages, dashboards)",
+        "cessibility and contrast guidelines",
+        "rk mode and responsive guidance",
+        "review checklist"
+      ]
+    },
     "ci-cd-pipeline": {
       "type": "skill",
       "version": "0.1.0",
@@ -215,6 +356,37 @@
         "rsor"
       ]
     },
+    "doc-to-markdown": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.9+ and pip",
+        "rkitdown package (pip install markitdown)",
+        "rkdown conversion from PDF, DOCX, PPTX, XLSX, images, audio and web pages",
+        "ken-efficient Markdown optimized for LLM consumption"
+      ]
+    },
+    "arduino-development": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "Arduino board (Uno/Nano/Mega) and USB cable",
+        "duino IDE (2.x) or PlatformIO",
+        "sic electronics knowledge (resistors, breadboard, pull-ups)",
+        "etch structure and best practices",
+        "n I/O, interrupts, and timer patterns",
+        "rial communication and debugging",
+        "nsor and actuator integration patterns",
+        "n-blocking code patterns (blink-without-delay)",
+        "mmon pitfalls and fixes"
+      ]
+    },
     "esp32-development": {
       "type": "skill",
       "version": "0.1.0",
@@ -230,6 +402,44 @@
         "IO, PWM, and interrupt examples",
         "Fi station and SoftAP connection patterns",
         "eeRTOS task and event loop integration for ESP32"
+      ]
+    },
+    "esp8266-development": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "P8266 board (NodeMCU, Wemos D1 mini, ESP-01)",
+        "duino IDE with esp8266 core, or PlatformIO",
+        "B-serial driver (CP210x/CH340)",
+        "3V logic; NOT 5V tolerant \u2014 level shifters for 5V sensors",
+        "oject setup for Arduino core and PlatformIO",
+        "Fi connection with reconnect logic",
+        "TT/HTTP client patterns for IoT",
+        "ep sleep for battery operation",
+        "A update workflow",
+        "mmon troubleshooting (reset loops, brownouts)"
+      ]
+    },
+    "raspberry-pi": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "Raspberry Pi (Zero/3/4/5) with microSD and power supply",
+        "spberry Pi OS (or Ubuntu) flashed with Imager",
+        "H access to the Pi",
+        "thon 3 with `RPi.GPIO` or `gpiozero` (installed on Raspberry Pi OS)",
+        "rst-boot and headless setup",
+        "IO programming with gpiozero",
+        "mera and computer vision setup",
+        "ge AI / ML on device",
+        "oject templates (kiosk, sensor node, server, robot brain)",
+        "mmon pitfalls (power, SD corruption, permissions)"
       ]
     },
     "rtos-basics": {
@@ -418,6 +628,20 @@
         "mplates for common review comments"
       ]
     },
+    "context-optimization": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "coding agent (OpenCode, Claude Code or Cursor)",
+        "de.js 16+ for repomix",
+        "ken budget discipline for agent sessions",
+        "pomix-packaged codebase snapshots",
+        "idance on compaction, prompt caching and progressive disclosure"
+      ]
+    },
     "refactoring-techniques": {
       "type": "skill",
       "version": "0.1.0",
@@ -432,6 +656,24 @@
         "step-by-step safety process for behavior-preserving changes",
         "idance on when to refactor and when to stop",
         "chniques to reduce risk during large restructures"
+      ]
+    },
+    "robotics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "S 2 (Humble/Iron/Jazzy) installed on Ubuntu or a robotics container",
+        "robot platform or simulator (Gazebo) for testing",
+        "sic electronics for hardware: motors, encoders, sensor wiring",
+        "S 2 workspace and package setup",
+        "de/publisher/subscriber patterns",
+        "tor and servo control patterns",
+        "ometry and sensor fusion approaches",
+        "leop and basic navigation",
+        "mulation-first development workflow"
       ]
     },
     "owasp-top-10": {
@@ -450,6 +692,20 @@
         "encode",
         "aude-code",
         "rsor"
+      ]
+    },
+    "skill-spector": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "thon 3.12+ and uv or pip",
+        "skill to scan (directory, zip, SKILL.md or Git URL)",
+        "e-install security vetting of agent skills",
+        "sk score (0-100) with severity labels",
+        "RIF/JSON/Markdown reports for CI"
       ]
     },
     "e2e-testing": {
@@ -493,6 +749,20 @@
         "rsor"
       ]
     },
+    "code-knowledge-graph": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "de.js 18+ and npm/npx",
+        "twork access to fetch the Graphify package",
+        "eryable knowledge graph of a codebase",
+        "tural-language queries over code, SQL schemas and docs",
+        "duced tokens to describe a codebase to an LLM"
+      ]
+    },
     "git-advanced": {
       "type": "skill",
       "version": "0.1.0",
@@ -507,6 +777,20 @@
         "eps to bisect and pinpoint regressions automatically",
         "rallel development using linked worktrees",
         "stom git hooks for automation and safety gates"
+      ]
+    },
+    "repo-to-llm": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "encode",
+        "aude-code",
+        "rsor",
+        "t 2.0+ and network access to the target repository",
+        "e of: gittomd, git2md or repo2txt (see Instructions)",
+        "ngle-file Markdown snapshot of a repository",
+        "ms.txt index for LLM context",
+        "ltered source-only output (no noise, no binaries)"
       ]
     },
     "terminal-productivity": {
@@ -540,6 +824,42 @@
         "ltering, thresholding, and edge detection workflows",
         "ntour detection and analysis for object boundaries",
         "awing and annotation helpers for visualization"
+      ]
+    },
+    "ai-engineer": {
+      "type": "ai",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "data-scientist": {
+      "type": "ai",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "bi-analyst": {
+      "type": "analytics",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "automation-engineer": {
+      "type": "automation",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
       ]
     },
     "backend-developer": {
@@ -650,8 +970,26 @@
         "cursor"
       ]
     },
+    "robotics-engineer": {
+      "type": "robotics",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "security-engineer": {
       "type": "security",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "ai": {
+      "type": "prompts",
       "version": "0.1.0",
       "compatible": [
         "opencode",

@@ -31,11 +31,17 @@ done
 
 # Skill categories (matches actual structure)
 SKILL_CATEGORIES=(
+  ai
+  analytics
   architecture
+  automation
   backend
   code-review
+  community
   database
+  design
   devops
+  documentation
   embedded
   frontend
   git
@@ -43,6 +49,7 @@ SKILL_CATEGORIES=(
   languages
   projects
   quality
+  robotics
   security
   testing
   tools
@@ -56,7 +63,10 @@ done
 
 # Agent categories
 AGENT_CATEGORIES=(
+  ai
+  analytics
   architect
+  automation
   backend
   database
   devops
@@ -67,6 +77,7 @@ AGENT_CATEGORIES=(
   planner
   qa
   reviewer
+  robotics
   security
   vision
 )
@@ -78,6 +89,10 @@ done
 
 # Agent files (categorized)
 AGENTS=(
+  ai/ai-engineer
+  ai/data-scientist
+  analytics/bi-analyst
+  automation/automation-engineer
   backend/backend-developer
   backend/ml-engineer
   database/data-engineer
@@ -90,6 +105,7 @@ AGENTS=(
   frontend/ui-designer
   planner/product-manager
   qa/qa-engineer
+  robotics/robotics-engineer
   security/security-engineer
 )
 
@@ -119,6 +135,7 @@ done
 
 # Prompts (matches actual structure)
 PROMPTS=(
+  ai
   architecture
   code-review
   debugging

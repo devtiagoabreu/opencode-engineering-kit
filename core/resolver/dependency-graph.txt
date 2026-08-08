@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sex 07 ago 2026 00:13:58 -03
+# Generated: sáb 08 ago 2026 08:33:07 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -8,6 +8,9 @@
   (no dependencies)
 
 ## community/open-source-contributing
+  (no dependencies)
+
+## analytics/business-intelligence
   (no dependencies)
 
 ## architecture/microservices-design
@@ -31,19 +34,49 @@
 ## frontend/performance
   (no dependencies)
 
+## embedded/raspberry-pi
+  (no dependencies)
+
+## embedded/esp8266-development
+  (no dependencies)
+
+## embedded/arduino-development
+  (no dependencies)
+
 ## embedded/esp32-development
   (no dependencies)
 
 ## embedded/rtos-basics
   (no dependencies)
 
+## ai/llm-multi-provider
+  (no dependencies)
+
+## ai/rag-llm
+  (no dependencies)
+
+## ai/evolution-api
+  (no dependencies)
+
+## ai/deep-learning
+  (no dependencies)
+
 ## tools/terminal-productivity
+  (no dependencies)
+
+## tools/repo-to-llm
   (no dependencies)
 
 ## tools/git-advanced
   (no dependencies)
 
+## tools/code-knowledge-graph
+  (no dependencies)
+
 ## code-review/code-review-checklist
+  (no dependencies)
+
+## robotics/robotics
   (no dependencies)
 
 ## vision/opencv-basics
@@ -84,7 +117,13 @@
 ## quality/refactoring-techniques
   (no dependencies)
 
+## quality/context-optimization
+  (no dependencies)
+
 ## security/secure-coding
+  (no dependencies)
+
+## security/skill-spector
   (no dependencies)
 
 ## security/owasp-top-10
@@ -108,6 +147,12 @@
 ## backend/caching-strategies
   (no dependencies)
 
+## automation/n8n-workflow-automation
+  (no dependencies)
+
+## documentation/doc-to-markdown
+  (no dependencies)
+
 ## languages/typescript-best-practices
   (no dependencies)
 
@@ -126,5 +171,11 @@
   (no dependencies)
 
 ## git/git-workflow
+  (no dependencies)
+
+## design/ui-ux-design
+  (no dependencies)
+
+## design/design-system
   (no dependencies)
 

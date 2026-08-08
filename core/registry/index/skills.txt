@@ -1,6 +1,7 @@
   - agile-scrum
   - project-setup
   - open-source-contributing
+  - business-intelligence
   - microservices-design
   - clean-architecture
   - css-best-practices
@@ -8,11 +9,21 @@
   - state-management
   - react-patterns
   - performance
+  - raspberry-pi
+  - esp8266-development
+  - arduino-development
   - esp32-development
   - rtos-basics
+  - llm-multi-provider
+  - rag-llm
+  - evolution-api
+  - deep-learning
   - terminal-productivity
+  - repo-to-llm
   - git-advanced
+  - code-knowledge-graph
   - code-review-checklist
+  - robotics
   - opencv-basics
   - nosql-modeling
   - sql-optimization
@@ -26,7 +37,9 @@
   - mqtt-protocol
   - code-review-best-practices
   - refactoring-techniques
+  - context-optimization
   - secure-coding
+  - skill-spector
   - owasp-top-10
   - rest-api-design
   - api-design
@@ -34,6 +47,8 @@
   - authentication
   - graphql-api
   - caching-strategies
+  - n8n-workflow-automation
+  - doc-to-markdown
   - typescript-best-practices
   - python-best-practices
   - integration-testing
@@ -41,3 +56,5 @@
   - e2e-testing
   - python-testing
   - git-workflow
+  - ui-ux-design
+  - design-system

@@ -9,6 +9,8 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- New skills (LLM context & tooling): `doc-to-markdown` (MarkItDown), `repo-to-llm` (gittomd/llms.txt), `code-knowledge-graph` (Graphify), `context-optimization` (Repomix/token economy), `skill-spector` (NVIDIA SkillSpector)
+- New skill category `documentation` (bootstrap.sh + schema)
 - .gitignore for security and build artifacts
 - Linting configs (.markdownlint.json, .yamllint.yml, .shellcheckrc, .editorconfig)
 - Test runner script (scripts/test.sh)
