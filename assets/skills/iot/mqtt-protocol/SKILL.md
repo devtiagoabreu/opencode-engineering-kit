@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: mqtt-protocol
 description: Build IoT messaging with MQTT covering brokers, QoS, topics, and pub/sub patterns
 category: iot

@@ -1,6 +1,11 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: deep-learning
-description: Deep learning with PyTorch covering training loops, CNNs, transfer learning, regularization and evaluation. Use when building, training, debugging or fine-tuning neural networks, vision/LLM models or when users mention neural networks, epochs, loss, gradients, GPU training or model evaluation.
+description: Deep learning with PyTorch covering training loops, CNNs, transfer learning, regularization and evaluation for neural network, vision or LLM models.
 category: ai
 version: 0.1.0
 author: OpenCode Community
@@ -13,7 +18,7 @@ requires:
   - Python 3.9 or newer
   - PyTorch installed (`pip install torch`)
   - A CUDA GPU for anything beyond small experiments
-  - `numpy`, `matplotlib` for data handling and visualization
+  - '`numpy`, `matplotlib` for data handling and visualization'
 provides:
   - Reproducible training loop patterns
   - CNN architecture building blocks
@@ -34,10 +39,15 @@ Build, train, evaluate, and debug neural networks that are **reproducible** and
 models: data loading, training loops, monitoring, and evaluation — not on
 copying architectures.
 
+## Prerequisites
+
+- Python 3.9 or newer with PyTorch installed (`pip install torch`)
+- A CUDA GPU for anything beyond small experiments
+- `numpy` and `matplotlib` for data handling and visualization
+
 ## Core Principles
 
-- **Fix the seed** everywhere (Python, NumPy, PyTorch, CUDA) so runs are reproducible.
-- **Pin versions** in `requirements.txt` (torch, torchvision, CUDA runtime). GPU bit-rot is real.
+- **Fix the seed** everywhere (Python, NumPy, PyTorch, CUDA) so runs are reproducible.- **Pin versions** in `requirements.txt` (torch, torchvision, CUDA runtime). GPU bit-rot is real.
 - **Track everything**: loss, metrics, LR, gradients. If you can't plot it, you can't debug it.
 - **Start tiny**: a model that overfits one batch trains faster than one that fails on the full set.
 - **Evaluate on data the model has never seen**, in the same distribution it will see in production.
@@ -88,7 +98,7 @@ train_loader = DataLoader(
 
 ### Transform pipeline
 
-Compose transforms for vision: `Resize -> RandomHorizontalFlip -> ToTensor -> Normalize(mean, std)`. Normalize with dataset means/stds — for ImageNet-style pretrained models use the model's own stats (`mean=[0.485, 0.456, 0.406]`, `std=[0.229, 0.224, 0.225]`).
+Compose vision transforms: `Resize -> RandomHorizontalFlip -> ToTensor -> Normalize(mean, std)`. For pretrained ImageNet models reuse the model's own normalization stats.
 
 ## 2. Model Definition
 

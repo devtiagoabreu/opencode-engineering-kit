@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: incident-response
 description: Best practices for incident response and management
 category: devops

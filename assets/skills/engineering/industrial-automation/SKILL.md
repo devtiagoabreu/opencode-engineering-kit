@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: industrial-automation
 description: Program PLCs (IEC 61131-3) with Structured Text and Ladder, and design HMIs and SCADA for industrial automation.
 category: engineering

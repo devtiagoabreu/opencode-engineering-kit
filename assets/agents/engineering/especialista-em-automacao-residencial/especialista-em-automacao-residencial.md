@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: especialista-em-automacao-residencial
 description: Especialista em automação residencial com Home Assistant, ESPHome, Zigbee/Z-Wave, Alexa e Google Home
 version: 0.1.0

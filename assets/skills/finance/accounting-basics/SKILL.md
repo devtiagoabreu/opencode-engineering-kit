@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: accounting-basics
 description: Double-entry bookkeeping, journal entries, chart of accounts and financial statements
 category: finance

@@ -17,6 +17,34 @@ quê.
 
 ## Entradas
 
+### 2026-08-10 — Educação, cultura, comércio, direito, política e qualidade
+
+- **Adicionadas 39 personas** em novas categorias: `education` (11 professores
+  + alfabetização + vestibular), `music` (músico, método Suzuki), `arts`
+  (maquiador, estilista, cabeleireiro, bailarina, coreógrafo, roteirista),
+  `sports` (personal-trainer), `automotive` (mecânico, mecânico de avião),
+  `commercial` (tecelagem, plásticos, e-commerce, relacionamento com cliente),
+  `languages` (professor de idiomas), `ai` (especialista em LLMs gratuitos) e
+  nas existentes `humanities` (geopolítica, análise política, advogado
+  trabalhista, criminalista), `marketing` (marketeiro político, criador de
+  jingles políticos), `planner` (orquestrador).
+- **Adicionadas 35 skills** em novas categorias: `education` (planejamento de
+  aulas, métodos, avaliação, evidências, vestibular), `music`, `arts`, `sports`,
+  `automotive`, `commercial`, `languages` e `ai` (LLMs gratuitos), além de
+  `health/nutrition` e `humanities` (geopolítica, análise política, marketing
+  político, jingles políticos).
+- **Orquestrador:** novo agente `planner/orquestrador` que planeja, delega aos
+  agentes certos, mostra a procedência das ferramentas e pergunta ao usuário.
+- **Procedência (provenance):** frontmatter com `provenance` (fonte, URL,
+  licença MIT, data de verificação) em todos os 208 assets; script
+  `scripts/add-provenance.sh` + índice `context/provenance.md`.
+- **Módulo de testes de qualidade:** `tests/quality/test-asset-quality.sh`
+  cobrindo 6 dimensões (Acessibilidade, Segurança, Intuitividade, UI,
+  Eficiência, Eficácia) para skills e agents.
+- **Decisão:** personas jurídicas e políticas com caráter educativo/informativo
+  (sem substituir OAB, legislação eleitoral do TSE respeitada); conteúdo em
+  português com cabeçalhos compatíveis com os testes do kit.
+
 ### 2026-08-08 — Personas de domínio e certificações
 
 - **Adicionadas 31 personas** em 12 novas categorias (construction, finance,

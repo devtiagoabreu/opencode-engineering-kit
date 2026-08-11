@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: data-scientist
 description: Data Scientist specialized in machine learning, deep learning, statistics and data analysis
 version: 0.1.0

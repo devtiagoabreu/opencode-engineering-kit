@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: webscraper
 description: Especialista em web scraping com requests, BeautifulSoup e Playwright, extração de dados, rotação de proxies e tratamento anti-bot
 version: 0.1.0

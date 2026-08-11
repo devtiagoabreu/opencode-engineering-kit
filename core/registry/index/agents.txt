@@ -10,13 +10,22 @@
   - engenheiro-mecatronico
   - engenheiro-de-producao
   - embedded-engineer
+  - musico
+  - especialista-metodo-suzuki
   - filosofo
   - historiador
+  - analista-geopolitico
+  - advogado-trabalhista
+  - analista-politico
+  - criminalista
   - quimico
   - fisico
   - matematico
   - ai-engineer
   - data-scientist
+  - especialista-em-llms
+  - criador-de-jingles-politicos
+  - marketeiro-politico
   - gestor-de-trafego
   - marketing-digital
   - qa-engineer
@@ -27,25 +36,55 @@
   - arquiteto
   - arquiteto-google-cloud
   - arquiteto-aws-cloud
+  - orquestrador
   - product-manager
+  - personal-trainer
   - robotics-engineer
   - metodologia-lean
   - vision-engineer
   - data-engineer
+  - relacoes-com-o-cliente
+  - equipe-comercial-tecelagem
+  - especialista-comercial-plasticos
+  - equipe-comercial-ecommerce
+  - mecanico
+  - mecanico-de-aviao
   - site-reliability-engineer
   - devops-engineer
+  - bailarina
+  - coreografo
+  - cabeleireiro
+  - roteirista
+  - maquiador
+  - estilista
   - especialista-em-logistica
   - psiquiatra
+  - podologo
   - psicologo
   - especialista-em-autismo
   - especialista-em-tdah
+  - nutricionista
   - security-engineer
   - ml-engineer
   - backend-developer
   - webscraper
   - especialista-google-workspace
+  - professor-de-sociologia
+  - professor-de-geografia
+  - professor-de-historia
+  - professor-de-artes
+  - preparador-vestibular
+  - professor-de-fisica
+  - professor-de-filosofia
+  - professor-de-robotica
+  - professor-de-etica
+  - professor-de-educacao-fisica
+  - especialista-em-alfabetizacao
+  - professor-de-matematica
+  - professor-de-quimica
   - automation-engineer
   - technical-writer
+  - professor-de-idiomas
   - performance-engineer
   - contador
   - fiscal

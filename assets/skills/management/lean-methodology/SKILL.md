@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: lean-methodology
 description: Apply lean methodology with 5S, Kaizen, and value stream mapping to eliminate waste and improve flow.
 category: management

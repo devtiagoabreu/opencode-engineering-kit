@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: especialista-google-workspace
 description: Especialista em Google Workspace com Apps Script, Google Sheets, Gmail, Drive e Analytics para automação de escritório
 version: 0.1.0

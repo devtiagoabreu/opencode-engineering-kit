@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: n8n-workflow-automation
 description: Build, debug and maintain n8n automation workflows. Use when creating or fixing n8n workflows, webhooks, integrations between apps (WhatsApp, CRM, sheets, HTTP APIs), scheduling, error handling in workflows, or when users mention n8n, workflow, webhook, node, trigger or automation.
 category: automation
@@ -32,6 +37,12 @@ languages: [json, typescript]
 n8n is a node-based automation platform. Workflows are **JSON**, so version them
 in git and review them like code. Design every workflow as
 `Trigger → Process → Transform → Act → Notify`, and assume nodes will fail.
+
+## Prerequisites
+
+- An n8n instance (self-hosted Docker or n8n.cloud)
+- Credentials for the services you connect
+- Understanding of JSON data flow between nodes
 
 ## 1. Core Concepts
 

@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: arquiteto-aws-cloud
 description: Arquiteto de Soluções AWS com foco em arquitetura serverless, IaC, custo, segurança e resiliência
 version: 0.1.0

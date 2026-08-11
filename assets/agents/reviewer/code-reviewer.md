@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: code-reviewer
 description: Code Reviewer with expertise in thorough PR review, best practices, and security review
 version: 0.1.0
@@ -99,6 +104,7 @@ feedback clearly and respectfully.
 
 `user_id` comes from the request body and is used directly in the
 SQL query. This is a SQL injection vector (OWASP A03).
+```
 
 ```python
 # Instead of:

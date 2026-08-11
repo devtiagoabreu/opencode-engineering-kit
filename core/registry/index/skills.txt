@@ -18,15 +18,29 @@
   - arduino-development
   - esp32-development
   - rtos-basics
+  - political-jingle-writing
+  - music-theory
+  - brass
+  - suzuki-method
+  - piano
+  - flute
+  - drums
+  - guitar
+  - labor-law
+  - criminal-law
+  - political-analysis
+  - geopolitics
   - applied-mathematics
   - chemistry-basics
   - physics-applied
+  - free-llm-models
   - llm-multi-provider
   - rag-llm
   - evolution-api
   - deep-learning
   - digital-marketing
   - traffic-management
+  - political-campaign-marketing
   - civil-structures
   - construction-execution
   - google-cloud-architecture
@@ -35,24 +49,37 @@
   - repo-to-llm
   - git-advanced
   - code-knowledge-graph
+  - personal-training
   - code-review-checklist
   - robotics
   - lean-methodology
   - opencv-basics
   - nosql-modeling
   - sql-optimization
+  - customer-relationship
+  - fabric-mill-sales
+  - ecommerce-commerce
+  - plastics-industry-sales
+  - vehicle-mechanics
+  - aircraft-mechanics
   - terraform-aws
   - incident-response
   - kubernetes-best-practices
   - ci-cd-pipeline
   - monitoring-observability
   - docker-best-practices
+  - fashion-design
+  - hairdressing
+  - dance-and-choreography
+  - screenwriting
+  - makeup-artistry
   - supply-chain-management
   - sensor-integration
   - mqtt-protocol
   - code-review-best-practices
   - refactoring-techniques
   - context-optimization
+  - nutrition
   - neurodiversity-support
   - secure-coding
   - skill-spector
@@ -65,8 +92,16 @@
   - caching-strategies
   - web-scraping
   - google-workspace-analytics
+  - vestibular-prep
+  - lesson-planning
+  - literacy-teaching
+  - teaching-methods
+  - assessment-and-feedback
+  - evidence-based-teaching
+  - classroom-management
   - n8n-workflow-automation
   - doc-to-markdown
+  - language-learning
   - typescript-best-practices
   - python-best-practices
   - integration-testing

@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: automation-engineer
 description: Automation Engineer specialized in n8n workflows, WhatsApp bots, Evolution API and system integrations
 version: 0.1.0

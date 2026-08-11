@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: context-optimization
 description: Reduce token usage and cost of AI coding agents using context engineering, compaction, caching and repomix
 category: quality

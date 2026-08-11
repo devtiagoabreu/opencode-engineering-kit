@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: ai-engineer
 description: AI Engineer specialized in RAG systems, LLM integration and AI features for products
 version: 0.1.0

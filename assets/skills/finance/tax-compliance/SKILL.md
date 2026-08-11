@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: tax-compliance
 description: Simples Nacional DAS calculation, ICMS mechanics and Brazilian tax calendar
 category: finance
@@ -197,7 +202,7 @@ Also verify:
 
 - [Simples Nacional Portal (official simulator and tables)](https://www8.receita.fazenda.gov.br/SimplesNacional/)
 - [Receita Federal - PGDAS-D](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/pagamentos-e-parcelamentos/simples-nacional)
-- [Portal do Simples Nacional (SEFAZ)](http://www.simplesnacional.com.br/)
+- [Portal do Simples Nacional (SEFAZ)](https://www.simplesnacional.com.br/)
 - [SPED Fiscal (EFD) documentation](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/sped)
 - [Receita Federal Tax Calendar](https://www.gov.br/receitafederal/pt-br/assuntos/orientacao-tributaria/calendario)
 

@@ -19,8 +19,8 @@ Inspired by projects like [Shokunin](https://github.com/hirefrank/shokunin) and 
 
 | Item | Quantity |
 |------|----------|
-| Skills | 80 (34 categories) |
-| Agents | 54 (personas in 30 categories) |
+| Skills | 115 (40 categories) |
+| Agents | 93 (personas in 38 categories) |
 | Prompts | 10 (13 categories) |
 | Templates | 16 |
 | Playbooks | 3 |
@@ -31,7 +31,7 @@ Inspired by projects like [Shokunin](https://github.com/hirefrank/shokunin) and 
 | Prompt chains | 2 |
 | Example plugins | 1 (`asset-linter`) |
 | Core scripts | 35 |
-| Automated tests | 20 |
+| Automated tests | 21 |
 
 ### Compatibility
 
@@ -153,13 +153,13 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 80 ready guides
+### Skills — 115 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
 
 | Category | Examples |
 |----------|----------|
-| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider |
+| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs |
 | `analytics` | Business Intelligence |
 | `automation` | n8n Workflow Automation |
 | `design` | Design System, UI/UX |
@@ -179,14 +179,21 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `quality` | Code Review, Refactoring, Context/token optimization |
 | `construction` | Construction execution, civil structures |
 | `finance` | Accounting, taxes (Brazilian Simples Nacional) |
-| `marketing` | Digital marketing, traffic management |
+| `marketing` | Digital marketing, traffic management, political marketing (election law) |
 | `science` | Applied mathematics, physics, chemistry |
 | `engineering` | Mechatronics, industrial automation, home automation, production planning |
 | `logistics` | Supply chain |
 | `web` | Web scraping, Google Workspace/Looker Studio |
 | `management` | Lean Methodology |
-| `health` | Neurodiversity support (ASD/ADHD) |
+| `health` | Neurodiversity support (ASD/ADHD), nutrition, podiatry |
 | `cloud` | AWS and Google Cloud architecture |
+| `education` | Lesson planning, teaching methods, assessment, evidence-based teaching, vestibular (ENEM/FUVEST/VUNESP) |
+| `music` | Music theory, Suzuki Method |
+| `arts` | Drawing, fashion, makeup, screenwriting |
+| `sports` | Physical preparation |
+| `automotive` | Automotive diagnostics and repair |
+| `commercial` | E-commerce, CRM, plastics, weaving |
+| `humanities` | Geopolitics, political analysis, labor law, criminal law |
 | + architecture, code-review, community, database, projects | — |
 
 **LLM context focus:** new skills cover the trending context/token ecosystem on
@@ -202,7 +209,7 @@ All skills are copied automatically to `.opencode/skills/` when installing via
 the CLI (`npx opencode-engineering-kit install`) — new categories are detected
 recursively, with no extra configuration.
 
-### Agents — 54 ready personas
+### Agents — 93 ready personas
 
 Agents are **personas** (role + context + communication style) for specific roles. Examples:
 
@@ -218,9 +225,10 @@ Agents are **personas** (role + context + communication style) for specific role
 | `automation-engineer` | n8n workflows and WhatsApp bots |
 | `bi-analyst` | Dashboards, KPIs and reports |
 | `robotics-engineer` | ROS 2 and robotics |
+| `orquestrador` | Plans tasks, delegates to the right agents and shows tool provenance |
 | + architect, planner, reviewer, qa, performance, documentation, database, embedded, vision | — |
 
-#### Domain personas (construction, finance, design, marketing, science, humanities, engineering, logistics, web, health, management, cloud)
+#### Domain personas (construction, finance, design, marketing, science, humanities, engineering, logistics, web, health, management, cloud, education, music, arts, sports, commercial, law, languages)
 
 Each domain persona **collaborates with the tech personas**, providing technical
 parameters from its area while always looking at what the user is trying to
@@ -232,19 +240,34 @@ Portuguese, with headers compatible with the kit's tests.
 | `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
 | `finance` | contador, fiscal |
 | `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
-| `marketing` | marketing-digital, gestor-de-trafego |
+| `marketing` | marketing-digital, gestor-de-trafego, marketeiro-politico, criador-de-jingles-politicos |
 | `science` | matematico, fisico, quimico |
-| `humanities` | historiador, filosofo |
+| `humanities` | historiador, filosofo, analista-geopolitico, analista-politico, advogado-trabalhista, criminalista |
 | `engineering` | engenheiro-mecatronico, engenheiro-de-producao, especialista-em-automacao-industrial, especialista-em-automacao-residencial |
 | `logistics` | especialista-em-logistica |
 | `web` | webscraper, especialista-google-workspace |
-| `health` | psicologo, psiquiatra, especialista-em-autismo, especialista-em-tdah |
+| `health` | psicologo, psiquiatra, especialista-em-autismo, especialista-em-tdah, nutricionista, podologo |
 | `management` | metodologia-lean |
 | `cloud` | arquiteto-aws-cloud, arquiteto-google-cloud |
+| `education` | professor-de-historia, professor-de-geografia, professor-de-matematica, professor-de-fisica, professor-de-quimica, professor-de-filosofia, professor-de-etica, professor-de-sociologia, professor-de-robotica, professor-de-artes, professor-de-educacao-fisica, especialista-em-alfabetizacao, preparador-vestibular |
+| `music` | musico, especialista-metodo-suzuki |
+| `arts` | maquiador, estilista, cabeleireiro, bailarina, coreografo, roteirista |
+| `sports` | personal-trainer |
+| `automotive` | mecanico, mecanico-de-aviao |
+| `commercial` | equipe-comercial-tecelagem, especialista-comercial-plasticos, equipe-comercial-ecommerce, relacoes-com-o-cliente |
+| `languages` | professor-de-idiomas |
+| `planner` | product-manager, orquestrador |
+| `ai` | ai-engineer, data-scientist, especialista-em-llms |
 
 > **Health note:** health personas have an **educational and support** focus,
 > do not replace healthcare professionals, and do not issue diagnoses or
 > prescriptions.
+>
+> **Law note:** legal personas are **educational and informational** only; they
+> do not replace the guidance of a licensed attorney for concrete cases.
+>
+> **Politics note:** political personas present factual, plural analysis, respect
+> Brazilian election law (TSE) and reject disinformation and hate speech.
 
 ### Prompts — 10 reusable
 
@@ -316,8 +339,8 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 80 skills in 34 categories (SKILL.md)
-│   ├── agents/          # 54 personas by category
+│   ├── skills/          # 115 skills in 40 categories (SKILL.md)
+│   ├── agents/          # 93 personas by category
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates
 │   ├── commands/        # 3 documented commands
@@ -340,7 +363,7 @@ opencode-engineering-kit/
 ├── plugins/             # Example plugins (community, enterprise)
 ├── marketplace-web/     # Marketplace web interface
 ├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
-├── tests/               # 20 automated test suites
+├── tests/               # 21 automated test suites
 ├── docs/                # Documentation (EN + PT)
 ├── examples/            # Usage examples
 ├── install.sh           # Global install
@@ -382,7 +405,7 @@ cp -r assets/templates/new-project/ /your/new-project/
 The project uses automated **quality gates** (Markdown/YAML/Shell lint, format and content validation) with CI via GitHub Actions.
 
 ```bash
-# Run all 20 test suites
+# Run all 21 test suites
 ./scripts/test.sh
 
 # Run the quality gates

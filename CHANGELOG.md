@@ -9,6 +9,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **39 new personas** in 9 new agent categories (education, music, arts, sports, automotive, commercial, languages, ai, planner) plus new personas in existing categories (humanities: politics & law; marketing: political marketing) — PT-BR content with a "Como ajuda as personas de tecnologia" section
+- **35 new skills** in 9 new skill categories (education, music, arts, sports, automotive, commercial, languages, humanities, health/nutrition) plus `ai/free-llm-models`
+- New `planner/orquestrador` agent that plans, delegates to the right agents, shows tool provenance and asks the user
+- New `commercial` and `law` categories added to `bootstrap.sh` and the skill JSON Schema
+- **Provenance (provenance)**: `provenance` frontmatter block (source, url, license, verified date) in all assets, `scripts/add-provenance.sh` backfill script and `context/provenance.md` index (208 assets)
+- New quality test module `tests/quality/test-asset-quality.sh` covering 6 dimensions (Acessibilidade, Segurança, Intuitividade, UI, Eficiência, Eficácia) for skills and agents
+- Fixed pre-existing issues revealed by the new tests (invalid YAML in 4 skills, merged lines in `rag-llm`, nested code fences, http→https upgrades)
 - **31 domain personas** in 12 new agent categories (construction, finance, design, marketing, science, humanities, engineering, logistics, web, health, management, cloud) — each with a "Como ajuda as personas de tecnologia" section and PT-BR content
 - **20 domain skills** in 11 new skill categories (construction, finance, marketing, science, engineering, logistics, web, management, health, cloud)
 - New `context/personas.md` (index of all personas) and `context/HISTORY.md` (change history)

@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: rag-llm
 description: Design and build Retrieval-Augmented Generation (RAG) systems over private documents. Use when building chatbots that answer from your own docs/PDFs/DBs, question-answering over data, knowledge bases, embeddings, vector databases, chunking, retrieval, reranking or evaluating LLM answers grounded in sources.
 category: ai
@@ -34,6 +39,13 @@ A RAG system answers questions using **your documents** by retrieving relevant
 chunks and feeding them to an LLM as context. The quality of the answer is
 bounded by the quality of **retrieval** — not by the prompt. Get ingestion,
 chunking, and retrieval right before tuning the generation prompt.
+
+## Prerequisites
+
+- Python 3.10+ or a JS/TS runtime (Node 18+)
+- An LLM provider API key (OpenAI, Anthropic, Groq, Gemini, DeepSeek...)
+- An embedding model (OpenAI `text-embedding-3`, local `sentence-transformers`, etc.)
+- A vector store (pgvector, Qdrant, Chroma, Pinecone, Weaviate)
 
 ## Architecture
 
@@ -191,7 +203,7 @@ Track these over every change (chunk size, model, top-k) so improvements are mea
 
 ## 7. Production Concerns
 
-- **Security:** never put customer/tenant data in the prompt unless authorized; filter at retrieval, not after generation; log what was retrieved for audit. Treat the vector DB like a database with credentials.
+- **Security:** never put customer/tenant data in the prompt unless authorized; filter at retrieval, not after generation; log what was retrieved for audit.
 - **Cost/latency:** cache repeated questions; embed on write (once), not on every read; cap context size.
 - **Freshness:** re-ingest changed documents; keep `updated_at` and rebuild embeddings incrementally.
 - **Multi-provider fallback:** route between providers (OpenAI/Anthropic/Groq/Gemini/DeepSeek) with automatic fallback on failure — see the `llm-multi-provider` skill.

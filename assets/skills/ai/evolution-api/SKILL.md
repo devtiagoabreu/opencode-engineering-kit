@@ -1,6 +1,11 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: evolution-api
-description: Integrate WhatsApp bots with Evolution API (Baileys/Meta Cloud). Use when building or debugging WhatsApp bots, sending messages/media, handling webhooks, managing instances, chat/group operations, or when users mention Evolution API, whatsapp bot, instância, qrcode, Baileys or webhook de WhatsApp.
+description: "Integrate WhatsApp bots with Evolution API (Baileys/Meta Cloud): sending messages/media, handling webhooks, managing instances, chat/group operations."
 category: ai
 version: 0.1.0
 author: OpenCode Community
@@ -12,7 +17,7 @@ compatible:
 requires:
   - An Evolution API server (Docker) or the hosted API
   - An instance created and connected via QR code
-  - `apikey` header for authenticated calls
+  - '`apikey` header for authenticated calls'
   - A webhook URL reachable from the server (https recommended)
 provides:
   - Instance lifecycle management (create, connect, QR, restart, logout)
@@ -33,6 +38,13 @@ Evolution API exposes a REST API for building WhatsApp bots. Instances are
 created per WhatsApp number; a webhook delivers events to your backend. Keep
 the **backend stateless** and let the webhook events drive a state machine —
 this is the pattern that survives restarts and retries.
+
+## Prerequisites
+
+- An Evolution API server (Docker) or the hosted API
+- An instance created and connected via QR code
+- `apikey` header for authenticated calls
+- A webhook URL reachable from the server (https recommended)
 
 ## Instance Lifecycle
 
@@ -265,3 +277,4 @@ services:
 - [Evolution API Docs](https://doc.evolution-api.com/)
 - [Evolution API on GitHub](https://github.com/EvolutionAPI/evolution-api)
 - [WhatsApp Business API docs](https://developers.facebook.com/docs/whatsapp)
+

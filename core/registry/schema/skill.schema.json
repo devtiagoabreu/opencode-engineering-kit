@@ -18,7 +18,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["ai", "analytics", "architecture", "automation", "backend", "cloud", "code-quality", "code-review", "community", "construction", "database", "design", "devops", "documentation", "embedded", "engineering", "finance", "frontend", "git", "health", "humanities", "iot", "languages", "logistics", "management", "marketing", "mobile", "projects", "quality", "robotics", "science", "security", "testing", "tools", "vision", "web"],
+      "enum": ["ai", "analytics", "architecture", "arts", "automation", "automotive", "backend", "cloud", "code-quality", "code-review", "commercial", "community", "construction", "database", "design", "devops", "documentation", "education", "embedded", "engineering", "finance", "frontend", "git", "health", "humanities", "iot", "languages", "law", "logistics", "management", "marketing", "mobile", "music", "projects", "quality", "robotics", "science", "security", "sports", "testing", "tools", "vision", "web"],
       "description": "Skill category"
     },
     "version": {
@@ -92,6 +92,28 @@
         "type": "string"
       },
       "description": "Related programming languages"
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Source/origin of the skill content",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Name of the source project, organization or method"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL of the source"
+        },
+        "license": {
+          "type": "string",
+          "description": "License of the source material"
+        },
+        "verified": {
+          "type": "string",
+          "description": "Date the source was verified (YYYY-MM-DD)"
+        }
+      }
     }
   }
 }

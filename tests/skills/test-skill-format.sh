@@ -51,6 +51,12 @@ for skill_dir in "$SKILLS_DIR"/*/; do
         ((ERRORS++))
     fi
     
+    # Check provenance
+    if ! grep -q "^provenance:" "$skill_file"; then
+        echo "ERROR: $skill_file missing provenance field"
+        ((ERRORS++))
+    fi
+    
     # Check version
     if ! grep -q "^version:" "$skill_file"; then
         echo "ERROR: $skill_file missing version field"

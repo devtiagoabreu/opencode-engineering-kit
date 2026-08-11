@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: sensor-integration
 description: Integrate sensors over I2C and SPI and build an end-to-end telemetry pipeline
 category: iot

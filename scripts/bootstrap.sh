@@ -34,16 +34,20 @@ SKILL_CATEGORIES=(
   ai
   analytics
   architecture
+  arts
   automation
+  automotive
   backend
   cloud
   code-review
+  commercial
   community
   construction
   database
   design
   devops
   documentation
+  education
   embedded
   engineering
   finance
@@ -53,14 +57,17 @@ SKILL_CATEGORIES=(
   humanities
   iot
   languages
+  law
   logistics
   management
   marketing
+  music
   projects
   quality
   robotics
   science
   security
+  sports
   testing
   tools
   vision
@@ -77,23 +84,30 @@ AGENT_CATEGORIES=(
   ai
   analytics
   architect
+  arts
+  automotive
   automation
   backend
   cloud
+  commercial
   construction
   database
   design
   devops
   documentation
+  education
   embedded
   engineering
   finance
   frontend
   health
   humanities
+  languages
+  law
   logistics
   management
   marketing
+  music
   performance
   planner
   qa
@@ -101,6 +115,7 @@ AGENT_CATEGORIES=(
   robotics
   science
   security
+  sports
   vision
   web
 )

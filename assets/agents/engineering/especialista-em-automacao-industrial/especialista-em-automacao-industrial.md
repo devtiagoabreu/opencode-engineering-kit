@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: especialista-em-automacao-industrial
 description: Especialista em automação industrial com CLP, IHMs, redes de campo (PROFINET, Modbus), supervisório e integração com MES
 version: 0.1.0

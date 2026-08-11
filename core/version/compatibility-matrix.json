@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-08T11:56:41Z",
+  "generated": "2026-08-11T00:47:52Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -18,6 +18,15 @@
       ]
     },
     "evolution-api": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "free-llm-models": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -71,7 +80,70 @@
         "cursor"
       ]
     },
+    "dance-and-choreography": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "fashion-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "hairdressing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "makeup-artistry": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "screenwriting": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "n8n-workflow-automation": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "aircraft-mechanics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "vehicle-mechanics": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -153,6 +225,42 @@
       ]
     },
     "code-review-checklist": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "customer-relationship": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "ecommerce-commerce": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "fabric-mill-sales": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "plastics-industry-sales": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -279,6 +387,69 @@
       ]
     },
     "doc-to-markdown": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "assessment-and-feedback": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "classroom-management": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "evidence-based-teaching": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "lesson-planning": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "literacy-teaching": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "teaching-methods": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "vestibular-prep": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -449,6 +620,51 @@
         "cursor"
       ]
     },
+    "nutrition": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "criminal-law": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "geopolitics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "labor-law": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "political-analysis": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "mqtt-protocol": {
       "type": "skill",
       "version": "0.1.0",
@@ -459,6 +675,15 @@
       ]
     },
     "sensor-integration": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "language-learning": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -512,7 +737,88 @@
         "cursor"
       ]
     },
+    "political-campaign-marketing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "traffic-management": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "brass": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "drums": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "flute": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "guitar": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "music-theory": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "piano": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "political-jingle-writing": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "suzuki-method": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -621,6 +927,15 @@
       ]
     },
     "skill-spector": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "personal-training": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -746,6 +1061,15 @@
         "cursor"
       ]
     },
+    "especialista-em-llms": {
+      "type": "ai",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "bi-analyst": {
       "type": "analytics",
       "version": "0.1.0",
@@ -755,8 +1079,80 @@
         "cursor"
       ]
     },
+    "bailarina": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "cabeleireiro": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "coreografo": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "estilista": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "maquiador": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "roteirista": {
+      "type": "arts",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "automation-engineer": {
       "type": "automation",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "mecanico-de-aviao": {
+      "type": "automotive",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "mecanico": {
+      "type": "automotive",
       "version": "0.1.0",
       "compatible": [
         "opencode",
@@ -793,6 +1189,42 @@
     },
     "arquiteto-google-cloud": {
       "type": "cloud",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "equipe-comercial-ecommerce": {
+      "type": "commercial",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "equipe-comercial-tecelagem": {
+      "type": "commercial",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "especialista-comercial-plasticos": {
+      "type": "commercial",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "relacoes-com-o-cliente": {
+      "type": "commercial",
       "version": "0.1.0",
       "compatible": [
         "opencode",
@@ -908,6 +1340,123 @@
         "cursor"
       ]
     },
+    "especialista-em-alfabetizacao": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "preparador-vestibular": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-artes": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-educacao-fisica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-etica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-filosofia": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-fisica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-geografia": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-historia": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-matematica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-quimica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-robotica": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "professor-de-sociologia": {
+      "type": "education",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "engenheiro-de-producao": {
       "type": "engineering",
       "version": "0.1.0",
@@ -1016,6 +1565,24 @@
         "cursor"
       ]
     },
+    "nutricionista": {
+      "type": "health",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "podologo": {
+      "type": "health",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "psicologo": {
       "type": "health",
       "version": "0.1.0",
@@ -1027,6 +1594,42 @@
     },
     "psiquiatra": {
       "type": "health",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "advogado-trabalhista": {
+      "type": "humanities",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "analista-geopolitico": {
+      "type": "humanities",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "analista-politico": {
+      "type": "humanities",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "criminalista": {
+      "type": "humanities",
       "version": "0.1.0",
       "compatible": [
         "opencode",
@@ -1052,6 +1655,15 @@
         "cursor"
       ]
     },
+    "professor-de-idiomas": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "especialista-em-logistica": {
       "type": "logistics",
       "version": "0.1.0",
@@ -1070,7 +1682,25 @@
         "cursor"
       ]
     },
+    "criador-de-jingles-politicos": {
+      "type": "marketing",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "gestor-de-trafego": {
+      "type": "marketing",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "marketeiro-politico": {
       "type": "marketing",
       "version": "0.1.0",
       "compatible": [
@@ -1081,6 +1711,33 @@
     },
     "marketing-digital": {
       "type": "marketing",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "especialista-metodo-suzuki": {
+      "type": "music",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "musico": {
+      "type": "music",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "orquestrador": {
+      "type": "planner",
       "version": "0.1.0",
       "compatible": [
         "opencode",
@@ -1144,6 +1801,15 @@
     },
     "security-engineer": {
       "type": "security",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "personal-trainer": {
+      "type": "sports",
       "version": "0.1.0",
       "compatible": [
         "opencode",

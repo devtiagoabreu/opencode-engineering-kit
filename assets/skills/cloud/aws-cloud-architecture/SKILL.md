@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: aws-cloud-architecture
 description: Architect serverless AWS solutions with SAM templates, IAM, VPCs, and the AWS CLI for repeatable deployments.
 category: cloud

@@ -1,6 +1,11 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: design-system
-description: Create and maintain design systems: tokens, components, documentation and versioning. Use when building or extending a design system, defining design tokens, colors, typography, spacing, dark mode, shadcn/ui or Radix component libraries, documenting components, or when users mention design system, tokens, component library, shadcn, Radix or design tokens.
+description: "Create and maintain design systems: tokens, components, documentation and versioning. Use when building or extending a design system, defining design tokens, colors, typography, spacing, dark mode, shadcn/ui or Radix component libraries, documenting components, or when users mention design system, tokens, component library, shadcn, Radix or design tokens."
 category: design
 version: 0.1.0
 author: OpenCode Community
@@ -32,6 +37,12 @@ A design system is a **source of truth** for how a product looks and behaves:
 tokens → primitives → components → patterns. Consistency beats cleverness —
 the goal is that new screens can be assembled from existing pieces without
 designing anything new.
+
+## Prerequisites
+
+- A styling foundation (Tailwind CSS, vanilla CSS variables, or similar)
+- A component primitive set (Radix, Base UI, or hand-rolled)
+- Storybook or equivalent for documentation (optional but recommended)
 
 ## 1. Token Architecture
 

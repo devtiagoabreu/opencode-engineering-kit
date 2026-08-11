@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-08T11:56:31Z",
+  "generated": "2026-08-11T00:47:37Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -44,6 +44,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/especialista-em-llms": {
+      "name": "especialista-em-llms",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/bi-analyst": {
@@ -98,6 +105,48 @@
       ],
       "resolved": true
     },
+    "agents/bailarina": {
+      "name": "bailarina",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/cabeleireiro": {
+      "name": "cabeleireiro",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/coreografo": {
+      "name": "coreografo",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/estilista": {
+      "name": "estilista",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/maquiador": {
+      "name": "maquiador",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/roteirista": {
+      "name": "roteirista",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/automation-engineer": {
       "name": "automation-engineer",
       "type": "agents",
@@ -116,6 +165,20 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/mecanico-de-aviao": {
+      "name": "mecanico-de-aviao",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/mecanico": {
+      "name": "mecanico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/backend-developer": {
@@ -159,6 +222,34 @@
     },
     "agents/arquiteto-google-cloud": {
       "name": "arquiteto-google-cloud",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/equipe-comercial-ecommerce": {
+      "name": "equipe-comercial-ecommerce",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/equipe-comercial-tecelagem": {
+      "name": "equipe-comercial-tecelagem",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-comercial-plasticos": {
+      "name": "especialista-comercial-plasticos",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/relacoes-com-o-cliente": {
+      "name": "relacoes-com-o-cliente",
       "type": "agents",
       "version": "0.1.0",
       "dependencies": [],
@@ -286,6 +377,97 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/especialista-em-alfabetizacao": {
+      "name": "especialista-em-alfabetizacao",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/preparador-vestibular": {
+      "name": "preparador-vestibular",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-artes": {
+      "name": "professor-de-artes",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-educacao-fisica": {
+      "name": "professor-de-educacao-fisica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-etica": {
+      "name": "professor-de-etica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-filosofia": {
+      "name": "professor-de-filosofia",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-fisica": {
+      "name": "professor-de-fisica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-geografia": {
+      "name": "professor-de-geografia",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-historia": {
+      "name": "professor-de-historia",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-matematica": {
+      "name": "professor-de-matematica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-quimica": {
+      "name": "professor-de-quimica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-robotica": {
+      "name": "professor-de-robotica",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/professor-de-sociologia": {
+      "name": "professor-de-sociologia",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/embedded": {
@@ -452,6 +634,20 @@
       "dependencies": [],
       "resolved": true
     },
+    "agents/nutricionista": {
+      "name": "nutricionista",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/podologo": {
+      "name": "podologo",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/psicologo": {
       "name": "psicologo",
       "type": "agents",
@@ -461,6 +657,34 @@
     },
     "agents/psiquiatra": {
       "name": "psiquiatra",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/advogado-trabalhista": {
+      "name": "advogado-trabalhista",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/analista-geopolitico": {
+      "name": "analista-geopolitico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/analista-politico": {
+      "name": "analista-politico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/criminalista": {
+      "name": "criminalista",
       "type": "agents",
       "version": "0.1.0",
       "dependencies": [],
@@ -480,6 +704,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "agents/professor-de-idiomas": {
+      "name": "professor-de-idiomas",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/especialista-em-logistica": {
       "name": "especialista-em-logistica",
       "type": "agents",
@@ -494,6 +725,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "agents/criador-de-jingles-politicos": {
+      "name": "criador-de-jingles-politicos",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/gestor-de-trafego": {
       "name": "gestor-de-trafego",
       "type": "agents",
@@ -501,8 +739,29 @@
       "dependencies": [],
       "resolved": true
     },
+    "agents/marketeiro-politico": {
+      "name": "marketeiro-politico",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "agents/marketing-digital": {
       "name": "marketing-digital",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/especialista-metodo-suzuki": {
+      "name": "especialista-metodo-suzuki",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "agents/musico": {
+      "name": "musico",
       "type": "agents",
       "version": "0.1.0",
       "dependencies": [],
@@ -538,6 +797,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/orquestrador": {
+      "name": "orquestrador",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/product-manager": {
@@ -659,6 +925,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "agents/personal-trainer": {
+      "name": "personal-trainer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "agents/vision": {
@@ -880,6 +1153,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/free-llm-models": {
+      "name": "free-llm-models",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/llm-multi-provider": {
       "name": "llm-multi-provider",
       "type": "skills",
@@ -938,6 +1218,41 @@
       ],
       "resolved": true
     },
+    "skills/dance-and-choreography": {
+      "name": "dance-and-choreography",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/fashion-design": {
+      "name": "fashion-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/hairdressing": {
+      "name": "hairdressing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/makeup-artistry": {
+      "name": "makeup-artistry",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/screenwriting": {
+      "name": "screenwriting",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/n8n-workflow-automation": {
       "name": "n8n-workflow-automation",
       "type": "skills",
@@ -948,6 +1263,20 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/aircraft-mechanics": {
+      "name": "aircraft-mechanics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/vehicle-mechanics": {
+      "name": "vehicle-mechanics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/api-design": {
@@ -1041,6 +1370,34 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/customer-relationship": {
+      "name": "customer-relationship",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/ecommerce-commerce": {
+      "name": "ecommerce-commerce",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/fabric-mill-sales": {
+      "name": "fabric-mill-sales",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/plastics-industry-sales": {
+      "name": "plastics-industry-sales",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/open-source-contributing": {
@@ -1184,6 +1541,55 @@
     },
     "skills/doc-to-markdown": {
       "name": "doc-to-markdown",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/assessment-and-feedback": {
+      "name": "assessment-and-feedback",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/classroom-management": {
+      "name": "classroom-management",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/evidence-based-teaching": {
+      "name": "evidence-based-teaching",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/lesson-planning": {
+      "name": "lesson-planning",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/literacy-teaching": {
+      "name": "literacy-teaching",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/teaching-methods": {
+      "name": "teaching-methods",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/vestibular-prep": {
+      "name": "vestibular-prep",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1358,6 +1764,41 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/nutrition": {
+      "name": "nutrition",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/criminal-law": {
+      "name": "criminal-law",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/geopolitics": {
+      "name": "geopolitics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/labor-law": {
+      "name": "labor-law",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/political-analysis": {
+      "name": "political-analysis",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/mqtt-protocol": {
       "name": "mqtt-protocol",
       "type": "skills",
@@ -1379,6 +1820,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/language-learning": {
+      "name": "language-learning",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/python-best-practices": {
@@ -1416,8 +1864,71 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/political-campaign-marketing": {
+      "name": "political-campaign-marketing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/traffic-management": {
       "name": "traffic-management",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/brass": {
+      "name": "brass",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/drums": {
+      "name": "drums",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/flute": {
+      "name": "flute",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/guitar": {
+      "name": "guitar",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/music-theory": {
+      "name": "music-theory",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/piano": {
+      "name": "piano",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/political-jingle-writing": {
+      "name": "political-jingle-writing",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/suzuki-method": {
+      "name": "suzuki-method",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1530,6 +2041,13 @@
     },
     "skills/skill-spector": {
       "name": "skill-spector",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/personal-training": {
+      "name": "personal-training",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],

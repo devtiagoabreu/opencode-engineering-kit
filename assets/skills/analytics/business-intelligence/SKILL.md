@@ -1,6 +1,11 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: business-intelligence
-description: Design BI dashboards and analytics: KPIs, metrics, data modeling, ETL, charts and reports. Use when building dashboards, KPI cards, trend/geographic/ABC analysis, forecasting, reading spreadsheets (Google Sheets/Excel), data warehousing, or when users mention BI, dashboard, indicadores, métricas, relatório, gráfico, KPI or previsão de vendas.
+description: "Design BI dashboards and analytics: KPIs, metrics, data modeling, ETL, charts and reports. Use when building dashboards, KPI cards, trend/geographic/ABC analysis, forecasting, reading spreadsheets (Google Sheets/Excel), data warehousing, or when users mention BI, dashboard, indicadores, métricas, relatório, gráfico, KPI or previsão de vendas."
 category: analytics
 version: 0.1.0
 author: OpenCode Community
@@ -32,6 +37,12 @@ languages: [sql, typescript, python]
 BI turns raw operational data into decisions. The pipeline is
 `Source → ETL/Model → Storage → Metrics → Dashboards → Decisions`. Most BI
 projects fail on **data quality and metric definition**, not on charts.
+
+## Prerequisites
+
+- A data source (SQL database, Google Sheets, CSV, API)
+- A charting/BI stack (Recharts/ECharts in-app, Metabase, Power BI, or simple tables)
+- Understanding of SQL aggregation (GROUP BY, window functions)
 
 ## 1. Metric Design (define before you code)
 

@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: arduino-development
 description: Develop Arduino firmware for Uno/Nano/Mega and compatible boards. Use when writing or debugging Arduino sketches, controlling pins, sensors, motors, displays, serial communication, timers, interrupts, or when users mention Arduino, sketch, Uno, Nano, Mega, ATmega, sensors or embedded C++.
 category: embedded
@@ -33,6 +38,12 @@ Arduino boards (ATmega328P on Uno/Nano) are the workhorse of hobby and
 prototype electronics. The key skill is **non-blocking code**: `delay()` is a
 trap — the MCU does nothing else while waiting. Design loops around state
 machines and `millis()`.
+
+## Prerequisites
+
+- An Arduino board (Uno/Nano/Mega) and USB cable
+- Arduino IDE (2.x) or PlatformIO
+- Basic electronics knowledge (resistors, breadboard, pull-ups)
 
 ## 1. Sketch Structure
 

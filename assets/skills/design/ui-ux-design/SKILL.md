@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: ui-ux-design
 description: UI/UX and interface design principles for web apps. Use when creating, reviewing or auditing screens, layouts, tables, forms, dark mode, responsiveness, accessibility, or when users mention design, UX, layout, interface, frontend design, review my UI, accessibility, or visual hierarchy.
 category: design
@@ -30,6 +35,11 @@ languages: [css, typescript]
 Design principles that make interfaces **clear, dense and pleasant** — no
 decorative fluff. Aim for interfaces a senior designer would ship: consistent,
 readable, accessible, and responsive, in both themes.
+
+## Prerequisites
+
+- A UI framework (React/Tailwind, etc.) and the design system tokens of the project
+- Basic understanding of HTML/CSS
 
 ## 1. Principles
 

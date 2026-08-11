@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: llm-multi-provider
 description: Integrate multiple LLM providers (OpenAI, Anthropic, Groq, Gemini, DeepSeek) with automatic fallback, priority and key management. Use when building apps that call chat models, need provider redundancy, key rotation, fallback on failure, cost control, or when users mention LLM keys, providers, fallback, Groq, DeepSeek, OpenAI, Anthropic or Gemini integration.
 category: ai
@@ -32,6 +37,12 @@ A thin layer in front of chat-model providers that gives you **one API**,
 **automatic fallback**, and **key rotation**. Most providers (OpenAI, Groq,
 DeepSeek, Together, and many local gateways) expose an OpenAI-compatible
 `/v1/chat/completions` endpoint — implement the OpenAI shape once and reuse it.
+
+## Prerequisites
+
+- API keys for at least one LLM provider
+- Server-side storage for keys (never expose on the client)
+- A `fetch`/HTTP-capable runtime (Node 18+, Python 3.9+)
 
 ## Core Design
 

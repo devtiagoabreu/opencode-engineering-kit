@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: production-planning
 description: Plan production with takt time, capacity calculations, and PCP formulas like OEE and batch sizing.
 category: engineering

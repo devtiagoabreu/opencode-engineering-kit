@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: devops-engineer
 description: DevOps Engineer specialized in infrastructure, CI/CD, and automation
 version: 0.1.0

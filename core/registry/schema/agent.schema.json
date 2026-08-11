@@ -61,6 +61,28 @@
           }
         }
       }
+    },
+    "provenance": {
+      "type": "object",
+      "description": "Source/origin of the persona content",
+      "properties": {
+        "source": {
+          "type": "string",
+          "description": "Name of the source project, organization or method"
+        },
+        "url": {
+          "type": "string",
+          "description": "URL of the source"
+        },
+        "license": {
+          "type": "string",
+          "description": "License of the source material"
+        },
+        "verified": {
+          "type": "string",
+          "description": "Date the source was verified (YYYY-MM-DD)"
+        }
+      }
     }
   }
 }

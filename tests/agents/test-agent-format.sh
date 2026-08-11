@@ -39,6 +39,12 @@ for agent_file in $(find "$AGENTS_DIR" -name "*.md" -type f | sort); do
         ((ERRORS++))
     fi
     
+    # Check provenance
+    if ! grep -q "^provenance:" "$agent_file"; then
+        echo "ERROR: $agent_file missing provenance field"
+        ((ERRORS++))
+    fi
+    
     # Check version
     if ! grep -q "^version:" "$agent_file"; then
         echo "ERROR: $agent_file missing version field"

@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 08 ago 2026 08:56:22 -03
+# Generated: seg 10 ago 2026 21:47:20 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -61,6 +61,42 @@
 ## embedded/rtos-basics
   (no dependencies)
 
+## music/political-jingle-writing
+  (no dependencies)
+
+## music/music-theory
+  (no dependencies)
+
+## music/brass
+  (no dependencies)
+
+## music/suzuki-method
+  (no dependencies)
+
+## music/piano
+  (no dependencies)
+
+## music/flute
+  (no dependencies)
+
+## music/drums
+  (no dependencies)
+
+## music/guitar
+  (no dependencies)
+
+## humanities/labor-law
+  (no dependencies)
+
+## humanities/criminal-law
+  (no dependencies)
+
+## humanities/political-analysis
+  (no dependencies)
+
+## humanities/geopolitics
+  (no dependencies)
+
 ## science/applied-mathematics
   (no dependencies)
 
@@ -68,6 +104,9 @@
   (no dependencies)
 
 ## science/physics-applied
+  (no dependencies)
+
+## ai/free-llm-models
   (no dependencies)
 
 ## ai/llm-multi-provider
@@ -86,6 +125,9 @@
   (no dependencies)
 
 ## marketing/traffic-management
+  (no dependencies)
+
+## marketing/political-campaign-marketing
   (no dependencies)
 
 ## construction/civil-structures
@@ -112,6 +154,9 @@
 ## tools/code-knowledge-graph
   (no dependencies)
 
+## sports/personal-training
+  (no dependencies)
+
 ## code-review/code-review-checklist
   (no dependencies)
 
@@ -128,6 +173,24 @@
   (no dependencies)
 
 ## database/sql-optimization
+  (no dependencies)
+
+## commercial/customer-relationship
+  (no dependencies)
+
+## commercial/fabric-mill-sales
+  (no dependencies)
+
+## commercial/ecommerce-commerce
+  (no dependencies)
+
+## commercial/plastics-industry-sales
+  (no dependencies)
+
+## automotive/vehicle-mechanics
+  (no dependencies)
+
+## automotive/aircraft-mechanics
   (no dependencies)
 
 ## devops/terraform-aws
@@ -147,6 +210,21 @@
 ## devops/docker-best-practices
   (no dependencies)
 
+## arts/fashion-design
+  (no dependencies)
+
+## arts/hairdressing
+  (no dependencies)
+
+## arts/dance-and-choreography
+  (no dependencies)
+
+## arts/screenwriting
+  (no dependencies)
+
+## arts/makeup-artistry
+  (no dependencies)
+
 ## logistics/supply-chain-management
   (no dependencies)
 
@@ -163,6 +241,9 @@
   (no dependencies)
 
 ## quality/context-optimization
+  (no dependencies)
+
+## health/nutrition
   (no dependencies)
 
 ## health/neurodiversity-support
@@ -201,10 +282,34 @@
 ## web/google-workspace-analytics
   (no dependencies)
 
+## education/vestibular-prep
+  (no dependencies)
+
+## education/lesson-planning
+  (no dependencies)
+
+## education/literacy-teaching
+  (no dependencies)
+
+## education/teaching-methods
+  (no dependencies)
+
+## education/assessment-and-feedback
+  (no dependencies)
+
+## education/evidence-based-teaching
+  (no dependencies)
+
+## education/classroom-management
+  (no dependencies)
+
 ## automation/n8n-workflow-automation
   (no dependencies)
 
 ## documentation/doc-to-markdown
+  (no dependencies)
+
+## languages/language-learning
   (no dependencies)
 
 ## languages/typescript-best-practices

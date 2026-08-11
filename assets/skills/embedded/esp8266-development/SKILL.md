@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: esp8266-development
 description: Develop firmware for ESP8266 (NodeMCU/Wemos D1) with Arduino core and ESP8266RTOS SDK. Use when building WiFi-connected sensor devices, IoT nodes, HTTP/MQTT clients on ESP8266, OTA updates, deep sleep, or when users mention ESP8266, NodeMCU, Wemos D1, ESP-01, IoT, WiFi firmware.
 category: embedded
@@ -33,6 +38,13 @@ languages: [cpp]
 The ESP8266 is a cheap WiFi MCU (80/160 MHz, ~80 KB RAM) ideal for IoT nodes
 that read sensors and talk to the network. RAM is tiny — keep buffers small,
 avoid `String` in hot paths, and design for **reconnect + deep sleep**.
+
+## Prerequisites
+
+- ESP8266 board (NodeMCU, Wemos D1 mini, ESP-01)
+- Arduino IDE with esp8266 core, or PlatformIO
+- USB-serial driver (CP210x/CH340)
+- 3.3V logic; NOT 5V tolerant — level shifters for 5V sensors
 
 ## 1. Project Setup
 

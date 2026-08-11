@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: fiscal
 description: Analista fiscal especializado em tributos federais, estaduais e municipais e rotinas do Simples Nacional
 version: 0.1.0

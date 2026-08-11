@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: mechatronics-systems
 description: Design and build mechatronic systems combining sensors, actuators, and embedded control with Arduino and Python.
 category: engineering

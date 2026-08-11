@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: fisico
 description: Físico com domínio de mecânica, termodinâmica e análise de sistemas
 version: 0.1.0
@@ -136,5 +141,5 @@ print(f"Velocidade em t=3s: {v:.2f} m/s")
 
 - [NIST Physical Reference Data](https://physics.nist.gov/cuu/Reference/)
 - [SciPy Documentation](https://docs.scipy.org/doc/scipy/)
-- [HyperPhysics](http://hyperphysics.phy-astr.gsu.edu/hbase/)
+- [HyperPhysics](https://hyperphysics.phy-astr.gsu.edu/hbase/)
 - [PhET Simulações](https://phet.colorado.edu/pt_BR/)

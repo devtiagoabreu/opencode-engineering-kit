@@ -1,4 +1,9 @@
 ---
+provenance:
+  source: OpenCode Engineering Kit (community)
+  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  license: MIT
+  verified: 2026-08-08
 name: raspberry-pi
 description: Set up and program Raspberry Pi projects (GPIO, cameras, edge AI, servers, robots). Use when configuring a Raspberry Pi, wiring GPIO, using Pi Camera, building edge/AI or IoT projects, home servers, kiosks, or when users mention Raspberry Pi, RPi, pi zero, GPIO, camera, PiCamera, raspi-config or edge device.
 category: embedded
@@ -33,6 +38,13 @@ languages: [python, bash]
 The Raspberry Pi is a full Linux computer with GPIO — it runs an OS, so you
 get Python, systemd, networking and cameras for free. Use it when a task needs
 a real OS (servers, kiosks, edge AI, robots) rather than a bare-metal MCU.
+
+## Prerequisites
+
+- A Raspberry Pi (Zero/3/4/5) with microSD and power supply
+- Raspberry Pi OS (or Ubuntu) flashed with Imager
+- SSH access to the Pi
+- Python 3 with `RPi.GPIO` or `gpiozero` (installed on Raspberry Pi OS)
 
 ## 1. First Boot and Headless Setup
 
