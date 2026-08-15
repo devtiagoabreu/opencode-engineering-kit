@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-11T00:47:52Z",
+  "generated": "2026-08-15T13:28:50Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -747,6 +747,69 @@
       ]
     },
     "traffic-management": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "brainstorming": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "executing-plans": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "git-worktrees": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "tdd": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "two-stage-code-review": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "verification-before-completion": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "writing-plans": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [

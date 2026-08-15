@@ -41,6 +41,13 @@
   - digital-marketing
   - traffic-management
   - political-campaign-marketing
+  - git-worktrees
+  - two-stage-code-review
+  - writing-plans
+  - brainstorming
+  - executing-plans
+  - verification-before-completion
+  - tdd
   - civil-structures
   - construction-execution
   - google-cloud-architecture

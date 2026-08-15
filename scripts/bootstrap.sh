@@ -61,6 +61,7 @@ SKILL_CATEGORIES=(
   logistics
   management
   marketing
+  methodology
   music
   projects
   quality

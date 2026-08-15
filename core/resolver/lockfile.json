@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-11T00:47:37Z",
+  "generated": "2026-08-15T13:28:35Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -1876,6 +1876,75 @@
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
+      "resolved": true
+    },
+    "skills/brainstorming": {
+      "name": "brainstorming",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/executing-plans": {
+      "name": "executing-plans",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "writing-plans",
+          "version": "*"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/git-worktrees": {
+      "name": "git-worktrees",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/tdd": {
+      "name": "tdd",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/two-stage-code-review": {
+      "name": "two-stage-code-review",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "git-worktrees",
+          "version": "*"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/verification-before-completion": {
+      "name": "verification-before-completion",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "executing-plans",
+          "version": "*"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/writing-plans": {
+      "name": "writing-plans",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "brainstorming",
+          "version": "*"
+        }
+      ],
       "resolved": true
     },
     "skills/brass": {

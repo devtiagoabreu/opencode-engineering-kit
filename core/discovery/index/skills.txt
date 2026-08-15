@@ -81,6 +81,13 @@ management/lean-methodology
 marketing/digital-marketing
 marketing/political-campaign-marketing
 marketing/traffic-management
+methodology/brainstorming
+methodology/executing-plans
+methodology/git-worktrees
+methodology/tdd
+methodology/two-stage-code-review
+methodology/verification-before-completion
+methodology/writing-plans
 music/brass
 music/drums
 music/flute

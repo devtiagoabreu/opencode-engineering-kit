@@ -18,7 +18,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["ai", "analytics", "architecture", "arts", "automation", "automotive", "backend", "cloud", "code-quality", "code-review", "commercial", "community", "construction", "database", "design", "devops", "documentation", "education", "embedded", "engineering", "finance", "frontend", "git", "health", "humanities", "iot", "languages", "law", "logistics", "management", "marketing", "mobile", "music", "projects", "quality", "robotics", "science", "security", "sports", "testing", "tools", "vision", "web"],
+      "enum": ["ai", "analytics", "architecture", "arts", "automation", "automotive", "backend", "cloud", "code-quality", "code-review", "commercial", "community", "construction", "database", "design", "devops", "documentation", "education", "embedded", "engineering", "finance", "frontend", "git", "health", "humanities", "iot", "languages", "law", "logistics", "management", "marketing", "methodology", "mobile", "music", "projects", "quality", "robotics", "science", "security", "sports", "testing", "tools", "vision", "web"],
       "description": "Skill category"
     },
     "version": {

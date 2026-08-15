@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: seg 10 ago 2026 21:47:20 -03
+# Generated: sáb 15 ago 2026 10:28:19 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -128,6 +128,27 @@
   (no dependencies)
 
 ## marketing/political-campaign-marketing
+  (no dependencies)
+
+## methodology/git-worktrees
+  (no dependencies)
+
+## methodology/two-stage-code-review
+  (no dependencies)
+
+## methodology/writing-plans
+  (no dependencies)
+
+## methodology/brainstorming
+  (no dependencies)
+
+## methodology/executing-plans
+  (no dependencies)
+
+## methodology/verification-before-completion
+  (no dependencies)
+
+## methodology/tdd
   (no dependencies)
 
 ## construction/civil-structures
