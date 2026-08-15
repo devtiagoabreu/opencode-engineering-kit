@@ -76,3 +76,9 @@ core/quality/quality-report.json
 .cache/
 *.cache
 tmp/
+
+# Local memory databases (never commit user data)
+context/memory/*.db
+context/memory/*.db-*
+*.sqlite
+*.sqlite3

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T16:58:59Z",
+  "generated": "2026-08-15T17:05:08Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -2186,6 +2186,13 @@
     },
     "skills/repo-to-llm": {
       "name": "repo-to-llm",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/session-memory": {
+      "name": "session-memory",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],

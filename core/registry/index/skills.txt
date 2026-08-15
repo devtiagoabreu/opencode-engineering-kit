@@ -52,6 +52,7 @@
   - construction-execution
   - google-cloud-architecture
   - aws-cloud-architecture
+  - session-memory
   - terminal-productivity
   - repo-to-llm
   - git-advanced

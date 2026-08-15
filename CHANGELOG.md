@@ -9,6 +9,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Rich CLI** (`cli/`): `install`, `list`, `search`, `doctor`, `upgrade`, `export` commands; one-line installer (`install.sh`) with `-y` auto-confirm and atomic skills/agents/scripts install; drift-aware `update.sh` with rollback safety
+- **Declarative manifest** (`core/registry/manifest.json` + `scripts/generate-manifest.sh`) with commit + content hashes for drift detection
+- **Multi-harness export** (`cli export --harness`) producing prompts for opencode, claude-code and cursor
+- **Persistent local-first memory** (`context/memory/memory.py` + `tools/session-memory` skill): opt-in (`KIT_MEMORY=1`) SQLite FTS5 notes with recency boost and optional ChromaDB vector recall, stored outside the repo
+- New test modules for CLI (`cli/test/cli.test.js`) and session memory (`tests/context/test-memory.sh`); CI now runs CLI tests and shellcheck across scripts
 - **39 new personas** in 9 new agent categories (education, music, arts, sports, automotive, commercial, languages, ai, planner) plus new personas in existing categories (humanities: politics & law; marketing: political marketing) — PT-BR content with a "Como ajuda as personas de tecnologia" section
 - **35 new skills** in 9 new skill categories (education, music, arts, sports, automotive, commercial, languages, humanities, health/nutrition) plus `ai/free-llm-models`
 - New `planner/orquestrador` agent that plans, delegates to the right agents, shows tool provenance and asks the user

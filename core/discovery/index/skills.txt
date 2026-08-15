@@ -116,6 +116,7 @@ testing/unit-testing
 tools/code-knowledge-graph
 tools/git-advanced
 tools/repo-to-llm
+tools/session-memory
 tools/terminal-productivity
 vision/opencv-basics
 web/google-workspace-analytics

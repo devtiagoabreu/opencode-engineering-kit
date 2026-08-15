@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 15 ago 2026 13:58:43 -03
+# Generated: sáb 15 ago 2026 14:04:56 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -161,6 +161,9 @@
   (no dependencies)
 
 ## cloud/aws-cloud-architecture
+  (no dependencies)
+
+## tools/session-memory
   (no dependencies)
 
 ## tools/terminal-productivity
