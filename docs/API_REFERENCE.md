@@ -20,6 +20,11 @@ Reference for the scripts and core modules of the OpenCode Engineering Kit. All 
 | `related.sh <asset>` | Find related assets sharing tags/category |
 | `recommend.sh --type=<t> [--limit=N]` | Recommend assets by type and popularity |
 | `index.sh` | Build the search index |
+| `pointer.sh resolve <skill>` | Load full vault skill content on demand |
+| `pointer.sh vault <skill>` | Show vault meta + token estimate (JSON) |
+| `pointer.sh tokens <file>` | Estimate token count of a file |
+| `pointer.sh list [--pointer]` | List vault entries / pointer skills |
+| `pointer.sh is-pointer <skill>` | Check if a skill is a pointer (`true`/`false`) |
 
 ### `core/resolver/` — Dependency Resolution
 

@@ -1,4 +1,4 @@
-# OpenCode Engineering Kit - User Guide
+# OpenCode Engineering Kit — User Guide
 
 > Complete guide for using the OpenCode Engineering Kit
 
@@ -14,18 +14,20 @@
 6. [Prompts](#prompts)
 7. [Templates](#templates)
 8. [Commands](#commands)
-9. [Playbooks](#playbooks)
-10. [Recipes](#recipes)
-11. [Discovery System](#discovery-system)
-12. [Marketplace](#marketplace)
-13. [Security](#security)
-14. [Troubleshooting](#troubleshooting)
+9. [Playbooks and Recipes](#playbooks-and-recipes)
+10. [Discovery System](#discovery-system)
+11. [CLI](#cli)
+12. [SkillPointer and Vault](#skillpointer-and-vault)
+13. [Session Memory](#session-memory)
+14. [Marketplace](#marketplace)
+15. [Security](#security)
+16. [Troubleshooting](#troubleshooting)
 
 ---
 
 ## Introduction
 
-The **OpenCode Engineering Kit** is an open source library providing reusable resources to accelerate productivity with AI-powered coding assistants. It works with:
+The **OpenCode Engineering Kit** is an open source library of reusable resources to accelerate productivity with AI-powered coding assistants. It works with:
 
 - **OpenCode** (primary)
 - **Claude Code**
@@ -34,40 +36,60 @@ The **OpenCode Engineering Kit** is an open source library providing reusable re
 
 ### What's Included
 
-- **25 Skills** - Best practices and guides for various technologies
-- **13 Agents** - Specialized AI personas for different roles
-- **3 Prompts** - Reusable prompt templates
-- **4 Templates** - Project and asset templates
-- **2 Playbooks** - Step-by-step workflows
-- **2 Recipes** - Complete project setups
+- **123 Skills** — complete guides in 42 categories
+- **93 Agents** — specialized AI personas in 38 categories
+- **10 Prompts** — reusable prompt templates
+- **16 Templates** — project and component templates
+- **3 Commands** — documented actions for common tasks
+- **3 Playbooks** — multi-step workflows
+- **2 Recipes** — complete project setups
+- **2 Bundles**, **2 Compositions**, **2 Prompt chains**
+- **15 context files** + optional persistent memory (SQLite)
+- **SkillPointer/Vault** — on-demand loading of curated content
 
 ---
 
 ## Installation
 
-### Option 1: Clone Repository
+### Method 1 — CLI (recommended)
+
+Installs the kit into **any existing project**, copying assets into `.opencode/`:
 
 ```bash
-git clone https://github.com/opencode-ai/opencode-engineering-kit.git
-cd opencode-engineering-kit
-./scripts/bootstrap.sh
+cd /path/to/your/project
+npx opencode-engineering-kit install
 ```
 
-### Option 2: Download Archive
+After installing, **restart OpenCode** to load the configuration.
 
-1. Download the latest release from GitHub
-2. Extract the archive
-3. Run the bootstrap script:
+### Method 2 — Global install via curl
 
 ```bash
+curl -fsSL https://raw.githubusercontent.com/devtiagoabreu/opencode-engineering-kit/main/install.sh | bash
+```
+
+To use the scripts on PATH:
+
+```bash
+export PATH="$PATH:$HOME/.opencode-engineering-kit/scripts"
+```
+
+Update: `~/.opencode-engineering-kit/scripts/update.sh` (or `./update.sh` inside the repo). Remove: `./uninstall.sh`.
+
+### Method 3 — Clone the repository
+
+```bash
+git clone https://github.com/devtiagoabreu/opencode-engineering-kit.git
+cd opencode-engineering-kit
 ./scripts/bootstrap.sh
 ```
 
 ### Prerequisites
 
-- Git 2.0+
-- Bash 4.0+
-- OpenCode (recommended)
+- **Git 2.0+**
+- **Bash 4.0+**
+- **Node.js 18+** (for the CLI via `npx`)
+- **OpenCode** (recommended)
 
 ---
 
@@ -75,114 +97,81 @@ cd opencode-engineering-kit
 
 ### Using a Skill
 
-1. Navigate to the skills directory:
+1. Navigate to the skill:
 
-```bash
-cd assets/skills/devops/docker-best-practices
-```
+    ```bash
+    cd assets/skills/devops/docker-best-practices
+    ```
 
-2. Read the SKILL.md file:
+2. Read the `SKILL.md` file and follow the instructions:
 
-```bash
-cat SKILL.md
-```
-
-3. Follow the instructions in the skill
+    ```bash
+    cat SKILL.md
+    ```
 
 ### Using an Agent
 
-1. Navigate to the agents directory:
+1. Navigate to the agent:
+
+    ```bash
+    cd assets/agents/backend/backend-developer
+    ```
+
+2. Read the persona file:
+
+    ```bash
+    cat backend-developer.md
+    ```
+
+3. Use the agent persona in your conversations.
+
+### Copying a skill into your project
 
 ```bash
-cd agents
+cp -r assets/skills/devops/docker-best-practices/ /your/project/
 ```
-
-2. Read the agent file:
-
-```bash
-cat devops-engineer.md
-```
-
-3. Use the agent persona in your conversations
-
-### Using a Template
-
-1. Navigate to the templates directory:
-
-```bash
-cd templates/new-project
-```
-
-2. Copy the template to your project:
-
-```bash
-cp -r * /your/project/
-```
-
-3. Customize the files for your needs
 
 ---
 
 ## Skills
 
-Skills are best practices and guides for specific technologies or tasks.
+Skills are **complete guides** (instructions + examples + references) for the AI to execute specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
 
-### Available Skills
+### Categories
 
-#### DevOps
-- **docker-best-practices** - Docker and container best practices
-- **kubernetes-best-practices** - Kubernetes orchestration
-- **ci-cd-pipeline** - CI/CD pipeline design
-- **terraform-aws** - Terraform with AWS
-- **monitoring-observability** - Monitoring and observability
-- **incident-response** - Incident management
-
-#### Backend
-- **rest-api-design** - REST API design
-- **graphql-api** - GraphQL API design
-- **database-design** - Database design
-- **caching-strategies** - Caching strategies
-- **authentication** - Authentication best practices
-
-#### Frontend
-- **react-patterns** - React patterns and architecture
-- **css-best-practices** - CSS architecture
-- **performance** - Frontend performance
-- **accessibility** - Web accessibility
-- **state-management** - State management
-
-#### Testing
-- **unit-testing** - Unit testing
-- **integration-testing** - Integration testing
-- **e2e-testing** - End-to-end testing
-
-#### Security
-- **owasp-top-10** - OWASP Top 10
-- **secure-coding** - Secure coding practices
+| Category | Examples |
+|----------|----------|
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
+| `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
+| `frontend` | React, State Management, CSS, Accessibility |
+| `testing` | Unit, Integration, E2E, Python Testing |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector |
+| `methodology` | Brainstorming, Writing/Executing Plans, TDD, Git Worktrees, Code Review |
+| `ai` | Deep Learning, RAG/LLM, LLM Multi-Provider |
+| `tools` | Advanced Git, Terminal, Repo → LLM, Graphify, Session Memory |
+| + 34 more | construction, finance, marketing, education, health, cloud, music, arts... |
 
 ### How to Use a Skill
 
 1. **Find the skill** you need:
 
-```bash
-./core/discovery/search.sh "docker"
-```
+    ```bash
+    ./core/discovery/search.sh "docker"
+    ```
 
 2. **Read the skill** documentation:
 
-```bash
-cat assets/skills/devops/docker-best-practices/SKILL.md
-```
+    ```bash
+    cat assets/skills/devops/docker-best-practices/SKILL.md
+    ```
 
-3. **Follow the instructions** in the skill
-
-4. **Apply the best practices** to your project
+3. **Follow the instructions** and **apply the best practices** to your project.
 
 ---
 
 ## Agents
 
-Agents are specialized AI personas for different roles.
+Agents are **personas** (role + context + communication style) for specific roles. Each domain persona collaborates with the technology personas (see the "Como ajuda as personas de tecnologia" section in each file).
 
 ### Available Agents
 
@@ -192,180 +181,95 @@ Agents are specialized AI personas for different roles.
 | **backend-developer** | APIs and backend specialist |
 | **frontend-developer** | UI/UX and frontend specialist |
 | **fullstack-developer** | Full-stack specialist |
-| **mobile-developer** | Mobile development specialist |
 | **security-engineer** | Security specialist |
 | **qa-engineer** | Quality assurance specialist |
-| **data-engineer** | Data pipelines specialist |
-| **ml-engineer** | Machine learning specialist |
+| **data-scientist** | ML / deep learning and data analysis |
+| **ai-engineer** | RAG and LLM integration |
 | **technical-writer** | Documentation specialist |
 | **product-manager** | Product management specialist |
-| **ui-designer** | UI design specialist |
-| **site-reliability-engineer** | SRE specialist |
+| **orquestrador** | Plans tasks, delegates to the right agents and shows tool provenance |
+| + 80 more | construction, finance, marketing, science, health, education, music... |
 
 ### How to Use an Agent
 
 1. **Find the agent** you need:
 
-```bash
-./core/discovery/search.sh "backend"
-```
+    ```bash
+    ./core/discovery/search.sh "backend"
+    ```
 
 2. **Read the agent** documentation:
 
-```bash
-cat assets/assets/agents/backend/backend-developer.md
-```
+    ```bash
+    cat assets/agents/backend/backend-developer/backend-developer.md
+    ```
 
-3. **Use the persona** in your conversations with AI assistants
-
-4. **Apply the expertise** to your project
+3. **Use the persona** in your conversations with AI assistants.
 
 ---
 
 ## Prompts
 
-Prompts are reusable templates for common tasks.
-
-### Available Prompts
-
-- **code-review-checklist** - Comprehensive code review checklist
-- **debug-analysis** - Debug analysis prompt
-- **system-design** - System design prompt
+Prompts are reusable templates for common tasks (with `{{variable}}` placeholders): code review, debugging, refactoring, planning, architecture (system design), API documentation, testing strategy, security audit, RAG and performance review.
 
 ### How to Use a Prompt
 
-1. **Find the prompt** you need:
-
 ```bash
+# Find the prompt
 ./core/discovery/search.sh "code review"
-```
 
-2. **Read the prompt**:
-
-```bash
+# Read the prompt
 cat assets/prompts/code-review/code-review-checklist.md
 ```
 
-3. **Copy the prompt** to your clipboard
-
-4. **Paste the prompt** into your AI assistant
+Copy the prompt to your clipboard and paste it into your AI assistant.
 
 ---
 
 ## Templates
 
-Templates are starting points for new projects and assets.
-
-### Available Templates
-
-- **new-project** - Template for new projects
-- **skill** - Template for creating skills
-- **agent** - Template for creating agents
-- **prompt** - Template for creating prompts
+Templates are starting points for new projects and components: `new-project`, `react`, `nextjs`, `api`, `docker`, `docker-compose`, `github-actions`, `postgresql`, `mqtt`, `esp32`, `opencv`, `adr`, `agent`, `skill`, `prompt` and `readme`.
 
 ### How to Use a Template
 
-1. **Find the template** you need:
-
 ```bash
+# List the templates
 ls assets/templates/
-```
 
-2. **Copy the template** to your project:
-
-```bash
+# Copy a template to your project
 cp -r assets/templates/new-project /your/project/
 ```
 
-3. **Customize** the files for your needs
+Customize the files for your needs.
 
 ---
 
 ## Commands
 
-Commands are quick actions for common tasks.
-
-### Available Commands
-
-- **review** - Code review command
-- **test** - Run tests command
-- **lint** - Run linting command
-
-### How to Use a Command
-
-1. **Find the command** you need:
+Commands are documented actions for common OpenCode tasks: `/lint`, `/review`, `/test`. They live in `assets/commands/`.
 
 ```bash
 ls assets/commands/
+cat assets/commands/review.md
 ```
-
-2. **Read the command** documentation:
-
-```bash
-cat assets/assets/commands/review.md
-```
-
-3. **Execute the command** as described
 
 ---
 
-## Playbooks
+## Playbooks and Recipes
 
-Playbooks are step-by-step workflows for common tasks.
-
-### Available Playbooks
-
-- **new-project-setup** - Complete project setup guide
-- **code-review-process** - Code review process
-
-### How to Use a Playbook
-
-1. **Find the playbook** you need:
+- **Playbooks** (multi-step workflows): `code-review-process`, `new-project-setup`, `whatsapp-bot-setup` — in `assets/playbooks/`
+- **Recipes** (complete solutions): `python-project-setup`, `react-project-setup` — in `assets/recipes/`
 
 ```bash
-ls playbooks/
+ls assets/playbooks/
+cat assets/playbooks/new-project-setup.md
 ```
-
-2. **Read the playbook**:
-
-```bash
-cat playbooks/new-project-setup.md
-```
-
-3. **Follow the steps** in the playbook
-
----
-
-## Recipes
-
-Recipes are complete project setups with all necessary components.
-
-### Available Recipes
-
-- **react-project-setup** - React project setup
-- **python-project-setup** - Python project setup
-
-### How to Use a Recipe
-
-1. **Find the recipe** you need:
-
-```bash
-ls recipes/
-```
-
-2. **Read the recipe**:
-
-```bash
-cat recipes/react-project-setup.md
-```
-
-3. **Follow the steps** to set up your project
 
 ---
 
 ## Discovery System
 
-The discovery system helps you find assets by keyword, category, or compatibility.
+The discovery system helps you find assets by keyword, category, compatibility or affinity.
 
 ### Search for Assets
 
@@ -373,11 +277,17 @@ The discovery system helps you find assets by keyword, category, or compatibilit
 # Search by keyword
 ./core/discovery/search.sh "docker"
 
-# Search by category
+# Filter by category
 ./core/discovery/filter.sh --category=devops
 
-# Search by compatibility
+# Filter by compatibility
 ./core/discovery/filter.sh --compatible=opencode
+
+# Find related assets
+./core/discovery/related.sh docker-best-practices
+
+# Recommendations
+./core/discovery/recommend.sh
 ```
 
 ### Generate Index
@@ -395,21 +305,109 @@ cat core/discovery/index/agents.txt
 
 ---
 
+## CLI
+
+The CLI (`npx opencode-engineering-kit`) provides commands to install and manage the kit:
+
+| Command | Description |
+|---------|-------------|
+| `install` | Installs skills, agents, commands and context into `.opencode/` |
+| `list` | Lists assets (skills, agents, prompts, templates) |
+| `search <term>` | Searches assets by keyword |
+| `doctor` | Checks kit integrity (schema, indexes, security scan, dependencies) |
+| `upgrade` | Re-installs with `--force` from the latest remote revision |
+| `export <harness>` | Generates packages for other harnesses (`.claude`, `.cursor`, `CLAUDE.md`, `.opencode`) |
+
+### Examples
+
+```bash
+# Install into the current project
+npx opencode-engineering-kit install
+
+# Install only skills and agents, forcing overwrite
+npx opencode-engineering-kit install --only skills,agents --force
+
+# Use a local checkout (offline mode)
+npx opencode-engineering-kit install --source /path/to/opencode-engineering-kit
+
+# List skills as JSON
+npx opencode-engineering-kit list --type skills --json
+
+# Export for Claude Code
+npx opencode-engineering-kit export claude
+```
+
+---
+
+## SkillPointer and Vault
+
+Pointer skills are minimal catalog entries: the `SKILL.md` stays small and the full content lives in `assets/vault/<category>/<skill>/`. This **avoids context injection**: content is loaded on demand, only when the task needs it.
+
+### Pointer commands
+
+```bash
+# Resolve the full content of a skill (SKILL.md or vault entry)
+./core/discovery/pointer.sh resolve repo-to-llm
+
+# Vault info (meta + token estimate)
+./core/discovery/pointer.sh vault repo-to-llm
+
+# Token estimate for a file
+./core/discovery/pointer.sh tokens assets/vault/tools/repo-to-llm/content.md
+
+# List vault entries (or only pointer skills with --pointer)
+./core/discovery/pointer.sh list
+./core/discovery/pointer.sh list --pointer
+
+# Check whether a skill is a pointer
+./core/discovery/pointer.sh is-pointer repo-to-llm
+```
+
+### Current curated entries
+
+| Skill | Vault | Tokens (approx.) |
+|-------|-------|------------------|
+| `repo-to-llm` | `tools/repo-to-llm` | 828 |
+| `code-knowledge-graph` | `tools/code-knowledge-graph` | 767 |
+| `skill-spector` | `security/skill-spector` | 779 |
+
+The `cli doctor` checks consistency between pointer skills and vault entries (broken links, missing entries).
+
+---
+
+## Session Memory
+
+The kit has optional local-first persistent memory (enabled with `KIT_MEMORY=1`). Notes are stored in SQLite (outside the repository) and can be searched back later.
+
+```bash
+export KIT_MEMORY=1
+python3 context/memory/memory.py init
+```
+
+Optional vector recall:
+
+```bash
+pip install chromadb
+export KIT_MEMORY_VECTOR=1
+```
+
+The skill `assets/skills/tools/session-memory/SKILL.md` documents the full flow (save, search, healthcheck).
+
+---
+
 ## Marketplace
 
-The marketplace allows you to browse and install assets.
+The marketplace lets you publish, search and rate assets.
 
 ### Browse Assets
 
 1. Open the marketplace web interface:
 
-```bash
-open marketplace-web/index.html
-```
+    ```bash
+    open marketplace-web/index.html
+    ```
 
-2. Use the search and filters to find assets
-
-3. Click "Install" to install an asset
+2. Use the search and filters to find assets.
 
 ### Install Assets via CLI
 
@@ -421,21 +419,31 @@ open marketplace-web/index.html
 ./core/marketplace/install.sh agent backend-developer
 ```
 
-### Search Assets
+### Publish and Rate
 
 ```bash
+# Search assets
 ./core/marketplace/search.sh "docker"
+
+# Rate an asset
+./core/marketplace/rate.sh add --asset <name> --reviewer <user> --rating <1-5>
+
+# Publish an asset
+./core/marketplace/publish.sh --type skill --path ./assets/skills/my-skill
 ```
 
 ---
 
 ## Security
 
-The kit includes security tools for auditing your project.
+The kit includes security tools for auditing your project and the content of the assets.
 
-### Run Security Scans
+### Security Audits
 
 ```bash
+# Skill content scan (PASS/WARN/FAIL gate with allowlist)
+./core/security/skill-scan.sh
+
 # Dependency audit
 ./core/security/dependency-audit.sh
 
@@ -454,10 +462,11 @@ The kit includes security tools for auditing your project.
 
 ### Security Best Practices
 
-1. **Never commit secrets** - Use environment variables
-2. **Run security scans** regularly
+1. **Never commit secrets** — use environment variables
+2. **Run security audits** regularly
 3. **Keep dependencies updated**
 4. **Follow secure coding practices**
+5. Before installing a third-party skill, run SkillSpector (the `skill-spector` skill)
 
 ---
 
@@ -467,8 +476,6 @@ The kit includes security tools for auditing your project.
 
 #### Issue: Scripts not executable
 
-**Solution:**
-
 ```bash
 chmod +x scripts/*.sh
 chmod +x core/**/*.sh
@@ -477,8 +484,6 @@ chmod +x tests/**/*.sh
 
 #### Issue: Discovery system not finding assets
 
-**Solution:**
-
 ```bash
 # Regenerate the index
 ./core/discovery/index.sh
@@ -486,28 +491,34 @@ chmod +x tests/**/*.sh
 
 #### Issue: Tests failing
 
-**Solution:**
-
 ```bash
 # Run all tests
 ./scripts/test.sh
 
-# Run specific test
+# Run a specific test
 ./tests/skills/test-skill-content.sh
 ```
 
 #### Issue: Validation errors
 
-**Solution:**
+```bash
+# Validate all assets
+./core/validator/validate-all.sh
+
+# Validate a directory (expects skills/ and agents/ inside)
+./core/validator/validate.sh assets
+```
+
+#### Issue: Kit integrity
 
 ```bash
-# Run validation
-./core/validator/validate-all.sh
+# Check schema, indexes, security scan, dependencies and vault
+npx opencode-engineering-kit doctor
 ```
 
 ### Getting Help
 
-- **GitHub Issues**: https://github.com/opencode-ai/opencode-engineering-kit/issues
+- **GitHub Issues**: <https://github.com/devtiagoabreu/opencode-engineering-kit/issues>
 - **Documentation**: See the `docs/` directory
 - **Examples**: See the `examples/` directory
 
@@ -522,14 +533,14 @@ We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for de
 1. Fork the repository
 2. Create a feature branch
 3. Make your changes
-4. Run tests
+4. Run tests (`./scripts/test.sh`)
 5. Submit a pull request
 
 ---
 
 ## License
 
-This project is licensed under the MIT License - see the [LICENSE](./LICENSE) file for details.
+This project is licensed under the MIT License — see the [LICENSE](./LICENSE) file for details.
 
 ---
 
