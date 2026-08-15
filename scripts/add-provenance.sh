@@ -20,7 +20,7 @@ root, internal_url, verified = sys.argv[1], sys.argv[2], sys.argv[3]
 
 INTERNAL = {
     "source": "OpenCode Engineering Kit (community)",
-    "url": internal_url,
+    "source_url": internal_url,
     "license": "MIT",
     "verified": verified,
 }
@@ -40,12 +40,14 @@ def parse_provenance(content):
     front = m.group(1)
     if re.search(r"^provenance:\s*$", front, re.MULTILINE):
         src = re.search(r"^\s+source:\s*(.+)$", front, re.MULTILINE)
-        url = re.search(r"^\s+url:\s*(.+)$", front, re.MULTILINE)
+        url = re.search(r"^\s+source_url:\s*(.+)$", front, re.MULTILINE)
+        if not url:
+            url = re.search(r"^\s+url:\s*(.+)$", front, re.MULTILINE)
         lic = re.search(r"^\s+license:\s*(.+)$", front, re.MULTILINE)
         vrf = re.search(r"^\s+verified:\s*(.+)$", front, re.MULTILINE)
         return {
             "source": src.group(1).strip() if src else "unknown",
-            "url": url.group(1).strip() if url else "",
+            "source_url": url.group(1).strip() if url else "",
             "license": lic.group(1).strip() if lic else "",
             "verified": vrf.group(1).strip() if vrf else "",
         }
@@ -54,12 +56,24 @@ def parse_provenance(content):
 def add_internal_provenance(content, provenance):
     if provenance:
         return content, provenance
-    block = "provenance:\n  source: %s\n  url: %s\n  license: %s\n  verified: %s\n" % (
-        INTERNAL["source"], INTERNAL["url"], INTERNAL["license"], INTERNAL["verified"])
+    block = "provenance:\n  source: %s\n  source_url: %s\n  license: %s\n  verified: %s\n" % (
+        INTERNAL["source"], INTERNAL["source_url"], INTERNAL["license"], INTERNAL["verified"])
     m = re.match(r"^---\n", content)
     if not m:
         return content, INTERNAL
     return content[:4] + block + content[4:], INTERNAL
+
+def migrate_url_to_source_url(content):
+    # Rename legacy `url:` inside the provenance frontmatter block to
+    # `source_url:` so the canonical field name is used everywhere.
+    m = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
+    if not m:
+        return content
+    front = m.group(1)
+    if not re.search(r"^provenance:\s*$", front, re.MULTILINE):
+        return content
+    new_front = re.sub(r"^(  )url:", r"\1source_url:", front, flags=re.MULTILINE)
+    return content[:m.start(1)] + new_front + content[m.end(1):]
 
 def extract_meta(content):
     m = re.match(r"^---\n(.*?)\n---", content, re.DOTALL)
@@ -72,6 +86,7 @@ assets = []
 
 def process_file(path, kind):
     content = read_file(path)
+    content = migrate_url_to_source_url(content)
     provenance = parse_provenance(content)
     content, prov = add_internal_provenance(content, provenance)
     write_file(path, content)
@@ -107,13 +122,13 @@ lines = [
 for kind, name, desc, prov in assets:
     if kind != "skill":
         continue
-    lines.append(f"| `{name}` | {prov['source']} | {prov['url']} | {prov['license']} | {prov['verified']} |")
+    lines.append(f"| `{name}` | {prov['source']} | {prov['source_url']} | {prov['license']} | {prov['verified']} |")
 
 lines += ["", "## Personas (Agents)", "", "| Asset | Procedência | URL | Licença | Verificado |", "|-------|-------------|-----|---------|------------|"]
 for kind, name, desc, prov in assets:
     if kind != "agent":
         continue
-    lines.append(f"| `{name}` | {prov['source']} | {prov['url']} | {prov['license']} | {prov['verified']} |")
+    lines.append(f"| `{name}` | {prov['source']} | {prov['source_url']} | {prov['license']} | {prov['verified']} |")
 
 with open(f"{root}/context/provenance.md", "w", encoding="utf-8") as f:
     f.write("\n".join(lines) + "\n")

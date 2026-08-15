@@ -7,12 +7,10 @@ set -euo pipefail
 # Usage: ./scripts/typecheck.sh
 
 ROOT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
-SCHEMAS_DIR="$ROOT_DIR/core/registry/schema"
 
 # Colors
 GREEN='\033[0;32m'
 RED='\033[0;31m'
-YELLOW='\033[1;33m'
 NC='\033[0m'
 
 log_info() { echo -e "${GREEN}[INFO]${NC} $1"; }

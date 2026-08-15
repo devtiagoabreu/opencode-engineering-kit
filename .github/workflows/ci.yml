@@ -77,6 +77,13 @@ jobs:
               exit 1
             fi
           done
+          find assets/vault -name "content.md" | while read file; do
+            lines=$(wc -l < "$file")
+            if [ "$lines" -gt 2000 ]; then
+              echo "ERROR: $file exceeds 2000 lines ($lines)"
+              exit 1
+            fi
+          done
           echo "All files within size limits"
       
       - name: Validate metadata

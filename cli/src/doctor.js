@@ -45,6 +45,47 @@ function indexFreshness(kitRoot) {
   return { pass: actual === indexed, actual, indexed };
 }
 
+function vaultConsistency(kitRoot) {
+  const skillsDir = path.join(kitRoot, "assets/skills");
+  const vaultDir = path.join(kitRoot, "assets/vault");
+  let pointers = 0;
+  let broken = 0;
+  let entries = 0;
+  const countVaultEntries = (d) => {
+    if (!fs.existsSync(d)) return 0;
+    let n = 0;
+    for (const cat of fs.readdirSync(d)) {
+      const catPath = path.join(d, cat);
+      if (!fs.statSync(catPath).isDirectory()) continue;
+      for (const skill of fs.readdirSync(catPath)) {
+        if (fs.existsSync(path.join(catPath, skill, "content.md"))) n++;
+      }
+    }
+    return n;
+  };
+  if (fs.existsSync(vaultDir)) {
+    entries = countVaultEntries(vaultDir);
+  }
+  if (fs.existsSync(skillsDir)) {
+    for (const cat of fs.readdirSync(skillsDir)) {
+      const catPath = path.join(skillsDir, cat);
+      if (!fs.statSync(catPath).isDirectory()) continue;
+      for (const skill of fs.readdirSync(catPath)) {
+        const skillMd = path.join(catPath, skill, "SKILL.md");
+        if (!fs.existsSync(skillMd)) continue;
+        const raw = fs.readFileSync(skillMd, "utf8");
+        if (!/^pointer: true$/m.test(raw)) continue;
+        pointers++;
+        const vaultRel = (raw.match(/^vault: (.+)$/m) || [])[1];
+        const vaultEntry = vaultRel && fs.existsSync(path.join(vaultDir, vaultRel, "content.md"));
+        const meta = vaultRel && fs.existsSync(path.join(vaultDir, vaultRel, "meta.json"));
+        if (!vaultEntry || !meta) broken++;
+      }
+    }
+  }
+  return { pass: broken === 0, pointers, entries, broken };
+}
+
 export function doctor(kitRoot, { fast } = {}) {
   const checks = [];
 
@@ -75,6 +116,13 @@ export function doctor(kitRoot, { fast } = {}) {
 
   const scan = run("bash", [path.join(kitRoot, "core/security/skill-scan.sh")]);
   checks.push(check("skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
+
+  const vc = vaultConsistency(kitRoot);
+  checks.push(check(
+    "vault entries consistent",
+    vc.pass,
+    `${vc.pointers} pointer skills / ${vc.entries} vault entries${vc.broken ? `, ${vc.broken} broken` : ""}`
+  ));
 
   if (!fast) {
     const tests = run("bash", [path.join(kitRoot, "scripts/test.sh")], { timeout: 300000 });

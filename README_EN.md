@@ -19,7 +19,7 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 115 (40 categories) |
+| Skills | 123 (42 categories) |
 | Agents | 93 (personas in 38 categories) |
 | Prompts | 10 (13 categories) |
 | Templates | 16 |
@@ -153,7 +153,7 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 115 ready guides
+### Skills — 123 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
 
@@ -339,7 +339,7 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 115 skills in 40 categories (SKILL.md)
+│   ├── skills/          # 123 skills in 42 categories (SKILL.md)
 │   ├── agents/          # 93 personas by category
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates

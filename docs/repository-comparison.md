@@ -11,7 +11,7 @@ prompt-chains, com **infraestrutura de núcleo** própria (registry, discovery, 
 plugin, marketplace, security, quality), CLI npm (`npx opencode-engineering-kit`), interface web de
 marketplace e testes automatizados.
 
-- **Estado atual:** 115 skills (40 categorias), 93 agents (personas em 38 categorias), 10 prompts,
+- **Estado atual:** 123 skills (42 categorias), 93 agents (personas em 38 categorias), 10 prompts,
   16 templates, 3 playbooks, 2 recipes, 3 comandos, 2 bundles, 2 composições, 2 prompt-chains,
   21 suítes de teste, quality gates 8/8, typecheck 5/5.
 - **Licença:** MIT. **Versão:** 0.1.0.
@@ -58,7 +58,7 @@ pre-commit, versionamento e telemetria opcional.
 **Comparação com este kit:**
 - **Onde o Superpowers é melhor:** profundidade de *metodologia de engenharia* (TDD, subagents,
   worktrees, revisão em duas etapas), qualidade de execução e adoção massiva (~270k estrelas).
-- **Onde este kit é melhor:** amplitude de **conteúdo de domínio** (115 skills e 93 personas, inclusive
+- **Onde este kit é melhor:** amplitude de **conteúdo de domínio** (123 skills e 93 personas, inclusive
   personas pt-BR de educação/direito/política/saúde), prompts/templates/playbooks/composições, e
   **infraestrutura própria** (registry, resolver com lockfile, version, plugin, marketplace, security,
   quality gates). O Superpowers não tem personas de domínio nem gerenciamento de versão de assets.
@@ -100,7 +100,7 @@ MCP, auto-update declarativo com detecção de drift, instalador de 1 linha (Win
 - **Onde o Shokunin é melhor:** sistema de **memória persistente** entre sessões (inexistente no kit),
   auto-update/auto-instalação e suíte de testes de memória; skills de engenharia mais "densas"
   (checklists de produção, anti-patterns).
-- **Onde este kit é melhor:** escala (115 vs 62 skills; 93 personas que o Shokunin não tem),
+- **Onde este kit é melhor:** escala (123 vs 62 skills; 93 personas que o Shokunin não tem),
   categorias de **domínio de negócio** (educação, direito, política, saúde, comércio, construção...),
   infraestrutura completa (registry/schema, resolver com lockfile, plugin, marketplace, security,
   quality gates com 6 dimensões), procedência rastreável e suporte multi-idioma (pt-BR/EN).
@@ -139,7 +139,7 @@ formato `SKILL.md`. **Licença source-available** (não é open source: pode usa
 **Comparação com este kit:**
 - **Onde a Anthropic é melhor:** autoridade e qualidade de escrita das skills; ferramentas de
   criação/avaliação de skills (`skill-creator` com benchmarks).
-- **Onde este kit é melhor:** licença realmente aberta (MIT, redistribuível), escala (115 vs ~20),
+- **Onde este kit é melhor:** licença realmente aberta (MIT, redistribuível), escala (123 vs ~20),
   infraestrutura e personas de domínio.
 - **Complementaridade:** adotar a metodologia do `skill-creator` (descrição orientada a trigger,
   avaliação com baseline) para melhorar a qualidade das nossas skills.
@@ -300,7 +300,7 @@ ClawHub + `openclaw doctor` para diagnóstico.
 | **O que você instala** | Assets + CLI + market-place web (conteúdo para o seu agente) | Um agente que roda 24/7 no seu hardware |
 | **Interface primária** | CLI `npx opencode-engineering-kit`, arquivos `SKILL.md`, `.opencode/` | CLI/TUI/Control UI, canais de mensagem, apps |
 | **Execução de ações** | Instruções para o agente executar (não executa sozinho) | Executa de fato (shell, browser, arquivos, agendamentos) |
-| **Conteúdo** | 115 skills autorais + 93 personas (pt-BR/EN) com procedência e testes | Consome skills do ClawHub (~13k, curadoria ainda em maturação) |
+| **Conteúdo** | 123 skills autorais + 93 personas (pt-BR/EN) com procedência e testes | Consome skills do ClawHub (~13k, curadoria ainda em maturação) |
 | **Modelos** | Agnóstico (OpenCode e compatíveis) | Multi-provider (hosted + local via Ollama), roteamento |
 | **Memória persistente** | Contexto via `context/` (personas, HISTORY, provenance) | Memória de longo prazo entre sessões (vetorial + markdown) |
 | **Marketplace** | `marketplace-web/` + `core/marketplace` (próprio) | ClawHub (externo, com vetting em desenvolvimento) |

@@ -70,9 +70,9 @@
           "type": "string",
           "description": "Name of the source project, organization or method"
         },
-        "url": {
+        "source_url": {
           "type": "string",
-          "description": "URL of the source"
+          "description": "Official source URL of the material (canonical attribution)"
         },
         "license": {
           "type": "string",

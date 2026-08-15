@@ -134,6 +134,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `code-knowledge-graph` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `git-advanced` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `repo-to-llm` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `session-memory` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-15 |
 | `terminal-productivity` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `opencv-basics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `google-workspace-analytics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |

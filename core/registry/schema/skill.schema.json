@@ -3,7 +3,14 @@
   "title": "Skill",
   "description": "Schema for OpenCode Engineering Kit Skills",
   "type": "object",
-  "required": ["name", "description", "category", "version", "author", "compatible"],
+  "required": [
+    "name",
+    "description",
+    "category",
+    "version",
+    "author",
+    "compatible"
+  ],
   "properties": {
     "name": {
       "type": "string",
@@ -18,7 +25,52 @@
     },
     "category": {
       "type": "string",
-      "enum": ["ai", "analytics", "architecture", "arts", "automation", "automotive", "backend", "cloud", "code-quality", "code-review", "commercial", "community", "construction", "database", "design", "devops", "documentation", "education", "embedded", "engineering", "finance", "frontend", "git", "health", "humanities", "iot", "languages", "law", "logistics", "management", "marketing", "methodology", "mobile", "music", "projects", "quality", "robotics", "science", "security", "sports", "testing", "tools", "vision", "web"],
+      "enum": [
+        "ai",
+        "analytics",
+        "architecture",
+        "arts",
+        "automation",
+        "automotive",
+        "backend",
+        "cloud",
+        "code-quality",
+        "code-review",
+        "commercial",
+        "community",
+        "construction",
+        "database",
+        "design",
+        "devops",
+        "documentation",
+        "education",
+        "embedded",
+        "engineering",
+        "finance",
+        "frontend",
+        "git",
+        "health",
+        "humanities",
+        "iot",
+        "languages",
+        "law",
+        "logistics",
+        "management",
+        "marketing",
+        "methodology",
+        "mobile",
+        "music",
+        "projects",
+        "quality",
+        "robotics",
+        "science",
+        "security",
+        "sports",
+        "testing",
+        "tools",
+        "vision",
+        "web"
+      ],
       "description": "Skill category"
     },
     "version": {
@@ -41,7 +93,12 @@
       "type": "array",
       "items": {
         "type": "string",
-        "enum": ["opencode", "claude-code", "cursor", "copilot"]
+        "enum": [
+          "opencode",
+          "claude-code",
+          "cursor",
+          "copilot"
+        ]
       },
       "description": "Compatible platforms"
     },
@@ -76,7 +133,11 @@
     },
     "difficulty": {
       "type": "string",
-      "enum": ["beginner", "intermediate", "advanced"],
+      "enum": [
+        "beginner",
+        "intermediate",
+        "advanced"
+      ],
       "description": "Skill difficulty level"
     },
     "frameworks": {
@@ -101,9 +162,9 @@
           "type": "string",
           "description": "Name of the source project, organization or method"
         },
-        "url": {
+        "source_url": {
           "type": "string",
-          "description": "URL of the source"
+          "description": "Official source URL of the material (canonical attribution)"
         },
         "license": {
           "type": "string",
@@ -121,7 +182,12 @@
       "properties": {
         "risk_level": {
           "type": "string",
-          "enum": ["none", "low", "medium", "high"],
+          "enum": [
+            "none",
+            "low",
+            "medium",
+            "high"
+          ],
           "description": "Risk of running this skill's instructions (none = pure guidance, high = executes untrusted input)"
         },
         "permissions": {
@@ -136,6 +202,16 @@
           "description": "Whether the skill content passed the security content scan"
         }
       }
+    },
+    "pointer": {
+      "type": "boolean",
+      "description": "SkillPointer mode: SKILL.md is a minimal pointer; full content lives in assets/vault/<category>/<skill>/ and is loaded on demand",
+      "default": false
+    },
+    "vault": {
+      "type": "string",
+      "description": "Path to the curated vault content for this skill (relative to assets/vault/), e.g. tools/repo-to-llm",
+      "default": ""
     }
   }
 }

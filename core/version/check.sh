@@ -40,9 +40,6 @@ check_version() {
     fi
 
     major="${version%%.*}"
-    rest="${version#*.}"
-    minor="${rest%%.*}"
-    patch="${rest#*.}"
 
     if [ "$major" -eq 0 ]; then
         log_warn "$asset@$version (unstable, 0.x)"

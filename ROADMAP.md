@@ -6,7 +6,10 @@ Overview of planned development for the OpenCode Engineering Kit.
 
 **v0.1.0** — Content and infrastructure foundation (stable core)
 
-## Delivered (current state)
+All planned milestones through v0.5.0 have been **delivered** and live under
+the `Unreleased` section of the changelog, awaiting the v0.2.0 release tag.
+
+## Delivered
 
 ### Foundation (v0.1.0)
 
@@ -21,11 +24,11 @@ Overview of planned development for the OpenCode Engineering Kit.
 
 ### Content (v0.1.0)
 
-- [x] **115 skills** in 40 categories (domain + engineering + methodology-adjacent)
+- [x] **123 skills** in 40 categories (domain + engineering + methodology-adjacent)
 - [x] **93 agent personas** in 38 categories (PT-BR, with "Como ajuda as personas de tecnologia")
 - [x] 10 prompts, 16 templates, 3 playbooks, 2 recipes, 3 commands, 2 bundles, 2 compositions, 2 prompt chains
 - [x] **Orchestrator agent** (`planner/orquestrador`) that plans, delegates, shows provenance and asks the user
-- [x] **Provenance** for all assets (`context/provenance.md`, 208 assets) + `scripts/add-provenance.sh`
+- [x] **Provenance** for all assets (`context/provenance.md`, 216 assets) + `scripts/add-provenance.sh`
 - [x] Quality test module (`tests/quality/`) covering 6 dimensions
 
 ### Infrastructure (v0.1.0)
@@ -36,43 +39,45 @@ Overview of planned development for the OpenCode Engineering Kit.
 - [x] CLI (`opencode-engineering-kit`), install.sh / uninstall.sh / update.sh
 - [x] Compatibility matrix (opencode, claude-code, cursor, copilot)
 
+### v0.2.0 — Engineering Methodology
+
+- [x] Methodology skills: `brainstorming`, `writing-plans`, `executing-plans`, `tdd`, `git-worktrees`, `two-stage-code-review`, `verification-before-completion`
+- [x] New `methodology` skill category (schema + bootstrap)
+- [x] Auto-trigger of methodology skills via the orchestrator agent and project guidance
+- [x] Behavior evals per skill (trigger + expected output) in `tests/skills/test-methodology-evals.sh`
+
+### v0.3.0 — Security by Default
+
+- [x] `core/security/skill-scan.sh`: dangerous-pattern scanning of SKILL.md content with explicit allowlist
+- [x] PASS/WARN/FAIL gate integrated into the quality pipeline
+- [x] `risk_level` / `permissions` fields in the skill schema
+- [x] Security policy + incident runbook in SECURITY.md
+- [x] SkillSpector integration documentation
+
+### v0.4.0 — Distribution
+
+- [x] One-line installer (`curl | bash`) with `-y` non-interactive mode
+- [x] Declarative manifest + update.sh drift detection
+- [x] Rich CLI: `install`, `list`, `search`, `doctor`, `upgrade`, `export <harness>`
+- [x] Multi-harness packaging (`.claude/skills/`, `.cursor/rules/`, `CLAUDE.md`, `.codex`)
+
+### v0.5.0 — Memory and Context Efficiency
+
+- [x] Persistent local-first memory (`context/memory/`, SQLite + optional ChromaDB, opt-in)
+- [x] `session-memory` skill + healthcheck
+- [x] **SkillPointer mode**: indexed catalog without context injection, on-demand loading
+      (`core/discovery/pointer.sh`, `assets/vault/` with 3 curated entries, vault meta +
+      manifest counts, `tests/discovery/test-pointer.sh`)
+- [x] Token-per-skill metric in the vault/manifest (`tokens_estimate`)
+
 ## Planned Milestones
-
-### v0.2.0 — Engineering Methodology (Q3 2026)
-
-- [ ] Methodology skills: `brainstorming`, `writing-plans`, `executing-plans`, `tdd`, `git-worktrees`, `two-stage-code-review`, `verification-before-completion`
-- [ ] New `methodology` skill category (schema + bootstrap)
-- [ ] Auto-trigger of methodology skills via the orchestrator agent and project guidance
-- [ ] Behavior evals per skill (trigger + expected output)
-
-### v0.3.0 — Security by Default (Q3 2026)
-
-- [ ] `core/security/skill-scan.sh`: dangerous-pattern scanning of SKILL.md content with explicit allowlist
-- [ ] PASS/WARN/FAIL gate integrated into the quality pipeline
-- [ ] `risk_level` / `permissions` fields in the skill schema
-- [ ] Security policy + incident runbook in SECURITY.md
-- [ ] SkillSpector integration documentation
-
-### v0.4.0 — Distribution (Q4 2026)
-
-- [ ] One-line installer (`curl | bash`) with `-y` non-interactive mode
-- [ ] Declarative manifest + update.sh drift detection
-- [ ] Rich CLI: `install`, `list`, `search`, `doctor`, `upgrade`, `export <harness>`
-- [ ] Multi-harness packaging (`.claude/skills/`, `.cursor/rules/`, `CLAUDE.md`, `.codex`)
-
-### v0.5.0 — Memory and Context Efficiency (Q4 2026)
-
-- [ ] Persistent local-first memory (`context/memory/`, SQLite + optional ChromaDB, opt-in)
-- [ ] `session-memory` skill + healthcheck
-- [ ] SkillPointer mode: indexed catalog without context injection, on-demand loading
-- [ ] Token-per-skill metric in the quality dashboard
 
 ### v1.0.0 — Stable Release (Q1 2027)
 
-- [ ] Curation policy in CONTRIBUTING (verified, not mass-generated)
-- [ ] Official source attribution in provenance (`source_url`)
+- [x] Curation policy in CONTRIBUTING (verified, not mass-generated)
+- [x] Official source attribution in provenance (`source_url`)
 - [ ] Consolidated documentation set (`docs/`), live roadmap
-- [ ] Full CI/CD with all gates green
+- [ ] Full CI/CD with all gates green (CI present, needs continuous review)
 - [ ] Active community
 
 ## Long-Term Vision

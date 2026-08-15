@@ -34,7 +34,6 @@ while IFS= read -r metadata; do
 done < <(find "$ASSETS_DIR" -name "metadata.json" -type f | sort)
 
 TOTAL=0
-MISSING=0
 
 for asset_dir in "${ASSETS[@]}"; do
     asset_type="$(basename "$(dirname "$asset_dir")")"

@@ -1,21 +1,52 @@
 {
   "schema_version": "1.0.0",
   "version": "0.1.0",
-  "commit": "50d06bf",
-  "generated": "2026-08-15T17:03:20Z",
+  "commit": "696b55f",
+  "generated": "2026-08-15T19:11:35Z",
   "counts": {
     "skills": 123,
     "agents": 93,
     "prompts": 10,
     "templates": 4,
-    "context_files": 16
+    "context_files": 16,
+    "pointer_skills": 3,
+    "vault_entries": 3
   },
-  "provenance_sha256": "a5b44fe0eddff2a7bbacc97715b37c98c35cccd1c093786fa11724e4aa382abb",
+  "vault": [
+    {
+      "skill": "repo-to-llm",
+      "vault_path": "tools/repo-to-llm",
+      "sha256": "b9813ddcc6274cb7679de8bc4e8549999b2447ff68ced0ccccc3be99975a4962",
+      "tokens_estimate": 828,
+      "bytes": 3311,
+      "curated": true,
+      "content_format": "markdown"
+    },
+    {
+      "skill": "code-knowledge-graph",
+      "vault_path": "tools/code-knowledge-graph",
+      "sha256": "e00c17b68950c2b06e945c1033f10ed945fa6284867fb41a95e025b68487074f",
+      "tokens_estimate": 767,
+      "bytes": 3077,
+      "curated": true,
+      "content_format": "markdown"
+    },
+    {
+      "skill": "skill-spector",
+      "vault_path": "security/skill-spector",
+      "sha256": "7bce1e1cb06badba7d5ec36c62c4343156d56abd0d72cc3b48ae73e2e4176f9b",
+      "tokens_estimate": 779,
+      "bytes": 3122,
+      "curated": true,
+      "content_format": "markdown"
+    }
+  ],
+  "provenance_sha256": "91238522309b75b26f73623d2601f6159623d7b45c58b525fe92890e5da790dc",
   "index_sha256": {
-    "core/discovery/index/skills.txt": "29efb0b1d6d9412ed23c85811f27735e6c8eec05c709ff936d2575cf2de677b0",
+    "core/discovery/index/skills.txt": "bdebe1eb6354b1fa680f6f035717038da09a80665c6ea24e22840873cd520459",
     "core/discovery/index/agents.txt": "1428a0dc7a1a74a70334daf1cf59329dee4ff3bdc89c11a9806f5be120a8f627",
     "core/registry/index/skills.txt": "c0cb298cbdd64827be9c64caf7d31e6cd3c84ddf04d6a9f4cd1e822da52984db",
     "core/registry/index/agents.txt": "dcf9e0dc94d1706e498871403bbbdab7b4ad289a3d3d232a3c8629472839acd4",
-    "core/resolver/lockfile.json": "c25e9d895683676f6b956729ef9503e363954de39a64f639ddbe58d0a45fdaa8"
+    "core/resolver/lockfile.json": "13329fa149d692395fe1babbc45f506a533597e964c1d9ec3a358fa0fa29383f"
   }
 }

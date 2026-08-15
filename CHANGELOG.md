@@ -13,6 +13,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Declarative manifest** (`core/registry/manifest.json` + `scripts/generate-manifest.sh`) with commit + content hashes for drift detection
 - **Multi-harness export** (`cli export --harness`) producing prompts for opencode, claude-code and cursor
 - **Persistent local-first memory** (`context/memory/memory.py` + `tools/session-memory` skill): opt-in (`KIT_MEMORY=1`) SQLite FTS5 notes with recency boost and optional ChromaDB vector recall, stored outside the repo
+- **SkillPointer mode** (`core/discovery/pointer.sh` + `assets/vault/`): skills become minimal catalog entries (`pointer: true` + `vault:` frontmatter) with full curated content stored in the vault and loaded on demand, avoiding context injection; `pointer.sh` resolves/vaults/lists/token-estimates on demand
+- **Vault tooling**: `scripts/generate-vault-meta.sh` produces `meta.json` (sha256, token estimate, bytes) per vault entry; manifest counts `pointer_skills` and `vault_entries` plus a full `vault` array; `pointer`/`vault` fields added to the skill JSON Schema
+- **3 curated vault entries**: `repo-to-llm`, `code-knowledge-graph`, `skill-spector` converted to pointer skills with full content in `assets/vault/`
+- **Doctor vault check**: `cli doctor` now verifies vault consistency (pointer skills ↔ vault entries, broken links)
+- New test module `tests/discovery/test-pointer.sh` covering resolve/vault/tokens/list/is-pointer and manifest counts
+- **Official source attribution**: provenance field renamed `url` → `source_url` (schema + `scripts/add-provenance.sh` + all 216 assets backfilled)
+- **CI green gates**: shellcheck warnings resolved across scripts (unused vars, SC2155), CI vault file-size check added, README/repository-comparison skill counts corrected to 123
 - New test modules for CLI (`cli/test/cli.test.js`) and session memory (`tests/context/test-memory.sh`); CI now runs CLI tests and shellcheck across scripts
 - **39 new personas** in 9 new agent categories (education, music, arts, sports, automotive, commercial, languages, ai, planner) plus new personas in existing categories (humanities: politics & law; marketing: political marketing) — PT-BR content with a "Como ajuda as personas de tecnologia" section
 - **35 new skills** in 9 new skill categories (education, music, arts, sports, automotive, commercial, languages, humanities, health/nutrition) plus `ai/free-llm-models`

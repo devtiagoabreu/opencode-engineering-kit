@@ -4,10 +4,6 @@ set -euo pipefail
 # Asset Validator Script
 # Validates assets against schemas and quality standards
 
-SCRIPT_DIR="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
-ROOT_DIR="$(dirname "$(dirname "$SCRIPT_DIR")")"
-SCHEMA_DIR="$ROOT_DIR/core/registry/schema"
-
 # Colors for output
 RED='\033[0;31m'
 GREEN='\033[0;32m'

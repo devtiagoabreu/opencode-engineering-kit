@@ -7,7 +7,6 @@ set -euo pipefail
 REPO_URL="https://github.com/devtiagoabreu/opencode-engineering-kit.git"
 INSTALL_DIR="${KIT_INSTALL_DIR:-${HOME}/.opencode-engineering-kit}"
 TEMP_DIR="/tmp/opencode-engineering-kit-update"
-MANIFEST_REMOTE="/tmp/opencode-engineering-kit-manifest.json"
 
 # Cores
 RED='\033[0;31m'
@@ -51,7 +50,8 @@ cleanup() {
 trap cleanup EXIT
 
 backup() {
-    local backup_dir="${INSTALL_DIR}.backup.$(date +%Y%m%d_%H%M%S)"
+    local backup_dir
+    backup_dir="${INSTALL_DIR}.backup.$(date +%Y%m%d_%H%M%S)"
     log "Criando backup em $backup_dir..."
     cp -r "$INSTALL_DIR" "$backup_dir"
     log "Backup criado."

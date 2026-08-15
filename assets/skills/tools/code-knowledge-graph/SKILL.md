@@ -1,7 +1,7 @@
 ---
 provenance:
   source: OpenCode Engineering Kit (community)
-  url: https://github.com/devtiagoabreu/opencode-engineering-kit
+  source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
 name: code-knowledge-graph
@@ -14,6 +14,8 @@ compatible:
   - opencode
   - claude-code
   - cursor
+pointer: true
+vault: tools/code-knowledge-graph
 requires:
   - Node.js 18+ and npm/npx
   - Network access to fetch the Graphify package
@@ -27,113 +29,27 @@ provides:
 
 ## Overview
 
-This skill uses [Graphify](https://github.com/Graphify-Labs/graphify) to turn a
-folder of code, SQL schemas, scripts, docs, papers, images or videos into a
-queryable knowledge graph for coding agents. Instead of dumping an entire
-codebase into context, you build a graph once and then query only the nodes you
-need — cutting the tokens required to describe the project by an order of
-magnitude while improving accuracy.
+Uses Graphify to turn a folder of code, SQL schemas, scripts, docs, papers,
+images or videos into a queryable knowledge graph for coding agents. Instead of
+dumping an entire codebase into context, you build a graph once and query only
+the nodes you need — cutting the tokens required to describe a project by an
+order of magnitude.
 
-Graphify is compatible with Claude Code, Codex, OpenCode, Cursor, Gemini CLI
-and more, and can combine application code, database schema and infrastructure
-in a single graph.
+## Pointer
+
+This skill is an indexed catalog entry. The full, curated instructions are
+loaded on demand from the vault to avoid context injection:
+
+```bash
+core/discovery/pointer.sh resolve code-knowledge-graph
+```
+
+## When to load
+
+Load the full content when the task involves building or querying a knowledge
+graph over a codebase, SQL schema or documentation set.
 
 ## Prerequisites
 
-- Node.js 18+ with npm/npx
-- A folder containing the code, schema or docs you want to index
-- (Optional) a database to store large graphs — Graphify ships an embedded
-  option for small projects
-
-## Usage Instructions
-
-### 1. Install Graphify
-
-```bash
-npm install -g @graphify-labs/graphify
-```
-
-Verify:
-
-```bash
-graphify --version
-```
-
-### 2. Build a graph from a project
-
-```bash
-cd /path/to/your/project
-graphify build --input . --output ./graph
-```
-
-For larger projects you can scope the input (code only, SQL only, docs only):
-
-```bash
-graphify build --input ./src --input ./schema.sql --output ./graph
-```
-
-### 3. Query the graph
-
-```bash
-# List nodes
-graphify query --graph ./graph "list all API endpoints"
-
-# Find related files for a feature
-graphify query --graph ./graph "which files implement authentication?"
-
-# Explore dependencies
-graphify query --graph ./graph "what depends on the database layer?"
-```
-
-### 4. Use the graph with a coding agent
-
-Expose the graph to the agent so it queries on demand instead of reading whole
-files. In OpenCode, reference the query commands as part of your workflow or
-skills — the agent runs a query, gets only the relevant nodes, and keeps its
-context small.
-
-### 5. Best practices
-
-- **Build once, refresh when code changes**: keep the graph updated in CI.
-- **Scope inputs**: index only the folders that matter; exclude tests and
-  generated code to keep the graph lean.
-- **Query before reading**: always ask the graph for the specific symbols,
-  endpoints or schema relevant to the task before opening files.
-- **Combine with the resolver**: this kit's `core/resolver` dependency graph
-  complements Graphify's code graph for asset-level dependencies.
-
-## Examples
-
-### Example 1: Index a backend and find the auth flow
-
-```bash
-graphify build --input . --output ./graph --exclude node_modules,dist
-graphify query --graph ./graph "trace the login flow from route to database"
-```
-
-### Example 2: Index SQL schema for a data question
-
-```bash
-graphify build --input ./migrations --output ./schema-graph
-graphify query --graph ./schema-graph "which tables reference users?"
-```
-
-### Example 3: Document-only knowledge base
-
-```bash
-graphify build --input ./docs --output ./docs-graph
-graphify query --graph ./docs-graph "how do we deploy to production?"
-```
-
-## References
-
-- [Graphify repository](https://github.com/Graphify-Labs/graphify)
-- [Understand-Anything (alternative interactive graph)](https://github.com/Egonex-AI/Understand-Anything)
-
-## Notes
-
-- Graphify stores the graph locally; no code leaves your machine unless you
-  choose a remote store.
-- Build times scale with input size — use `--exclude` for generated folders.
-- Graph queries return node summaries, not full files; fetch a file only when
-  the node points to it as relevant.
+Node.js 18+ with npm/npx and network access to fetch the Graphify package (see
+the vault entry for exact setup).
