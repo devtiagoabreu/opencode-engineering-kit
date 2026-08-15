@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T20:08:15Z",
+  "generated": "2026-08-15T20:31:56Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -1338,6 +1338,13 @@
       ],
       "resolved": true
     },
+    "skills/multi-tenant-saas": {
+      "name": "multi-tenant-saas",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/dance-and-choreography": {
       "name": "dance-and-choreography",
       "type": "skills",
@@ -1452,6 +1459,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/prisma-orm": {
+      "name": "prisma-orm",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/rest-api-design": {
@@ -1680,6 +1694,13 @@
       ],
       "resolved": true
     },
+    "skills/vercel-deployment": {
+      "name": "vercel-deployment",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/doc-to-markdown": {
       "name": "doc-to-markdown",
       "type": "skills",
@@ -1855,6 +1876,20 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/form-validation": {
+      "name": "form-validation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/leaflet-maps": {
+      "name": "leaflet-maps",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/nextjs-development": {
       "name": "nextjs-development",
       "type": "skills",
@@ -1886,6 +1921,13 @@
       ],
       "resolved": true
     },
+    "skills/shadcn-ui": {
+      "name": "shadcn-ui",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/state-management": {
       "name": "state-management",
       "type": "skills",
@@ -1896,6 +1938,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/tanstack-query": {
+      "name": "tanstack-query",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/git-workflow": {
@@ -2028,6 +2077,13 @@
     },
     "skills/typescript-best-practices": {
       "name": "typescript-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/route-optimization": {
+      "name": "route-optimization",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -2289,6 +2345,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/rbac-authorization": {
+      "name": "rbac-authorization",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/secure-coding": {

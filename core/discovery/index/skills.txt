@@ -6,6 +6,7 @@ ai/rag-llm
 analytics/business-intelligence
 architecture/clean-architecture
 architecture/microservices-design
+architecture/multi-tenant-saas
 arts/dance-and-choreography
 arts/fashion-design
 arts/hairdressing
@@ -19,6 +20,7 @@ backend/authentication
 backend/caching-strategies
 backend/database-design
 backend/graphql-api
+backend/prisma-orm
 backend/rest-api-design
 cloud/aws-cloud-architecture
 cloud/google-cloud-architecture
@@ -43,6 +45,7 @@ devops/incident-response
 devops/kubernetes-best-practices
 devops/monitoring-observability
 devops/terraform-aws
+devops/vercel-deployment
 documentation/doc-to-markdown
 education/assessment-and-feedback
 education/classroom-management
@@ -64,10 +67,14 @@ finance/accounting-basics
 finance/tax-compliance
 frontend/accessibility
 frontend/css-best-practices
+frontend/form-validation
+frontend/leaflet-maps
 frontend/nextjs-development
 frontend/performance
 frontend/react-patterns
+frontend/shadcn-ui
 frontend/state-management
+frontend/tanstack-query
 git/git-workflow
 health/neurodiversity-support
 health/nutrition
@@ -86,6 +93,7 @@ languages/language-learning
 languages/php-best-practices
 languages/python-best-practices
 languages/typescript-best-practices
+logistics/route-optimization
 logistics/supply-chain-management
 management/lean-methodology
 marketing/digital-marketing
@@ -116,6 +124,7 @@ science/applied-mathematics
 science/chemistry-basics
 science/physics-applied
 security/owasp-top-10
+security/rbac-authorization
 security/secure-coding
 security/skill-spector
 sports/personal-training

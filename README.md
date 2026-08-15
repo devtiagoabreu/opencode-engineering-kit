@@ -17,7 +17,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 134 (em 42 categorias) |
+| Skills | 143 (em 42 categorias) |
 | Agents | 103 (personas em 38 categorias) |
 | Prompts | 10 (em 13 categorias) |
 | Templates | 16 |
@@ -349,7 +349,7 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 134 skills em 42 categorias (SKILL.md)
+│   ├── skills/          # 143 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates

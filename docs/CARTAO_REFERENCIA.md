@@ -163,7 +163,7 @@ python3 context/memory/memory.py --help                # salvar/buscar/healthche
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 134 skills em 42 categorias (SKILL.md)
+│   ├── skills/          # 143 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas em 38 categorias
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates

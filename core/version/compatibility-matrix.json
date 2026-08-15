@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T20:08:54Z",
+  "generated": "2026-08-15T20:32:34Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -72,6 +72,15 @@
       ]
     },
     "microservices-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "multi-tenant-saas": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -189,6 +198,15 @@
       ]
     },
     "graphql-api": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "prisma-orm": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -413,6 +431,15 @@
         "cursor"
       ]
     },
+    "vercel-deployment": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "doc-to-markdown": {
       "type": "skill",
       "version": "0.1.0",
@@ -602,6 +629,24 @@
         "cursor"
       ]
     },
+    "form-validation": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "leaflet-maps": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "nextjs-development": {
       "type": "skill",
       "version": "0.1.0",
@@ -629,7 +674,25 @@
         "cursor"
       ]
     },
+    "shadcn-ui": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "state-management": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "tanstack-query": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -792,6 +855,15 @@
       ]
     },
     "typescript-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "route-optimization": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1062,6 +1134,15 @@
       ]
     },
     "owasp-top-10": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "rbac-authorization": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [

@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 15 ago 2026 17:07:58 -03
+# Generated: sáb 15 ago 2026 17:31:38 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -16,13 +16,28 @@
 ## architecture/microservices-design
   (no dependencies)
 
+## architecture/multi-tenant-saas
+  (no dependencies)
+
 ## architecture/clean-architecture
+  (no dependencies)
+
+## frontend/leaflet-maps
+  (no dependencies)
+
+## frontend/tanstack-query
   (no dependencies)
 
 ## frontend/css-best-practices
   (no dependencies)
 
+## frontend/form-validation
+  (no dependencies)
+
 ## frontend/nextjs-development
+  (no dependencies)
+
+## frontend/shadcn-ui
   (no dependencies)
 
 ## frontend/accessibility
@@ -232,6 +247,9 @@
 ## automotive/aircraft-mechanics
   (no dependencies)
 
+## devops/vercel-deployment
+  (no dependencies)
+
 ## devops/terraform-aws
   (no dependencies)
 
@@ -267,6 +285,9 @@
 ## logistics/supply-chain-management
   (no dependencies)
 
+## logistics/route-optimization
+  (no dependencies)
+
 ## iot/sensor-integration
   (no dependencies)
 
@@ -297,6 +318,9 @@
 ## security/owasp-top-10
   (no dependencies)
 
+## security/rbac-authorization
+  (no dependencies)
+
 ## backend/rest-api-design
   (no dependencies)
 
@@ -307,6 +331,9 @@
   (no dependencies)
 
 ## backend/authentication
+  (no dependencies)
+
+## backend/prisma-orm
   (no dependencies)
 
 ## backend/graphql-api

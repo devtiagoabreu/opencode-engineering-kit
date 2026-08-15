@@ -3,9 +3,14 @@
   - open-source-contributing
   - business-intelligence
   - microservices-design
+  - multi-tenant-saas
   - clean-architecture
+  - leaflet-maps
+  - tanstack-query
   - css-best-practices
+  - form-validation
   - nextjs-development
+  - shadcn-ui
   - accessibility
   - state-management
   - react-patterns
@@ -75,6 +80,7 @@
   - plastics-industry-sales
   - vehicle-mechanics
   - aircraft-mechanics
+  - vercel-deployment
   - terraform-aws
   - incident-response
   - kubernetes-best-practices
@@ -87,6 +93,7 @@
   - screenwriting
   - makeup-artistry
   - supply-chain-management
+  - route-optimization
   - sensor-integration
   - mqtt-protocol
   - code-review-best-practices
@@ -97,10 +104,12 @@
   - secure-coding
   - skill-spector
   - owasp-top-10
+  - rbac-authorization
   - rest-api-design
   - api-design
   - database-design
   - authentication
+  - prisma-orm
   - graphql-api
   - caching-strategies
   - web-scraping

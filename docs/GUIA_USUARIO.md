@@ -39,7 +39,7 @@ O **OpenCode Engineering Kit** é uma biblioteca open source de recursos reutili
 
 ### O que está incluído
 
-- **134 Skills** — guias completos em 42 categorias
+- **143 Skills** — guias completos em 42 categorias
 - **103 Agents** — personas de IA especializadas em 38 categorias
 - **10 Prompts** — modelos de prompts reutilizáveis
 - **16 Templates** — modelos para projetos e componentes
@@ -307,13 +307,15 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 
 | Categoria | Exemplos |
 |-----------|----------|
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
-| `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
-| `frontend` | React, State Management, CSS, Acessibilidade, **Next.js** |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **Vercel** |
+| `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **Prisma ORM** |
+| `frontend` | React, State Management, CSS, Acessibilidade, **Next.js**, **shadcn/ui**, **TanStack Query**, **Leaflet**, **Form Validation** |
 | `languages` | JavaScript, TypeScript, Python, **C#**, **C++**, **C**, **PHP**, **Delphi** |
 | `database` | SQL Optimization, NoSQL Modeling, **PostgreSQL**, **Oracle**, **SQL Server** |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector, **RBAC** |
+| `architecture` | Clean Architecture, Microservices, **Multi-Tenant SaaS** |
+| `logistics` | Supply Chain, **Route Optimization** |
 | `methodology` | Brainstorming, Writing/Executing Plans, TDD, Git Worktrees, Code Review |
 | `ai` | Deep Learning, RAG/LLM, LLM Multi-Provider |
 | `tools` | Git avançado, Terminal, Repo → LLM, Graphify, Session Memory |
