@@ -2,6 +2,7 @@
   - architect
   - bi-analyst
   - ui-designer
+  - nextjs-developer
   - frontend-developer
   - fullstack-developer
   - mobile-developer
@@ -42,7 +43,10 @@
   - robotics-engineer
   - metodologia-lean
   - vision-engineer
+  - postgresql-dba
   - data-engineer
+  - oracle-dba
+  - sql-server-dba
   - relacoes-com-o-cliente
   - equipe-comercial-tecelagem
   - especialista-comercial-plasticos
@@ -84,7 +88,13 @@
   - professor-de-quimica
   - automation-engineer
   - technical-writer
+  - c-developer
+  - csharp-developer
+  - php-developer
+  - cpp-developer
+  - javascript-developer
   - professor-de-idiomas
+  - delphi-developer
   - performance-engineer
   - contador
   - fiscal

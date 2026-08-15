@@ -9,19 +9,20 @@
 1. [Introdução](#introdução)
 2. [Instalação](#instalação)
 3. [Início Rápido](#início-rápido)
-4. [Skills](#skills)
-5. [Agents](#agents)
-6. [Prompts](#prompts)
-7. [Templates](#templates)
-8. [Commands](#commands)
-9. [Playbooks e Recipes](#playbooks-e-recipes)
-10. [Sistema de Descoberta](#sistema-de-descoberta)
-11. [CLI](#cli)
-12. [SkillPointer e Vault](#skillpointer-e-vault)
-13. [Memória de Sessão](#memória-de-sessão)
-14. [Marketplace](#marketplace)
-15. [Segurança](#segurança)
-16. [Solução de Problemas](#solução-de-problemas)
+4. [Exemplo Prático — Next.js com GitHub e Vercel](#exemplo-prático--nextjs-com-github-e-vercel)
+5. [Skills](#skills)
+6. [Agents](#agents)
+7. [Prompts](#prompts)
+8. [Templates](#templates)
+9. [Commands](#commands)
+10. [Playbooks e Recipes](#playbooks-e-recipes)
+11. [Sistema de Descoberta](#sistema-de-descoberta)
+12. [CLI](#cli)
+13. [SkillPointer e Vault](#skillpointer-e-vault)
+14. [Memória de Sessão](#memória-de-sessão)
+15. [Marketplace](#marketplace)
+16. [Segurança](#segurança)
+17. [Solução de Problemas](#solução-de-problemas)
 
 ---
 
@@ -36,8 +37,8 @@ O **OpenCode Engineering Kit** é uma biblioteca open source de recursos reutili
 
 ### O que está incluído
 
-- **123 Skills** — guias completos em 42 categorias
-- **93 Agents** — personas de IA especializadas em 38 categorias
+- **133 Skills** — guias completos em 42 categorias
+- **103 Agents** — personas de IA especializadas em 38 categorias
 - **10 Prompts** — modelos de prompts reutilizáveis
 - **16 Templates** — modelos para projetos e componentes
 - **3 Commands** — ações documentadas para tarefas comuns
@@ -133,6 +134,95 @@ cp -r assets/skills/devops/docker-best-practices/ /seu/projeto/
 
 ---
 
+## Exemplo Prático — Next.js com GitHub e Vercel
+
+**Cenário:** você está desenvolvendo uma aplicação **Next.js (JavaScript)** com banco **PostgreSQL**, em um repositório local clonado do GitHub, onde você faz **commit e push** diariamente e publica no **Vercel**. Você quer usar o kit para acelerar o desenvolvimento.
+
+### Passo 1 — Instalar o kit no seu projeto
+
+No diretório do repositório local:
+
+```bash
+cd /caminho/para/seu-projeto
+npx opencode-engineering-kit install
+```
+
+O instalador baixa o kit e cria o diretório `.opencode/` dentro do seu projeto, com skills, agents, commands, context, prompts, playbooks e templates, além de configurar o `opencode.json`. Confirme a instalação:
+
+```bash
+npx opencode-engineering-kit doctor
+```
+
+### Passo 2 — Encontrar skills e personas do seu stack
+
+```bash
+# Buscar skills de Next.js e JavaScript
+npx opencode-engineering-kit search "next.js"
+npx opencode-engineering-kit search "javascript"
+
+# Buscar skills de banco de dados
+npx opencode-engineering-kit search "postgresql"
+```
+
+Ou use a busca local do kit:
+
+```bash
+./core/discovery/search.sh "next.js"
+./core/discovery/search.sh "postgresql"
+```
+
+### Passo 3 — Usar a persona certa no OpenCode
+
+Inicie o OpenCode e peça para usar uma persona do kit, por exemplo o **nextjs-developer** ou o **javascript-developer**:
+
+```text
+Use a persona nextjs-developer para revisar este componente.
+```
+
+Ou, no mesmo chat, instrua o OpenCode a ler a skill antes de codar:
+
+```text
+Leia a skill nextjs-development e depois implemente o endpoint
+de busca com os padrões descritos.
+```
+
+### Passo 4 — Desenvolver e validar
+
+1. **Crie a feature** seguindo a skill de Next.js:
+
+    ```bash
+    cd assets/skills/frontend/nextjs-development
+    cat SKILL.md
+    ```
+
+2. **Valide a qualidade** do seu código com a persona de revisão:
+
+    ```text
+    Use a persona qa-engineer para revisar o pull request localmente.
+    ```
+
+### Passo 5 — Commit, push e deploy
+
+1. **Commit e push** normalmente:
+
+    ```bash
+    git add .
+    git commit -m "feat: nova busca com paginação"
+    git push origin main
+    ```
+
+2. **O Vercel** detecta o push e publica automaticamente (Git Integration). O kit não interfere no deploy — ele apenas melhora o que você desenvolve antes do push.
+
+### Passo 6 — Atualizar o kit
+
+Quando uma nova versão do kit for lançada:
+
+```bash
+npx opencode-engineering-kit upgrade
+```
+
+---
+
 ## Skills
 
 Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 500 linhas.
@@ -143,7 +233,9 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 |-----------|----------|
 | `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
-| `frontend` | React, State Management, CSS, Acessibilidade |
+| `frontend` | React, State Management, CSS, Acessibilidade, **Next.js** |
+| `languages` | JavaScript, TypeScript, Python, **C#**, **C++**, **C**, **PHP**, **Delphi** |
+| `database` | SQL Optimization, NoSQL Modeling, **PostgreSQL**, **Oracle**, **SQL Server** |
 | `testing` | Unit, Integration, E2E, Python Testing |
 | `security` | OWASP Top 10, Secure Coding, SkillSpector |
 | `methodology` | Brainstorming, Writing/Executing Plans, TDD, Git Worktrees, Code Review |
@@ -188,7 +280,14 @@ Agents são **personas** (papel + contexto + estilo de comunicação) para papé
 | **technical-writer** | Especialista em documentação |
 | **product-manager** | Especialista em gestão de produtos |
 | **orquestrador** | Planeja tarefas, delega aos agentes certos e mostra a procedência das ferramentas |
-| + 80 outras | construction, finance, marketing, science, health, education, music... |
+| **nextjs-developer** | Especialista em Next.js, App Router e Vercel |
+| **javascript-developer** | Especialista em JavaScript moderno (ES2015+, async) |
+| **csharp-developer** | Especialista em C# / .NET |
+| **php-developer** | Especialista em PHP 8 e segurança web |
+| **delphi-developer** | Especialista em Delphi / Object Pascal |
+| **cpp-developer** / **c-developer** | Especialistas em C++ e C (memória, sistemas) |
+| **postgresql-dba** / **oracle-dba** / **sql-server-dba** | Administradores de banco de dados |
+| + 90 outras | construction, finance, marketing, science, health, education, music... |
 
 ### Como Usar um Agent
 

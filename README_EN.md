@@ -19,8 +19,8 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 123 (42 categories) |
-| Agents | 93 (personas in 38 categories) |
+| Skills | 133 (42 categories) |
+| Agents | 103 (personas in 38 categories) |
 | Prompts | 10 (13 categories) |
 | Templates | 16 |
 | Playbooks | 3 |
@@ -153,7 +153,7 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 123 ready guides
+### Skills — 133 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
 
@@ -209,7 +209,7 @@ All skills are copied automatically to `.opencode/skills/` when installing via
 the CLI (`npx opencode-engineering-kit install`) — new categories are detected
 recursively, with no extra configuration.
 
-### Agents — 93 ready personas
+### Agents — 103 ready personas
 
 Agents are **personas** (role + context + communication style) for specific roles. Examples:
 
@@ -339,8 +339,8 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 123 skills in 42 categories (SKILL.md)
-│   ├── agents/          # 93 personas by category
+│   ├── skills/          # 133 skills in 42 categories (SKILL.md)
+│   ├── agents/          # 103 personas by category
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates
 │   ├── commands/        # 3 documented commands

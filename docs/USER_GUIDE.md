@@ -9,19 +9,20 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Quick Start](#quick-start)
-4. [Skills](#skills)
-5. [Agents](#agents)
-6. [Prompts](#prompts)
-7. [Templates](#templates)
-8. [Commands](#commands)
-9. [Playbooks and Recipes](#playbooks-and-recipes)
-10. [Discovery System](#discovery-system)
-11. [CLI](#cli)
-12. [SkillPointer and Vault](#skillpointer-and-vault)
-13. [Session Memory](#session-memory)
-14. [Marketplace](#marketplace)
-15. [Security](#security)
-16. [Troubleshooting](#troubleshooting)
+4. [Worked Example — Next.js with GitHub and Vercel](#worked-example--nextjs-with-github-and-vercel)
+5. [Skills](#skills)
+6. [Agents](#agents)
+7. [Prompts](#prompts)
+8. [Templates](#templates)
+9. [Commands](#commands)
+10. [Playbooks and Recipes](#playbooks-and-recipes)
+11. [Discovery System](#discovery-system)
+12. [CLI](#cli)
+13. [SkillPointer and Vault](#skillpointer-and-vault)
+14. [Session Memory](#session-memory)
+15. [Marketplace](#marketplace)
+16. [Security](#security)
+17. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -36,8 +37,8 @@ The **OpenCode Engineering Kit** is an open source library of reusable resources
 
 ### What's Included
 
-- **123 Skills** — complete guides in 42 categories
-- **93 Agents** — specialized AI personas in 38 categories
+- **133 Skills** — complete guides in 42 categories
+- **103 Agents** — specialized AI personas in 38 categories
 - **10 Prompts** — reusable prompt templates
 - **16 Templates** — project and component templates
 - **3 Commands** — documented actions for common tasks
@@ -133,6 +134,95 @@ cp -r assets/skills/devops/docker-best-practices/ /your/project/
 
 ---
 
+## Worked Example — Next.js with GitHub and Vercel
+
+**Scenario:** you are building a **Next.js (JavaScript)** app backed by **PostgreSQL**, in a local repo cloned from GitHub, where you **commit and push** daily and deploy on **Vercel**. You want to use the kit to speed up development.
+
+### Step 1 — Install the kit in your project
+
+From the local repo directory:
+
+```bash
+cd /path/to/your-project
+npx opencode-engineering-kit install
+```
+
+The installer downloads the kit and creates the `.opencode/` directory inside your project, with skills, agents, commands, context, prompts, playbooks and templates, and wires up `opencode.json`. Confirm the installation:
+
+```bash
+npx opencode-engineering-kit doctor
+```
+
+### Step 2 — Find skills and personas for your stack
+
+```bash
+# Search Next.js and JavaScript skills
+npx opencode-engineering-kit search "next.js"
+npx opencode-engineering-kit search "javascript"
+
+# Search database skills
+npx opencode-engineering-kit search "postgresql"
+```
+
+Or use the kit's local discovery:
+
+```bash
+./core/discovery/search.sh "next.js"
+./core/discovery/search.sh "postgresql"
+```
+
+### Step 3 — Use the right persona in OpenCode
+
+Start OpenCode and ask it to use a kit persona, e.g. **nextjs-developer** or **javascript-developer**:
+
+```text
+Use the nextjs-developer persona to review this component.
+```
+
+Or tell OpenCode to read a skill before writing code:
+
+```text
+Read the nextjs-development skill and then implement the search
+endpoint following the patterns described.
+```
+
+### Step 4 — Develop and validate
+
+1. **Build the feature** following the Next.js skill:
+
+    ```bash
+    cd assets/skills/frontend/nextjs-development
+    cat SKILL.md
+    ```
+
+2. **Validate code quality** with a review persona:
+
+    ```text
+    Use the qa-engineer persona to review the changes locally.
+    ```
+
+### Step 5 — Commit, push and deploy
+
+1. **Commit and push** as usual:
+
+    ```bash
+    git add .
+    git commit -m "feat: paginated search"
+    git push origin main
+    ```
+
+2. **Vercel** detects the push and auto-deploys (Git Integration). The kit does not interfere with deployment — it only improves what you build before pushing.
+
+### Step 6 — Update the kit
+
+When a new kit version is released:
+
+```bash
+npx opencode-engineering-kit upgrade
+```
+
+---
+
 ## Skills
 
 Skills are **complete guides** (instructions + examples + references) for the AI to execute specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
@@ -143,7 +233,9 @@ Skills are **complete guides** (instructions + examples + references) for the AI
 |----------|----------|
 | `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
-| `frontend` | React, State Management, CSS, Accessibility |
+| `frontend` | React, State Management, CSS, Accessibility, **Next.js** |
+| `languages` | JavaScript, TypeScript, Python, **C#**, **C++**, **C**, **PHP**, **Delphi** |
+| `database` | SQL Optimization, NoSQL Modeling, **PostgreSQL**, **Oracle**, **SQL Server** |
 | `testing` | Unit, Integration, E2E, Python Testing |
 | `security` | OWASP Top 10, Secure Coding, SkillSpector |
 | `methodology` | Brainstorming, Writing/Executing Plans, TDD, Git Worktrees, Code Review |
@@ -188,7 +280,14 @@ Agents are **personas** (role + context + communication style) for specific role
 | **technical-writer** | Documentation specialist |
 | **product-manager** | Product management specialist |
 | **orquestrador** | Plans tasks, delegates to the right agents and shows tool provenance |
-| + 80 more | construction, finance, marketing, science, health, education, music... |
+| **nextjs-developer** | Next.js, App Router and Vercel specialist |
+| **javascript-developer** | Modern JavaScript specialist (ES2015+, async) |
+| **csharp-developer** | C# / .NET specialist |
+| **php-developer** | PHP 8 and web security specialist |
+| **delphi-developer** | Delphi / Object Pascal specialist |
+| **cpp-developer** / **c-developer** | C++ and C specialists (memory, systems) |
+| **postgresql-dba** / **oracle-dba** / **sql-server-dba** | Database administrators |
+| + 90 more | construction, finance, marketing, science, health, education, music... |
 
 ### How to Use an Agent
 

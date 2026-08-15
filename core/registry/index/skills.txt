@@ -5,6 +5,7 @@
   - microservices-design
   - clean-architecture
   - css-best-practices
+  - nextjs-development
   - accessibility
   - state-management
   - react-patterns
@@ -62,6 +63,9 @@
   - robotics
   - lean-methodology
   - opencv-basics
+  - oracle-database
+  - postgresql-database
+  - sql-server-database
   - nosql-modeling
   - sql-optimization
   - customer-relationship
@@ -109,8 +113,14 @@
   - classroom-management
   - n8n-workflow-automation
   - doc-to-markdown
+  - cpp-best-practices
   - language-learning
   - typescript-best-practices
+  - javascript-best-practices
+  - csharp-best-practices
+  - c-best-practices
+  - php-best-practices
+  - delphi-best-practices
   - python-best-practices
   - integration-testing
   - unit-testing

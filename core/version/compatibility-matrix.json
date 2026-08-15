@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T19:13:35Z",
+  "generated": "2026-08-15T19:39:20Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -305,7 +305,34 @@
         "cursor"
       ]
     },
+    "oracle-database": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "postgresql-database": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "sql-optimization": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "sql-server-database": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -575,6 +602,15 @@
         "cursor"
       ]
     },
+    "nextjs-development": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "performance": {
       "type": "skill",
       "version": "0.1.0",
@@ -683,7 +719,61 @@
         "cursor"
       ]
     },
+    "c-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "cpp-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "csharp-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "delphi-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "javascript-best-practices": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "language-learning": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "php-best-practices": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1358,6 +1448,33 @@
         "cursor"
       ]
     },
+    "oracle-dba": {
+      "type": "database",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "postgresql-dba": {
+      "type": "database",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "sql-server-dba": {
+      "type": "database",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "designer-de-interiores": {
       "type": "design",
       "version": "0.1.0",
@@ -1610,6 +1727,15 @@
         "cursor"
       ]
     },
+    "nextjs-developer": {
+      "type": "frontend",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "ui-designer": {
       "type": "frontend",
       "version": "0.1.0",
@@ -1720,6 +1846,60 @@
     },
     "historiador": {
       "type": "humanities",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "c-developer": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "cpp-developer": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "csharp-developer": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "delphi-developer": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "javascript-developer": {
+      "type": "languages",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "php-developer": {
+      "type": "languages",
       "version": "0.1.0",
       "compatible": [
         "opencode",

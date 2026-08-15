@@ -31,7 +31,10 @@ community/open-source-contributing
 construction/civil-structures
 construction/construction-execution
 database/nosql-modeling
+database/oracle-database
+database/postgresql-database
 database/sql-optimization
+database/sql-server-database
 design/design-system
 design/ui-ux-design
 devops/ci-cd-pipeline
@@ -61,6 +64,7 @@ finance/accounting-basics
 finance/tax-compliance
 frontend/accessibility
 frontend/css-best-practices
+frontend/nextjs-development
 frontend/performance
 frontend/react-patterns
 frontend/state-management
@@ -73,7 +77,13 @@ humanities/labor-law
 humanities/political-analysis
 iot/mqtt-protocol
 iot/sensor-integration
+languages/c-best-practices
+languages/cpp-best-practices
+languages/csharp-best-practices
+languages/delphi-best-practices
+languages/javascript-best-practices
 languages/language-learning
+languages/php-best-practices
 languages/python-best-practices
 languages/typescript-best-practices
 logistics/supply-chain-management

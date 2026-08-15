@@ -147,8 +147,8 @@ python3 context/memory/memory.py --help                # save/search/healthcheck
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable resources
-│   ├── skills/          # 123 skills in 42 categories (SKILL.md)
-│   ├── agents/          # 93 personas in 38 categories
+│   ├── skills/          # 133 skills in 42 categories (SKILL.md)
+│   ├── agents/          # 103 personas in 38 categories
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates
 │   ├── commands/        # 3 documented commands

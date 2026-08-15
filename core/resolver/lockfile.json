@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T19:13:09Z",
+  "generated": "2026-08-15T19:38:45Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -306,6 +306,42 @@
       ],
       "resolved": true
     },
+    "agents/oracle-dba": {
+      "name": "oracle-dba",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "oracle-database",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/postgresql-dba": {
+      "name": "postgresql-dba",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "postgresql-database",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/sql-server-dba": {
+      "name": "sql-server-dba",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "sql-server-database",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "agents/designer-de-interiores": {
       "name": "designer-de-interiores",
       "type": "agents",
@@ -600,6 +636,18 @@
       ],
       "resolved": true
     },
+    "agents/nextjs-developer": {
+      "name": "nextjs-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "nextjs-development",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "agents/ui-designer": {
       "name": "ui-designer",
       "type": "agents",
@@ -702,6 +750,78 @@
       "type": "agents",
       "version": "0.1.0",
       "dependencies": [],
+      "resolved": true
+    },
+    "agents/c-developer": {
+      "name": "c-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "c-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/cpp-developer": {
+      "name": "cpp-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "cpp-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/csharp-developer": {
+      "name": "csharp-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "csharp-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/delphi-developer": {
+      "name": "delphi-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "delphi-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/javascript-developer": {
+      "name": "javascript-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "javascript-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "agents/php-developer": {
+      "name": "php-developer",
+      "type": "agents",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "php-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
       "resolved": true
     },
     "agents/professor-de-idiomas": {
@@ -1433,8 +1553,29 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/oracle-database": {
+      "name": "oracle-database",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/postgresql-database": {
+      "name": "postgresql-database",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/sql-optimization": {
       "name": "sql-optimization",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/sql-server-database": {
+      "name": "sql-server-database",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1714,6 +1855,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/nextjs-development": {
+      "name": "nextjs-development",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/performance": {
       "name": "performance",
       "type": "skills",
@@ -1822,8 +1970,50 @@
       ],
       "resolved": true
     },
+    "skills/c-best-practices": {
+      "name": "c-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/cpp-best-practices": {
+      "name": "cpp-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/csharp-best-practices": {
+      "name": "csharp-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/delphi-best-practices": {
+      "name": "delphi-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/javascript-best-practices": {
+      "name": "javascript-best-practices",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/language-learning": {
       "name": "language-learning",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/php-best-practices": {
+      "name": "php-best-practices",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],

@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 15 ago 2026 16:12:54 -03
+# Generated: sáb 15 ago 2026 16:38:27 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -20,6 +20,9 @@
   (no dependencies)
 
 ## frontend/css-best-practices
+  (no dependencies)
+
+## frontend/nextjs-development
   (no dependencies)
 
 ## frontend/accessibility
@@ -193,6 +196,15 @@
 ## vision/opencv-basics
   (no dependencies)
 
+## database/oracle-database
+  (no dependencies)
+
+## database/postgresql-database
+  (no dependencies)
+
+## database/sql-server-database
+  (no dependencies)
+
 ## database/nosql-modeling
   (no dependencies)
 
@@ -333,10 +345,28 @@
 ## documentation/doc-to-markdown
   (no dependencies)
 
+## languages/cpp-best-practices
+  (no dependencies)
+
 ## languages/language-learning
   (no dependencies)
 
 ## languages/typescript-best-practices
+  (no dependencies)
+
+## languages/javascript-best-practices
+  (no dependencies)
+
+## languages/csharp-best-practices
+  (no dependencies)
+
+## languages/c-best-practices
+  (no dependencies)
+
+## languages/php-best-practices
+  (no dependencies)
+
+## languages/delphi-best-practices
   (no dependencies)
 
 ## languages/python-best-practices

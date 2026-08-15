@@ -17,8 +17,8 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 123 (em 42 categorias) |
-| Agents | 93 (personas em 38 categorias) |
+| Skills | 133 (em 42 categorias) |
+| Agents | 103 (personas em 38 categorias) |
 | Prompts | 10 (em 13 categorias) |
 | Templates | 16 |
 | Playbooks | 3 |
@@ -208,7 +208,7 @@ Todas as skills são copiadas automaticamente para `.opencode/skills/` na
 instalação via CLI (`npx opencode-engineering-kit install`) — novas categorias
 são detectadas recursivamente, sem configuração extra.
 
-### Agents — 93 personas prontas
+### Agents — 103 personas prontas
 
 Agents são **personas** (papel + contexto + estilo de comunicação) para papéis específicos. Exemplos:
 
@@ -340,8 +340,8 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 123 skills em 42 categorias (SKILL.md)
-│   ├── agents/          # 93 personas por categoria
+│   ├── skills/          # 133 skills em 42 categorias (SKILL.md)
+│   ├── agents/          # 103 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates
 │   ├── commands/        # 3 comandos documentados
