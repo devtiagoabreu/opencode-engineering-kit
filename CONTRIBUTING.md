@@ -2,6 +2,18 @@
 
 Thank you for considering contributing! Every contribution is valuable.
 
+## Curation Policy
+
+This kit stands out for being **verified, not mass-generated**. Every asset that lands on `main` follows these rules:
+
+1. **Verified provenance** — every asset carries a `provenance` frontmatter block (`source`, `url`, `license`, `verified`) pointing to the official source when one exists. Community content is marked as `OpenCode Engineering Kit (community)` with a verification date.
+2. **Human-reviewed, one at a time** — no bulk imports. Each skill/agent is reviewed for correctness, safety and usefulness before merging. Quality over quantity.
+3. **Secure by default** — asset content must not embed secrets, download-and-execute patterns (`curl|bash`, `irm|iex`), or unverified third-party code. The `core/security/skill-scan.sh` gate runs on every PR.
+4. **Tested** — assets must pass the quality gates (`scripts/test.sh`, `core/quality/validate.sh`) and include at least one practical example.
+5. **Documented** — new categories and assets are documented in the README and indexed (`scripts/add-provenance.sh`, registry/discovery indexes).
+
+If you are proposing content from another repository, always attribute the original source in `provenance.url`.
+
 ## Contribution Types
 
 ### 1. New Skill
@@ -12,8 +24,10 @@ To create a new skill:
 2. Choose the appropriate category
 3. Create a directory in `assets/skills/<category>/`
 4. Create the `SKILL.md` file following the template
-5. Add practical examples
-6. Submit a PR
+5. Add the `provenance` frontmatter block (source, url, license, verified date)
+6. Add practical examples
+7. Run the skill security scan (`core/security/skill-scan.sh`) and quality gates
+8. Submit a PR
 
 #### SKILL.md Template
 
@@ -194,7 +208,10 @@ Create a Pull Request with:
 ## PR Checklist
 
 - [ ] Code follows style guide
-- [ ] Tests pass locally
+- [ ] Tests pass locally (`scripts/test.sh`)
+- [ ] Quality gates pass (`core/quality/validate.sh`)
+- [ ] Skill security scan passes (`core/security/skill-scan.sh`)
+- [ ] `provenance` block present (source, url, license, verified)
 - [ ] Documentation updated
 - [ ] At least 1 example included
 - [ ] Commit messages follow Conventional Commits

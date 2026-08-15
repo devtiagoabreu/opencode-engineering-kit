@@ -536,6 +536,6 @@ This project is licensed under the MIT License - see the [LICENSE](./LICENSE) fi
 ## Acknowledgments
 
 - [OpenCode](https://opencode.ai) for the platform
-- [Shokunin](https://github.com/hirefrank/shokunin) for inspiration
+- [Shokunin](https://github.com/EliasOulkadi/shokunin) for inspiration
 - [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill) for inspiration
 - All contributors who help improve this project

@@ -34,7 +34,7 @@
 
 ### 1.1 What is OpenCode Engineering Kit
 
-OpenCode Engineering Kit is an open source library providing Skills, Agents, Commands, Prompts, Templates, and Context for the OpenCode ecosystem. Inspired by [Shokunin](https://github.com/hirefrank/shokunin) and [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill), it focuses on providing reusable, high-quality resources for AI-assisted development.
+OpenCode Engineering Kit is an open source library providing Skills, Agents, Commands, Prompts, Templates, and Context for the OpenCode ecosystem. Inspired by [Shokunin](https://github.com/EliasOulkadi/shokunin) and [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill), it focuses on providing reusable, high-quality resources for AI-assisted development.
 
 ### 1.2 Problem It Solves
 
@@ -1604,7 +1604,7 @@ Licensed under MIT License
 |-----------|-------------|------|
 | OpenCode Docs | Official documentation | docs.opencode.ai |
 | Open Agent Skills Specification | Skills specification | github.com/open-agent-skills |
-| Shokunin | 62 skills for AI | github.com/hirefrank/shokunin |
+| Shokunin | 62 skills for AI | github.com/EliasOulkadi/shokunin |
 | The Hive Skill | 79 skills for AI | github.com/beingaivanshoo/the-hive-skill |
 | Conventional Commits | Commit pattern | conventionalcommits.org |
 | Semantic Versioning | Versioning | semver.org |

@@ -11,7 +11,7 @@
 
 The **OpenCode Engineering Kit** is an open source library of reusable assets for developers using [OpenCode](https://opencode.ai) (and compatible tools). Instead of recreating configs, prompts, and workflows from scratch on every project, you install the kit and immediately get a standardized, tested set of **skills, agents, prompts, templates, playbooks, commands, and context**.
 
-Inspired by projects like [Shokunin](https://github.com/hirefrank/shokunin) and [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill), the kit is **simple (plain Markdown), modular, portable, and model-agnostic**.
+Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) and [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill), the kit is **simple (plain Markdown), modular, portable, and model-agnostic**.
 
 > **README (Português):** [README.md](./README.md)
 
@@ -449,6 +449,6 @@ MIT — see [LICENSE](./LICENSE).
 ## Acknowledgments
 
 - [OpenCode](https://opencode.ai) for the platform
-- [Shokunin](https://github.com/hirefrank/shokunin) for inspiration
+- [Shokunin](https://github.com/EliasOulkadi/shokunin) for inspiration
 - [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill) for inspiration
 - Everyone who contributes to the project

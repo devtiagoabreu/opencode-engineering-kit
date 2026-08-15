@@ -63,7 +63,7 @@ author: OpenCode Community
 |-----------|-------------|------|
 | OpenCode Docs | Official documentation | docs.opencode.ai |
 | Open Agent Skills Specification | Skills specification | github.com/open-agent-skills |
-| Shokunin | 62 skills for AI | github.com/hirefrank/shokunin |
+| Shokunin | 62 skills for AI | github.com/EliasOulkadi/shokunin |
 | The Hive Skill | 79 skills for AI | github.com/beingaivanshoo/the-hive-skill |
 | Conventional Commits | Commit standard | conventionalcommits.org |
 | Semantic Versioning | Semantic versioning | semver.org |
