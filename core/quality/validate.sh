@@ -51,6 +51,11 @@ main() {
     check "No markdown lint errors" "npx markdownlint-cli '**/*.md' --config $ROOT_DIR/.markdownlint.json 2>&1 | grep -q 'error' || true"
     echo
     
+    # Level 2b: Security
+    echo "Level 2b: Security"
+    check "Skill content security scan" "bash $ROOT_DIR/core/security/skill-scan.sh"
+    echo
+    
     # Level 3: Testing
     echo "Level 3: Testing"
     check "All tests pass" "$ROOT_DIR/scripts/test.sh"

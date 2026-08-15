@@ -154,7 +154,7 @@ wifi:
   password: !secret wifi_password
   fallback:
     ssid: "Relais-Garagem-AP"
-    password: "12345678"
+    password: "<defina-uma-senha-forte-aqui>"
 
 api:
   encryption:

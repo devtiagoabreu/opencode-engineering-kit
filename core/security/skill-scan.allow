@@ -1,0 +1,22 @@
+# Skill content scan allowlist
+#
+# Format: "<scope>:<regex>"
+#   scope: "all" or a path substring of the file being scanned
+#   regex: extended regex matched against the file content
+# Lines starting with '#' are comments.
+#
+# Only add an entry when the match is a legitimate, non-executable reference
+# (a search pattern, a threat description, or example placeholder data).
+
+# git-advanced: command that SEARCHES for private keys, not a real key
+tools/git-advanced:^grep -rn .*BEGIN PRIVATE KEY
+
+# skill-spector: "data exfiltration" is a listed threat category, not an action
+security/skill-spector:exfiltrat
+
+# e2e-testing: placeholder example credential inside a test scenario
+testing/e2e-testing:password123
+
+# especialista-em-automacao-residencial: ESPHome example config using !secret;
+# the quoted value is an explicit placeholder to be replaced
+especialista-em-automacao-residencial:<defina-uma-senha-forte-aqui>

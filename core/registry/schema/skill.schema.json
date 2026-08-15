@@ -114,6 +114,28 @@
           "description": "Date the source was verified (YYYY-MM-DD)"
         }
       }
+    },
+    "security": {
+      "type": "object",
+      "description": "Security posture of the skill",
+      "properties": {
+        "risk_level": {
+          "type": "string",
+          "enum": ["none", "low", "medium", "high"],
+          "description": "Risk of running this skill's instructions (none = pure guidance, high = executes untrusted input)"
+        },
+        "permissions": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          },
+          "description": "Permissions or capabilities the skill may require (e.g. filesystem, network, secrets)"
+        },
+        "audited": {
+          "type": "boolean",
+          "description": "Whether the skill content passed the security content scan"
+        }
+      }
     }
   }
 }
