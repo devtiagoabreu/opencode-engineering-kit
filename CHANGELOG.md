@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Automatic skill/persona usage** (`context/AUTO_USAGE.md`): the installed kit now registers an `auto_usage` instruction in `opencode.json > instructions`, so OpenCode always checks the installed skills/personas and uses the most productive one automatically (no commands needed), informing the user with a short notice; disabling is a one-line config change
 - **Rich CLI** (`cli/`): `install`, `list`, `search`, `doctor`, `upgrade`, `export` commands; one-line installer (`install.sh`) with `-y` auto-confirm and atomic skills/agents/scripts install; drift-aware `update.sh` with rollback safety
 - **Declarative manifest** (`core/registry/manifest.json` + `scripts/generate-manifest.sh`) with commit + content hashes for drift detection
 - **Multi-harness export** (`cli export --harness`) producing prompts for opencode, claude-code and cursor

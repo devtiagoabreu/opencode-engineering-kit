@@ -295,7 +295,7 @@ Prompts focados para interações únicas: code review, debugging, refatoração
 
 ### Contexto (`context/`)
 
-15 arquivos de contexto otimizados para IA: `project`, `stack`, `architecture`, `conventions`, `decisions`, `documentation`, `git`, `glossary`, `naming`, `performance`, `security`, `style_guide`, `coding_rules`, **`personas`** (índice de todas as personas) e **`HISTORY`** (histórico de mudanças do kit). O script `scripts/persona-scaffold.sh` cria uma persona nova com contexto e registra automaticamente no histórico.
+17 arquivos de contexto otimizados para IA: `project`, `stack`, `architecture`, `conventions`, `decisions`, `documentation`, `git`, `glossary`, `naming`, `performance`, `security`, `style_guide`, `coding_rules`, **`personas`** (índice de todas as personas), **`HISTORY`** (histórico de mudanças do kit) e **`AUTO_USAGE`** (uso automático de skills/personas — o OpenCode verifica e usa os assets relevantes sozinho, informando você com um aviso curto). O script `scripts/persona-scaffold.sh` cria uma persona nova com contexto e registra automaticamente no histórico.
 
 ### Plugins
 
@@ -350,7 +350,7 @@ opencode-engineering-kit/
 │   ├── bundles/         # 2 pacotes prontos
 │   ├── compositions/    # 2 equipes de agentes
 │   └── prompt-chains/   # 2 cadeias de prompts
-├── context/             # 15 arquivos de contexto para IA (inclui personas + HISTORY)
+├── context/             # 17 arquivos de contexto para IA (inclui personas + HISTORY + AUTO_USAGE)
 ├── core/                # Infraestrutura do kit
 │   ├── registry/        # Registro + schema + índices
 │   ├── discovery/       # Busca e descoberta

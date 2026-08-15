@@ -9,20 +9,21 @@
 1. [Introduction](#introduction)
 2. [Installation](#installation)
 3. [Quick Start](#quick-start)
-4. [Worked Example — Next.js with GitHub and Vercel](#worked-example--nextjs-with-github-and-vercel)
-5. [Skills](#skills)
-6. [Agents](#agents)
-7. [Prompts](#prompts)
-8. [Templates](#templates)
-9. [Commands](#commands)
-10. [Playbooks and Recipes](#playbooks-and-recipes)
-11. [Discovery System](#discovery-system)
-12. [CLI](#cli)
-13. [SkillPointer and Vault](#skillpointer-and-vault)
-14. [Session Memory](#session-memory)
-15. [Marketplace](#marketplace)
-16. [Security](#security)
-17. [Troubleshooting](#troubleshooting)
+4. [Automatic Usage](#automatic-usage)
+5. [Worked Example — Next.js with GitHub and Vercel](#worked-example--nextjs-with-github-and-vercel)
+6. [Skills](#skills)
+7. [Agents](#agents)
+8. [Prompts](#prompts)
+9. [Templates](#templates)
+10. [Commands](#commands)
+11. [Playbooks and Recipes](#playbooks-and-recipes)
+12. [Discovery System](#discovery-system)
+13. [CLI](#cli)
+14. [SkillPointer and Vault](#skillpointer-and-vault)
+15. [Session Memory](#session-memory)
+16. [Marketplace](#marketplace)
+17. [Security](#security)
+18. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -45,7 +46,8 @@ The **OpenCode Engineering Kit** is an open source library of reusable resources
 - **3 Playbooks** — multi-step workflows
 - **2 Recipes** — complete project setups
 - **2 Bundles**, **2 Compositions**, **2 Prompt chains**
-- **15 context files** + optional persistent memory (SQLite)
+- **17 context files** + optional persistent memory (SQLite)
+- **Automatic usage** — OpenCode checks and uses relevant skills/personas on its own
 - **SkillPointer/Vault** — on-demand loading of curated content
 
 ---
@@ -131,6 +133,38 @@ cd opencode-engineering-kit
 ```bash
 cp -r assets/skills/devops/docker-best-practices/ /your/project/
 ```
+
+---
+
+## Automatic Usage
+
+When the kit is **installed in your project** (`npx opencode-engineering-kit install`), it works **automatically**: OpenCode checks on its own whether a relevant skill, persona (agent), prompt, playbook or recipe exists for the task and **uses it without you asking** — with only a short notice of what was used.
+
+### How it works
+
+The installer copies `context/AUTO_USAGE.md` to `.opencode/context/auto_usage.md` and registers it in `opencode.json` under `instructions`. From then on, for each task the assistant:
+
+1. **Checks** for a relevant skill in `.opencode/skills/` (e.g., `nextjs-development`, `postgresql-database`).
+2. **Checks** for a relevant persona in `.opencode/agents/` (e.g., `nextjs-developer`, `postgresql-dba`).
+3. **Uses automatically** whatever is most productive, without asking.
+4. **Keeps you informed** with a short notice, e.g., `Using the skill nextjs-development for this component` or `Acting as postgresql-dba to review this query`.
+
+You do **not** need to run `search`, `list` or `doctor` for the kit to work — those tools remain available for lookup and diagnostics, but everyday usage is automatic.
+
+### Automatic behavior examples
+
+| Task | What OpenCode uses on its own |
+|------|-------------------------------|
+| Implement a search endpoint | Skill `nextjs-development` |
+| Tune a slow query | Persona `postgresql-dba` |
+| Build a C# API | Skill `csharp-best-practices` + persona `csharp-developer` |
+| Review a PR | Persona `qa-engineer` or `code-reviewer` |
+| Set up CI/CD | Skill `ci-cd-pipeline` |
+| Audit security | Skill `owasp-top-10` |
+
+### Disabling automatic usage
+
+If you prefer manual control, remove the `.opencode/context/auto_usage.md` entry from `opencode.json > instructions` (or delete the file) and restart OpenCode. All assets remain available for manual use.
 
 ---
 

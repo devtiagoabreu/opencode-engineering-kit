@@ -1,14 +1,14 @@
 {
   "schema_version": "1.0.0",
   "version": "0.1.0",
-  "commit": "dac9a89",
-  "generated": "2026-08-15T19:36:27Z",
+  "commit": "f736b86",
+  "generated": "2026-08-15T19:46:08Z",
   "counts": {
     "skills": 133,
     "agents": 103,
     "prompts": 10,
     "templates": 4,
-    "context_files": 16,
+    "context_files": 17,
     "pointer_skills": 3,
     "vault_entries": 3
   },
@@ -47,6 +47,6 @@
     "core/discovery/index/agents.txt": "ae3b5ea2ba89cae05b82c703db0fb0e3552746e56715946c8706e23589f26152",
     "core/registry/index/skills.txt": "f1ba9f37124055f928871821d52740bc4846439fb3126c5887c2571e0e7ea1f6",
     "core/registry/index/agents.txt": "4d58ea96e7165e735a091c47139f4370f2c58ed102643422a46a465e1f9ed561",
-    "core/resolver/lockfile.json": "266f77cda67c1ac17a885813f72785c7d681d94b44d42a6fa3dc1b84c4c3a2fa"
+    "core/resolver/lockfile.json": "8cc7654d436213d3a9749fe28b6ec086664b7a1792c1e4344edd92f83d0d4d73"
   }
 }

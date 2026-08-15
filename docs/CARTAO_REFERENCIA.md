@@ -21,6 +21,18 @@ cd opencode-engineering-kit
 
 ---
 
+## Uso Automático
+
+Depois de instalar no projeto, o OpenCode **verifica e usa sozinho** a skill/persona relevante (registrado via `context/AUTO_USAGE.md` → `opencode.json > instructions`). Sem comandos — apenas um aviso curto do que foi usado.
+
+- `Implementar endpoint Next.js` → skill `nextjs-development`
+- `Query lenta` → persona `postgresql-dba`
+- `API em C#` → skill `csharp-best-practices` + persona `csharp-developer`
+- `Revisar PR` → persona `qa-engineer`
+- Desativar: remover `.opencode/context/auto_usage.md` de `instructions` e reiniciar
+
+---
+
 ## CLI
 
 ```bash
