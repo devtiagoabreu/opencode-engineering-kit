@@ -22,7 +22,9 @@ jobs:
       - name: Check Shell scripts
         uses: ludeeus/action-shellcheck@master
         with:
-          scandir: './scripts'
+          scandir: './scripts ./core ./tests .'
+          check_templates: true
+          severity: warning
       
       - name: Check YAML
         uses: ibiqlik/action-yamllint@v3
@@ -38,6 +40,9 @@ jobs:
       
       - name: Run all tests
         run: ./scripts/test.sh
+      
+      - name: Run CLI tests
+        run: cd cli && npm test
       
       - name: Run type checks
         run: ./scripts/typecheck.sh

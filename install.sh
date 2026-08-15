@@ -2,11 +2,20 @@
 set -euo pipefail
 
 # OpenCode Engineering Kit - Installation Script
-# Usage: curl -fsSL https://raw.githubusercontent.com/opencode-ai/opencode-engineering-kit/main/install.sh | bash
+# Usage (one line):
+#   curl -fsSL https://raw.githubusercontent.com/devtiagoabreu/opencode-engineering-kit/main/install.sh | bash -s -- -y
+#
+# Options:
+#   -y                 Non-interactive install (no prompts)
+#   -d <dir>           Install to a custom directory (default: ~/.opencode-engineering-kit)
+#   --check            Verify the installed kit (skill scan + tests)
+#   -h, --help         Show this help
 
-REPO_URL="https://github.com/opencode-ai/opencode-engineering-kit.git"
-INSTALL_DIR="${HOME}/.opencode-engineering-kit"
+REPO_URL="https://github.com/devtiagoabreu/opencode-engineering-kit.git"
+INSTALL_DIR="${KIT_INSTALL_DIR:-${HOME}/.opencode-engineering-kit}"
 TEMP_DIR="/tmp/opencode-engineering-kit-install"
+ASSUME_YES=0
+RUN_CHECK=0
 
 # Colors
 RED='\033[0;31m'
@@ -84,9 +93,39 @@ install() {
     log ""
     log "Or run directly:"
     log "  $INSTALL_DIR/scripts/bootstrap.sh"
+
+    if [[ "$RUN_CHECK" -eq 1 ]]; then
+        log "Verifying installation..."
+        bash "$INSTALL_DIR/core/security/skill-scan.sh"
+        log "Verification complete."
+    fi
+}
+
+show_help() {
+    sed -n '4,13p' "$0" | sed 's/^# \{0,1\}//'
 }
 
 main() {
+    while [[ $# -gt 0 ]]; do
+        case "$1" in
+            -y) ASSUME_YES=1 ;;
+            -d) INSTALL_DIR="${2:?usage: -d <dir>}"; shift ;;
+            --check) RUN_CHECK=1 ;;
+            -h|--help) show_help; exit 0 ;;
+            *) error "unknown option: $1" ;;
+        esac
+        shift
+    done
+
+    if [[ "$ASSUME_YES" -eq 0 ]] && [[ -d "$INSTALL_DIR" ]]; then
+        echo -e "${YELLOW}[WARN]${NC} $INSTALL_DIR already exists."
+        read -r -p "Reinstall (overwrite)? [y/N] " answer
+        if [[ "${answer:-N}" != "y" && "${answer:-N}" != "Y" ]]; then
+            log "Installation cancelled."
+            exit 0
+        fi
+    fi
+
     check_prerequisites
     install
 }
