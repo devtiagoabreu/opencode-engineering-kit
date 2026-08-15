@@ -37,7 +37,11 @@ Once installed into a project, OpenCode **checks and uses on its own** the relev
 
 ```bash
 npx opencode-engineering-kit install                  # install into current project
+npx opencode-engineering-kit install --global         # install globally (~/.config/opencode/)
 npx opencode-engineering-kit install --only skills    # skills only
+npx opencode-engineering-kit status                   # where installed + enabled state
+npx opencode-engineering-kit start                    # re-enable the kit
+npx opencode-engineering-kit stop                     # disable (keeps files)
 npx opencode-engineering-kit list --type skills       # list skills
 npx opencode-engineering-kit search "docker"          # search assets
 npx opencode-engineering-kit doctor                   # check kit integrity
@@ -159,11 +163,11 @@ python3 context/memory/memory.py --help                # save/search/healthcheck
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable resources
-│   ├── skills/          # 133 skills in 42 categories (SKILL.md)
+│   ├── skills/          # 134 skills in 42 categories (SKILL.md)
 │   ├── agents/          # 103 personas in 38 categories
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates
-│   ├── commands/        # 3 documented commands
+│   ├── commands/        # 4 documented commands
 │   ├── playbooks/       # 3 multi-step workflows
 │   ├── recipes/         # 2 complete solutions
 │   ├── bundles/         # 2 ready-made packages

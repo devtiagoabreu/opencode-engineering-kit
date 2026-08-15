@@ -125,6 +125,7 @@ testing/python-testing
 testing/unit-testing
 tools/code-knowledge-graph
 tools/git-advanced
+tools/ocekit-manager
 tools/repo-to-llm
 tools/session-memory
 tools/terminal-productivity

@@ -55,6 +55,7 @@
   - aws-cloud-architecture
   - session-memory
   - terminal-productivity
+  - ocekit-manager
   - repo-to-llm
   - git-advanced
   - code-knowledge-graph

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T19:38:45Z",
+  "generated": "2026-08-15T20:08:15Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -2372,6 +2372,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/ocekit-manager": {
+      "name": "ocekit-manager",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/repo-to-llm": {

@@ -10,11 +10,12 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url));
 export const DEFAULT_REPO = "devtiagoabreu/opencode-engineering-kit";
 export const DEFAULT_BRANCH = "main";
 export const HELP = `
-OpenCode Engineering Kit - project installer
+OpenCode Engineering Kit - installer and lifecycle manager
 
 Installs skills, agents, commands, context, prompts, playbooks, recipes and
 templates from the kit into the OpenCode config of an existing project
-(.opencode/), wiring it up through opencode.json.
+(.opencode/), wiring it up through opencode.json. Can also be installed
+globally (~/.config/opencode/), or disabled/enabled afterwards.
 
 Usage:
   opencode-engineering-kit install [options]
@@ -23,15 +24,35 @@ Usage:
 Options:
   --target <dir>    Target project directory (default: current directory)
   --source <dir>    Use a local kit checkout instead of downloading from GitHub
-  --repo <repo>     GitHub repository to fetch the kit from (default: ${DEFAULT_REPO})
+  --repo <repo>     GitHub repo (owner/repo) or URL to fetch from (default: ${DEFAULT_REPO})
   --branch <name>   Git branch/tag of the kit (default: ${DEFAULT_BRANCH})
+  --global          Install into the global OpenCode config (~/.config/opencode/)
   --only <list>     Comma-separated subset: skills,agents,commands,context,assets
   --force           Overwrite existing files in .opencode/
   --dry-run         Print what would be done without touching the filesystem
   --verbose         Print every copied file
   --version         Print version
   --help            Show this help
+
+Lifecycle (after install):
+  opencode-engineering-kit status            Show where the kit is installed and enabled
+  opencode-engineering-kit start             Re-enable the kit (restore wiring)
+  opencode-engineering-kit stop              Disable the kit (keep files, remove wiring)
 `;
+
+export function globalConfigDir() {
+  return process.env.KIT_GLOBAL_DIR || path.join(os.homedir(), ".config", "opencode");
+}
+
+export function normalizeRepo(repo) {
+  if (!repo) return DEFAULT_REPO;
+  let r = String(repo).trim();
+  const url = r.match(/^https?:\/\/(www\.)?github\.com\/([^/]+\/[^/]+?)(?:\.git)?\/?$/);
+  if (url) return url[2];
+  const ssh = r.match(/^git@github\.com:([^/]+\/[^/]+?)(?:\.git)?$/);
+  if (ssh) return ssh[1];
+  return r.replace(/\.git$/, "").replace(/\/$/, "");
+}
 
 const GROUPS = {
   skills: { from: "assets/skills", to: "skills", mode: "dir" },
@@ -50,7 +71,7 @@ function warn(msg) {
 }
 
 export function parseArgs(argv) {
-  const args = { target: process.cwd(), only: Object.keys(GROUPS), force: false, dryRun: false, verbose: false };
+  const args = { target: process.cwd(), only: Object.keys(GROUPS), force: false, dryRun: false, verbose: false, global: false };
   const positional = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -62,6 +83,7 @@ export function parseArgs(argv) {
       case "--repo": args.repo = next(); break;
       case "--branch": args.branch = next(); break;
       case "--only": args.only = String(next()).split(",").filter(Boolean); break;
+      case "--global": args.global = true; break;
       case "--force": args.force = true; break;
       case "--dry-run": args.dryRun = true; break;
       case "--verbose": args.verbose = true; break;
@@ -71,6 +93,7 @@ export function parseArgs(argv) {
     }
   }
   if (!args.repo) args.repo = DEFAULT_REPO;
+  else args.repo = normalizeRepo(args.repo);
   if (!args.branch) args.branch = DEFAULT_BRANCH;
   return args;
 }
@@ -158,18 +181,18 @@ function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
   return { created, skipped };
 }
 
-function copyGroup(source, target, group, opts) {
+function copyGroupTo(source, destRoot, group, opts) {
   const src = path.join(source, group.from);
   if (!fs.existsSync(src)) {
     warn(`group "${group.to}" skipped: ${group.from} not found in kit`);
     return { created: [], skipped: [] };
   }
-  const dest = path.join(target, ".opencode", group.to);
+  const dest = path.join(destRoot, group.to);
   if (group.mode === "flatten") return flattenAgentFiles(src, dest, opts);
   return copyDir(src, dest, opts);
 }
 
-function mergeConfig(target, ctxFiles) {
+function mergeConfig(target, ctxFiles, { global = false } = {}) {
   const cfgPath = path.join(target, "opencode.json");
   let cfg = { $schema: "https://opencode.ai/config.json" };
   if (fs.existsSync(cfgPath)) {
@@ -177,10 +200,11 @@ function mergeConfig(target, ctxFiles) {
   }
   cfg.skills = cfg.skills ?? {};
   cfg.skills.paths = cfg.skills.paths ?? [];
-  if (!cfg.skills.paths.includes(".opencode/skills")) cfg.skills.paths.push(".opencode/skills");
+  const skillsPath = global ? path.join(target, "skills") : ".opencode/skills";
+  if (!cfg.skills.paths.includes(skillsPath)) cfg.skills.paths.push(skillsPath);
   cfg.instructions = cfg.instructions ?? [];
   for (const f of ctxFiles) {
-    const rel = `.opencode/context/${f}`;
+    const rel = global ? path.join(target, "context", f) : `.opencode/context/${f}`;
     if (!cfg.instructions.includes(rel)) cfg.instructions.push(rel);
   }
   return cfg;
@@ -198,9 +222,12 @@ export async function install(args) {
     if (!fs.existsSync(source)) throw new Error(`source directory not found: ${source}`);
   }
 
-  const target = path.resolve(args.target);
-  if (!fs.existsSync(target)) throw new Error(`target directory not found: ${target}`);
-  if (!args.dryRun && !fs.existsSync(path.join(target, ".git"))) {
+  const global = !!args.global;
+  const target = global ? globalConfigDir() : path.resolve(args.target);
+  if (!fs.existsSync(target) && !global) throw new Error(`target directory not found: ${target}`);
+  if (global) fs.mkdirSync(target, { recursive: true });
+  const destRoot = global ? target : path.join(target, ".opencode");
+  if (!args.dryRun && !global && !fs.existsSync(path.join(target, ".git"))) {
     warn(`"${target}" does not look like a git repository (no .git). Installing anyway.`);
   }
 
@@ -212,7 +239,7 @@ export async function install(args) {
   for (const name of Object.keys(GROUPS)) {
     if (!args.only.includes(name)) continue;
     const group = GROUPS[name];
-    const result = copyGroup(source, target, group, opts);
+    const result = copyGroupTo(source, destRoot, group, opts);
     summary[name] = result;
     totalCreated += result.created.length;
     totalSkipped += result.skipped.length;
@@ -224,7 +251,7 @@ export async function install(args) {
     ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md")).sort()
     : [];
 
-  const cfg = mergeConfig(target, ctxFiles);
+  const cfg = mergeConfig(target, ctxFiles, { global });
   if (args.dryRun) {
     log(`dry-run: would write ${path.relative(process.cwd(), path.join(target, "opencode.json"))}`);
   } else {
@@ -234,7 +261,7 @@ export async function install(args) {
 
   if (sourceCleanup) sourceCleanup();
 
-  log(`done: ${totalCreated} file(s) installed, ${totalSkipped} skipped, into .opencode/ of ${target}`);
+  log(`done: ${totalCreated} file(s) installed, ${totalSkipped} skipped, into ${global ? "global config" : `.opencode/ of ${target}`}`);
   log("restart opencode to pick up the new config.");
   return { summary, cfg, target };
 }

@@ -10,20 +10,21 @@
 2. [Installation](#installation)
 3. [Quick Start](#quick-start)
 4. [Automatic Usage](#automatic-usage)
-5. [Worked Example — Next.js with GitHub and Vercel](#worked-example--nextjs-with-github-and-vercel)
-6. [Skills](#skills)
-7. [Agents](#agents)
-8. [Prompts](#prompts)
-9. [Templates](#templates)
-10. [Commands](#commands)
-11. [Playbooks and Recipes](#playbooks-and-recipes)
-12. [Discovery System](#discovery-system)
-13. [CLI](#cli)
-14. [SkillPointer and Vault](#skillpointer-and-vault)
-15. [Session Memory](#session-memory)
-16. [Marketplace](#marketplace)
-17. [Security](#security)
-18. [Troubleshooting](#troubleshooting)
+5. [Install and Manage the Kit by Voice Command](#install-and-manage-the-kit-by-voice-command)
+6. [Worked Example — Next.js with GitHub and Vercel](#worked-example--nextjs-with-github-and-vercel)
+7. [Skills](#skills)
+8. [Agents](#agents)
+9. [Prompts](#prompts)
+10. [Templates](#templates)
+11. [Commands](#commands)
+12. [Playbooks and Recipes](#playbooks-and-recipes)
+13. [Discovery System](#discovery-system)
+14. [CLI](#cli)
+15. [SkillPointer and Vault](#skillpointer-and-vault)
+16. [Session Memory](#session-memory)
+17. [Marketplace](#marketplace)
+18. [Security](#security)
+19. [Troubleshooting](#troubleshooting)
 
 ---
 
@@ -38,11 +39,11 @@ The **OpenCode Engineering Kit** is an open source library of reusable resources
 
 ### What's Included
 
-- **133 Skills** — complete guides in 42 categories
+- **134 Skills** — complete guides in 42 categories
 - **103 Agents** — specialized AI personas in 38 categories
 - **10 Prompts** — reusable prompt templates
-- **16 Templates** — project and component templates
-- **3 Commands** — documented actions for common tasks
+- **16 Templates** — templates for projects and components
+- **4 Commands** — documented actions for common tasks
 - **3 Playbooks** — multi-step workflows
 - **2 Recipes** — complete project setups
 - **2 Bundles**, **2 Compositions**, **2 Prompt chains**
@@ -165,6 +166,47 @@ You do **not** need to run `search`, `list` or `doctor` for the kit to work — 
 ### Disabling automatic usage
 
 If you prefer manual control, remove the `.opencode/context/auto_usage.md` entry from `opencode.json > instructions` (or delete the file) and restart OpenCode. All assets remain available for manual use.
+
+---
+
+## Install and Manage the Kit by Voice Command
+
+You can install and manage the kit **directly in the OpenCode chat**, without typing commands by hand. Just say (in PT or EN):
+
+- `instale o ocekit do https://github.com/...` — OpenCode asks whether you want **global** (all projects) or **this project only**, installs it, and tells you the result.
+- `status ocekit` — shows where the kit is installed and whether it is enabled.
+- `stop ocekit` — disables the kit (keeps the files, removes the `opencode.json` wiring).
+- `start ocekit` — re-enables the kit.
+
+### How it works
+
+The kit ships the **`ocekit-manager`** skill (auto-loaded when you mention "ocekit") and the **`/ocekit`** command. Both drive the CLI under the hood:
+
+```bash
+# Install into the current project (creates .opencode/ here)
+npx opencode-engineering-kit install --repo <owner/repo>
+
+# Install globally (into ~/.config/opencode/)
+npx opencode-engineering-kit install --global --repo <owner/repo>
+
+# Check state
+npx opencode-engineering-kit status
+
+# Disable / re-enable (keeps files)
+npx opencode-engineering-kit stop
+npx opencode-engineering-kit start
+```
+
+`--repo` accepts `owner/repo`, `https://github.com/owner/repo` or `git@github.com:owner/repo.git`. If you don't pass a link, it defaults to `devtiagoabreu/opencode-engineering-kit`.
+
+### Global vs project
+
+| Scope | Where it installs | Applies to |
+|-------|-------------------|------------|
+| **Project** | `.opencode/` + project `opencode.json` | Only that repository |
+| **Global** | `~/.config/opencode/` (skills, agents, context) | All your projects |
+
+After any change the kit reminds you to **restart OpenCode**.
 
 ---
 
@@ -379,7 +421,7 @@ Customize the files for your needs.
 
 ## Commands
 
-Commands are documented actions for common OpenCode tasks: `/lint`, `/review`, `/test`. They live in `assets/commands/`.
+Commands are documented actions for common OpenCode tasks: `/lint`, `/review`, `/test`, `/ocekit`. They live in `assets/commands/`.
 
 ```bash
 ls assets/commands/

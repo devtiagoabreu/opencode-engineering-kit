@@ -61,6 +61,15 @@ Depois da instalação, os assets do kit ficam disponíveis no projeto:
 - **Documentar** → `documentation`, `technical-writer`
 - **Configurar CI/CD ou deploy** → `ci-cd-pipeline`, `docker-best-practices`
 - **Segurança** → `owasp-top-10`, `secure-coding`
+- **Instalar/gerenciar o próprio kit** → skill `ocekit-manager` (use quando o
+  usuário disser "instale ocekit", "instale o ocekit do <link>", "status
+  ocekit", "start ocekit" ou "stop ocekit"). Pergunte ao usuário se quer
+  instalação **global** (`~/.config/opencode`) ou **só neste projeto**
+  (`.opencode/`), depois execute:
+  `npx opencode-engineering-kit install` (projeto) ou
+  `npx opencode-engineering-kit install --global` (global). Para consultar o
+  estado use `npx opencode-engineering-kit status`; para desativar/reativar use
+  `stop`/`start`. Informe o usuário e lembre de reiniciar o opencode.
 
 ## O que NÃO fazer
 

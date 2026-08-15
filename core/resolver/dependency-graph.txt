@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 15 ago 2026 16:38:27 -03
+# Generated: sáb 15 ago 2026 17:07:58 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -170,6 +170,9 @@
   (no dependencies)
 
 ## tools/terminal-productivity
+  (no dependencies)
+
+## tools/ocekit-manager
   (no dependencies)
 
 ## tools/repo-to-llm

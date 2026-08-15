@@ -8,6 +8,7 @@ import { main as searchMain } from "./search.js";
 import { main as doctorMain } from "./doctor.js";
 import { main as upgradeMain } from "./upgrade.js";
 import { main as exportMain } from "./export.js";
+import { mainStatus, mainStart, mainStop } from "./manage.js";
 
 const __dirname = path.dirname(fileURLToPath(import.meta.url));
 
@@ -18,7 +19,10 @@ Usage:
   opencode-engineering-kit <command> [options]
 
 Commands:
-  install     Install skills, agents, commands, context into .opencode/ of a project
+  install     Install skills, agents, commands, context into .opencode/ of a project (or globally with --global)
+  status      Show where the kit is installed and whether it is enabled
+  start       Re-enable the kit (restore opencode.json wiring)
+  stop        Disable the kit (keep files, remove opencode.json wiring)
   list        List assets (skills, agents, prompts, templates) from a kit checkout
   search      Search asset names and descriptions by keyword
   doctor      Check the kit integrity (schema, indexes, security scan, dependencies)
@@ -34,6 +38,9 @@ export function main(argv) {
   const [cmd, ...rest] = argv;
   switch (cmd) {
     case "install": return installMain(rest);
+    case "status": return mainStatus(rest);
+    case "start": return mainStart(rest);
+    case "stop": return mainStop(rest);
     case "list": return listMain(rest);
     case "search": return searchMain(rest);
     case "doctor": return doctorMain(rest);

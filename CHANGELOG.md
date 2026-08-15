@@ -9,6 +9,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Added
 
+- **Ocekit lifecycle via natural language**: new `ocekit-manager` skill (auto-triggered by "instale ocekit", "stop ocekit", "start ocekit", "status ocekit") and `/ocekit` command; CLI gains `install --global` (into `~/.config/opencode/`), `status`, `start` and `stop` commands (toggle `opencode.json` wiring without deleting files), and `--repo` accepts full GitHub/SSH URLs
 - **Automatic skill/persona usage** (`context/AUTO_USAGE.md`): the installed kit now registers an `auto_usage` instruction in `opencode.json > instructions`, so OpenCode always checks the installed skills/personas and uses the most productive one automatically (no commands needed), informing the user with a short notice; disabling is a one-line config change
 - **Rich CLI** (`cli/`): `install`, `list`, `search`, `doctor`, `upgrade`, `export` commands; one-line installer (`install.sh`) with `-y` auto-confirm and atomic skills/agents/scripts install; drift-aware `update.sh` with rollback safety
 - **Declarative manifest** (`core/registry/manifest.json` + `scripts/generate-manifest.sh`) with commit + content hashes for drift detection

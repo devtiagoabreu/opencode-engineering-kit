@@ -17,13 +17,13 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 133 (em 42 categorias) |
+| Skills | 134 (em 42 categorias) |
 | Agents | 103 (personas em 38 categorias) |
 | Prompts | 10 (em 13 categorias) |
 | Templates | 16 |
 | Playbooks | 3 |
 | Recipes | 2 |
-| Comandos | 3 |
+| Comandos | 4 |
 | Bundles | 2 |
 | Composições | 2 |
 | Prompt chains | 2 |
@@ -98,11 +98,19 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 # Instalar só skills e agents, forçando sobrescrita
 npx opencode-engineering-kit install --only skills,agents --force
 
+# Instalar globalmente (válido para todos os projetos)
+npx opencode-engineering-kit install --global
+
 # Modo offline / desenvolvimento: usar um checkout local do kit
 npx opencode-engineering-kit install --source /caminho/para/opencode-engineering-kit
 
 # Simular sem alterar nada
 npx opencode-engineering-kit install --dry-run
+
+# Ciclo de vida: consultar estado, desativar e reativar
+npx opencode-engineering-kit status
+npx opencode-engineering-kit stop
+npx opencode-engineering-kit start
 ```
 
 ---
@@ -286,6 +294,7 @@ Prompts focados para interações únicas: code review, debugging, refatoração
 ### Comandos
 
 - `/lint`, `/review`, `/test` — documentação de comandos nativos do OpenCode
+- `/ocekit` — instalar e gerenciar o kit (install, status, start, stop) direto no chat
 
 ### Bundles, Composições e Prompt chains
 
@@ -340,11 +349,11 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 133 skills em 42 categorias (SKILL.md)
+│   ├── skills/          # 134 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates
-│   ├── commands/        # 3 comandos documentados
+│   ├── commands/        # 4 comandos documentados
 │   ├── playbooks/       # 3 fluxos de múltiplas etapas
 │   ├── recipes/         # 2 soluções completas
 │   ├── bundles/         # 2 pacotes prontos

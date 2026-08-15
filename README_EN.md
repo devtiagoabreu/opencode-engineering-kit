@@ -19,13 +19,13 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 133 (42 categories) |
+| Skills | 134 (42 categories) |
 | Agents | 103 (personas in 38 categories) |
 | Prompts | 10 (13 categories) |
 | Templates | 16 |
 | Playbooks | 3 |
 | Recipes | 2 |
-| Commands | 3 |
+| Commands | 4 |
 | Bundles | 2 |
 | Compositions | 2 |
 | Prompt chains | 2 |
@@ -100,11 +100,19 @@ Then **restart OpenCode** so the new configuration is loaded.
 # Install only skills and agents, forcing overwrite
 npx opencode-engineering-kit install --only skills,agents --force
 
+# Install globally (applies to all projects)
+npx opencode-engineering-kit install --global
+
 # Offline / development mode: use a local kit checkout
 npx opencode-engineering-kit install --source /path/to/opencode-engineering-kit
 
 # Simulate without changing anything
 npx opencode-engineering-kit install --dry-run
+
+# Lifecycle: check state, disable and re-enable
+npx opencode-engineering-kit status
+npx opencode-engineering-kit stop
+npx opencode-engineering-kit start
 ```
 
 ---
@@ -153,7 +161,7 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 133 ready guides
+### Skills — 134 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
 
@@ -285,6 +293,7 @@ Focused prompts for one-off interactions: code review, debugging, refactoring, p
 ### Commands
 
 - `/lint`, `/review`, `/test` — documentation of OpenCode's native commands
+- `/ocekit` — install and manage the kit (install, status, start, stop) straight from the chat
 
 ### Bundles, Compositions, and Prompt chains
 
@@ -339,11 +348,11 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 133 skills in 42 categories (SKILL.md)
+│   ├── skills/          # 134 skills in 42 categories (SKILL.md)
 │   ├── agents/          # 103 personas by category
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 16 templates
-│   ├── commands/        # 3 documented commands
+│   ├── commands/        # 4 documented commands
 │   ├── playbooks/       # 3 multi-step flows
 │   ├── recipes/         # 2 complete solutions
 │   ├── bundles/         # 2 ready packs

@@ -10,20 +10,21 @@
 2. [Instalação](#instalação)
 3. [Início Rápido](#início-rápido)
 4. [Uso Automático](#uso-automático)
-5. [Exemplo Prático — Next.js com GitHub e Vercel](#exemplo-prático--nextjs-com-github-e-vercel)
-6. [Skills](#skills)
-7. [Agents](#agents)
-8. [Prompts](#prompts)
-9. [Templates](#templates)
-10. [Commands](#commands)
-11. [Playbooks e Recipes](#playbooks-e-recipes)
-12. [Sistema de Descoberta](#sistema-de-descoberta)
-13. [CLI](#cli)
-14. [SkillPointer e Vault](#skillpointer-e-vault)
-15. [Memória de Sessão](#memória-de-sessão)
-16. [Marketplace](#marketplace)
-17. [Segurança](#segurança)
-18. [Solução de Problemas](#solução-de-problemas)
+5. [Instalar e Gerenciar o Kit por Comando de Voz](#instalar-e-gerenciar-o-kit-por-comando-de-voz)
+6. [Exemplo Prático — Next.js com GitHub e Vercel](#exemplo-prático--nextjs-com-github-e-vercel)
+7. [Skills](#skills)
+8. [Agents](#agents)
+9. [Prompts](#prompts)
+10. [Templates](#templates)
+11. [Commands](#commands)
+12. [Playbooks e Recipes](#playbooks-e-recipes)
+13. [Sistema de Descoberta](#sistema-de-descoberta)
+14. [CLI](#cli)
+15. [SkillPointer e Vault](#skillpointer-e-vault)
+16. [Memória de Sessão](#memória-de-sessão)
+17. [Marketplace](#marketplace)
+18. [Segurança](#segurança)
+19. [Solução de Problemas](#solução-de-problemas)
 
 ---
 
@@ -38,11 +39,11 @@ O **OpenCode Engineering Kit** é uma biblioteca open source de recursos reutili
 
 ### O que está incluído
 
-- **133 Skills** — guias completos em 42 categorias
+- **134 Skills** — guias completos em 42 categorias
 - **103 Agents** — personas de IA especializadas em 38 categorias
 - **10 Prompts** — modelos de prompts reutilizáveis
 - **16 Templates** — modelos para projetos e componentes
-- **3 Commands** — ações documentadas para tarefas comuns
+- **4 Commands** — ações documentadas para tarefas comuns
 - **3 Playbooks** — fluxos de múltiplas etapas
 - **2 Recipes** — configurações completas de projeto
 - **2 Bundles**, **2 Composições**, **2 Prompt chains**
@@ -165,6 +166,47 @@ Você **não precisa** rodar `search`, `list` ou `doctor` para o kit funcionar �
 ### Desativar o uso automático
 
 Se preferir controlar manualmente, remova a entrada `.opencode/context/auto_usage.md` de `opencode.json > instructions` (ou apague o arquivo) e reinicie o OpenCode. Todos os assets continuam disponíveis para uso manual.
+
+---
+
+## Instalar e Gerenciar o Kit por Comando de Voz
+
+Você pode instalar e gerenciar o kit **direto no chat do OpenCode**, sem digitar comandos manualmente. Basta dizer (em PT ou EN):
+
+- `instale o ocekit do https://github.com/...` — o OpenCode pergunta se você quer **global** (todos os projetos) ou **só neste projeto**, instala e te informa.
+- `status ocekit` — mostra onde o kit está instalado e se está ativo.
+- `stop ocekit` — desativa o kit (mantém os arquivos, remove a ligação no `opencode.json`).
+- `start ocekit` — reativa o kit.
+
+### Como funciona
+
+O kit inclui a skill **`ocekit-manager`** (carregada automaticamente quando você menciona "ocekit") e o comando **`/ocekit`**. Ambos usam a CLI por trás dos panos:
+
+```bash
+# Instalar no projeto atual (cria .opencode/ no diretório)
+npx opencode-engineering-kit install --repo <owner/repo>
+
+# Instalar globalmente (em ~/.config/opencode/)
+npx opencode-engineering-kit install --global --repo <owner/repo>
+
+# Consultar estado
+npx opencode-engineering-kit status
+
+# Desativar / reativar (sem apagar arquivos)
+npx opencode-engineering-kit stop
+npx opencode-engineering-kit start
+```
+
+O `--repo` aceita `owner/repo`, `https://github.com/owner/repo` ou `git@github.com:owner/repo.git`. Se você não passar um link, o padrão é `devtiagoabreu/opencode-engineering-kit`.
+
+### Diferença entre global e projeto
+
+| Escopo | Onde instala | Vale para |
+|--------|--------------|-----------|
+| **Projeto** | `.opencode/` + `opencode.json` do projeto | Somente aquele repositório |
+| **Global** | `~/.config/opencode/` (skills, agents, context) | Todos os seus projetos |
+
+Depois de qualquer mudança, o kit informa para **reiniciar o OpenCode**.
 
 ---
 
@@ -379,7 +421,7 @@ Customize os arquivos conforme necessário.
 
 ## Commands
 
-Commands são ações documentadas para tarefas comuns do OpenCode: `/lint`, `/review`, `/test`. Ficam em `assets/commands/`.
+Commands são ações documentadas para tarefas comuns do OpenCode: `/lint`, `/review`, `/test`, `/ocekit`. Ficam em `assets/commands/`.
 
 ```bash
 ls assets/commands/

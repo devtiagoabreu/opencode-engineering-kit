@@ -37,7 +37,11 @@ Depois de instalar no projeto, o OpenCode **verifica e usa sozinho** a skill/per
 
 ```bash
 npx opencode-engineering-kit install                  # instalar no projeto atual
+npx opencode-engineering-kit install --global         # instalar global (~/.config/opencode/)
 npx opencode-engineering-kit install --only skills    # só skills
+npx opencode-engineering-kit status                   # ver onde está instalado e se está ativo
+npx opencode-engineering-kit start                    # reativar o kit
+npx opencode-engineering-kit stop                     # desativar (mantém arquivos)
 npx opencode-engineering-kit list --type skills       # listar skills
 npx opencode-engineering-kit search "docker"          # buscar assets
 npx opencode-engineering-kit doctor                   # verificar integridade do kit
@@ -159,11 +163,11 @@ python3 context/memory/memory.py --help                # salvar/buscar/healthche
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 133 skills em 42 categorias (SKILL.md)
+│   ├── skills/          # 134 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas em 38 categorias
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 16 templates
-│   ├── commands/        # 3 comandos documentados
+│   ├── commands/        # 4 comandos documentados
 │   ├── playbooks/       # 3 fluxos de múltiplas etapas
 │   ├── recipes/         # 2 soluções completas
 │   ├── bundles/         # 2 pacotes prontos
