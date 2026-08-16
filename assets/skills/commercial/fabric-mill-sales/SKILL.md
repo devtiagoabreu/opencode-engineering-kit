@@ -8,7 +8,7 @@ name: fabric-mill-sales
 description: "B2B selling for a flat-woven fabric mill: specs, sampling, MOQ, quoting, negotiation and CRM"
 category: commercial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [commercial, fabrics, textile, b2b, sales, crm, moq]
 compatible:
   - opencode

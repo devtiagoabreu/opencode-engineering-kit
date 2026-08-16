@@ -8,7 +8,7 @@ name: design-system
 description: "Create and maintain design systems: tokens, components, documentation and versioning. Use when building or extending a design system, defining design tokens, colors, typography, spacing, dark mode, shadcn/ui or Radix component libraries, documenting components, or when users mention design system, tokens, component library, shadcn, Radix or design tokens."
 category: design
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [design-system, design-tokens, components, shadcn, radix, tailwind, dark-mode]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: nosql-modeling
 description: Model data for NoSQL databases across document, key-value, and graph stores
 category: database
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [nosql, mongodb, redis, document, key-value, graph, data-modeling]
 compatible:
   - opencode

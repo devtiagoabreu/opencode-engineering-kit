@@ -8,7 +8,7 @@ name: rbac-authorization
 description: Implement role-based access control (RBAC) with roles, permission matrix, and server-side enforcement — combined with tenant isolation in multi-tenant SaaS
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [rbac, authorization, roles, permissions, security, access-control]
 compatible:
   - opencode

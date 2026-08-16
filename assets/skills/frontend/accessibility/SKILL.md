@@ -8,7 +8,7 @@ name: accessibility
 description: Best practices for web accessibility (WCAG compliance)
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [accessibility, a11y, wcag, frontend]
 compatible:
   - opencode

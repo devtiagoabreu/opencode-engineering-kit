@@ -7,7 +7,7 @@ provenance:
 name: c-developer
 description: C Developer specialized in memory safety, pointer discipline, and embedded systems
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [c, pointers, memory, embedded, systems]
 compatible:
   - opencode

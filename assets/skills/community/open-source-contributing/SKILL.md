@@ -8,7 +8,7 @@ name: open-source-contributing
 description: Guide for contributing effectively to open source projects
 category: community
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [open-source, contributing, community, github]
 compatible:
   - opencode

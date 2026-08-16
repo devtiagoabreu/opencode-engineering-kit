@@ -8,7 +8,7 @@ name: arduino-development
 description: Develop Arduino firmware for Uno/Nano/Mega and compatible boards. Use when writing or debugging Arduino sketches, controlling pins, sensors, motors, displays, serial communication, timers, interrupts, or when users mention Arduino, sketch, Uno, Nano, Mega, ATmega, sensors or embedded C++.
 category: embedded
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [arduino, microcontroller, avr, sensors, motors, serial, cpp]
 compatible:
   - opencode

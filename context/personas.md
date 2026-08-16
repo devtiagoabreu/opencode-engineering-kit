@@ -3,7 +3,7 @@ name: personas
 description: Índice de todas as personas (agents) disponíveis no kit, por categoria
 type: project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Personas (Agents)

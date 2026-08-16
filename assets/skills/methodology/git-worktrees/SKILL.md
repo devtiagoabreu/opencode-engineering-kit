@@ -8,7 +8,7 @@ name: git-worktrees
 description: Isolate parallel tasks in git worktrees so execution never blocks on a dirty working directory
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [git, worktree, parallel-work, methodology, branch-management]
 compatible:
   - opencode

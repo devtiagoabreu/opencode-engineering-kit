@@ -8,7 +8,7 @@ name: css-best-practices
 description: Best practices for CSS architecture and styling
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [css, styling, frontend, architecture]
 compatible:
   - opencode

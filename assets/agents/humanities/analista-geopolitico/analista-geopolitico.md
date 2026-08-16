@@ -7,7 +7,7 @@ provenance:
 name: analista-geopolitico
 description: Analista de geopolítica com foco em poder global, corredores de energia, blocos comerciais e análise de conflitos
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [geopolítica, relações-internacionais, energia, comércio-global, conflitos, estabilidade-regional]
 compatible:
   - opencode

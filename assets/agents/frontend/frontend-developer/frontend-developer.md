@@ -7,7 +7,7 @@ provenance:
 name: frontend-developer
 description: Frontend Developer specialized in UI/UX and modern frameworks
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [frontend, ui, ux, react, javascript]
 compatible:
   - opencode

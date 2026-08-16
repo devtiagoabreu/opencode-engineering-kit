@@ -8,7 +8,7 @@ name: sql-server-database
 description: SQL Server best practices covering T-SQL, indexing, query tuning, and administration
 category: database
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [sqlserver, tsql, database, indexing, performance, azure]
 compatible:
   - opencode

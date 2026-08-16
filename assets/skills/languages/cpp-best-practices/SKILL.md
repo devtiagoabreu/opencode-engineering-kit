@@ -8,7 +8,7 @@ name: cpp-best-practices
 description: C++ best practices covering modern C++ (11-23), RAII, smart pointers, and testing
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [cpp, c++, smart-pointers, raii, cmake, testing]
 compatible:
   - opencode

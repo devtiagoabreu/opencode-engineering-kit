@@ -8,7 +8,7 @@ name: music-theory
 description: Learn music theory fundamentals covering notes, rhythm, scales, chords, intervals, and ear training
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [music-theory, notes, rhythm, scales, chords, intervals, ear-training, sight-reading]
 compatible:
   - opencode

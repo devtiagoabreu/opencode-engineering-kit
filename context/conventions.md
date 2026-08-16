@@ -3,7 +3,7 @@ name: conventions-context
 description: Code conventions for OpenCode Engineering Kit
 type: conventions
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Code Conventions

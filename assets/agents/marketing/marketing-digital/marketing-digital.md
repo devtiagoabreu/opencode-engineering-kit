@@ -7,7 +7,7 @@ provenance:
 name: marketing-digital
 description: Especialista em marketing digital, growth e estratégias de aquisição de clientes
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [marketing, growth, seo, mídia-paga, analytics]
 compatible:
   - opencode

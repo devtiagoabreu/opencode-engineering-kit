@@ -8,7 +8,7 @@ name: csharp-best-practices
 description: C# best practices covering modern language features, async patterns, dependency injection, and testing
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [csharp, dotnet, async, dependency-injection, testing, aspnet]
 compatible:
   - opencode

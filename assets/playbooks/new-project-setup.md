@@ -2,7 +2,7 @@
 name: new-project-setup
 description: Complete guide for setting up a new project with best practices
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [project-setup, initialization, best-practices]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: political-campaign-marketing
 description: 'Ethical campaign strategy: positioning, message discipline, segmentation, channels and budget allocation.'
 category: marketing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [political-marketing, campaigns, positioning, segmentation, message-discipline, ethics]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: raspberry-pi
 description: Set up and program Raspberry Pi projects (GPIO, cameras, edge AI, servers, robots). Use when configuring a Raspberry Pi, wiring GPIO, using Pi Camera, building edge/AI or IoT projects, home servers, kiosks, or when users mention Raspberry Pi, RPi, pi zero, GPIO, camera, PiCamera, raspi-config or edge device.
 category: embedded
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [raspberry-pi, gpio, edge-ai, camera, iot, linux, python]
 compatible:
   - opencode

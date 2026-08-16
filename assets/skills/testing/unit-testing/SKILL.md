@@ -8,7 +8,7 @@ name: unit-testing
 description: Best practices for unit testing and test-driven development
 category: testing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [unit-testing, tdd, testing, quality]
 compatible:
   - opencode

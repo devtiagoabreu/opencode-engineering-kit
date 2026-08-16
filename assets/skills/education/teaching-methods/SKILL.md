@@ -8,7 +8,7 @@ name: teaching-methods
 description: Apply core pedagogical methods from direct instruction to flipped classrooms and spaced practice
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [teaching-methods, pedagogy, direct-instruction, cooperative-learning, inquiry-based, flipped-classroom, spaced-practice]
 compatible:
   - opencode

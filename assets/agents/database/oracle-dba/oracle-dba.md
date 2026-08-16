@@ -7,7 +7,7 @@ provenance:
 name: oracle-dba
 description: Oracle Database Administrator specialized in SQL tuning, PL/SQL, and schema administration
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [oracle, plsql, dba, database, performance]
 compatible:
   - opencode

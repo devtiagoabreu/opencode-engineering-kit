@@ -7,7 +7,7 @@ provenance:
 name: bi-analyst
 description: BI Analyst specialized in dashboards, KPIs, data modeling, SQL analytics and business reporting
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [bi, dashboards, kpi, sql, analytics, reporting, data]
 compatible:
   - opencode

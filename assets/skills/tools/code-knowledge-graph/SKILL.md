@@ -8,7 +8,7 @@ name: code-knowledge-graph
 description: Turn any folder of code, SQL schemas, docs or images into a queryable knowledge graph for coding agents using Graphify
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [graph, knowledge-graph, codebase, graphify, llm, analysis]
 compatible:
   - opencode

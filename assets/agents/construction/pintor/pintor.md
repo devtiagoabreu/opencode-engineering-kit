@@ -7,7 +7,7 @@ provenance:
 name: pintor
 description: Pintor especializado em acabamento, texturas e pintura predial residencial e industrial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [acabamento, textura, pintura]
 compatible:
   - opencode

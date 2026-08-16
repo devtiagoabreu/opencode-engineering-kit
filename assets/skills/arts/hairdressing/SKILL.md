@@ -8,7 +8,7 @@ name: hairdressing
 description: Hairdressing covering hair structure, coloring chemistry, cutting techniques and treatments
 category: arts
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [hair, coloring, cutting, treatments, chemistry]
 compatible:
   - opencode

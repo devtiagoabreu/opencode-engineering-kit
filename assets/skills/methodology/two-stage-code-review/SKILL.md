@@ -8,7 +8,7 @@ name: two-stage-code-review
 description: Code review in two passes — machine-checkable correctness first, then design and intent — before merging
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, review, methodology, quality, collaboration]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: project-setup
 description: New project setup covering repository layout, configuration, and tooling
 category: projects
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [project-setup, scaffolding, repository, config, tooling]
 compatible:
   - opencode

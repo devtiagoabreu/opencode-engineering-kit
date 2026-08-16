@@ -8,7 +8,7 @@ name: caching-strategies
 description: Best practices for caching strategies and implementation
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [caching, performance, redis, backend]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: vehicle-mechanics
 description: Diagnose common faults, plan maintenance schedules, understand vehicle systems, and work safely.
 category: automotive
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mechanics, diagnostics, maintenance, safety, vehicles]
 compatible:
   - opencode

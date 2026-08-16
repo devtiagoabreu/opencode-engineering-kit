@@ -8,7 +8,7 @@ name: political-analysis
 description: 'Balanced analysis of political systems, institutions and elections with evidence and plural perspectives.'
 category: humanities
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [political-analysis, institutions, elections, public-policy, democracy]
 compatible:
   - opencode

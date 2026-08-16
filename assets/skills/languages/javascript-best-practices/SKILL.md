@@ -8,7 +8,7 @@ name: javascript-best-practices
 description: JavaScript best practices covering modern ES2015+ syntax, modules, async patterns, and tooling
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [javascript, es6, es2015, modules, async, nodejs]
 compatible:
   - opencode

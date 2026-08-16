@@ -8,7 +8,7 @@ name: terraform-aws
 description: Best practices for Terraform with AWS cloud infrastructure
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [terraform, aws, infrastructure-as-code, cloud]
 compatible:
   - opencode

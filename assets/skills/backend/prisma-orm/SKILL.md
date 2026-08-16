@@ -8,7 +8,7 @@ name: prisma-orm
 description: Model, migrate and query PostgreSQL with Prisma ORM — schema design, relations, enums, soft delete, tenant scoping, and connection management for serverless
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [prisma, orm, postgresql, schema, migrations, serverless, nextjs]
 compatible:
   - opencode

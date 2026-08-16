@@ -3,7 +3,7 @@ name: rag-system-design
 description: Design a RAG system end-to-end (ingestion, chunking, embeddings, retrieval, generation, evaluation)
 category: ai
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [rag, llm, embeddings, vector-database, retrieval, system-design]
 compatible:
   - opencode

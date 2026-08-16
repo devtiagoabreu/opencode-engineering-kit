@@ -8,7 +8,7 @@ name: literacy-teaching
 description: Teach literacy with the alphabetic principle, phonemic awareness, and adult literacy contexts
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [literacy, teaching, phonics, phonemic-awareness, alphabetic-principle, adult-literacy, EJA]
 compatible:
   - opencode

@@ -2,7 +2,7 @@
   "name": "makeup-artistry",
   "description": "Professional makeup artistry covering skin analysis, the color wheel, techniques for base, contour, eyes and lips, and hygiene",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["makeup", "skin", "color-theory", "beauty", "techniques"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "category": "arts",

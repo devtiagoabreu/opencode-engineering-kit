@@ -7,7 +7,7 @@ provenance:
 name: ui-designer
 description: UI Designer with expertise in user interface design and design systems
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ui, design, ux, figma]
 compatible:
   - opencode

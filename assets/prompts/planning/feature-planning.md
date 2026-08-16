@@ -3,7 +3,7 @@ name: feature-planning
 description: Plan a feature end-to-end from requirements to implementation tasks
 category: planning
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [planning, feature, requirements, backlog]
 compatible:
   - opencode

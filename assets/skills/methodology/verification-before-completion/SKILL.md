@@ -8,7 +8,7 @@ name: verification-before-completion
 description: Verify a task is actually done by re-checking every claim against evidence before declaring completion
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [verification, quality, methodology, acceptance-criteria, completion]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: graphql-api
 description: Best practices for GraphQL API design and implementation
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [graphql, api, design, backend]
 compatible:
   - opencode

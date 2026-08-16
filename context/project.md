@@ -3,7 +3,7 @@ name: project-context
 description: General project context for OpenCode Engineering Kit
 type: project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Project Context

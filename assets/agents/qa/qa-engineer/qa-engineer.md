@@ -7,7 +7,7 @@ provenance:
 name: qa-engineer
 description: QA Engineer with expertise in software testing and quality assurance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [qa, testing, automation, quality]
 compatible:
   - opencode

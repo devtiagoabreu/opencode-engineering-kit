@@ -8,7 +8,7 @@ name: supply-chain-management
 description: Optimize supply chains with EOQ, safety stock, ABC classification, and WMS-driven warehouse flows.
 category: logistics
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [supply-chain, inventory, eoq, safety-stock, abc, wms, logistics]
 compatible:
   - opencode

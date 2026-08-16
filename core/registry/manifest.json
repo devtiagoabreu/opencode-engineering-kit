@@ -1,10 +1,10 @@
 {
   "schema_version": "1.0.0",
   "version": "0.1.0",
-  "commit": "4063b21",
-  "generated": "2026-08-15T20:28:00Z",
+  "commit": "1c0d187",
+  "generated": "2026-08-15T20:47:11Z",
   "counts": {
-    "skills": 143,
+    "skills": 150,
     "agents": 103,
     "prompts": 10,
     "templates": 4,
@@ -41,12 +41,12 @@
       "content_format": "markdown"
     }
   ],
-  "provenance_sha256": "91238522309b75b26f73623d2601f6159623d7b45c58b525fe92890e5da790dc",
+  "provenance_sha256": "c40b0c9c6f7b5c9d3ce364e8be28b2b91fbd836dae73251fa55391c34658e364",
   "index_sha256": {
-    "core/discovery/index/skills.txt": "dd2d87237993fe992ade20b74eb76b0c73f62a9e5adef4391580c7aa74b022ef",
+    "core/discovery/index/skills.txt": "83989663842081dd4932e79365ad0991eb96747fd3f8e1c8c879a9aec4ee26c9",
     "core/discovery/index/agents.txt": "ae3b5ea2ba89cae05b82c703db0fb0e3552746e56715946c8706e23589f26152",
-    "core/registry/index/skills.txt": "f6333cc229107fefc9c11c468960c20c0762c0925535217a463359f98199c271",
+    "core/registry/index/skills.txt": "55899f24205867b289c0163303504fc7d3f7f951fbbda749b4cdb880272032ce",
     "core/registry/index/agents.txt": "4d58ea96e7165e735a091c47139f4370f2c58ed102643422a46a465e1f9ed561",
-    "core/resolver/lockfile.json": "e213448b688b4f370879bb9806566e0917d53549e11e2e9752b91d18c34f0077"
+    "core/resolver/lockfile.json": "f8ad8b2168321dd47c9536229d9e38c51334e6cd60623d1c0d73cf0cbfec87c3"
   }
 }

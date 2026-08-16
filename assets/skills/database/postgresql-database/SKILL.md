@@ -8,7 +8,7 @@ name: postgresql-database
 description: PostgreSQL best practices covering schema design, indexing, query tuning, and administration
 category: database
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [postgresql, postgres, sql, indexing, database, performance]
 compatible:
   - opencode

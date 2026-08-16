@@ -8,7 +8,7 @@ name: performance
 description: Best practices for frontend performance optimization
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [performance, optimization, frontend, speed]
 compatible:
   - opencode

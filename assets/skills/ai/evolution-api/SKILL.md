@@ -8,7 +8,7 @@ name: evolution-api
 description: "Integrate WhatsApp bots with Evolution API (Baileys/Meta Cloud): sending messages/media, handling webhooks, managing instances, chat/group operations."
 category: ai
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [whatsapp, evolution-api, bot, webhook, baileys, messaging]
 compatible:
   - opencode

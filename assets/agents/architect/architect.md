@@ -7,7 +7,7 @@ provenance:
 name: architect
 description: Software Architect with expertise in system design, trade-offs, ADRs, and tech stack selection
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [architecture, system-design, microservices, adr, cloud]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: e2e-testing
 description: Best practices for end-to-end testing and browser automation
 category: testing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [e2e-testing, browser-automation, cypress, testing]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: monitoring-observability
 description: Best practices for monitoring and observability in cloud applications
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [monitoring, observability, logging, metrics]
 compatible:
   - opencode

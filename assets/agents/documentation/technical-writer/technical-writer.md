@@ -7,7 +7,7 @@ provenance:
 name: technical-writer
 description: Technical Writer with expertise in documentation and knowledge management
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [documentation, writing, technical-communication]
 compatible:
   - opencode

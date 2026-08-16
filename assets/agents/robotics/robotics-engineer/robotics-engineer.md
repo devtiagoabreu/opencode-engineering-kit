@@ -7,7 +7,7 @@ provenance:
 name: robotics-engineer
 description: Robotics Engineer specialized in ROS 2, embedded control, sensors, motors and robot software
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [robotics, ros2, embedded, motors, sensors, control]
 compatible:
   - opencode

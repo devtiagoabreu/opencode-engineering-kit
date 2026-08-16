@@ -8,7 +8,7 @@ name: geopolitics
 description: 'Frameworks for analyzing global power, regions, resources and alliances in an evidence-based way.'
 category: humanities
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [geopolitics, international-relations, energy, alliances, trade, regional-stability]
 compatible:
   - opencode

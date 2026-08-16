@@ -7,7 +7,7 @@ provenance:
 name: csharp-developer
 description: C# Developer specialized in modern C#, .NET, async patterns, and dependency injection
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [csharp, dotnet, aspnet, async, dependency-injection]
 compatible:
   - opencode

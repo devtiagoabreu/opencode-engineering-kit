@@ -8,7 +8,7 @@ name: shadcn-ui
 description: Build consistent UI with shadcn/ui + Tailwind + Radix — component copy-in patterns, theming (light/dark/system), composition, and DataTable/form conventions
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [shadcn, tailwind, radix, design-system, components, dark-mode]
 compatible:
   - opencode

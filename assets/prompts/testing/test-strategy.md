@@ -3,7 +3,7 @@ name: test-strategy
 description: Design a comprehensive test strategy that balances coverage and effort
 category: testing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [testing, strategy, coverage, quality]
 compatible:
   - opencode

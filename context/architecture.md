@@ -3,7 +3,7 @@ name: architecture-context
 description: Architecture context for OpenCode Engineering Kit
 type: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Architecture Context

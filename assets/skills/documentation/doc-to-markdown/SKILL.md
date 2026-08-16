@@ -8,7 +8,7 @@ name: doc-to-markdown
 description: Convert PDF, Office, image, audio and web documents into clean Markdown for LLM pipelines using Microsoft MarkItDown
 category: documentation
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [markdown, conversion, documentation, llm, markitdown, pdf, office]
 compatible:
   - opencode

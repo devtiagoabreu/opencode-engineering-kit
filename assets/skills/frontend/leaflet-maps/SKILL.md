@@ -8,7 +8,7 @@ name: leaflet-maps
 description: Render interactive maps with Leaflet + React Leaflet and OpenStreetMap — markers, polylines, custom icons, tile handling, and map state synced to app state
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [leaflet, react-leaflet, openstreetmap, maps, markers, polyline, gis]
 compatible:
   - opencode

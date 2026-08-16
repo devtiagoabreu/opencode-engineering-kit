@@ -7,7 +7,7 @@ provenance:
 name: site-reliability-engineer
 description: Site Reliability Engineer with expertise in infrastructure and reliability
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [sre, devops, reliability, monitoring]
 compatible:
   - opencode

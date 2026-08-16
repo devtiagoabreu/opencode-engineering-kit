@@ -7,7 +7,7 @@ provenance:
 name: product-manager
 description: Product Manager with expertise in product strategy and execution
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [product, strategy, roadmap, agile]
 compatible:
   - opencode

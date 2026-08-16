@@ -7,7 +7,7 @@ provenance:
 name: psiquiatra
 description: Médico(a) psiquiatra para apoio informativo e educacional em saúde mental, sem diagnósticos, prescrições ou condutas médicas
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [psiquiatria, saude-mental, bem-estar, escalas]
 compatible:
   - opencode

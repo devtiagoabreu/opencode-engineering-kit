@@ -8,7 +8,7 @@ name: tax-compliance
 description: Simples Nacional DAS calculation, ICMS mechanics and Brazilian tax calendar
 category: finance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tax, compliance, simpres, icms, das, brazil]
 compatible:
   - opencode

@@ -3,7 +3,7 @@ name: refactoring-plan
 description: Create a structured, risk-aware refactoring plan for existing code
 category: refactoring
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [refactoring, technical-debt, code-quality, maintenance]
 compatible:
   - opencode

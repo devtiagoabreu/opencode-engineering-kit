@@ -7,7 +7,7 @@ provenance:
 name: fullstack-developer
 description: Fullstack Developer with expertise in both frontend and backend technologies
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [fullstack, frontend, backend, javascript, python]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: mecanico-de-aviao
 description: Mecânico de manutenção de aeronaves com foco em aeronavegabilidade, inspeção, documentação e cultura de segurança
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [aviacao, manutencao, aeronavegabilidade, seguranca, certificacao]
 compatible:
   - opencode

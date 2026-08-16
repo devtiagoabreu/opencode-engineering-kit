@@ -8,7 +8,7 @@ name: home-automation
 description: Automate homes with Home Assistant YAML, ESPHome firmware, and MQTT for lights, sensors, and climate.
 category: engineering
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [home-assistant, esphome, mqtt, yaml, iot, automation, smart-home]
 compatible:
   - opencode

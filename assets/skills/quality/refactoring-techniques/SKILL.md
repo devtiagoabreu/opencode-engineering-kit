@@ -8,7 +8,7 @@ name: refactoring-techniques
 description: Safe refactoring techniques and patterns to improve code without changing behavior
 category: quality
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [refactoring, patterns, code-quality, extract-method, test-driven]
 compatible:
   - opencode

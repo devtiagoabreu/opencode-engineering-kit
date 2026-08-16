@@ -8,7 +8,7 @@ name: mqtt-protocol
 description: Build IoT messaging with MQTT covering brokers, QoS, topics, and pub/sub patterns
 category: iot
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mqtt, iot, pubsub, mosquitto, qos, broker, topics]
 compatible:
   - opencode

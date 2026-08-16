@@ -2,7 +2,7 @@
   "name": "engenheiro-civil",
   "description": "Engenheiro Civil especializado em estruturas de concreto, fundações e gerenciamento de obras",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["estruturas", "fundacoes", "gerenciamento"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": ["civil-structures"],

@@ -8,7 +8,7 @@ name: writing-plans
 description: Transform an approved direction into a concrete, executable plan with phases, tasks and acceptance criteria
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [planning, plans, methodology, execution, architecture]
 compatible:
   - opencode

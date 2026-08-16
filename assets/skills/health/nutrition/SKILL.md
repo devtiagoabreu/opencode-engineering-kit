@@ -8,7 +8,7 @@ name: nutrition
 description: "Evidence-based nutrition education: food groups, dietary planning basics, macro/micronutrients and population adaptations"
 category: health
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [nutrition, diet, food-groups, macronutrients, micronutrients, health]
 compatible:
   - opencode

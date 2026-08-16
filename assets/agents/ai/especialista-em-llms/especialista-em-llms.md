@@ -7,7 +7,7 @@ provenance:
 name: especialista-em-llms
 description: Especialista em modelos de IA para orientar o uso de LLMs gratuitos online
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [llm, ia, deepseek, qwen, gemini, mistral, groq, modelos-gratuitos, privacidade]
 compatible:
   - opencode

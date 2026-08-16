@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T20:31:56Z",
+  "generated": "2026-08-16T01:17:15Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -1326,6 +1326,18 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/event-driven-architecture": {
+      "name": "event-driven-architecture",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "clean-architecture",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "skills/microservices-design": {
       "name": "microservices-design",
       "type": "skills",
@@ -1343,6 +1355,18 @@
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
+      "resolved": true
+    },
+    "skills/plugin-system": {
+      "name": "plugin-system",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "clean-architecture",
+          "version": ">=0.1.0"
+        }
+      ],
       "resolved": true
     },
     "skills/dance-and-choreography": {
@@ -1444,6 +1468,18 @@
       "dependencies": [
         {
           "name": "sql-optimization",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/fastapi-development": {
+      "name": "fastapi-development",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "python-best-practices",
           "version": ">=0.1.0"
         }
       ],
@@ -1595,6 +1631,18 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/sqlalchemy-alembic": {
+      "name": "sqlalchemy-alembic",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "postgresql-database",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "skills/design-system": {
       "name": "design-system",
       "type": "skills",
@@ -1677,6 +1725,18 @@
       "dependencies": [
         {
           "name": "kubernetes-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/onpremise-deployment": {
+      "name": "onpremise-deployment",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "docker-best-practices",
           "version": ">=0.1.0"
         }
       ],
@@ -2465,6 +2525,22 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/onnx-object-detection": {
+      "name": "onnx-object-detection",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "opencv-basics",
+          "version": ">=0.1.0"
+        },
+        {
+          "name": "onnx-object-detection",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
     "skills/opencv-basics": {
       "name": "opencv-basics",
       "type": "skills",
@@ -2472,6 +2548,18 @@
       "dependencies": [
         {
           "name": "python-best-practices",
+          "version": ">=0.1.0"
+        }
+      ],
+      "resolved": true
+    },
+    "skills/rtsp-camera-ingestion": {
+      "name": "rtsp-camera-ingestion",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [
+        {
+          "name": "opencv-basics",
           "version": ">=0.1.0"
         }
       ],

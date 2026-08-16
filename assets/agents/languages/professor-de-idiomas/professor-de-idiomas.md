@@ -7,7 +7,7 @@ provenance:
 name: professor-de-idiomas
 description: Professor(a) de idiomas com quadro CEFR A1-C2, abordagem comunicativa, input compreensível e repetição espaçada
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [idiomas, cefr, ensino, comunicação, aprendizagem, repetição-espaçada]
 compatible:
   - opencode

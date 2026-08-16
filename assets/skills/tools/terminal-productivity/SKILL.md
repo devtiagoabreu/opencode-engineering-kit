@@ -8,7 +8,7 @@ name: terminal-productivity
 description: Terminal and CLI productivity with tmux, fzf, shell aliases, and history
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [terminal, cli, tmux, fzf, shell, zsh, bash, aliases]
 compatible:
   - opencode

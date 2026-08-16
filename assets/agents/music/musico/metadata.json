@@ -2,7 +2,7 @@
   "name": "musico",
   "description": "Músico(a) multi-instrumentista com domínio de piano, violão, bateria, metais e flautas, incluindo teoria, rotina de estudos, repertório e performance",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["música", "multi-instrumentista", "piano", "violão", "bateria", "metais", "flautas", "teoria-musical", "performance"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

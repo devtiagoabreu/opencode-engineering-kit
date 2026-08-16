@@ -7,7 +7,7 @@ provenance:
 name: performance-engineer
 description: Performance Engineer with expertise in profiling, load testing, optimization, and benchmarking
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [performance, profiling, load-testing, benchmarking, optimization]
 compatible:
   - opencode

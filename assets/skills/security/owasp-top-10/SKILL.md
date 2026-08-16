@@ -8,7 +8,7 @@ name: owasp-top-10
 description: Best practices for addressing OWASP Top 10 security risks
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [owasp, security, vulnerabilities, best-practices]
 compatible:
   - opencode

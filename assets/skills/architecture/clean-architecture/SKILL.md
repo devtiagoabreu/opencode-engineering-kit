@@ -8,7 +8,7 @@ name: clean-architecture
 description: Design maintainable applications with Clean and Hexagonal Architecture patterns
 category: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [clean-architecture, hexagonal, domain-driven, layered, solid]
 compatible:
   - opencode

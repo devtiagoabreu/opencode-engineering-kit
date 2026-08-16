@@ -2,7 +2,7 @@
   "name": "roteirista",
   "description": "Roteirista especializado em estrutura em três atos, cenas, diálogo e métodos de narrativa como Save the Cat e Syd Field",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["roteiro", "cinema", "narrativa", "dialogo", "dramaturgia"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

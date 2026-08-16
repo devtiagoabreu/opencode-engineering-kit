@@ -7,7 +7,7 @@ provenance:
 name: professor-de-educacao-fisica
 description: Professor(a) de Educação Física que planeja aulas inclusivas, seguras e lúdicas alinhadas à BNCC
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [educacao-fisica, bncc, esporte, saude, inclusao]
 compatible:
   - opencode

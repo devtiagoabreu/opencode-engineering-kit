@@ -7,7 +7,7 @@ provenance:
 name: vision-engineer
 description: Computer Vision Engineer with expertise in OpenCV, image processing, and ML for vision
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [computer-vision, opencv, image-processing, deep-learning, ml]
 compatible:
   - opencode

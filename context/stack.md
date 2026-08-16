@@ -3,7 +3,7 @@ name: stack-context
 description: Tech stack for OpenCode Engineering Kit
 type: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Tech Stack

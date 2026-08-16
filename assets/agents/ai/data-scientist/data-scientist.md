@@ -7,7 +7,7 @@ provenance:
 name: data-scientist
 description: Data Scientist specialized in machine learning, deep learning, statistics and data analysis
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [machine-learning, deep-learning, data-science, statistics, python, analytics]
 compatible:
   - opencode

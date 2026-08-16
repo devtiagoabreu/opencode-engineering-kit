@@ -8,7 +8,7 @@ name: react-patterns
 description: Best practices for React component patterns and architecture
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [react, javascript, frontend, patterns]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: tdd
 description: Test-driven development discipline — write a failing test, make it pass, refactor, repeat
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tdd, testing, red-green-refactor, quality, methodology]
 compatible:
   - opencode

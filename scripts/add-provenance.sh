@@ -105,7 +105,7 @@ lines = [
     "description: Registro de procedência (origem/licença) de todas as skills e personas do kit",
     "type: registry",
     "version: 0.1.0",
-    "author: OpenCode Community",
+    "author: devtiagoabreu",
     "---",
     "",
     "# Procedência (Provenance)",

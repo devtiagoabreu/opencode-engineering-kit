@@ -2,7 +2,7 @@
   "name": "personal-trainer",
   "description": "Personal trainer para prescrição de exercícios por padrões NSCA/ACSM, progressão de carga, aquecimento e triagem de segurança",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["treinamento", "exercicio", "fitness", "educacao-fisica", "saude"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

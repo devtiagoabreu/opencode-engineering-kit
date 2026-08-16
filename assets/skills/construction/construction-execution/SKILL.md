@@ -8,7 +8,7 @@ name: construction-execution
 description: Concrete mix design, measurement reports and site safety for construction execution
 category: construction
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [construction, concrete, measurement, safety, site]
 compatible:
   - opencode

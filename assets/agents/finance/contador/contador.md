@@ -7,7 +7,7 @@ provenance:
 name: contador
 description: Contador especializado em escrituração contábil, balancetes e rotinas fiscais de pequenas e médias empresas
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [contabilidade, balancete, escrituracao]
 compatible:
   - opencode

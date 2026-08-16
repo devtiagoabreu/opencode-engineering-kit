@@ -3,7 +3,7 @@ name: glossary-context
 description: Glossary for OpenCode Engineering Kit
 type: project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Glossary

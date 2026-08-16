@@ -8,7 +8,7 @@ name: repo-to-llm
 description: Convert any Git repository into clean, token-efficient Markdown (with llms.txt) ready for LLM context, RAG and code review
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [llm, markdown, repository, tokens, llms.txt, gittomd, git2md, context]
 compatible:
   - opencode

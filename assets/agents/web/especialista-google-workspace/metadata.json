@@ -2,7 +2,7 @@
   "name": "especialista-google-workspace",
   "description": "Especialista em Google Workspace com Apps Script, Google Sheets, Gmail, Drive e Analytics para automação de escritório",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["google-workspace", "apps-script", "sheets", "gmail", "automacao"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": ["google-workspace-analytics"],

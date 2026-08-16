@@ -7,7 +7,7 @@ provenance:
 name: matematico
 description: Matemático aplicado com domínio de análise, álgebra e métodos numéricos
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [matemática, análise, álgebra, estatística, modelagem]
 compatible:
   - opencode

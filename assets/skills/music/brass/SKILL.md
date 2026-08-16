@@ -8,7 +8,7 @@ name: brass
 description: Learn trumpet and trombone fundamentals with embouchure, breathing, and articulation
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [brass, trumpet, trombone, embouchure, breathing, articulation, range]
 compatible:
   - opencode

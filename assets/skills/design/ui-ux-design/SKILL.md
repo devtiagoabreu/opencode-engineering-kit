@@ -8,7 +8,7 @@ name: ui-ux-design
 description: UI/UX and interface design principles for web apps. Use when creating, reviewing or auditing screens, layouts, tables, forms, dark mode, responsiveness, accessibility, or when users mention design, UX, layout, interface, frontend design, review my UI, accessibility, or visual hierarchy.
 category: design
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ui, ux, design, accessibility, layout, typography, responsive, dark-mode]
 compatible:
   - opencode

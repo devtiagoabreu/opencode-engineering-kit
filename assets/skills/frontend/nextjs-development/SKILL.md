@@ -8,7 +8,7 @@ name: nextjs-development
 description: Next.js development best practices covering App Router, server components, data fetching, and deployment
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [nextjs, react, app-router, server-components, deployment, vercel]
 compatible:
   - opencode

@@ -33,7 +33,7 @@ cat > "$AGENT_FILE" << EOF
 name: $NAME
 description: $DESCRIPTION
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [$CATEGORY, $NAME]
 compatible:
   - opencode

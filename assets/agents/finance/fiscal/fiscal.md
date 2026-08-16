@@ -7,7 +7,7 @@ provenance:
 name: fiscal
 description: Analista fiscal especializado em tributos federais, estaduais e municipais e rotinas do Simples Nacional
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tributos, simplicas-nacional, das]
 compatible:
   - opencode

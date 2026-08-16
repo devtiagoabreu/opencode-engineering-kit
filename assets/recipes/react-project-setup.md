@@ -2,7 +2,7 @@
 name: react-project-setup
 description: Complete recipe for setting up a modern React project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [react, javascript, frontend, project-setup]
 category: project-setup
 ingredients:

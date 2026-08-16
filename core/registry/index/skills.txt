@@ -2,6 +2,8 @@
   - project-setup
   - open-source-contributing
   - business-intelligence
+  - event-driven-architecture
+  - plugin-system
   - microservices-design
   - multi-tenant-saas
   - clean-architecture
@@ -68,9 +70,12 @@
   - code-review-checklist
   - robotics
   - lean-methodology
+  - onnx-object-detection
+  - rtsp-camera-ingestion
   - opencv-basics
   - oracle-database
   - postgresql-database
+  - sqlalchemy-alembic
   - sql-server-database
   - nosql-modeling
   - sql-optimization
@@ -87,6 +92,7 @@
   - ci-cd-pipeline
   - monitoring-observability
   - docker-best-practices
+  - onpremise-deployment
   - fashion-design
   - hairdressing
   - dance-and-choreography
@@ -108,6 +114,7 @@
   - rest-api-design
   - api-design
   - database-design
+  - fastapi-development
   - authentication
   - prisma-orm
   - graphql-api

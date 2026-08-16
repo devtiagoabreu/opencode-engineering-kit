@@ -8,7 +8,7 @@ name: google-workspace-analytics
 description: Build analytics on Google Workspace with Sheets formulas, Looker Studio dashboards, and Apps Script automation.
 category: web
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [google-sheets, looker-studio, apps-script, analytics, dashboards, data]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: estilista
 description: Estilista de moda especializado em planejamento de coleção, fichas técnicas, comportamento dos tecidos e pesquisa de tendências
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [moda, estilismo, colecao, tecidos, tendencias]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: data-engineer
 description: Data Engineer with expertise in data pipelines and analytics infrastructure
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [data, pipelines, etl, analytics]
 compatible:
   - opencode

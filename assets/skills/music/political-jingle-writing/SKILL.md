@@ -8,7 +8,7 @@ name: political-jingle-writing
 description: 'Craft catchy political jingles: hooks, lyric structure, rhythm, singability and emotional tone.'
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [jingles, songwriting, rhythm, hooks, lyrics, political-marketing]
 compatible:
   - opencode

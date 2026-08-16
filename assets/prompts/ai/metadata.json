@@ -3,7 +3,7 @@
   "description": "Prompt for end-to-end RAG system design (ingestion, chunking, embeddings, retrieval, generation, evaluation)",
   "category": "ai",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": [
     "rag",
     "llm",

@@ -8,7 +8,7 @@ name: criminal-law
 description: "Educational basics of Brazilian criminal procedure (CPP): rights of the accused and procedural stages."
 category: humanities
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [criminal-law, cpp, brazil, due-process, habeas-corpus, defense]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: rag-llm
 description: Design and build Retrieval-Augmented Generation (RAG) systems over private documents. Use when building chatbots that answer from your own docs/PDFs/DBs, question-answering over data, knowledge bases, embeddings, vector databases, chunking, retrieval, reranking or evaluating LLM answers grounded in sources.
 category: ai
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [rag, llm, embeddings, vector-database, retrieval, chunking, qa]
 compatible:
   - opencode

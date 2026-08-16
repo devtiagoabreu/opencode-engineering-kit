@@ -8,7 +8,7 @@ name: dance-and-choreography
 description: Choreographic composition, staging for stage and video, and a structured rehearsal process
 category: arts
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [dance, choreography, staging, composition, rehearsal]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: digital-marketing
 description: Campaign structure, marketing funnel and core metrics like ROAS and CAC
 category: marketing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [marketing, campaigns, funnel, metrics, roas, cac]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: backend-developer
 description: Backend Developer specialized in APIs and distributed systems
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [backend, api, database, microservices]
 compatible:
   - opencode

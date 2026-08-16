@@ -8,7 +8,7 @@ name: c-best-practices
 description: C best practices covering memory management, pointer safety, and defensive programming
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [c, pointers, memory, security, embedded]
 compatible:
   - opencode

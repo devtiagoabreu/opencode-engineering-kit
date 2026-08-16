@@ -8,7 +8,7 @@ name: agile-scrum
 description: Agile and Scrum ceremonies, roles, and practices for effective team delivery
 category: projects
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [agile, scrum, ceremonies, sprint, team, project-management]
 compatible:
   - opencode

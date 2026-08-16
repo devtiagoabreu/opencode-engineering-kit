@@ -8,7 +8,7 @@ name: python-best-practices
 description: Python best practices covering typing, packaging, virtual environments, and code style
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [python, typing, packaging, venv, pep8, style]
 compatible:
   - opencode

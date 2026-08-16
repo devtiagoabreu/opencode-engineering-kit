@@ -3,7 +3,7 @@ name: documentation-context
 description: Documentation conventions for OpenCode Engineering Kit
 type: conventions
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Documentation Conventions

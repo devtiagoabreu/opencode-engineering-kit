@@ -8,7 +8,7 @@ name: route-optimization
 description: Plan, geocode and optimize field routes with OpenRouteService/OSRM — provider abstraction, single-vehicle routing, distance/time calculation, and route persistence
 category: logistics
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [routing, optimization, geocoding, openrouteservice, osrm, vrp, logistics, maps]
 compatible:
   - opencode

@@ -5,8 +5,10 @@ ai/llm-multi-provider
 ai/rag-llm
 analytics/business-intelligence
 architecture/clean-architecture
+architecture/event-driven-architecture
 architecture/microservices-design
 architecture/multi-tenant-saas
+architecture/plugin-system
 arts/dance-and-choreography
 arts/fashion-design
 arts/hairdressing
@@ -19,6 +21,7 @@ backend/api-design
 backend/authentication
 backend/caching-strategies
 backend/database-design
+backend/fastapi-development
 backend/graphql-api
 backend/prisma-orm
 backend/rest-api-design
@@ -35,6 +38,7 @@ construction/construction-execution
 database/nosql-modeling
 database/oracle-database
 database/postgresql-database
+database/sqlalchemy-alembic
 database/sql-optimization
 database/sql-server-database
 design/design-system
@@ -44,6 +48,7 @@ devops/docker-best-practices
 devops/incident-response
 devops/kubernetes-best-practices
 devops/monitoring-observability
+devops/onpremise-deployment
 devops/terraform-aws
 devops/vercel-deployment
 documentation/doc-to-markdown
@@ -138,6 +143,8 @@ tools/ocekit-manager
 tools/repo-to-llm
 tools/session-memory
 tools/terminal-productivity
+vision/onnx-object-detection
 vision/opencv-basics
+vision/rtsp-camera-ingestion
 web/google-workspace-analytics
 web/web-scraping

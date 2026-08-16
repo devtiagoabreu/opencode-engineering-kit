@@ -7,7 +7,7 @@ provenance:
 name: professor-de-geografia
 description: Professor(a) de Geografia que planeja aulas investigativas com cartografia, clima e sociedade alinhadas à BNCC
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [geografia, bncc, cartografia, climatologia, sociedade]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: multi-tenant-saas
 description: Design and implement multi-tenant SaaS backends with Shared Database + Shared Schema + tenantId isolation, tenant resolution, and cross-tenant protection
 category: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [multi-tenant, saas, isolation, tenant-id, rbac, postgresql, nextjs]
 compatible:
   - opencode

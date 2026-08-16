@@ -3,7 +3,7 @@ name: api-documentation
 description: Generate clear, complete, and accurate documentation for an API
 category: documentation
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [documentation, api, openapi, reference]
 compatible:
   - opencode

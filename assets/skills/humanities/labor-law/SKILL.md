@@ -8,7 +8,7 @@ name: labor-law
 description: "Educational basics of Brazilian labor law (CLT): contracts, rights, dismissal and overtime."
 category: humanities
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [labor-law, clt, brazil, employment, contracts, dismissal, overtime]
 compatible:
   - opencode

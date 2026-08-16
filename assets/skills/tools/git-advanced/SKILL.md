@@ -8,7 +8,7 @@ name: git-advanced
 description: Advanced Git techniques covering rebase, bisect, worktrees, and hooks
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [git, rebase, bisect, worktree, hooks, history]
 compatible:
   - opencode

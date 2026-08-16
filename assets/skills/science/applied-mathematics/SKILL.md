@@ -8,7 +8,7 @@ name: applied-mathematics
 description: Practical algebra, calculus and statistics with worked numerical examples
 category: science
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mathematics, algebra, calculus, statistics, examples]
 compatible:
   - opencode

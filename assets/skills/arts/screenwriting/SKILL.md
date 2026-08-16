@@ -8,7 +8,7 @@ name: screenwriting
 description: Screenwriting covering three-act structure, the Save the Cat beat sheet, character arcs and dialogue
 category: arts
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [screenwriting, structure, dialogue, character, story]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: integration-testing
 description: Best practices for integration testing and API testing
 category: testing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [integration-testing, api-testing, testing, quality]
 compatible:
   - opencode

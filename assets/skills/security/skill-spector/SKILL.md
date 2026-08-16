@@ -8,7 +8,7 @@ name: skill-spector
 description: Scan AI agent skills for vulnerabilities, prompt injection and supply-chain risks before installing them, using NVIDIA SkillSpector
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [security, scanner, skills, prompt-injection, supply-chain, skillspector]
 compatible:
   - opencode

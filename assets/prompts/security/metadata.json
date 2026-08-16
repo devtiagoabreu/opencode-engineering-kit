@@ -3,7 +3,7 @@
   "description": "Perform a structured security audit of an application and its codebase",
   "category": "security",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": [
     "security",
     "audit",

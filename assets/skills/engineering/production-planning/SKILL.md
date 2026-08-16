@@ -8,7 +8,7 @@ name: production-planning
 description: Plan production with takt time, capacity calculations, and PCP formulas like OEE and batch sizing.
 category: engineering
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [production, planning, takt-time, oee, capacity, scheduling, pcp]
 compatible:
   - opencode

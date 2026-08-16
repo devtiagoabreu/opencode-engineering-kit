@@ -8,7 +8,7 @@ name: assessment-and-feedback
 description: Design formative and summative assessment, build rubrics, and run effective feedback loops
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [assessment, feedback, formative, summative, rubrics, grading, feedback-loops, teaching]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: especialista-comercial-plasticos
 description: Especialista comercial em resinas e polímeros para a indústria de plásticos
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [comercial, plásticos, resinas, polímeros, b2b, vendas-técnicas]
 compatible:
   - opencode

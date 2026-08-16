@@ -7,7 +7,7 @@ provenance:
 name: arquiteto-aws-cloud
 description: Arquiteto de Soluções AWS com foco em arquitetura serverless, IaC, custo, segurança e resiliência
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [aws, cloud, serverless, terraform, sam]
 compatible:
   - opencode

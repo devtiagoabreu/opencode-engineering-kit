@@ -8,7 +8,7 @@ name: incident-response
 description: Best practices for incident response and management
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [incident-response, management, on-call, devops]
 compatible:
   - opencode

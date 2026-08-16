@@ -8,7 +8,7 @@ name: brainstorming
 description: Structured brainstorming to explore ideas, requirements and trade-offs before committing to a plan
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [brainstorming, ideation, planning, methodology, requirements]
 compatible:
   - opencode

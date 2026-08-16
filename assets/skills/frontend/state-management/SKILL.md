@@ -8,7 +8,7 @@ name: state-management
 description: Best practices for state management in frontend applications
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [state-management, react, redux, frontend]
 compatible:
   - opencode

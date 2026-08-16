@@ -2,7 +2,7 @@
   "name": "equipe-comercial-tecelagem",
   "description": "Equipe comercial B2B de fábrica de tecidos planos para confecções e vestuário",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["comercial", "tecelagem", "tecidos-planos", "b2b", "vendas", "crm"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

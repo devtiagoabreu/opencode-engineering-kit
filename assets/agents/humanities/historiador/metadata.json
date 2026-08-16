@@ -2,7 +2,7 @@
   "name": "historiador",
   "description": "Historiador com método de análise de fontes, narrativa e preservação",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["história", "fontes", "arquivo", "pesquisa", "narrativa"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

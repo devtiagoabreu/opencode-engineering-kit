@@ -8,7 +8,7 @@ name: vercel-deployment
 description: Deploy and operate Next.js apps on Vercel — previews, environment variables, Route Handler limits, serverless considerations, monitoring and CI integration
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [vercel, deployment, serverless, nextjs, ci-cd, env-vars, monitoring]
 compatible:
   - opencode

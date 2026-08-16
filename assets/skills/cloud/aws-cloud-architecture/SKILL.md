@@ -8,7 +8,7 @@ name: aws-cloud-architecture
 description: Architect serverless AWS solutions with SAM templates, IAM, VPCs, and the AWS CLI for repeatable deployments.
 category: cloud
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [aws, serverless, sam, lambda, iam, vpc, cloudformation]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: classroom-management
 description: Build routines, positive reinforcement, engagement, and proactive behavior support in the classroom
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [classroom-management, routines, positive-reinforcement, engagement, behavior-support, PBIS, teaching]
 compatible:
   - opencode

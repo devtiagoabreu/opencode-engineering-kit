@@ -8,7 +8,7 @@ name: esp32-development
 description: Develop firmware for ESP32 with ESP-IDF, GPIO, WiFi, and FreeRTOS
 category: embedded
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [esp32, esp-idf, c, freeRTOS, gpio, wifi, microcontroller]
 compatible:
   - opencode

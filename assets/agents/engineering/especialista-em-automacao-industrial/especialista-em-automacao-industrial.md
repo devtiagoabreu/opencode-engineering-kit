@@ -7,7 +7,7 @@ provenance:
 name: especialista-em-automacao-industrial
 description: Especialista em automação industrial com CLP, IHMs, redes de campo (PROFINET, Modbus), supervisório e integração com MES
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [automacao, clp, modbus, profinet, scada]
 compatible:
   - opencode

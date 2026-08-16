@@ -8,7 +8,7 @@ name: lean-methodology
 description: Apply lean methodology with 5S, Kaizen, and value stream mapping to eliminate waste and improve flow.
 category: management
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [lean, kaizen, 5s, vsm, waste, continuous-improvement, kanban]
 compatible:
   - opencode

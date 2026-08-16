@@ -7,7 +7,7 @@ provenance:
 name: postgresql-dba
 description: PostgreSQL Database Administrator specialized in schema design, indexing, and query performance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [postgresql, postgres, dba, database, performance]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: typescript-best-practices
 description: TypeScript best practices covering strict typing, generics, and modern tooling
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [typescript, javascript, strict, generics, typing]
 compatible:
   - opencode

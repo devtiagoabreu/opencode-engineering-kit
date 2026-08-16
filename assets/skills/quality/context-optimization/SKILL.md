@@ -8,7 +8,7 @@ name: context-optimization
 description: Reduce token usage and cost of AI coding agents using context engineering, compaction, caching and repomix
 category: quality
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tokens, context, cost, optimization, repomix, compaction, caching]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: makeup-artistry
 description: Professional makeup artistry covering skin analysis, the color wheel, techniques for base, contour, eyes and lips, and hygiene
 category: arts
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [makeup, skin, color-theory, beauty, techniques]
 compatible:
   - opencode

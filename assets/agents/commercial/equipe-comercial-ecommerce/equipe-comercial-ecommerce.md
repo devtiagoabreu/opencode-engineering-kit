@@ -7,7 +7,7 @@ provenance:
 name: equipe-comercial-ecommerce
 description: "Equipe comercial de e-commerce: catálogo, SKUs, precificação, canais e operação de loja"
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [comercial, ecommerce, marketplace, sku, precificação, logística, omnichannel]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: lesson-planning
 description: Plan lessons with backward design, measurable objectives, aligned assessments, and differentiation
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [lesson-planning, backward-design, objectives, assessment, differentiation, curriculum, pedagogy, planning]
 compatible:
   - opencode

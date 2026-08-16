@@ -8,7 +8,7 @@ name: session-memory
 description: Persistent local-first memory across sessions using context/memory/memory.py (SQLite FTS + optional vector recall)
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [memory, sessions, persistence, sqlite, chromadb, context]
 compatible:
   - opencode

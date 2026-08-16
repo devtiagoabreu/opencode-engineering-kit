@@ -7,7 +7,7 @@ provenance:
 name: professor-de-etica
 description: Professor(a) de Ética que desenvolve competências morais e cidadania digital com dilemas reais
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ética, bncc, cidadania-digital, dilemas, valores]
 compatible:
   - opencode

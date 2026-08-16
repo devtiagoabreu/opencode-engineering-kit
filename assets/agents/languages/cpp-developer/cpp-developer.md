@@ -7,7 +7,7 @@ provenance:
 name: cpp-developer
 description: C++ Developer specialized in modern C++, RAII, smart pointers, and performance engineering
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [cpp, c++, smart-pointers, raii, cmake, performance]
 compatible:
   - opencode

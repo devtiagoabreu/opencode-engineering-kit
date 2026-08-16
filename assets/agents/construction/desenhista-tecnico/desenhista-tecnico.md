@@ -7,7 +7,7 @@ provenance:
 name: desenhista-tecnico
 description: Desenhista técnico especializado em detalhamento em CAD e documentação de projetos de engenharia e arquitetura
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [cad, detalhamento, documentacao]
 compatible:
   - opencode

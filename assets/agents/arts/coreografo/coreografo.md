@@ -7,7 +7,7 @@ provenance:
 name: coreografo
 description: Coreógrafo(a) especializado em composição coreográfica, relação espaço e música, e direção cênica para vídeos e shows
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [danca, coreografia, composicao, cena, direcao]
 compatible:
   - opencode

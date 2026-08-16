@@ -8,7 +8,7 @@ name: robotics
 description: Robotics development with ROS 2, embedded control and simulation. Use when building robot software, ROS 2 nodes/packages, teleop, motor control, sensor fusion, path planning, microcontrollers in robots, or when users mention ROS, robotics, odometry, lidar, servo, motor, kinematics or gazebo simulation.
 category: robotics
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [robotics, ros2, control, sensors, kinematics, simulation, motors]
 compatible:
   - opencode

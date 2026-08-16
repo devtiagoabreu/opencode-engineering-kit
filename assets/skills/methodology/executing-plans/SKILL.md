@@ -8,7 +8,7 @@ name: executing-plans
 description: Execute an approved plan task by task, verifying each acceptance criterion before moving on
 category: methodology
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [planning, execution, methodology, verification, discipline]
 compatible:
   - opencode

@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: sáb 15 ago 2026 17:31:38 -03
+# Generated: sáb 15 ago 2026 22:16:56 -03
 
 ## projects/agile-scrum
   (no dependencies)
@@ -11,6 +11,12 @@
   (no dependencies)
 
 ## analytics/business-intelligence
+  (no dependencies)
+
+## architecture/event-driven-architecture
+  (no dependencies)
+
+## architecture/plugin-system
   (no dependencies)
 
 ## architecture/microservices-design
@@ -211,6 +217,12 @@
 ## management/lean-methodology
   (no dependencies)
 
+## vision/onnx-object-detection
+  (no dependencies)
+
+## vision/rtsp-camera-ingestion
+  (no dependencies)
+
 ## vision/opencv-basics
   (no dependencies)
 
@@ -218,6 +230,9 @@
   (no dependencies)
 
 ## database/postgresql-database
+  (no dependencies)
+
+## database/sqlalchemy-alembic
   (no dependencies)
 
 ## database/sql-server-database
@@ -265,6 +280,9 @@
   (no dependencies)
 
 ## devops/docker-best-practices
+  (no dependencies)
+
+## devops/onpremise-deployment
   (no dependencies)
 
 ## arts/fashion-design
@@ -328,6 +346,9 @@
   (no dependencies)
 
 ## backend/database-design
+  (no dependencies)
+
+## backend/fastapi-development
   (no dependencies)
 
 ## backend/authentication

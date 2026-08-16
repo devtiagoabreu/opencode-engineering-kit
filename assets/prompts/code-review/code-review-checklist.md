@@ -3,7 +3,7 @@ name: code-review-checklist
 description: Prompt for code review using comprehensive checklist
 category: code-review
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, quality, checklist]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: traffic-management
 description: Meta Ads and Google Ads budget, bidding and audience segmentation config
 category: marketing
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [traffic, meta-ads, google-ads, budget, bidding, segmentation]
 compatible:
   - opencode

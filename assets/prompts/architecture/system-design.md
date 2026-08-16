@@ -3,7 +3,7 @@ name: system-design
 description: Prompt for system design and architecture
 category: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [architecture, system-design, scalability]
 compatible:
   - opencode

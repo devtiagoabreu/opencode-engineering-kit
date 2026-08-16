@@ -2,7 +2,7 @@
 name: whatsapp-bot-setup
 description: Set up a WhatsApp bot end-to-end (Evolution API instance, webhook, state machine, AI replies)
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [whatsapp, evolution-api, bot, ai, webhook, n8n]
 compatible:
   - opencode

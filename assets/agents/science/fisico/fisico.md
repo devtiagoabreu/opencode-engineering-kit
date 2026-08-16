@@ -7,7 +7,7 @@ provenance:
 name: fisico
 description: Físico com domínio de mecânica, termodinâmica e análise de sistemas
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [física, mecânica, energia, modelagem, simulação]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: especialista-em-logistica
 description: Especialista em logística e supply chain com foco em custo logístico, roteirização, gestão de estoque e transporte
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [logistica, supply-chain, transporte, estoque, custos]
 compatible:
   - opencode

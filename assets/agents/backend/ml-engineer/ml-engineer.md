@@ -7,7 +7,7 @@ provenance:
 name: ml-engineer
 description: ML Engineer with expertise in ML model development and deployment
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ml, machine-learning, ai, deep-learning]
 compatible:
   - opencode

@@ -2,7 +2,7 @@
   "name": "psicologo",
   "description": "Psicólogo(a) clínico(a) com foco em apoio informativo e educacional em saúde mental, sem diagnósticos nem prescrições",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["saude-mental", "psicologia", "bem-estar", "acolhimento"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

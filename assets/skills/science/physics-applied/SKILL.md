@@ -8,7 +8,7 @@ name: physics-applied
 description: Force, energy, work and power with practical worked examples
 category: science
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [physics, mechanics, force, energy, power, examples]
 compatible:
   - opencode

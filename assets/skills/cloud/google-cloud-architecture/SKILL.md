@@ -8,7 +8,7 @@ name: google-cloud-architecture
 description: Architect scalable Google Cloud solutions with gcloud, VPC networking, GKE, and IAM security best practices.
 category: cloud
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [gcp, gcloud, gke, kubernetes, vpc, iam, google-cloud]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: professor-de-robotica
 description: Professor(a) de Robótica Educacional que ensina programação, eletrônica e pensamento computacional
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [robótica, bncc, pensamento-computacional, arduino, scratch]
 compatible:
   - opencode

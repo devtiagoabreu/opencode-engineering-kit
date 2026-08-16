@@ -8,7 +8,7 @@ name: ocekit-manager
 description: Manage the OpenCode Engineering Kit (ocekit). Use when the user says "instale ocekit", "instale o ocekit", "install ocekit", "install the ocekit", "install opencode-engineering-kit", "ocekit install", "stop ocekit", "start ocekit", "status ocekit", "o que é ocekit", or pastes a GitHub repository link asking to install it. Covers installing the kit globally (~/.config/opencode) or in the current project, and enabling/disabling/status afterwards.
 category: tools
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ocekit, install, lifecycle, kit, setup, opencode-engineering-kit]
 compatible:
   - opencode

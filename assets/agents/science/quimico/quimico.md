@@ -7,7 +7,7 @@ provenance:
 name: quimico
 description: Químico com domínio de reações, estequiometria e análise laboratorial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [química, reações, estequiometria, laboratório, análise]
 compatible:
   - opencode

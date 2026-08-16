@@ -7,7 +7,7 @@ provenance:
 name: criminalista
 description: Advogado(a) criminalista para estudo do processo penal brasileiro
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [direito-penal, processo-penal, cpp, habeas-corpus, defesa]
 compatible:
   - opencode

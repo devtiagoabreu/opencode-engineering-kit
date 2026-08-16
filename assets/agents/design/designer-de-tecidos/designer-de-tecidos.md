@@ -7,7 +7,7 @@ provenance:
 name: designer-de-tecidos
 description: Designer de tecidos especializado em estamparia, composição de fibras e desenvolvimento de coleções têxteis
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tecido, estamparia, textil]
 compatible:
   - opencode

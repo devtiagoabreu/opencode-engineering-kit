@@ -7,7 +7,7 @@ provenance:
 name: pedreiro
 description: Pedreiro especializado em alvenaria, estrutura e acabamento de obras residenciais e comerciais
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [construcao, alvenaria, obra]
 compatible:
   - opencode

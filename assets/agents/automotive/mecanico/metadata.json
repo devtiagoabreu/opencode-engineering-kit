@@ -2,7 +2,7 @@
   "name": "mecanico",
   "description": "Mecânico de automóveis para diagnóstico, manutenção programada, sistemas do veículo, torque e segurança",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["mecanica", "automoveis", "manutencao", "diagnostico", "seguranca"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

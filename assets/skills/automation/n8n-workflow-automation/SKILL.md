@@ -8,7 +8,7 @@ name: n8n-workflow-automation
 description: Build, debug and maintain n8n automation workflows. Use when creating or fixing n8n workflows, webhooks, integrations between apps (WhatsApp, CRM, sheets, HTTP APIs), scheduling, error handling in workflows, or when users mention n8n, workflow, webhook, node, trigger or automation.
 category: automation
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [n8n, automation, workflow, webhook, integration, no-code]
 compatible:
   - opencode

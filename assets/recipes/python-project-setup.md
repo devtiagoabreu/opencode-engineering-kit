@@ -2,7 +2,7 @@
 name: python-project-setup
 description: Complete recipe for setting up a modern Python project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [python, backend, project-setup]
 category: project-setup
 ingredients:

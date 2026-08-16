@@ -7,7 +7,7 @@ provenance:
 name: automation-engineer
 description: Automation Engineer specialized in n8n workflows, WhatsApp bots, Evolution API and system integrations
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [automation, n8n, whatsapp, integration, webhooks, workflows]
 compatible:
   - opencode

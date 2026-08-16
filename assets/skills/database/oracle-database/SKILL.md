@@ -8,7 +8,7 @@ name: oracle-database
 description: Oracle Database best practices covering SQL tuning, PL/SQL, schema design, and administration
 category: database
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [oracle, plsql, sql, database, performance]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: criador-de-jingles-politicos
 description: Criador(a) de jingles políticos com hooks cativantes, ritmo, letra, cantabilidade e alinhamento à mensagem do candidato
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [jingles, música, composição, marketing-político, ritmo, cantabilidade]
 compatible:
   - opencode

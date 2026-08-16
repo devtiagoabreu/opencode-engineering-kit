@@ -8,7 +8,7 @@ name: sensor-integration
 description: Integrate sensors over I2C and SPI and build an end-to-end telemetry pipeline
 category: iot
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [i2c, spi, sensors, telemetry, embedded, iot, data-pipeline]
 compatible:
   - opencode

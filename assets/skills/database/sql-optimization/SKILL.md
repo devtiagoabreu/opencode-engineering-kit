@@ -8,7 +8,7 @@ name: sql-optimization
 description: Optimize SQL queries with indexes, EXPLAIN analysis, and database normalization
 category: database
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [sql, postgresql, mysql, indexing, explain, performance, normalization]
 compatible:
   - opencode

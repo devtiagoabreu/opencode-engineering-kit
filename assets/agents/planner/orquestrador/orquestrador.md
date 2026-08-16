@@ -7,7 +7,7 @@ provenance:
 name: orquestrador
 description: Agente orquestrador que planeja tarefas, escolhe os agentes certos, mostra a procedência das ferramentas e pergunta ao usuário o que ele deseja
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [planejamento, orquestracao, delegacao, proveniencia, coordenacao]
 compatible:
   - opencode

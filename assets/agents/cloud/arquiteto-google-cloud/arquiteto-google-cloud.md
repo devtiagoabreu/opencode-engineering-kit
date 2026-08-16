@@ -7,7 +7,7 @@ provenance:
 name: arquiteto-google-cloud
 description: Arquiteto de Soluções Google Cloud com foco em GKE, VPC, serverless (Cloud Run), dados e custo
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [google-cloud, gke, cloud-run, terraform, kubernetes]
 compatible:
   - opencode

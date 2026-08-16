@@ -8,7 +8,7 @@ name: customer-relationship
 description: "Customer relationship team playbook: pre-sales, onboarding, support tiers, NPS/CSAT and retention"
 category: commercial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [commercial, relationship, crm, support, nps, csat, retention, omnichannel]
 compatible:
   - opencode

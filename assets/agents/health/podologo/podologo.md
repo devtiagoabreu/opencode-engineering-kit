@@ -7,7 +7,7 @@ provenance:
 name: podologo
 description: Podólogo(a) para cuidados educacionais com os pés, higiene, biomecânica e prevenção, com encaminhamento para pé diabético
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [podologia, pes, saude, cuidados, prevencao]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: chemistry-basics
 description: Balancing chemical equations, molarity and stoichiometry with examples
 category: science
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [chemistry, reactions, balancing, molarity, stoichiometry]
 compatible:
   - opencode

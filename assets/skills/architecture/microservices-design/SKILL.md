@@ -8,7 +8,7 @@ name: microservices-design
 description: Design scalable microservices with bounded contexts, events, and saga orchestration
 category: architecture
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [microservices, bounded-context, ddd, event-driven, saga, distributed-systems]
 compatible:
   - opencode

@@ -3,7 +3,7 @@ name: auto-usage
 description: Regra de uso automático de skills, personas e assets do kit no OpenCode — sempre verifique e use quando for produtivo, sem comandos
 type: workflow
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Uso Automático do Kit (Auto Usage)

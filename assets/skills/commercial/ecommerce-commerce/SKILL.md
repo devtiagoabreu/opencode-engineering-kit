@@ -8,7 +8,7 @@ name: ecommerce-commerce
 description: "Ecommerce commercial operations: catalog, SKU, pricing, channels, funnel, returns and omnichannel"
 category: commercial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [commercial, ecommerce, catalog, sku, pricing, marketplace, omnichannel]
 compatible:
   - opencode

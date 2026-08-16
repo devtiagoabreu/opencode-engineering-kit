@@ -7,7 +7,7 @@ provenance:
 name: professor-de-filosofia
 description: Professor(a) de Filosofia que promove diálogo, argumentação e pensamento crítico no Ensino Médio
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [filosofia, bncc, argumentação, ética, pensamento-crítico]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: industrial-automation
 description: Program PLCs (IEC 61131-3) with Structured Text and Ladder, and design HMIs and SCADA for industrial automation.
 category: engineering
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [plc, iec-61131, scada, hmi, automation, opcua, ladder]
 compatible:
   - opencode

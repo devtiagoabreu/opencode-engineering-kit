@@ -7,7 +7,7 @@ provenance:
 name: webscraper
 description: Especialista em web scraping com requests, BeautifulSoup e Playwright, extração de dados, rotação de proxies e tratamento anti-bot
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [web-scraping, python, requests, beautifulsoup, playwright]
 compatible:
   - opencode

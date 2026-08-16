@@ -3,7 +3,7 @@ name: history
 description: Histórico de mudanças, decisões e adições do kit (sempre atualizado a cada alteração)
 type: decisions
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Histórico do Kit

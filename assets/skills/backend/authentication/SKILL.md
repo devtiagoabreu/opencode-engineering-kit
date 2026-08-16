@@ -8,7 +8,7 @@ name: authentication
 description: Best practices for authentication and authorization implementation
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [authentication, authorization, security, jwt]
 compatible:
   - opencode

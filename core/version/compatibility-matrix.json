@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-15T20:32:34Z",
+  "generated": "2026-08-16T01:17:53Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -71,6 +71,15 @@
         "cursor"
       ]
     },
+    "event-driven-architecture": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "microservices-design": {
       "type": "skill",
       "version": "0.1.0",
@@ -81,6 +90,15 @@
       ]
     },
     "multi-tenant-saas": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "plugin-system": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -189,6 +207,15 @@
       ]
     },
     "database-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "fastapi-development": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -359,6 +386,15 @@
         "cursor"
       ]
     },
+    "sqlalchemy-alembic": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "design-system": {
       "type": "skill",
       "version": "0.1.0",
@@ -414,6 +450,15 @@
       ]
     },
     "monitoring-observability": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "onpremise-deployment": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1266,7 +1311,25 @@
         "cursor"
       ]
     },
+    "onnx-object-detection": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "opencv-basics": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "rtsp-camera-ingestion": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [

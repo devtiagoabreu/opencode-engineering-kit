@@ -8,7 +8,7 @@ name: php-best-practices
 description: PHP best practices covering modern PHP 8 features, PSR standards, PDO database access, and testing
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [php, pdo, psr, composer, testing, web]
 compatible:
   - opencode

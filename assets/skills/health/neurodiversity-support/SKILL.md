@@ -8,7 +8,7 @@ name: neurodiversity-support
 description: Support neurodivergent learners and colleagues with inclusive communication, accessibility, and accommodations.
 category: health
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [neurodiversity, accessibility, inclusion, wcag, communication, accommodations]
 compatible:
   - opencode

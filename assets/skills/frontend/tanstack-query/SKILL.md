@@ -8,7 +8,7 @@ name: tanstack-query
 description: Manage server state in React with TanStack Query — queries, mutations, cache invalidation, optimistic updates, and infinite lists for data-heavy SaaS screens
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tanstack-query, react-query, server-state, cache, mutations, optimistic-update]
 compatible:
   - opencode

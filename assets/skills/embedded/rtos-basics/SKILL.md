@@ -8,7 +8,7 @@ name: rtos-basics
 description: Learn real-time operating system fundamentals with tasks, scheduling, and semaphores
 category: embedded
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [rtos, freeRTOS, zephyr, scheduling, semaphore, mutex, queue, realtime]
 compatible:
   - opencode

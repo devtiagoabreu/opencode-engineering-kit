@@ -3,7 +3,7 @@ name: style-guide-context
 description: Style guide for OpenCode Engineering Kit
 type: conventions
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Style Guide

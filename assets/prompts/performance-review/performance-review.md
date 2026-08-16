@@ -3,7 +3,7 @@ name: performance-review
 description: Analyze and improve the performance of a codebase or running system
 category: performance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [performance, optimization, profiling, benchmarks]
 compatible:
   - opencode

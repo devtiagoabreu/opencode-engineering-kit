@@ -7,7 +7,7 @@ provenance:
 name: especialista-em-tdah
 description: Especialista em TDAH com apoio educacional em organização, foco e gestão do tempo, sem diagnóstico nem medicação
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [tdah, foco, produtividade, neurodiversidade]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: suzuki-method
 description: Learn the Suzuki Method with the mother-tongue approach, step-by-step progression, listening, review, and parental role
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [suzuki-method, music-education, mother-tongue, listening, review, parental-role, children]
 compatible:
   - opencode

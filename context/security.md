@@ -3,7 +3,7 @@ name: security-context
 description: Security context for OpenCode Engineering Kit
 type: project
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Security Context

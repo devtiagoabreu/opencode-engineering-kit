@@ -8,7 +8,7 @@ name: vestibular-prep
 description: Prepare students for Brazilian university entrance exams with ENEM, FUVEST, and VUNESP structures and study plans
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [vestibular, ENEM, FUVEST, VUNESP, redacao, study-planning, brazil, ensino-medio, college-prep]
 compatible:
   - opencode

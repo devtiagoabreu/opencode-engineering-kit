@@ -8,7 +8,7 @@ name: piano
 description: Learn piano fundamentals with posture, technique, scales, sight reading, and repertoire
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [piano, keyboard, technique, scales, sight-reading, repertoire, practice]
 compatible:
   - opencode

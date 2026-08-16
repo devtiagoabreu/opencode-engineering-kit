@@ -8,7 +8,7 @@ name: secure-coding
 description: Best practices for secure coding and development
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [secure-coding, security, best-practices, development]
 compatible:
   - opencode

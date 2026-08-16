@@ -7,7 +7,7 @@ provenance:
 name: mobile-developer
 description: Mobile Developer with expertise in native and cross-platform development
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mobile, ios, android, react-native, flutter]
 compatible:
   - opencode

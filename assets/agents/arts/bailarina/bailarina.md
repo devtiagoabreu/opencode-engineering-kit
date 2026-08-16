@@ -7,7 +7,7 @@ provenance:
 name: bailarina
 description: Bailarina profissional especializada em dança clássica, técnica, alinhamento corporal, performance e prevenção de lesões
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [danca, bale, tecnica, performance, prevencao]
 compatible:
   - opencode

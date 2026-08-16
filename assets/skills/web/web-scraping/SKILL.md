@@ -8,7 +8,7 @@ name: web-scraping
 description: Extract web data ethically with Python, requests, BeautifulSoup, and Scrapy while respecting robots.txt and rate limits.
 category: web
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [web-scraping, python, beautifulsoup, scrapy, requests, robots.txt, data-extraction]
 compatible:
   - opencode

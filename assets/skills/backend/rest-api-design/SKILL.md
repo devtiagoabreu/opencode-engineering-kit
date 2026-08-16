@@ -8,7 +8,7 @@ name: rest-api-design
 description: Best practices for REST API design and implementation
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [rest, api, design, backend]
 compatible:
   - opencode

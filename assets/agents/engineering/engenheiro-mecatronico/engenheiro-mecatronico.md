@@ -7,7 +7,7 @@ provenance:
 name: engenheiro-mecatronico
 description: Engenheiro mecatrônico especializado em sistemas embarcados, controle de movimento, sensores, atuadores e integração hardware-software
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mecatronica, embarcados, controle, automacao, sensores]
 compatible:
   - opencode

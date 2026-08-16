@@ -8,7 +8,7 @@ name: free-llm-models
 description: 'Guide to free reputable online LLMs: which models exist, free tiers, use cases, prompting and privacy caveats.'
 category: ai
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [llm, ai, free-tier, deepseek, qwen, gemini, mistral, groq, perplexity, copilot, huggingface]
 compatible:
   - opencode

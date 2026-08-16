@@ -8,7 +8,7 @@ name: code-review-best-practices
 description: Code review best practices for constructive feedback and effective checklists
 category: quality
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, collaboration, quality, checklist, pull-request]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: drums
 description: Learn drums with grip, rudiments, independence, groove, and timekeeping
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [drums, drum-set, rudiments, independence, groove, timekeeping, metronome]
 compatible:
   - opencode

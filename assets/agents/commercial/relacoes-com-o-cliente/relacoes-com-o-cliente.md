@@ -7,7 +7,7 @@ provenance:
 name: relacoes-com-o-cliente
 description: "Equipe de relacionamento com o cliente: pré-venda, onboarding, suporte, NPS e retenção"
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [comercial, relacionamento, crm, suporte, nps, retenção, omnichannel]
 compatible:
   - opencode

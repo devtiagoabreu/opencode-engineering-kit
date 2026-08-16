@@ -8,7 +8,7 @@ name: personal-training
 description: Design training programs with the FITT principle, safe progression, warm-up and cool-down, and health screening.
 category: sports
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [training, fitness, fitt, progression, programming]
 compatible:
   - opencode

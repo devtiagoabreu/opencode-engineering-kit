@@ -8,7 +8,7 @@ name: database-design
 description: Best practices for database design and modeling
 category: backend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [database, design, modeling, sql]
 compatible:
   - opencode

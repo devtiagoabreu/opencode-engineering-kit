@@ -8,7 +8,7 @@ name: evidence-based-teaching
 description: Apply research-backed teaching practices and interpret effect sizes to decide what to do in class
 category: education
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [evidence-based-teaching, research, effect-sizes, teaching, retrieval-practice, education-science, hattie]
 compatible:
   - opencode

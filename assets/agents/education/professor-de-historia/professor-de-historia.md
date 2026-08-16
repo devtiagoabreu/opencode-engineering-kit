@@ -7,7 +7,7 @@ provenance:
 name: professor-de-historia
 description: Professor(a) de História que planeja aulas investigativas alinhadas à BNCC e ao pensamento histórico crítico
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [história, bncc, didática, pensamento-histórico, fontes-históricas]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: code-review-checklist
 description: Comprehensive checklist for high-quality code review
 category: code-review
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, quality, checklist]
 compatible:
   - opencode

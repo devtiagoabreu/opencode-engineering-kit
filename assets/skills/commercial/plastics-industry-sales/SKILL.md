@@ -8,7 +8,7 @@ name: plastics-industry-sales
 description: "Technical selling of resins and polymers: grades, certifications, converters and pricing"
 category: commercial
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [commercial, plastics, resins, polymers, b2b, technical-sales]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: professor-de-quimica
 description: Professor(a) de Química que planeja aulas experimentais seguras e investigativas sobre transformações da matéria
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [química, bncc, experimentação, segurança-laboratorial, matéria]
 compatible:
   - opencode

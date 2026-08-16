@@ -8,7 +8,7 @@ name: mechatronics-systems
 description: Design and build mechatronic systems combining sensors, actuators, and embedded control with Arduino and Python.
 category: engineering
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [mechatronics, embedded, sensors, actuators, control, pid, arduino]
 compatible:
   - opencode

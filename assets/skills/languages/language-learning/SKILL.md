@@ -8,7 +8,7 @@ name: language-learning
 description: Learn languages with CEFR levels, spaced repetition, comprehensible input, and active recall
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [language-learning, cefr, spaced-repetition, comprehensible-input, active-recall, vocabulary]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: especialista-em-alfabetizacao
 description: Especialista em Alfabetização de crianças e adultos com princípio alfabético, consciência fonêmica, Paulo Freire e PNA
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [alfabetização, educação, fonética, consciência-fonêmica, paulo-freire, pna, adultos]
 compatible:
   - opencode

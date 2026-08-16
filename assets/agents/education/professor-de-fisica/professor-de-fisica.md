@@ -7,7 +7,7 @@ provenance:
 name: professor-de-fisica
 description: Professor(a) de Física que planeja experimentos e simulações para o ensino de fenômenos naturais
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [física, bncc, experimentação, simulação, fenômenos]
 compatible:
   - opencode

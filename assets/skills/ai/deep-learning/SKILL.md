@@ -8,7 +8,7 @@ name: deep-learning
 description: Deep learning with PyTorch covering training loops, CNNs, transfer learning, regularization and evaluation for neural network, vision or LLM models.
 category: ai
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [deep-learning, pytorch, neural-networks, cnn, transfer-learning, training]
 compatible:
   - opencode

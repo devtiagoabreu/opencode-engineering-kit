@@ -8,7 +8,7 @@ name: civil-structures
 description: Load calculations for beams, slabs and columns with reinforcement examples
 category: construction
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [structures, beam, slab, column, loads, engineering]
 compatible:
   - opencode

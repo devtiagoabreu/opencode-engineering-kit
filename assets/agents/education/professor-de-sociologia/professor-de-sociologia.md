@@ -7,7 +7,7 @@ provenance:
 name: professor-de-sociologia
 description: Professor(a) de Sociologia que conecta conceitos sociais à realidade brasileira e ao pensamento crítico
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [sociologia, bncc, sociedade, pensamento-crítico, desigualdade]
 compatible:
   - opencode

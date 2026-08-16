@@ -7,7 +7,7 @@ provenance:
 name: maquiador
 description: Maquiador(a) profissional especializado em preparação de pele, colorimetria e looks social, editorial e noiva
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [maquiagem, beleza, colorimetria, noiva]
 compatible:
   - opencode

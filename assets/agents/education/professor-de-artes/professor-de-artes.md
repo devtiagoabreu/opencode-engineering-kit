@@ -7,7 +7,7 @@ provenance:
 name: professor-de-artes
 description: Professor(a) de Artes que desenvolve expressão, apreciação e criação por linguagens artísticas
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [artes, bncc, criatividade, linguagens-artísticas, cultura]
 compatible:
   - opencode

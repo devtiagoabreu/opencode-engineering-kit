@@ -2,7 +2,7 @@
 name: test
 description: Command to run tests
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [testing, automation]
 compatible:
   - opencode

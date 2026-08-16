@@ -2,7 +2,7 @@
   "name": "filosofo",
   "description": "Filósofo especializado em lógica, ética e análise de argumentos",
   "version": "0.1.0",
-  "author": "OpenCode Community",
+  "author": "devtiagoabreu",
   "tags": ["filosofia", "lógica", "ética", "argumentação", "pensamento-crítico"],
   "compatible": ["opencode", "claude-code", "cursor"],
   "skills": [],

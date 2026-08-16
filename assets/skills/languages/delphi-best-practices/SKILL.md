@@ -8,7 +8,7 @@ name: delphi-best-practices
 description: Delphi best practices covering object-oriented Pascal structure, VCL/FMX patterns, and database access
 category: languages
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [delphi, pascal, vcl, firemonkey, firebird, sql, windows]
 compatible:
   - opencode

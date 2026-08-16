@@ -8,7 +8,7 @@ name: esp8266-development
 description: Develop firmware for ESP8266 (NodeMCU/Wemos D1) with Arduino core and ESP8266RTOS SDK. Use when building WiFi-connected sensor devices, IoT nodes, HTTP/MQTT clients on ESP8266, OTA updates, deep sleep, or when users mention ESP8266, NodeMCU, Wemos D1, ESP-01, IoT, WiFi firmware.
 category: embedded
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [esp8266, nodemcu, wemos, iot, wifi, mqtt, arduino, ota]
 compatible:
   - opencode

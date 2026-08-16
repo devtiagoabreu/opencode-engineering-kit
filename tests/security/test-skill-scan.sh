@@ -63,7 +63,7 @@ name: skill-scan-test
 description: test asset for the skill content security scanner
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [test]
 compatible: [opencode]
 ---
@@ -98,7 +98,7 @@ name: skill-scan-test
 description: test asset for the skill content security scanner
 category: security
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [test]
 compatible: [opencode]
 ---

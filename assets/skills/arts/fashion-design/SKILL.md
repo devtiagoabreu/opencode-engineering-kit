@@ -8,7 +8,7 @@ name: fashion-design
 description: Fashion design covering fabric types, flat sketches, pattern basics and collection structure
 category: arts
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [fashion, design, fabrics, pattern, collection]
 compatible:
   - opencode

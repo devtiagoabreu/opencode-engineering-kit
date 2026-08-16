@@ -8,7 +8,7 @@ name: flute
 description: Learn flute fundamentals with embouchure, breathing, tone, and articulation
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [flute, transverse-flute, embouchure, breathing, tone, articulation, vibrato]
 compatible:
   - opencode

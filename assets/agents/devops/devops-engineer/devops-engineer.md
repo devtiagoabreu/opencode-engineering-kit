@@ -7,7 +7,7 @@ provenance:
 name: devops-engineer
 description: DevOps Engineer specialized in infrastructure, CI/CD, and automation
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [devops, infrastructure, cicd, automation]
 compatible:
   - opencode

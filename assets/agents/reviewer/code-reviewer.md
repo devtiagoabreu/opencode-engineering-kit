@@ -7,7 +7,7 @@ provenance:
 name: code-reviewer
 description: Code Reviewer with expertise in thorough PR review, best practices, and security review
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, pr, best-practices, quality, security]
 compatible:
   - opencode

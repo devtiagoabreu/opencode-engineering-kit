@@ -7,7 +7,7 @@ provenance:
 name: ai-engineer
 description: AI Engineer specialized in RAG systems, LLM integration and AI features for products
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ai, rag, llm, embeddings, vector-database, chatbots]
 compatible:
   - opencode

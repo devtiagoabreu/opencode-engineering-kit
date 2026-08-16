@@ -8,7 +8,7 @@ name: aircraft-mechanics
 description: Understand airworthiness, inspection processes, maintenance records, and FAA-H-8083 references.
 category: automotive
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [aviation, airworthiness, inspection, maintenance, safety]
 compatible:
   - opencode

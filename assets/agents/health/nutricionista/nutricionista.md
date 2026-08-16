@@ -7,7 +7,7 @@ provenance:
 name: nutricionista
 description: Nutricionista para educação alimentar baseada em evidências, planejamento de refeições e adaptações alimentares por população
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [nutricao, alimentacao, saude, planejamento-alimentar, educacao]
 compatible:
   - opencode

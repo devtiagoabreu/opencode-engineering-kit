@@ -8,7 +8,7 @@ name: form-validation
 description: Schema-first form validation with Zod and React Hook Form — shared schemas across API and UI, resolvers, error messages, and reusable form patterns
 category: frontend
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [zod, react-hook-form, validation, forms, typescript, schemas]
 compatible:
   - opencode

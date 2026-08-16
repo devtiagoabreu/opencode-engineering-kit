@@ -8,7 +8,7 @@ name: business-intelligence
 description: "Design BI dashboards and analytics: KPIs, metrics, data modeling, ETL, charts and reports. Use when building dashboards, KPI cards, trend/geographic/ABC analysis, forecasting, reading spreadsheets (Google Sheets/Excel), data warehousing, or when users mention BI, dashboard, indicadores, métricas, relatório, gráfico, KPI or previsão de vendas."
 category: analytics
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [bi, analytics, dashboards, kpi, data-warehouse, etl, reporting, abc-curve]
 compatible:
   - opencode

@@ -7,7 +7,7 @@ provenance:
 name: designer-de-interiores
 description: Designer de interiores especializado em layout, paleta de cores e especificação de ambientes residenciais e comerciais
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [interiores, layout, decoracao]
 compatible:
   - opencode

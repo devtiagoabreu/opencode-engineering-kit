@@ -7,7 +7,7 @@ provenance:
 name: nextjs-developer
 description: Next.js Developer specialized in App Router, server components, data fetching, and Vercel deployments
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [nextjs, react, app-router, server-components, vercel]
 compatible:
   - opencode

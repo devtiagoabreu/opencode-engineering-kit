@@ -8,7 +8,7 @@ name: accounting-basics
 description: Double-entry bookkeeping, journal entries, chart of accounts and financial statements
 category: finance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [accounting, bookkeeping, journal, ledger, statements]
 compatible:
   - opencode

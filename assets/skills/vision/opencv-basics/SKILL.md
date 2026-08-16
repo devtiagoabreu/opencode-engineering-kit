@@ -8,7 +8,7 @@ name: opencv-basics
 description: OpenCV basics covering image processing, filters, contours, and drawing
 category: vision
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [opencv, computer-vision, image-processing, contours, filters, python]
 compatible:
   - opencode

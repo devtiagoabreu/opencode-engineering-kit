@@ -7,7 +7,7 @@ provenance:
 name: sql-server-dba
 description: SQL Server Database Administrator specialized in T-SQL, indexing, and query performance
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [sqlserver, tsql, dba, database, performance, azure]
 compatible:
   - opencode

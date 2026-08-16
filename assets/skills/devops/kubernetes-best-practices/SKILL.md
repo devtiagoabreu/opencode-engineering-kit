@@ -8,7 +8,7 @@ name: kubernetes-best-practices
 description: Best practices for Kubernetes container orchestration and deployment
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [kubernetes, containers, orchestration, devops]
 compatible:
   - opencode

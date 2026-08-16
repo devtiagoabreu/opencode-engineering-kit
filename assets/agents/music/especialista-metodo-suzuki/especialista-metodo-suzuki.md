@@ -7,7 +7,7 @@ provenance:
 name: especialista-metodo-suzuki
 description: Especialista em Método Suzuki com filosofia da língua materna, audição antes da leitura, participação dos pais, revisão e reforço positivo
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [música, método-suzuki, violino, piano, educação-musical, infância]
 compatible:
   - opencode

@@ -8,7 +8,7 @@ name: guitar
 description: Learn guitar with chords, strumming, fingerpicking, scales, and tab reading
 category: music
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [guitar, acoustic-guitar, chords, strumming, fingerpicking, scales, tab]
 compatible:
   - opencode

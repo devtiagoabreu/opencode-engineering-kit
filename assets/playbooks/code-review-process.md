@@ -2,7 +2,7 @@
 name: code-review-process
 description: Comprehensive code review process and checklist
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [code-review, quality, best-practices]
 compatible:
   - opencode

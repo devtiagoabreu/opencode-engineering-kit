@@ -8,7 +8,7 @@ name: ci-cd-pipeline
 description: Best practices for CI/CD pipeline design and implementation
 category: devops
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 tags: [ci-cd, pipeline, automation, devops]
 compatible:
   - opencode

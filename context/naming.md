@@ -3,7 +3,7 @@ name: naming-context
 description: Naming conventions for OpenCode Engineering Kit
 type: conventions
 version: 0.1.0
-author: OpenCode Community
+author: devtiagoabreu
 ---
 
 # Naming Conventions
@@ -99,13 +99,13 @@ author: OpenCode Community
 ```yaml
 # YAML - snake_case
 skill_name: docker-best-practices
-author_name: OpenCode Community
+author_name: devtiagoabreu
 ```
 
 ```bash
 # Bash - UPPER_SNAKE_CASE
 SKILL_NAME="docker-best-practices"
-AUTHOR_NAME="OpenCode Community"
+AUTHOR_NAME="devtiagoabreu"
 ```
 
 ```markdown
