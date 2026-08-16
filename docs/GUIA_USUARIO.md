@@ -42,7 +42,7 @@ O **OpenCode Engineering Kit** é uma biblioteca open source de recursos reutili
 - **150 Skills** — guias completos em 42 categorias
 - **103 Agents** — personas de IA especializadas em 38 categorias
 - **10 Prompts** — modelos de prompts reutilizáveis
-- **16 Templates** — modelos para projetos e componentes
+- **4 Templates** — modelos para projetos e componentes
 - **4 Commands** — ações documentadas para tarefas comuns
 - **3 Playbooks** — fluxos de múltiplas etapas
 - **2 Recipes** — configurações completas de projeto
@@ -301,7 +301,7 @@ npx opencode-engineering-kit upgrade
 
 ## Skills
 
-Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 500 linhas.
+Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 600 linhas.
 
 ### Categorias
 
@@ -406,7 +406,7 @@ Copie o prompt para a área de transferência e cole no seu assistente de IA.
 
 ## Templates
 
-Templates são pontos de partida para novos projetos e componentes: `new-project`, `react`, `nextjs`, `api`, `docker`, `docker-compose`, `github-actions`, `postgresql`, `mqtt`, `esp32`, `opencv`, `adr`, `agent`, `skill`, `prompt` e `readme`.
+Templates são pontos de partida para novos projetos e componentes: `new-project`, `agent`, `skill` e `prompt`.
 
 ### Como Usar um Template
 

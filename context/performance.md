@@ -21,7 +21,7 @@ author: devtiagoabreu
 
 | Resource | Limit | Action |
 |----------|-------|--------|
-| Skill size | 500 lines | Split into multiple |
+| Skill size | 600 lines | Split into multiple |
 | Agent size | 200 lines | Simplify |
 | Prompt size | 100 lines | Simplify |
 | Total skills | 100+ | Better organization |

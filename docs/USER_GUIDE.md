@@ -42,7 +42,7 @@ The **OpenCode Engineering Kit** is an open source library of reusable resources
 - **150 Skills** — complete guides in 42 categories
 - **103 Agents** — specialized AI personas in 38 categories
 - **10 Prompts** — reusable prompt templates
-- **16 Templates** — templates for projects and components
+- **4 Templates** — templates for projects and components
 - **4 Commands** — documented actions for common tasks
 - **3 Playbooks** — multi-step workflows
 - **2 Recipes** — complete project setups
@@ -301,7 +301,7 @@ npx opencode-engineering-kit upgrade
 
 ## Skills
 
-Skills are **complete guides** (instructions + examples + references) for the AI to execute specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
+Skills are **complete guides** (instructions + examples + references) for the AI to execute specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 600-line limit.
 
 ### Categories
 
@@ -406,7 +406,7 @@ Copy the prompt to your clipboard and paste it into your AI assistant.
 
 ## Templates
 
-Templates are starting points for new projects and components: `new-project`, `react`, `nextjs`, `api`, `docker`, `docker-compose`, `github-actions`, `postgresql`, `mqtt`, `esp32`, `opencv`, `adr`, `agent`, `skill`, `prompt` and `readme`.
+Templates are starting points for new projects and components: `new-project`, `agent`, `skill`, and `prompt`.
 
 ### How to Use a Template
 

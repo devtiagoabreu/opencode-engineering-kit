@@ -115,7 +115,7 @@ traces."
 
 ### Example 3: Trim skill instructions
 
-Keep each `SKILL.md` under 500 lines and load it only when the task matches its
+Keep each `SKILL.md` under 600 lines and load it only when the task matches its
 description — that is the difference between a 2K-token on-demand read and a
 permanent 50K-token attachment.
 

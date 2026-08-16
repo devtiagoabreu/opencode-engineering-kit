@@ -199,7 +199,7 @@ The project does **not** intend to:
 **Consequences:**
 
 - YAML parser required for metadata
-- 500-line limit per SKILL.md (justified: keeps skills focused and scannable)
+- 600-line limit per SKILL.md (keeps skills focused and scannable)
 - Standard format for all skills
 
 #### AD-002: Category Organization
@@ -395,7 +395,7 @@ example
 
 1. **Name:** `^[a-z0-9]+(-[a-z0-9]+)*$` (kebab-case, no spaces)
 2. **Description:** 1-1024 characters, must clearly describe the function
-3. **Max size:** 500 lines per SKILL.md (keeps skills focused and scannable)
+3. **Max size:** 600 lines per SKILL.md (keeps skills focused and scannable)
 4. **Category:** Must belong to one of the defined categories
 5. **Versioning:** Follow semver (MAJOR.MINOR.PATCH)
 6. **Compatibility:** Explicitly declare supported platforms
@@ -812,7 +812,7 @@ opencode-engineering-kit/
 
 | Directory | Content | Format | Limit |
 |-----------|---------|--------|-------|
-| `assets/skills/` | Skills organized by category | SKILL.md | 500 lines |
+| `assets/skills/` | Skills organized by category | SKILL.md | 600 lines |
 | `assets/agents/` | Agents with personas | .md | 200 lines |
 | `assets/templates/` | Project templates | .md | No limit |
 | `assets/prompts/` | Reusable prompts | .md | 100 lines |
@@ -1089,7 +1089,7 @@ git push origin --delete feature/my-skill
 | Clarity | Instructions understandable | 90% |
 | Examples | At least 1 example | 1 |
 | References | At least 1 reference | 1 |
-| Size | Up to 500 lines | ≤500 |
+| Size | Up to 600 lines | ≤600 |
 | Testing | Tested locally | Yes |
 | User Value | Solves a real problem | Yes |
 
@@ -1216,8 +1216,8 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     
     # Check size
     lines=$(wc -l < "$skill_file")
-    if (( lines > 500 )); then
-        echo "ERROR: $skill_file exceeds 500 lines ($lines)"
+    if (( lines > 600 )); then
+        echo "ERROR: $skill_file exceeds 600 lines ($lines)"
         ((ERRORS++))
     fi
     

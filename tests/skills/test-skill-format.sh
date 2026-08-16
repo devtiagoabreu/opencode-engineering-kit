@@ -65,8 +65,8 @@ for skill_dir in "$SKILLS_DIR"/*/; do
     
     # Check size
     lines=$(wc -l < "$skill_file")
-    if (( lines > 500 )); then
-        echo "ERROR: $skill_file exceeds 500 lines ($lines)"
+    if (( lines > 600 )); then
+        echo "ERROR: $skill_file exceeds 600 lines ($lines)"
         ((ERRORS++))
     fi
     

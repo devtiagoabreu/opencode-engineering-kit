@@ -20,7 +20,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Skills | 150 (em 42 categorias) |
 | Agents | 103 (personas em 38 categorias) |
 | Prompts | 10 (em 13 categorias) |
-| Templates | 16 |
+| Templates | 4 |
 | Playbooks | 3 |
 | Recipes | 2 |
 | Comandos | 4 |
@@ -28,7 +28,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Composições | 2 |
 | Prompt chains | 2 |
 | Plugins de exemplo | 1 (`asset-linter`) |
-| Scripts de núcleo (core) | 35 |
+| Scripts de núcleo (core) | 37 |
 | Testes automatizados | 21 |
 
 ### Compatibilidade
@@ -159,9 +159,9 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 ## O que o kit contém (detalhado)
 
-### Skills — 80 guias prontos
+### Skills — 150 guias prontos
 
-Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 500 linhas.
+Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 600 linhas.
 
 | Categoria | Exemplos |
 |-----------|----------|
@@ -172,14 +172,14 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, controle e simulação |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
-| `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise** |
+| `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
 | `frontend` | React, State Management, CSS, Acessibilidade |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills) |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills), **RBAC** |
 | `git` | Git Workflow |
-| `vision` | OpenCV |
-| `languages` | Python, TypeScript |
+| `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
+| `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
 | `iot` | MQTT, Sensores |
 | `tools` | Git avançado, Terminal, Repo → LLM, Grafo de código (Graphify) |
 | `quality` | Code Review, Refactoring, Otimização de contexto/tokens |
@@ -188,7 +188,7 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `marketing` | Marketing digital, gestão de tráfego, marketing político (lei eleitoral) |
 | `science` | Matemática aplicada, física, química |
 | `engineering` | Mecatrônica, automação industrial, automação residencial, planejamento de produção |
-| `logistics` | Supply chain |
+| `logistics` | Supply chain, **Route Optimization** |
 | `web` | Web scraping, Google Workspace/Looker Studio |
 | `management` | Metodologia Lean |
 | `health` | Suporte à neurodiversidade (TEA/TDAH), nutrição, podologia |
@@ -282,9 +282,9 @@ em português, com cabeçalhos compatíveis com os testes do kit.
 
 Prompts focados para interações únicas: code review, debugging, refatoração, planejamento, arquitetura (system design), documentação de API, estratégia de testes, auditoria de segurança, RAG e performance review. Usam placeholders `{{variavel}}`.
 
-### Templates — 16 para projetos e componentes
+### Templates — 4 para projetos e componentes
 
-`new-project`, `react`, `nextjs`, `api`, `docker`, `docker-compose`, `github-actions`, `postgresql`, `mqtt`, `esp32`, `opencv`, `adr`, `agent`, `skill`, `prompt` e `readme`.
+`new-project`, `agent`, `skill` e `prompt`.
 
 ### Playbooks e Recipes
 
@@ -352,7 +352,7 @@ opencode-engineering-kit/
 │   ├── skills/          # 150 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
-│   ├── templates/       # 16 templates
+│   ├── templates/       # 4 templates
 │   ├── commands/        # 4 comandos documentados
 │   ├── playbooks/       # 3 fluxos de múltiplas etapas
 │   ├── recipes/         # 2 soluções completas
@@ -373,7 +373,7 @@ opencode-engineering-kit/
 ├── plugins/             # Plugins de exemplo (community, enterprise)
 ├── marketplace-web/     # Interface web do marketplace
 ├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
-├── tests/               # 21 suítes de teste automatizadas
+├── tests/               # 25 suítes de teste automatizadas
 ├── docs/                # Documentação (EN + PT)
 ├── examples/            # Exemplos de uso
 ├── install.sh           # Instalação global
@@ -415,7 +415,7 @@ cp -r assets/templates/new-project/ /seu/novo-projeto/
 O projeto usa **quality gates** automatizados (lint de Markdown/YAML/Shell, validação de formato e conteúdo) com CI via GitHub Actions.
 
 ```bash
-# Rodar todas as 21 suítes de teste
+# Rodar todas as 25 suítes de teste
 ./scripts/test.sh
 
 # Rodar os gates de qualidade

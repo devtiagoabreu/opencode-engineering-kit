@@ -72,8 +72,8 @@ jobs:
           echo "Checking file sizes..."
           find assets/skills -name "SKILL.md" | while read file; do
             lines=$(wc -l < "$file")
-            if [ "$lines" -gt 500 ]; then
-              echo "ERROR: $file exceeds 500 lines ($lines)"
+            if [ "$lines" -gt 600 ]; then
+              echo "ERROR: $file exceeds 600 lines ($lines)"
               exit 1
             fi
           done

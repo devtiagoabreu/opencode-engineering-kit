@@ -22,7 +22,7 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 | Skills | 150 (42 categories) |
 | Agents | 103 (personas in 38 categories) |
 | Prompts | 10 (13 categories) |
-| Templates | 16 |
+| Templates | 4 |
 | Playbooks | 3 |
 | Recipes | 2 |
 | Commands | 4 |
@@ -30,7 +30,7 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 | Compositions | 2 |
 | Prompt chains | 2 |
 | Example plugins | 1 (`asset-linter`) |
-| Core scripts | 35 |
+| Core scripts | 37 |
 | Automated tests | 21 |
 
 ### Compatibility
@@ -163,7 +163,7 @@ cd opencode-engineering-kit
 
 ### Skills — 150 ready guides
 
-Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 500-line limit.
+Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 600-line limit.
 
 | Category | Examples |
 |----------|----------|
@@ -174,14 +174,14 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, control and simulation |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response |
-| `backend` | API Design, Auth, Caching, GraphQL, REST, Database |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise** |
+| `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
 | `frontend` | React, State Management, CSS, Accessibility |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning) |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning), **RBAC** |
 | `git` | Git Workflow |
-| `vision` | OpenCV |
-| `languages` | Python, TypeScript |
+| `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
+| `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
 | `iot` | MQTT, Sensors |
 | `tools` | Advanced Git, Terminal, Repo → LLM, Code graph (Graphify) |
 | `quality` | Code Review, Refactoring, Context/token optimization |
@@ -190,7 +190,7 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `marketing` | Digital marketing, traffic management, political marketing (election law) |
 | `science` | Applied mathematics, physics, chemistry |
 | `engineering` | Mechatronics, industrial automation, home automation, production planning |
-| `logistics` | Supply chain |
+| `logistics` | Supply chain, **Route Optimization** |
 | `web` | Web scraping, Google Workspace/Looker Studio |
 | `management` | Lean Methodology |
 | `health` | Neurodiversity support (ASD/ADHD), nutrition, podiatry |
@@ -281,9 +281,9 @@ Portuguese, with headers compatible with the kit's tests.
 
 Focused prompts for one-off interactions: code review, debugging, refactoring, planning, architecture (system design), API documentation, test strategy, security audit, RAG, and performance review. They use `{{variable}}` placeholders.
 
-### Templates — 16 for projects and components
+### Templates — 4 for projects and components
 
-`new-project`, `react`, `nextjs`, `api`, `docker`, `docker-compose`, `github-actions`, `postgresql`, `mqtt`, `esp32`, `opencv`, `adr`, `agent`, `skill`, `prompt`, and `readme`.
+`new-project`, `agent`, `skill`, and `prompt`.
 
 ### Playbooks and Recipes
 
@@ -351,7 +351,7 @@ opencode-engineering-kit/
 │   ├── skills/          # 150 skills in 42 categories (SKILL.md)
 │   ├── agents/          # 103 personas by category
 │   ├── prompts/         # 10 reusable prompts
-│   ├── templates/       # 16 templates
+│   ├── templates/       # 4 templates
 │   ├── commands/        # 4 documented commands
 │   ├── playbooks/       # 3 multi-step flows
 │   ├── recipes/         # 2 complete solutions
@@ -372,7 +372,7 @@ opencode-engineering-kit/
 ├── plugins/             # Example plugins (community, enterprise)
 ├── marketplace-web/     # Marketplace web interface
 ├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
-├── tests/               # 21 automated test suites
+├── tests/               # 25 automated test suites
 ├── docs/                # Documentation (EN + PT)
 ├── examples/            # Usage examples
 ├── install.sh           # Global install
@@ -414,7 +414,7 @@ cp -r assets/templates/new-project/ /your/new-project/
 The project uses automated **quality gates** (Markdown/YAML/Shell lint, format and content validation) with CI via GitHub Actions.
 
 ```bash
-# Run all 21 test suites
+# Run all 25 test suites
 ./scripts/test.sh
 
 # Run the quality gates

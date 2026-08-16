@@ -24,9 +24,9 @@ the `Unreleased` section of the changelog, awaiting the v0.2.0 release tag.
 
 ### Content (v0.1.0)
 
-- [x] **123 skills** in 40 categories (domain + engineering + methodology-adjacent)
-- [x] **93 agent personas** in 38 categories (PT-BR, with "Como ajuda as personas de tecnologia")
-- [x] 10 prompts, 16 templates, 3 playbooks, 2 recipes, 3 commands, 2 bundles, 2 compositions, 2 prompt chains
+- [x] **150 skills** in 42 categories (domain + engineering + methodology-adjacent)
+- [x] **103 agent personas** in 38 categories (PT-BR, with "Como ajuda as personas de tecnologia")
+- [x] 10 prompts, 4 templates, 3 playbooks, 2 recipes, 4 commands, 2 bundles, 2 compositions, 2 prompt chains
 - [x] **Orchestrator agent** (`planner/orquestrador`) that plans, delegates, shows provenance and asks the user
 - [x] **Provenance** for all assets (`context/provenance.md`, 216 assets) + `scripts/add-provenance.sh`
 - [x] Quality test module (`tests/quality/`) covering 6 dimensions

@@ -166,7 +166,7 @@ opencode-engineering-kit/
 │   ├── skills/          # 150 skills em 42 categorias (SKILL.md)
 │   ├── agents/          # 103 personas em 38 categorias
 │   ├── prompts/         # 10 prompts reutilizáveis
-│   ├── templates/       # 16 templates
+│   ├── templates/       # 4 templates
 │   ├── commands/        # 4 comandos documentados
 │   ├── playbooks/       # 3 fluxos de múltiplas etapas
 │   ├── recipes/         # 2 soluções completas

@@ -36,7 +36,7 @@ Skills use markdown format with YAML frontmatter.
 **Consequences:**
 
 - YAML parser required for metadata
-- 500-line limit per SKILL.md
+- 600-line limit per SKILL.md
 - Standard format for all skills
 
 ## AD-002: Category Organization

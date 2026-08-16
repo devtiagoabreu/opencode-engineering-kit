@@ -12,10 +12,9 @@ plugin, marketplace, security, quality), CLI npm (`npx opencode-engineering-kit`
 marketplace e testes automatizados.
 
 - **Estado atual:** 150 skills (42 categorias), 103 agents (personas em 38 categorias), 10 prompts,
-  16 templates, 3 playbooks, 2 recipes, 4 comandos, 2 bundles, 2 composições, 2 prompt-chains,
-  21 suítes de teste, quality gates 8/8, typecheck 5/5.
-- **Licença:** MIT. **Versão:** 0.1.0.
-- **Diferencial:** combina **biblioteca de conteúdo de domínio** (inclusive personas em português:
+  4 templates, 3 playbooks, 2 recipes, 4 comandos, 2 bundles, 2 composições, 2 prompt-chains,
+  25 suítes de teste, quality gates 8/8, typecheck 5/5.
+- **Licença:** MIT. **Versão:** 0.1.0.- **Diferencial:** combina **biblioteca de conteúdo de domínio** (inclusive personas em português:
   educação, direito, política, saúde, comércio...) com **infraestrutura de engenharia** e procedência
   rastreável de cada asset.
 
@@ -304,7 +303,7 @@ ClawHub + `openclaw doctor` para diagnóstico.
 | **Modelos** | Agnóstico (OpenCode e compatíveis) | Multi-provider (hosted + local via Ollama), roteamento |
 | **Memória persistente** | Contexto via `context/` (personas, HISTORY, provenance) | Memória de longo prazo entre sessões (vetorial + markdown) |
 | **Marketplace** | `marketplace-web/` + `core/marketplace` (próprio) | ClawHub (externo, com vetting em desenvolvimento) |
-| **Qualidade** | Schema + testes (21 suítes) + quality gates (8) + typecheck | QA/segurança: sandboxing, `openclaw doctor`, vetting ClawHub |
+| **Qualidade** | Schema + testes (25 suítes) + quality gates (8) + typecheck | QA/segurança: sandboxing, `openclaw doctor`, vetting ClawHub |
 | **Licença** | MIT (totalmente redistribuível) | MIT |
 | **Adoção** | Novo (0.1.0) | ~386k estrelas |
 | **Risco principal** | Baixo (conteúdo estático, não executa nada) | Alto (agente autônomo com acesso ao host → histórico de CVEs) |
