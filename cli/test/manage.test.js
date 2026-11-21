@@ -52,12 +52,13 @@ test("global install writes absolute paths into the global config", async () => 
 });
 
 test("status reports enabled after install and disabled after stop", async () => {
-  await install({ target, source: KIT_SOURCE, only: ["context"], force: true, dryRun: false, verbose: false, global: true });
+  await install({ target, source: KIT_SOURCE, only: ["context"], profile: "core", force: true, dryRun: false, verbose: false, global: true });
 
   const before = status({ json: true });
   const globalBefore = before.scopes.find((s) => s.label === "global");
   assert.equal(globalBefore.installed, true);
   assert.equal(globalBefore.enabled, true);
+  assert.equal(globalBefore.profile, "core");
 
   startStop("stop", {});
   const after = status({ json: true });

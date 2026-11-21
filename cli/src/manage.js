@@ -83,6 +83,11 @@ function scopeState(scope) {
   const commands = countFiles(path.join(base, "commands"), (p) => p.endsWith(".md"));
 
   let enabled = false;
+  let profile = null;
+  const manifestPath = path.join(base, ".kit-install.json");
+  if (fs.existsSync(manifestPath)) {
+    try { profile = JSON.parse(fs.readFileSync(manifestPath, "utf8")).kit?.profile ?? null; } catch {}
+  }
   const cfg = readConfig(cfgPath);
   if (cfg) {
     const skillsPath = global ? path.join(root, "skills") : ".opencode/skills";
@@ -91,7 +96,7 @@ function scopeState(scope) {
     const hasCtx = (cfg.instructions ?? []).some((i) => i.startsWith(ctxPrefix));
     enabled = hasSkills && hasCtx;
   }
-  return { label, installed: true, enabled, skills, agents, commands, path: base, cfgPath };
+  return { label, installed: true, enabled, profile, skills, agents, commands, path: base, cfgPath };
 }
 
 export function detectScopes({ globalOnly = false, projectOnly = false } = {}) {
@@ -105,7 +110,7 @@ export function status(args = {}) {
   const states = detectScopes();
   const anyInstalled = states.some((s) => s.installed);
   if (args.json) {
-    return { version: pkgVersion(), scopes: states.map(({ label, installed, enabled, skills, agents, commands, path }) => ({ label, installed, enabled, skills, agents, commands, path })) };
+    return { version: pkgVersion(), scopes: states.map(({ label, installed, enabled, profile, skills, agents, commands, path }) => ({ label, installed, enabled, profile, skills, agents, commands, path })) };
   }
   console.log(`OpenCode Engineering Kit status — v${pkgVersion()}`);
   console.log("");
@@ -113,10 +118,11 @@ export function status(args = {}) {
     console.log("The kit is not installed. Run:  npx opencode-engineering-kit install");
     return { installed: false };
   }
-  for (const s of states) {
+    for (const s of states) {
     if (!s.installed) continue;
     const state = s.enabled ? "enabled" : "disabled";
-    console.log(`  ${s.label}: installed (${state}) — ${s.skills} skills, ${s.agents} agents, ${s.commands} commands`);
+    const profile = s.profile ? `, profile=${s.profile}` : "";
+    console.log(`  ${s.label}: installed (${state}${profile}) - ${s.skills} skills, ${s.agents} agents, ${s.commands} commands`);
     console.log(`    ${s.path}`);
   }
   const global = states.find((s) => s.label === "global");

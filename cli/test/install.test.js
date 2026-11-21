@@ -80,4 +80,7 @@ test("profile limits installed assets", async () => {
   assert.ok(summary.context.created.length > 0 && summary.context.created.length < 12, "profile limits context");
   const cfg = JSON.parse(fs.readFileSync(path.join(target, "opencode.json"), "utf8"));
   assert.ok(cfg.instructions.every((i) => !i.includes("HISTORY.md")), "non-core context not wired");
+  const manifest = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.equal(manifest.kit.profile, "core");
+  assert.deepEqual(manifest.only, ["skills", "agents", "commands", "context"]);
 });
