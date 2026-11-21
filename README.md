@@ -116,6 +116,7 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 | `--source <dir>` | Usa um checkout local do kit em vez de baixar do GitHub |
 | `--repo <repo>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Branch/tag do kit (padrão: `main`) |
+| `--profile <nome>` | Perfil curado: `core`, `backend`, `frontend`, `devops`, `ai`, `brasil`, `full` |
 | `--only <lista>` | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos) |
 | `--force` | Sobrescreve arquivos existentes em `.opencode/` |
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
@@ -124,6 +125,9 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 #### Exemplos de uso
 
 ```bash
+# Instalar perfil curado (menos ruído de contexto)
+npx opencode-engineering-kit install --profile core
+
 # Instalar só skills e agents, forçando sobrescrita
 npx opencode-engineering-kit install --only skills,agents --force
 

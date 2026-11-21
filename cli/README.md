@@ -55,6 +55,7 @@ Depois reinicie o OpenCode para a nova configuração ser carregada.
 | `--source <d>` | Usa um checkout local do kit em vez de baixar do GitHub |
 | `--repo <r>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Branch/tag do kit (padrão: `main`) |
+| `--profile <nome>` | Perfil curado: `core`, `backend`, `frontend`, `devops`, `ai`, `brasil`, `full` |
 | `--only <l>` | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos) |
 | `--force` | Sobrescreve arquivos existentes em `.opencode/` |
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
