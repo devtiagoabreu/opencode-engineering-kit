@@ -122,6 +122,18 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
 | `--verbose` | Lista cada arquivo copiado |
 
+#### Perfis curados
+
+| Perfil | Uso recomendado | Seleção |
+|--------|------------------|---------|
+| `core` | Setup mínimo e confiável | Skills/agents/commands/context curados |
+| `backend` | API/dados | Skills por categorias backend/data + agents/commands/context completos |
+| `frontend` | UI/web | Skills por categorias frontend/design + agents/commands/context completos |
+| `devops` | Plataforma/CI/cloud | Skills por categorias devops/cloud/security + agents/commands/context completos |
+| `ai` | LLM/RAG/visão | Skills por categorias ai/analytics/vision/tools + agents/commands/context completos |
+| `brasil` | Domínios BR | Skills de categorias de domínio BR + agents/commands/context completos |
+| `full` | Catálogo completo | `*` em todos os grupos |
+
 #### Exemplos de uso
 
 ```bash

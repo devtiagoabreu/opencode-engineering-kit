@@ -123,6 +123,18 @@ Then **restart OpenCode** so the new configuration is loaded.
 | `--dry-run` | Show what would be done without touching the disk |
 | `--verbose` | List each copied file |
 
+#### Curated profiles
+
+| Profile | Best for | Selection |
+|---------|----------|-----------|
+| `core` | Minimal trusted setup | Curated skills/agents/commands/context |
+| `backend` | APIs/data | Backend/data skill categories + full agents/commands/context |
+| `frontend` | UI/web | Frontend/design skill categories + full agents/commands/context |
+| `devops` | Platform/CI/cloud | DevOps/cloud/security skill categories + full agents/commands/context |
+| `ai` | LLM/RAG/vision | AI/analytics/vision/tools skill categories + full agents/commands/context |
+| `brasil` | Brazil domain packs | Brazil-domain skill categories + full agents/commands/context |
+| `full` | Full catalog | `*` for all groups |
+
 #### Usage examples
 
 ```bash
