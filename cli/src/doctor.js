@@ -80,6 +80,17 @@ function indexFreshness(kitRoot) {
   return { pass: actual === indexed, actual, indexed };
 }
 
+function walkFiles(dir, relBase = dir) {
+  const out = [];
+  if (!fs.existsSync(dir)) return out;
+  for (const e of fs.readdirSync(dir, { withFileTypes: true })) {
+    const p = path.join(dir, e.name);
+    if (e.isDirectory()) out.push(...walkFiles(p, relBase));
+    else out.push(path.relative(relBase, p).replace(/\\/g, "/"));
+  }
+  return out;
+}
+
 function wiringChecks(target, { global = false } = {}) {
   const root = global ? globalConfigDir() : path.resolve(target || process.cwd());
   const cfgPath = path.join(root, "opencode.json");
@@ -133,19 +144,27 @@ function wiringChecks(target, { global = false } = {}) {
       const okSchema = m && (m.schema === 1 || m.schema === 2);
       checks.push(check(`${scope} install manifest valid`, okSchema, `schema=${m?.schema || "?"}, profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
       if (m?.schema === 2 && m.files && typeof m.files === "object") {
-        let missing = 0, modified = 0, ok = 0;
+        let missing = 0, modified = 0, ok = 0, extra = 0;
         const samples = [];
         for (const [group, entries] of Object.entries(m.files)) {
+          const expected = new Set((entries || []).map((e) => e.path));
           for (const entry of entries || []) {
             const fp = path.join(base, group, entry.path);
-            if (!fs.existsSync(fp)) { missing++; if (samples.length < 3) samples.push(`missing:${group}/${entry.path}`); continue; }
+            if (!fs.existsSync(fp)) { missing++; if (samples.length < 4) samples.push(`missing:${group}/${entry.path}`); continue; }
             const hash = crypto.createHash("sha256").update(fs.readFileSync(fp)).digest("hex");
-            if (hash !== entry.sha256) { modified++; if (samples.length < 3) samples.push(`modified:${group}/${entry.path}`); }
+            if (hash !== entry.sha256) { modified++; if (samples.length < 4) samples.push(`modified:${group}/${entry.path}`); }
             else ok++;
+          }
+          const groupDir = path.join(base, group);
+          for (const rel of walkFiles(groupDir)) {
+            if (rel === ".kit-install.json") continue;
+            if (!expected.has(rel)) { extra++; if (samples.length < 4) samples.push(`extra:${group}/${rel}`); }
           }
         }
         const pass = missing === 0 && modified === 0;
-        const detail = pass ? `${ok} tracked files match` : `${modified} modified, ${missing} missing${samples.length ? `; ${samples.join(", ")}` : ""}`;
+        const detail = pass
+          ? `${ok} tracked files match${extra ? `, ${extra} extra unmanaged file(s)` : ""}`
+          : `${modified} modified, ${missing} missing, ${extra} extra${samples.length ? `; ${samples.join(", ")}` : ""}`;
         checks.push(check(`${scope} install drift`, pass, detail));
       } else {
         checks.push(check(`${scope} install drift`, true, "manifest has no file hashes (schema<2); reinstall to enable drift checks"));

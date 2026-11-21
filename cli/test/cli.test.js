@@ -82,6 +82,30 @@ test("doctor reports missing target wiring", () => {
   assert.ok(checks.some((c) => c.name === "project install manifest present" && !c.pass));
 });
 
+test("doctor reports drifted and extra installed files", async () => {
+  fs.mkdirSync(path.join(target, ".opencode", "skills", "demo"), { recursive: true });
+  fs.mkdirSync(path.join(target, ".opencode", "context"), { recursive: true });
+  fs.writeFileSync(path.join(target, ".opencode/skills/demo/SKILL.md"), "old");
+  fs.writeFileSync(path.join(target, ".opencode/skills/demo/EXTRA.md"), "extra");
+  fs.writeFileSync(path.join(target, ".opencode/context/base.md"), "ctx");
+  fs.writeFileSync(path.join(target, "opencode.json"), JSON.stringify({ skills: { paths: [".opencode/skills"] }, instructions: [".opencode/context/base.md"] }, null, 2));
+  const crypto = await import("node:crypto");
+  const sha = (s) => crypto.createHash("sha256").update(s).digest("hex");
+  fs.writeFileSync(path.join(target, ".opencode/.kit-install.json"), JSON.stringify({
+    schema: 2,
+    kit: { profile: "core" },
+    files: {
+      skills: [{ path: "demo/SKILL.md", sha256: sha("new") }],
+      context: [{ path: "base.md", sha256: sha("ctx") }]
+    }
+  }, null, 2));
+  const checks = doctor(KIT_SOURCE, { fast: true, target });
+  const drift = checks.find((c) => c.name === "project install drift");
+  assert.ok(drift && !drift.pass);
+  assert.match(drift.detail, /modified/);
+  assert.match(drift.detail, /extra/);
+});
+
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {
   const claude = exportMain(["claude", "--target", target, "--dir", KIT_SOURCE]);
   assert.ok(claude.files.length > 100, "many skill files exported");

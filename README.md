@@ -201,6 +201,7 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 - **O que a CLI faz:** copia assets para `.opencode/` e mescla `opencode.json` (`skills.paths`, `instructions`). Não apaga sua configuração existente.
 - **Auditoria antes de instalar:** use `--dry-run` e/ou `--source <checkout-local>` para inspecionar a origem. Rode `npx opencode-engineering-kit doctor --fast` no checkout do kit.
+- **Drift ap?s instalar:** rode `npx opencode-engineering-kit doctor --dir <kit> --target <projeto> --fast` para checar wiring e drift de arquivos rastreados (`.opencode/.kit-install.json`). Se houver `modified/missing`, reinstale com `--force` ou `upgrade`.
 - **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
 - **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05.
 - **Segurança:** reporte vulnerabilidades conforme [SECURITY.md](./SECURITY.md).
