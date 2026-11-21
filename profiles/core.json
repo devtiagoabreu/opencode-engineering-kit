@@ -29,5 +29,28 @@
     "git",
     "projects",
     "quality"
+  ],
+  "agents": [
+    "orquestrador",
+    "backend-developer",
+    "frontend-developer",
+    "code-reviewer",
+    "qa-engineer",
+    "security-engineer",
+    "devops-engineer"
+  ],
+  "commands": [
+    "review",
+    "test",
+    "lint"
+  ],
+  "context": [
+    "project.md",
+    "coding_rules.md",
+    "conventions.md",
+    "git.md",
+    "security.md",
+    "stack.md",
+    "style_guide.md"
   ]
 }

@@ -136,11 +136,23 @@ function loadProfile(source, name) {
   return JSON.parse(fs.readFileSync(p, "utf8"));
 }
 
+function selectedByProfile(profile, key, value, fallback = true) {
+  if (!profile) return fallback;
+  const sel = profile[key];
+  if (sel === "*") return true;
+  if (Array.isArray(sel)) {
+    const base = String(value).replace(/\.md$/i, "");
+    return sel.includes(value) || sel.includes(base);
+  }
+  return fallback;
+}
+
 function skillSelectedByProfile(profile, category, skillName) {
   if (!profile) return true;
   if (profile.skills === "*" || profile.skillCategories === "*") return true;
   const cats = new Set(profile.skillCategories || []);
   const names = new Set(profile.skills || []);
+  if (cats.size === 0 && names.size === 0) return true;
   return cats.has(category) || names.has(skillName);
 }
 
@@ -180,7 +192,7 @@ function copyDir(src, dest, { force, dryRun, verbose }) {
   return { created, skipped, files };
 }
 
-function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
+function flattenAgentFiles(src, dest, { force, dryRun, verbose, profile }) {
   const created = [];
   const skipped = [];
   const files = [];
@@ -191,6 +203,7 @@ function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
         walk(sPath);
       } else if (entry.name.endsWith(".md")) {
         const targetName = path.basename(entry.name, ".md");
+        if (!selectedByProfile(profile, "agents", targetName, true)) continue;
         const rel = `${targetName}.md`;
         const dPath = path.join(dest, rel);
         const hash = sha256File(sPath);
@@ -234,6 +247,30 @@ function copySkillsWithProfile(source, destRoot, opts, profile) {
   return { created, skipped, files };
 }
 
+function copySimpleWithProfile(src, dest, opts, profile, key) {
+  const created = []; const skipped = []; const files = [];
+  for (const entry of fs.readdirSync(src, { withFileTypes: true })) {
+    const sPath = path.join(src, entry.name);
+    const dPath = path.join(dest, entry.name);
+    if (entry.isDirectory()) {
+      const r = copyDir(sPath, dPath, opts);
+      created.push(...r.created.map((f) => `${entry.name}/${f}`));
+      skipped.push(...r.skipped.map((f) => `${entry.name}/${f}`));
+      files.push(...(r.files || []).map((f) => ({ ...f, path: `${entry.name}/${f.path}` })));
+    } else {
+      if (!selectedByProfile(profile, key, entry.name, true)) continue;
+      const rel = entry.name;
+      const hash = sha256File(sPath);
+      if (fs.existsSync(dPath) && !opts.force) {
+        skipped.push(rel); files.push({ path: rel, sha256: hash, status: "skipped" }); continue;
+      }
+      created.push(rel); files.push({ path: rel, sha256: hash, status: "created" });
+      if (!opts.dryRun) { fs.mkdirSync(path.dirname(dPath), { recursive: true }); fs.copyFileSync(sPath, dPath); }
+    }
+  }
+  return { created, skipped, files };
+}
+
 function copyGroupTo(source, destRoot, group, opts, profile) {
   const src = path.join(source, group.from);
   if (!fs.existsSync(src)) {
@@ -242,7 +279,9 @@ function copyGroupTo(source, destRoot, group, opts, profile) {
   }
   if (group.to === "skills" && profile) return copySkillsWithProfile(source, destRoot, opts, profile);
   const dest = path.join(destRoot, group.to);
-  if (group.mode === "flatten") return flattenAgentFiles(src, dest, opts);
+  if (group.mode === "flatten") return flattenAgentFiles(src, dest, { ...opts, profile });
+  if (profile && group.to === "commands") return copySimpleWithProfile(src, dest, opts, profile, "commands");
+  if (profile && group.to === "context") return copySimpleWithProfile(src, dest, opts, profile, "context");
   return copyDir(src, dest, opts);
 }
 
@@ -304,7 +343,7 @@ export async function install(args) {
 
   const ctxDir = path.join(source, "context");
   const ctxFiles = fs.existsSync(ctxDir)
-    ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md")).sort()
+    ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md") && selectedByProfile(profile, "context", f, true)).sort()
     : [];
 
   const cfg = mergeConfig(target, ctxFiles, { global });

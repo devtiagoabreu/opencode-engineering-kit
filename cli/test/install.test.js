@@ -72,10 +72,12 @@ test("dry-run does not touch the filesystem", async () => {
   assert.ok(!fs.existsSync(path.join(target, "opencode.json")), "no config written on dry-run");
 });
 
-test("profile limits installed skills", async () => {
-  const { summary } = await install({ target, source: KIT_SOURCE, only: ["skills"], profile: "core", force: false, dryRun: false, verbose: false });
-  assert.ok(summary.skills.created.length > 0, "profile installs skills");
-  assert.ok(summary.skills.created.length < 120, "profile is smaller than full catalog");
-  const installed = fs.readdirSync(path.join(target, ".opencode/skills"), { recursive: true }).filter((f) => String(f).endsWith("SKILL.md"));
-  assert.ok(installed.length < 120, "skill files limited by profile");
+test("profile limits installed assets", async () => {
+  const { summary } = await install({ target, source: KIT_SOURCE, only: ["skills", "agents", "commands", "context"], profile: "core", force: false, dryRun: false, verbose: false });
+  assert.ok(summary.skills.created.length > 0 && summary.skills.created.length < 120, "profile limits skills");
+  assert.ok(summary.agents.created.length > 0 && summary.agents.created.length < 30, "profile limits agents");
+  assert.ok(summary.commands.created.length > 0 && summary.commands.created.length <= 3, "profile limits commands");
+  assert.ok(summary.context.created.length > 0 && summary.context.created.length < 12, "profile limits context");
+  const cfg = JSON.parse(fs.readFileSync(path.join(target, "opencode.json"), "utf8"));
+  assert.ok(cfg.instructions.every((i) => !i.includes("HISTORY.md")), "non-core context not wired");
 });

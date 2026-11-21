@@ -8,5 +8,8 @@
     "security",
     "testing",
     "git"
-  ]
+  ],
+  "agents": "*",
+  "commands": "*",
+  "context": "*"
 }

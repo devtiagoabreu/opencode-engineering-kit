@@ -14,5 +14,8 @@
     "science",
     "sports",
     "education"
-  ]
+  ],
+  "agents": "*",
+  "commands": "*",
+  "context": "*"
 }

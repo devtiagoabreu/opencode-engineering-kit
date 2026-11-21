@@ -9,5 +9,8 @@
     "security",
     "devops",
     "architecture"
-  ]
+  ],
+  "agents": "*",
+  "commands": "*",
+  "context": "*"
 }

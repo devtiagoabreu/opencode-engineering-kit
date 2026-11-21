@@ -8,5 +8,8 @@
     "vision",
     "tools",
     "security"
-  ]
+  ],
+  "agents": "*",
+  "commands": "*",
+  "context": "*"
 }

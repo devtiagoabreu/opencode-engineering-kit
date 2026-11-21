@@ -8,5 +8,8 @@
     "testing",
     "security",
     "performance"
-  ]
+  ],
+  "agents": "*",
+  "commands": "*",
+  "context": "*"
 }
