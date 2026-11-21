@@ -65,9 +65,11 @@ test("doctor checks target wiring when installed", () => {
     skills: { paths: [".opencode/skills"] },
     instructions: [".opencode/context/base.md"]
   }, null, 2));
+  fs.writeFileSync(path.join(target, ".opencode/.kit-install.json"), JSON.stringify({ schema: 1, kit: { profile: "core" } }));
   const checks = doctor(KIT_SOURCE, { fast: true, target });
   assert.ok(checks.some((c) => c.name === "project skills.paths wired" && c.pass));
   assert.ok(checks.some((c) => c.name === "project context instructions wired" && c.pass));
+  assert.ok(checks.some((c) => c.name === "project install manifest valid" && c.pass));
 });
 
 test("doctor reports missing target wiring", () => {
@@ -77,6 +79,7 @@ test("doctor reports missing target wiring", () => {
   const checks = doctor(KIT_SOURCE, { fast: true, target });
   assert.ok(checks.some((c) => c.name === "project skills.paths wired" && !c.pass));
   assert.ok(checks.some((c) => c.name === "project context instructions wired" && !c.pass));
+  assert.ok(checks.some((c) => c.name === "project install manifest present" && !c.pass));
 });
 
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {

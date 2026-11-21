@@ -124,6 +124,18 @@ function wiringChecks(target, { global = false } = {}) {
     const skillFiles = fs.readdirSync(skillsDir, { recursive: true }).filter((f) => String(f).replace(/\\/g, "/").endsWith("/SKILL.md") || String(f) === "SKILL.md");
     checks.push(check(`${scope} installed skills detected`, skillFiles.length > 0, `${skillFiles.length} SKILL.md file(s)`));
   }
+
+  const manifestPath = path.join(base, ".kit-install.json");
+  if (fs.existsSync(manifestPath)) {
+    try {
+      const m = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
+      checks.push(check(`${scope} install manifest valid`, m && m.schema === 1, `profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
+    } catch (e) {
+      checks.push(check(`${scope} install manifest valid`, false, `invalid JSON: ${e.message}`));
+    }
+  } else {
+    checks.push(check(`${scope} install manifest present`, false, `missing ${manifestPath}; reinstall with current CLI to track drift`));
+  }
   return checks;
 }
 

@@ -299,6 +299,17 @@ export async function install(args) {
   }
   log(`opencode.json ${args.dryRun ? "would be" : ""} updated (skills.paths + ${ctxFiles.length} context instructions)`);
 
+  const manifest = {
+    schema: 1,
+    installedAt: new Date().toISOString(),
+    kit: { repo: args.repo, branch: args.branch, profile: args.profile || null },
+    global,
+    groups: Object.fromEntries(Object.entries(summary).map(([k, v]) => [k, { created: v.created.length, skipped: v.skipped.length }])),
+  };
+  const manifestPath = path.join(destRoot, ".kit-install.json");
+  if (args.dryRun) log(`dry-run: would write ${manifestPath}`);
+  else { fs.mkdirSync(destRoot, { recursive: true }); fs.writeFileSync(manifestPath, `${JSON.stringify(manifest, null, 2)}\n`); }
+
   if (sourceCleanup) sourceCleanup();
 
   log(`done: ${totalCreated} file(s) installed, ${totalSkipped} skipped, into ${global ? "global config" : `.opencode/ of ${target}`}`);
