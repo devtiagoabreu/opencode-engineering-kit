@@ -42,8 +42,8 @@ export function parseArgs(argv) {
   return args;
 }
 
-function check(name, pass, detail) {
-  return { name, pass, detail };
+function check(code, name, pass, detail) {
+  return { code, name, pass, detail };
 }
 
 function commandAvailable(cmd) {
@@ -99,15 +99,15 @@ function wiringChecks(target, { global = false } = {}) {
   const installed = global
     ? fs.existsSync(path.join(root, "skills")) || fs.existsSync(path.join(root, "context"))
     : fs.existsSync(path.join(root, ".opencode"));
-  if (!installed) return [check(`${scope} install detected`, true, "not installed (skipped)")];
+  if (!installed) return [check("install.detected", `${scope} install detected`, true, "not installed (skipped)")];
 
   const checks = [];
   const cfgExists = fs.existsSync(cfgPath);
-  checks.push(check(`${scope} opencode.json exists`, cfgExists, cfgExists ? path.relative(process.cwd(), cfgPath) || cfgPath : cfgPath));
+  checks.push(check("config.exists", `${scope} opencode.json exists`, cfgExists, cfgExists ? path.relative(process.cwd(), cfgPath) || cfgPath : cfgPath));
   let cfg = null;
   if (cfgExists) {
-    try { cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")); checks.push(check(`${scope} opencode.json valid JSON`, true)); }
-    catch (e) { checks.push(check(`${scope} opencode.json valid JSON`, false, `parse error: ${e.message}`)); }
+    try { cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")); checks.push(check("config.json.valid", `${scope} opencode.json valid JSON`, true)); }
+    catch (e) { checks.push(check("config.json.valid", `${scope} opencode.json valid JSON`, false, `parse error: ${e.message}`)); }
   }
 
   const skillsPath = global ? path.join(root, "skills") : ".opencode/skills";
@@ -116,25 +116,25 @@ function wiringChecks(target, { global = false } = {}) {
   const instructions = cfg?.instructions ?? [];
   const hasSkills = skillPaths.includes(skillsPath);
   const kitCtx = instructions.filter((i) => String(i).startsWith(ctxPrefix));
-  checks.push(check(`${scope} skills.paths wired`, hasSkills, hasSkills ? skillsPath : `missing ${skillsPath}; run install or start`));
-  checks.push(check(`${scope} context instructions wired`, kitCtx.length > 0, kitCtx.length > 0 ? `${kitCtx.length} instruction(s)` : `missing ${ctxPrefix}/*; run install or start`));
+  checks.push(check("config.skills_paths.wired", `${scope} skills.paths wired`, hasSkills, hasSkills ? skillsPath : `missing ${skillsPath}; run install or start`));
+  checks.push(check("config.instructions.wired", `${scope} context instructions wired`, kitCtx.length > 0, kitCtx.length > 0 ? `${kitCtx.length} instruction(s)` : `missing ${ctxPrefix}/*; run install or start`));
 
   const dupSkills = skillPaths.filter((p, i) => skillPaths.indexOf(p) !== i);
-  checks.push(check(`${scope} skills.paths no duplicates`, dupSkills.length === 0, dupSkills.length ? `duplicates: ${[...new Set(dupSkills)].join(", ")}` : "ok"));
+  checks.push(check("config.skills_paths.duplicates", `${scope} skills.paths no duplicates`, dupSkills.length === 0, dupSkills.length ? `duplicates: ${[...new Set(dupSkills)].join(", ")}` : "ok"));
   const dupInst = instructions.filter((p, i) => instructions.indexOf(p) !== i);
-  checks.push(check(`${scope} instructions no duplicates`, dupInst.length === 0, dupInst.length ? `duplicates: ${[...new Set(dupInst)].slice(0,3).join(", ")}` : "ok"));
+  checks.push(check("config.instructions.duplicates", `${scope} instructions no duplicates`, dupInst.length === 0, dupInst.length ? `duplicates: ${[...new Set(dupInst)].slice(0,3).join(", ")}` : "ok"));
 
   const missingInst = kitCtx.filter((i) => !fs.existsSync(path.resolve(root, i)));
-  checks.push(check(`${scope} context files exist`, missingInst.length === 0, missingInst.length ? `missing ${missingInst.length}: ${missingInst.slice(0,3).join(", ")}` : `${kitCtx.length} present`));
+  checks.push(check("install.context_files.present", `${scope} context files exist`, missingInst.length === 0, missingInst.length ? `missing ${missingInst.length}: ${missingInst.slice(0,3).join(", ")}` : `${kitCtx.length} present`));
 
   const skillsDir = path.join(base, "skills");
   const ctxDir = path.join(base, "context");
-  checks.push(check(`${scope} skills dir present`, fs.existsSync(skillsDir), fs.existsSync(skillsDir) ? skillsDir : `missing ${skillsDir}`));
-  checks.push(check(`${scope} context dir present`, fs.existsSync(ctxDir), fs.existsSync(ctxDir) ? ctxDir : `missing ${ctxDir}`));
+  checks.push(check("install.skills_dir.present", `${scope} skills dir present`, fs.existsSync(skillsDir), fs.existsSync(skillsDir) ? skillsDir : `missing ${skillsDir}`));
+  checks.push(check("install.context_dir.present", `${scope} context dir present`, fs.existsSync(ctxDir), fs.existsSync(ctxDir) ? ctxDir : `missing ${ctxDir}`));
 
   if (fs.existsSync(skillsDir)) {
     const skillFiles = fs.readdirSync(skillsDir, { recursive: true }).filter((f) => String(f).replace(/\\/g, "/").endsWith("/SKILL.md") || String(f) === "SKILL.md");
-    checks.push(check(`${scope} installed skills detected`, skillFiles.length > 0, `${skillFiles.length} SKILL.md file(s)`));
+    checks.push(check("install.skills.detected", `${scope} installed skills detected`, skillFiles.length > 0, `${skillFiles.length} SKILL.md file(s)`));
   }
 
   const manifestPath = path.join(base, ".kit-install.json");
@@ -142,7 +142,7 @@ function wiringChecks(target, { global = false } = {}) {
     try {
       const m = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
       const okSchema = m && (m.schema === 1 || m.schema === 2);
-      checks.push(check(`${scope} install manifest valid`, okSchema, `schema=${m?.schema || "?"}, profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
+      checks.push(check("install.manifest.valid", `${scope} install manifest valid`, okSchema, `schema=${m?.schema || "?"}, profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
       if (m?.schema === 2 && m.files && typeof m.files === "object") {
         let missing = 0, modified = 0, ok = 0, extra = 0;
         const samples = [];
@@ -165,15 +165,15 @@ function wiringChecks(target, { global = false } = {}) {
         const detail = pass
           ? `${ok} tracked files match${extra ? `, ${extra} extra unmanaged file(s)` : ""}`
           : `${modified} modified, ${missing} missing, ${extra} extra${samples.length ? `; ${samples.join(", ")}` : ""}`;
-        checks.push(check(`${scope} install drift`, pass, detail));
+        checks.push(check("install.drift", `${scope} install drift`, pass, detail));
       } else {
-        checks.push(check(`${scope} install drift`, true, "manifest has no file hashes (schema<2); reinstall to enable drift checks"));
+        checks.push(check("install.drift", `${scope} install drift`, true, "manifest has no file hashes (schema<2); reinstall to enable drift checks"));
       }
     } catch (e) {
-      checks.push(check(`${scope} install manifest valid`, false, `invalid JSON: ${e.message}`));
+      checks.push(check("install.manifest.valid", `${scope} install manifest valid`, false, `invalid JSON: ${e.message}`));
     }
   } else {
-    checks.push(check(`${scope} install manifest present`, false, `missing ${manifestPath}; reinstall with current CLI to track drift`));
+    checks.push(check("install.manifest.present", `${scope} install manifest present`, false, `missing ${manifestPath}; reinstall with current CLI to track drift`));
   }
   return checks;
 }
@@ -223,15 +223,16 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
   const checks = [];
 
   const schema = path.join(kitRoot, "core/registry/schema/skill.schema.json");
-  checks.push(check("skill schema valid JSON", (() => {
+  checks.push(check("schema.valid_json", "skill schema valid JSON", (() => {
     try { JSON.parse(fs.readFileSync(schema, "utf8")); return true; } catch { return false; }
   })(), "core/registry/schema/skill.schema.json"));
 
   const allow = path.join(kitRoot, "core/security/skill-scan.allow");
-  checks.push(check("security allowlist present", fs.existsSync(allow), path.relative(kitRoot, allow)));
+  checks.push(check("security.allowlist.present", "security allowlist present", fs.existsSync(allow), path.relative(kitRoot, allow)));
 
   const fr = indexFreshness(kitRoot);
   checks.push(check(
+    "discovery.index.fresh",
     "discovery index up to date",
     fr.pass,
     `${fr.indexed} indexed / ${fr.actual} on disk`
@@ -245,26 +246,27 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
       unresolved = Object.values(data.assets).filter((a) => a.resolved === false).length;
     } catch { unresolved = -1; }
   }
-  checks.push(check("all dependencies resolved", unresolved === 0, unresolved < 0 ? "lockfile missing" : `${unresolved} unresolved`));
+  checks.push(check("resolver.dependencies.resolved", "all dependencies resolved", unresolved === 0, unresolved < 0 ? "lockfile missing" : `${unresolved} unresolved`));
 
   const validation = runPython(kitRoot, "scripts/validate_assets.py", ["--root", ".", "--check-manifest"]);
   if (validation.cmd) {
-    checks.push(check("asset schema/manifest validation", validation.status === 0, validation.status === 0 ? "PASS" : "FAIL"));
+    checks.push(check("assets.validation", "asset schema/manifest validation", validation.status === 0, validation.status === 0 ? "PASS" : "FAIL"));
   } else {
-    checks.push(check("asset schema/manifest validation", true, "skipped (python not found)"));
+    checks.push(check("assets.validation", "asset schema/manifest validation", true, "skipped (python not found)"));
   }
 
   const scanScript = path.join(kitRoot, "core/security/skill-scan.sh");
   const bash = bashUsable();
   if (bash.ok) {
     const scan = run("bash", [scanScript]);
-    checks.push(check("skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
+    checks.push(check("security.skill_scan", "skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
   } else {
-    checks.push(check("skill content security scan", true, `skipped (${bash.reason})`));
+    checks.push(check("security.skill_scan", "skill content security scan", true, `skipped (${bash.reason})`));
   }
 
   const vc = vaultConsistency(kitRoot);
   checks.push(check(
+    "vault.consistent",
     "vault entries consistent",
     vc.pass,
     `${vc.pointers} pointer skills / ${vc.entries} vault entries${vc.broken ? `, ${vc.broken} broken` : ""}`
@@ -278,9 +280,9 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
       const tests = run("bash", [path.join(kitRoot, "scripts/test.sh")], { timeout: 300000 });
       const passed = /Test Results: (\d+) passed, (\d+) failed/.exec(tests.stdout);
       const ok = tests.status === 0 && passed && passed[2] === "0";
-      checks.push(check("test suite", ok, ok && passed ? `${passed[1]} passed` : "failed"));
+      checks.push(check("tests.suite", "test suite", ok, ok && passed ? `${passed[1]} passed` : "failed"));
     } else {
-      checks.push(check("test suite", true, `skipped (${bash.reason})`));
+      checks.push(check("tests.suite", "test suite", true, `skipped (${bash.reason})`));
     }
   }
 
@@ -289,24 +291,25 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
 
 export function recommendations(checks, { target, global } = {}) {
   const recs = [];
-  const has = (name, pass = false) => checks.some((c) => c.name === name && c.pass === pass);
+  const failedCodes = new Set(checks.filter((c) => !c.pass).map((c) => c.code));
   const scopeFlag = global ? " --global" : target ? ` --target ${target}` : "";
-  if (has("project skills.paths wired") || has("global skills.paths wired") || has("project context instructions wired") || has("global context instructions wired")) {
-    recs.push(`Restore wiring: opencode-engineering-kit start${scopeFlag}`.trim());
+  const add = (code, command, reason) => recs.push({ code, command: command.trim(), reason });
+  if (failedCodes.has("config.skills_paths.wired") || failedCodes.has("config.instructions.wired")) {
+    add("restore-wiring", `opencode-engineering-kit start${scopeFlag}`, "Restore opencode.json wiring without deleting installed files.");
   }
-  if (checks.some((c) => c.name.endsWith("install drift") && !c.pass)) {
-    recs.push(`Repair drift: opencode-engineering-kit install${scopeFlag} --force` + (global ? "" : ""));
+  if (failedCodes.has("install.drift")) {
+    add("repair-drift", `opencode-engineering-kit install${scopeFlag} --force`, "Reinstall managed files to repair modified/missing tracked files.");
   }
-  if (checks.some((c) => c.name.endsWith("install manifest present") && !c.pass) || checks.some((c) => c.name.endsWith("install manifest valid") && !c.pass)) {
-    recs.push(`Recreate manifest: opencode-engineering-kit install${scopeFlag} --force`.trim());
+  if (failedCodes.has("install.manifest.present") || failedCodes.has("install.manifest.valid")) {
+    add("recreate-manifest", `opencode-engineering-kit install${scopeFlag} --force`, "Recreate install manifest for drift tracking.");
   }
-  if (checks.some((c) => c.name.includes("duplicates") && !c.pass)) {
-    recs.push(`Deduplicate config manually in opencode.json, then rerun doctor.`);
+  if (failedCodes.has("config.skills_paths.duplicates") || failedCodes.has("config.instructions.duplicates")) {
+    add("dedupe-config", "Edit opencode.json to remove duplicate skills.paths/instructions entries", "Duplicate wiring can cause noisy or ambiguous loading.");
   }
-  if (checks.some((c) => c.name.endsWith("context files exist") && !c.pass)) {
-    recs.push(`Restore missing context files: opencode-engineering-kit install${scopeFlag} --only context --force`.trim());
+  if (failedCodes.has("install.context_files.present")) {
+    add("restore-context", `opencode-engineering-kit install${scopeFlag} --only context --force`, "Restore missing context files referenced by opencode.json.");
   }
-  return [...new Set(recs)];
+  return recs.filter((r, i) => recs.findIndex((x) => x.code === r.code) === i);
 }
 
 export function main(argv) {
@@ -333,7 +336,7 @@ export function main(argv) {
   }
   if (recs.length > 0) {
     console.log("\nRecommended actions:");
-    for (const r of recs) console.log(`  - ${r}`);
+    for (const r of recs) console.log(`  - [${r.code}] ${r.command} - ${r.reason}`);
   }
   console.log(`\n${failed.length === 0 ? "all checks passed" : `${failed.length} check(s) failed`}`);
   if (failed.length > 0) process.exitCode = 1;

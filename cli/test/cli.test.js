@@ -55,7 +55,8 @@ test("doctor reports a healthy kit", () => {
   const checks = doctor(KIT_SOURCE, { fast: true });
   assert.ok(checks.length >= 5, "at least 5 checks");
   assert.ok(checks.every((c) => c.pass), "all structural checks pass");
-  assert.ok(checks.some((c) => c.name === "asset schema/manifest validation"), "asset validation check present");
+  assert.ok(checks.some((c) => c.code === "assets.validation"), "asset validation check present");
+  assert.ok(checks.every((c) => typeof c.code === "string" && c.code.length > 0), "checks have codes");
 });
 
 test("doctor checks target wiring when installed", () => {
@@ -77,9 +78,12 @@ test("doctor reports missing target wiring", () => {
   fs.mkdirSync(path.join(target, ".opencode", "context"), { recursive: true });
   fs.writeFileSync(path.join(target, "opencode.json"), JSON.stringify({ skills: { paths: [] }, instructions: [] }, null, 2));
   const checks = doctor(KIT_SOURCE, { fast: true, target });
-  assert.ok(checks.some((c) => c.name === "project skills.paths wired" && !c.pass));
-  assert.ok(checks.some((c) => c.name === "project context instructions wired" && !c.pass));
-  assert.ok(checks.some((c) => c.name === "project install manifest present" && !c.pass));
+  assert.ok(checks.some((c) => c.code === "config.skills_paths.wired" && !c.pass));
+  assert.ok(checks.some((c) => c.code === "config.instructions.wired" && !c.pass));
+  assert.ok(checks.some((c) => c.code === "install.manifest.present" && !c.pass));
+  const recs = recommendations(checks, { target });
+  assert.ok(recs.some((r) => r.code === "restore-wiring"));
+  assert.ok(recs.some((r) => r.code === "recreate-manifest"));
 });
 
 test("doctor reports drifted and extra installed files", async () => {
@@ -105,7 +109,7 @@ test("doctor reports drifted and extra installed files", async () => {
   assert.match(drift.detail, /modified/);
   assert.match(drift.detail, /extra/);
   const recs = recommendations(checks, { target });
-  assert.ok(recs.some((r) => r.includes("install") && r.includes("--force")));
+  assert.ok(recs.some((r) => r.code === "repair-drift" && r.command.includes("install") && r.command.includes("--force")));
 });
 
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {
