@@ -324,6 +324,8 @@ export async function install(args) {
     installedAt: new Date().toISOString(),
     kit: { repo: args.repo, branch: args.branch, profile: args.profile || null },
     global,
+    only: args.only,
+    managed: { destRoot: global ? "." : ".opencode", groups: Object.keys(summary) },
     groups: Object.fromEntries(Object.entries(summary).map(([k, v]) => [k, { created: v.created.length, skipped: v.skipped.length }])),
     files,
   };

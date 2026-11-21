@@ -287,6 +287,28 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
   return checks;
 }
 
+function recommendations(checks, { target, global }) {
+  const recs = [];
+  const has = (name, pass = false) => checks.some((c) => c.name === name && c.pass === pass);
+  const scopeFlag = global ? " --global" : target ? ` --target ${target}` : "";
+  if (has("project skills.paths wired") || has("global skills.paths wired") || has("project context instructions wired") || has("global context instructions wired")) {
+    recs.push(`Restore wiring: opencode-engineering-kit start${scopeFlag}`.trim());
+  }
+  if (checks.some((c) => c.name.endsWith("install drift") && !c.pass)) {
+    recs.push(`Repair drift: opencode-engineering-kit install${scopeFlag} --force` + (global ? "" : ""));
+  }
+  if (checks.some((c) => c.name.endsWith("install manifest present") && !c.pass) || checks.some((c) => c.name.endsWith("install manifest valid") && !c.pass)) {
+    recs.push(`Recreate manifest: opencode-engineering-kit install${scopeFlag} --force`.trim());
+  }
+  if (checks.some((c) => c.name.includes("duplicates") && !c.pass)) {
+    recs.push(`Deduplicate config manually in opencode.json, then rerun doctor.`);
+  }
+  if (checks.some((c) => c.name.endsWith("context files exist") && !c.pass)) {
+    recs.push(`Restore missing context files: opencode-engineering-kit install${scopeFlag} --only context --force`.trim());
+  }
+  return [...new Set(recs)];
+}
+
 export function main(argv) {
   const args = parseArgs(argv);
   if (args.help) {
@@ -296,9 +318,10 @@ export function main(argv) {
   const kitRoot = findKitRoot(args.dir);
   const checks = doctor(kitRoot, { fast: args.fast, target: args.target, global: args.global });
   const failed = checks.filter((c) => !c.pass);
+  const recs = recommendations(checks, args);
 
   if (args.json) {
-    console.log(JSON.stringify({ kitRoot, passed: failed.length === 0, failed: failed.length, checks }, null, 2));
+    console.log(JSON.stringify({ kitRoot, passed: failed.length === 0, failed: failed.length, checks, recommendations: recs }, null, 2));
     if (failed.length > 0) process.exitCode = 1;
     return;
   }
@@ -308,9 +331,9 @@ export function main(argv) {
   for (const c of checks) {
     console.log(`  ${c.pass ? "[PASS]" : "[FAIL]"} ${c.name}${c.detail ? ` - ${c.detail}` : ""}`);
   }
-  if (failed.length > 0) {
+  if (recs.length > 0) {
     console.log("\nRecommended actions:");
-    for (const f of failed) console.log(`  - ${f.name}: ${f.detail || "inspect and fix"}`);
+    for (const r of recs) console.log(`  - ${r}`);
   }
   console.log(`\n${failed.length === 0 ? "all checks passed" : `${failed.length} check(s) failed`}`);
   if (failed.length > 0) process.exitCode = 1;
