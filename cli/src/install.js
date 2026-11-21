@@ -2,6 +2,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
+import crypto from "node:crypto";
 import { execFileSync } from "node:child_process";
 import { fileURLToPath } from "node:url";
 
@@ -143,9 +144,14 @@ function skillSelectedByProfile(profile, category, skillName) {
   return cats.has(category) || names.has(skillName);
 }
 
+function sha256File(filePath) {
+  return crypto.createHash("sha256").update(fs.readFileSync(filePath)).digest("hex");
+}
+
 function copyDir(src, dest, { force, dryRun, verbose }) {
   const created = [];
   const skipped = [];
+  const files = [];
   const fsWalk = (s, d) => {
     for (const entry of fs.readdirSync(s, { withFileTypes: true })) {
       const sPath = path.join(s, entry.name);
@@ -153,11 +159,15 @@ function copyDir(src, dest, { force, dryRun, verbose }) {
       if (entry.isDirectory()) {
         fsWalk(sPath, dPath);
       } else {
+        const rel = path.relative(src, sPath).replace(/\\/g, "/");
+        const hash = sha256File(sPath);
         if (fs.existsSync(dPath) && !force) {
-          skipped.push(path.relative(src, sPath));
+          skipped.push(rel);
+          files.push({ path: rel, sha256: hash, status: "skipped" });
           continue;
         }
-        created.push(path.relative(src, sPath));
+        created.push(rel);
+        files.push({ path: rel, sha256: hash, status: "created" });
         if (!dryRun) {
           fs.mkdirSync(path.dirname(dPath), { recursive: true });
           fs.copyFileSync(sPath, dPath);
@@ -167,12 +177,13 @@ function copyDir(src, dest, { force, dryRun, verbose }) {
     }
   };
   fsWalk(src, dest);
-  return { created, skipped };
+  return { created, skipped, files };
 }
 
 function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
   const created = [];
   const skipped = [];
+  const files = [];
   const walk = (s) => {
     for (const entry of fs.readdirSync(s, { withFileTypes: true })) {
       const sPath = path.join(s, entry.name);
@@ -180,12 +191,16 @@ function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
         walk(sPath);
       } else if (entry.name.endsWith(".md")) {
         const targetName = path.basename(entry.name, ".md");
-        const dPath = path.join(dest, `${targetName}.md`);
+        const rel = `${targetName}.md`;
+        const dPath = path.join(dest, rel);
+        const hash = sha256File(sPath);
         if (fs.existsSync(dPath) && !force) {
-          skipped.push(entry.name);
+          skipped.push(rel);
+          files.push({ path: rel, sha256: hash, status: "skipped" });
           continue;
         }
-        created.push(entry.name);
+        created.push(rel);
+        files.push({ path: rel, sha256: hash, status: "created" });
         if (!dryRun) {
           fs.mkdirSync(dest, { recursive: true });
           fs.copyFileSync(sPath, dPath);
@@ -195,13 +210,13 @@ function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
     }
   };
   walk(src);
-  return { created, skipped };
+  return { created, skipped, files };
 }
 
 function copySkillsWithProfile(source, destRoot, opts, profile) {
   const src = path.join(source, "assets/skills");
-  if (!fs.existsSync(src)) return { created: [], skipped: [] };
-  const created = []; const skipped = [];
+  if (!fs.existsSync(src)) return { created: [], skipped: [], files: [] };
+  const created = []; const skipped = []; const files = [];
   for (const cat of fs.readdirSync(src, { withFileTypes: true })) {
     if (!cat.isDirectory()) continue;
     const catPath = path.join(src, cat.name);
@@ -213,16 +228,17 @@ function copySkillsWithProfile(source, destRoot, opts, profile) {
       const r = copyDir(sPath, dPath, opts);
       created.push(...r.created.map((f) => `${cat.name}/${skill.name}/${f}`));
       skipped.push(...r.skipped.map((f) => `${cat.name}/${skill.name}/${f}`));
+      files.push(...(r.files || []).map((f) => ({ ...f, path: `${cat.name}/${skill.name}/${f.path}` })));
     }
   }
-  return { created, skipped };
+  return { created, skipped, files };
 }
 
 function copyGroupTo(source, destRoot, group, opts, profile) {
   const src = path.join(source, group.from);
   if (!fs.existsSync(src)) {
     warn(`group "${group.to}" skipped: ${group.from} not found in kit`);
-    return { created: [], skipped: [] };
+    return { created: [], skipped: [], files: [] };
   }
   if (group.to === "skills" && profile) return copySkillsWithProfile(source, destRoot, opts, profile);
   const dest = path.join(destRoot, group.to);
@@ -299,12 +315,17 @@ export async function install(args) {
   }
   log(`opencode.json ${args.dryRun ? "would be" : ""} updated (skills.paths + ${ctxFiles.length} context instructions)`);
 
+  const files = {};
+  for (const [group, result] of Object.entries(summary)) {
+    files[group] = (result.files || []).map((f) => ({ path: f.path, sha256: f.sha256 }));
+  }
   const manifest = {
-    schema: 1,
+    schema: 2,
     installedAt: new Date().toISOString(),
     kit: { repo: args.repo, branch: args.branch, profile: args.profile || null },
     global,
     groups: Object.fromEntries(Object.entries(summary).map(([k, v]) => [k, { created: v.created.length, skipped: v.skipped.length }])),
+    files,
   };
   const manifestPath = path.join(destRoot, ".kit-install.json");
   if (args.dryRun) log(`dry-run: would write ${manifestPath}`);

@@ -1,6 +1,7 @@
 import fs from "node:fs";
 import path from "node:path";
 import os from "node:os";
+import crypto from "node:crypto";
 import { spawnSync } from "node:child_process";
 import { findKitRoot, countSkills, countAgents, run } from "./kit-utils.js";
 import { globalConfigDir } from "./install.js";
@@ -129,7 +130,26 @@ function wiringChecks(target, { global = false } = {}) {
   if (fs.existsSync(manifestPath)) {
     try {
       const m = JSON.parse(fs.readFileSync(manifestPath, "utf8"));
-      checks.push(check(`${scope} install manifest valid`, m && m.schema === 1, `profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
+      const okSchema = m && (m.schema === 1 || m.schema === 2);
+      checks.push(check(`${scope} install manifest valid`, okSchema, `schema=${m?.schema || "?"}, profile=${m.kit?.profile || "none"}, repo=${m.kit?.repo || "?"}`));
+      if (m?.schema === 2 && m.files && typeof m.files === "object") {
+        let missing = 0, modified = 0, ok = 0;
+        const samples = [];
+        for (const [group, entries] of Object.entries(m.files)) {
+          for (const entry of entries || []) {
+            const fp = path.join(base, group, entry.path);
+            if (!fs.existsSync(fp)) { missing++; if (samples.length < 3) samples.push(`missing:${group}/${entry.path}`); continue; }
+            const hash = crypto.createHash("sha256").update(fs.readFileSync(fp)).digest("hex");
+            if (hash !== entry.sha256) { modified++; if (samples.length < 3) samples.push(`modified:${group}/${entry.path}`); }
+            else ok++;
+          }
+        }
+        const pass = missing === 0 && modified === 0;
+        const detail = pass ? `${ok} tracked files match` : `${modified} modified, ${missing} missing${samples.length ? `; ${samples.join(", ")}` : ""}`;
+        checks.push(check(`${scope} install drift`, pass, detail));
+      } else {
+        checks.push(check(`${scope} install drift`, true, "manifest has no file hashes (schema<2); reinstall to enable drift checks"));
+      }
     } catch (e) {
       checks.push(check(`${scope} install manifest valid`, false, `invalid JSON: ${e.message}`));
     }

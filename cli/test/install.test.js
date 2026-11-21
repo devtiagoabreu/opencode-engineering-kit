@@ -44,6 +44,9 @@ test("installs all groups into .opencode/", async () => {
   assert.ok(cfg.skills.paths.includes(".opencode/skills"), "skills.paths registered");
   assert.ok(cfg.instructions.some((f) => f.startsWith(".opencode/context/")), "context instructions registered");
   assert.equal(cfg.$schema, "https://opencode.ai/config.json");
+  const manifest = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.equal(manifest.schema, 2);
+  assert.ok(manifest.files.skills.length > 0, "skill hashes tracked");
 });
 
 test("is idempotent and skips existing files without --force", async () => {
