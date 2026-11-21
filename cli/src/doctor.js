@@ -1,30 +1,37 @@
 import fs from "node:fs";
 import path from "node:path";
+import os from "node:os";
 import { spawnSync } from "node:child_process";
 import { findKitRoot, countSkills, countAgents, run } from "./kit-utils.js";
+import { globalConfigDir } from "./install.js";
 
 export const HELP = `
 OpenCode Engineering Kit CLI - doctor
 
 Checks the integrity of a kit checkout: schema, indexes, dependency
-resolution, security scan and test suite.
+resolution, security scan and test suite. Optionally checks an installed
+project/global wiring.
 
 Usage:
   opencode-engineering-kit doctor [options]
 
 Options:
-  --dir <dir>     Kit checkout directory (default: current directory)
-  --fast          Skip the full test suite (only structural checks)
-  --json          Output as JSON
-  --help          Show this help
+  --dir <dir>      Kit checkout directory (default: current directory)
+  --target <dir>   Also check kit wiring in a target project
+  --global         Also check kit wiring in global OpenCode config
+  --fast           Skip the full test suite (only structural checks)
+  --json           Output as JSON
+  --help           Show this help
 `;
 
 export function parseArgs(argv) {
-  const args = { dir: process.cwd(), json: false, fast: false, help: false };
+  const args = { dir: process.cwd(), json: false, fast: false, help: false, target: null, global: false };
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
     switch (a) {
       case "--dir": args.dir = argv[++i]; break;
+      case "--target": args.target = argv[++i]; break;
+      case "--global": args.global = true; break;
       case "--fast": args.fast = true; break;
       case "--json": args.json = true; break;
       case "--help": case "-h": args.help = true; break;
@@ -72,6 +79,34 @@ function indexFreshness(kitRoot) {
   return { pass: actual === indexed, actual, indexed };
 }
 
+function wiringChecks(target, { global = false } = {}) {
+  const root = global ? globalConfigDir() : path.resolve(target || process.cwd());
+  const cfgPath = path.join(root, "opencode.json");
+  const base = global ? root : path.join(root, ".opencode");
+  const installed = global
+    ? fs.existsSync(path.join(root, "skills")) || fs.existsSync(path.join(root, "context"))
+    : fs.existsSync(path.join(root, ".opencode"));
+  if (!installed) return [check(`${global ? "global" : "project"} install detected`, true, "not installed (skipped)")];
+
+  const checks = [];
+  const cfgExists = fs.existsSync(cfgPath);
+  checks.push(check(`${global ? "global" : "project"} opencode.json exists`, cfgExists, cfgExists ? path.relative(process.cwd(), cfgPath) || cfgPath : cfgPath));
+  let cfg = null;
+  if (cfgExists) {
+    try { cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")); checks.push(check(`${global ? "global" : "project"} opencode.json valid JSON`, true)); }
+    catch { checks.push(check(`${global ? "global" : "project"} opencode.json valid JSON`, false)); }
+  }
+  const skillsPath = global ? path.join(root, "skills") : ".opencode/skills";
+  const ctxPrefix = global ? path.join(root, "context") : ".opencode/context";
+  const hasSkills = !!cfg && (cfg.skills?.paths ?? []).includes(skillsPath);
+  const hasCtx = !!cfg && (cfg.instructions ?? []).some((i) => String(i).startsWith(ctxPrefix));
+  checks.push(check(`${global ? "global" : "project"} skills.paths wired`, hasSkills, skillsPath));
+  checks.push(check(`${global ? "global" : "project"} context instructions wired`, hasCtx, ctxPrefix));
+  checks.push(check(`${global ? "global" : "project"} skills dir present`, fs.existsSync(path.join(base, "skills")), path.join(base, "skills")));
+  checks.push(check(`${global ? "global" : "project"} context dir present`, fs.existsSync(path.join(base, "context")), path.join(base, "context")));
+  return checks;
+}
+
 function vaultConsistency(kitRoot) {
   const skillsDir = path.join(kitRoot, "assets/skills");
   const vaultDir = path.join(kitRoot, "assets/vault");
@@ -113,7 +148,7 @@ function vaultConsistency(kitRoot) {
   return { pass: broken === 0, pointers, entries, broken };
 }
 
-export function doctor(kitRoot, { fast } = {}) {
+export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
   const checks = [];
 
   const schema = path.join(kitRoot, "core/registry/schema/skill.schema.json");
@@ -164,6 +199,9 @@ export function doctor(kitRoot, { fast } = {}) {
     `${vc.pointers} pointer skills / ${vc.entries} vault entries${vc.broken ? `, ${vc.broken} broken` : ""}`
   ));
 
+  if (target) checks.push(...wiringChecks(target, { global: false }));
+  if (global) checks.push(...wiringChecks(null, { global: true }));
+
   if (!fast) {
     if (bash.ok) {
       const tests = run("bash", [path.join(kitRoot, "scripts/test.sh")], { timeout: 300000 });
@@ -185,7 +223,7 @@ export function main(argv) {
     return;
   }
   const kitRoot = findKitRoot(args.dir);
-  const checks = doctor(kitRoot, { fast: args.fast });
+  const checks = doctor(kitRoot, { fast: args.fast, target: args.target, global: args.global });
   const failed = checks.filter((c) => !c.pass);
 
   if (args.json) {
