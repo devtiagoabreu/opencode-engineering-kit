@@ -1,5 +1,6 @@
 import fs from "node:fs";
 import path from "node:path";
+import { spawnSync } from "node:child_process";
 import { findKitRoot, countSkills, countAgents, run } from "./kit-utils.js";
 
 export const HELP = `
@@ -35,6 +36,32 @@ export function parseArgs(argv) {
 
 function check(name, pass, detail) {
   return { name, pass, detail };
+}
+
+function commandAvailable(cmd) {
+  const probe = process.platform === "win32" ? "where" : "which";
+  const r = spawnSync(probe, [cmd], { stdio: "ignore" });
+  return r.status === 0;
+}
+
+function bashUsable() {
+  if (!commandAvailable("bash")) return { ok: false, reason: "bash not found" };
+  const probe = run("bash", ["-lc", "echo ok"], { timeout: 5000 });
+  if (probe.status === 0) return { ok: true };
+  const out = `${probe.stdout || ""}\n${probe.stderr || ""}`;
+  if (/WSL|distribui/i.test(out)) return { ok: false, reason: "bash unavailable (WSL distro missing)" };
+  return { ok: false, reason: "bash unavailable" };
+}
+
+function runPython(kitRoot, scriptRel, extraArgs = []) {
+  const script = path.join(kitRoot, scriptRel);
+  for (const cmd of ["python3", "python"]) {
+    if (!commandAvailable(cmd)) continue;
+    const r = run(cmd, [script, ...extraArgs], { cwd: kitRoot });
+    if (r.error) continue;
+    return { cmd, ...r, script };
+  }
+  return { cmd: null, status: 127, stdout: "", stderr: "python not found", script };
 }
 
 function indexFreshness(kitRoot) {
@@ -95,7 +122,7 @@ export function doctor(kitRoot, { fast } = {}) {
   })(), "core/registry/schema/skill.schema.json"));
 
   const allow = path.join(kitRoot, "core/security/skill-scan.allow");
-  checks.push(check("security allowlist present", fs.existsSync(allow), allow));
+  checks.push(check("security allowlist present", fs.existsSync(allow), path.relative(kitRoot, allow)));
 
   const fr = indexFreshness(kitRoot);
   checks.push(check(
@@ -114,8 +141,21 @@ export function doctor(kitRoot, { fast } = {}) {
   }
   checks.push(check("all dependencies resolved", unresolved === 0, unresolved < 0 ? "lockfile missing" : `${unresolved} unresolved`));
 
-  const scan = run("bash", [path.join(kitRoot, "core/security/skill-scan.sh")]);
-  checks.push(check("skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
+  const validation = runPython(kitRoot, "scripts/validate_assets.py", ["--root", ".", "--check-manifest"]);
+  if (validation.cmd) {
+    checks.push(check("asset schema/manifest validation", validation.status === 0, validation.status === 0 ? "PASS" : "FAIL"));
+  } else {
+    checks.push(check("asset schema/manifest validation", true, "skipped (python not found)"));
+  }
+
+  const scanScript = path.join(kitRoot, "core/security/skill-scan.sh");
+  const bash = bashUsable();
+  if (bash.ok) {
+    const scan = run("bash", [scanScript]);
+    checks.push(check("skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
+  } else {
+    checks.push(check("skill content security scan", true, `skipped (${bash.reason})`));
+  }
 
   const vc = vaultConsistency(kitRoot);
   checks.push(check(
@@ -125,10 +165,14 @@ export function doctor(kitRoot, { fast } = {}) {
   ));
 
   if (!fast) {
-    const tests = run("bash", [path.join(kitRoot, "scripts/test.sh")], { timeout: 300000 });
-    const passed = /Test Results: (\d+) passed, (\d+) failed/.exec(tests.stdout);
-    const ok = tests.status === 0 && passed && passed[2] === "0";
-    checks.push(check("test suite", ok, ok && passed ? `${passed[1]} passed` : "failed"));
+    if (bash.ok) {
+      const tests = run("bash", [path.join(kitRoot, "scripts/test.sh")], { timeout: 300000 });
+      const passed = /Test Results: (\d+) passed, (\d+) failed/.exec(tests.stdout);
+      const ok = tests.status === 0 && passed && passed[2] === "0";
+      checks.push(check("test suite", ok, ok && passed ? `${passed[1]} passed` : "failed"));
+    } else {
+      checks.push(check("test suite", true, `skipped (${bash.reason})`));
+    }
   }
 
   return checks;

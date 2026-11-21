@@ -53,8 +53,9 @@ test("search finds by name and description", () => {
 
 test("doctor reports a healthy kit", () => {
   const checks = doctor(KIT_SOURCE, { fast: true });
-  assert.ok(checks.length >= 4, "at least 4 checks");
+  assert.ok(checks.length >= 5, "at least 5 checks");
   assert.ok(checks.every((c) => c.pass), "all structural checks pass");
+  assert.ok(checks.some((c) => c.name === "asset schema/manifest validation"), "asset validation check present");
 });
 
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {
