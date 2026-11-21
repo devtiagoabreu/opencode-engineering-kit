@@ -287,7 +287,7 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
   return checks;
 }
 
-function recommendations(checks, { target, global }) {
+export function recommendations(checks, { target, global } = {}) {
   const recs = [];
   const has = (name, pass = false) => checks.some((c) => c.name === name && c.pass === pass);
   const scopeFlag = global ? " --global" : target ? ` --target ${target}` : "";

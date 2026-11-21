@@ -6,7 +6,7 @@ import os from "node:os";
 import { fileURLToPath } from "node:url";
 import { collect } from "../src/list.js";
 import { search } from "../src/search.js";
-import { doctor } from "../src/doctor.js";
+import { doctor, recommendations } from "../src/doctor.js";
 import { main as exportMain } from "../src/export.js";
 import { main as cliMain } from "../src/cli.js";
 
@@ -104,6 +104,8 @@ test("doctor reports drifted and extra installed files", async () => {
   assert.ok(drift && !drift.pass);
   assert.match(drift.detail, /modified/);
   assert.match(drift.detail, /extra/);
+  const recs = recommendations(checks, { target });
+  assert.ok(recs.some((r) => r.includes("install") && r.includes("--force")));
 });
 
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {
