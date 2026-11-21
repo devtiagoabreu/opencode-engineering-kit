@@ -21,7 +21,7 @@ requires:
 provides:
   - Systematic fault diagnosis guidance
   - Preventive maintenance scheduling
-  - Systems overview: engine, brakes, suspension, electrics
+  - "Systems overview: engine, brakes, suspension, electrics"
   - Torque and safety practices
 ---
 

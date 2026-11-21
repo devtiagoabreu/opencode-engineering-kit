@@ -22,7 +22,7 @@ provides:
   - A campaign planning workflow from positioning to calendar
   - Voter segmentation and message matrix templates
   - Media budget allocation and measurement guidance
-  - Ethical guardrails: truthfulness, identification, no hate speech
+  - "Ethical guardrails: truthfulness, identification, no hate speech"
 ---
 
 # Political Campaign Marketing

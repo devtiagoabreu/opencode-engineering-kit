@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-15
 name: ocekit-manager
-description: Manage the OpenCode Engineering Kit (ocekit). Use when the user says "instale ocekit", "instale o ocekit", "install ocekit", "install the ocekit", "install opencode-engineering-kit", "ocekit install", "stop ocekit", "start ocekit", "status ocekit", "o que é ocekit", or pastes a GitHub repository link asking to install it. Covers installing the kit globally (~/.config/opencode) or in the current project, and enabling/disabling/status afterwards.
+description: "Manage OpenCode Engineering Kit install, status, start, stop, global or project scope."
 category: tools
 version: 0.1.0
 author: devtiagoabreu
@@ -17,7 +17,7 @@ requires:
   - Network access to fetch the kit from GitHub
 provides:
   - One-command install of the kit (global or project) from a repository link
-  - Lifecycle control: status / start / stop
+  - "Lifecycle control: status / start / stop"
   - Feedback to the user after each operation
 security:
   risk_level: low

@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: rag-llm
-description: Design and build Retrieval-Augmented Generation (RAG) systems over private documents. Use when building chatbots that answer from your own docs/PDFs/DBs, question-answering over data, knowledge bases, embeddings, vector databases, chunking, retrieval, reranking or evaluating LLM answers grounded in sources.
+description: "Build RAG systems over private documents with ingestion, retrieval, generation, and evaluation."
 category: ai
 version: 0.1.0
 author: devtiagoabreu

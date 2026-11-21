@@ -41,8 +41,8 @@ main() {
     
     # Level 1: Schema Validation
     echo "Level 1: Schema Validation"
-    check "All skills have metadata" "test -d $ROOT_DIR/assets/skills && find $ROOT_DIR/assets/skills -name 'metadata.json' | wc -l | grep -q '[1-9]'"
-    check "All agents have frontmatter" "find $ROOT_DIR/assets/agents -name '*.md' -type f -exec head -1 {} \; | grep -q '^---'"
+    check "Asset schemas/frontmatter valid" "python3 \"$ROOT_DIR/scripts/validate_assets.py\" --root \"$ROOT_DIR\" --check-manifest"
+    check "Discovery index fresh" "python3 -c \"from pathlib import Path; r=Path('$ROOT_DIR'); s=len(list(r.glob('assets/skills/**/SKILL.md'))); i=len([l for l in (r/'core/discovery/index/skills.txt').read_text(encoding='utf-8').splitlines() if l.strip()]); raise SystemExit(0 if s==i else 1)\""
     echo
     
     # Level 2: Linting

@@ -18,7 +18,7 @@ pointer: true
 vault: tools/repo-to-llm
 requires:
   - Git 2.0+ and network access to the target repository
-  - One of: gittomd, git2md or repo2txt (see vault content)
+  - "One of: gittomd, git2md or repo2txt (see vault content)"
 provides:
   - Single-file Markdown snapshot of a repository
   - llms.txt index for LLM context

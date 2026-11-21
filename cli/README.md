@@ -1,14 +1,14 @@
 # opencode-engineering-kit CLI
 
-Instala o **OpenCode Engineering Kit** dentro de qualquer projeto existente,
-copiando skills, agents, commands, contexto e demais assets para `.opencode/`
-e registrando-os no `opencode.json` do projeto.
+Instala e gerencia o **OpenCode Engineering Kit** em projetos OpenCode, copiando skills, agents, commands, contexto e assets para `.opencode/` e registrando-os no `opencode.json`.
 
-## Instalação / Uso
+## Quick start
 
 ```bash
 # dentro do repo onde você quer instalar o kit
 npx opencode-engineering-kit install
+npx opencode-engineering-kit status
+npx opencode-engineering-kit list --type skills
 ```
 
 ### Exemplo
@@ -33,20 +33,32 @@ meu-app/
 
 Depois reinicie o OpenCode para a nova configuração ser carregada.
 
-## Opções
+## Comandos
 
-| Opção          | Descrição                                                              |
-|----------------|------------------------------------------------------------------------|
-| `--target <d>` | Diretório do projeto alvo (padrão: diretório atual)                    |
-| `--source <d>` | Usa um checkout local do kit em vez de baixar do GitHub                |
-| `--repo <r>`   | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
-| `--branch <b>` | Branch/tag do kit (padrão: `main`)                                     |
-| `--only <l>`   | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos)   |
-| `--force`      | Sobrescreve arquivos existentes em `.opencode/`                        |
-| `--dry-run`    | Mostra o que seria feito sem tocar no disco                            |
-| `--verbose`    | Lista cada arquivo copiado                                             |
-| `--version`    | Mostra a versão                                                        |
-| `--help`       | Ajuda                                                                  |
+| Comando | Descrição |
+|---------|-----------|
+| `install` | Instala o kit no projeto ou globalmente (`--global`) |
+| `status` | Mostra instalações e se o kit está ativo |
+| `start` / `stop` | Reativa/desativa o wiring no `opencode.json` sem apagar arquivos |
+| `list` | Lista assets (`--type skills|agents|prompts|templates`, `--json`) |
+| `search <q>` | Busca por nome/descrição (`--json`) |
+| `doctor` | Verifica integridade do checkout (`--fast`, `--json`) |
+| `upgrade` | Reinstala com `--force` (aceita opções de `install`) |
+| `export` | Exporta pacote (`--format claude`, `--out <dir>`) |
+
+## Opções do `install`
+
+| Opção | Descrição |
+|-------|-----------|
+| `--target <d>` | Diretório do projeto alvo (padrão: diretório atual) |
+| `--global` | Instala no config global do OpenCode |
+| `--source <d>` | Usa um checkout local do kit em vez de baixar do GitHub |
+| `--repo <r>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
+| `--branch <b>` | Branch/tag do kit (padrão: `main`) |
+| `--only <l>` | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos) |
+| `--force` | Sobrescreve arquivos existentes em `.opencode/` |
+| `--dry-run` | Mostra o que seria feito sem tocar no disco |
+| `--verbose` | Lista cada arquivo copiado |
 
 ## Modo offline / desenvolvimento
 
@@ -74,11 +86,19 @@ npx opencode-engineering-kit install --source /caminho/para/opencode-engineering
 - Node.js 18+ (para `fetch`)
 - `tar` disponível no PATH (Linux/macOS já têm; Windows 10+ e Git for Windows também)
 
+## Confiança
+
+- Use `--dry-run` para auditar mudanças antes de aplicar.
+- Use `--source <checkout-local>` para instalar a partir de código inspecionado.
+- `doctor` valida schema, allowlist, índices, lockfile, skill scan e vault (e testes com `--fast` desativado).
+- `stop/start` só altera o wiring do `opencode.json`.
+
 ## Desenvolvimento
 
 ```bash
 npm test                          # roda os testes de integração
 node bin/opencode-engineering-kit.js install --source ../.. --dry-run
+node bin/opencode-engineering-kit.js doctor --dir ../.. --fast
 ```
 
 ## Publicação

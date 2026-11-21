@@ -16,7 +16,7 @@ compatible:
   - cursor
 requires:
   - Item demand history and supplier lead times
-  - Cost data: holding, ordering, and stock-out penalties
+  - "Cost data: holding, ordering, and stock-out penalties"
   - Knowledge of your WMS capabilities and warehouse layout
 provides:
   - EOQ and reorder-point calculations

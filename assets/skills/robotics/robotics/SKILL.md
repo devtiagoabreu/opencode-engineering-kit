@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: robotics
-description: Robotics development with ROS 2, embedded control and simulation. Use when building robot software, ROS 2 nodes/packages, teleop, motor control, sensor fusion, path planning, microcontrollers in robots, or when users mention ROS, robotics, odometry, lidar, servo, motor, kinematics or gazebo simulation.
+description: "Develop robotics software with ROS 2, control, sensors, planning, and simulation."
 category: robotics
 version: 0.1.0
 author: devtiagoabreu
@@ -17,7 +17,7 @@ compatible:
 requires:
   - ROS 2 (Humble/Iron/Jazzy) installed on Ubuntu or a robotics container
   - A robot platform or simulator (Gazebo) for testing
-  - Basic electronics for hardware: motors, encoders, sensor wiring
+  - "Basic electronics for hardware: motors, encoders, sensor wiring"
 provides:
   - ROS 2 workspace and package setup
   - Node/publisher/subscriber patterns

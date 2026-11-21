@@ -55,18 +55,18 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
-      
-      - name: Validate frontmatter
-        run: |
-          echo "Validating YAML frontmatter..."
-          find assets/skills assets/agents assets/templates assets/prompts -name "*.md" | while read file; do
-            if head -1 "$file" | grep -q "^---"; then
-              echo "Checking $file..."
-              # Basic YAML validation
-              sed -n '/^---$/,/^---$/p' "$file" | grep -q "name:" || echo "WARN: $file may be missing name field"
-            fi
-          done
-      
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.x'
+
+      - name: Install validation deps
+        run: python -m pip install --upgrade pip pyyaml jsonschema
+
+      - name: Validate asset schemas and manifest
+        run: python scripts/validate_assets.py --root . --check-manifest
+
       - name: Check file sizes
         run: |
           echo "Checking file sizes..."
@@ -77,23 +77,21 @@ jobs:
               exit 1
             fi
           done
-          find assets/vault -name "content.md" | while read file; do
-            lines=$(wc -l < "$file")
-            if [ "$lines" -gt 2000 ]; then
-              echo "ERROR: $file exceeds 2000 lines ($lines)"
-              exit 1
-            fi
-          done
+          if [ -d assets/vault ]; then
+            find assets/vault -name "content.md" | while read file; do
+              lines=$(wc -l < "$file")
+              if [ "$lines" -gt 2000 ]; then
+                echo "ERROR: $file exceeds 2000 lines ($lines)"
+                exit 1
+              fi
+            done
+          fi
           echo "All files within size limits"
-      
-      - name: Validate metadata
+
+      - name: Validate metadata JSON
         run: |
           echo "Validating metadata..."
-          find assets/skills -name "metadata.json" | while read file; do
-            echo "Checking $file..."
-            if ! python3 -m json.tool "$file" > /dev/null 2>&1; then
-              echo "ERROR: $file is not valid JSON"
-              exit 1
-            fi
+          find assets -name "metadata.json" | while read file; do
+            python3 -m json.tool "$file" > /dev/null
           done
           echo "All metadata files are valid"

@@ -50,7 +50,19 @@ run_test() {
 main() {
     log "Running all tests..."
     echo
-    
+
+    log "Running asset validation..."
+    TOTAL=$((TOTAL + 1))
+    if python3 "$SCRIPT_DIR/validate_assets.py" --root "$ROOT_DIR" --check-manifest > /dev/null 2>&1; then
+        PASSED=$((PASSED + 1))
+        echo -e "  ${GREEN}PASSED${NC} asset validation"
+    else
+        FAILED=$((FAILED + 1))
+        echo -e "  ${RED}FAILED${NC} asset validation"
+        python3 "$SCRIPT_DIR/validate_assets.py" --root "$ROOT_DIR" --check-manifest || true
+    fi
+    echo
+
     # Find and run all test scripts
     while IFS= read -r -d '' test_file; do
         run_test "$test_file"

@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: llm-multi-provider
-description: Integrate multiple LLM providers (OpenAI, Anthropic, Groq, Gemini, DeepSeek) with automatic fallback, priority and key management. Use when building apps that call chat models, need provider redundancy, key rotation, fallback on failure, cost control, or when users mention LLM keys, providers, fallback, Groq, DeepSeek, OpenAI, Anthropic or Gemini integration.
+description: "Integrate multiple LLM providers with fallback, priority, and key management for chat apps."
 category: ai
 version: 0.1.0
 author: devtiagoabreu

@@ -16,7 +16,7 @@
     },
     "category": {
       "type": "string",
-      "enum": ["code-review", "debugging", "architecture", "planning", "refactoring", "research", "review", "security", "performance", "documentation", "testing"]
+      "enum": ["ai", "architecture", "code-review", "debugging", "documentation", "performance", "planning", "refactoring", "research", "review", "security", "testing"]
     },
     "version": {
       "type": "string",

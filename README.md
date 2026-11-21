@@ -13,13 +13,15 @@ O **OpenCode Engineering Kit** é uma biblioteca open source de recursos reutili
 
 Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) e [The Hive Skill](https://github.com/beingaivanshoo/the-hive-skill), o kit é **simples (markdown puro), modular, portátil e agnóstico de modelo**.
 
+> **Status:** em evolução ativa. Diagnóstico e direção de execução em [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md).
+
 ### Estado atual
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 150 (em 42 categorias) |
-| Agents | 103 (personas em 38 categorias) |
-| Prompts | 10 (em 13 categorias) |
+| Skills | 150 (42 categorias) |
+| Agents | 103 (38 categorias) |
+| Prompts | 10 |
 | Templates | 4 |
 | Playbooks | 3 |
 | Recipes | 2 |
@@ -27,9 +29,11 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Bundles | 2 |
 | Composições | 2 |
 | Prompt chains | 2 |
+| Contexto | 17 arquivos |
 | Plugins de exemplo | 1 (`asset-linter`) |
-| Scripts de núcleo (core) | 37 |
-| Testes automatizados | 21 |
+| Suítes de teste | 25 shell + 3 CLI |
+
+> Contagens acima são snapshot de referência; a fonte técnica é `core/registry/manifest.json`. A geração automática de contagens entra no PR-02.
 
 ### Compatibilidade
 
@@ -42,6 +46,18 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 ---
 
+## Quick start (5 minutos)
+
+```bash
+cd /caminho/para/seu-projeto
+npx opencode-engineering-kit install
+npx opencode-engineering-kit status
+npx opencode-engineering-kit list --type skills
+npx opencode-engineering-kit search docker
+```
+
+Depois, reinicie o OpenCode. O kit fica em `.opencode/` e o `opencode.json` é mesclado (não sobrescrito).
+
 ## Instalação
 
 ### Pré-requisitos
@@ -49,7 +65,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 - **Git 2.0+** — para clonar e instalar via script
 - **Bash 4.0+** — para os scripts de instalação (Linux/macOS/WSL)
 - **Node.js 18+** — para instalar via CLI (`npx`)
-- **`tar`** disponível no PATH (usado pela CLI; Linux/macOS já trazem)
+- **`tar`** disponível no PATH (usado pela CLI; Linux/macOS já trazem; Git for Windows inclui)
 
 ---
 
@@ -77,11 +93,26 @@ seu-projeto/
 
 Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 
-#### Opções da CLI
+#### Comandos da CLI
+
+| Comando | Descrição |
+|---------|-----------|
+| `install` | Instala skills, agents, commands, context e assets no projeto (ou global com `--global`) |
+| `status` | Mostra onde o kit está instalado e se está ativo |
+| `start` | Reativa o kit (restaura wiring do `opencode.json`) |
+| `stop` | Desativa o kit (mantém arquivos, remove wiring do `opencode.json`) |
+| `list` | Lista assets disponíveis no checkout do kit |
+| `search` | Busca assets por palavra-chave em nome/descrição |
+| `doctor` | Verifica integridade do kit (schema, índices, lockfile, security scan, vault, testes opcionais) |
+| `upgrade` | Reinstala com `--force` |
+| `export` | Gera pacote exportável (ex.: `--format claude`) |
+
+#### Opções do `install`
 
 | Opção | Descrição |
 |-------|-----------|
 | `--target <dir>` | Diretório do projeto alvo (padrão: diretório atual) |
+| `--global` | Instala no config global do OpenCode (`~/.config/opencode/`) |
 | `--source <dir>` | Usa um checkout local do kit em vez de baixar do GitHub |
 | `--repo <repo>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Branch/tag do kit (padrão: `main`) |
@@ -89,8 +120,6 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 | `--force` | Sobrescreve arquivos existentes em `.opencode/` |
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
 | `--verbose` | Lista cada arquivo copiado |
-| `--version` | Mostra a versão |
-| `--help` | Ajuda |
 
 #### Exemplos de uso
 
@@ -111,6 +140,12 @@ npx opencode-engineering-kit install --dry-run
 npx opencode-engineering-kit status
 npx opencode-engineering-kit stop
 npx opencode-engineering-kit start
+
+# Descoberta e diagnóstico
+npx opencode-engineering-kit list --type skills
+npx opencode-engineering-kit search "docker kubernetes"
+npx opencode-engineering-kit doctor --fast
+npx opencode-engineering-kit upgrade --dry-run
 ```
 
 ---
@@ -154,6 +189,26 @@ cd opencode-engineering-kit
 ```
 
 O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
+
+---
+
+## Confiança e modelo de instalação
+
+- **O que a CLI faz:** copia assets para `.opencode/` e mescla `opencode.json` (`skills.paths`, `instructions`). Não apaga sua configuração existente.
+- **Auditoria antes de instalar:** use `--dry-run` e/ou `--source <checkout-local>` para inspecionar a origem. Rode `npx opencode-engineering-kit doctor --fast` no checkout do kit.
+- **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
+- **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05.
+- **Segurança:** reporte vulnerabilidades conforme [SECURITY.md](./SECURITY.md).
+
+## Core vs opcional/experimental
+
+| Área | Papel | Maturidade recomendada |
+|------|-------|------------------------|
+| `assets/skills`, `agents`, `commands`, `context` | Uso direto no projeto via CLI | Núcleo (caminho padrão) |
+| `cli/` | Instalação e lifecycle | Núcleo |
+| `core/quality`, `core/security`, `core/registry` | Validação, scan, metadados | Núcleo em endurecimento |
+| `core/plugin`, `core/marketplace`, `core/resolver`, `core/version` | Infra de plataforma | Opcional/avançado |
+| `marketplace-web/`, `plugins/` | Descoberta e extensões | Opcional/experimental |
 
 ---
 
@@ -446,6 +501,8 @@ Veja [SECURITY.md](./SECURITY.md) para políticas e como reportar vulnerabilidad
 **Inglês:** [User Guide](./docs/USER_GUIDE.md) · [Quick Reference](./docs/QUICK_REFERENCE.md) · [API Reference](./docs/API_REFERENCE.md) · [Plugin Guide](./docs/PLUGIN_GUIDE.md)
 
 **Português:** [Guia do Usuário](./docs/GUIA_USUARIO.md) · [Cartão de Referência](./docs/CARTAO_REFERENCIA.md)
+
+**Planejamento:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md)
 
 ## Licença
 

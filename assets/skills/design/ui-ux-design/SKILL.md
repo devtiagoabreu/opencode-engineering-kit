@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: ui-ux-design
-description: UI/UX and interface design principles for web apps. Use when creating, reviewing or auditing screens, layouts, tables, forms, dark mode, responsiveness, accessibility, or when users mention design, UX, layout, interface, frontend design, review my UI, accessibility, or visual hierarchy.
+description: "Apply UI/UX principles for web interfaces, layouts, accessibility, and responsive design."
 category: design
 version: 0.1.0
 author: devtiagoabreu

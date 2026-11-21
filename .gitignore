@@ -82,3 +82,5 @@ context/memory/*.db
 context/memory/*.db-*
 *.sqlite
 *.sqlite3
+# External reference repos (local research only)
+references/

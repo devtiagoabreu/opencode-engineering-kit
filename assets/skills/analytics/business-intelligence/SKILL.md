@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: business-intelligence
-description: "Design BI dashboards and analytics: KPIs, metrics, data modeling, ETL, charts and reports. Use when building dashboards, KPI cards, trend/geographic/ABC analysis, forecasting, reading spreadsheets (Google Sheets/Excel), data warehousing, or when users mention BI, dashboard, indicadores, métricas, relatório, gráfico, KPI or previsão de vendas."
+description: "Design BI dashboards, KPIs, data models, and reports for analytics and decision-making."
 category: analytics
 version: 0.1.0
 author: devtiagoabreu

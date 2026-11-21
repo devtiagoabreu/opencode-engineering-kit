@@ -16,7 +16,7 @@ compatible:
   - cursor
 requires:
   - A CRM with ticket and contact history
-  - Multichannel access: WhatsApp, email, phone, chat
+  - "Multichannel access: WhatsApp, email, phone, chat"
   - Defined SLAs per severity and support tier
 provides:
   - Pre-sales qualification and expectation-setting workflow

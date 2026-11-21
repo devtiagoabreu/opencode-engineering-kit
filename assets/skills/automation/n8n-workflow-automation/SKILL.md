@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: n8n-workflow-automation
-description: Build, debug and maintain n8n automation workflows. Use when creating or fixing n8n workflows, webhooks, integrations between apps (WhatsApp, CRM, sheets, HTTP APIs), scheduling, error handling in workflows, or when users mention n8n, workflow, webhook, node, trigger or automation.
+description: "Build and maintain n8n workflows for webhooks, integrations, scheduling, and error handling."
 category: automation
 version: 0.1.0
 author: devtiagoabreu

@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: design-system
-description: "Create and maintain design systems: tokens, components, documentation and versioning. Use when building or extending a design system, defining design tokens, colors, typography, spacing, dark mode, shadcn/ui or Radix component libraries, documenting components, or when users mention design system, tokens, component library, shadcn, Radix or design tokens."
+description: "Create design systems with tokens, components, documentation, theming, and versioning."
 category: design
 version: 0.1.0
 author: devtiagoabreu

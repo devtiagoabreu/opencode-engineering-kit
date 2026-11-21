@@ -5,7 +5,7 @@ provenance:
   license: MIT
   verified: 2026-08-08
 name: esp8266-development
-description: Develop firmware for ESP8266 (NodeMCU/Wemos D1) with Arduino core and ESP8266RTOS SDK. Use when building WiFi-connected sensor devices, IoT nodes, HTTP/MQTT clients on ESP8266, OTA updates, deep sleep, or when users mention ESP8266, NodeMCU, Wemos D1, ESP-01, IoT, WiFi firmware.
+description: "Build ESP8266 firmware for WiFi IoT devices, MQTT/HTTP clients, OTA, and deep sleep."
 category: embedded
 version: 0.1.0
 author: devtiagoabreu
