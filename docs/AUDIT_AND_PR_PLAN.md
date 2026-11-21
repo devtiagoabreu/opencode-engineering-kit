@@ -113,15 +113,38 @@ Local reference snapshot:
 4. **PR-06 + PR-07** — ecosystem and releases.
 5. **PR-08** — continuous curation.
 
-## PR-01 Checklist (next concrete cut)
+## Progress (updated 2026-11-21)
 
-- [ ] Update `README.md` and `cli/README.md` to document existing CLI commands.
-- [ ] Add a "5-minute quick start" with expected output.
-- [ ] Add "Trust model / Install safely" section (what gets copied, what gets merged, how to audit).
-- [ ] Add "Core vs Optional/Experimental" for `core/`, `marketplace-web/`, `plugins/`.
+### PR-01 - Audit baseline & docs truth
+- [x] README/CLI docs document existing CLI commands.
+- [x] 5-minute quick start added.
+- [x] Trust model / install safely section added.
+- [x] Core vs Optional/Experimental section added.
+- [x] Link to this audit added from README.
 - [ ] Fix encoding hygiene in docs; enforce UTF-8 in CI.
 - [ ] Generate asset counts from manifest/filesystem; remove manual drift.
-- [ ] Add links from docs index/readme to this audit.
+
+### PR-02 - Schema & asset validation CI
+- [x] `scripts/validate_assets.py` validates asset schemas/frontmatter and manifest drift.
+- [x] CI runs validation with `--check-manifest`.
+- [ ] Deeper checks: broken internal links, duplicates, provenance/maturity policy.
+
+### PR-03 - CLI doctor/product UX
+- [x] `doctor --target/--global` wiring checks.
+- [x] Install manifest v2 with file hashes; drift detection for modified/missing/extra.
+- [x] Structured recommendations in doctor JSON/human output.
+- [ ] Stable command exit/action contract docs and full remediation flow polish.
+
+### PR-04 - Profiles & curated sets
+- [x] `--profile` presets for curated install selection.
+- [x] Profiles filter skills/agents/commands/context.
+- [x] Profile matrix documented.
+- [ ] Default curated install UX and profile-aware `upgrade` messaging/tests.
+
+### Remaining high-value gaps
+- [ ] PR-05 trust baseline: provenance/maturity visible in list/search/install, stronger risk policy.
+- [ ] PR-07 release discipline: changelog, publish gate, checksums, updated actions.
+- [ ] Windows/CI portability smoke and bash-independent quality path.
 
 ## Definition of Done for This Direction
 

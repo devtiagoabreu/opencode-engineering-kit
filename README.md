@@ -27,11 +27,11 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Recipes | 2 |
 | Comandos | 4 |
 | Bundles | 2 |
-| Composições | 2 |
+| Composi??es | 2 |
 | Prompt chains | 2 |
 | Contexto | 17 arquivos |
 | Plugins de exemplo | 1 (`asset-linter`) |
-| Suítes de teste | 25 shell + 3 CLI |
+| Su?tes de teste | 25 shell + 3 CLI |
 
 > Contagens acima são snapshot de referência; a fonte técnica é `core/registry/manifest.json`. A geração automática de contagens entra no PR-02.
 

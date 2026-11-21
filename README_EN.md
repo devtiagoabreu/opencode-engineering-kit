@@ -141,6 +141,9 @@ Then **restart OpenCode** so the new configuration is loaded.
 # Install curated profile (less context noise)
 npx opencode-engineering-kit install --profile core
 
+# Upgrade reuses profile/only from .opencode/.kit-install.json when omitted
+npx opencode-engineering-kit upgrade
+
 # Install only skills and agents, forcing overwrite
 npx opencode-engineering-kit install --only skills,agents --force
 

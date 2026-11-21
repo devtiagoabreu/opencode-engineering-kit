@@ -337,6 +337,9 @@ export function main(argv) {
   if (recs.length > 0) {
     console.log("\nRecommended actions:");
     for (const r of recs) console.log(`  - [${r.code}] ${r.command} - ${r.reason}`);
+  } else if (failed.length > 0) {
+    console.log("\nRecommended actions:");
+    console.log("  - [inspect] Review failed checks above and rerun doctor --json for machine-readable output.");
   }
   console.log(`\n${failed.length === 0 ? "all checks passed" : `${failed.length} check(s) failed`}`);
   if (failed.length > 0) process.exitCode = 1;
