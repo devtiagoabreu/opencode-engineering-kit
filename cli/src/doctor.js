@@ -83,27 +83,47 @@ function wiringChecks(target, { global = false } = {}) {
   const root = global ? globalConfigDir() : path.resolve(target || process.cwd());
   const cfgPath = path.join(root, "opencode.json");
   const base = global ? root : path.join(root, ".opencode");
+  const scope = global ? "global" : "project";
   const installed = global
     ? fs.existsSync(path.join(root, "skills")) || fs.existsSync(path.join(root, "context"))
     : fs.existsSync(path.join(root, ".opencode"));
-  if (!installed) return [check(`${global ? "global" : "project"} install detected`, true, "not installed (skipped)")];
+  if (!installed) return [check(`${scope} install detected`, true, "not installed (skipped)")];
 
   const checks = [];
   const cfgExists = fs.existsSync(cfgPath);
-  checks.push(check(`${global ? "global" : "project"} opencode.json exists`, cfgExists, cfgExists ? path.relative(process.cwd(), cfgPath) || cfgPath : cfgPath));
+  checks.push(check(`${scope} opencode.json exists`, cfgExists, cfgExists ? path.relative(process.cwd(), cfgPath) || cfgPath : cfgPath));
   let cfg = null;
   if (cfgExists) {
-    try { cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")); checks.push(check(`${global ? "global" : "project"} opencode.json valid JSON`, true)); }
-    catch { checks.push(check(`${global ? "global" : "project"} opencode.json valid JSON`, false)); }
+    try { cfg = JSON.parse(fs.readFileSync(cfgPath, "utf8")); checks.push(check(`${scope} opencode.json valid JSON`, true)); }
+    catch (e) { checks.push(check(`${scope} opencode.json valid JSON`, false, `parse error: ${e.message}`)); }
   }
+
   const skillsPath = global ? path.join(root, "skills") : ".opencode/skills";
   const ctxPrefix = global ? path.join(root, "context") : ".opencode/context";
-  const hasSkills = !!cfg && (cfg.skills?.paths ?? []).includes(skillsPath);
-  const hasCtx = !!cfg && (cfg.instructions ?? []).some((i) => String(i).startsWith(ctxPrefix));
-  checks.push(check(`${global ? "global" : "project"} skills.paths wired`, hasSkills, skillsPath));
-  checks.push(check(`${global ? "global" : "project"} context instructions wired`, hasCtx, ctxPrefix));
-  checks.push(check(`${global ? "global" : "project"} skills dir present`, fs.existsSync(path.join(base, "skills")), path.join(base, "skills")));
-  checks.push(check(`${global ? "global" : "project"} context dir present`, fs.existsSync(path.join(base, "context")), path.join(base, "context")));
+  const skillPaths = cfg?.skills?.paths ?? [];
+  const instructions = cfg?.instructions ?? [];
+  const hasSkills = skillPaths.includes(skillsPath);
+  const kitCtx = instructions.filter((i) => String(i).startsWith(ctxPrefix));
+  checks.push(check(`${scope} skills.paths wired`, hasSkills, hasSkills ? skillsPath : `missing ${skillsPath}; run install or start`));
+  checks.push(check(`${scope} context instructions wired`, kitCtx.length > 0, kitCtx.length > 0 ? `${kitCtx.length} instruction(s)` : `missing ${ctxPrefix}/*; run install or start`));
+
+  const dupSkills = skillPaths.filter((p, i) => skillPaths.indexOf(p) !== i);
+  checks.push(check(`${scope} skills.paths no duplicates`, dupSkills.length === 0, dupSkills.length ? `duplicates: ${[...new Set(dupSkills)].join(", ")}` : "ok"));
+  const dupInst = instructions.filter((p, i) => instructions.indexOf(p) !== i);
+  checks.push(check(`${scope} instructions no duplicates`, dupInst.length === 0, dupInst.length ? `duplicates: ${[...new Set(dupInst)].slice(0,3).join(", ")}` : "ok"));
+
+  const missingInst = kitCtx.filter((i) => !fs.existsSync(path.resolve(root, i)));
+  checks.push(check(`${scope} context files exist`, missingInst.length === 0, missingInst.length ? `missing ${missingInst.length}: ${missingInst.slice(0,3).join(", ")}` : `${kitCtx.length} present`));
+
+  const skillsDir = path.join(base, "skills");
+  const ctxDir = path.join(base, "context");
+  checks.push(check(`${scope} skills dir present`, fs.existsSync(skillsDir), fs.existsSync(skillsDir) ? skillsDir : `missing ${skillsDir}`));
+  checks.push(check(`${scope} context dir present`, fs.existsSync(ctxDir), fs.existsSync(ctxDir) ? ctxDir : `missing ${ctxDir}`));
+
+  if (fs.existsSync(skillsDir)) {
+    const skillFiles = fs.readdirSync(skillsDir, { recursive: true }).filter((f) => String(f).replace(/\\/g, "/").endsWith("/SKILL.md") || String(f) === "SKILL.md");
+    checks.push(check(`${scope} installed skills detected`, skillFiles.length > 0, `${skillFiles.length} SKILL.md file(s)`));
+  }
   return checks;
 }
 
@@ -227,14 +247,19 @@ export function main(argv) {
   const failed = checks.filter((c) => !c.pass);
 
   if (args.json) {
-    console.log(JSON.stringify({ kitRoot, passed: failed.length === 0, checks }, null, 2));
+    console.log(JSON.stringify({ kitRoot, passed: failed.length === 0, failed: failed.length, checks }, null, 2));
+    if (failed.length > 0) process.exitCode = 1;
     return;
   }
 
-  console.log(`OpenCode Engineering Kit doctor — ${kitRoot}`);
+  console.log(`OpenCode Engineering Kit doctor - ${kitRoot}`);
   console.log(`skills: ${countSkills(kitRoot)}, agents: ${countAgents(kitRoot)}\n`);
   for (const c of checks) {
-    console.log(`  ${c.pass ? "✓" : "✗"} ${c.name} ${c.detail ? `(${c.detail})` : ""}`);
+    console.log(`  ${c.pass ? "[PASS]" : "[FAIL]"} ${c.name}${c.detail ? ` - ${c.detail}` : ""}`);
+  }
+  if (failed.length > 0) {
+    console.log("\nRecommended actions:");
+    for (const f of failed) console.log(`  - ${f.name}: ${f.detail || "inspect and fix"}`);
   }
   console.log(`\n${failed.length === 0 ? "all checks passed" : `${failed.length} check(s) failed`}`);
   if (failed.length > 0) process.exitCode = 1;
