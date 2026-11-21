@@ -1,0 +1,12 @@
+{
+  "name": "frontend",
+  "description": "Frontend/UI engineering profile",
+  "skills": [],
+  "skillCategories": [
+    "frontend",
+    "design",
+    "testing",
+    "security",
+    "performance"
+  ]
+}

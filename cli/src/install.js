@@ -27,6 +27,7 @@ Options:
   --repo <repo>     GitHub repo (owner/repo) or URL to fetch from (default: ${DEFAULT_REPO})
   --branch <name>   Git branch/tag of the kit (default: ${DEFAULT_BRANCH})
   --global          Install into the global OpenCode config (~/.config/opencode/)
+  --profile <name>  Install a curated profile from profiles/*.json (core, backend, frontend, devops, ai, brasil, full)
   --only <list>     Comma-separated subset: skills,agents,commands,context,assets
   --force           Overwrite existing files in .opencode/
   --dry-run         Print what would be done without touching the filesystem
@@ -71,7 +72,7 @@ function warn(msg) {
 }
 
 export function parseArgs(argv) {
-  const args = { target: process.cwd(), only: Object.keys(GROUPS), force: false, dryRun: false, verbose: false, global: false };
+  const args = { target: process.cwd(), only: Object.keys(GROUPS), force: false, dryRun: false, verbose: false, global: false, profile: null };
   const positional = [];
   for (let i = 0; i < argv.length; i++) {
     const a = argv[i];
@@ -82,6 +83,7 @@ export function parseArgs(argv) {
       case "--source": args.source = next(); break;
       case "--repo": args.repo = next(); break;
       case "--branch": args.branch = next(); break;
+      case "--profile": args.profile = next(); break;
       case "--only": args.only = String(next()).split(",").filter(Boolean); break;
       case "--global": args.global = true; break;
       case "--force": args.force = true; break;
@@ -124,6 +126,21 @@ function findKitRoot(dir) {
 function isSameOrSubPath(child, parent) {
   const rel = path.relative(parent, child);
   return rel === "" || (!rel.startsWith("..") && !path.isAbsolute(rel));
+}
+
+function loadProfile(source, name) {
+  if (!name) return null;
+  const p = path.join(source, "profiles", `${name}.json`);
+  if (!fs.existsSync(p)) throw new Error(`unknown profile "${name}" (expected profiles/${name}.json)`);
+  return JSON.parse(fs.readFileSync(p, "utf8"));
+}
+
+function skillSelectedByProfile(profile, category, skillName) {
+  if (!profile) return true;
+  if (profile.skills === "*" || profile.skillCategories === "*") return true;
+  const cats = new Set(profile.skillCategories || []);
+  const names = new Set(profile.skills || []);
+  return cats.has(category) || names.has(skillName);
 }
 
 function copyDir(src, dest, { force, dryRun, verbose }) {
@@ -181,12 +198,33 @@ function flattenAgentFiles(src, dest, { force, dryRun, verbose }) {
   return { created, skipped };
 }
 
-function copyGroupTo(source, destRoot, group, opts) {
+function copySkillsWithProfile(source, destRoot, opts, profile) {
+  const src = path.join(source, "assets/skills");
+  if (!fs.existsSync(src)) return { created: [], skipped: [] };
+  const created = []; const skipped = [];
+  for (const cat of fs.readdirSync(src, { withFileTypes: true })) {
+    if (!cat.isDirectory()) continue;
+    const catPath = path.join(src, cat.name);
+    for (const skill of fs.readdirSync(catPath, { withFileTypes: true })) {
+      if (!skill.isDirectory()) continue;
+      if (!skillSelectedByProfile(profile, cat.name, skill.name)) continue;
+      const sPath = path.join(catPath, skill.name);
+      const dPath = path.join(destRoot, "skills", cat.name, skill.name);
+      const r = copyDir(sPath, dPath, opts);
+      created.push(...r.created.map((f) => `${cat.name}/${skill.name}/${f}`));
+      skipped.push(...r.skipped.map((f) => `${cat.name}/${skill.name}/${f}`));
+    }
+  }
+  return { created, skipped };
+}
+
+function copyGroupTo(source, destRoot, group, opts, profile) {
   const src = path.join(source, group.from);
   if (!fs.existsSync(src)) {
     warn(`group "${group.to}" skipped: ${group.from} not found in kit`);
     return { created: [], skipped: [] };
   }
+  if (group.to === "skills" && profile) return copySkillsWithProfile(source, destRoot, opts, profile);
   const dest = path.join(destRoot, group.to);
   if (group.mode === "flatten") return flattenAgentFiles(src, dest, opts);
   return copyDir(src, dest, opts);
@@ -232,6 +270,8 @@ export async function install(args) {
   }
 
   const opts = { force: args.force, dryRun: args.dryRun, verbose: args.verbose };
+  const profile = loadProfile(source, args.profile);
+  if (profile) log(`profile: ${profile.name} — ${profile.description || ""}`);
   const summary = {};
   let totalCreated = 0;
   let totalSkipped = 0;
@@ -239,7 +279,7 @@ export async function install(args) {
   for (const name of Object.keys(GROUPS)) {
     if (!args.only.includes(name)) continue;
     const group = GROUPS[name];
-    const result = copyGroupTo(source, destRoot, group, opts);
+    const result = copyGroupTo(source, destRoot, group, opts, profile);
     summary[name] = result;
     totalCreated += result.created.length;
     totalSkipped += result.skipped.length;

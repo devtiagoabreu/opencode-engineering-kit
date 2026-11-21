@@ -1,0 +1,12 @@
+{
+  "name": "ai",
+  "description": "AI/LLM/data profile",
+  "skills": [],
+  "skillCategories": [
+    "ai",
+    "analytics",
+    "vision",
+    "tools",
+    "security"
+  ]
+}

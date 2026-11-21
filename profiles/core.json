@@ -1,0 +1,33 @@
+{
+  "name": "core",
+  "description": "Minimal curated core for general software engineering",
+  "skills": [
+    "tdd",
+    "verification-before-completion",
+    "writing-plans",
+    "executing-plans",
+    "brainstorming",
+    "code-review-checklist",
+    "git-workflow",
+    "refactoring-techniques",
+    "api-design",
+    "rest-api-design",
+    "database-design",
+    "unit-testing",
+    "integration-testing",
+    "e2e-testing",
+    "docker-best-practices",
+    "ci-cd-pipeline",
+    "secure-coding",
+    "owasp-top-10",
+    "python-best-practices",
+    "typescript-best-practices"
+  ],
+  "skillCategories": [
+    "code-review",
+    "documentation",
+    "git",
+    "projects",
+    "quality"
+  ]
+}

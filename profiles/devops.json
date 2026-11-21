@@ -1,0 +1,12 @@
+{
+  "name": "devops",
+  "description": "DevOps/platform profile",
+  "skills": [],
+  "skillCategories": [
+    "devops",
+    "cloud",
+    "security",
+    "testing",
+    "git"
+  ]
+}
