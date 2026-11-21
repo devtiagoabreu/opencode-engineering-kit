@@ -149,6 +149,7 @@ npx opencode-engineering-kit start
 npx opencode-engineering-kit list --type skills
 npx opencode-engineering-kit search "docker kubernetes"
 npx opencode-engineering-kit doctor --fast
+npx opencode-engineering-kit doctor --dir . --target . --fast
 npx opencode-engineering-kit upgrade --dry-run
 ```
 

@@ -104,7 +104,7 @@ Then **restart OpenCode** so the new configuration is loaded.
 | `stop` | Disable the kit (keep files, remove `opencode.json` wiring) |
 | `list` | List assets available in a kit checkout |
 | `search` | Search assets by keyword in name/description |
-| `doctor` | Check kit integrity (schema, indexes, lockfile, security scan, vault, optional tests) |
+| `doctor` | Check kit integrity and optionally installed wiring (`--target/--global`) |
 | `upgrade` | Reinstall with `--force` |
 | `export` | Generate an export package (e.g. `--format claude`) |
 
@@ -150,6 +150,7 @@ npx opencode-engineering-kit start
 npx opencode-engineering-kit list --type skills
 npx opencode-engineering-kit search "docker kubernetes"
 npx opencode-engineering-kit doctor --fast
+npx opencode-engineering-kit doctor --dir . --target . --fast
 npx opencode-engineering-kit upgrade --dry-run
 ```
 

@@ -42,7 +42,7 @@ Depois reinicie o OpenCode para a nova configuração ser carregada.
 | `start` / `stop` | Reativa/desativa o wiring no `opencode.json` sem apagar arquivos |
 | `list` | Lista assets (`--type skills|agents|prompts|templates`, `--json`) |
 | `search <q>` | Busca por nome/descrição (`--json`) |
-| `doctor` | Verifica integridade do checkout (`--fast`, `--json`) |
+| `doctor` | Verifica integridade do checkout e wiring instalado (`--target/--global`, `--fast`, `--json`) |
 | `upgrade` | Reinstala com `--force` (aceita opções de `install`) |
 | `export` | Exporta pacote (`--format claude`, `--out <dir>`) |
 
@@ -100,6 +100,7 @@ npx opencode-engineering-kit install --source /caminho/para/opencode-engineering
 npm test                          # roda os testes de integração
 node bin/opencode-engineering-kit.js install --source ../.. --dry-run
 node bin/opencode-engineering-kit.js doctor --dir ../.. --fast
+node bin/opencode-engineering-kit.js doctor --dir ../.. --target /path/to/project --fast
 ```
 
 ## Publicação

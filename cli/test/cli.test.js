@@ -58,6 +58,27 @@ test("doctor reports a healthy kit", () => {
   assert.ok(checks.some((c) => c.name === "asset schema/manifest validation"), "asset validation check present");
 });
 
+test("doctor checks target wiring when installed", () => {
+  fs.mkdirSync(path.join(target, ".opencode", "skills"), { recursive: true });
+  fs.mkdirSync(path.join(target, ".opencode", "context"), { recursive: true });
+  fs.writeFileSync(path.join(target, "opencode.json"), JSON.stringify({
+    skills: { paths: [".opencode/skills"] },
+    instructions: [".opencode/context/base.md"]
+  }, null, 2));
+  const checks = doctor(KIT_SOURCE, { fast: true, target });
+  assert.ok(checks.some((c) => c.name === "project skills.paths wired" && c.pass));
+  assert.ok(checks.some((c) => c.name === "project context instructions wired" && c.pass));
+});
+
+test("doctor reports missing target wiring", () => {
+  fs.mkdirSync(path.join(target, ".opencode", "skills"), { recursive: true });
+  fs.mkdirSync(path.join(target, ".opencode", "context"), { recursive: true });
+  fs.writeFileSync(path.join(target, "opencode.json"), JSON.stringify({ skills: { paths: [] }, instructions: [] }, null, 2));
+  const checks = doctor(KIT_SOURCE, { fast: true, target });
+  assert.ok(checks.some((c) => c.name === "project skills.paths wired" && !c.pass));
+  assert.ok(checks.some((c) => c.name === "project context instructions wired" && !c.pass));
+});
+
 test("export claude writes SKILL.md files and claude-md writes CLAUDE.md", () => {
   const claude = exportMain(["claude", "--target", target, "--dir", KIT_SOURCE]);
   assert.ok(claude.files.length > 100, "many skill files exported");
