@@ -129,7 +129,9 @@ Local reference snapshot:
 - [x] CI runs validation with `--check-manifest`.
 - [x] Added optional deeper checks: relative markdown link validation (`--check-links`) and provenance warnings (`--strict-provenance` to promote).
 - [x] Fixed broken relative asset links in agents/prompts/skills detected by link check.
-- [ ] Remaining: duplicate-content detection, explicit maturity/provenance policy enforcement, and link-check mode decision in CI (currently local/optional).
+- [x] Duplicate normalized-content warnings added to validator.
+- [x] CI runs link checks (`--check-links`) and README_EN count sync check.
+- [ ] Remaining: explicit maturity/provenance policy enforcement (warnings today; `--strict-provenance` opt-in), and policy for aspirational `docs/architecture/*` links.
 
 ### PR-03 - CLI doctor/product UX
 - [x] `doctor --target/--global` wiring checks.
