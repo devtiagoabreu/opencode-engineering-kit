@@ -109,10 +109,13 @@ def check_manifest(root: Path, errors, warnings):
         "agents": len([p for p in root.glob("assets/agents/**/*.md") if p.name.lower() != "readme.md"]),
         "prompts": len([p for p in root.glob("assets/prompts/**/*.md") if p.name.lower() != "readme.md"]),
         "templates": len([p for p in root.glob("assets/templates/*") if p.is_dir()]),
+        "commands": len([p for p in root.glob("assets/commands/*.md") if p.name.lower() != "readme.md"]),
         "context_files": len(list(root.glob("context/*.md"))),
     }
     for k, v in actual.items():
-        if counts.get(k) != v:
+        if k not in counts:
+            warnings.append(f"manifest.counts.{k}: missing (actual {v})")
+        elif counts.get(k) != v:
             errors.append(f"manifest.counts.{k}: expected {v}, got {counts.get(k)}")
 
     # index freshness

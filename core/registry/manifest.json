@@ -1,24 +1,25 @@
 {
   "schema_version": "1.0.0",
   "version": "0.1.0",
-  "commit": "1c0d187",
-  "generated": "2026-08-15T20:47:11Z",
+  "commit": "57241fc",
+  "generated": "2026-11-22T15:12:31Z",
   "counts": {
     "skills": 150,
     "agents": 103,
     "prompts": 10,
     "templates": 4,
+    "commands": 4,
     "context_files": 17,
     "pointer_skills": 3,
     "vault_entries": 3
   },
   "vault": [
     {
-      "skill": "repo-to-llm",
-      "vault_path": "tools/repo-to-llm",
-      "sha256": "b9813ddcc6274cb7679de8bc4e8549999b2447ff68ced0ccccc3be99975a4962",
-      "tokens_estimate": 828,
-      "bytes": 3311,
+      "skill": "skill-spector",
+      "vault_path": "security/skill-spector",
+      "sha256": "7bce1e1cb06badba7d5ec36c62c4343156d56abd0d72cc3b48ae73e2e4176f9b",
+      "tokens_estimate": 779,
+      "bytes": 3122,
       "curated": true,
       "content_format": "markdown"
     },
@@ -32,11 +33,11 @@
       "content_format": "markdown"
     },
     {
-      "skill": "skill-spector",
-      "vault_path": "security/skill-spector",
-      "sha256": "7bce1e1cb06badba7d5ec36c62c4343156d56abd0d72cc3b48ae73e2e4176f9b",
-      "tokens_estimate": 779,
-      "bytes": 3122,
+      "skill": "repo-to-llm",
+      "vault_path": "tools/repo-to-llm",
+      "sha256": "b9813ddcc6274cb7679de8bc4e8549999b2447ff68ced0ccccc3be99975a4962",
+      "tokens_estimate": 828,
+      "bytes": 3311,
       "curated": true,
       "content_format": "markdown"
     }
@@ -47,6 +48,6 @@
     "core/discovery/index/agents.txt": "ae3b5ea2ba89cae05b82c703db0fb0e3552746e56715946c8706e23589f26152",
     "core/registry/index/skills.txt": "55899f24205867b289c0163303504fc7d3f7f951fbbda749b4cdb880272032ce",
     "core/registry/index/agents.txt": "4d58ea96e7165e735a091c47139f4370f2c58ed102643422a46a465e1f9ed561",
-    "core/resolver/lockfile.json": "f8ad8b2168321dd47c9536229d9e38c51334e6cd60623d1c0d73cf0cbfec87c3"
+    "core/resolver/lockfile.json": "76b15ab9893ab847478823ca7353ddacffa068dad8b1cdb22558ee2f812d7a85"
   }
 }
