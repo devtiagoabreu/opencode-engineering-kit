@@ -20,8 +20,8 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 150 (42 categories) |
-| Agents | 103 (38 categories) |
+| Skills | 150 (41 categories) |
+| Agents | 103 (36 categories) |
 | Prompts | 10 |
 | Templates | 4 |
 | Playbooks | 3 |
@@ -30,7 +30,7 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 | Bundles | 2 |
 | Compositions | 2 |
 | Prompt chains | 2 |
-| Context files | 17 |
+| Context files | 17 files |
 | Example plugins | 1 (`asset-linter`) |
 | Test suites | 25 shell + 3 CLI |
 

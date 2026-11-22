@@ -26,23 +26,23 @@ def sync_readme(path: Path, manifest: dict, check: bool):
     orig = text
     c = manifest.get('counts', {})
     root = path.parent
-    # dynamic counts
     skill_cats = count_dirs(root, 'assets/skills')
     agent_cats = count_dirs(root, 'assets/agents')
+    is_pt = path.name == 'README.md'
     replacements = {
-        'Skills': f"{c.get('skills','?')} ({skill_cats} categorias)",
-        'Agents': f"{c.get('agents','?')} ({agent_cats} categorias)",
+        'Skills': f"{c.get('skills','?')} ({skill_cats} {'categorias' if is_pt else 'categories'})",
+        'Agents': f"{c.get('agents','?')} ({agent_cats} {'categorias' if is_pt else 'categories'})",
         'Prompts': str(c.get('prompts','?')),
         'Templates': str(c.get('templates','?')),
-        'Contexto': f"{c.get('context_files','?')} arquivos",
+        ('Contexto' if is_pt else 'Context files'): f"{c.get('context_files','?')} {'arquivos' if is_pt else 'files'}",
     }
     missing=[]
     for label, value in replacements.items():
         text, n = replace_row(text, label, value)
         if n == 0:
             missing.append(label)
-    # Playbooks/Recipes/Commands/Bundles/Composi??es/Prompt chains/Plugins/Tests are less central; sync commands if present
-    cmd_n, n = replace_row(text, 'Comandos', str(c.get('commands','?')))
+    cmd_label = 'Comandos' if is_pt else 'Commands'
+    cmd_n, n = replace_row(text, cmd_label, str(c.get('commands','?')))
     if n: text = cmd_n
     changed = text != orig
     if missing:
@@ -59,7 +59,7 @@ def main():
     root=Path(args.root).resolve()
     manifest=load_manifest(root)
     ok=True
-    for name in ['README.md']:
+    for name in ['README.md', 'README_EN.md']:
         p=root/name
         if not p.exists():
             print(f'WARN: {name} missing'); continue

@@ -68,7 +68,7 @@ jobs:
         run: python scripts/check_utf8.py .
 
       - name: Validate asset schemas and manifest
-        run: python scripts/validate_assets.py --root . --check-manifest
+        run: python scripts/validate_assets.py --root . --check-manifest --check-links
 
       - name: Check README counts synced from manifest
         run: python scripts/sync_readme_counts.py --root . --check

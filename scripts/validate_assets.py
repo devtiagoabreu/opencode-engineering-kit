@@ -188,6 +188,7 @@ def main():
     }
     assets = collect(root)
     seen_names = {}
+    seen_hashes = {}
     for kind, paths in assets.items():
         schema = schemas[kind]
         for p in paths:
@@ -199,6 +200,12 @@ def main():
                 continue
             if "\ufffd" in text:
                 errors.append(f"{rel}: contains Unicode replacement char (encoding damage)")
+            norm = re.sub(r"\s+", " ", text.strip()).lower()
+            h = __import__("hashlib").sha256(norm.encode("utf-8")).hexdigest()
+            if h in seen_hashes and seen_hashes[h] != rel:
+                warnings.append(f"{rel}: identical normalized content as {seen_hashes[h]}")
+            else:
+                seen_hashes[h] = rel
             if not text.startswith("---"):
                 if rel.startswith("assets/templates/"):
                     warnings.append(f"{rel}: template without frontmatter, schema checks skipped")
