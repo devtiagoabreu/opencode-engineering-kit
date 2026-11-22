@@ -118,6 +118,6 @@ END;
 
 ## References
 
-- [Oracle Database Skill](../../skills/database/oracle-database/SKILL.md)
+- ](../../../skills/database/oracle-database/SKILL.md)
 - [Oracle Database Documentation](https://docs.oracle.com/en/database/)
 - [RMAN Documentation](https://docs.oracle.com/en/database/oracle/oracle-database/19/bradv/)

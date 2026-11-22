@@ -116,6 +116,6 @@ values = NULL;
 
 ## References
 
-- [C Best Practices Skill](../../skills/languages/c-best-practices/SKILL.md)
+- ](../../../skills/languages/c-best-practices/SKILL.md)
 - [GCC Documentation](https://gcc.gnu.org/onlinedocs/)
 - [AddressSanitizer Documentation](https://clang.llvm.org/docs/AddressSanitizer.html)

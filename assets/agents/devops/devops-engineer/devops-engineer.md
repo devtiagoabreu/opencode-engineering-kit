@@ -161,5 +161,5 @@ CMD ["node", "dist/main.js"]
 
 ## References
 
-- [Docker Best Practices](../skills/devops/docker-best-practices/SKILL.md)
+- ](../../../skills/devops/docker-best-practices/SKILL.md)
 - [Site Reliability Engineering](https://sre.google/sre-book/table-of-contents/)

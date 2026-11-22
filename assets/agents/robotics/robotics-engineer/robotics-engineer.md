@@ -126,7 +126,7 @@ class PID:
 
 ## References
 
-- [Robotics skill](../skills/robotics/robotics/SKILL.md)
-- [Arduino skill](../skills/embedded/arduino-development/SKILL.md)
-- [Raspberry Pi skill](../skills/embedded/raspberry-pi/SKILL.md)
+- ](../../../skills/robotics/robotics/SKILL.md)
+- ](../../../skills/embedded/arduino-development/SKILL.md)
+- ](../../../skills/embedded/raspberry-pi/SKILL.md)
 - [ROS 2 Docs](https://docs.ros.org/)

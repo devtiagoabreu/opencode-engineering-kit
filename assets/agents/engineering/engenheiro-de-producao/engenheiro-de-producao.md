@@ -160,7 +160,7 @@ plt.savefig("yamazumi.png")
 
 ## Referências
 
-- [Skill de Planejamento de Produção](../skills/engineering/production-planning/SKILL.md)
+- ](../../../skills/engineering/production-planning/SKILL.md)
 - [Lean Enterprise Institute](https://www.lean.org/)
 - [OEE Foundation](https://www.oee.com/)
 - [Teoria das Restrições - TOCICO](https://www.tocico.org/)

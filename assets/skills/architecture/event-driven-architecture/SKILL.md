@@ -135,7 +135,7 @@ bus.subscribe("detection.created", lambda e: persist_detection(e))
 
 - [Vision Platform VP-006 Event Bus](docs/architecture/006-event-bus.md)
 - [asyncio documentation](https://docs.python.org/3/library/asyncio.html)
-- [Plugin System skill](assets/skills/architecture/plugin-system/SKILL.md)
+- ](../plugin-system/SKILL.md)
 
 ## Notes
 

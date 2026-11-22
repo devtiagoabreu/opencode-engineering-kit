@@ -134,8 +134,8 @@ pytest tests/test_users.py
 
 ## References
 
-- [Code Review Checklist](../skills/code-review/code-review-checklist/SKILL.md)
-- [Secure Coding](../skills/security/secure-coding/SKILL.md)
-- [OWASP Top 10](../skills/security/owasp-top-10/SKILL.md)
+- ](../../skills/code-review/code-review-checklist/SKILL.md)
+- ](../../skills/security/secure-coding/SKILL.md)
+- ](../../skills/security/owasp-top-10/SKILL.md)
 - [Google - Code Review Developer Guide](https://google.github.io/eng-practices/review/)
 - [Conventional Comments](https://conventionalcomments.org/)

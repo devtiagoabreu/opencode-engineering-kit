@@ -142,6 +142,6 @@ CREATE INDEX idx_usuarios_email ON usuarios(email);
 
 ## References
 
-- [API Design Guide](../skills/backend/api-design/SKILL.md)
+- ](../../../skills/backend/api-design/SKILL.md)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)

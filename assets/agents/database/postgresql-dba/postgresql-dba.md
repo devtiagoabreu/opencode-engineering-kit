@@ -112,6 +112,6 @@ WHERE status = 'PENDING';
 
 ## References
 
-- [PostgreSQL Database Skill](../../skills/database/postgresql-database/SKILL.md)
+- ](../../../skills/database/postgresql-database/SKILL.md)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)
 - [PostgreSQL Wiki](https://wiki.postgresql.org/)

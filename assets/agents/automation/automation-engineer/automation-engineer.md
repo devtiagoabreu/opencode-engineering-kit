@@ -124,7 +124,7 @@ resp.raise_for_status()
 
 ## References
 
-- [n8n skill](../skills/automation/n8n-workflow-automation/SKILL.md)
-- [Evolution API skill](../skills/ai/evolution-api/SKILL.md)
+- ](../../../skills/automation/n8n-workflow-automation/SKILL.md)
+- ](../../../skills/ai/evolution-api/SKILL.md)
 - [n8n Docs](https://docs.n8n.io/)
 - [Evolution API Docs](https://doc.evolution-api.com/)

@@ -134,6 +134,6 @@ if (password_verify($inputPassword, $user['password_hash'])) {
 
 ## References
 
-- [PHP Best Practices Skill](../../skills/languages/php-best-practices/SKILL.md)
+- ](../../../skills/languages/php-best-practices/SKILL.md)
 - [PHP Manual](https://www.php.net/manual/)
 - [PSR Standards](https://www.php-fig.org/psr/)

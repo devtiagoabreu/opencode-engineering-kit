@@ -162,7 +162,7 @@ function relatorioDiario() {
 
 ## Referências
 
-- [Skill de Google Workspace Analytics](../skills/web/google-workspace-analytics/SKILL.md)
+- ](../../../skills/web/google-workspace-analytics/SKILL.md)
 - [Apps Script Docs](https://developers.google.com/apps-script)
 - [Google Sheets Functions](https://support.google.com/docs/table/25273)
 - [Analytics Data API](https://developers.google.com/analytics/devguides/reporting/data/v1)

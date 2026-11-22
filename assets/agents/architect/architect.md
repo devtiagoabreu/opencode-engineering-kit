@@ -135,8 +135,8 @@ Python + FastAPI for CRUD and reporting services.
 
 ## References
 
-- [API Design Guide](../skills/backend/api-design/SKILL.md)
-- [Database Design](../skills/backend/database-design/SKILL.md)
-- [Docker Best Practices](../skills/devops/docker-best-practices/SKILL.md)
+- ](../../skills/backend/api-design/SKILL.md)
+- ](../../skills/backend/database-design/SKILL.md)
+- ](../../skills/devops/docker-best-practices/SKILL.md)
 - [The Architecture of Open Source Applications](https://aosabook.org/)
 - [Martin Fowler - Patterns of Enterprise Application Architecture](https://martinfowler.com/eaaCatalog/)

@@ -127,6 +127,6 @@ export async function GET(request) {
 
 ## References
 
-- [Next.js Development Skill](../../skills/frontend/nextjs-development/SKILL.md)
+- ](../../../skills/frontend/nextjs-development/SKILL.md)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Vercel Documentation](https://vercel.com/docs)

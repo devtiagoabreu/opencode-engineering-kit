@@ -120,7 +120,7 @@ raise RuntimeError("no provider available")
 
 ## References
 
-- [RAG skill](../skills/ai/rag-llm/SKILL.md)
-- [LLM Multi-Provider skill](../skills/ai/llm-multi-provider/SKILL.md)
-- [Evolution API skill](../skills/ai/evolution-api/SKILL.md)
+- ](../../../skills/ai/rag-llm/SKILL.md)
+- ](../../../skills/ai/llm-multi-provider/SKILL.md)
+- ](../../../skills/ai/evolution-api/SKILL.md)
 - [Hugging Face](https://huggingface.co/)

@@ -92,6 +92,6 @@ better than semantic, and how should we fuse and rerank?
 
 ## References
 
-- [RAG skill](../skills/ai/rag-llm/SKILL.md)
+- ](../../skills/ai/rag-llm/SKILL.md)
 - [pgvector](https://github.com/pgvector/pgvector)
 - [LlamaIndex](https://docs.llamaindex.ai/)

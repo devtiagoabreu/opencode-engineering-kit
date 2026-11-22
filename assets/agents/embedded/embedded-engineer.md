@@ -143,7 +143,7 @@ void sensor_task(void *arg) {
 
 ## References
 
-- [Secure Coding](../skills/security/secure-coding/SKILL.md)
-- [Git Workflow](../skills/git/git-workflow/SKILL.md)
+- ](../../skills/security/secure-coding/SKILL.md)
+- ](../../skills/git/git-workflow/SKILL.md)
 - [FreeRTOS Documentation](https://www.freertos.org/Documentation/02-Kernel/01-Kernel-user-guide/00-Index)
 - [Espressif ESP-IDF Programming Guide](https://docs.espressif.com/projects/esp-idf/en/latest/esp32/)

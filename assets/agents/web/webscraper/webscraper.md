@@ -170,7 +170,7 @@ print(len(linhas), "linhas coletadas")
 
 ## Referências
 
-- [Skill de Web Scraping](../skills/web/web-scraping/SKILL.md)
+- ](../../../skills/web/web-scraping/SKILL.md)
 - [Beautiful Soup Docs](https://www.crummy.com/software/BeautifulSoup/bs4/doc/)
 - [Playwright Python](https://playwright.dev/python/)
 - [robots.txt - padrão](https://www.rfc-editor.org/rfc/rfc9309)

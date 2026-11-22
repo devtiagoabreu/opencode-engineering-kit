@@ -120,6 +120,6 @@ public class CustomerService(ICustomerRepository repo) : ICustomerService
 
 ## References
 
-- [C# Best Practices Skill](../../skills/languages/csharp-best-practices/SKILL.md)
+- ](../../../skills/languages/csharp-best-practices/SKILL.md)
 - [.NET Documentation](https://learn.microsoft.com/dotnet/)
 - [ASP.NET Core Documentation](https://learn.microsoft.com/aspnet/core)

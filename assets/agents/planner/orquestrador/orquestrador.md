@@ -172,6 +172,6 @@ Criar um app que gere planos de aula e exercícios de matemática (BNCC).
 
 ## Referências
 
-- [OpenCode Engineering Kit — Contexto e proveniência](../context/provenance.md)
-- [Catálogo de personas](../context/personas.md)
-- [Registro de atividades](../context/HISTORY.md)
+- ](../../../../context/provenance.md)
+- ](../../../../context/personas.md)
+- ](../../../../context/HISTORY.md)

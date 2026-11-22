@@ -149,7 +149,7 @@ await manager.initialize_all(load_plugin_configs())
 - [Vision Platform VP-003 Plugin System](docs/architecture/003-plugin-system.md)
 - [Vision Platform VP-012 Plugin SDK](docs/architecture/012-plugin-sdk.md)
 - [Python ABC](https://docs.python.org/3/library/abc.html)
-- [Event Bus skill](assets/skills/architecture/event-driven-architecture/SKILL.md)
+- ](../event-driven-architecture/SKILL.md)
 
 ## Notes
 

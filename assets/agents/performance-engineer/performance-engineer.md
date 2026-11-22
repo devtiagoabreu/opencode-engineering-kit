@@ -137,8 +137,8 @@ EOF
 
 ## References
 
-- [Performance Skills](../skills/frontend/performance/SKILL.md)
-- [Monitoring & Observability](../skills/devops/monitoring-observability/SKILL.md)
-- [Caching Strategies](../skills/backend/caching-strategies/SKILL.md)
+- ](../../skills/frontend/performance/SKILL.md)
+- ](../../skills/devops/monitoring-observability/SKILL.md)
+- ](../../skills/backend/caching-strategies/SKILL.md)
 - [k6 Documentation](https://grafana.com/docs/k6/latest/)
 - [Google - Web Performance Guidelines](https://web.dev/learn/performance)

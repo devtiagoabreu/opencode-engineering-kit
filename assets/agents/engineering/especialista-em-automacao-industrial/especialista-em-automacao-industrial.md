@@ -171,7 +171,7 @@ opc.disconnect()
 
 ## Referências
 
-- [Skill de Automação Industrial](../skills/engineering/industrial-automation/SKILL.md)
+- ](../../../skills/engineering/industrial-automation/SKILL.md)
 - [IEC 61131-3 - PLCopen](https://plcopen.org/)
 - [OPC-UA Foundation](https://opcfoundation.org/)
 - [Pymodbus Docs](https://pymodbus.readthedocs.io/)

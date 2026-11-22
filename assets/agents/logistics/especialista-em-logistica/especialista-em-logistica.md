@@ -167,7 +167,7 @@ print(f"Distância total: {distancia:.1f} km")
 
 ## Referências
 
-- [Skill de Gestão da Cadeia de Suprimentos](../skills/logistics/supply-chain-management/SKILL.md)
+- ](../../../skills/logistics/supply-chain-management/SKILL.md)
 - [TOC - Teoria das Restrições](https://www.tocico.org/)
 - [Lean Supply Chain](https://www.lean.org/lexicon-terms/supply-chain/)
 - [Fundamentos de Roteirização - OR-Tools](https://developers.google.com/optimization/routing)

@@ -173,7 +173,7 @@ def step(x, y, theta, v, w, dt):
 
 ## Referências
 
-- [Skill de Sistemas Mecatrônicos](../skills/engineering/mechatronics-systems/SKILL.md)
+- ](../../../skills/engineering/mechatronics-systems/SKILL.md)
 - [Arduino Docs](https://docs.arduino.cc/)
 - [SciPy Control](https://python-control.readthedocs.io/)
 - [ISO 13849 Segurança de Máquinas](https://www.iso.org/standard/73483.html)

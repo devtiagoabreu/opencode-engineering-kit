@@ -115,6 +115,6 @@ type
 
 ## References
 
-- [Delphi Best Practices Skill](../../skills/languages/delphi-best-practices/SKILL.md)
+- ](../../../skills/languages/delphi-best-practices/SKILL.md)
 - [RAD Studio Documentation](https://docwiki.embarcadero.com/)
 - [FireDAC Documentation](https://docwiki.embarcadero.com/RADStudio/FireDAC)

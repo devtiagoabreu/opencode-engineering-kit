@@ -125,6 +125,6 @@ std::optional<int> find(const std::vector<int>& v, int target)
 
 ## References
 
-- [C++ Best Practices Skill](../../skills/languages/cpp-best-practices/SKILL.md)
+- ](../../../skills/languages/cpp-best-practices/SKILL.md)
 - [cppreference.com](https://en.cppreference.com/)
 - [GoogleTest Documentation](https://google.github.io/googletest/)

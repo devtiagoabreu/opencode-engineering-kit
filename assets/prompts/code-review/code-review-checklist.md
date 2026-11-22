@@ -83,5 +83,5 @@ Analyze the code focusing specifically on performance:
 
 ## References
 
-- [Code Review Checklist](../skills/code-review/code-review-checklist/SKILL.md)
+- ](../../skills/code-review/code-review-checklist/SKILL.md)
 - [Google Code Review Guide](https://google.github.io/eng-practices/review/)

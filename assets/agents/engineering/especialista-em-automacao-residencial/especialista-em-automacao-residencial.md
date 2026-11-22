@@ -182,7 +182,7 @@ switch:
 
 ## Referências
 
-- [Skill de Automação Residencial](../skills/engineering/home-automation/SKILL.md)
+- ](../../../skills/engineering/home-automation/SKILL.md)
 - [Home Assistant Docs](https://www.home-assistant.io/docs/)
 - [ESPHome](https://esphome.io/)
 - [Zigbee2MQTT](https://www.zigbee2mqtt.io/)

@@ -118,6 +118,6 @@ export function formatBytes(bytes, { precision = 2 } = {}) {
 
 ## References
 
-- [JavaScript Best Practices](../../skills/languages/javascript-best-practices/SKILL.md)
+- ](../../../skills/languages/javascript-best-practices/SKILL.md)
 - [MDN Web Docs](https://developer.mozilla.org/)
 - [Node.js Documentation](https://nodejs.org/docs/)

@@ -113,7 +113,7 @@ print("macro-F1:", f1_score(y_test, y_pred, average="macro"))
 
 ## References
 
-- [Deep Learning skill](../skills/ai/deep-learning/SKILL.md)
-- [Python Best Practices skill](../skills/languages/python-best-practices/SKILL.md)
-- [Business Intelligence skill](../skills/analytics/business-intelligence/SKILL.md)
+- ](../../../skills/ai/deep-learning/SKILL.md)
+- ](../../../skills/languages/python-best-practices/SKILL.md)
+- ](../../../skills/analytics/business-intelligence/SKILL.md)
 - [scikit-learn](https://scikit-learn.org/)

@@ -124,6 +124,6 @@ END;
 
 ## References
 
-- [SQL Server Database Skill](../../skills/database/sql-server-database/SKILL.md)
+- ](../../../skills/database/sql-server-database/SKILL.md)
 - [SQL Server Documentation](https://learn.microsoft.com/sql/)
 - [Azure SQL Documentation](https://learn.microsoft.com/azure/azure-sql/)

@@ -133,7 +133,7 @@ print(f"Detected {len(outputs[0])} candidate boxes")
 
 ## References
 
-- [Python Testing](../skills/testing/python-testing/SKILL.md)
-- [Secure Coding](../skills/security/secure-coding/SKILL.md)
+- ](../../skills/testing/python-testing/SKILL.md)
+- ](../../skills/security/secure-coding/SKILL.md)
 - [OpenCV Documentation](https://docs.opencv.org/)
 - [Ultralytics YOLO Documentation](https://docs.ultralytics.com/)

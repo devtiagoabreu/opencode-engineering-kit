@@ -125,7 +125,7 @@ WHERE source_key = :key
 
 ## References
 
-- [Business Intelligence skill](../skills/analytics/business-intelligence/SKILL.md)
-- [UI/UX Design skill](../skills/design/ui-ux-design/SKILL.md)
+- ](../../../skills/analytics/business-intelligence/SKILL.md)
+- ](../../../skills/design/ui-ux-design/SKILL.md)
 - [Recharts](https://recharts.org/)
 - [Metabase](https://www.metabase.com/)
