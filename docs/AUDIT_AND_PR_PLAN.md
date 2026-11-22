@@ -133,13 +133,15 @@ Local reference snapshot:
 - [x] `doctor --target/--global` wiring checks.
 - [x] Install manifest v2 with file hashes; drift detection for modified/missing/extra.
 - [x] Structured recommendations in doctor JSON/human output.
-- [ ] Stable command exit/action contract docs and full remediation flow polish.
+- [x] Stable `doctor --json` contract documented (checks[].code, recommendations[]) and covered by CLI tests.
+- [ ] Full remediation flow polish (guided fix/apply mode).
 
 ### PR-04 - Profiles & curated sets
 - [x] `--profile` presets for curated install selection.
 - [x] Profiles filter skills/agents/commands/context.
 - [x] Profile matrix documented.
-- [ ] Default curated install UX and profile-aware `upgrade` messaging/tests.
+- [x] `upgrade` reuses manifest profile/only when flags omitted; tests cover explicit override and global scope.
+- [ ] Default curated install UX and profile-aware upgrade messaging.
 
 ### Remaining high-value gaps
 - [ ] PR-05 trust baseline: provenance/maturity visible in list/search/install, stronger risk policy.

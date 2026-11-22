@@ -84,3 +84,44 @@ test("profile limits installed assets", async () => {
   assert.equal(manifest.kit.profile, "core");
   assert.deepEqual(manifest.only, ["skills", "agents", "commands", "context"]);
 });
+
+test("upgrade reuses manifest profile and only when flags omitted", async () => {
+  await install({ target, source: KIT_SOURCE, only: ["skills", "context"], profile: "core", force: false, dryRun: false, verbose: false });
+  const before = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.equal(before.kit.profile, "core");
+  assert.deepEqual(before.only, ["skills", "context"]);
+
+  const { main: upgradeMain } = await import("../src/upgrade.js");
+  await upgradeMain(["--target", target, "--source", KIT_SOURCE]);
+  const after = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.equal(after.kit.profile, "core");
+  assert.deepEqual(after.only, ["skills", "context"]);
+  const cfg = JSON.parse(fs.readFileSync(path.join(target, "opencode.json"), "utf8"));
+  assert.ok(cfg.instructions.every((i) => !i.includes("HISTORY.md")), "upgrade kept curated context selection");
+});
+
+test("upgrade explicit flags override manifest profile/only", async () => {
+  await install({ target, source: KIT_SOURCE, only: ["skills", "context"], profile: "core", force: false, dryRun: false, verbose: false });
+  const { main: upgradeMain } = await import("../src/upgrade.js");
+  await upgradeMain(["--target", target, "--source", KIT_SOURCE, "--profile", "full", "--only", "skills"]);
+  const after = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.equal(after.kit.profile, "full");
+  assert.deepEqual(after.only, ["skills"]);
+});
+
+test("upgrade reuses manifest for global install", async () => {
+  const globalDir = path.join(tmp, "global-config-upgrade");
+  const prev = process.env.KIT_GLOBAL_DIR;
+  process.env.KIT_GLOBAL_DIR = globalDir;
+  try {
+    await install({ target, source: KIT_SOURCE, only: ["skills", "context"], profile: "core", force: false, dryRun: false, verbose: false, global: true });
+    const { main: upgradeMain } = await import("../src/upgrade.js");
+    await upgradeMain(["--global", "--source", KIT_SOURCE]);
+    const manifest = JSON.parse(fs.readFileSync(path.join(globalDir, ".kit-install.json"), "utf8"));
+    assert.equal(manifest.kit.profile, "core");
+    assert.deepEqual(manifest.only, ["skills", "context"]);
+  } finally {
+    if (prev === undefined) delete process.env.KIT_GLOBAL_DIR;
+    else process.env.KIT_GLOBAL_DIR = prev;
+  }
+});

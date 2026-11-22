@@ -43,7 +43,7 @@ Depois reinicie o OpenCode para a nova configuração ser carregada.
 | `list` | Lista assets (`--type skills|agents|prompts|templates`, `--json`) |
 | `search <q>` | Busca por nome/descrição (`--json`) |
 | `doctor` | Verifica integridade do checkout e wiring instalado (`--target/--global`, `--fast`, `--json`) |
-| `upgrade` | Reinstala com `--force` (aceita opções de `install`) |
+| `upgrade` | Reinstala com `--force`; quando `.opencode/.kit-install.json` existe e `--profile/--only` n?o s?o passados, reutiliza sele??o gravada |
 | `export` | Exporta pacote (`--format claude`, `--out <dir>`) |
 
 ## Opções do `install`
@@ -105,12 +105,33 @@ npx opencode-engineering-kit install --source /caminho/para/opencode-engineering
 - Node.js 18+ (para `fetch`)
 - `tar` disponível no PATH (Linux/macOS já têm; Windows 10+ e Git for Windows também)
 
-## Confiança
+## Confian?a
 
-- Use `--dry-run` para auditar mudanças antes de aplicar.
-- Use `--source <checkout-local>` para instalar a partir de código inspecionado.
-- `doctor` valida schema, allowlist, índices, lockfile, skill scan e vault (e testes com `--fast` desativado).
-- `stop/start` só altera o wiring do `opencode.json`.
+- Use `--dry-run` para auditar mudan?as antes de aplicar.
+- Use `--source <checkout-local>` para instalar a partir de c?digo inspecionado.
+- `doctor` valida schema, allowlist, ?ndices, lockfile, skill scan e vault (e testes com `--fast` desativado).
+- `stop/start` s? altera o wiring do `opencode.json`.
+
+## Contrato do `doctor --json`
+
+Sa?da est?vel para automa??o:
+
+```json
+{
+  "kitRoot": "/abs/path/to/kit",
+  "passed": false,
+  "failed": 2,
+  "checks": [
+    { "code": "config.skills_paths.wired", "name": "project skills.paths wired", "pass": false, "detail": "..." }
+  ],
+  "recommendations": [
+    { "code": "restore-wiring", "command": "opencode-engineering-kit start --target ...", "reason": "..." }
+  ]
+}
+```
+
+- `checks[].code`: identificador est?vel para CI/automa??es.
+- `recommendations[]`: a??es acion?veis; pode estar vazio quando n?o h? remedia??o autom?tica.
 
 ## Desenvolvimento
 
