@@ -121,13 +121,15 @@ Local reference snapshot:
 - [x] Trust model / install safely section added.
 - [x] Core vs Optional/Experimental section added.
 - [x] Link to this audit added from README.
-- [ ] Fix encoding hygiene in docs; enforce UTF-8 in CI.
-- [ ] Generate asset counts from manifest/filesystem; remove manual drift.
+- [x] UTF-8 encoding check added (`scripts/check_utf8.py`) and enforced in CI; obvious README/CLI mojibake fixed.
+- [x] README asset counts synced from `core/registry/manifest.json` via `scripts/sync_readme_counts.py --root . --check` (CI-enforced).
 
 ### PR-02 - Schema & asset validation CI
 - [x] `scripts/validate_assets.py` validates asset schemas/frontmatter and manifest drift.
 - [x] CI runs validation with `--check-manifest`.
-- [ ] Deeper checks: broken internal links, duplicates, provenance/maturity policy.
+- [x] Added optional deeper checks: relative markdown link validation (`--check-links`) and provenance warnings (`--strict-provenance` to promote).
+- [x] Fixed broken relative asset links in agents/prompts/skills detected by link check.
+- [ ] Remaining: duplicate-content detection, explicit maturity/provenance policy enforcement, and link-check mode decision in CI (currently local/optional).
 
 ### PR-03 - CLI doctor/product UX
 - [x] `doctor --target/--global` wiring checks.
