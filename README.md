@@ -19,8 +19,8 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 150 (42 categorias) |
-| Agents | 103 (38 categorias) |
+| Skills | 150 (41 categorias) |
+| Agents | 103 (36 categorias) |
 | Prompts | 10 |
 | Templates | 4 |
 | Playbooks | 3 |
@@ -33,7 +33,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Plugins de exemplo | 1 (`asset-linter`) |
 | Su?tes de teste | 25 shell + 3 CLI |
 
-> Contagens acima são snapshot de referência; a fonte técnica é `core/registry/manifest.json`. A geração automática de contagens entra no PR-02.
+> Contagens sincronizadas de `core/registry/manifest.json` via `python scripts/sync_readme_counts.py --root .` (verificado em CI).
 
 ### Compatibilidade
 

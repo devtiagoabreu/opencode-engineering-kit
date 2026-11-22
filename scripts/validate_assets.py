@@ -125,10 +125,56 @@ def check_manifest(root: Path, errors, warnings):
         if len(lines) != actual["skills"]:
             errors.append(f"core/discovery/index/skills.txt: {len(lines)} entries, expected {actual['skills']}")
 
+LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
+
+def check_links(text: str, path: Path, root: Path, errors, warnings):
+    for m in LINK_RE.finditer(text):
+        target = m.group(1).strip()
+        if not target or target.startswith(('http://','https://','mailto:','#','data:')):
+            continue
+        target = target.split('#',1)[0]
+        if not target:
+            continue
+        # ignore templated/example links
+        if '{{' in target or '}}' in target or '<' in target or '>' in target:
+            continue
+        p = (path.parent / target).resolve()
+        try:
+            p.relative_to(root)
+        except Exception:
+            # allow links within repo root resolved differently? try root-relative
+            p2 = (root / target.lstrip('/')).resolve()
+            if p2.exists():
+                continue
+        if not p.exists():
+            rel = path.relative_to(root).as_posix()
+            # Known aspirational cross-repo docs referenced by some skills
+            if target.startswith('docs/architecture/'):
+                warnings.append(f"{rel}: unresolved architecture doc link: {target}")
+            else:
+                errors.append(f"{rel}: broken link: {target}")
+
+
+def check_provenance(fm: dict, rel: str, kind: str, warnings):
+    prov = fm.get('provenance')
+    if kind not in ('skills','agents'):
+        return
+    if prov is None:
+        warnings.append(f"{rel}: missing provenance metadata")
+        return
+    if isinstance(prov, dict):
+        if not prov.get('source'):
+            warnings.append(f"{rel}: provenance.source missing")
+        if prov.get('verified') and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(prov.get('verified'))):
+            warnings.append(f"{rel}: provenance.verified should be YYYY-MM-DD")
+
+
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=str(ROOT_DEFAULT))
     ap.add_argument("--check-manifest", action="store_true")
+    ap.add_argument("--check-links", action="store_true", help="validate relative markdown links in assets")
+    ap.add_argument("--strict-provenance", action="store_true", help="treat missing provenance as error")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
     root = Path(args.root).resolve()
@@ -178,6 +224,14 @@ def main():
             desc = fm.get("description","")
             if isinstance(desc,str) and len(desc.strip()) < 10:
                 errors.append(f"{rel}: description too short")
+            check_provenance(fm, rel, kind, warnings)
+            if args.check_links and p.suffix.lower() == '.md':
+                check_links(text, p, root, errors, warnings)
+    if args.strict_provenance:
+        promote = [w for w in warnings if 'provenance' in w]
+        for w in promote:
+            errors.append(w.replace('missing provenance metadata', 'missing provenance metadata (strict)'))
+        warnings = [w for w in warnings if w not in promote]
     if args.check_manifest:
         check_manifest(root, errors, warnings)
 
