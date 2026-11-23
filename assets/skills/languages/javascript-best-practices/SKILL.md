@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: javascript-best-practices
 description: JavaScript best practices covering modern ES2015+ syntax, modules, async patterns, and tooling
 category: languages

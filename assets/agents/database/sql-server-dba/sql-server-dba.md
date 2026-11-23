@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: sql-server-dba
 description: SQL Server Database Administrator specialized in T-SQL, indexing, and query performance
 version: 0.1.0

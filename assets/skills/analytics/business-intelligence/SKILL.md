@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: business-intelligence
 description: "Design BI dashboards, KPIs, data models, and reports for analytics and decision-making."
 category: analytics

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: oracle-database
 description: Oracle Database best practices covering SQL tuning, PL/SQL, schema design, and administration
 category: database

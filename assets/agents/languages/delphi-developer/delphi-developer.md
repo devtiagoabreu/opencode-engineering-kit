@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: delphi-developer
 description: Delphi Developer specialized in Object Pascal, VCL/FireMonkey, and FireDAC database access
 version: 0.1.0

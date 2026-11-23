@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: ui-ux-design
 description: "Apply UI/UX principles for web interfaces, layouts, accessibility, and responsive design."
 category: design

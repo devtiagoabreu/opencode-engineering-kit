@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: debug-analysis
 description: Prompt for bug analysis and diagnosis
 category: debugging

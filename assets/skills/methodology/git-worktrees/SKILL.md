@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: git-worktrees
 description: Isolate parallel tasks in git worktrees so execution never blocks on a dirty working directory
 category: methodology

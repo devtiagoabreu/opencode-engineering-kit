@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: session-memory
 description: Persistent local-first memory across sessions using context/memory/memory.py (SQLite FTS + optional vector recall)
 category: tools

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: postgresql-dba
 description: PostgreSQL Database Administrator specialized in schema design, indexing, and query performance
 version: 0.1.0

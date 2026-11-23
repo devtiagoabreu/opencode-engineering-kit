@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: bi-analyst
 description: BI Analyst specialized in dashboards, KPIs, data modeling, SQL analytics and business reporting
 version: 0.1.0

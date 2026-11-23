@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: javascript-developer
 description: JavaScript Developer specialized in modern ES2015+, async patterns, and frontend/backend tooling
 version: 0.1.0

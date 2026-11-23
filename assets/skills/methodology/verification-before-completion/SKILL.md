@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: stable
 name: verification-before-completion
 description: Verify a task is actually done by re-checking every claim against evidence before declaring completion
 category: methodology

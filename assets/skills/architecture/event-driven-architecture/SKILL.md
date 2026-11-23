@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: event-driven-architecture
 description: Design event-driven systems with an internal Event Bus, async queues, publishers/subscribers, and persistent event records
 category: architecture

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: stable
 name: project-setup
 description: New project setup covering repository layout, configuration, and tooling
 category: projects

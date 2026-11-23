@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: two-stage-code-review
 description: Code review in two passes — machine-checkable correctness first, then design and intent — before merging
 category: methodology

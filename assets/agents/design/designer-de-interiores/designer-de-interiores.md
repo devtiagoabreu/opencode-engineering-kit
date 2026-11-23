@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: designer-de-interiores
 description: Designer de interiores especializado em layout, paleta de cores e especificação de ambientes residenciais e comerciais
 version: 0.1.0

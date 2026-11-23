@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: analista-politico
 description: Analista de política nacional e mundial com visão neutra e plural de sistemas, eleições, instituições e políticas públicas
 version: 0.1.0

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: stable
 name: writing-plans
 description: Transform an approved direction into a concrete, executable plan with phases, tasks and acceptance criteria
 category: methodology

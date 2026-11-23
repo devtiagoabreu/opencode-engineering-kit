@@ -127,11 +127,13 @@ Local reference snapshot:
 ### PR-02 - Schema & asset validation CI
 - [x] `scripts/validate_assets.py` validates asset schemas/frontmatter and manifest drift.
 - [x] CI runs validation with `--check-manifest`.
-- [x] Added optional deeper checks: relative markdown link validation (`--check-links`) and provenance warnings (`--strict-provenance` to promote).
+- [x] Added deeper checks: relative markdown link validation (`--check-links`) and provenance warnings promoted by `--strict-policy` (legacy `--strict-provenance` retained).
 - [x] Fixed broken relative asset links in agents/prompts/skills detected by link check.
 - [x] Duplicate normalized-content warnings added to validator.
 - [x] CI runs link checks (`--check-links`) and README_EN count sync check.
-- [ ] Remaining: explicit maturity/provenance policy enforcement (warnings today; `--strict-provenance` opt-in), and policy for aspirational `docs/architecture/*` links.
+- [x] Explicit quality policy: `core/registry/policy/asset-policy.json` + `docs/QUALITY_POLICY.md` document maturity, provenance and link rules; CI runs `--strict-policy`.
+- [x] `maturity` is required in all asset schemas and backfilled (`stable` = curated in `profiles/core.json`, `beta` = uncurated; 35 stable / 235 beta at time of writing).
+- [x] Aspirational `docs/architecture/*` references are now an explicit 5-entry allowlist with reasons/review dates; undeclared broken links fail validation.
 
 ### PR-03 - CLI doctor/product UX
 - [x] `doctor --target/--global` wiring checks.

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: shadcn-ui
 description: Build consistent UI with shadcn/ui + Tailwind + Radix — component copy-in patterns, theming (light/dark/system), composition, and DataTable/form conventions
 category: frontend

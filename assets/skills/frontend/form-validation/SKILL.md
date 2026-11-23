@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: form-validation
 description: Schema-first form validation with Zod and React Hook Form — shared schemas across API and UI, resolvers, error messages, and reusable form patterns
 category: frontend

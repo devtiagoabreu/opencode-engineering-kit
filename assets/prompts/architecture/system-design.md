@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: system-design
 description: Prompt for system design and architecture
 category: architecture

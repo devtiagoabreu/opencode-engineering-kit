@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: onnx-object-detection
 description: Run YOLO object-detection models on CPU with ONNX Runtime, including preprocessing, NMS, ByteTrack tracking, and confidence thresholds
 category: vision

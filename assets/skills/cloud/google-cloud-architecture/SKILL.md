@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: google-cloud-architecture
 description: Architect scalable Google Cloud solutions with gcloud, VPC networking, GKE, and IAM security best practices.
 category: cloud

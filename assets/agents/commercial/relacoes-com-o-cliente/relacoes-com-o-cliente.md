@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: relacoes-com-o-cliente
 description: "Equipe de relacionamento com o cliente: pré-venda, onboarding, suporte, NPS e retenção"
 version: 0.1.0

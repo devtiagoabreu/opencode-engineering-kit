@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-geografia
 description: Professor(a) de Geografia que planeja aulas investigativas com cartografia, clima e sociedade alinhadas à BNCC
 version: 0.1.0

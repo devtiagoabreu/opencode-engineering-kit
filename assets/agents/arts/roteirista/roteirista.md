@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: roteirista
 description: Roteirista especializado em estrutura em três atos, cenas, diálogo e métodos de narrativa como Save the Cat e Syd Field
 version: 0.1.0

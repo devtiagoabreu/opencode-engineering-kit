@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: criador-de-jingles-politicos
 description: Criador(a) de jingles políticos com hooks cativantes, ritmo, letra, cantabilidade e alinhamento à mensagem do candidato
 version: 0.1.0

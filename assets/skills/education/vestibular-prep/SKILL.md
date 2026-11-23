@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: vestibular-prep
 description: Prepare students for Brazilian university entrance exams with ENEM, FUVEST, and VUNESP structures and study plans
 category: education

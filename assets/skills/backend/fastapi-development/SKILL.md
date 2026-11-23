@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: fastapi-development
 description: Build async Python REST backends with FastAPI, Pydantic schemas, dependency injection, router layering, and OpenAPI-first design
 category: backend

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: personal-training
 description: Design training programs with the FITT principle, safe progression, warm-up and cool-down, and health screening.
 category: sports

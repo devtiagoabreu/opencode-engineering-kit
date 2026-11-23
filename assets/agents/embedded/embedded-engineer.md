@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: embedded-engineer
 description: Embedded Engineer with expertise in C/C++, RTOS, microcontrollers, and low-level drivers
 version: 0.1.0

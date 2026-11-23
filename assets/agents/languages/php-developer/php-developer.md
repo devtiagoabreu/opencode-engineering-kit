@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: php-developer
 description: PHP Developer specialized in modern PHP 8, PSR standards, PDO, and secure web applications
 version: 0.1.0

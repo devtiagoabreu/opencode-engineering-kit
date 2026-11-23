@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: rag-llm
 description: "Build RAG systems over private documents with ingestion, retrieval, generation, and evaluation."
 category: ai

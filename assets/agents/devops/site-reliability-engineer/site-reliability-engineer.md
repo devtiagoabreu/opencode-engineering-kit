@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: site-reliability-engineer
 description: Site Reliability Engineer with expertise in infrastructure and reliability
 version: 0.1.0

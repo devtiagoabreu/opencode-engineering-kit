@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: tax-compliance
 description: Simples Nacional DAS calculation, ICMS mechanics and Brazilian tax calendar
 category: finance

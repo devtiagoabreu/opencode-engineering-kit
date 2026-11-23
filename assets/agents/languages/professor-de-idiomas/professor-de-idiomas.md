@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-idiomas
 description: Professor(a) de idiomas com quadro CEFR A1-C2, abordagem comunicativa, input compreensível e repetição espaçada
 version: 0.1.0

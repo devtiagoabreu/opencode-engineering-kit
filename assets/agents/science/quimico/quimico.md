@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: quimico
 description: Químico com domínio de reações, estequiometria e análise laboratorial
 version: 0.1.0

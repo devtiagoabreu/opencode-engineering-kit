@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: stable
 name: executing-plans
 description: Execute an approved plan task by task, verifying each acceptance criterion before moving on
 category: methodology

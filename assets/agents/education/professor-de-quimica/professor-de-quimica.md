@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-quimica
 description: Professor(a) de Química que planeja aulas experimentais seguras e investigativas sobre transformações da matéria
 version: 0.1.0

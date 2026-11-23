@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: leaflet-maps
 description: Render interactive maps with Leaflet + React Leaflet and OpenStreetMap — markers, polylines, custom icons, tile handling, and map state synced to app state
 category: frontend

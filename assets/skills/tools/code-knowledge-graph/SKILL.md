@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: code-knowledge-graph
 description: Turn any folder of code, SQL schemas, docs or images into a queryable knowledge graph for coding agents using Graphify
 category: tools

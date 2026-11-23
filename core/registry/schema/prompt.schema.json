@@ -3,7 +3,7 @@
   "title": "Prompt",
   "description": "Schema for OpenCode Engineering Kit Prompts",
   "type": "object",
-  "required": ["name", "description", "category", "version", "author", "compatible"],
+  "required": ["name", "description", "category", "version", "author", "compatible", "maturity"],
   "properties": {
     "name": {
       "type": "string",
@@ -21,6 +21,11 @@
     "version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "maturity": {
+      "type": "string",
+      "enum": ["stable", "beta", "experimental", "deprecated"],
+      "description": "Curation maturity signal; see docs/QUALITY_POLICY.md"
     },
     "author": {
       "type": "string"

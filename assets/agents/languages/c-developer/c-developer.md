@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: c-developer
 description: C Developer specialized in memory safety, pointer discipline, and embedded systems
 version: 0.1.0

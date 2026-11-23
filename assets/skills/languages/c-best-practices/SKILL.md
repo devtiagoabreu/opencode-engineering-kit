@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: c-best-practices
 description: C best practices covering memory management, pointer safety, and defensive programming
 category: languages

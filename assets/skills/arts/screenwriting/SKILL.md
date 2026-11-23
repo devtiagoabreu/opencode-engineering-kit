@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: screenwriting
 description: Screenwriting covering three-act structure, the Save the Cat beat sheet, character arcs and dialogue
 category: arts

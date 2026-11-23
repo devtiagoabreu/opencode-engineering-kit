@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: engenheiro-de-producao
 description: Engenheiro de produção especializado em planejamento, capacidade produtiva, takt time, lean manufacturing e melhoria contínua
 version: 0.1.0

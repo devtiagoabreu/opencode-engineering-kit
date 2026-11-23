@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: applied-mathematics
 description: Practical algebra, calculus and statistics with worked numerical examples
 category: science

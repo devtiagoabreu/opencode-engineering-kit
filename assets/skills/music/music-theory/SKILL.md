@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: music-theory
 description: Learn music theory fundamentals covering notes, rhythm, scales, chords, intervals, and ear training
 category: music

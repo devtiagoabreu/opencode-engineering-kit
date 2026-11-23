@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: multi-tenant-saas
 description: Design and implement multi-tenant SaaS backends with Shared Database + Shared Schema + tenantId isolation, tenant resolution, and cross-tenant protection
 category: architecture

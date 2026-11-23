@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: php-best-practices
 description: PHP best practices covering modern PHP 8 features, PSR standards, PDO database access, and testing
 category: languages

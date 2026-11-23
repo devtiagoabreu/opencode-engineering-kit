@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: vercel-deployment
 description: Deploy and operate Next.js apps on Vercel — previews, environment variables, Route Handler limits, serverless considerations, monitoring and CI integration
 category: devops

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: drums
 description: Learn drums with grip, rudiments, independence, groove, and timekeeping
 category: music

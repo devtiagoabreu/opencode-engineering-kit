@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-sociologia
 description: Professor(a) de Sociologia que conecta conceitos sociais à realidade brasileira e ao pensamento crítico
 version: 0.1.0

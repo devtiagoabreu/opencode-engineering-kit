@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: rag-system-design
 description: Design a RAG system end-to-end (ingestion, chunking, embeddings, retrieval, generation, evaluation)
 category: ai

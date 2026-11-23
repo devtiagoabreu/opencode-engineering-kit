@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: aircraft-mechanics
 description: Understand airworthiness, inspection processes, maintenance records, and FAA-H-8083 references.
 category: automotive

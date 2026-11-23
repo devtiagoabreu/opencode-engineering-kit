@@ -3,7 +3,10 @@
 
 Usage:
   python scripts/validate_assets.py --root .
-  python scripts/validate_assets.py --root . --check-manifest
+  python scripts/validate_assets.py --root . --check-manifest --check-links
+  python scripts/validate_assets.py --root . --check-links --strict-policy
+
+Policy: core/registry/policy/asset-policy.json (see docs/QUALITY_POLICY.md).
 """
 from __future__ import annotations
 
@@ -22,9 +25,53 @@ except Exception as e:
     sys.exit(2)
 
 ROOT_DEFAULT = Path(__file__).resolve().parents[1]
+POLICY_REL = "core/registry/policy/asset-policy.json"
 
 def load_json(p: Path):
     return json.loads(p.read_text(encoding="utf-8"))
+
+def load_policy(root: Path, errors):
+    """Load and sanity-check the machine-readable asset policy."""
+    p = root / POLICY_REL
+    try:
+        policy = load_json(p)
+    except Exception as e:
+        errors.append(f"{POLICY_REL}: unreadable policy: {e}")
+        return {}
+    if policy.get("schema_version") != 1:
+        errors.append(f"{POLICY_REL}: unsupported schema_version {policy.get('schema_version')!r} (expected 1)")
+    maturity = policy.get("maturity") or {}
+    allowed = maturity.get("allowed") or []
+    if not isinstance(allowed, list) or not allowed:
+        errors.append(f"{POLICY_REL}: maturity.allowed must be a non-empty list")
+    if maturity.get("default") not in allowed:
+        errors.append(f"{POLICY_REL}: maturity.default must be one of {allowed}")
+    prov = policy.get("provenance") or {}
+    if not isinstance(prov.get("required_for", []), list):
+        errors.append(f"{POLICY_REL}: provenance.required_for must be a list")
+    links = (policy.get("links") or {}).get("aspirational") or []
+    if not isinstance(links, list):
+        errors.append(f"{POLICY_REL}: links.aspirational must be a list")
+    else:
+        seen = set()
+        for entry in links:
+            if not isinstance(entry, dict) or not entry.get("path") or not entry.get("target") or not entry.get("reason"):
+                errors.append(f"{POLICY_REL}: aspirational entry needs path, target and reason: {entry!r}")
+                continue
+            key = (entry["path"], entry["target"])
+            if key in seen:
+                errors.append(f"{POLICY_REL}: duplicate aspirational entry: {key}")
+            seen.add(key)
+    return policy
+
+def validate_policy_schemas(policy: dict, schemas: dict, errors):
+    """Keep the policy enum in sync with the JSON Schemas."""
+    allowed = set((policy.get("maturity") or {}).get("allowed") or [])
+    for kind, schema in schemas.items():
+        prop = ((schema.get("properties") or {}).get("maturity") or {})
+        enum = set(prop.get("enum") or [])
+        if allowed and enum and allowed != enum:
+            errors.append(f"{POLICY_REL}: maturity.allowed {sorted(allowed)} differs from {kind} schema enum {sorted(enum)}")
 
 def read_text(p: Path):
     b = p.read_bytes()
@@ -127,7 +174,11 @@ def check_manifest(root: Path, errors, warnings):
 
 LINK_RE = re.compile(r"\[[^\]]+\]\(([^)]+)\)")
 
-def check_links(text: str, path: Path, root: Path, errors, warnings):
+def check_links(text: str, path: Path, root: Path, policy: dict, errors, warnings, used_allowlist):
+    allowed = {}
+    for entry in (policy.get("links") or {}).get("aspirational") or []:
+        if isinstance(entry, dict) and entry.get("path") and entry.get("target"):
+            allowed[(entry["path"], entry["target"])] = entry
     for m in LINK_RE.finditer(text):
         target = m.group(1).strip()
         if not target or target.startswith(('http://','https://','mailto:','#','data:')):
@@ -138,43 +189,49 @@ def check_links(text: str, path: Path, root: Path, errors, warnings):
         # ignore templated/example links
         if '{{' in target or '}}' in target or '<' in target or '>' in target:
             continue
+        rel = path.relative_to(root).as_posix()
         p = (path.parent / target).resolve()
-        try:
-            p.relative_to(root)
-        except Exception:
-            # allow links within repo root resolved differently? try root-relative
+        if not p.exists():
             p2 = (root / target.lstrip('/')).resolve()
             if p2.exists():
                 continue
-        if not p.exists():
-            rel = path.relative_to(root).as_posix()
-            # Known aspirational cross-repo docs referenced by some skills
-            if target.startswith('docs/architecture/'):
-                warnings.append(f"{rel}: unresolved architecture doc link: {target}")
-            else:
-                errors.append(f"{rel}: broken link: {target}")
+        if p.exists():
+            continue
+        key = (rel, target)
+        if key in allowed:
+            entry = allowed[key]
+            used_allowlist.add(key)
+            review_by = entry.get("review_by") or "unset"
+            warnings.append(f"{rel}: aspirational link allowed by policy: {target} (review_by {review_by})")
+        else:
+            errors.append(f"{rel}: broken link: {target}")
 
 
-def check_provenance(fm: dict, rel: str, kind: str, warnings):
-    prov = fm.get('provenance')
-    if kind not in ('skills','agents'):
+def check_provenance(fm: dict, rel: str, kind: str, policy: dict, errors, warnings):
+    prov_cfg = policy.get("provenance") or {}
+    if kind not in (prov_cfg.get("required_for") or []):
         return
+    prov = fm.get('provenance')
     if prov is None:
         warnings.append(f"{rel}: missing provenance metadata")
         return
-    if isinstance(prov, dict):
-        if not prov.get('source'):
-            warnings.append(f"{rel}: provenance.source missing")
-        if prov.get('verified') and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(prov.get('verified'))):
-            warnings.append(f"{rel}: provenance.verified should be YYYY-MM-DD")
+    if not isinstance(prov, dict):
+        errors.append(f"{rel}: provenance must be a mapping")
+        return
+    if prov_cfg.get("require_source") and not prov.get('source'):
+        warnings.append(f"{rel}: provenance.source missing")
+    verified = prov.get('verified')
+    if verified and not re.match(r"^\d{4}-\d{2}-\d{2}$", str(verified)):
+        warnings.append(f"{rel}: provenance.verified should be YYYY-MM-DD")
 
 
 def main():
     ap = argparse.ArgumentParser()
     ap.add_argument("--root", default=str(ROOT_DEFAULT))
     ap.add_argument("--check-manifest", action="store_true")
-    ap.add_argument("--check-links", action="store_true", help="validate relative markdown links in assets")
-    ap.add_argument("--strict-provenance", action="store_true", help="treat missing provenance as error")
+    ap.add_argument("--check-links", action="store_true", help="validate relative markdown links in assets using the asset policy allowlist")
+    ap.add_argument("--strict-policy", action="store_true", help="promote provenance/maturity policy warnings to errors")
+    ap.add_argument("--strict-provenance", action="store_true", help="legacy flag: promote only provenance warnings to errors")
     ap.add_argument("--json", action="store_true")
     args = ap.parse_args()
     root = Path(args.root).resolve()
@@ -186,9 +243,12 @@ def main():
         "templates": load_json(root/"core/registry/schema/template.schema.json"),
         "commands": load_json(root/"core/registry/schema/command.schema.json"),
     }
+    policy = load_policy(root, errors)
+    validate_policy_schemas(policy, schemas, errors)
     assets = collect(root)
     seen_names = {}
     seen_hashes = {}
+    used_allowlist = set()
     for kind, paths in assets.items():
         schema = schemas[kind]
         for p in paths:
@@ -231,18 +291,37 @@ def main():
             desc = fm.get("description","")
             if isinstance(desc,str) and len(desc.strip()) < 10:
                 errors.append(f"{rel}: description too short")
-            check_provenance(fm, rel, kind, warnings)
+            check_provenance(fm, rel, kind, policy, errors, warnings)
             if args.check_links and p.suffix.lower() == '.md':
-                check_links(text, p, root, errors, warnings)
-    if args.strict_provenance:
-        promote = [w for w in warnings if 'provenance' in w]
+                check_links(text, p, root, policy, errors, warnings, used_allowlist)
+    if args.check_links:
+        aspirational = (policy.get("links") or {}).get("aspirational") or []
+        for entry in aspirational:
+            if not isinstance(entry, dict) or not entry.get("path") or not entry.get("target"):
+                continue
+            key = (entry["path"], entry["target"])
+            if key not in used_allowlist:
+                warnings.append(f"{POLICY_REL}: unused aspirational link entry: {key[0]} -> {key[1]}")
+    if args.strict_policy or args.strict_provenance:
+        markers = ('provenance', 'maturity') if args.strict_policy else ('provenance',)
+        promote = [w for w in warnings if any(marker in w for marker in markers)]
         for w in promote:
-            errors.append(w.replace('missing provenance metadata', 'missing provenance metadata (strict)'))
+            errors.append(f"{w} (strict policy)")
         warnings = [w for w in warnings if w not in promote]
     if args.check_manifest:
         check_manifest(root, errors, warnings)
 
-    report = {"ok": len(errors)==0, "counts": {k:len(v) for k,v in assets.items()}, "errors": errors, "warnings": warnings}
+    report = {
+        "ok": len(errors)==0,
+        "counts": {k:len(v) for k,v in assets.items()},
+        "policy": {
+            "schema_version": policy.get("schema_version"),
+            "maturity_default": (policy.get("maturity") or {}).get("default"),
+            "aspirational_links_used": len(used_allowlist),
+        },
+        "errors": errors,
+        "warnings": warnings,
+    }
     if args.json:
         print(json.dumps(report, indent=2, ensure_ascii=False))
     else:

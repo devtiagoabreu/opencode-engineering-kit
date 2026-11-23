@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: architect
 description: Software Architect with expertise in system design, trade-offs, ADRs, and tech stack selection
 version: 0.1.0

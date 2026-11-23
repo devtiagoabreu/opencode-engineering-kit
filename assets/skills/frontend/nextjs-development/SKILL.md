@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: nextjs-development
 description: Next.js development best practices covering App Router, server components, data fetching, and deployment
 category: frontend

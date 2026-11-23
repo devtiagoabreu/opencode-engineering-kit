@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: especialista-metodo-suzuki
 description: Especialista em Método Suzuki com filosofia da língua materna, audição antes da leitura, participação dos pais, revisão e reforço positivo
 version: 0.1.0

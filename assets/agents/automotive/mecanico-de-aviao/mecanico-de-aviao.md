@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: mecanico-de-aviao
 description: Mecânico de manutenção de aeronaves com foco em aeronavegabilidade, inspeção, documentação e cultura de segurança
 version: 0.1.0

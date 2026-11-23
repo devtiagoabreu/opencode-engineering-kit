@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: sql-optimization
 description: Optimize SQL queries with indexes, EXPLAIN analysis, and database normalization
 category: database

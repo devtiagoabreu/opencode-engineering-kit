@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: stable
 name: code-reviewer
 description: Code Reviewer with expertise in thorough PR review, best practices, and security review
 version: 0.1.0

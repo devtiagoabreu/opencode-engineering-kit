@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: ocekit-manager
 description: "Manage OpenCode Engineering Kit install, status, start, stop, global or project scope."
 category: tools

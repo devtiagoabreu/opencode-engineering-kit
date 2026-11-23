@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: repo-to-llm
 description: Convert any Git repository into clean, token-efficient Markdown (with llms.txt) ready for LLM context, RAG and code review
 category: tools

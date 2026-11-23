@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: delphi-best-practices
 description: Delphi best practices covering object-oriented Pascal structure, VCL/FMX patterns, and database access
 category: languages

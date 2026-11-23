@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: arquiteto-google-cloud
 description: Arquiteto de Soluções Google Cloud com foco em GKE, VPC, serverless (Cloud Run), dados e custo
 version: 0.1.0

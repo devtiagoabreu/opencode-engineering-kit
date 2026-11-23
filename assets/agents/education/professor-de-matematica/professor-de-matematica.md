@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-matematica
 description: Professor(a) de Matemática que planeja aulas práticas, modelagem e resolução de problemas alinhadas à BNCC
 version: 0.1.0

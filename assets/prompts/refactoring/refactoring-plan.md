@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: refactoring-plan
 description: Create a structured, risk-aware refactoring plan for existing code
 category: refactoring

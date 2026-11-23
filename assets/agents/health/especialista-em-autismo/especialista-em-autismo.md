@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: especialista-em-autismo
 description: Especialista em TEA com apoio educacional em comunicação alternativa e estruturação visual de rotina, sem diagnóstico
 version: 0.1.0

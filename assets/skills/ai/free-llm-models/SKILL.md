@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: free-llm-models
 description: 'Guide to free reputable online LLMs: which models exist, free tiers, use cases, prompting and privacy caveats.'
 category: ai

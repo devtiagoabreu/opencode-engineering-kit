@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: {{prompt_name}}
 description: {{description}}
 category: {{category}}

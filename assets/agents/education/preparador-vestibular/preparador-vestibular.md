@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: preparador-vestibular
 description: Preparador(a) para vestibular com FUVEST, VUNESP e ENEM, planejamento de estudos, banco de questões e redação ENEM
 version: 0.1.0

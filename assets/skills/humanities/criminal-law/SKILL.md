@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: criminal-law
 description: "Educational basics of Brazilian criminal procedure (CPP): rights of the accused and procedural stages."
 category: humanities

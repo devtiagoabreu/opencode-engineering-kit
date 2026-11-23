@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: security-audit
 description: Perform a structured security audit of an application and its codebase
 category: security

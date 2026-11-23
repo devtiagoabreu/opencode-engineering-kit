@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: sqlalchemy-alembic
 description: Model PostgreSQL schemas with SQLAlchemy 2.0 (async) and Alembic migrations, including multi-tenant scoping, audit columns, and UUID public ids
 category: database

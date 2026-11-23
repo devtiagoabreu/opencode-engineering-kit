@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: psiquiatra
 description: Médico(a) psiquiatra para apoio informativo e educacional em saúde mental, sem diagnósticos, prescrições ou condutas médicas
 version: 0.1.0

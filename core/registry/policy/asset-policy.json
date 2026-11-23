@@ -1,0 +1,49 @@
+{
+  "schema_version": 1,
+  "description": "Machine-readable asset quality policy consumed by scripts/validate_assets.py. See docs/QUALITY_POLICY.md.",
+  "maturity": {
+    "allowed": ["stable", "beta", "experimental", "deprecated"],
+    "default": "beta",
+    "required_for": ["skills", "agents", "prompts", "templates", "commands"],
+    "stable_rule": "Declared stable only after the asset is curated in profiles/core.json and passes the quality gates."
+  },
+  "provenance": {
+    "required_for": ["skills", "agents"],
+    "require_source": true,
+    "verified_format": "YYYY-MM-DD"
+  },
+  "links": {
+    "aspirational": [
+      {
+        "path": "assets/skills/architecture/event-driven-architecture/SKILL.md",
+        "target": "docs/architecture/006-event-bus.md",
+        "reason": "Reference to an external Vision Platform decision record; not bundled in this repository.",
+        "review_by": "2026-12-31"
+      },
+      {
+        "path": "assets/skills/architecture/plugin-system/SKILL.md",
+        "target": "docs/architecture/003-plugin-system.md",
+        "reason": "Reference to an external Vision Platform decision record; not bundled in this repository.",
+        "review_by": "2026-12-31"
+      },
+      {
+        "path": "assets/skills/architecture/plugin-system/SKILL.md",
+        "target": "docs/architecture/012-plugin-sdk.md",
+        "reason": "Reference to an external Vision Platform decision record; not bundled in this repository.",
+        "review_by": "2026-12-31"
+      },
+      {
+        "path": "assets/skills/devops/onpremise-deployment/SKILL.md",
+        "target": "docs/architecture/013-deployment.md",
+        "reason": "Reference to an external Vision Platform decision record; not bundled in this repository.",
+        "review_by": "2026-12-31"
+      },
+      {
+        "path": "assets/skills/devops/onpremise-deployment/SKILL.md",
+        "target": "docs/architecture/019-backup-disaster-recovery.md",
+        "reason": "Reference to an external Vision Platform decision record; not bundled in this repository.",
+        "review_by": "2026-12-31"
+      }
+    ]
+  }
+}

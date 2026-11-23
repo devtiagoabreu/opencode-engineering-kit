@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: ocekit
 description: Manage the OpenCode Engineering Kit (ocekit) — install globally or in the project, status, start, stop
 version: 0.1.0

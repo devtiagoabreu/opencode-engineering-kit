@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: sql-server-database
 description: SQL Server best practices covering T-SQL, indexing, query tuning, and administration
 category: database

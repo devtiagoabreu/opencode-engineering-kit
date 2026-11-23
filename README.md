@@ -27,11 +27,11 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Recipes | 2 |
 | Comandos | 4 |
 | Bundles | 2 |
-| Composi??es | 2 |
+| Composições | 2 |
 | Prompt chains | 2 |
 | Contexto | 17 arquivos |
 | Plugins de exemplo | 1 (`asset-linter`) |
-| Su?tes de teste | 25 shell + 3 CLI |
+| Suítes de teste | 25 shell + 3 CLI |
 
 > Contagens sincronizadas de `core/registry/manifest.json` via `python scripts/sync_readme_counts.py --root .` (verificado em CI).
 
@@ -162,7 +162,7 @@ npx opencode-engineering-kit list --type skills
 npx opencode-engineering-kit search "docker kubernetes"
 npx opencode-engineering-kit doctor --fast
 npx opencode-engineering-kit doctor --dir . --target . --fast
-npx opencode-engineering-kit doctor --dir . --target . --fast --json  # contrato est?vel para CI
+npx opencode-engineering-kit doctor --dir . --target . --fast --json  # contrato estável para CI
 npx opencode-engineering-kit upgrade --dry-run
 ```
 
@@ -214,10 +214,10 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 - **O que a CLI faz:** copia assets para `.opencode/` e mescla `opencode.json` (`skills.paths`, `instructions`). Não apaga sua configuração existente.
 - **Auditoria antes de instalar:** use `--dry-run` e/ou `--source <checkout-local>` para inspecionar a origem. Rode `npx opencode-engineering-kit doctor --fast` no checkout do kit.
-- **Drift ap?s instalar:** rode `npx opencode-engineering-kit doctor --dir <kit> --target <projeto> --fast` para checar wiring e drift de arquivos rastreados (`.opencode/.kit-install.json`). Se houver `modified/missing`, reinstale com `--force` ou `upgrade`.
-- **Contrato JSON do doctor:** `doctor --json` exp?e `checks[].code` est?vel e `recommendations[]` acion?veis; ?til para CI e automa??es.
+- **Drift após instalar:** rode `npx opencode-engineering-kit doctor --dir <kit> --target <projeto> --fast` para checar wiring e drift de arquivos rastreados (`.opencode/.kit-install.json`). Se houver `modified/missing`, reinstale com `--force` ou `upgrade`.
+- **Contrato JSON do doctor:** `doctor --json` expõe `checks[].code` estável e `recommendations[]` acionáveis; útil para CI e automações.
 - **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
-- **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05.
+- **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05 e [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) para as regras aplicadas hoje (maturidade, proveniência e links).
 - **Segurança:** reporte vulnerabilidades conforme [SECURITY.md](./SECURITY.md).
 
 ## Core vs opcional/experimental

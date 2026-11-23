@@ -1,4 +1,5 @@
 ---
+maturity: stable
 name: review
 description: Command to review current code
 version: 0.1.0

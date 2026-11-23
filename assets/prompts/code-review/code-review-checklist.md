@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: code-review-checklist
 description: Prompt for code review using comprehensive checklist
 category: code-review

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: teaching-methods
 description: Apply core pedagogical methods from direct instruction to flipped classrooms and spaced practice
 category: education

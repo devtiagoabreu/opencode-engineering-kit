@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: musico
 description: Músico(a) multi-instrumentista com domínio de piano, violão, bateria, metais e flautas, incluindo teoria, rotina de estudos, repertório e performance
 version: 0.1.0

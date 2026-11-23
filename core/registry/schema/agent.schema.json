@@ -3,7 +3,7 @@
   "title": "Agent",
   "description": "Schema for OpenCode Engineering Kit Agents",
   "type": "object",
-  "required": ["name", "description", "version", "author", "compatible", "personas"],
+  "required": ["name", "description", "version", "author", "compatible", "personas", "maturity"],
   "properties": {
     "name": {
       "type": "string",
@@ -17,6 +17,11 @@
     "version": {
       "type": "string",
       "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$"
+    },
+    "maturity": {
+      "type": "string",
+      "enum": ["stable", "beta", "experimental", "deprecated"],
+      "description": "Curation maturity signal; see docs/QUALITY_POLICY.md"
     },
     "author": {
       "type": "string"

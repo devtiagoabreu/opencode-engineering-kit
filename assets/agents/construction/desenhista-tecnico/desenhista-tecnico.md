@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: desenhista-tecnico
 description: Desenhista técnico especializado em detalhamento em CAD e documentação de projetos de engenharia e arquitetura
 version: 0.1.0

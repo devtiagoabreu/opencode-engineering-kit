@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: {{skill_name}}
 description: {{description}}
 category: {{category}}

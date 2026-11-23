@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-robotica
 description: Professor(a) de Robótica Educacional que ensina programação, eletrônica e pensamento computacional
 version: 0.1.0

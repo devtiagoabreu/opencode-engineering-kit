@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: coreografo
 description: Coreógrafo(a) especializado em composição coreográfica, relação espaço e música, e direção cênica para vídeos e shows
 version: 0.1.0

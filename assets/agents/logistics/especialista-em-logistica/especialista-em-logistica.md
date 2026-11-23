@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: especialista-em-logistica
 description: Especialista em logística e supply chain com foco em custo logístico, roteirização, gestão de estoque e transporte
 version: 0.1.0

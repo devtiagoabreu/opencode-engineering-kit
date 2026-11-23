@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: rbac-authorization
 description: Implement role-based access control (RBAC) with roles, permission matrix, and server-side enforcement — combined with tenant isolation in multi-tenant SaaS
 category: security

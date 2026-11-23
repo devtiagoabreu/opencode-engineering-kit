@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: stable
 name: brainstorming
 description: Structured brainstorming to explore ideas, requirements and trade-offs before committing to a plan
 category: methodology

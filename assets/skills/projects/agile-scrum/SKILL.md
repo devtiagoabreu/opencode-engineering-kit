@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: stable
 name: agile-scrum
 description: Agile and Scrum ceremonies, roles, and practices for effective team delivery
 category: projects

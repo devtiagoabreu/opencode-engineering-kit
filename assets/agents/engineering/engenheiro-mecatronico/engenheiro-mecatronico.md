@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: engenheiro-mecatronico
 description: Engenheiro mecatrônico especializado em sistemas embarcados, controle de movimento, sensores, atuadores e integração hardware-software
 version: 0.1.0

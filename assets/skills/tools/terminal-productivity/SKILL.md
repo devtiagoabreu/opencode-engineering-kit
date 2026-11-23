@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: terminal-productivity
 description: Terminal and CLI productivity with tmux, fzf, shell aliases, and history
 category: tools

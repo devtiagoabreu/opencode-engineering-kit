@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: suzuki-method
 description: Learn the Suzuki Method with the mother-tongue approach, step-by-step progression, listening, review, and parental role
 category: music

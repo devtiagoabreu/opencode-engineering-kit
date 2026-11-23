@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: evidence-based-teaching
 description: Apply research-backed teaching practices and interpret effect sizes to decide what to do in class
 category: education

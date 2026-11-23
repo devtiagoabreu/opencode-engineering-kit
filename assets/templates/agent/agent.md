@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: {{agent_name}}
 description: {{description}}
 version: {{version}}

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: metodologia-lean
 description: Especialista em Metodologia Lean e Lean Six Sigma para eliminação de desperdícios, fluxo de valor e melhoria contínua
 version: 0.1.0

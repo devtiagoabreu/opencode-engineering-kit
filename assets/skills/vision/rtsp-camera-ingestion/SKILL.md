@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: rtsp-camera-ingestion
 description: Ingest video from RTSP/ONVIF IP cameras, USB webcams, and files with reconnection, frame queues, and bandwidth-aware capture
 category: vision

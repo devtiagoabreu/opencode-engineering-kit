@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: esp8266-development
 description: "Build ESP8266 firmware for WiFi IoT devices, MQTT/HTTP clients, OTA, and deep sleep."
 category: embedded

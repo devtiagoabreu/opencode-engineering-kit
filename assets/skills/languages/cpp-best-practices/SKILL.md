@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: cpp-best-practices
 description: C++ best practices covering modern C++ (11-23), RAII, smart pointers, and testing
 category: languages

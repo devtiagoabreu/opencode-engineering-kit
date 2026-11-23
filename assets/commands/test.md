@@ -1,4 +1,5 @@
 ---
+maturity: stable
 name: test
 description: Command to run tests
 version: 0.1.0

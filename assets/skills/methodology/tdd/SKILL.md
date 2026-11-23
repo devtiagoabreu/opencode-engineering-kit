@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: stable
 name: tdd
 description: Test-driven development discipline — write a failing test, make it pass, refactor, repeat
 category: methodology

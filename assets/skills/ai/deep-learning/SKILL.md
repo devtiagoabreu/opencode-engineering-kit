@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: deep-learning
 description: Deep learning with PyTorch covering training loops, CNNs, transfer learning, regularization and evaluation for neural network, vision or LLM models.
 category: ai

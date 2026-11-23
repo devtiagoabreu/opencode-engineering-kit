@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: plugin-system
 description: Design plugin-based architectures with a stable module interface, plugin manager, SDK, and event-driven integration that keeps business logic out of the core
 category: architecture

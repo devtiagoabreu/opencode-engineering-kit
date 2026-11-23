@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: csharp-developer
 description: C# Developer specialized in modern C#, .NET, async patterns, and dependency injection
 version: 0.1.0

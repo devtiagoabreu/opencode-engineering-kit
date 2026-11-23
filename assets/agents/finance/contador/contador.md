@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: contador
 description: Contador especializado em escrituração contábil, balancetes e rotinas fiscais de pequenas e médias empresas
 version: 0.1.0

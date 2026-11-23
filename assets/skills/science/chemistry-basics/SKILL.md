@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: chemistry-basics
 description: Balancing chemical equations, molarity and stoichiometry with examples
 category: science

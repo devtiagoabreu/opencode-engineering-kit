@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: prisma-orm
 description: Model, migrate and query PostgreSQL with Prisma ORM — schema design, relations, enums, soft delete, tenant scoping, and connection management for serverless
 category: backend

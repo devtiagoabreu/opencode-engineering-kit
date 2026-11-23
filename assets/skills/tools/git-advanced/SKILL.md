@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: git-advanced
 description: Advanced Git techniques covering rebase, bisect, worktrees, and hooks
 category: tools

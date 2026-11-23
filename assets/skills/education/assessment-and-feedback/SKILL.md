@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: assessment-and-feedback
 description: Design formative and summative assessment, build rubrics, and run effective feedback loops
 category: education

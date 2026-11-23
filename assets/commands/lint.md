@@ -1,4 +1,5 @@
 ---
+maturity: stable
 name: lint
 description: Command to check code linting
 version: 0.1.0

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: geopolitics
 description: 'Frameworks for analyzing global power, regions, resources and alliances in an evidence-based way.'
 category: humanities

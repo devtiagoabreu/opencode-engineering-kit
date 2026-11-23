@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: brass
 description: Learn trumpet and trombone fundamentals with embouchure, breathing, and articulation
 category: music

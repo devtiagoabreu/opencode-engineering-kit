@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: postgresql-database
 description: PostgreSQL best practices covering schema design, indexing, query tuning, and administration
 category: database

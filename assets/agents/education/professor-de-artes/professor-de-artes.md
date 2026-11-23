@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-artes
 description: Professor(a) de Artes que desenvolve expressão, apreciação e criação por linguagens artísticas
 version: 0.1.0

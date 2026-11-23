@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: nextjs-developer
 description: Next.js Developer specialized in App Router, server components, data fetching, and Vercel deployments
 version: 0.1.0

@@ -219,7 +219,7 @@ cd opencode-engineering-kit
 - **Audit before install:** use `--dry-run` and/or `--source <local-checkout>` to inspect source. Run `npx opencode-engineering-kit doctor --fast` on the kit checkout.
 - **Post-install drift:** run `npx opencode-engineering-kit doctor --dir <kit> --target <project> --fast` to check wiring and tracked-file drift (`.opencode/.kit-install.json`). If you see `modified/missing`, reinstall with `--force` or run `upgrade`.
 - **Safe disable:** `stop` removes only kit wiring from `opencode.json`; `start` restores it.
-- **Current limits:** supply-chain verification is still evolving (schema/scan/provenance/lock). See [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) for PR-02/PR-05.
+- **Current limits:** supply-chain verification is still evolving (schema/scan/provenance/lock). See [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) for PR-02/PR-05 and [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) for the rules enforced today (maturity, provenance and links).
 - **Security:** report vulnerabilities per [SECURITY.md](./SECURITY.md).
 
 ## Core vs optional/experimental

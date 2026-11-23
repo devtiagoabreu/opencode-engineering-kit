@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: test-strategy
 description: Design a comprehensive test strategy that balances coverage and effort
 category: testing

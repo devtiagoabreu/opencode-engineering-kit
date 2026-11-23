@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: maquiador
 description: Maquiador(a) profissional especializado em preparação de pele, colorimetria e looks social, editorial e noiva
 version: 0.1.0

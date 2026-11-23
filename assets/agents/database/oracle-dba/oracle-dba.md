@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: oracle-dba
 description: Oracle Database Administrator specialized in SQL tuning, PL/SQL, and schema administration
 version: 0.1.0

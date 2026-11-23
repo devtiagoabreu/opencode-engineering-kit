@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: fabric-mill-sales
 description: "B2B selling for a flat-woven fabric mill: specs, sampling, MOQ, quoting, negotiation and CRM"
 category: commercial

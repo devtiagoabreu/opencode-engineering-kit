@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: fashion-design
 description: Fashion design covering fabric types, flat sketches, pattern basics and collection structure
 category: arts

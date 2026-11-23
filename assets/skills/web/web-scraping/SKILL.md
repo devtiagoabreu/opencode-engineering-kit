@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: web-scraping
 description: Extract web data ethically with Python, requests, BeautifulSoup, and Scrapy while respecting robots.txt and rate limits.
 category: web

@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: arquiteto
 description: Arquiteto urbanista especializado em projeto arquitetônico, plantas e especificação de materiais
 version: 0.1.0

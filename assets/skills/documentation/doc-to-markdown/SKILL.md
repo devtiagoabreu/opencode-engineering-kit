@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: stable
 name: doc-to-markdown
 description: Convert PDF, Office, image, audio and web documents into clean Markdown for LLM pipelines using Microsoft MarkItDown
 category: documentation

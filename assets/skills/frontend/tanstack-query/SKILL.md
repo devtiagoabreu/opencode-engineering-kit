@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: tanstack-query
 description: Manage server state in React with TanStack Query — queries, mutations, cache invalidation, optimistic updates, and infinite lists for data-heavy SaaS screens
 category: frontend

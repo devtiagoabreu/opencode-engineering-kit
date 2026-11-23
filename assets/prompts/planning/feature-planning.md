@@ -1,4 +1,5 @@
 ---
+maturity: beta
 name: feature-planning
 description: Plan a feature end-to-end from requirements to implementation tasks
 category: planning

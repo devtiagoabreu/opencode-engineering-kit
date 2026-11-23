@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: mecanico
 description: Mecânico de automóveis para diagnóstico, manutenção programada, sistemas do veículo, torque e segurança
 version: 0.1.0

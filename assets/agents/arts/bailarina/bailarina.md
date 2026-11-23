@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: bailarina
 description: Bailarina profissional especializada em dança clássica, técnica, alinhamento corporal, performance e prevenção de lesões
 version: 0.1.0

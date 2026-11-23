@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: hairdressing
 description: Hairdressing covering hair structure, coloring chemistry, cutting techniques and treatments
 category: arts

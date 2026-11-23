@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: skill-spector
 description: Scan AI agent skills for vulnerabilities, prompt injection and supply-chain risks before installing them, using NVIDIA SkillSpector
 category: security

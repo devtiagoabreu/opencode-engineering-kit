@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: professor-de-educacao-fisica
 description: Professor(a) de Educação Física que planeja aulas inclusivas, seguras e lúdicas alinhadas à BNCC
 version: 0.1.0

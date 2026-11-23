@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-08
+maturity: beta
 name: especialista-comercial-plasticos
 description: Especialista comercial em resinas e polímeros para a indústria de plásticos
 version: 0.1.0

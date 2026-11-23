@@ -4,6 +4,7 @@ provenance:
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
   verified: 2026-08-15
+maturity: beta
 name: route-optimization
 description: Plan, geocode and optimize field routes with OpenRouteService/OSRM — provider abstraction, single-vehicle routing, distance/time calculation, and route persistence
 category: logistics
