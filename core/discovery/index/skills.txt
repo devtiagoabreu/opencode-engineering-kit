@@ -1,11 +1,16 @@
+ai/ai-sdk-agent-patterns
+ai/context-filesystem-memory
 ai/deep-learning
 ai/evolution-api
 ai/free-llm-models
 ai/llm-multi-provider
+ai/memory-discipline
 ai/rag-llm
 analytics/business-intelligence
+analytics/privacy-first-analytics
 architecture/clean-architecture
 architecture/event-driven-architecture
+architecture/harness-engineering-patterns
 architecture/microservices-design
 architecture/multi-tenant-saas
 architecture/plugin-system
@@ -14,6 +19,7 @@ arts/fashion-design
 arts/hairdressing
 arts/makeup-artistry
 arts/screenwriting
+automation/llm-workflow-orchestration
 automation/n8n-workflow-automation
 automotive/aircraft-mechanics
 automotive/vehicle-mechanics
@@ -35,13 +41,16 @@ commercial/plastics-industry-sales
 community/open-source-contributing
 construction/civil-structures
 construction/construction-execution
+database/database-branching-workflows
 database/nosql-modeling
 database/oracle-database
 database/postgresql-database
+database/rls-tenancy-pattern
 database/sqlalchemy-alembic
 database/sql-optimization
 database/sql-server-database
 design/design-system
+design/diagram-design
 design/ui-ux-design
 devops/ci-cd-pipeline
 devops/docker-best-practices
@@ -49,6 +58,7 @@ devops/incident-response
 devops/kubernetes-best-practices
 devops/monitoring-observability
 devops/onpremise-deployment
+devops/self-host-deployment
 devops/terraform-aws
 devops/vercel-deployment
 documentation/doc-to-markdown
@@ -69,7 +79,11 @@ engineering/industrial-automation
 engineering/mechatronics-systems
 engineering/production-planning
 finance/accounting-basics
+finance/bank-reconciliation
+finance/controllership-close
+finance/financial-statements
 finance/tax-compliance
+finance/usage-based-billing
 frontend/accessibility
 frontend/css-best-practices
 frontend/form-validation
@@ -77,9 +91,11 @@ frontend/leaflet-maps
 frontend/nextjs-development
 frontend/performance
 frontend/react-patterns
+frontend/registry-distribution
 frontend/shadcn-ui
 frontend/state-management
 frontend/tanstack-query
+frontend/transactional-email-patterns
 git/git-workflow
 health/neurodiversity-support
 health/nutrition
@@ -121,6 +137,7 @@ music/political-jingle-writing
 music/suzuki-method
 projects/agile-scrum
 projects/project-setup
+projects/saas-blueprint-patterns
 quality/code-review-best-practices
 quality/context-optimization
 quality/refactoring-techniques
@@ -128,6 +145,8 @@ robotics/robotics
 science/applied-mathematics
 science/chemistry-basics
 science/physics-applied
+science/scientific-data-retrieval
+security/auth-plugin-architecture
 security/owasp-top-10
 security/rbac-authorization
 security/secure-coding
@@ -146,5 +165,6 @@ tools/terminal-productivity
 vision/onnx-object-detection
 vision/opencv-basics
 vision/rtsp-camera-ingestion
+web/browser-use-automation
 web/google-workspace-analytics
 web/web-scraping

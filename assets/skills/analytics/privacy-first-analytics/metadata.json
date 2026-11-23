@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:45:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "privacy-first-analytics",
+  "version": "0.1.0",
+  "category": "analytics",
+  "description": "Instrument product analytics with minimal event data, no cookies, UTC time, explicit opt-in features and a documented self-hosting boundary."
+}

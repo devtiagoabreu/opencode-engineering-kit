@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "registry-distribution",
+  "version": "0.1.0",
+  "category": "frontend",
+  "description": "Distribute code assets as copy-in registry items with manifests, namespaces and validation instead of opaque package dependencies."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T20:10:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "browser-use-automation",
+  "version": "0.1.0",
+  "category": "web",
+  "description": "Drive real browsers with a fetch-first triage, AX-tree interactions, tab lifecycle controls, secret-safe workflows and evidence-backed browser QA."
+}

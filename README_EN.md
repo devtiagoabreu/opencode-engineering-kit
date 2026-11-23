@@ -20,13 +20,13 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 150 (41 categories) |
-| Agents | 103 (36 categories) |
+| Skills | 170 (42 categories) |
+| Agents | 105 (38 categories) |
 | Prompts | 10 |
-| Templates | 4 |
+| Templates | 10 |
 | Playbooks | 3 |
 | Recipes | 2 |
-| Commands | 4 |
+| Commands | 7 |
 | Bundles | 2 |
 | Compositions | 2 |
 | Prompt chains | 2 |
@@ -220,6 +220,8 @@ cd opencode-engineering-kit
 - **Post-install drift:** run `npx opencode-engineering-kit doctor --dir <kit> --target <project> --fast` to check wiring and tracked-file drift (`.opencode/.kit-install.json`). If you see `modified/missing`, reinstall with `--force` or run `upgrade`.
 - **Safe disable:** `stop` removes only kit wiring from `opencode.json`; `start` restores it.
 - **Current limits:** supply-chain verification is still evolving (schema/scan/provenance/lock). See [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) for PR-02/PR-05 and [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) for the rules enforced today (maturity, provenance and links).
+- **Reference integrations:** capabilities adapted from the seventeen named external repositories are mapped in [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md) and [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md), with licenses and scope made explicit.
+- **Continuous learning:** the `/aprenda` command follows the canonical 20-repository queue in [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), including the official Receita Federal tax engines, and regenerates provenance-tagged `beta` assets.
 - **Security:** report vulnerabilities per [SECURITY.md](./SECURITY.md).
 
 ## Core vs optional/experimental
@@ -242,18 +244,18 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 
 | Category | Examples |
 |----------|----------|
-| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs |
-| `analytics` | Business Intelligence |
-| `automation` | n8n Workflow Automation |
-| `design` | Design System, UI/UX |
+| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs, Context Filesystem Memory, Memory Discipline, AI SDK Agent Patterns |
+| `analytics` | Business Intelligence, Privacy-First Analytics |
+| `automation` | n8n Workflow Automation, LLM Workflow Orchestration |
+| `design` | Design System, UI/UX, Diagram Design |
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, control and simulation |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise** |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
-| `frontend` | React, State Management, CSS, Accessibility |
+| `frontend` | React, State Management, CSS, Accessibility, Registry Distribution, Transactional Email Patterns |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning), **RBAC** |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning), **RBAC**, Auth Plugin Architecture |
 | `git` | Git Workflow |
 | `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
 | `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
@@ -261,12 +263,12 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `tools` | Advanced Git, Terminal, Repo → LLM, Code graph (Graphify) |
 | `quality` | Code Review, Refactoring, Context/token optimization |
 | `construction` | Construction execution, civil structures |
-| `finance` | Accounting, taxes (Brazilian Simples Nacional) |
+| `finance` | Accounting, taxes (Brazilian Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close |
 | `marketing` | Digital marketing, traffic management, political marketing (election law) |
-| `science` | Applied mathematics, physics, chemistry |
+| `science` | Applied mathematics, physics, chemistry, Scientific Data Retrieval |
 | `engineering` | Mechatronics, industrial automation, home automation, production planning |
 | `logistics` | Supply chain, **Route Optimization** |
-| `web` | Web scraping, Google Workspace/Looker Studio |
+| `web` | Web scraping, Google Workspace/Looker Studio, Browser Use Automation |
 | `management` | Lean Methodology |
 | `health` | Neurodiversity support (ASD/ADHD), nutrition, podiatry |
 | `cloud` | AWS and Google Cloud architecture |
@@ -277,7 +279,10 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `automotive` | Automotive diagnostics and repair |
 | `commercial` | E-commerce, CRM, plastics, weaving |
 | `humanities` | Geopolitics, political analysis, labor law, criminal law |
-| + architecture, code-review, community, database, projects | — |
+| `architecture` | Clean Architecture, Microservices, Plugin System, Harness Engineering Patterns |
+| `database` | PostgreSQL, RLS Tenancy, Database Branching Workflows |
+| `projects` | Project Setup, SaaS Blueprint Patterns |
+| + code-review, community | — |
 
 **LLM context focus:** new skills cover the trending context/token ecosystem on
 GitHub — `doc-to-markdown` ([MarkItDown](https://github.com/microsoft/markitdown)),
@@ -321,7 +326,7 @@ Portuguese, with headers compatible with the kit's tests.
 | Category | Personas |
 |----------|----------|
 | `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
-| `finance` | contador, fiscal |
+| `finance` | contador, fiscal, analista-financeiro, controladoria |
 | `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
 | `marketing` | marketing-digital, gestor-de-trafego, marketeiro-politico, criador-de-jingles-politicos |
 | `science` | matematico, fisico, quimico |

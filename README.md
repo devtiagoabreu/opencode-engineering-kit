@@ -19,13 +19,13 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 150 (41 categorias) |
-| Agents | 103 (36 categorias) |
+| Skills | 170 (42 categorias) |
+| Agents | 105 (38 categorias) |
 | Prompts | 10 |
-| Templates | 4 |
+| Templates | 10 |
 | Playbooks | 3 |
 | Recipes | 2 |
-| Comandos | 4 |
+| Comandos | 7 |
 | Bundles | 2 |
 | Composições | 2 |
 | Prompt chains | 2 |
@@ -218,6 +218,8 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 - **Contrato JSON do doctor:** `doctor --json` expõe `checks[].code` estável e `recommendations[]` acionáveis; útil para CI e automações.
 - **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
 - **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05 e [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) para as regras aplicadas hoje (maturidade, proveniência e links).
+- **Integrações referenciadas:** capacidades adaptadas de dezessete repositórios externos nomeados estão mapeadas em [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md) e [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md), com licenças e escopo explicitados.
+- **Aprendizado contínuo:** o comando `/aprenda` segue a fila canônica de 20 repositórios em [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), incluindo os motores fiscais oficiais da Receita Federal, e regera ativos `beta` com proveniência.
 - **Segurança:** reporte vulnerabilidades conforme [SECURITY.md](./SECURITY.md).
 
 ## Core vs opcional/experimental
@@ -240,18 +242,18 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 
 | Categoria | Exemplos |
 |-----------|----------|
-| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs |
-| `analytics` | Business Intelligence |
-| `automation` | n8n Workflow Automation |
-| `design` | Design System, UI/UX |
+| `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs, Context Filesystem Memory, Memory Discipline, AI SDK Agent Patterns |
+| `analytics` | Business Intelligence, Privacy-First Analytics |
+| `automation` | n8n Workflow Automation, LLM Workflow Orchestration |
+| `design` | Design System, UI/UX, Diagram Design |
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, controle e simulação |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise** |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
-| `frontend` | React, State Management, CSS, Acessibilidade |
+| `frontend` | React, State Management, CSS, Acessibilidade, Registry Distribution, Transactional Email Patterns |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills), **RBAC** |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills), **RBAC**, Auth Plugin Architecture |
 | `git` | Git Workflow |
 | `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
 | `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
@@ -259,12 +261,12 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `tools` | Git avançado, Terminal, Repo → LLM, Grafo de código (Graphify) |
 | `quality` | Code Review, Refactoring, Otimização de contexto/tokens |
 | `construction` | Execução de obras, estruturas civis |
-| `finance` | Contabilidade, tributos (Simples Nacional) |
+| `finance` | Contabilidade, tributos (Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close |
 | `marketing` | Marketing digital, gestão de tráfego, marketing político (lei eleitoral) |
-| `science` | Matemática aplicada, física, química |
+| `science` | Matemática aplicada, física, química, Scientific Data Retrieval |
 | `engineering` | Mecatrônica, automação industrial, automação residencial, planejamento de produção |
 | `logistics` | Supply chain, **Route Optimization** |
-| `web` | Web scraping, Google Workspace/Looker Studio |
+| `web` | Web scraping, Google Workspace/Looker Studio, Browser Use Automation |
 | `management` | Metodologia Lean |
 | `health` | Suporte à neurodiversidade (TEA/TDAH), nutrição, podologia |
 | `cloud` | Arquitetura AWS e Google Cloud |
@@ -275,7 +277,10 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `automotive` | Diagnóstico e reparo automotivo |
 | `commercial` | E-commerce, CRM, plásticos, tecelagem |
 | `humanities` | Geopolítica, análise política, direito trabalhista, direito penal |
-| + architecture, code-review, community, database, projects | — |
+| `architecture` | Clean Architecture, Microservices, Plugin System, Harness Engineering Patterns |
+| `database` | PostgreSQL, RLS Tenancy, Database Branching Workflows |
+| `projects` | Project Setup, SaaS Blueprint Patterns |
+| + code-review, community | — |
 
 **Foco em contexto para LLMs:** 4 skills novas cobrem o ecossistema de
 contexto/gerenciamento de tokens em alta no GitHub — `doc-to-markdown`
@@ -320,7 +325,7 @@ em português, com cabeçalhos compatíveis com os testes do kit.
 | Categoria | Personas |
 |-----------|----------|
 | `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
-| `finance` | contador, fiscal |
+| `finance` | contador, fiscal, analista-financeiro, controladoria |
 | `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
 | `marketing` | marketing-digital, gestor-de-trafego, marketeiro-politico, criador-de-jingles-politicos |
 | `science` | matematico, fisico, quimico |

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:40:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "transactional-email-patterns",
+  "version": "0.1.0",
+  "category": "frontend",
+  "description": "Build cross-client transactional email as typed components with preview-first iteration, plain-text fallback and accessibility defaults."
+}

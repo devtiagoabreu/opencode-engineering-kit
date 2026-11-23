@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:15:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "rls-tenancy-pattern",
+  "version": "0.1.0",
+  "category": "database",
+  "description": "Enforce multi-tenant authorization in PostgreSQL with row-level security, JWT claims, scoped service roles and tested policies."
+}

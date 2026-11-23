@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T20:20:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "scientific-data-retrieval",
+  "version": "0.1.0",
+  "category": "science",
+  "description": "Turn vague scientific data requests into bounded, reproducible API retrievals with a contract, provenance ledger and untrusted-payload handling."
+}

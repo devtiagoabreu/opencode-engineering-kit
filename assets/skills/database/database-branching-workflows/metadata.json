@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:10:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "database-branching-workflows",
+  "version": "0.1.0",
+  "category": "database",
+  "description": "Use copy-on-write database branches for preview environments, migration tests, isolated QA and point-in-time recovery without loading production."
+}

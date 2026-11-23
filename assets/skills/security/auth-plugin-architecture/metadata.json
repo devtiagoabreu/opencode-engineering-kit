@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:20:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "auth-plugin-architecture",
+  "version": "0.1.0",
+  "category": "security",
+  "description": "Design authentication as a typed plugin system with server and client contracts, schema extensions, hooks and organization-scoped authorization."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T22:10:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "controllership-close",
+  "version": "0.1.0",
+  "category": "finance",
+  "description": "Conduza o fechamento mensal da controladoria com calendário, conciliações, provisões, revisão e evidências auditáveis."
+}

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T20:15:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "memory-discipline",
+  "version": "0.1.0",
+  "category": "ai",
+  "description": "Apply a recall-before-work and write-at-resolution ritual for durable agent memory with tiers, provenance, privacy and eval receipts."
+}

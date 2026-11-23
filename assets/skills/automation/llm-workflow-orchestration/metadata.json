@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:30:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "llm-workflow-orchestration",
+  "version": "0.1.0",
+  "category": "automation",
+  "description": "Design explainable LLM workflows with typed nodes, human review points, failure branches, versioned definitions and traceable runs."
+}

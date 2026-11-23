@@ -1,5 +1,6 @@
 advogado-trabalhista
 ai-engineer
+analista-financeiro
 analista-geopolitico
 analista-politico
 architect
@@ -14,6 +15,7 @@ cabeleireiro
 c-developer
 code-reviewer
 contador
+controladoria
 coreografo
 cpp-developer
 criador-de-jingles-politicos

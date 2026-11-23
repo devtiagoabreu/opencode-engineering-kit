@@ -1,4 +1,7 @@
-  - review
+  - aprenda
+  - diagram
+  - harness-review
   - lint
-  - test
   - ocekit
+  - review
+  - test

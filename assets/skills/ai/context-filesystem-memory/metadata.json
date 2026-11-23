@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T20:05:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "context-filesystem-memory",
+  "version": "0.1.0",
+  "category": "ai",
+  "description": "Organize inspectable agent context as a virtual filesystem with layered summaries, scoped retrieval, durable rules and session commit workflows."
+}

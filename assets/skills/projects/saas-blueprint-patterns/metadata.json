@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:05:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "saas-blueprint-patterns",
+  "version": "0.1.0",
+  "category": "projects",
+  "description": "Assemble a SaaS starter from verified vertical slices covering auth, email, jobs, billing, uploads, deploy and AI-ready repository instructions."
+}

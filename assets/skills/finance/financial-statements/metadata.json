@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T22:05:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "financial-statements",
+  "version": "0.1.0",
+  "category": "finance",
+  "description": "Monte a DRE e concilie demonstrações contábeis com o razão, usando estrutura consistente, análises verticais/horizontais e rastreabilidade por conta."
+}

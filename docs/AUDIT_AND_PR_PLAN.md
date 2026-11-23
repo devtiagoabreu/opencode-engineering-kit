@@ -149,6 +149,19 @@ Local reference snapshot:
 - [x] `upgrade` reuses manifest profile/only when flags omitted; tests cover explicit override and global scope.
 - [ ] Default curated install UX and profile-aware upgrade messaging.
 
+### Reference capability integration (2026-11-23)
+- [x] Mapped capabilities from Awesome Harness Engineering, OpenViking, Browser Use, agentmemory, Scientific Agent Skills and Diagram Design in `docs/REFERENCE_CAPABILITIES.md`.
+- [x] Added 6 adapted skills, 3 templates and 2 commands with upstream provenance and `beta` maturity.
+- [x] Kept incompatible upstream implementations out of the kit: ideas and workflows only; no vendored source, icons or diagram galleries.
+
+### Platform reference capability integration (2026-11-23)
+- [x] Identified official repositories and licenses for Open SaaS, shadcn/ui, Neon, Supabase, Better Auth, AI SDK, Dify, Polar, React Email, Umami and Coolify.
+- [x] Added 11 adapted skills and 2 templates in `beta` with explicit upstream provenance.
+- [x] Recorded the mapping and the intentionally excluded upstream material in `docs/PLATFORM_REFERENCE_CAPABILITIES.md`.
+- [x] Kept restrictive/upstream-conditioned material (Dify license additions, third-party assets) at idea level only.
+- [x] Added the canonical continuous-learning queue (`docs/APRENDA_REPOSITORIOS.md`) and the `/aprenda` trigger command; 11 platform repos were named, while the request's "12" remains an open question.
+- [x] Added finance/controllership coverage requested for `aprenda`: bank-statement reconciliation, DRE construction, FP&A and monthly close, with `analista-financeiro` and `controladoria` agents.
+
 ### Remaining high-value gaps
 - [ ] PR-05 trust baseline: provenance/maturity visible in list/search/install, stronger risk policy.
 - [ ] PR-07 release discipline: changelog, publish gate, checksums, updated actions.

@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-08-16T13:23:06Z",
+  "generated": "2026-11-23T21:28:01Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -1254,6 +1254,20 @@
       ],
       "resolved": true
     },
+    "skills/ai-sdk-agent-patterns": {
+      "name": "ai-sdk-agent-patterns",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/context-filesystem-memory": {
+      "name": "context-filesystem-memory",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/deep-learning": {
       "name": "deep-learning",
       "type": "skills",
@@ -1282,6 +1296,13 @@
     },
     "skills/llm-multi-provider": {
       "name": "llm-multi-provider",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/memory-discipline": {
+      "name": "memory-discipline",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1319,6 +1340,13 @@
       ],
       "resolved": true
     },
+    "skills/privacy-first-analytics": {
+      "name": "privacy-first-analytics",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/clean-architecture": {
       "name": "clean-architecture",
       "type": "skills",
@@ -1336,6 +1364,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/harness-engineering-patterns": {
+      "name": "harness-engineering-patterns",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/microservices-design": {
@@ -1399,6 +1434,13 @@
     },
     "skills/screenwriting": {
       "name": "screenwriting",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/llm-workflow-orchestration": {
+      "name": "llm-workflow-orchestration",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1596,6 +1638,13 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/database-branching-workflows": {
+      "name": "database-branching-workflows",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/nosql-modeling": {
       "name": "nosql-modeling",
       "type": "skills",
@@ -1612,6 +1661,13 @@
     },
     "skills/postgresql-database": {
       "name": "postgresql-database",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/rls-tenancy-pattern": {
+      "name": "rls-tenancy-pattern",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1657,6 +1713,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/diagram-design": {
+      "name": "diagram-design",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/ui-ux-design": {
@@ -1740,6 +1803,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/self-host-deployment": {
+      "name": "self-host-deployment",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/terraform-aws": {
@@ -1910,8 +1980,36 @@
       "dependencies": [],
       "resolved": true
     },
+    "skills/bank-reconciliation": {
+      "name": "bank-reconciliation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/controllership-close": {
+      "name": "controllership-close",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/financial-statements": {
+      "name": "financial-statements",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/tax-compliance": {
       "name": "tax-compliance",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/usage-based-billing": {
+      "name": "usage-based-billing",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -1981,6 +2079,13 @@
       ],
       "resolved": true
     },
+    "skills/registry-distribution": {
+      "name": "registry-distribution",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/shadcn-ui": {
       "name": "shadcn-ui",
       "type": "skills",
@@ -2002,6 +2107,13 @@
     },
     "skills/tanstack-query": {
       "name": "tanstack-query",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/transactional-email-patterns": {
+      "name": "transactional-email-patterns",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -2328,6 +2440,13 @@
       ],
       "resolved": true
     },
+    "skills/saas-blueprint-patterns": {
+      "name": "saas-blueprint-patterns",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
     "skills/code-review-best-practices": {
       "name": "code-review-best-practices",
       "type": "skills",
@@ -2390,6 +2509,20 @@
     },
     "skills/physics-applied": {
       "name": "physics-applied",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/scientific-data-retrieval": {
+      "name": "scientific-data-retrieval",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/auth-plugin-architecture": {
+      "name": "auth-plugin-architecture",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],
@@ -2563,6 +2696,13 @@
           "version": ">=0.1.0"
         }
       ],
+      "resolved": true
+    },
+    "skills/browser-use-automation": {
+      "name": "browser-use-automation",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
       "resolved": true
     },
     "skills/google-workspace-analytics": {

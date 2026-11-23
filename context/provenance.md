@@ -139,6 +139,26 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `opencv-basics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `google-workspace-analytics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `web-scraping` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `harness-engineering-patterns` | Awesome Harness Engineering | https://github.com/ai-boost/awesome-harness-engineering | CC0-1.0 | 2026-11-23 |
+| `context-filesystem-memory` | OpenViking | https://github.com/volcengine/OpenViking | AGPL-3.0 (ideas only; no source text or code vendored) | 2026-11-23 |
+| `browser-use-automation` | Browser Use | https://github.com/browser-use/browser-use | MIT | 2026-11-23 |
+| `memory-discipline` | agentmemory | https://github.com/rohitg00/agentmemory | Apache-2.0 | 2026-11-23 |
+| `scientific-data-retrieval` | Scientific Agent Skills | https://github.com/K-Dense-AI/scientific-agent-skills | MIT | 2026-11-23 |
+| `diagram-design` | Diagram Design | https://github.com/cathrynlavery/diagram-design | MIT | 2026-11-23 |
+| `registry-distribution` | shadcn/ui | https://github.com/shadcn-ui/ui | MIT | 2026-11-23 |
+| `saas-blueprint-patterns` | Open SaaS | https://github.com/wasp-lang/open-saas | MIT | 2026-11-23 |
+| `database-branching-workflows` | Neon | https://github.com/neondatabase/neon | Apache-2.0 | 2026-11-23 |
+| `rls-tenancy-pattern` | Supabase | https://github.com/supabase/supabase | Apache-2.0 | 2026-11-23 |
+| `auth-plugin-architecture` | Better Auth | https://github.com/better-auth/better-auth | MIT | 2026-11-23 |
+| `ai-sdk-agent-patterns` | AI SDK | https://github.com/vercel/ai | Apache-2.0 | 2026-11-23 |
+| `llm-workflow-orchestration` | Dify | https://github.com/langgenius/dify | Dify Open Source License (Apache-2.0 with additional conditions; ideas only) | 2026-11-23 |
+| `usage-based-billing` | Polar | https://github.com/polarsource/polar | Apache-2.0 | 2026-11-23 |
+| `transactional-email-patterns` | React Email | https://github.com/resend/react-email | MIT | 2026-11-23 |
+| `privacy-first-analytics` | Umami | https://github.com/umami-software/umami | MIT | 2026-11-23 |
+| `self-host-deployment` | Coolify | https://github.com/coollabsio/coolify | Apache-2.0 | 2026-11-23 |
+| `bank-reconciliation` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
+| `financial-statements` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
+| `controllership-close` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 
 ## Personas (Agents)
 
@@ -198,6 +218,8 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `especialista-em-automacao-residencial` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `contador` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `fiscal` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `analista-financeiro` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
+| `controladoria` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `frontend-developer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `fullstack-developer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `mobile-developer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |

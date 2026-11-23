@@ -1,133 +1,16 @@
 # Dependency Graph
-# Generated: dom 16 ago 2026 10:22:47 -03
+# Generated: seg, 23 de nov de 2026 18:22:53
 
-## projects/agile-scrum
+## ai/ai-sdk-agent-patterns
   (no dependencies)
 
-## projects/project-setup
+## ai/context-filesystem-memory
   (no dependencies)
 
-## community/open-source-contributing
+## ai/deep-learning
   (no dependencies)
 
-## analytics/business-intelligence
-  (no dependencies)
-
-## architecture/event-driven-architecture
-  (no dependencies)
-
-## architecture/plugin-system
-  (no dependencies)
-
-## architecture/microservices-design
-  (no dependencies)
-
-## architecture/multi-tenant-saas
-  (no dependencies)
-
-## architecture/clean-architecture
-  (no dependencies)
-
-## frontend/leaflet-maps
-  (no dependencies)
-
-## frontend/tanstack-query
-  (no dependencies)
-
-## frontend/css-best-practices
-  (no dependencies)
-
-## frontend/form-validation
-  (no dependencies)
-
-## frontend/nextjs-development
-  (no dependencies)
-
-## frontend/shadcn-ui
-  (no dependencies)
-
-## frontend/accessibility
-  (no dependencies)
-
-## frontend/state-management
-  (no dependencies)
-
-## frontend/react-patterns
-  (no dependencies)
-
-## frontend/performance
-  (no dependencies)
-
-## engineering/industrial-automation
-  (no dependencies)
-
-## engineering/mechatronics-systems
-  (no dependencies)
-
-## engineering/production-planning
-  (no dependencies)
-
-## engineering/home-automation
-  (no dependencies)
-
-## embedded/raspberry-pi
-  (no dependencies)
-
-## embedded/esp8266-development
-  (no dependencies)
-
-## embedded/arduino-development
-  (no dependencies)
-
-## embedded/esp32-development
-  (no dependencies)
-
-## embedded/rtos-basics
-  (no dependencies)
-
-## music/political-jingle-writing
-  (no dependencies)
-
-## music/music-theory
-  (no dependencies)
-
-## music/brass
-  (no dependencies)
-
-## music/suzuki-method
-  (no dependencies)
-
-## music/piano
-  (no dependencies)
-
-## music/flute
-  (no dependencies)
-
-## music/drums
-  (no dependencies)
-
-## music/guitar
-  (no dependencies)
-
-## humanities/labor-law
-  (no dependencies)
-
-## humanities/criminal-law
-  (no dependencies)
-
-## humanities/political-analysis
-  (no dependencies)
-
-## humanities/geopolitics
-  (no dependencies)
-
-## science/applied-mathematics
-  (no dependencies)
-
-## science/chemistry-basics
-  (no dependencies)
-
-## science/physics-applied
+## ai/evolution-api
   (no dependencies)
 
 ## ai/free-llm-models
@@ -136,153 +19,37 @@
 ## ai/llm-multi-provider
   (no dependencies)
 
+## ai/memory-discipline
+  (no dependencies)
+
 ## ai/rag-llm
   (no dependencies)
 
-## ai/evolution-api
+## analytics/business-intelligence
   (no dependencies)
 
-## ai/deep-learning
+## analytics/privacy-first-analytics
   (no dependencies)
 
-## marketing/digital-marketing
+## architecture/clean-architecture
   (no dependencies)
 
-## marketing/traffic-management
+## architecture/event-driven-architecture
   (no dependencies)
 
-## marketing/political-campaign-marketing
+## architecture/harness-engineering-patterns
   (no dependencies)
 
-## methodology/git-worktrees
+## architecture/microservices-design
   (no dependencies)
 
-## methodology/two-stage-code-review
+## architecture/multi-tenant-saas
   (no dependencies)
 
-## methodology/writing-plans
+## architecture/plugin-system
   (no dependencies)
 
-## methodology/brainstorming
-  (no dependencies)
-
-## methodology/executing-plans
-  (no dependencies)
-
-## methodology/verification-before-completion
-  (no dependencies)
-
-## methodology/tdd
-  (no dependencies)
-
-## construction/civil-structures
-  (no dependencies)
-
-## construction/construction-execution
-  (no dependencies)
-
-## cloud/google-cloud-architecture
-  (no dependencies)
-
-## cloud/aws-cloud-architecture
-  (no dependencies)
-
-## tools/session-memory
-  (no dependencies)
-
-## tools/terminal-productivity
-  (no dependencies)
-
-## tools/ocekit-manager
-  (no dependencies)
-
-## tools/repo-to-llm
-  (no dependencies)
-
-## tools/git-advanced
-  (no dependencies)
-
-## tools/code-knowledge-graph
-  (no dependencies)
-
-## sports/personal-training
-  (no dependencies)
-
-## code-review/code-review-checklist
-  (no dependencies)
-
-## robotics/robotics
-  (no dependencies)
-
-## management/lean-methodology
-  (no dependencies)
-
-## vision/onnx-object-detection
-  (no dependencies)
-
-## vision/rtsp-camera-ingestion
-  (no dependencies)
-
-## vision/opencv-basics
-  (no dependencies)
-
-## database/oracle-database
-  (no dependencies)
-
-## database/postgresql-database
-  (no dependencies)
-
-## database/sqlalchemy-alembic
-  (no dependencies)
-
-## database/sql-server-database
-  (no dependencies)
-
-## database/nosql-modeling
-  (no dependencies)
-
-## database/sql-optimization
-  (no dependencies)
-
-## commercial/customer-relationship
-  (no dependencies)
-
-## commercial/fabric-mill-sales
-  (no dependencies)
-
-## commercial/ecommerce-commerce
-  (no dependencies)
-
-## commercial/plastics-industry-sales
-  (no dependencies)
-
-## automotive/vehicle-mechanics
-  (no dependencies)
-
-## automotive/aircraft-mechanics
-  (no dependencies)
-
-## devops/vercel-deployment
-  (no dependencies)
-
-## devops/terraform-aws
-  (no dependencies)
-
-## devops/incident-response
-  (no dependencies)
-
-## devops/kubernetes-best-practices
-  (no dependencies)
-
-## devops/ci-cd-pipeline
-
-## devops/monitoring-observability
-  (no dependencies)
-
-## devops/docker-best-practices
-  (no dependencies)
-
-## devops/onpremise-deployment
+## arts/dance-and-choreography
   (no dependencies)
 
 ## arts/fashion-design
@@ -291,58 +58,31 @@
 ## arts/hairdressing
   (no dependencies)
 
-## arts/dance-and-choreography
+## arts/makeup-artistry
   (no dependencies)
 
 ## arts/screenwriting
   (no dependencies)
 
-## arts/makeup-artistry
+## automation/llm-workflow-orchestration
   (no dependencies)
 
-## logistics/supply-chain-management
+## automation/n8n-workflow-automation
   (no dependencies)
 
-## logistics/route-optimization
+## automotive/aircraft-mechanics
   (no dependencies)
 
-## iot/sensor-integration
-  (no dependencies)
-
-## iot/mqtt-protocol
-  (no dependencies)
-
-## quality/code-review-best-practices
-  (no dependencies)
-
-## quality/refactoring-techniques
-  (no dependencies)
-
-## quality/context-optimization
-  (no dependencies)
-
-## health/nutrition
-  (no dependencies)
-
-## health/neurodiversity-support
-  (no dependencies)
-
-## security/secure-coding
-  (no dependencies)
-
-## security/skill-spector
-  (no dependencies)
-
-## security/owasp-top-10
-  (no dependencies)
-
-## security/rbac-authorization
-  (no dependencies)
-
-## backend/rest-api-design
+## automotive/vehicle-mechanics
   (no dependencies)
 
 ## backend/api-design
+  (no dependencies)
+
+## backend/authentication
+  (no dependencies)
+
+## backend/caching-strategies
   (no dependencies)
 
 ## backend/database-design
@@ -351,25 +91,114 @@
 ## backend/fastapi-development
   (no dependencies)
 
-## backend/authentication
+## backend/graphql-api
   (no dependencies)
 
 ## backend/prisma-orm
   (no dependencies)
 
-## backend/graphql-api
+## backend/rest-api-design
   (no dependencies)
 
-## backend/caching-strategies
+## cloud/aws-cloud-architecture
   (no dependencies)
 
-## web/web-scraping
+## cloud/google-cloud-architecture
   (no dependencies)
 
-## web/google-workspace-analytics
+## code-review/code-review-checklist
   (no dependencies)
 
-## education/vestibular-prep
+## commercial/customer-relationship
+  (no dependencies)
+
+## commercial/ecommerce-commerce
+  (no dependencies)
+
+## commercial/fabric-mill-sales
+  (no dependencies)
+
+## commercial/plastics-industry-sales
+  (no dependencies)
+
+## community/open-source-contributing
+  (no dependencies)
+
+## construction/civil-structures
+  (no dependencies)
+
+## construction/construction-execution
+  (no dependencies)
+
+## database/database-branching-workflows
+  (no dependencies)
+
+## database/nosql-modeling
+  (no dependencies)
+
+## database/oracle-database
+  (no dependencies)
+
+## database/postgresql-database
+  (no dependencies)
+
+## database/rls-tenancy-pattern
+  (no dependencies)
+
+## database/sql-optimization
+  (no dependencies)
+
+## database/sql-server-database
+  (no dependencies)
+
+## database/sqlalchemy-alembic
+  (no dependencies)
+
+## design/design-system
+  (no dependencies)
+
+## design/diagram-design
+  (no dependencies)
+
+## design/ui-ux-design
+  (no dependencies)
+
+## devops/ci-cd-pipeline
+
+## devops/docker-best-practices
+  (no dependencies)
+
+## devops/incident-response
+  (no dependencies)
+
+## devops/kubernetes-best-practices
+  (no dependencies)
+
+## devops/monitoring-observability
+  (no dependencies)
+
+## devops/onpremise-deployment
+  (no dependencies)
+
+## devops/self-host-deployment
+  (no dependencies)
+
+## devops/terraform-aws
+  (no dependencies)
+
+## devops/vercel-deployment
+  (no dependencies)
+
+## documentation/doc-to-markdown
+  (no dependencies)
+
+## education/assessment-and-feedback
+  (no dependencies)
+
+## education/classroom-management
+  (no dependencies)
+
+## education/evidence-based-teaching
   (no dependencies)
 
 ## education/lesson-planning
@@ -381,71 +210,302 @@
 ## education/teaching-methods
   (no dependencies)
 
-## education/assessment-and-feedback
+## education/vestibular-prep
   (no dependencies)
 
-## education/evidence-based-teaching
+## embedded/arduino-development
   (no dependencies)
 
-## education/classroom-management
+## embedded/esp32-development
   (no dependencies)
 
-## automation/n8n-workflow-automation
+## embedded/esp8266-development
   (no dependencies)
 
-## documentation/doc-to-markdown
+## embedded/raspberry-pi
   (no dependencies)
 
-## languages/cpp-best-practices
+## embedded/rtos-basics
   (no dependencies)
 
-## languages/language-learning
+## engineering/home-automation
   (no dependencies)
 
-## languages/typescript-best-practices
+## engineering/industrial-automation
   (no dependencies)
 
-## languages/javascript-best-practices
+## engineering/mechatronics-systems
   (no dependencies)
 
-## languages/csharp-best-practices
-  (no dependencies)
-
-## languages/c-best-practices
-  (no dependencies)
-
-## languages/php-best-practices
-  (no dependencies)
-
-## languages/delphi-best-practices
-  (no dependencies)
-
-## languages/python-best-practices
-  (no dependencies)
-
-## testing/integration-testing
-  (no dependencies)
-
-## testing/unit-testing
-
-## testing/e2e-testing
-  (no dependencies)
-
-## testing/python-testing
+## engineering/production-planning
   (no dependencies)
 
 ## finance/accounting-basics
   (no dependencies)
 
+## finance/bank-reconciliation
+  (no dependencies)
+
+## finance/controllership-close
+  (no dependencies)
+
+## finance/financial-statements
+  (no dependencies)
+
 ## finance/tax-compliance
+  (no dependencies)
+
+## finance/usage-based-billing
+  (no dependencies)
+
+## frontend/accessibility
+  (no dependencies)
+
+## frontend/css-best-practices
+  (no dependencies)
+
+## frontend/form-validation
+  (no dependencies)
+
+## frontend/leaflet-maps
+  (no dependencies)
+
+## frontend/nextjs-development
+  (no dependencies)
+
+## frontend/performance
+  (no dependencies)
+
+## frontend/react-patterns
+  (no dependencies)
+
+## frontend/registry-distribution
+  (no dependencies)
+
+## frontend/shadcn-ui
+  (no dependencies)
+
+## frontend/state-management
+  (no dependencies)
+
+## frontend/tanstack-query
+  (no dependencies)
+
+## frontend/transactional-email-patterns
   (no dependencies)
 
 ## git/git-workflow
   (no dependencies)
 
-## design/ui-ux-design
+## health/neurodiversity-support
   (no dependencies)
 
-## design/design-system
+## health/nutrition
+  (no dependencies)
+
+## humanities/criminal-law
+  (no dependencies)
+
+## humanities/geopolitics
+  (no dependencies)
+
+## humanities/labor-law
+  (no dependencies)
+
+## humanities/political-analysis
+  (no dependencies)
+
+## iot/mqtt-protocol
+  (no dependencies)
+
+## iot/sensor-integration
+  (no dependencies)
+
+## languages/c-best-practices
+  (no dependencies)
+
+## languages/cpp-best-practices
+  (no dependencies)
+
+## languages/csharp-best-practices
+  (no dependencies)
+
+## languages/delphi-best-practices
+  (no dependencies)
+
+## languages/javascript-best-practices
+  (no dependencies)
+
+## languages/language-learning
+  (no dependencies)
+
+## languages/php-best-practices
+  (no dependencies)
+
+## languages/python-best-practices
+  (no dependencies)
+
+## languages/typescript-best-practices
+  (no dependencies)
+
+## logistics/route-optimization
+  (no dependencies)
+
+## logistics/supply-chain-management
+  (no dependencies)
+
+## management/lean-methodology
+  (no dependencies)
+
+## marketing/digital-marketing
+  (no dependencies)
+
+## marketing/political-campaign-marketing
+  (no dependencies)
+
+## marketing/traffic-management
+  (no dependencies)
+
+## methodology/brainstorming
+  (no dependencies)
+
+## methodology/executing-plans
+  (no dependencies)
+
+## methodology/git-worktrees
+  (no dependencies)
+
+## methodology/tdd
+  (no dependencies)
+
+## methodology/two-stage-code-review
+  (no dependencies)
+
+## methodology/verification-before-completion
+  (no dependencies)
+
+## methodology/writing-plans
+  (no dependencies)
+
+## music/brass
+  (no dependencies)
+
+## music/drums
+  (no dependencies)
+
+## music/flute
+  (no dependencies)
+
+## music/guitar
+  (no dependencies)
+
+## music/music-theory
+  (no dependencies)
+
+## music/piano
+  (no dependencies)
+
+## music/political-jingle-writing
+  (no dependencies)
+
+## music/suzuki-method
+  (no dependencies)
+
+## projects/agile-scrum
+  (no dependencies)
+
+## projects/project-setup
+  (no dependencies)
+
+## projects/saas-blueprint-patterns
+  (no dependencies)
+
+## quality/code-review-best-practices
+  (no dependencies)
+
+## quality/context-optimization
+  (no dependencies)
+
+## quality/refactoring-techniques
+  (no dependencies)
+
+## robotics/robotics
+  (no dependencies)
+
+## science/applied-mathematics
+  (no dependencies)
+
+## science/chemistry-basics
+  (no dependencies)
+
+## science/physics-applied
+  (no dependencies)
+
+## science/scientific-data-retrieval
+  (no dependencies)
+
+## security/auth-plugin-architecture
+  (no dependencies)
+
+## security/owasp-top-10
+  (no dependencies)
+
+## security/rbac-authorization
+  (no dependencies)
+
+## security/secure-coding
+  (no dependencies)
+
+## security/skill-spector
+  (no dependencies)
+
+## sports/personal-training
+  (no dependencies)
+
+## testing/e2e-testing
+  (no dependencies)
+
+## testing/integration-testing
+  (no dependencies)
+
+## testing/python-testing
+  (no dependencies)
+
+## testing/unit-testing
+
+## tools/code-knowledge-graph
+  (no dependencies)
+
+## tools/git-advanced
+  (no dependencies)
+
+## tools/ocekit-manager
+  (no dependencies)
+
+## tools/repo-to-llm
+  (no dependencies)
+
+## tools/session-memory
+  (no dependencies)
+
+## tools/terminal-productivity
+  (no dependencies)
+
+## vision/onnx-object-detection
+  (no dependencies)
+
+## vision/opencv-basics
+  (no dependencies)
+
+## vision/rtsp-camera-ingestion
+  (no dependencies)
+
+## web/browser-use-automation
+  (no dependencies)
+
+## web/google-workspace-analytics
+  (no dependencies)
+
+## web/web-scraping
   (no dependencies)
 

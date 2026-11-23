@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T22:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "bank-reconciliation",
+  "version": "0.1.0",
+  "category": "finance",
+  "description": "Concilie extratos bancários com o razão e o caixa usando regras de correspondência, trilha de evidências e tratamento explícito de divergências."
+}

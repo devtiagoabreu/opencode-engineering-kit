@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-23T21:50:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "self-host-deployment",
+  "version": "0.1.0",
+  "category": "devops",
+  "description": "Deploy and operate applications on infrastructure you control with an explicit control-plane boundary, resource model, previews, rollbacks and backup discipline."
+}
