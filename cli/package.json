@@ -16,7 +16,8 @@
     "README.md"
   ],
   "scripts": {
-    "test": "node --test test/*.test.js"
+    "test": "node --test test/*.test.js",
+    "prepublishOnly": "npm test && npm pack --dry-run"
   },
   "engines": {
     "node": ">=18"
