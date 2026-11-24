@@ -1,7 +1,7 @@
 # Handoff de sessão — estado para continuar na próxima sessão
 
-**Registrado em:** 2026-11-24  
-**Branch:** `main` · **HEAD:** `b820ea2` · **27 commits à frente de `origin/main`** · **sem push**  
+**Registrado em:** 2026-11-24<br>
+**Branch:** `main` · **HEAD da correção de prontidão:** `e3a4aaf` · **30 commits à frente de `origin/main` após este handoff** · **sem push**<br>
 **Árvore de trabalho:** limpa no momento deste registro.
 
 Este documento é o ponto de partida da próxima sessão. Ele registra o que foi feito, por que, o que já passou nos gates e o que ainda está em aberto. Atualize-o ao final da próxima sessão.
@@ -29,6 +29,8 @@ Integrar capacidades reutilizáveis de repositórios de referência ao kit como 
 | `228522c` | `quality+ci: enforce explicit asset maturity/provenance/link policy` — base de política (PR-02) |
 | `7a928ec` | `feat: integrate reference capabilities and finance learning assets` — integrações de referência, finanças/controladoria e entrada dos motores fiscais na fila |
 | `b820ea2` | `feat: learn official fiscal engine integration patterns` — skill/template fiscais e mapeamento oficial |
+| `e357556` | `docs: record session handoff for continuity` — este documento e os links nos READMEs |
+| `e3a4aaf` | `fix: make the kit installable and diagnosable end to end` — prontidão de instalação, doctor estrito, scripts shell, docs e testes |
 
 ## 4. Ativos criados/adaptados
 
@@ -72,7 +74,9 @@ Nada de código Java/Go, SQL, banco SQLite, XSD, PDF, binário, logo ou document
 - `docs/FISCAL_ENGINE_CAPABILITIES.md`, `docs/REFERENCE_CAPABILITIES.md`, `docs/PLATFORM_REFERENCE_CAPABILITIES.md`.
 - `context/provenance.md`: linhas de proveniência de skills **e** nova seção `## Templates`, incluindo `fiscal-calculation-record` (MIT, ReceitaFederal, 2026-11-24).
 - `README.md` / `README_EN.md`: contagens, links de integrações (agora 20 repos) e linha da categoria `finance` com Fiscal Engine Integration.
-- `CHANGELOG.md` e `docs/AUDIT_AND_PR_PLAN.md`: entradas para finanças e motores fiscais.
+- `CHANGELOG.md` e `docs/AUDIT_AND_PR_PLAN.md`: entradas para finanças, motores fiscais e a passada de prontidão de instalação.
+- `cli/README.md`, `cli/src/{install,manage,kit-utils,doctor,upgrade}.js`: instalação copia `core/`, `scripts/` e `docs/`; doctor estrito; wiring fiel ao manifesto; ajuda e docs corrigidos.
+- `README.md` / `README_EN.md` / `docs/{USER_GUIDE,GUIA_USUARIO}.md`: orientam a rodar `list`, `search` e `doctor` da raiz do projeto instalado.
 - Regenerados: `core/discovery/index/*`, `core/registry/index/*`, `core/registry/manifest.json`, `core/resolver/lockfile.json`, `core/resolver/dependency-graph.txt`, `core/version/compatibility-matrix.json`.
 
 ## 6. Estado validado
@@ -84,7 +88,7 @@ Contagens finais: **171 skills · 105 agents · 10 prompts · 11 templates · 7 
 | `python scripts/validate_assets.py --root . --check-manifest --check-links --strict-policy --json` | `ok: true`, `errors: []`, política `schema_version: 1`, `maturity_default: beta`, 5 links aspiracionais em allowlist |
 | `python scripts/check_utf8.py .` | ok |
 | `python scripts/sync_readme_counts.py --root . --check` | ok |
-| `npm test` (em `cli/`) | **22/22 pass**, 0 falhas |
+| `npm test` (em `cli/`) | **26/26 pass**, 0 falhas (inclui os 4 testes novos de instalação/wiring) |
 
 Avisos não bloqueantes: 5 links aspiracionais de arquitetura permitidos até 2026-12-31 e placeholders de templates ignorados pela checagem de links.
 
@@ -93,7 +97,8 @@ Avisos não bloqueantes: 5 links aspiracionais de arquitetura permitidos até 20
 - Unidade `C:` sem espaço livre. `npm test` e scripts Python precisam de `TEMP`, `TMP`, `TMPDIR` e `npm_config_cache` apontando para `E:/dev/opencode-engineering-kit/references/`.
 - Comandos bash passam por `C:\Program Files\Git\bin\bash.exe`; o Python no Windows não entende caminhos Git Bash (`/e/...`) — usar caminhos `E:/...` nas variáveis de ambiente.
 - `scripts/test.sh` tem **4 falhas pré-existentes/de ambiente** (paths Git Bash no Python Windows e limiares de performance com `C:` cheio). Não são regressões deste trabalho.
-- Logs e scripts auxiliares de validação ficam em `references/` (gitignored): `fiscal_finalize.sh`, `fiscal-validate.log`, `fiscal-npm-test.log`, `precommit_check.sh`, `precommit.log`, `commit_fiscal.sh`, `verify_commit.sh`, `verify-commit.txt`.
+- Logs e scripts auxiliares de validação ficam em `references/` (gitignored): `fiscal_finalize.sh`, `fiscal-validate.log`, `fiscal-npm-test.log`, `precommit_check.sh`, `precommit.log`, `commit_fiscal.sh`, `verify_commit.sh`, `verify-commit.txt`, `install_smoke.sh`, `install-smoke.log`, `npm_test_final.sh`, `npm-test-final.log`, `commit_readiness.sh`.
+- Smoke test de instalação（`references/install_smoke.sh`）valida: dry-run → install → status → `list`/`search`/`doctor` a partir do projeto instalado → stop/start → upgrade dry-run. Resultado: `doctor` com `passed: true`, 0 falhas, e nenhum `error:` no log.
 
 ### Sequência de regeneração
 
@@ -122,7 +127,8 @@ python scripts/sync_readme_counts.py --root . --check
 2. Continuar a fila `/aprenda` a partir do que ainda não foi convertido em ativo; revalidar versões/endpoints dos motores fiscais a cada rodada (o documento registra o estado em 2026-11-24).
 3. Promover ativos a `stable` **somente** após revisão de qualidade e confirmação de licença/versão, sempre via `profiles/core.json`.
 4. Corrigir `scripts/test.sh` para paths Windows e limiares realistas, se o usuário quiser abrir esse escopo.
-5. **Não push** sem autorização explícita (27 commits locais aguardando).
+5. **Não push** sem autorização explícita (30 commits locais aguardando). O npm package `opencode-engineering-kit` também não está publicado (registry 404) — publicar exige credenciais; até lá, `npx ... install` sem `--source` busca o snapshot antigo de `main`.
+6. Se o usuário autorizar: fazer push de `main` e publicar `cli/` no npm, depois validar `npx opencode-engineering-kit --version` e `npx ... install` sem `--source`.
 
 ## 9. Frases-chave para localizar no repo
 
