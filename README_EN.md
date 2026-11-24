@@ -169,6 +169,8 @@ npx opencode-engineering-kit doctor --dir . --target . --fast
 npx opencode-engineering-kit upgrade --dry-run
 ```
 
+> `list`, `search` and `doctor` auto-detect an installed project: they work from the project root because the installer copies `core/`, `scripts/` and `docs/` into `.opencode/`.
+
 ---
 
 ### Method 2 — Global install script (via curl)

@@ -13,9 +13,13 @@ Usage:
 
 Options (same as install):
   --target <dir>    Target project directory (default: current directory)
+  --source <dir>    Use a local kit checkout instead of downloading from GitHub
+  --global          Upgrade the global OpenCode config
+  --profile <name>  Curated profile from profiles/*.json
   --repo <repo>     GitHub repository to fetch from (default: devtiagoabreu/opencode-engineering-kit)
   --branch <name>   Git branch/tag (default: main)
-  --only <list>     Comma-separated subset: skills,agents,commands,context,assets
+  --only <list>     Comma-separated subset: skills,agents,commands,context,assets,core,scripts,docs
+  --verbose         Print every copied file
   --dry-run         Print what would be done without touching the filesystem
   --help            Show this help
 

@@ -166,6 +166,8 @@ npx opencode-engineering-kit doctor --dir . --target . --fast --json  # contrato
 npx opencode-engineering-kit upgrade --dry-run
 ```
 
+> `list`, `search` e `doctor` detectam automaticamente um projeto instalado: rodam a partir da raiz do projeto porque o instalador copia `core/`, `scripts/` e `docs/` para `.opencode/`.
+
 ---
 
 ### Método 2 — Script de instalação global (via curl)

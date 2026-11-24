@@ -21,16 +21,20 @@ export function parseCommonArgs(argv) {
   return args;
 }
 
+function looksLikeKit(root) {
+  return fs.existsSync(path.join(root, "assets/skills")) &&
+    fs.existsSync(path.join(root, "core")) &&
+    fs.existsSync(path.join(root, "context"));
+}
+
 export function findKitRoot(dir) {
   const resolved = path.resolve(dir);
-  if (
-    fs.existsSync(path.join(resolved, "assets/skills")) &&
-    fs.existsSync(path.join(resolved, "core")) &&
-    fs.existsSync(path.join(resolved, "context"))
-  ) {
-    return resolved;
-  }
-  throw new Error(`"${resolved}" is not a kit checkout (expected assets/, core/ and context/). Use --dir to point at the kit.`);
+  if (looksLikeKit(resolved)) return resolved;
+  // A default install copies core/ and scripts/ into .opencode/, so the
+  // installed project itself is also a valid kit root for read-only commands.
+  const installed = path.join(resolved, ".opencode");
+  if (looksLikeKit(installed)) return installed;
+  throw new Error(`"${resolved}" is not a kit checkout or an installed project (expected assets/, core/ and context/). Use --dir to point at the kit.`);
 }
 
 export function countSkills(kitRoot) {

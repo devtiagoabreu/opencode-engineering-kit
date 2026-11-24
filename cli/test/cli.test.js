@@ -5,6 +5,7 @@ import path from "node:path";
 import os from "node:os";
 import { fileURLToPath } from "node:url";
 import { collect } from "../src/list.js";
+import { findKitRoot } from "../src/kit-utils.js";
 import { search } from "../src/search.js";
 import { doctor, recommendations } from "../src/doctor.js";
 import { main as exportMain } from "../src/export.js";
@@ -28,6 +29,15 @@ beforeEach(() => {
 afterEach(() => {
   process.chdir(cwd);
   fs.rmSync(tmp, { recursive: true, force: true });
+});
+
+test("findKitRoot detects a kit checkout and an installed project", () => {
+  assert.equal(findKitRoot(KIT_SOURCE), KIT_SOURCE);
+  fs.mkdirSync(path.join(target, ".opencode/assets/skills/demo"), { recursive: true });
+  fs.mkdirSync(path.join(target, ".opencode/core"), { recursive: true });
+  fs.mkdirSync(path.join(target, ".opencode/context"), { recursive: true });
+  assert.equal(findKitRoot(target), path.join(target, ".opencode"));
+  assert.throws(() => findKitRoot(path.join(tmp, "empty")), /not a kit checkout or an installed project/);
 });
 
 test("collect lists skills and agents from the kit", () => {

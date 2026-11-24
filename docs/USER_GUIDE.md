@@ -143,7 +143,7 @@ When the kit is **installed in your project** (`npx opencode-engineering-kit ins
 
 ### How it works
 
-The installer copies `context/AUTO_USAGE.md` to `.opencode/context/auto_usage.md` and registers it in `opencode.json` under `instructions`. From then on, for each task the assistant:
+The installer copies `context/AUTO_USAGE.md` to `.opencode/context/AUTO_USAGE.md` and registers it in `opencode.json` under `instructions`. From then on, for each task the assistant:
 
 1. **Checks** for a relevant skill in `.opencode/skills/` (e.g., `nextjs-development`, `postgresql-database`).
 2. **Checks** for a relevant persona in `.opencode/agents/` (e.g., `nextjs-developer`, `postgresql-dba`).
@@ -223,10 +223,10 @@ cd /path/to/your-project
 npx opencode-engineering-kit install
 ```
 
-The installer downloads the kit and creates the `.opencode/` directory inside your project, with skills, agents, commands, context, prompts, playbooks and templates, and wires up `opencode.json`. Confirm the installation:
+The installer downloads the kit and creates the `.opencode/` directory inside your project, with skills, agents, commands, context, prompts, playbooks, templates, `core/`, `scripts/` and `docs/`, and wires up `opencode.json`. Confirm the installation from the project root — `doctor` detects the installed layout automatically:
 
 ```bash
-npx opencode-engineering-kit doctor
+npx opencode-engineering-kit doctor --fast
 ```
 
 ### Step 2 — Find skills and personas for your stack

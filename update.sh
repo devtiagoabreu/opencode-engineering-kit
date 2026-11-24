@@ -121,8 +121,9 @@ update() {
     log "Baixando versão mais recente..."
     git clone --depth 1 "$REPO_URL" "$TEMP_DIR"
     
-    # Detectar drift antes de atualizar
-    drift_check
+    # Detectar drift antes de atualizar. Um drift (ou manifest ausente) é
+    # informativo: a atualização deve continuar e realinhar os arquivos.
+    drift_check || warn "Continuando a atualização apesar do drift detectado."
     
     # Backup
     backup

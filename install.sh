@@ -76,6 +76,7 @@ install() {
     cp -r "$TEMP_DIR/assets" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/context" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/scripts" "$INSTALL_DIR/"
+    cp -r "$TEMP_DIR/core" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/docs" "$INSTALL_DIR/"
     cp -r "$TEMP_DIR/examples" "$INSTALL_DIR/"
     cp "$TEMP_DIR/README.md" "$INSTALL_DIR/"
@@ -84,6 +85,7 @@ install() {
     
     # Make scripts executable
     chmod +x "$INSTALL_DIR/scripts/"*.sh 2>/dev/null || true
+    find "$INSTALL_DIR/core" -name "*.sh" -exec chmod +x {} \; 2>/dev/null || true
     
     log "Installation complete!"
     log "Installation directory: $INSTALL_DIR"

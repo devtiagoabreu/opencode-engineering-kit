@@ -163,9 +163,18 @@ Local reference snapshot:
 - [x] Added finance/controllership coverage requested for `aprenda`: bank-statement reconciliation, DRE construction, FP&A and monthly close, with `analista-financeiro` and `controladoria` agents.
 - [x] Learned from the three official Receita Federal calculators: derived `fiscal-engine-integration` and `fiscal-calculation-record` with explicit MIT provenance; no upstream code, database, XSD or binaries vendored. Mapping in `docs/FISCAL_ENGINE_CAPABILITIES.md`.
 
+### Install readiness pass (2026-11-24)
+- [x] Audited end-to-end install/doctor/publish flow; recorded concrete blockers.
+- [x] Installer now copies `core/`, `scripts/` and `docs/` into `.opencode/`, making `list`, `search`, `doctor`, pointer skills and command links work from an installed project.
+- [x] Partial installs wire only the groups actually installed; `start` restores the exact recorded wiring; status treats any kit wiring as enabled.
+- [x] `doctor` runs strict validation (links + policy), UTF-8 and README count checks; skipped checks are marked `skipped: true`.
+- [x] `install.sh --check` and `update.sh` drift handling fixed; docs/help/mojibake drift corrected.
+- [x] Added smoke coverage for dry-run → install → status → list/search/doctor → stop/start → upgrade dry-run, plus CLI unit tests for the new behavior.
+
 ### Remaining high-value gaps
 - [ ] PR-05 trust baseline: provenance/maturity visible in list/search/install, stronger risk policy.
-- [ ] PR-07 release discipline: changelog, publish gate, checksums, updated actions.
+- [ ] PR-07 release discipline: publish the `cli/` package to npm (registry currently 404), add a gated publish/checksum step to `release.yml`, then verify `npx opencode-engineering-kit --version`.
+- [ ] Push the local commits so `install.js` fetches the current kit from `main` instead of the older August snapshot (27+ commits ahead; requires user authorization).
 - [ ] Windows/CI portability smoke and bash-independent quality path.
 
 ## Definition of Done for This Direction

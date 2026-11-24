@@ -76,3 +76,20 @@ test("stop/start only touch scopes that are installed", async () => {
   const result = startStop("stop", {});
   assert.equal(result.handled.length, 0, "nothing to stop when not installed");
 });
+
+test("start restores only the wiring recorded at install time", async () => {
+  await install({ target, source: KIT_SOURCE, only: ["context"], profile: "core", force: true, dryRun: false, verbose: false });
+  const cfgPath = path.join(target, "opencode.json");
+  const before = JSON.parse(fs.readFileSync(cfgPath, "utf8"));
+  assert.ok(before.instructions.length > 0 && before.instructions.length < 12, "core profile wires a subset");
+
+  fs.writeFileSync(path.join(target, ".opencode/context/EXTRA_LOCAL.md"), "local note");
+  startStop("stop", {});
+  const stopped = JSON.parse(fs.readFileSync(cfgPath, "utf8"));
+  assert.equal((stopped.instructions ?? []).length, 0, "stop removed wiring");
+
+  startStop("start", {});
+  const restored = JSON.parse(fs.readFileSync(cfgPath, "utf8"));
+  assert.deepEqual(restored.instructions, before.instructions, "start restored curated wiring only");
+  assert.ok(!restored.instructions.some((i) => i.includes("EXTRA_LOCAL")), "unmanaged context not wired");
+});

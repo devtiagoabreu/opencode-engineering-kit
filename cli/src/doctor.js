@@ -42,8 +42,8 @@ export function parseArgs(argv) {
   return args;
 }
 
-function check(code, name, pass, detail) {
-  return { code, name, pass, detail };
+function check(code, name, pass, detail, skipped = false) {
+  return { code, name, pass, detail, skipped };
 }
 
 function commandAvailable(cmd) {
@@ -63,6 +63,7 @@ function bashUsable() {
 
 function runPython(kitRoot, scriptRel, extraArgs = []) {
   const script = path.join(kitRoot, scriptRel);
+  if (!fs.existsSync(script)) return { cmd: null, skipped: true, reason: `${scriptRel} not present`, status: 127, stdout: "", stderr: "", script };
   for (const cmd of ["python3", "python"]) {
     if (!commandAvailable(cmd)) continue;
     const r = run(cmd, [script, ...extraArgs], { cwd: kitRoot });
@@ -248,11 +249,25 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
   }
   checks.push(check("resolver.dependencies.resolved", "all dependencies resolved", unresolved === 0, unresolved < 0 ? "lockfile missing" : `${unresolved} unresolved`));
 
-  const validation = runPython(kitRoot, "scripts/validate_assets.py", ["--root", ".", "--check-manifest"]);
+  const validation = runPython(kitRoot, "scripts/validate_assets.py", ["--root", ".", "--check-manifest", "--check-links", "--strict-policy"]);
   if (validation.cmd) {
     checks.push(check("assets.validation", "asset schema/manifest validation", validation.status === 0, validation.status === 0 ? "PASS" : "FAIL"));
   } else {
-    checks.push(check("assets.validation", "asset schema/manifest validation", true, "skipped (python not found)"));
+    checks.push(check("assets.validation", "asset schema/manifest validation", true, `skipped (${validation.reason || "python not found"})`, true));
+  }
+
+  const encoding = runPython(kitRoot, "scripts/check_utf8.py", ["."]);
+  if (encoding.cmd) {
+    checks.push(check("assets.encoding", "tracked files are UTF-8", encoding.status === 0, encoding.status === 0 ? "PASS" : "FAIL"));
+  } else {
+    checks.push(check("assets.encoding", "tracked files are UTF-8", true, `skipped (${encoding.reason || "python not found"})`, true));
+  }
+
+  const counts = runPython(kitRoot, "scripts/sync_readme_counts.py", ["--root", ".", "--check"]);
+  if (counts.cmd) {
+    checks.push(check("assets.readme_counts", "README counts match manifest", counts.status === 0, counts.status === 0 ? "PASS" : "FAIL"));
+  } else {
+    checks.push(check("assets.readme_counts", "README counts match manifest", true, `skipped (${counts.reason || "python not found"})`, true));
   }
 
   const scanScript = path.join(kitRoot, "core/security/skill-scan.sh");
@@ -261,7 +276,7 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
     const scan = run("bash", [scanScript]);
     checks.push(check("security.skill_scan", "skill content security scan", scan.status === 0, scan.status === 0 ? "PASS" : "FAIL"));
   } else {
-    checks.push(check("security.skill_scan", "skill content security scan", true, `skipped (${bash.reason})`));
+    checks.push(check("security.skill_scan", "skill content security scan", true, `skipped (${bash.reason})`, true));
   }
 
   const vc = vaultConsistency(kitRoot);
@@ -282,7 +297,7 @@ export function doctor(kitRoot, { fast, target = null, global = false } = {}) {
       const ok = tests.status === 0 && passed && passed[2] === "0";
       checks.push(check("tests.suite", "test suite", ok, ok && passed ? `${passed[1]} passed` : "failed"));
     } else {
-      checks.push(check("tests.suite", "test suite", true, `skipped (${bash.reason})`));
+      checks.push(check("tests.suite", "test suite", true, `skipped (${bash.reason})`, true));
     }
   }
 

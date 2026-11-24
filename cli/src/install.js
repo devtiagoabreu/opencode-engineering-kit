@@ -29,7 +29,7 @@ Options:
   --branch <name>   Git branch/tag of the kit (default: ${DEFAULT_BRANCH})
   --global          Install into the global OpenCode config (~/.config/opencode/)
   --profile <name>  Install a curated profile from profiles/*.json (core, backend, frontend, devops, ai, brasil, full)
-  --only <list>     Comma-separated subset: skills,agents,commands,context,assets
+  --only <list>     Comma-separated subset: skills,agents,commands,context,assets,core,scripts,docs
   --force           Overwrite existing files in .opencode/
   --dry-run         Print what would be done without touching the filesystem
   --verbose         Print every copied file
@@ -62,6 +62,11 @@ const GROUPS = {
   commands: { from: "assets/commands", to: "commands", mode: "dir" },
   context: { from: "context", to: "context", mode: "dir" },
   assets: { from: "assets", to: "assets", mode: "dir" },
+  // Installed alongside the assets so list/search/doctor and pointer skills
+  // keep working from the consumer project, not only from a kit checkout.
+  core: { from: "core", to: "core", mode: "dir" },
+  scripts: { from: "scripts", to: "scripts", mode: "dir" },
+  docs: { from: "docs", to: "docs", mode: "dir" },
 };
 
 function log(msg) {
@@ -285,7 +290,7 @@ function copyGroupTo(source, destRoot, group, opts, profile) {
   return copyDir(src, dest, opts);
 }
 
-function mergeConfig(target, ctxFiles, { global = false } = {}) {
+function mergeConfig(target, ctxFiles, { global = false, includeSkills = true } = {}) {
   const cfgPath = path.join(target, "opencode.json");
   let cfg = { $schema: "https://opencode.ai/config.json" };
   if (fs.existsSync(cfgPath)) {
@@ -294,7 +299,7 @@ function mergeConfig(target, ctxFiles, { global = false } = {}) {
   cfg.skills = cfg.skills ?? {};
   cfg.skills.paths = cfg.skills.paths ?? [];
   const skillsPath = global ? path.join(target, "skills") : ".opencode/skills";
-  if (!cfg.skills.paths.includes(skillsPath)) cfg.skills.paths.push(skillsPath);
+  if (includeSkills && !cfg.skills.paths.includes(skillsPath)) cfg.skills.paths.push(skillsPath);
   cfg.instructions = cfg.instructions ?? [];
   for (const f of ctxFiles) {
     const rel = global ? path.join(target, "context", f) : `.opencode/context/${f}`;
@@ -304,6 +309,7 @@ function mergeConfig(target, ctxFiles, { global = false } = {}) {
 }
 
 export async function install(args) {
+  const only = args.only ?? Object.keys(GROUPS);
   let sourceCleanup = null;
   let source = args.source;
   if (!source) {
@@ -332,7 +338,7 @@ export async function install(args) {
   let totalSkipped = 0;
 
   for (const name of Object.keys(GROUPS)) {
-    if (!args.only.includes(name)) continue;
+    if (!only.includes(name)) continue;
     const group = GROUPS[name];
     const result = copyGroupTo(source, destRoot, group, opts, profile);
     summary[name] = result;
@@ -341,12 +347,15 @@ export async function install(args) {
     log(`${name}: ${result.created.length} installed${result.skipped.length ? `, ${result.skipped.length} skipped (exists, use --force to overwrite)` : ""}`);
   }
 
+  // Never wire instructions for a group that was not installed: otherwise a
+  // partial install (--only skills) points opencode.json at missing files.
+  const includeContext = only.includes("context");
   const ctxDir = path.join(source, "context");
-  const ctxFiles = fs.existsSync(ctxDir)
+  const ctxFiles = includeContext && fs.existsSync(ctxDir)
     ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md") && selectedByProfile(profile, "context", f, true)).sort()
     : [];
 
-  const cfg = mergeConfig(target, ctxFiles, { global });
+  const cfg = mergeConfig(target, ctxFiles, { global, includeSkills: only.includes("skills") });
   if (args.dryRun) {
     log(`dry-run: would write ${path.relative(process.cwd(), path.join(target, "opencode.json"))}`);
   } else {
@@ -363,9 +372,10 @@ export async function install(args) {
     installedAt: new Date().toISOString(),
     kit: { repo: args.repo, branch: args.branch, profile: args.profile || null },
     global,
-    only: args.only,
+    only,
     managed: { destRoot: global ? "." : ".opencode", groups: Object.keys(summary) },
     groups: Object.fromEntries(Object.entries(summary).map(([k, v]) => [k, { created: v.created.length, skipped: v.skipped.length }])),
+    wiring: { skillsPaths: [...cfg.skills.paths], instructions: [...cfg.instructions] },
     files,
   };
   const manifestPath = path.join(destRoot, ".kit-install.json");

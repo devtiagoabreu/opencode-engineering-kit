@@ -94,7 +94,8 @@ function scopeState(scope) {
     const ctxPrefix = global ? path.join(root, "context") : ".opencode/context";
     const hasSkills = (cfg.skills?.paths ?? []).includes(skillsPath);
     const hasCtx = (cfg.instructions ?? []).some((i) => i.startsWith(ctxPrefix));
-    enabled = hasSkills && hasCtx;
+    // Partial installs can wire only one group; any kit wiring counts as enabled.
+    enabled = hasSkills || hasCtx;
   }
   return { label, installed: true, enabled, profile, skills, agents, commands, path: base, cfgPath };
 }
@@ -137,11 +138,21 @@ export function status(args = {}) {
   return { installed: anyInstalled };
 }
 
+function readInstallManifest(root, global) {
+  const base = global ? root : path.join(root, ".opencode");
+  const p = path.join(base, ".kit-install.json");
+  if (!fs.existsSync(p)) return null;
+  try { return JSON.parse(fs.readFileSync(p, "utf8")); } catch { return null; }
+}
+
 function applyWiring(root, global, { disable }) {
   const cfgPath = path.join(root, "opencode.json");
   const cfg = readConfig(cfgPath) ?? { $schema: "https://opencode.ai/config.json" };
   const skillsPath = global ? path.join(root, "skills") : ".opencode/skills";
   const ctxPrefix = global ? path.join(root, "context") : ".opencode/context";
+  const manifest = readInstallManifest(root, global);
+  const recordedPaths = manifest?.wiring?.skillsPaths;
+  const recordedInstructions = manifest?.wiring?.instructions;
 
   cfg.skills = cfg.skills ?? {};
   cfg.skills.paths = cfg.skills.paths ?? [];
@@ -151,13 +162,23 @@ function applyWiring(root, global, { disable }) {
     cfg.skills.paths = cfg.skills.paths.filter((p) => p !== skillsPath);
     cfg.instructions = cfg.instructions.filter((i) => !i.startsWith(ctxPrefix));
   } else {
-    if (!cfg.skills.paths.includes(skillsPath)) cfg.skills.paths.push(skillsPath);
-    const ctxDir = global ? path.join(root, "context") : path.join(root, ".opencode/context");
-    const files = fs.existsSync(ctxDir)
-      ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md")).sort()
-      : [];
-    for (const f of files) {
-      const rel = global ? path.join(root, "context", f) : `.opencode/context/${f}`;
+    // Restore exactly what install registered. Scanning the directory here
+    // would re-wire context/skills that a partial or curated install omitted.
+    const paths = Array.isArray(recordedPaths) ? recordedPaths : [skillsPath];
+    for (const p of paths) {
+      if (!cfg.skills.paths.includes(p)) cfg.skills.paths.push(p);
+    }
+    let files;
+    if (Array.isArray(recordedInstructions)) {
+      files = recordedInstructions;
+    } else {
+      const ctxDir = global ? path.join(root, "context") : path.join(root, ".opencode/context");
+      files = fs.existsSync(ctxDir)
+        ? fs.readdirSync(ctxDir).filter((f) => f.endsWith(".md")).sort()
+          .map((f) => (global ? path.join(root, "context", f) : `.opencode/context/${f}`))
+        : [];
+    }
+    for (const rel of files) {
       if (!cfg.instructions.includes(rel)) cfg.instructions.push(rel);
     }
   }

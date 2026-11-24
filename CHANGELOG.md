@@ -22,7 +22,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - **Automatic skill/persona usage** (`context/AUTO_USAGE.md`): the installed kit now registers an `auto_usage` instruction in `opencode.json > instructions`, so OpenCode always checks the installed skills/personas and uses the most productive one automatically (no commands needed), informing the user with a short notice; disabling is a one-line config change
 - **Rich CLI** (`cli/`): `install`, `list`, `search`, `doctor`, `upgrade`, `export` commands; one-line installer (`install.sh`) with `-y` auto-confirm and atomic skills/agents/scripts install; drift-aware `update.sh` with rollback safety
 - **Declarative manifest** (`core/registry/manifest.json` + `scripts/generate-manifest.sh`) with commit + content hashes for drift detection
-- **Multi-harness export** (`cli export --harness`) producing prompts for opencode, claude-code and cursor
+- **Multi-harness export** (`cli export <claude|cursor|opencode|claude-md>`) producing prompts for opencode, Claude Code and Cursor
 - **Persistent local-first memory** (`context/memory/memory.py` + `tools/session-memory` skill): opt-in (`KIT_MEMORY=1`) SQLite FTS5 notes with recency boost and optional ChromaDB vector recall, stored outside the repo
 - **SkillPointer mode** (`core/discovery/pointer.sh` + `assets/vault/`): skills become minimal catalog entries (`pointer: true` + `vault:` frontmatter) with full curated content stored in the vault and loaded on demand, avoiding context injection; `pointer.sh` resolves/vaults/lists/token-estimates on demand
 - **Vault tooling**: `scripts/generate-vault-meta.sh` produces `meta.json` (sha256, token estimate, bytes) per vault entry; manifest counts `pointer_skills` and `vault_entries` plus a full `vault` array; `pointer`/`vault` fields added to the skill JSON Schema
@@ -78,6 +78,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ### Fixed
 
+- **Install readiness**: the CLI installer now copies `core/`, `scripts/` and `docs/` into `.opencode/`, so `list`, `search`, `doctor`, command links, pointer skills and drift checks also work from the installed project; `install --only` no longer wires context/skills paths for groups that were not installed, and `start` restores exactly the wiring recorded in `.kit-install.json`
+- **doctor alignment**: strict validation now runs with `--check-links --strict-policy`, UTF-8 and README count checks were added, and skipped checks are reported with `skipped: true` instead of being indistinguishable from passing checks
+- **Shell installers**: `install.sh` copies `core/` so `--check` and `update.sh` drift detection work; `update.sh` no longer aborts on drift/missing manifest before realigning assets
+- **Documentation drift**: corrected export flags, upgrade help, context filename casing and mojibake in the CLI README
 - install.sh copy-direction bug (line 69)
 - bootstrap.sh structure mismatch with actual files
 - Agent frontmatter references to non-existent skills

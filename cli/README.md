@@ -43,8 +43,8 @@ Depois reinicie o OpenCode para a nova configuração ser carregada.
 | `list` | Lista assets (`--type skills|agents|prompts|templates`, `--json`) |
 | `search <q>` | Busca por nome/descrição (`--json`) |
 | `doctor` | Verifica integridade do checkout e wiring instalado (`--target/--global`, `--fast`, `--json`) |
-| `upgrade` | Reinstala com `--force`; quando `.opencode/.kit-install.json` existe e `--profile/--only` n?o s?o passados, reutiliza sele??o gravada |
-| `export` | Exporta pacote (`--format claude`, `--out <dir>`) |
+| `upgrade` | Reinstala com `--force`; quando `.opencode/.kit-install.json` existe e `--profile/--only` não são passados, reutiliza seleção gravada |
+| `export` | Exporta pacote (`export <claude|cursor|opencode|claude-md> --target <dir> --dry-run`) |
 
 ## Opções do `install`
 
@@ -56,7 +56,7 @@ Depois reinicie o OpenCode para a nova configuração ser carregada.
 | `--repo <r>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Branch/tag do kit (padrão: `main`) |
 | `--profile <nome>` | Perfil curado: `core`, `backend`, `frontend`, `devops`, `ai`, `brasil`, `full` |
-| `--only <l>` | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos) |
+| `--only <l>` | Subconjunto: `skills,agents,commands,context,assets,core,scripts,docs` (padrão: todos) |
 | `--force` | Sobrescreve arquivos existentes em `.opencode/` |
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
 | `--verbose` | Lista cada arquivo copiado |
@@ -97,6 +97,7 @@ npx opencode-engineering-kit install --source /caminho/para/opencode-engineering
    - `assets/commands/*.md` → `.opencode/commands/`
    - `context/*.md` → `.opencode/context/` (referenciados em `instructions`)
    - `assets/{prompts,playbooks,recipes,templates}` → `.opencode/assets/`
+   - `core/`, `scripts/` e `docs/` → `.opencode/core/`, `.opencode/scripts/` e `.opencode/docs/` (mantêm `list`, `search`, `doctor`, links de comandos e skills ponteiro funcionando no projeto instalado)
 3. Mescla (sem apagar) o `opencode.json` existente: adiciona `.opencode/skills`
    em `skills.paths` e os arquivos de contexto em `instructions`.
 
@@ -105,16 +106,16 @@ npx opencode-engineering-kit install --source /caminho/para/opencode-engineering
 - Node.js 18+ (para `fetch`)
 - `tar` disponível no PATH (Linux/macOS já têm; Windows 10+ e Git for Windows também)
 
-## Confian?a
+## Confiança
 
-- Use `--dry-run` para auditar mudan?as antes de aplicar.
-- Use `--source <checkout-local>` para instalar a partir de c?digo inspecionado.
-- `doctor` valida schema, allowlist, ?ndices, lockfile, skill scan e vault (e testes com `--fast` desativado).
-- `stop/start` s? altera o wiring do `opencode.json`.
+- Use `--dry-run` para auditar mudanças antes de aplicar.
+- Use `--source <checkout-local>` para instalar a partir de código inspecionado.
+- `doctor` valida schema, allowlist, índices, lockfile, skill scan, vault, UTF-8 e contagens dos READMEs (e testes com `--fast` desativado).
+- `stop/start` só altera o wiring do `opencode.json`.
 
 ## Contrato do `doctor --json`
 
-Sa?da est?vel para automa??o:
+Saída estável para automação:
 
 ```json
 {
@@ -130,8 +131,9 @@ Sa?da est?vel para automa??o:
 }
 ```
 
-- `checks[].code`: identificador est?vel para CI/automa??es.
-- `recommendations[]`: a??es acion?veis; pode estar vazio quando n?o h? remedia??o autom?tica.
+- `checks[].code`: identificador estável para CI/automações.
+- `checks[].skipped`: `true` quando a checagem não pôde rodar (por exemplo, `bash` ausente); `pass` continua `true`, mas o campo distingue "não executado" de "executado com sucesso".
+- `recommendations[]`: ações acionáveis; pode estar vazio quando não há remediação automática.
 
 ## Desenvolvimento
 

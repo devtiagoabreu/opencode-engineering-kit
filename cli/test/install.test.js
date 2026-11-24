@@ -125,3 +125,25 @@ test("upgrade reuses manifest for global install", async () => {
     else process.env.KIT_GLOBAL_DIR = prev;
   }
 });
+
+test("partial install does not wire groups that were not installed", async () => {
+  const { cfg } = await install({ target, source: KIT_SOURCE, only: ["skills"], force: false, dryRun: false, verbose: false });
+  assert.deepEqual(cfg.skills.paths, [".opencode/skills"], "skills path wired");
+  assert.deepEqual(cfg.instructions, [], "no context instructions wired");
+
+  const manifest = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.deepEqual(manifest.wiring.instructions, [], "manifest records empty context wiring");
+  assert.ok(!fs.existsSync(path.join(target, ".opencode/context")), "context group not copied");
+});
+
+test("default install copies core/scripts and records wiring for start", async () => {
+  const { cfg } = await install({ target, source: KIT_SOURCE, force: false, dryRun: false, verbose: false });
+  assert.ok(fs.existsSync(path.join(target, ".opencode/core/discovery/index/skills.txt")), "core index installed");
+  assert.ok(fs.existsSync(path.join(target, ".opencode/scripts/validate_assets.py")), "validation scripts installed");
+  assert.ok(fs.existsSync(path.join(target, ".opencode/docs/APRENDA_REPOSITORIOS.md")), "docs installed");
+  assert.ok(cfg.instructions.some((i) => i.includes("AUTO_USAGE")), "context wired");
+
+  const manifest = JSON.parse(fs.readFileSync(path.join(target, ".opencode/.kit-install.json"), "utf8"));
+  assert.deepEqual(manifest.wiring.skillsPaths, cfg.skills.paths);
+  assert.deepEqual(manifest.wiring.instructions, cfg.instructions);
+});
