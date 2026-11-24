@@ -1,7 +1,7 @@
 # Handoff de sessão — estado para continuar na próxima sessão
 
 **Registrado em:** 2026-11-24<br>
-**Branch:** `main` · **HEAD da correção de prontidão:** `e3a4aaf` · **30 commits à frente de `origin/main` após este handoff** · **sem push**<br>
+**Branch:** `main` · **HEAD:** `a85754b` · **push autorizado e realizado**: `8f0cd11..a85754b main -> main` · **`origin/main` sincronizado (0 commits à frente)**<br>
 **Árvore de trabalho:** limpa no momento deste registro.
 
 Este documento é o ponto de partida da próxima sessão. Ele registra o que foi feito, por que, o que já passou nos gates e o que ainda está em aberto. Atualize-o ao final da próxima sessão.
@@ -127,13 +127,13 @@ python scripts/sync_readme_counts.py --root . --check
 2. Continuar a fila `/aprenda` a partir do que ainda não foi convertido em ativo; revalidar versões/endpoints dos motores fiscais a cada rodada (o documento registra o estado em 2026-11-24).
 3. Promover ativos a `stable` **somente** após revisão de qualidade e confirmação de licença/versão, sempre via `profiles/core.json`.
 4. Corrigir `scripts/test.sh` para paths Windows e limiares realistas, se o usuário quiser abrir esse escopo.
-5. **Não push** sem autorização explícita (30 commits locais aguardando). O npm package `opencode-engineering-kit` também não está publicado (registry 404) — publicar exige credenciais; até lá, `npx ... install` sem `--source` busca o snapshot antigo de `main`.
-6. Se o usuário autorizar: fazer push de `main` e publicar `cli/` no npm, depois validar `npx opencode-engineering-kit --version` e `npx ... install` sem `--source`.
+5. ~~Push de `main`~~ **concluído em 2026-11-24** com autorização explícita (`8f0cd11..a85754b`). `origin/main` agora contém todos os ativos e correções de prontidão.
+6. **npm ainda pendente**: o pacote `opencode-engineering-kit` não está publicado (registry 404) — publicar exige credenciais do usuário. Depois de publicar, validar `npx opencode-engineering-kit --version` e `npx ... install` sem `--source`. Com o push concluído, o `install.js` agora busca o `main` atualizado, com todos os ativos e correções.
 
 ## 9. Frases-chave para localizar no repo
 
 - `docs/APRENDA_REPOSITORIOS.md` — fila canônica e protocolo do `/aprenda`.
-- `docs/SESSION_HANDOFF.md` — este documento.
+- `docs/SESSION_HANDOFF.md` — este documento (estado sincronizado com `origin/main` em 2026-11-24).
 - `docs/FISCAL_ENGINE_CAPABILITIES.md` — mapeamento fiscal oficial e exclusões.
 - `/aprenda` — gatilho do aprendizado contínuo.
 - `context/provenance.md` — proveniência de skills e templates.
