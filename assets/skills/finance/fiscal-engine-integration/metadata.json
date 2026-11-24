@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-24T10:30:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "fiscal-engine-integration",
+  "version": "0.1.0",
+  "category": "finance",
+  "description": "Integre motores fiscais oficiais com base versionada, regras vigentes por data, erros observáveis, validação XML/XSD e geração de DANFSe auditável."
+}

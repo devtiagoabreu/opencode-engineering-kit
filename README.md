@@ -19,10 +19,10 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 170 (42 categorias) |
+| Skills | 171 (42 categorias) |
 | Agents | 105 (38 categorias) |
 | Prompts | 10 |
-| Templates | 10 |
+| Templates | 11 |
 | Playbooks | 3 |
 | Recipes | 2 |
 | Comandos | 7 |
@@ -218,7 +218,7 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 - **Contrato JSON do doctor:** `doctor --json` expõe `checks[].code` estável e `recommendations[]` acionáveis; útil para CI e automações.
 - **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
 - **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05 e [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) para as regras aplicadas hoje (maturidade, proveniência e links).
-- **Integrações referenciadas:** capacidades adaptadas de dezessete repositórios externos nomeados estão mapeadas em [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md) e [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md), com licenças e escopo explicitados.
+- **Integrações referenciadas:** capacidades adaptadas de vinte repositórios externos nomeados estão mapeadas em [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md), [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md) e [docs/FISCAL_ENGINE_CAPABILITIES.md](./docs/FISCAL_ENGINE_CAPABILITIES.md), com licenças e escopo explicitados.
 - **Aprendizado contínuo:** o comando `/aprenda` segue a fila canônica de 20 repositórios em [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), incluindo os motores fiscais oficiais da Receita Federal, e regera ativos `beta` com proveniência.
 - **Segurança:** reporte vulnerabilidades conforme [SECURITY.md](./SECURITY.md).
 
@@ -261,7 +261,7 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `tools` | Git avançado, Terminal, Repo → LLM, Grafo de código (Graphify) |
 | `quality` | Code Review, Refactoring, Otimização de contexto/tokens |
 | `construction` | Execução de obras, estruturas civis |
-| `finance` | Contabilidade, tributos (Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close |
+| `finance` | Contabilidade, tributos (Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close, Fiscal Engine Integration |
 | `marketing` | Marketing digital, gestão de tráfego, marketing político (lei eleitoral) |
 | `science` | Matemática aplicada, física, química, Scientific Data Retrieval |
 | `engineering` | Mecatrônica, automação industrial, automação residencial, planejamento de produção |

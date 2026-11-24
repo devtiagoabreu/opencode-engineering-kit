@@ -1,5 +1,5 @@
 # Dependency Graph
-# Generated: seg, 23 de nov de 2026 18:22:53
+# Generated: ter, 24 de nov de 2026 07:40:46
 
 ## ai/ai-sdk-agent-patterns
   (no dependencies)
@@ -250,6 +250,9 @@
   (no dependencies)
 
 ## finance/financial-statements
+  (no dependencies)
+
+## finance/fiscal-engine-integration
   (no dependencies)
 
 ## finance/tax-compliance

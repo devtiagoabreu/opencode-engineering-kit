@@ -82,6 +82,7 @@
   - bank-reconciliation
   - controllership-close
   - financial-statements
+  - fiscal-engine-integration
   - tax-compliance
   - usage-based-billing
   - accessibility

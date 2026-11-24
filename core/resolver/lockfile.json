@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-11-23T21:28:01Z",
+  "generated": "2026-11-24T10:40:46Z",
   "assets": {
     "agents/ai-engineer": {
       "name": "ai-engineer",
@@ -1996,6 +1996,13 @@
     },
     "skills/financial-statements": {
       "name": "financial-statements",
+      "type": "skills",
+      "version": "0.1.0",
+      "dependencies": [],
+      "resolved": true
+    },
+    "skills/fiscal-engine-integration": {
+      "name": "fiscal-engine-integration",
       "type": "skills",
       "version": "0.1.0",
       "dependencies": [],

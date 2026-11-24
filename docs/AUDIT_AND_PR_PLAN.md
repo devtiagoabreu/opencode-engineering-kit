@@ -161,6 +161,7 @@ Local reference snapshot:
 - [x] Kept restrictive/upstream-conditioned material (Dify license additions, third-party assets) at idea level only.
 - [x] Added the canonical continuous-learning queue (`docs/APRENDA_REPOSITORIOS.md`) and the `/aprenda` trigger command; 11 platform repos were named, while the request's "12" remains an open question.
 - [x] Added finance/controllership coverage requested for `aprenda`: bank-statement reconciliation, DRE construction, FP&A and monthly close, with `analista-financeiro` and `controladoria` agents.
+- [x] Learned from the three official Receita Federal calculators: derived `fiscal-engine-integration` and `fiscal-calculation-record` with explicit MIT provenance; no upstream code, database, XSD or binaries vendored. Mapping in `docs/FISCAL_ENGINE_CAPABILITIES.md`.
 
 ### Remaining high-value gaps
 - [ ] PR-05 trust baseline: provenance/maturity visible in list/search/install, stronger risk policy.

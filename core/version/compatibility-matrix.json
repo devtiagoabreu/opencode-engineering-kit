@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-11-23T21:21:16Z",
+  "generated": "2026-11-24T10:41:29Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -763,6 +763,16 @@
       ]
     },
     "financial-statements": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor",
+        "copilot"
+      ]
+    },
+    "fiscal-engine-integration": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [

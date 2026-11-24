@@ -159,6 +159,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `bank-reconciliation` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `financial-statements` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `controllership-close` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
+| `fiscal-engine-integration` | Receita Federal do Brasil — calculadora-rtc-regime-regular | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | 2026-11-24 |
 
 ## Personas (Agents)
 
@@ -259,3 +260,19 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `vision-engineer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `especialista-google-workspace` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `webscraper` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+
+## Templates
+
+| Asset | Procedência | URL | Licença | Verificado |
+|-------|-------------|-----|---------|------------|
+| `agent` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `new-project` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `prompt` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `skill` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `agent-session-handoff` | agentmemory | https://github.com/rohitg00/agentmemory | Apache-2.0 | 2026-11-23 |
+| `harness-checklist` | Awesome Harness Engineering | https://github.com/ai-boost/awesome-harness-engineering | CC0-1.0 | 2026-11-23 |
+| `scientific-retrieval-ledger` | Scientific Agent Skills | https://github.com/K-Dense-AI/scientific-agent-skills | MIT | 2026-11-23 |
+| `saas-launch-checklist` | Open SaaS | https://github.com/wasp-lang/open-saas | MIT | 2026-11-23 |
+| `billing-meter-spec` | Polar | https://github.com/polarsource/polar | Apache-2.0 | 2026-11-23 |
+| `monthly-close-checklist` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
+| `fiscal-calculation-record` | Receita Federal do Brasil — calculadora-rtc-regime-regular | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | 2026-11-24 |

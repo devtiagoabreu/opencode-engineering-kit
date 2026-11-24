@@ -2,7 +2,7 @@
 
 **Idioma:** português  
 **Status:** ativo — esta é a lista canônica a ser usada sempre que o usuário disser `aprenda`.  
-**Última verificação:** 2026-11-23 — 20 repositórios na fila (inclui os 3 oficiais da Receita Federal adicionados a pedido)
+**Última verificação:** 2026-11-24 — 20 repositórios na fila (revisão dos 3 oficiais da Receita Federal concluída; licenças MIT confirmadas)
 
 ## Protocolo
 
@@ -38,11 +38,11 @@ Quando o usuário disser **“aprenda”**:
 | 15 | React Email | https://github.com/resend/react-email | MIT | `transactional-email-patterns` | Templates tipados, preview, HTML + texto, acessibilidade e compatibilidade entre clientes |
 | 16 | Umami | https://github.com/umami-software/umami | MIT | `privacy-first-analytics` | Eventos mínimos, sem cookies, UTC, features opcionais e auto-hospedagem |
 | 17 | Coolify | https://github.com/coollabsio/coolify | Apache-2.0 | `self-host-deployment` | Control plane vs. workloads, previews, rollback, segredos e backups |
-| 18 | Receita Federal — Calculadora RTC (Regime Geral) **← motor fiscal principal** | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | — | API oficial CBS/IBS/Imposto Seletivo; banco SQLite versionado por Flyway; modo observabilidade com erros por item; dados abertos (CST/cClassTrib, NCM/NBS, fundamentação, alíquotas); geração e validação XML/XSD |
-| 19 | Receita Federal — Calculadora RTC (Simples Nacional) | https://github.com/ReceitaFederal/calculadora-rtc-simples-nacional | MIT | — | CBS/IBS no Simples Nacional; atividades vigentes por data com filtros; `/versao` e `/versao/status`; reusa o banco do repositório 18 |
-| 20 | Receita Federal — Gerador DANFSe | https://github.com/ReceitaFederal/calculadora-rtc-gerador-danfse | MIT | — | PDF de NFS-e a partir de XML; limite de tamanho, sanitização, logs sem dados fiscais, health checks, OTel opt-in e fail-fast de configuração |
+| 18 | Receita Federal — Calculadora RTC (Regime Geral) **← motor fiscal principal** | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | `fiscal-engine-integration`, `fiscal-calculation-record`, `docs/FISCAL_ENGINE_CAPABILITIES.md` | API oficial CBS/IBS/Imposto Seletivo; banco SQLite versionado por Flyway; modo observabilidade com erros por item; dados abertos (CST/cClassTrib, NCM/NBS, fundamentação, alíquotas); geração e validação XML/XSD |
+| 19 | Receita Federal — Calculadora RTC (Simples Nacional) | https://github.com/ReceitaFederal/calculadora-rtc-simples-nacional | MIT | `fiscal-engine-integration`, `fiscal-calculation-record` | CBS/IBS no Simples Nacional; atividades vigentes por data com filtros; `/versao` e `/versao/status`; reusa o banco do repositório 18 |
+| 20 | Receita Federal — Gerador DANFSe | https://github.com/ReceitaFederal/calculadora-rtc-gerador-danfse | MIT | `fiscal-engine-integration`, `fiscal-calculation-record` | PDF de NFS-e a partir de XML; limite de tamanho, sanitização, logs sem dados fiscais, health checks, OTel opt-in e fail-fast de configuração |
 
-> Os repositórios 18–20 são oficiais: organize GitHub [@ReceitaFederal](https://github.com/ReceitaFederal). Foram adicionados à fila de aprendizado; nenhum código, banco ou binário foi instalado neste kit.
+> Os repositórios 18–20 são oficiais: organize GitHub [@ReceitaFederal](https://github.com/ReceitaFederal). Foram adicionados à fila de aprendizado e seus padrões estão mapeados em [docs/FISCAL_ENGINE_CAPABILITIES.md](./FISCAL_ENGINE_CAPABILITIES.md); nenhum código, banco, XSD ou binário foi instalado neste kit.
 
 ## Temas prioritários (pedido do usuário)
 
@@ -56,6 +56,7 @@ O usuário pediu que `aprenda` também cubra conciliação de extrato, montagem 
 | Analista financeiro | Coberto | agente `analista-financeiro` |
 | Controladoria / fechamento / provisões | Coberto | agente `controladoria`, skill `controllership-close`, template `monthly-close-checklist` |
 | Auditoria e evidências de fechamento | Coberto | `controllership-close`, `monthly-close-checklist` |
+| Integração com motor fiscal oficial (RTC/DANFSe) | Coberto | `fiscal-engine-integration`, `fiscal-calculation-record`, `docs/FISCAL_ENGINE_CAPABILITIES.md` |
 
 Em cada rodada `aprenda`, verifique também se esses temas evoluíram: novas normas contábeis, requisitos de SPED, formatos de extrato e práticas de fechamento. Novos ativos continuam `beta` com proveniência explícita.
 

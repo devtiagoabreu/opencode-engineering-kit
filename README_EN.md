@@ -20,10 +20,10 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 170 (42 categories) |
+| Skills | 171 (42 categories) |
 | Agents | 105 (38 categories) |
 | Prompts | 10 |
-| Templates | 10 |
+| Templates | 11 |
 | Playbooks | 3 |
 | Recipes | 2 |
 | Commands | 7 |
@@ -220,7 +220,7 @@ cd opencode-engineering-kit
 - **Post-install drift:** run `npx opencode-engineering-kit doctor --dir <kit> --target <project> --fast` to check wiring and tracked-file drift (`.opencode/.kit-install.json`). If you see `modified/missing`, reinstall with `--force` or run `upgrade`.
 - **Safe disable:** `stop` removes only kit wiring from `opencode.json`; `start` restores it.
 - **Current limits:** supply-chain verification is still evolving (schema/scan/provenance/lock). See [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) for PR-02/PR-05 and [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) for the rules enforced today (maturity, provenance and links).
-- **Reference integrations:** capabilities adapted from the seventeen named external repositories are mapped in [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md) and [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md), with licenses and scope made explicit.
+- **Reference integrations:** capabilities adapted from the twenty named external repositories are mapped in [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md), [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md) and [docs/FISCAL_ENGINE_CAPABILITIES.md](./docs/FISCAL_ENGINE_CAPABILITIES.md), with licenses and scope made explicit.
 - **Continuous learning:** the `/aprenda` command follows the canonical 20-repository queue in [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), including the official Receita Federal tax engines, and regenerates provenance-tagged `beta` assets.
 - **Security:** report vulnerabilities per [SECURITY.md](./SECURITY.md).
 
@@ -263,7 +263,7 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `tools` | Advanced Git, Terminal, Repo → LLM, Code graph (Graphify) |
 | `quality` | Code Review, Refactoring, Context/token optimization |
 | `construction` | Construction execution, civil structures |
-| `finance` | Accounting, taxes (Brazilian Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close |
+| `finance` | Accounting, taxes (Brazilian Simples Nacional), Usage-Based Billing, Bank Reconciliation, Financial Statements/DRE, Controllership Close, Fiscal Engine Integration |
 | `marketing` | Digital marketing, traffic management, political marketing (election law) |
 | `science` | Applied mathematics, physics, chemistry, Scientific Data Retrieval |
 | `engineering` | Mechatronics, industrial automation, home automation, production planning |

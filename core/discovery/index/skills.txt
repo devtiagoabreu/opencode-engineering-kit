@@ -82,6 +82,7 @@ finance/accounting-basics
 finance/bank-reconciliation
 finance/controllership-close
 finance/financial-statements
+finance/fiscal-engine-integration
 finance/tax-compliance
 finance/usage-based-billing
 frontend/accessibility
