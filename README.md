@@ -527,7 +527,7 @@ Veja [SECURITY.md](./SECURITY.md) para políticas e como reportar vulnerabilidad
 
 **Português:** [Guia do Usuário](./docs/GUIA_USUARIO.md) · [Cartão de Referência](./docs/CARTAO_REFERENCIA.md)
 
-**Planejamento:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md)
+**Planejamento:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md) · [Handoff de sessão](./docs/SESSION_HANDOFF.md)
 
 ## Licença
 
