@@ -32,9 +32,9 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 | Prompt chains | 2 |
 | Context files | 17 files |
 | Example plugins | 1 (`asset-linter`) |
-| Test suites | 25 shell + 3 CLI |
+| Test suites | 26 shell + 3 CLI (26 `node:test` cases) |
 
-> Counts above are a reference snapshot; technical source is `core/registry/manifest.json`. Automated count generation is planned for PR-02.
+> Counts above are synced from `core/registry/manifest.json` via `python scripts/sync_readme_counts.py --root .` (verified in CI).
 
 ### Compatibility
 
@@ -58,6 +58,8 @@ npx opencode-engineering-kit search docker
 ```
 
 Then restart OpenCode. The kit lives in `.opencode/` and `opencode.json` is merged (not overwritten).
+
+> **Note:** the `opencode-engineering-kit` npm package is not published to the registry yet. Until it is, install with `npx opencode-engineering-kit install --source /path/to/opencode-engineering-kit` (local checkout) or use the [global install script](#method-2--global-install-script-via-curl). The plain `npx ...` commands below will work once the package is available.
 
 ## Installation
 
@@ -88,7 +90,10 @@ your-project/
 │   ├── agents/        # assets/agents (flattened names: backend-developer.md)
 │   ├── commands/      # assets/commands
 │   ├── context/       # context/*.md (registered in instructions)
-│   └── assets/        # prompts, playbooks, recipes, templates (reference)
+│   ├── assets/        # prompts, playbooks, recipes, templates (reference)
+│   ├── core/          # indexes, registry, resolver, security, quality
+│   ├── scripts/       # validation, generation and tests (used by doctor)
+│   └── docs/          # documentation and provenance mappings
 └── opencode.json      # skills.paths + instructions (merged with existing)
 ```
 
@@ -98,15 +103,15 @@ Then **restart OpenCode** so the new configuration is loaded.
 
 | Command | Description |
 |---------|-------------|
-| `install` | Install skills, agents, commands, context, assets into a project (or globally with `--global`) |
+| `install` | Install skills, agents, commands, context, assets, `core/`, `scripts/` and `docs/` into a project (or globally with `--global`) |
 | `status` | Show where the kit is installed and whether it is enabled |
-| `start` | Re-enable the kit (restore `opencode.json` wiring) |
+| `start` | Re-enable the kit (restore the wiring recorded in `.kit-install.json`) |
 | `stop` | Disable the kit (keep files, remove `opencode.json` wiring) |
-| `list` | List assets available in a kit checkout |
+| `list` | List assets from the checkout or the installed project |
 | `search` | Search assets by keyword in name/description |
-| `doctor` | Check kit integrity and optionally installed wiring (`--target/--global`) |
-| `upgrade` | Reinstall with `--force` |
-| `export` | Generate an export package (e.g. `--format claude`) |
+| `doctor` | Validate schema, links, policy, UTF-8, README counts, indexes, lockfile, security scan, vault and optional tests |
+| `upgrade` | Reinstall with `--force`, reusing `--profile`/`--only` from the manifest when omitted |
+| `export` | Generate a package: `export <claude\|cursor\|opencode\|claude-md> --target <dir> [--dry-run]` |
 
 #### `install` options
 
@@ -118,7 +123,7 @@ Then **restart OpenCode** so the new configuration is loaded.
 | `--repo <repo>` | Kit GitHub repo (default: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Kit branch/tag (default: `main`) |
 | `--profile <name>` | Curated profile: `core`, `backend`, `frontend`, `devops`, `ai`, `brasil`, `full` |
-| `--only <list>` | Subset: `skills,agents,commands,context,assets` (default: all) |
+| `--only <list>` | Subset: `skills,agents,commands,context,assets,core,scripts,docs` (default: all) |
 | `--force` | Overwrite existing files in `.opencode/` |
 | `--dry-run` | Show what would be done without touching the disk |
 | `--verbose` | List each copied file |
@@ -220,7 +225,9 @@ cd opencode-engineering-kit
 - **What the CLI does:** copies assets into `.opencode/` and merges `opencode.json` (`skills.paths`, `instructions`). It does not delete your existing config.
 - **Audit before install:** use `--dry-run` and/or `--source <local-checkout>` to inspect source. Run `npx opencode-engineering-kit doctor --fast` on the kit checkout.
 - **Post-install drift:** run `npx opencode-engineering-kit doctor --dir <kit> --target <project> --fast` to check wiring and tracked-file drift (`.opencode/.kit-install.json`). If you see `modified/missing`, reinstall with `--force` or run `upgrade`.
-- **Safe disable:** `stop` removes only kit wiring from `opencode.json`; `start` restores it.
+- **Diagnostics inside the installed project:** `list`, `search` and `doctor` auto-detect `.opencode/`; no need to point at the kit checkout.
+- **JSON contract:** `doctor --json` exposes stable `checks[].code`, `checks[].skipped` (distinguishes "not run" from "passed") and actionable `recommendations[]`; useful for CI and automation.
+- **Safe disable:** `stop` removes only kit wiring from `opencode.json`; `start` restores exactly what install recorded (respecting profiles and `--only`).
 - **Current limits:** supply-chain verification is still evolving (schema/scan/provenance/lock). See [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) for PR-02/PR-05 and [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) for the rules enforced today (maturity, provenance and links).
 - **Reference integrations:** capabilities adapted from the twenty named external repositories are mapped in [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md), [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md) and [docs/FISCAL_ENGINE_CAPABILITIES.md](./docs/FISCAL_ENGINE_CAPABILITIES.md), with licenses and scope made explicit.
 - **Continuous learning:** the `/aprenda` command follows the canonical 20-repository queue in [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), including the official Receita Federal tax engines, and regenerates provenance-tagged `beta` assets.
@@ -240,7 +247,7 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 150 ready guides
+### Skills — 171 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 600-line limit.
 
@@ -299,7 +306,7 @@ All skills are copied automatically to `.opencode/skills/` when installing via
 the CLI (`npx opencode-engineering-kit install`) — new categories are detected
 recursively, with no extra configuration.
 
-### Agents — 103 ready personas
+### Agents — 105 ready personas
 
 Agents are **personas** (role + context + communication style) for specific roles. Examples:
 
@@ -363,9 +370,9 @@ Portuguese, with headers compatible with the kit's tests.
 
 Focused prompts for one-off interactions: code review, debugging, refactoring, planning, architecture (system design), API documentation, test strategy, security audit, RAG, and performance review. They use `{{variable}}` placeholders.
 
-### Templates — 4 for projects and components
+### Templates — 11 for projects and components
 
-`new-project`, `agent`, `skill`, and `prompt`.
+`new-project`, `agent`, `skill`, `prompt`, `agent-session-handoff`, `harness-checklist`, `scientific-retrieval-ledger`, `monthly-close-checklist`, `saas-launch-checklist`, `billing-meter-spec` and `fiscal-calculation-record`.
 
 ### Playbooks and Recipes
 
@@ -376,6 +383,9 @@ Focused prompts for one-off interactions: code review, debugging, refactoring, p
 
 - `/lint`, `/review`, `/test` — documentation of OpenCode's native commands
 - `/ocekit` — install and manage the kit (install, status, start, stop) straight from the chat
+- `/aprenda` — run the canonical reference-repository learning queue
+- `/harness-review` — review a harness engineering flow against the adapted patterns
+- `/diagram` — generate diagrams using the `diagram-design` skill
 
 ### Bundles, Compositions, and Prompt chains
 
@@ -430,11 +440,11 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 150 skills in 42 categories (SKILL.md)
-│   ├── agents/          # 103 personas by category
+│   ├── skills/          # 171 skills in 42 categories (SKILL.md)
+│   ├── agents/          # 105 personas by category
 │   ├── prompts/         # 10 reusable prompts
-│   ├── templates/       # 4 templates
-│   ├── commands/        # 4 documented commands
+│   ├── templates/       # 11 templates
+│   ├── commands/        # 7 documented commands
 │   ├── playbooks/       # 3 multi-step flows
 │   ├── recipes/         # 2 complete solutions
 │   ├── bundles/         # 2 ready packs
@@ -454,7 +464,7 @@ opencode-engineering-kit/
 ├── plugins/             # Example plugins (community, enterprise)
 ├── marketplace-web/     # Marketplace web interface
 ├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
-├── tests/               # 25 automated test suites
+├── tests/               # 26 automated test suites
 ├── docs/                # Documentation (EN + PT)
 ├── examples/            # Usage examples
 ├── install.sh           # Global install
@@ -496,8 +506,11 @@ cp -r assets/templates/new-project/ /your/new-project/
 The project uses automated **quality gates** (Markdown/YAML/Shell lint, format and content validation) with CI via GitHub Actions.
 
 ```bash
-# Run all 25 test suites
+# Run all 26 shell test suites
 ./scripts/test.sh
+
+# Run the CLI tests (26 node:test cases)
+cd cli && npm test
 
 # Run the quality gates
 ./core/quality/validate.sh

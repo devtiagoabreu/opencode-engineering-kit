@@ -31,7 +31,7 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 | Prompt chains | 2 |
 | Contexto | 17 arquivos |
 | Plugins de exemplo | 1 (`asset-linter`) |
-| Suítes de teste | 25 shell + 3 CLI |
+| Suítes de teste | 26 shell + 3 CLI (26 testes `node:test`) |
 
 > Contagens sincronizadas de `core/registry/manifest.json` via `python scripts/sync_readme_counts.py --root .` (verificado em CI).
 
@@ -57,6 +57,8 @@ npx opencode-engineering-kit search docker
 ```
 
 Depois, reinicie o OpenCode. O kit fica em `.opencode/` e o `opencode.json` é mesclado (não sobrescrito).
+
+> **Nota:** o pacote npm `opencode-engineering-kit` ainda não foi publicado no registry. Até a publicação, instale com `npx opencode-engineering-kit install --source /caminho/para/opencode-engineering-kit` (checkout local) ou use o [script de instalação global](#método-2--script-de-instalação-global-via-curl). Os comandos `npx ...` abaixo passam a funcionar diretamente assim que o pacote estiver disponível.
 
 ## Instalação
 
@@ -87,7 +89,10 @@ seu-projeto/
 │   ├── agents/        # assets/agents (nomes achatados: backend-developer.md)
 │   ├── commands/      # assets/commands
 │   ├── context/       # context/*.md (registrados em instructions)
-│   └── assets/        # prompts, playbooks, recipes, templates (referência)
+│   ├── assets/        # prompts, playbooks, recipes, templates (referência)
+│   ├── core/          # índices, registry, resolver, segurança, qualidade
+│   ├── scripts/       # validação, geração e testes (usados pelo doctor)
+│   └── docs/          # documentação e mapeamentos de proveniência
 └── opencode.json      # skills.paths + instructions (mesclado com o que já existia)
 ```
 
@@ -97,15 +102,15 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 
 | Comando | Descrição |
 |---------|-----------|
-| `install` | Instala skills, agents, commands, context e assets no projeto (ou global com `--global`) |
+| `install` | Instala skills, agents, commands, context, assets, `core/`, `scripts/` e `docs/` (ou global com `--global`) |
 | `status` | Mostra onde o kit está instalado e se está ativo |
-| `start` | Reativa o kit (restaura wiring do `opencode.json`) |
+| `start` | Reativa o kit (restaura o wiring gravado em `.kit-install.json`) |
 | `stop` | Desativa o kit (mantém arquivos, remove wiring do `opencode.json`) |
-| `list` | Lista assets disponíveis no checkout do kit |
+| `list` | Lista assets do checkout ou do projeto instalado |
 | `search` | Busca assets por palavra-chave em nome/descrição |
-| `doctor` | Verifica integridade do kit (schema, índices, lockfile, security scan, vault, testes opcionais) |
-| `upgrade` | Reinstala com `--force` |
-| `export` | Gera pacote exportável (ex.: `--format claude`) |
+| `doctor` | Valida schema, links, política, UTF-8, contagens, índices, lockfile, security scan, vault e testes opcionais |
+| `upgrade` | Reinstala com `--force`, reaproveitando `--profile`/`--only` do manifesto quando omitidos |
+| `export` | Gera pacote: `export <claude\|cursor\|opencode\|claude-md> --target <dir> [--dry-run]` |
 
 #### Opções do `install`
 
@@ -117,7 +122,7 @@ Depois é só **reiniciar o OpenCode** para a nova configuração ser carregada.
 | `--repo <repo>` | Repositório GitHub do kit (padrão: `devtiagoabreu/opencode-engineering-kit`) |
 | `--branch <b>` | Branch/tag do kit (padrão: `main`) |
 | `--profile <nome>` | Perfil curado: `core`, `backend`, `frontend`, `devops`, `ai`, `brasil`, `full` |
-| `--only <lista>` | Subconjunto: `skills,agents,commands,context,assets` (padrão: todos) |
+| `--only <lista>` | Subconjunto: `skills,agents,commands,context,assets,core,scripts,docs` (padrão: todos) |
 | `--force` | Sobrescreve arquivos existentes em `.opencode/` |
 | `--dry-run` | Mostra o que seria feito sem tocar no disco |
 | `--verbose` | Lista cada arquivo copiado |
@@ -217,8 +222,9 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 - **O que a CLI faz:** copia assets para `.opencode/` e mescla `opencode.json` (`skills.paths`, `instructions`). Não apaga sua configuração existente.
 - **Auditoria antes de instalar:** use `--dry-run` e/ou `--source <checkout-local>` para inspecionar a origem. Rode `npx opencode-engineering-kit doctor --fast` no checkout do kit.
 - **Drift após instalar:** rode `npx opencode-engineering-kit doctor --dir <kit> --target <projeto> --fast` para checar wiring e drift de arquivos rastreados (`.opencode/.kit-install.json`). Se houver `modified/missing`, reinstale com `--force` ou `upgrade`.
-- **Contrato JSON do doctor:** `doctor --json` expõe `checks[].code` estável e `recommendations[]` acionáveis; útil para CI e automações.
-- **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura.
+- **Diagnóstico no projeto instalado:** `list`, `search` e `doctor` detectam automaticamente `.opencode/`; não é preciso apontar para o checkout do kit.
+- **Contrato JSON do doctor:** `doctor --json` expõe `checks[].code` estável, `checks[].skipped` (distingue "não executado" de "passou") e `recommendations[]` acionáveis; útil para CI e automações.
+- **Desativar com segurança:** `stop` remove apenas o wiring do kit no `opencode.json`; `start` restaura exatamente o que o install registrou (respeitando perfis e `--only`).
 - **Limites atuais:** a verificação de supply chain ainda está evoluindo (schema/scan/provenance/lock). Veja [docs/AUDIT_AND_PR_PLAN.md](./docs/AUDIT_AND_PR_PLAN.md) para o plano PR-02/PR-05 e [docs/QUALITY_POLICY.md](./docs/QUALITY_POLICY.md) para as regras aplicadas hoje (maturidade, proveniência e links).
 - **Integrações referenciadas:** capacidades adaptadas de vinte repositórios externos nomeados estão mapeadas em [docs/REFERENCE_CAPABILITIES.md](./docs/REFERENCE_CAPABILITIES.md), [docs/PLATFORM_REFERENCE_CAPABILITIES.md](./docs/PLATFORM_REFERENCE_CAPABILITIES.md) e [docs/FISCAL_ENGINE_CAPABILITIES.md](./docs/FISCAL_ENGINE_CAPABILITIES.md), com licenças e escopo explicitados.
 - **Aprendizado contínuo:** o comando `/aprenda` segue a fila canônica de 20 repositórios em [docs/APRENDA_REPOSITORIOS.md](./docs/APRENDA_REPOSITORIOS.md), incluindo os motores fiscais oficiais da Receita Federal, e regera ativos `beta` com proveniência.
@@ -238,7 +244,7 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 ## O que o kit contém (detalhado)
 
-### Skills — 150 guias prontos
+### Skills — 171 guias prontos
 
 Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 600 linhas.
 
@@ -298,7 +304,7 @@ Todas as skills são copiadas automaticamente para `.opencode/skills/` na
 instalação via CLI (`npx opencode-engineering-kit install`) — novas categorias
 são detectadas recursivamente, sem configuração extra.
 
-### Agents — 103 personas prontas
+### Agents — 105 personas prontas
 
 Agents são **personas** (papel + contexto + estilo de comunicação) para papéis específicos. Exemplos:
 
@@ -364,9 +370,9 @@ em português, com cabeçalhos compatíveis com os testes do kit.
 
 Prompts focados para interações únicas: code review, debugging, refatoração, planejamento, arquitetura (system design), documentação de API, estratégia de testes, auditoria de segurança, RAG e performance review. Usam placeholders `{{variavel}}`.
 
-### Templates — 4 para projetos e componentes
+### Templates — 11 para projetos e componentes
 
-`new-project`, `agent`, `skill` e `prompt`.
+`new-project`, `agent`, `skill`, `prompt`, `agent-session-handoff`, `harness-checklist`, `scientific-retrieval-ledger`, `monthly-close-checklist`, `saas-launch-checklist`, `billing-meter-spec` e `fiscal-calculation-record`.
 
 ### Playbooks e Recipes
 
@@ -377,6 +383,9 @@ Prompts focados para interações únicas: code review, debugging, refatoração
 
 - `/lint`, `/review`, `/test` — documentação de comandos nativos do OpenCode
 - `/ocekit` — instalar e gerenciar o kit (install, status, start, stop) direto no chat
+- `/aprenda` — executar a fila canônica de aprendizado de repositórios de referência
+- `/harness-review` — revisar um fluxo de engenharia de harness contra os padrões adaptados
+- `/diagram` — gerar diagramas a partir do skill `diagram-design`
 
 ### Bundles, Composições e Prompt chains
 
@@ -431,11 +440,11 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 150 skills em 42 categorias (SKILL.md)
-│   ├── agents/          # 103 personas por categoria
+│   ├── skills/          # 171 skills em 42 categorias (SKILL.md)
+│   ├── agents/          # 105 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
-│   ├── templates/       # 4 templates
-│   ├── commands/        # 4 comandos documentados
+│   ├── templates/       # 11 templates
+│   ├── commands/        # 7 comandos documentados
 │   ├── playbooks/       # 3 fluxos de múltiplas etapas
 │   ├── recipes/         # 2 soluções completas
 │   ├── bundles/         # 2 pacotes prontos
@@ -455,7 +464,7 @@ opencode-engineering-kit/
 ├── plugins/             # Plugins de exemplo (community, enterprise)
 ├── marketplace-web/     # Interface web do marketplace
 ├── scripts/             # bootstrap, test, deploy, monitor, persona-scaffold, dashboards
-├── tests/               # 25 suítes de teste automatizadas
+├── tests/               # 26 suítes de teste automatizadas
 ├── docs/                # Documentação (EN + PT)
 ├── examples/            # Exemplos de uso
 ├── install.sh           # Instalação global
@@ -497,8 +506,11 @@ cp -r assets/templates/new-project/ /seu/novo-projeto/
 O projeto usa **quality gates** automatizados (lint de Markdown/YAML/Shell, validação de formato e conteúdo) com CI via GitHub Actions.
 
 ```bash
-# Rodar todas as 25 suítes de teste
+# Rodar todas as 26 suítes de teste (shell)
 ./scripts/test.sh
+
+# Rodar os testes da CLI (26 casos node:test)
+cd cli && npm test
 
 # Rodar os gates de qualidade
 ./core/quality/validate.sh
