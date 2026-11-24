@@ -1,7 +1,7 @@
 # Handoff de sessão — estado para continuar na próxima sessão
 
 **Registrado em:** 2026-11-24<br>
-**Branch:** `main` · **HEAD:** `a85754b` · **push autorizado e realizado**: `8f0cd11..a85754b main -> main` · **`origin/main` sincronizado (0 commits à frente)**<br>
+**Branch:** `main` · **push autorizado e realizado em 2026-11-24** (`8f0cd11..a85754b main -> main`, seguido da atualização deste handoff) · **`origin/main` sincronizado (0 commits à frente)** · último commit de código: `e3a4aaf`<br>
 **Árvore de trabalho:** limpa no momento deste registro.
 
 Este documento é o ponto de partida da próxima sessão. Ele registra o que foi feito, por que, o que já passou nos gates e o que ainda está em aberto. Atualize-o ao final da próxima sessão.
