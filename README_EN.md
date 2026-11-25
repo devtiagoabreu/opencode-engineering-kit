@@ -59,7 +59,7 @@ npx opencode-engineering-kit search docker
 
 Then restart OpenCode. The kit lives in `.opencode/` and `opencode.json` is merged (not overwritten).
 
-> **Note:** the `opencode-engineering-kit` npm package is not published to the registry yet. Until it is, install with `npx opencode-engineering-kit install --source /path/to/opencode-engineering-kit` (local checkout) or use the [global install script](#method-2--global-install-script-via-curl). The plain `npx ...` commands below will work once the package is available.
+> **Note:** `opencode-engineering-kit@0.1.0` is published on the npm registry, so the plain `npx ...` commands below work directly. For a local checkout (development), add `--source /path/to/opencode-engineering-kit`. See the [npm publishing playbook](./docs/NPM_PUBLISH_PLAYBOOK.md).
 
 ## Installation
 
@@ -541,7 +541,7 @@ See [SECURITY.md](./SECURITY.md) for policies and how to report vulnerabilities.
 
 **Portuguese:** [Guia do Usuário](./docs/GUIA_USUARIO.md) · [Cartão de Referência](./docs/CARTAO_REFERENCIA.md)
 
-**Planning:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md) · [Session handoff](./docs/SESSION_HANDOFF.md)
+**Planning:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md) · [Session handoff](./docs/SESSION_HANDOFF.md) · [npm publishing playbook](./docs/NPM_PUBLISH_PLAYBOOK.md)
 
 ## License
 

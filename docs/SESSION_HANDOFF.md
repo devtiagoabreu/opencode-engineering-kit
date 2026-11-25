@@ -128,7 +128,7 @@ python scripts/sync_readme_counts.py --root . --check
 3. Promover ativos a `stable` **somente** após revisão de qualidade e confirmação de licença/versão, sempre via `profiles/core.json`.
 4. Corrigir `scripts/test.sh` para paths Windows e limiares realistas, se o usuário quiser abrir esse escopo.
 5. ~~Push de `main`~~ **concluído em 2026-11-24** com autorização explícita (`8f0cd11..a85754b`). `origin/main` agora contém todos os ativos e correções de prontidão.
-6. **npm ainda pendente**: o pacote `opencode-engineering-kit` não está publicado (registry 404) — publicar exige credenciais do usuário. Depois de publicar, validar `npx opencode-engineering-kit --version` e `npx ... install` sem `--source`. Com o push concluído, o `install.js` agora busca o `main` atualizado, com todos os ativos e correções.
+6. ~~**npm ainda pendente**~~ **concluído em 2026-11-25**: `opencode-engineering-kit@0.1.0` publicado (`latest`), aprovado do stage `a4699eb5-8a41-409a-8df1-1e964a481f7f`. Validado: `npm view ... version/bin` e `npx --yes opencode-engineering-kit --version` → `0.1.0`. O fluxo completo (2FA via browser com TTY falso + aprovação de stage) está registrado em `docs/NPM_PUBLISH_PLAYBOOK.md`; use-o na próxima publicação. Falta apenas validar `npx ... install` sem `--source` em um projeto real.
 
 ## 9. Frases-chave para localizar no repo
 
