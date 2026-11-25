@@ -2,7 +2,7 @@
 
 **Idioma:** português  
 **Status:** ativo — esta é a lista canônica a ser usada sempre que o usuário disser `aprenda`.  
-**Última verificação:** 2026-11-25 — 32 repositórios/fontes na fila + curadoria de UI/SaaS, Vercel/JS e Python em `docs/WEB_UI_VERCEL_PYTHON_RESEARCH.md` (API do GitHub em 403; stars aproximados e licenças confirmadas na página dos repositórios)
+**Última verificação:** 2026-11-25 — 32 repositórios/fontes na fila + curadoria de UI/SaaS, Vercel/JS e Python em `docs/WEB_UI_VERCEL_PYTHON_RESEARCH.md` + inventário Google Workspace/Cloud em [`docs/GOOGLE_WORKSPACE_REPOS.md`](./GOOGLE_WORKSPACE_REPOS.md) (API do GitHub em 403; stars aproximados e licenças confirmadas na página dos repositórios)
 
 ## Protocolo
 
@@ -55,6 +55,17 @@ Quando o usuário disser **“aprenda”**:
 | 32 | Edmondson / Deci & Ryan / WHO / NICE / ISO 30414 / SHRM / EU AI Act / NIST | https://www.who.int/publications/i/item/9789240053052 | várias (normas pagas: referenciar) | `people-governance-psychology`, `psicologo-organizacional` | Segurança psicológica, motivação, JD-R, health at work, capital humano, alto risco em IA de emprego |
 
 > Os repositórios 18–20 são oficiais: organize GitHub [@ReceitaFederal](https://github.com/ReceitaFederal). Foram adicionados à fila de aprendizado e seus padrões estão mapeados em [docs/FISCAL_ENGINE_CAPABILITIES.md](./FISCAL_ENGINE_CAPABILITIES.md); nenhum código, banco, XSD ou binário foi instalado neste kit.
+
+### Extensão Google Workspace / Cloud (2026-11-25)
+
+O pedido por autenticação, Google Photos, Docs, Agenda, Console, Drive e planilhas produziu um
+inventário separado em [`docs/GOOGLE_WORKSPACE_REPOS.md`](./GOOGLE_WORKSPACE_REPOS.md): repos
+oficiais do Google (`google/skills`, ADK, Gemini CLI, `gemini-cli-extensions/workspace`, MCPs de
+Cloud, `googleworkspace/*`), bibliotecas `google-auth-*`/`google-api-*`, fontes oficiais de outros
+vendors (Anthropic, OpenAI, Microsoft) e MCPs da comunidade marcados como **não oficiais**.
+Na rodada `aprenda`, trate essa lista como extensão da fila acima, priorizando `google/skills`,
+`gemini-cli-extensions/workspace` e `googleworkspace/apps-script-samples`. Não duplicar
+`google-workspace-analytics`, `google-cloud-architecture`, `authentication` ou `browser-use-automation`.
 
 ## Temas prioritários (pedido do usuário)
 

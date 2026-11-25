@@ -541,7 +541,7 @@ See [SECURITY.md](./SECURITY.md) for policies and how to report vulnerabilities.
 
 **Portuguese:** [Guia do Usuário](./docs/GUIA_USUARIO.md) · [Cartão de Referência](./docs/CARTAO_REFERENCIA.md)
 
-**Planning:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md) · [Session handoff](./docs/SESSION_HANDOFF.md) · [npm publishing playbook](./docs/NPM_PUBLISH_PLAYBOOK.md)
+**Planning:** [Audit & PR Plan](./docs/AUDIT_AND_PR_PLAN.md) · [Roadmap](./ROADMAP.md) · [Architecture Evolution](./docs/ARCHITECTURE_EVOLUTION.md) · [Session handoff](./docs/SESSION_HANDOFF.md) · [npm publishing playbook](./docs/NPM_PUBLISH_PLAYBOOK.md) · [Google Workspace repositories](./docs/GOOGLE_WORKSPACE_REPOS.md)
 
 ## License
 
