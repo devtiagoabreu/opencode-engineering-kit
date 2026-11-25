@@ -13,6 +13,11 @@ Objetivo: a próxima sessão conseguir publicar uma nova versão sem redescobrir
 - Antes da publicação real, o nome pode estar ocupado por um placeholder
   `0.0.0-stage` e por uma versão real **staged** aguardando aprovação.
   Isso é normal — verifique com `npm stage list`.
+- **Regra de ouro:** `cli/` e o tarball publicado devem ser **sempre idênticos**.
+  Toda mudança em `cli/package.json`, `cli/bin/` ou `cli/src/` exige bump de
+  versão + publish + verificação. Mudanças em `assets/`, `core/`, `context/` e
+  `docs/` **não** exigem novo publish: a CLI instalada via `npx` baixa esses
+  arquivos do `main` do GitHub na hora do `install`.
 
 ## Pré-publicação
 
@@ -145,7 +150,14 @@ npm view opencode-engineering-kit version     # deve ser a versão nova
 npm view opencode-engineering-kit bin         # deve mostrar bin/opencode-engineering-kit.js
 npx opencode-engineering-kit --version
 npx opencode-engineering-kit install --dry-run --target /projeto/existente
+
+# compara o tarball publicado com o cli/ local, arquivo por arquivo (SHA-256)
+python scripts/check_npm_sync.py --root .
 ```
+
+O `check_npm_sync.py` falha se algum arquivo do tarball estiver diferente,
+faltando ou sobrando em relação ao `cli/`. Use-o sempre depois de publicar e
+antes de dizer que "cli e npx estão iguais".
 
 Também atualize os textos que dizem "pacote ainda não publicado":
 `README.md`, `README_EN.md` e `docs/SESSION_HANDOFF.md`.

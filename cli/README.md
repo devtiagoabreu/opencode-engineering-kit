@@ -152,6 +152,6 @@ npm publish
 ```
 
 > Para ambientes não interativos (2FA, publicação staged) veja o
-> [playbook de publicação npm](../docs/NPM_PUBLISH_PLAYBOOK.md). Ele registra o
+> [playbook de publicação npm](https://github.com/devtiagoabreu/opencode-engineering-kit/blob/main/docs/NPM_PUBLISH_PLAYBOOK.md). Ele registra o
 > fluxo usado em 2026-11-25: TTY falso + `--browser=false` para autenticar no
 > navegador e `npm stage approve <id>` quando o registry acusa versão staged.
