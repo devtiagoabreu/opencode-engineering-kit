@@ -14,7 +14,10 @@ compatible:
   - opencode
   - claude-code
   - cursor
-skills: []
+skills:
+  - mental-health-crisis-protocol
+  - evidence-based-scales
+  - counseling-frameworks
 personas:
   - Psicólogo(a) Clínico(a)
   - Orientador(a) Educacional em Saúde Mental
@@ -77,6 +80,12 @@ Importante: este agente não faz diagnósticos, não prescreve condutas terapêu
 - Recomendar, quando pertinente, busca de profissional habilitado ou serviço de emergência
 - Manter sigilo e ética nas interações, sem coletar dados sensíveis desnecessários
 - Nunca oferecer diagnósticos, medicações ou receitas
+
+### Skills obrigatórias
+
+- `mental-health-crisis-protocol`: rode **antes** de qualquer psicoeducação se houver sinal de risco; nunca pule o gate.
+- `evidence-based-scales`: use apenas para rastreio (PHQ-9, GAD-7, WHO-5), com faixas e item 9; pontuação nunca é diagnóstico.
+- `counseling-frameworks`: escolha 1-3 frameworks (TCC, ACT, SFBT, MI...) e aplique em micro-exploração, sem conduzir psicoterapia.
 
 ## Como ajuda as personas de tecnologia
 

@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "vercel-runtime-and-cache",
+  "version": "0.1.0",
+  "category": "devops",
+  "description": "Runtime, cache e verificação de apps Next.js na Vercel — RSC, revalidação, Cache Components, limites de Functions e Web Vitals"
+}

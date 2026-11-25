@@ -50,6 +50,9 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `construction-execution` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `nosql-modeling` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `sql-optimization` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `design-review-critic` | OpenCode Engineering Kit (community) — padrões adaptados de plugin87/ux-ui-agent-skills (design critic cego) e Nielsen Norman Group | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
+| `design-tokens-pipeline` | OpenCode Engineering Kit (community) — padrões adaptados de W3C DTCG, primer/primitives e tokens-studio/sd-transforms | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
+| `ui-visual-craft` | OpenCode Engineering Kit (community) — padrões adaptados de plugin87/ux-ui-agent-skills, vercel/geist-font e Inclusive Components | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `design-system` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `ui-ux-design` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `ci-cd-pipeline` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
@@ -77,12 +80,17 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `production-planning` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `accounting-basics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `tax-compliance` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `a11y-audit` | OpenCode Engineering Kit (community) — padrões adaptados de WCAG 2.2/WAI-ARIA APG, axe-core, Lighthouse, testing-library e plugin87/ux-ui-agent-skills | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `accessibility` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `css-best-practices` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `performance` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `react-patterns` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `state-management` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `git-workflow` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `adhd-executive-function` | OpenCode Engineering Kit (community) — padrões adaptados de FreedomIntelligence/OpenClaw-Medical-Skills (adhd-daily-planner), sundial-org/awesome-openclaw-skills e murilonerdx/skill-engineering-tdah | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
+| `counseling-frameworks` | OpenCode Engineering Kit (community) — padrões adaptados de ironyjk/counsel-frameworks, dralexlup/therapy-skill e theneoai/awesome-skills | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
+| `evidence-based-scales` | OpenCode Engineering Kit (community) — instrumentos de domínio público/livre uso (PHQ, GAD, PCL-5, WHO-5) e padrões de rhavekost/clinical-toolkit e alexclowe/awesome-claude-cowork-plugins | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
+| `mental-health-crisis-protocol` | OpenCode Engineering Kit (community) — padrões adaptados de C-SSRS/SAFE-T (NIMH), Stanley-Brown Safety Plan, WHO mhGAP, rhavekost/clinical-toolkit e FreedomIntelligence/OpenClaw-Medical-Skills | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `neurodiversity-support` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `nutrition` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `criminal-law` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
@@ -92,10 +100,12 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `mqtt-protocol` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `sensor-integration` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `language-learning` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `python-modern-tooling` | OpenCode Engineering Kit (community) — padrões adaptados de astral-sh/uv, astral-sh/ruff, PEP 517/621, OWASP, sigstore e actions/setup-python | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `python-best-practices` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `typescript-best-practices` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `supply-chain-management` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `lean-methodology` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `people-governance-psychology` | OpenCode Engineering Kit (community) — conceitos adaptados de Edmondson (psychological safety), Deci & Ryan (autonomia/competência/vínculo), Bakker & Demerouti (JD-R), Google Project Aristotle, ISO 30414 e SHRM | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `digital-marketing` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `political-campaign-marketing` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `traffic-management` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
@@ -123,6 +133,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `applied-mathematics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `chemistry-basics` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `physics-applied` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `nextjs-web-security` | OpenCode Engineering Kit (community) — padrões adaptados de OWASP Cheat Sheets, Vercel/Next.js docs, Stripe webhooks e Supabase RLS | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `owasp-top-10` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `secure-coding` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `skill-spector` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
@@ -145,6 +156,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `memory-discipline` | agentmemory | https://github.com/rohitg00/agentmemory | Apache-2.0 | 2026-11-23 |
 | `scientific-data-retrieval` | Scientific Agent Skills | https://github.com/K-Dense-AI/scientific-agent-skills | MIT | 2026-11-23 |
 | `diagram-design` | Diagram Design | https://github.com/cathrynlavery/diagram-design | MIT | 2026-11-23 |
+| `vercel-runtime-and-cache` | OpenCode Engineering Kit (community) — padrões adaptados de vercel/vercel-plugin, vercel/next.js, Vercel Docs e Web Vitals | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `registry-distribution` | shadcn/ui | https://github.com/shadcn-ui/ui | MIT | 2026-11-23 |
 | `saas-blueprint-patterns` | Open SaaS | https://github.com/wasp-lang/open-saas | MIT | 2026-11-23 |
 | `database-branching-workflows` | Neon | https://github.com/neondatabase/neon | Apache-2.0 | 2026-11-23 |
@@ -196,6 +208,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `designer-de-interiores` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `designer-de-tecidos` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `designer-digital` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `design-reviewer` | OpenCode Engineering Kit (community) — padrões adaptados de WCAG 2.2/APG, plugin87/ux-ui-agent-skills e NN/g | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `devops-engineer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `site-reliability-engineer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `technical-writer` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
@@ -229,6 +242,7 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `especialista-em-tdah` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `nutricionista` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `podologo` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
+| `psicologo-organizacional` | OpenCode Engineering Kit (community) — conceitos adaptados de Edmondson, Deci & Ryan, JD-R, Project Aristotle, WHO guidelines on mental health at work e padrões de tuanductran/hr-skills e msitarzewski/agency-agents | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-25 |
 | `psicologo` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `psiquiatra` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |
 | `advogado-trabalhista` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-08-08 |

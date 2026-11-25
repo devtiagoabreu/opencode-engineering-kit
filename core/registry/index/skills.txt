@@ -49,7 +49,10 @@
   - sql-optimization
   - sql-server-database
   - sqlalchemy-alembic
+  - design-review-critic
   - design-system
+  - design-tokens-pipeline
+  - ui-visual-craft
   - diagram-design
   - ui-ux-design
   - ci-cd-pipeline
@@ -61,6 +64,7 @@
   - self-host-deployment
   - terraform-aws
   - vercel-deployment
+  - vercel-runtime-and-cache
   - doc-to-markdown
   - assessment-and-feedback
   - classroom-management
@@ -85,6 +89,7 @@
   - fiscal-engine-integration
   - tax-compliance
   - usage-based-billing
+  - a11y-audit
   - accessibility
   - css-best-practices
   - form-validation
@@ -98,6 +103,10 @@
   - tanstack-query
   - transactional-email-patterns
   - git-workflow
+  - adhd-executive-function
+  - counseling-frameworks
+  - evidence-based-scales
+  - mental-health-crisis-protocol
   - neurodiversity-support
   - nutrition
   - criminal-law
@@ -114,10 +123,12 @@
   - language-learning
   - php-best-practices
   - python-best-practices
+  - python-modern-tooling
   - typescript-best-practices
   - route-optimization
   - supply-chain-management
   - lean-methodology
+  - people-governance-psychology
   - digital-marketing
   - political-campaign-marketing
   - traffic-management
@@ -148,6 +159,7 @@
   - physics-applied
   - scientific-data-retrieval
   - auth-plugin-architecture
+  - nextjs-web-security
   - owasp-top-10
   - rbac-authorization
   - secure-coding

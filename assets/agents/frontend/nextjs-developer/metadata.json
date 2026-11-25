@@ -14,7 +14,10 @@
     "cursor"
   ],
   "skills": [
-    "nextjs-development"
+    "nextjs-development",
+    "vercel-runtime-and-cache",
+    "nextjs-web-security",
+    "a11y-audit"
   ],
   "personas": [
     "Senior Next.js Developer",

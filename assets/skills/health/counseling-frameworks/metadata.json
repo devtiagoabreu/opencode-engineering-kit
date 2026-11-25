@@ -1,0 +1,18 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [
+    {
+      "name": "mental-health-crisis-protocol",
+      "version": "0.1.0"
+    }
+  ],
+  "name": "counseling-frameworks",
+  "version": "0.1.0",
+  "category": "health",
+  "description": "Roteador de frameworks de psicoeducação (TCC, ACT, SFBT, MI, DBT-skills, PPT, narrativa) para autoexploração estruturada, sem psicoterapia nem diagnóstico"
+}

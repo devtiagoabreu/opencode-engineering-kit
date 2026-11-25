@@ -1,0 +1,22 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [
+    {
+      "name": "mental-health-crisis-protocol",
+      "version": "0.1.0"
+    },
+    {
+      "name": "neurodiversity-support",
+      "version": "0.1.0"
+    }
+  ],
+  "name": "people-governance-psychology",
+  "version": "0.1.0",
+  "category": "management",
+  "description": "Psicologia aplicada à governança de pessoas — segurança psicológica, liderança, desempenho, engajamento, conflito e ética de dados, sem diagnóstico ou vigilância"
+}

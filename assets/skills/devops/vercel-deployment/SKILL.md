@@ -64,22 +64,32 @@ vercel env add ORS_API_KEY production
 vercel env add AUTH_SECRET production
 ```
 
-- Keep a `.env.example` in the repo documenting every variable.
-- Pull local env: `vercel env pull .env.local`.
+- Keep a `.env.example` in the repo documenting every variable; keep
+  `.env.local` out of Git.
+- Conecte o projeto com `vercel link` e puxe o ambiente com
+  `vercel env pull .env.local`.
+- Nunca use `vercel env add --value ...`: o valor fica no histórico do shell.
+  Prefira o prompt interativo, stdin ou o painel da Vercel.
+- `NEXT_PUBLIC_` apenas para dados públicos: segredos com esse prefixo entram
+  no bundle do browser.
 - For Neon: use the pooled connection string in production so serverless
   functions share connections.
 
-### Step 3: Serverless function limits
+### Step 3: Function limits (confirme no plano e na docs atuais)
 
-Route Handlers run as serverless functions with constraints:
+Route Handlers rodam como Functions, mas limites mudam por plano e região: não
+repita números antigos como "~10s Hobby / ~60s Pro". Confira
+<https://vercel.com/docs/functions> e o plano contratado.
 
-- **Body size limit** (4.5 MB) — for file uploads use a dedicated service
-  (UploadThing) that streams to storage, not the Route Handler body.
-- **Duration limit** — keep requests under ~10s (Hobby) / ~60s (Pro); long
-  external calls (route optimization) must time out early
-  (`AbortSignal.timeout(15_000)`).
-- **Cold starts** — keep the Prisma client as a warm singleton; prefer edge-safe
-  or Node runtime appropriately (`export const runtime = "nodejs"` for Prisma).
+- **Payload:** o teto de requisição/resposta costuma ficar em torno de 4.5 MB —
+  confirme antes de dimensionar. Para upload use URL assinada de armazenamento,
+  não o body do Route Handler.
+- **Duração:** declare `maxDuration` por rota e envolva chamadas externas com
+  `AbortSignal.timeout(15_000)`; trabalho longo vai para fila/job.
+- **Memória e bundle:** meça o uso real, mantenha o Prisma client como singleton
+  (`export const runtime = "nodejs"`) e enxugue dependências no caminho crítico.
+- **Fluid Compute:** reduz o custo de cold starts com instâncias concorrentes
+  aquecidas; ainda assim projete para timeout, retry e idempotência.
 - Don't run heavy work during render; move it to Route Handlers or background.
 
 ### Step 4: Database migrations on deploy
@@ -121,6 +131,40 @@ jobs:
 - Configure **Speed Insights** for performance.
 - Set up **deployment protection** for previews if the app has auth or secrets.
 
+### Step 7: Cache e revalidação (resumo)
+
+Para `updateTag`, `revalidateTag(tag, "max")`, `revalidatePath`, Cache
+Components, streaming com Suspense e hidratação determinística, siga
+[runtime e cache](../vercel-runtime-and-cache/SKILL.md). Tags são
+case-sensitive e limitadas a 256 caracteres; confirme as assinaturas na versão
+instalada do Next.js antes de editar.
+
+### Step 8: Promoção e rollback
+
+Fluxo: PR → preview → checks (lint, tipos, testes, e2e) → `vercel promote` →
+`vercel rollback` se algo falhar. No CI, use `vercel build --prod` seguido de
+`vercel deploy --prebuilt` para não gerar builds diferentes. Promover com
+variáveis de Production diferentes pode recompilar: verifique depois de
+promover. Confirme a sintaxe na versão da CLI instalada.
+
+```bash
+vercel promote <url-do-preview> --prod
+vercel rollback <deployment-anterior>
+```
+
+### Step 9: Verificação ponta a ponta
+
+Não declare deploy pronto sem percorrer **browser → API → dados → resposta**:
+interação real sem erro de hidratação, status e latência da API, persistência e
+invalidação no banco, HTML/JSON final com `Cache-Control` coerente. Metas de Web
+Vitals em campo (p75): LCP ≤ 2.5s, INP ≤ 200ms, CLS ≤ 0.1.
+
+### Step 10: Telemetria do plugin Vercel
+
+O plugin oficial `vercel/vercel-plugin` coleta eventos de uso por padrão. Antes
+de instalá-lo em ambiente de time, avalie a política de privacidade e desligue
+a coleta com `VERCEL_PLUGIN_TELEMETRY=off` quando não houver autorização.
+
 ## Examples
 
 ### Environment-dependent base URL
@@ -128,7 +172,7 @@ jobs:
 ```ts
 // lib/config.ts
 export const config = {
-  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "http://localhost:3000",
+  appUrl: process.env.NEXT_PUBLIC_APP_URL ?? "https://app.example.com",
   isProd: process.env.NODE_ENV === "production",
 };
 ```

@@ -17,7 +17,11 @@
   "skills": [
     "react-patterns",
     "css-best-practices",
-    "accessibility"
+    "accessibility",
+    "ui-visual-craft",
+    "design-review-critic",
+    "design-tokens-pipeline",
+    "a11y-audit"
   ],
   "personas": [
     "UI Designer",

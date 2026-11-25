@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "ui-visual-craft",
+  "version": "0.1.0",
+  "category": "design",
+  "description": "Artesanato visual verificável em UI: escala tipográfica com propósito, ritmo de 4px, cor semântica em OKLCH, profundidade, motion e anti-slop."
+}

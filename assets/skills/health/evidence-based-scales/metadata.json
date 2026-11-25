@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "evidence-based-scales",
+  "version": "0.1.0",
+  "category": "health",
+  "description": "Aplicação e leitura responsável de escalas de rastreio (PHQ-9/2, GAD-7, WHO-5, PCL-5, C-SSRS), com pontuação, limites e encaminhamento — nunca diagnóstico"
+}

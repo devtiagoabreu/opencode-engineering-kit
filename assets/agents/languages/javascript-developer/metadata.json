@@ -12,7 +12,9 @@
     "cursor"
   ],
   "skills": [
-    "javascript-best-practices"
+    "javascript-best-practices",
+    "vercel-runtime-and-cache",
+    "nextjs-web-security"
   ],
   "personas": [
     "Senior JavaScript Developer",

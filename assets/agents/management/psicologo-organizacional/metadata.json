@@ -1,0 +1,13 @@
+{
+  "name": "psicologo-organizacional",
+  "description": "Psicólogo(a) organizacional para governança de pessoas — segurança psicológica, liderança, desempenho e ética de dados, sem diagnóstico nem decisão de RH automatizada",
+  "version": "0.1.0",
+  "author": "devtiagoabreu",
+  "maturity": "beta",
+  "tags": ["psicologia-organizacional", "governanca-de-pessoas", "seguranca-psicologica", "lideranca", "people-analytics", "rh"],
+  "compatible": ["opencode", "claude-code", "cursor"],
+  "skills": ["people-governance-psychology", "neurodiversity-support", "mental-health-crisis-protocol"],
+  "personas": ["Psicólogo(a) Organizacional", "Consultor(a) de Governança de Pessoas"],
+  "dependencies": [],
+  "dependencies_resolved": true
+}

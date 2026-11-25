@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "a11y-audit",
+  "version": "0.1.0",
+  "category": "frontend",
+  "description": "Gate obrigatório de acessibilidade para UI: WCAG 2.2 AA/AAA, APG por widget, axe/Lighthouse/testes manuais e relatório priorizado."
+}

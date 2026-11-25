@@ -13,8 +13,21 @@
   "files": [
     "bin",
     "src",
-    "README.md"
+    "README.md",
+    "LICENSE"
   ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/devtiagoabreu/opencode-engineering-kit.git",
+    "directory": "cli"
+  },
+  "homepage": "https://github.com/devtiagoabreu/opencode-engineering-kit#readme",
+  "bugs": {
+    "url": "https://github.com/devtiagoabreu/opencode-engineering-kit/issues"
+  },
+  "publishConfig": {
+    "access": "public"
+  },
   "scripts": {
     "test": "node --test test/*.test.js",
     "prepublishOnly": "npm test && npm pack --dry-run"

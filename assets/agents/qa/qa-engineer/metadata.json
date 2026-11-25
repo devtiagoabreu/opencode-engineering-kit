@@ -17,7 +17,9 @@
   "skills": [
     "unit-testing",
     "integration-testing",
-    "e2e-testing"
+    "e2e-testing",
+    "a11y-audit",
+    "nextjs-web-security"
   ],
   "personas": [
     "QA Engineer",

@@ -20,7 +20,10 @@
     "css-best-practices",
     "performance",
     "accessibility",
-    "state-management"
+    "state-management",
+    "a11y-audit",
+    "ui-visual-craft",
+    "design-tokens-pipeline"
   ],
   "personas": [
     "Senior Frontend Developer",

@@ -2,7 +2,7 @@
 
 **Idioma:** português  
 **Status:** ativo — esta é a lista canônica a ser usada sempre que o usuário disser `aprenda`.  
-**Última verificação:** 2026-11-24 — 20 repositórios na fila (revisão dos 3 oficiais da Receita Federal concluída; licenças MIT confirmadas)
+**Última verificação:** 2026-11-25 — 32 repositórios/fontes na fila + curadoria de UI/SaaS, Vercel/JS e Python em `docs/WEB_UI_VERCEL_PYTHON_RESEARCH.md` (API do GitHub em 403; stars aproximados e licenças confirmadas na página dos repositórios)
 
 ## Protocolo
 
@@ -41,6 +41,18 @@ Quando o usuário disser **“aprenda”**:
 | 18 | Receita Federal — Calculadora RTC (Regime Geral) **← motor fiscal principal** | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | `fiscal-engine-integration`, `fiscal-calculation-record`, `docs/FISCAL_ENGINE_CAPABILITIES.md` | API oficial CBS/IBS/Imposto Seletivo; banco SQLite versionado por Flyway; modo observabilidade com erros por item; dados abertos (CST/cClassTrib, NCM/NBS, fundamentação, alíquotas); geração e validação XML/XSD |
 | 19 | Receita Federal — Calculadora RTC (Simples Nacional) | https://github.com/ReceitaFederal/calculadora-rtc-simples-nacional | MIT | `fiscal-engine-integration`, `fiscal-calculation-record` | CBS/IBS no Simples Nacional; atividades vigentes por data com filtros; `/versao` e `/versao/status`; reusa o banco do repositório 18 |
 | 20 | Receita Federal — Gerador DANFSe | https://github.com/ReceitaFederal/calculadora-rtc-gerador-danfse | MIT | `fiscal-engine-integration`, `fiscal-calculation-record` | PDF de NFS-e a partir de XML; limite de tamanho, sanitização, logs sem dados fiscais, health checks, OTel opt-in e fail-fast de configuração |
+| 21 | safety-quotient-lab/psychology-agent | https://github.com/safety-quotient-lab/psychology-agent | Apache-2.0 | `mental-health-crisis-protocol` (somente ideias de *epistemic flags*/anti-sycophancy) | Alpha; nunca adotar `dangerouslySkipPermissions` |
+| 22 | ironyjk/counsel-frameworks | https://github.com/ironyjk/counsel-frameworks | MIT | `counseling-frameworks` | 14 frameworks + roteador + anti-padrões |
+| 23 | theneoai/awesome-skills | https://github.com/theneoai/awesome-skills | NOASSERTION | `counseling-frameworks` | Persona psychologist: safety screen, disclaimers, escopo |
+| 24 | rhavekost/clinical-toolkit | https://github.com/rhavekost/clinical-toolkit | NOASSERTION | `evidence-based-scales`, `mental-health-crisis-protocol` | Pontuação/corte PHQ-9, GAD-7, PCL-5, C-SSRS; checar licença dos instrumentos |
+| 25 | salikkhann/openmedskills | https://github.com/salikkhann/openmedskills | NOASSERTION | `people-governance-psychology` | `risk_class`, `phi_allowed`, `diagnosis: false`, revisão humana |
+| 26 | FreedomIntelligence/OpenClaw-Medical-Skills | https://github.com/FreedomIntelligence/OpenClaw-Medical-Skills | não declarada | `adhd-executive-function`, `mental-health-crisis-protocol` | Somente ideias; licença ausente — não copiar texto |
+| 27 | robcushard-nth/autism_skills_suite | https://github.com/robcushard-nth/autism_skills_suite | MIT | `neurodiversity-support` | Revisão por adultos autistas e clínicos; verificar divergência de nome do fork |
+| 28 | tuanductran/hr-skills | https://github.com/tuanductran/hr-skills | MIT | `people-governance-psychology` | Router-first, gate de jurisdição; evitar vigilância contínua de bem-estar |
+| 29 | polar-bear-org/claude-skills | https://github.com/polar-bear-org/claude-skills | custom (sem revenda) | `people-governance-psychology` | `hr-dashboard`, concern log em duas passagens; somente ideias |
+| 30 | msitarzewski/agency-agents | https://github.com/msitarzewski/agency-agents | MIT | `psicologo-organizacional`, `people-governance-psychology` | `organizational-psychologist`: evidência > pop psychology |
+| 31 | Emo-gml/Awesome-Mental-Health-LLMs | https://github.com/Emo-gml/Awesome-Mental-Health-LLMs | MIT | referência bibliográfica | Survey revisado por pares (TAFFC) — fundamentar, não copiar prompts |
+| 32 | Edmondson / Deci & Ryan / WHO / NICE / ISO 30414 / SHRM / EU AI Act / NIST | https://www.who.int/publications/i/item/9789240053052 | várias (normas pagas: referenciar) | `people-governance-psychology`, `psicologo-organizacional` | Segurança psicológica, motivação, JD-R, health at work, capital humano, alto risco em IA de emprego |
 
 > Os repositórios 18–20 são oficiais: organize GitHub [@ReceitaFederal](https://github.com/ReceitaFederal). Foram adicionados à fila de aprendizado e seus padrões estão mapeados em [docs/FISCAL_ENGINE_CAPABILITIES.md](./FISCAL_ENGINE_CAPABILITIES.md); nenhum código, banco, XSD ou binário foi instalado neste kit.
 

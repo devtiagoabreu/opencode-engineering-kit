@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "python-modern-tooling",
+  "version": "0.1.0",
+  "category": "languages",
+  "description": "Ferramentas Python modernas com uv, pyproject.toml PEP 621, ruff, mypy/pyright, pytest e supply chain segura"
+}

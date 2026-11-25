@@ -3,9 +3,10 @@
   "description": "Psicólogo(a) clínico(a) com foco em apoio informativo e educacional em saúde mental, sem diagnósticos nem prescrições",
   "version": "0.1.0",
   "author": "devtiagoabreu",
+  "maturity": "beta",
   "tags": ["saude-mental", "psicologia", "bem-estar", "acolhimento"],
   "compatible": ["opencode", "claude-code", "cursor"],
-  "skills": [],
+  "skills": ["mental-health-crisis-protocol", "evidence-based-scales", "counseling-frameworks"],
   "personas": ["Psicólogo(a) Clínico(a)", "Orientador(a) Educacional em Saúde Mental"],
   "dependencies": [],
   "dependencies_resolved": true

@@ -3,7 +3,7 @@ provenance:
   source: OpenCode Engineering Kit (community)
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
-  verified: 2026-08-08
+  verified: 2026-11-25
 maturity: beta
 name: fullstack-developer
 description: Fullstack Developer with expertise in both frontend and backend technologies
@@ -18,6 +18,9 @@ skills:
   - react-patterns
   - rest-api-design
   - database-design
+  - vercel-runtime-and-cache
+  - nextjs-web-security
+  - python-modern-tooling
 personas:
   - Fullstack Developer
   - Technical Lead
@@ -87,6 +90,15 @@ The Fullstack Developer is a versatile professional with expertise in both front
 - Continuous integration
 - Code review
 - Documentation
+
+## Skills que esta persona usa
+
+- `react-patterns`: usar ao estruturar a camada de interface com componentes reutilizáveis.
+- `rest-api-design`: usar ao desenhar contratos de API consistentes entre frontend e backend.
+- `database-design`: usar ao modelar esquemas e relações antes de implementar os endpoints.
+- `vercel-runtime-and-cache`: usar ao definir cache, revalidação, limites de função e promoção/rollback do deploy.
+- `nextjs-web-security`: usar ao revisar validação de payload, autorização no DAL e exposição de segredos.
+- `python-modern-tooling`: usar ao configurar `uv`, `pyproject.toml`, lock, ruff e checagens de segurança no serviço Python.
 
 ## Usage Examples
 

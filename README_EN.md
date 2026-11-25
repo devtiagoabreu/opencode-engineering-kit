@@ -20,8 +20,8 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 171 (42 categories) |
-| Agents | 105 (38 categories) |
+| Skills | 183 (42 categories) |
+| Agents | 107 (38 categories) |
 | Prompts | 10 |
 | Templates | 11 |
 | Playbooks | 3 |
@@ -247,7 +247,7 @@ cd opencode-engineering-kit
 
 ## What the kit contains (detailed)
 
-### Skills — 171 ready guides
+### Skills — 183 ready guides
 
 Skills are **complete guides** (instructions + examples + references) that enable the AI to perform specific tasks. Each skill has validated YAML frontmatter (name, description, category, version, author, compatibility) and a 600-line limit.
 
@@ -256,18 +256,18 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs, Context Filesystem Memory, Memory Discipline, AI SDK Agent Patterns |
 | `analytics` | Business Intelligence, Privacy-First Analytics |
 | `automation` | n8n Workflow Automation, LLM Workflow Orchestration |
-| `design` | Design System, UI/UX, Diagram Design |
+| `design` | Design System, UI/UX, Design Tokens (DTCG), UI Visual Craft, Design Review Critic, Diagram Design |
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, control and simulation |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment, Vercel Runtime & Cache |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
-| `frontend` | React, State Management, CSS, Accessibility, Registry Distribution, Transactional Email Patterns |
+| `frontend` | React, State Management, CSS, Accessibility, **A11y Audit (WCAG 2.2)**, Registry Distribution, Transactional Email Patterns |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning), **RBAC**, Auth Plugin Architecture |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (skill scanning), **RBAC**, Auth Plugin Architecture, **Next.js Web Security** |
 | `git` | Git Workflow |
 | `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
-| `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
+| `languages` | Python, **Python Modern Tooling (uv/ruff)**, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
 | `iot` | MQTT, Sensors |
 | `tools` | Advanced Git, Terminal, Repo → LLM, Code graph (Graphify) |
 | `quality` | Code Review, Refactoring, Context/token optimization |
@@ -278,8 +278,8 @@ Skills are **complete guides** (instructions + examples + references) that enabl
 | `engineering` | Mechatronics, industrial automation, home automation, production planning |
 | `logistics` | Supply chain, **Route Optimization** |
 | `web` | Web scraping, Google Workspace/Looker Studio, Browser Use Automation |
-| `management` | Lean Methodology |
-| `health` | Neurodiversity support (ASD/ADHD), nutrition, podiatry |
+| `management` | Lean Methodology, Psychology for People Governance |
+| `health` | Crisis protocol, screening scales, psychoeducation frameworks, ADHD executive function, neurodiversity support, nutrition, podiatry |
 | `cloud` | AWS and Google Cloud architecture |
 | `education` | Lesson planning, teaching methods, assessment, evidence-based teaching, vestibular (ENEM/FUVEST/VUNESP) |
 | `music` | Music theory, Suzuki Method |
@@ -306,7 +306,7 @@ All skills are copied automatically to `.opencode/skills/` when installing via
 the CLI (`npx opencode-engineering-kit install`) — new categories are detected
 recursively, with no extra configuration.
 
-### Agents — 105 ready personas
+### Agents — 107 ready personas
 
 Agents are **personas** (role + context + communication style) for specific roles. Examples:
 
@@ -336,7 +336,7 @@ Portuguese, with headers compatible with the kit's tests.
 |----------|----------|
 | `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
 | `finance` | contador, fiscal, analista-financeiro, controladoria |
-| `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
+| `design` | designer-de-interiores, designer-de-tecidos, designer-digital, design-reviewer |
 | `marketing` | marketing-digital, gestor-de-trafego, marketeiro-politico, criador-de-jingles-politicos |
 | `science` | matematico, fisico, quimico |
 | `humanities` | historiador, filosofo, analista-geopolitico, analista-politico, advogado-trabalhista, criminalista |
@@ -344,7 +344,7 @@ Portuguese, with headers compatible with the kit's tests.
 | `logistics` | especialista-em-logistica |
 | `web` | webscraper, especialista-google-workspace |
 | `health` | psicologo, psiquiatra, especialista-em-autismo, especialista-em-tdah, nutricionista, podologo |
-| `management` | metodologia-lean |
+| `management` | metodologia-lean, psicologo-organizacional |
 | `cloud` | arquiteto-aws-cloud, arquiteto-google-cloud |
 | `education` | professor-de-historia, professor-de-geografia, professor-de-matematica, professor-de-fisica, professor-de-quimica, professor-de-filosofia, professor-de-etica, professor-de-sociologia, professor-de-robotica, professor-de-artes, professor-de-educacao-fisica, especialista-em-alfabetizacao, preparador-vestibular |
 | `music` | musico, especialista-metodo-suzuki |
@@ -440,8 +440,8 @@ The kit includes a static web interface (`marketplace-web/`) to discover and sea
 ```
 opencode-engineering-kit/
 ├── assets/              # All reusable assets
-│   ├── skills/          # 171 skills in 42 categories (SKILL.md)
-│   ├── agents/          # 105 personas by category
+│   ├── skills/          # 183 skills in 42 categories (SKILL.md)
+│   ├── agents/          # 107 personas by category
 │   ├── prompts/         # 10 reusable prompts
 │   ├── templates/       # 11 templates
 │   ├── commands/        # 7 documented commands

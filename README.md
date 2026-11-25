@@ -19,8 +19,8 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 171 (42 categorias) |
-| Agents | 105 (38 categorias) |
+| Skills | 183 (42 categorias) |
+| Agents | 107 (38 categorias) |
 | Prompts | 10 |
 | Templates | 11 |
 | Playbooks | 3 |
@@ -244,7 +244,7 @@ O `bootstrap.sh` cria a estrutura de diretórios e as categorias esperadas.
 
 ## O que o kit contém (detalhado)
 
-### Skills — 171 guias prontos
+### Skills — 183 guias prontos
 
 Skills são **guias completos** (instruções + exemplos + referências) para que a IA execute tarefas específicas. Cada skill tem frontmatter YAML validado (nome, descrição, categoria, versão, autor, compatibilidade) e limite de 600 linhas.
 
@@ -253,18 +253,18 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `ai` | Deep Learning, RAG/LLM, Evolution API, LLM Multi-Provider, Free LLMs, Context Filesystem Memory, Memory Discipline, AI SDK Agent Patterns |
 | `analytics` | Business Intelligence, Privacy-First Analytics |
 | `automation` | n8n Workflow Automation, LLM Workflow Orchestration |
-| `design` | Design System, UI/UX, Diagram Design |
+| `design` | Design System, UI/UX, Design Tokens (DTCG), UI Visual Craft, Design Review Critic, Diagram Design |
 | `documentation` | Doc → Markdown (MarkItDown) |
 | `robotics` | ROS 2, controle e simulação |
 | `embedded` | Arduino, ESP32, ESP8266, Raspberry Pi, RTOS |
-| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment |
+| `devops` | Docker, Kubernetes, CI/CD, Terraform, Monitoring, Incident Response, **On-Premise**, Self-Host Deployment, Vercel Runtime & Cache |
 | `backend` | API Design, Auth, Caching, GraphQL, REST, Database, **FastAPI** |
-| `frontend` | React, State Management, CSS, Acessibilidade, Registry Distribution, Transactional Email Patterns |
+| `frontend` | React, State Management, CSS, Acessibilidade, **A11y Audit (WCAG 2.2)**, Registry Distribution, Transactional Email Patterns |
 | `testing` | Unit, Integration, E2E, Python Testing |
-| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills), **RBAC**, Auth Plugin Architecture |
+| `security` | OWASP Top 10, Secure Coding, SkillSpector (scan de skills), **RBAC**, Auth Plugin Architecture, **Next.js Web Security** |
 | `git` | Git Workflow |
 | `vision` | OpenCV, **ONNX Object Detection**, **RTSP/ONVIF Cameras** |
-| `languages` | Python, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
+| `languages` | Python, **Python Modern Tooling (uv/ruff)**, TypeScript, **C#**, **C++**, **C**, **PHP**, **Delphi** |
 | `iot` | MQTT, Sensores |
 | `tools` | Git avançado, Terminal, Repo → LLM, Grafo de código (Graphify) |
 | `quality` | Code Review, Refactoring, Otimização de contexto/tokens |
@@ -275,8 +275,8 @@ Skills são **guias completos** (instruções + exemplos + referências) para qu
 | `engineering` | Mecatrônica, automação industrial, automação residencial, planejamento de produção |
 | `logistics` | Supply chain, **Route Optimization** |
 | `web` | Web scraping, Google Workspace/Looker Studio, Browser Use Automation |
-| `management` | Metodologia Lean |
-| `health` | Suporte à neurodiversidade (TEA/TDAH), nutrição, podologia |
+| `management` | Metodologia Lean, Psicologia para Governança de Pessoas |
+| `health` | Protocolo de crise, escalas de rastreio, frameworks de psicoeducação, funções executivas TDAH, suporte à neurodiversidade, nutrição, podologia |
 | `cloud` | Arquitetura AWS e Google Cloud |
 | `education` | Planejamento de aulas, métodos de ensino, avaliação, evidências, vestibular (ENEM/FUVEST/VUNESP) |
 | `music` | Teoria musical, método Suzuki |
@@ -304,7 +304,7 @@ Todas as skills são copiadas automaticamente para `.opencode/skills/` na
 instalação via CLI (`npx opencode-engineering-kit install`) — novas categorias
 são detectadas recursivamente, sem configuração extra.
 
-### Agents — 105 personas prontas
+### Agents — 107 personas prontas
 
 Agents são **personas** (papel + contexto + estilo de comunicação) para papéis específicos. Exemplos:
 
@@ -334,7 +334,7 @@ em português, com cabeçalhos compatíveis com os testes do kit.
 |-----------|----------|
 | `construction` | pedreiro, engenheiro-civil, arquiteto, desenhista-tecnico, pintor |
 | `finance` | contador, fiscal, analista-financeiro, controladoria |
-| `design` | designer-de-interiores, designer-de-tecidos, designer-digital |
+| `design` | designer-de-interiores, designer-de-tecidos, designer-digital, design-reviewer |
 | `marketing` | marketing-digital, gestor-de-trafego, marketeiro-politico, criador-de-jingles-politicos |
 | `science` | matematico, fisico, quimico |
 | `humanities` | historiador, filosofo, analista-geopolitico, analista-politico, advogado-trabalhista, criminalista |
@@ -342,7 +342,7 @@ em português, com cabeçalhos compatíveis com os testes do kit.
 | `logistics` | especialista-em-logistica |
 | `web` | webscraper, especialista-google-workspace |
 | `health` | psicologo, psiquiatra, especialista-em-autismo, especialista-em-tdah, nutricionista, podologo |
-| `management` | metodologia-lean |
+| `management` | metodologia-lean, psicologo-organizacional |
 | `cloud` | arquiteto-aws-cloud, arquiteto-google-cloud |
 | `education` | professor-de-historia, professor-de-geografia, professor-de-matematica, professor-de-fisica, professor-de-quimica, professor-de-filosofia, professor-de-etica, professor-de-sociologia, professor-de-robotica, professor-de-artes, professor-de-educacao-fisica, especialista-em-alfabetizacao, preparador-vestibular |
 | `music` | musico, especialista-metodo-suzuki |
@@ -440,8 +440,8 @@ O kit inclui uma interface web estática (`marketplace-web/`) para descobrir e b
 ```
 opencode-engineering-kit/
 ├── assets/              # Todos os recursos reutilizáveis
-│   ├── skills/          # 171 skills em 42 categorias (SKILL.md)
-│   ├── agents/          # 105 personas por categoria
+│   ├── skills/          # 183 skills em 42 categorias (SKILL.md)
+│   ├── agents/          # 107 personas por categoria
 │   ├── prompts/         # 10 prompts reutilizáveis
 │   ├── templates/       # 11 templates
 │   ├── commands/        # 7 comandos documentados

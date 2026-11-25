@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "nextjs-web-security",
+  "version": "0.1.0",
+  "category": "security",
+  "description": "Segurança web em Next.js — XSS e CSRF, autorização no DAL, validação em Actions e Route Handlers, webhooks Stripe, RLS e segredos"
+}

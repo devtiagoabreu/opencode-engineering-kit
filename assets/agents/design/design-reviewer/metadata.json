@@ -1,0 +1,12 @@
+{
+  "name": "design-reviewer",
+  "description": "Revisor crítico de UI: separa correto de bom, exige evidência renderizada e só aprova com julgamento independente, nunca só com gates verdes.",
+  "version": "0.1.0",
+  "author": "devtiagoabreu",
+  "tags": ["design", "revisao", "critica", "acessibilidade", "tokens", "ui", "veredito"],
+  "compatible": ["opencode", "claude-code", "cursor"],
+  "skills": ["a11y-audit", "ui-visual-craft", "design-review-critic", "design-tokens-pipeline"],
+  "personas": ["Crítico de design independente", "Revisor de acessibilidade de interface", "Guardião de design system"],
+  "dependencies": [],
+  "dependencies_resolved": true
+}

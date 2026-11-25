@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "design-tokens-pipeline",
+  "version": "0.1.0",
+  "category": "design",
+  "description": "Pipeline de design tokens em formato DTCG: $value/$type, aliases, três camadas, temas, transform CSS/TS e validação de contraste no CI."
+}

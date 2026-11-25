@@ -28,6 +28,7 @@ desenhista-tecnico
 designer-de-interiores
 designer-de-tecidos
 designer-digital
+design-reviewer
 devops-engineer
 embedded-engineer
 engenheiro-civil
@@ -90,6 +91,7 @@ professor-de-quimica
 professor-de-robotica
 professor-de-sociologia
 psicologo
+psicologo-organizacional
 psiquiatra
 qa-engineer
 quimico

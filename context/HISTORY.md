@@ -17,6 +17,24 @@ quê.
 
 ## Entradas
 
+### 2026-11-25 (2) — Web/UI acessível, Vercel/JS e Python moderno
+
+- **Pesquisa:** curadoria de três eixos em `docs/WEB_UI_VERCEL_PYTHON_RESEARCH.md` — UI/SaaS (acessibilidade, intuitividade, beleza), JS/TS na Vercel e Python moderno. Stars aproximados (GitHub API 403); licenças confirmadas quando possível.
+- **7 skills novas (`beta`):** `frontend/a11y-audit`, `design/ui-visual-craft`, `design/design-review-critic`, `design/design-tokens-pipeline`, `devops/vercel-runtime-and-cache`, `security/nextjs-web-security`, `languages/python-modern-tooling`.
+- **1 persona nova (`beta`):** `design/design-reviewer` — crítica renderizada em 1280/390 e light/dark; gates verdes não bastam para aprovar.
+- **Atualizações:** `accessibility` (WCAG 2.2), `python-best-practices` (uv/ruff), `vercel-deployment`, `nextjs-development`, `shadcn-ui` e oito agents de tecnologia passaram a referenciar as novas skills.
+- **Decisão:** adaptar gates verificáveis (axe/Lighthouse/browser) e separar "correção" de "qualidade"; rejeitar dark patterns, UI gerada por IA sem revisão, telemetria involuntária do plugin Vercel e padrões deprecados (`middleware.ts`, `runtime='edge'`, `vercel env add --value`).
+- **Publicação:** pacote npm `opencode-engineering-kit` na pasta `cli/` preparado para `npx opencode-engineering-kit install`.
+
+### 2026-11-25 — Psicologia, crise e governança de pessoas
+
+- **Pesquisa de repositórios:** curadoria de 30 repositórios/fontes com skills e agents de psicologia clínica, neurodiversidade e people ops (C-SSRS/SAFE-T, Stanley-Brown, WHO mhGAP, Edmondson, Deci & Ryan, JD-R, ISO 30414, SHRM, NIST AI RMF, EU AI Act). O mapeamento está em `docs/APRENDA_REPOSITORIOS.md`, `docs/REFERENCE_CAPABILITIES.md` e no relatório completo `docs/PSYCHOLOGY_AGENT_RESEARCH.md`.
+- **5 skills novas (`beta`):** `mental-health-crisis-protocol`, `evidence-based-scales`, `counseling-frameworks`, `adhd-executive-function`, `people-governance-psychology`.
+- **1 persona nova (`beta`):** `management/psicologo-organizacional` — diagnóstico sistêmico, não de pessoas; decisão de emprego sempre humana e nomeada.
+- **Agents de saúde atualizados:** `psicologo`, `psiquiatra`, `especialista-em-autismo` e `especialista-em-tdah` passaram a referenciar o gate de crise e as skills de escalas/frameworks; `maturity` adicionado ao `metadata.json`.
+- **Segurança:** `evals/evals.md` com 8 prompts e critérios de reprovação (ideação com plano, sinal ambíguo, pedido de medicação, item 9 do PHQ-9, meltdown com autolesão, TDAH com sofrimento agudo, pedido de dado individual de RH, speak-up com medo de retaliação).
+- **Decisão:** manter postura estritamente informativa/educacional — sem diagnóstico, prescrição, terapia ou decisão de RH automatizada. Licenças ausentes/ambíguas (OpenClaw-Medical-Skills, polar-bear-org, borghei, rhavekost, salikkhann) foram usadas somente como referência de ideias, sem cópia de texto.
+
 ### 2026-08-10 — Educação, cultura, comércio, direito, política e qualidade
 
 - **Adicionadas 39 personas** em novas categorias: `education` (11 professores

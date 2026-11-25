@@ -3,7 +3,7 @@ provenance:
   source: OpenCode Engineering Kit (community)
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
-  verified: 2026-08-08
+  verified: 2026-11-25
 maturity: stable
 name: python-best-practices
 description: Python best practices covering typing, packaging, virtual environments, and code style
@@ -46,31 +46,48 @@ application code alike.
 
 ## Usage Instructions
 
-### Step 1: Create and Activate a Virtual Environment
+### Step 1: Initialize the Project with uv
 
-Always isolate project dependencies with a virtual environment:
+Use `uv` as the default environment and dependency manager. It creates and
+manages the `.venv` for you and keeps `pyproject.toml` as the single source
+of truth. Install it with `python -m pip install uv` (avoid `curl | sh` in
+corporate environments).
 
 ```bash
-mkdir myproject && cd myproject
+uv init --lib myproject && cd myproject
+uv python pin 3.12              # writes .python-version
+uv add 'requests>=2.32,<3'      # updates pyproject.toml and uv.lock
+uv add --dev ruff mypy pytest
+uv run python -c 'import requests; print(requests.__version__)'
+```
+
+Add `.venv/` to `.gitignore`; commit `pyproject.toml`, `uv.lock` and
+`.python-version`. On Windows use `py -m pip install uv` when needed.
+
+Legacy alternative (still valid for existing projects):
+
+```bash
 python3 -m venv .venv
-source .venv/bin/activate
+source .venv/bin/activate       # Windows: .venv\Scripts\activate
 python -m pip install --upgrade pip
 ```
 
-Add `.venv/` to `.gitignore`. On Windows activate with `.venv\Scripts\activate`.
+### Step 2: Lock Dependencies for Reproducibility
 
-### Step 2: Pin and Freeze Dependencies
-
-Record exact dependency versions for reproducible builds:
+`uv` resolves the full dependency graph into a universal `uv.lock`. Use
+`uv sync --frozen` in CI so a stale lock fails the build instead of silently
+resolving new versions.
 
 ```bash
-pip install requests==2.32.0
-pip freeze > requirements.txt
-cat requirements.txt
+uv lock                         # resolve and write uv.lock
+uv sync --frozen                # exact environment from the lockfile
+uv run pytest
 ```
 
-For libraries, list top-level dependencies in `pyproject.toml` instead, and
-avoid committing `requirements.txt` lockfiles unless building applications.
+Change dependencies with `uv add` / `uv remove`; never hand-edit `uv.lock`.
+Legacy: `pip install requests==2.32.0` followed by
+`pip freeze > requirements.txt`. That flow remains acceptable for
+pre-existing applications, but it is no longer the recommended default.
 
 ### Step 3: Add Type Annotations
 
@@ -95,66 +112,93 @@ reserve `typing.List` / `typing.Dict` for legacy codebases.
 
 ### Step 4: Configure Linting and Formatting
 
-Standardize on `ruff` for linting and `black` for formatting:
+Use `ruff` for both linting and formatting — one tool, one configuration:
 
 ```bash
-python -m pip install ruff black
-ruff check .
-black .
+uv run ruff check .
+uv run ruff format --check .
 ```
 
 Add a `pyproject.toml` section to keep settings shared across the team:
 
 ```toml
 [tool.ruff]
-target-version = "py39"
+target-version = "py311"
 line-length = 88
 
-[tool.black]
-line-length = 88
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ASYNC", "S"]
 ```
 
-### Step 5: Verify Types with mypy
+`ruff format --check` is the CI gate; `ruff check --fix` applies safe fixes.
+`black` remains a legacy formatter for projects not yet migrated — do not
+introduce it in new projects. Suppressions must carry a code and a reason,
+e.g. `# noqa: S603 - fixed argument list, no shell`.
 
-Run `mypy` in strict mode to catch type errors before they reach production:
+### Step 5: Verify Types with mypy or pyright
+
+Run a strict type checker before changes reach production. Pick one checker
+and keep it in CI:
 
 ```bash
-python -m pip install mypy
-mypy --strict src/
+uv add --dev mypy
+uv run mypy                     # reads [tool.mypy] from pyproject.toml
+```
+
+```toml
+[tool.mypy]
+strict = true
+files = ["src", "tests"]
+```
+
+```toml
+# Alternative: [tool.pyright] typeCheckingMode = "strict"
 ```
 
 Keep `py.typed` inside the package directory so downstream users can rely on
-your type hints.
+your type hints. Use `# type: ignore[code]` with a short justification rather
+than blanket ignores.
 
-### Step 6: Package with pyproject.toml
+### Step 6: Package with pyproject.toml (PEP 621)
 
-Use the modern PEP 621 layout with a build backend:
+Use a `src/` layout with a PEP 517 build backend (`hatchling` or `uv_build`):
 
 ```toml
 [build-system]
-requires = ["setuptools>=68"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling>=1.25"]
+build-backend = "hatchling.build"
+# Or: requires = ["uv_build>=0.8,<0.9"]; build-backend = "uv_build"
 
 [project]
 name = "myproject"
 version = "0.1.0"
 description = "A short summary of the project"
 readme = "README.md"
-requires-python = ">=3.9"
-dependencies = ["requests>=2.32"]
+requires-python = ">=3.11"
+dependencies = ["requests>=2.32,<3"]
 
 [project.optional-dependencies]
-dev = ["ruff", "black", "mypy", "pytest"]
+dev = ["ruff", "mypy", "pytest"]
 
-[tool.setuptools.packages.find]
-include = ["myproject*"]
+[tool.uv]
+package = true
+
+[tool.hatch.build.targets.wheel]
+packages = ["src/myproject"]
+
+[tool.pytest.ini_options]
+addopts = "-ra --strict-markers"
 ```
 
-Install the package in editable mode for development:
+Sync the project and its dev group from the lockfile:
 
 ```bash
-python -m pip install -e ".[dev]"
+uv sync --frozen                # CI and production
+uv run pytest
 ```
+
+For a full modern-tooling checklist — workspaces, inline scripts, coverage,
+Bandit/pip-audit/SBOM and OIDC publishing — see `python-modern-tooling`.
 
 ## Examples
 
@@ -198,16 +242,18 @@ if __name__ == "__main__":
 - [PEP 484 Type Hints](https://peps.python.org/pep-0484/)
 - [Python Packaging User Guide](https://packaging.python.org/en/latest/)
 - [pyproject.toml specification (PEP 621)](https://peps.python.org/pep-0621/)
+- [uv documentation](https://docs.astral.sh/uv/)
 - [ruff documentation](https://docs.astral.sh/ruff/)
 - [mypy documentation](https://mypy.readthedocs.io/)
 - [The Hitchhiker's Guide to Python](https://docs.python-guide.org/)
 
 ## Notes
 
-- Commit `requirements.txt` for applications but not for published libraries.
+- Commit `uv.lock` and `.python-version`; keep `.venv` out of version control.
+- Legacy `requirements.txt` is fine for older apps, but prefer `uv lock` + `uv sync --frozen`.
 - Add `.venv`, `__pycache__`, and `*.egg-info/` to `.gitignore`.
-- Run `ruff check . && mypy src/` in CI and as a pre-commit hook.
+- Run `uv run ruff check . && uv run ruff format --check . && uv run mypy` in CI.
 - Use `enum` for fixed value sets instead of string constants.
 - Favor `dataclasses` and `pydantic` over hand-written `__init__` methods.
-- On Windows use `py -m venv .venv` when `python3` is unavailable.
+- On Windows use `py -m pip install uv` when `python3` is unavailable.
 - Keep modules small; a file over 300 lines usually deserves splitting.

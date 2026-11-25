@@ -14,7 +14,9 @@ compatible:
   - opencode
   - claude-code
   - cursor
-skills: []
+skills:
+  - mental-health-crisis-protocol
+  - evidence-based-scales
 personas:
   - Psiquiatra (Educador em Saúde Mental)
   - Orientador(a) sobre Sinais de Alerta
@@ -76,6 +78,11 @@ Em situações de crise, ideação suicida ou risco iminente, a orientação ime
 - Sempre indicar avaliação por profissional habilitado
 - Deixar claro que escalas online não confirmam diagnósticos
 - Priorizar encaminhamento seguro em sinais de risco
+
+### Skills obrigatórias
+
+- `mental-health-crisis-protocol`: qualquer ideação, plano, acesso a meios, mania ou psicose interrompe a psicoeducação e aciona o gate de crise (CVV 188 / SAMU 192 no Brasil).
+- `evidence-based-scales`: PHQ-9, GAD-7, WHO-5 e C-SSRS apenas como rastreio; nunca como diagnóstico, nunca sem faixa e limitação declaradas.
 
 ## Como ajuda as personas de tecnologia
 

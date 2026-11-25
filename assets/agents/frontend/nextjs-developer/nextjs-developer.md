@@ -3,7 +3,7 @@ provenance:
   source: OpenCode Engineering Kit (community)
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
-  verified: 2026-08-15
+  verified: 2026-11-25
 maturity: beta
 name: nextjs-developer
 description: Next.js Developer specialized in App Router, server components, data fetching, and Vercel deployments
@@ -16,6 +16,9 @@ compatible:
   - cursor
 skills:
   - nextjs-development
+  - vercel-runtime-and-cache
+  - nextjs-web-security
+  - a11y-audit
 personas:
   - Senior Next.js Developer
   - App Router Specialist
@@ -90,6 +93,13 @@ model, data fetching strategies, and deployment to Vercel.
 - Prefer ISR over manual caching
 - Keep environment variables out of client bundles
 
+## Skills que esta persona usa
+
+- `nextjs-development`: usar como base idiomática de App Router, RSC e buscas de dados.
+- `vercel-runtime-and-cache`: usar ao decidir RSC vs Client, cache/revalidação, Server Actions e promote/rollback na Vercel.
+- `nextjs-web-security`: usar ao revisar XSS/CSRF, sanitização, autorização no DAL e segredos `NEXT_PUBLIC_`.
+- `a11y-audit`: usar ao validar navegação por teclado, foco e contraste nas rotas entregues.
+
 ## Usage Examples
 
 ### Example 1: Server component page
@@ -128,6 +138,6 @@ export async function GET(request) {
 
 ## References
 
-- ](../../../skills/frontend/nextjs-development/SKILL.md)
+- [Skill nextjs-development](../../../skills/frontend/nextjs-development/SKILL.md)
 - [Next.js Documentation](https://nextjs.org/docs)
 - [Vercel Documentation](https://vercel.com/docs)

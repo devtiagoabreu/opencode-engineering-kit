@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "design-review-critic",
+  "version": "0.1.0",
+  "category": "design",
+  "description": "Crítica independente de UI renderizada em 1280 e 390, light/dark, com veredito aprovar/rework, achados com evidência e separação entre correto e bom."
+}

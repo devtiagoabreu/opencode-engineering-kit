@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "generated": "2026-11-24T10:41:29Z",
+  "generated": "2026-11-25T13:29:33Z",
   "platforms": [
     "opencode",
     "claude-code",
@@ -472,7 +472,25 @@
         "cursor"
       ]
     },
+    "design-review-critic": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "design-system": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "design-tokens-pipeline": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -492,6 +510,15 @@
       ]
     },
     "ui-ux-design": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "ui-visual-craft": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -573,6 +600,15 @@
       ]
     },
     "vercel-deployment": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "vercel-runtime-and-cache": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -801,6 +837,15 @@
         "copilot"
       ]
     },
+    "a11y-audit": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "accessibility": {
       "type": "skill",
       "version": "0.1.0",
@@ -912,6 +957,42 @@
       ]
     },
     "git-workflow": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "adhd-executive-function": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "counseling-frameworks": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "evidence-based-scales": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "mental-health-crisis-protocol": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1064,6 +1145,15 @@
         "cursor"
       ]
     },
+    "python-modern-tooling": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "typescript-best-practices": {
       "type": "skill",
       "version": "0.1.0",
@@ -1092,6 +1182,15 @@
       ]
     },
     "lean-methodology": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "people-governance-psychology": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1364,6 +1463,15 @@
       ]
     },
     "auth-plugin-architecture": {
+      "type": "skill",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "nextjs-web-security": {
       "type": "skill",
       "version": "0.1.0",
       "compatible": [
@@ -1829,6 +1937,15 @@
         "cursor"
       ]
     },
+    "design-reviewer": {
+      "type": "design",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
     "designer-de-interiores": {
       "type": "design",
       "version": "0.1.0",
@@ -2280,6 +2397,15 @@
       ]
     },
     "metodologia-lean": {
+      "type": "management",
+      "version": "0.1.0",
+      "compatible": [
+        "opencode",
+        "claude-code",
+        "cursor"
+      ]
+    },
+    "psicologo-organizacional": {
       "type": "management",
       "version": "0.1.0",
       "compatible": [

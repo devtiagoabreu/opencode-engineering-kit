@@ -64,6 +64,7 @@ etc.) sempre de acordo com o que o usuário está querendo criar.
 | designer-de-interiores | `assets/agents/design/designer-de-interiores/designer-de-interiores.md` | Interiores |
 | designer-de-tecidos | `assets/agents/design/designer-de-tecidos/designer-de-tecidos.md` | Tecidos e estampas |
 | designer-digital | `assets/agents/design/designer-digital/designer-digital.md` | Design digital |
+| design-reviewer | `assets/agents/design/design-reviewer/design-reviewer.md` | Crítica de design e auditoria de UI |
 
 ### Marketing
 
@@ -123,6 +124,7 @@ etc.) sempre de acordo com o que o usuário está querendo criar.
 | Persona | Arquivo | Papel |
 |---------|---------|-------|
 | metodologia-lean | `assets/agents/management/metodologia-lean/metodologia-lean.md` | Lean |
+| psicologo-organizacional | `assets/agents/management/psicologo-organizacional/psicologo-organizacional.md` | Psicologia Organizacional / Governança de Pessoas |
 
 ### Cloud (certificações)
 

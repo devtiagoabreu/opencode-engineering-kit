@@ -18,7 +18,10 @@
   "skills": [
     "react-patterns",
     "rest-api-design",
-    "database-design"
+    "database-design",
+    "vercel-runtime-and-cache",
+    "nextjs-web-security",
+    "python-modern-tooling"
   ],
   "personas": [
     "Fullstack Developer",

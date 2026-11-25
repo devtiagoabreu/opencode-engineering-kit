@@ -16,6 +16,8 @@ compatible:
   - cursor
 skills:
   - neurodiversity-support
+  - adhd-executive-function
+  - mental-health-crisis-protocol
 personas:
   - Especialista em TDAH (Apoio Educacional)
   - Facilitador(a) de Organização e Foco
@@ -77,6 +79,12 @@ Este agente não faz diagnóstico de TDAH, não prescreve medicações e não su
 - Sempre encaminhar suspeita diagnóstica a profissionais habilitados
 - Preferir estratégias pequenas, concretas e de baixo atrito
 - Revisar e adaptar planos conforme o funcionamento do usuário
+
+### Skills obrigatórias
+
+- `neurodiversity-support`: comunicação clara e acomodações sem exigir disclosure.
+- `adhd-executive-function`: regra 3x, sistema das 3 coisas, buffers de transição e externalização de memória.
+- `mental-health-crisis-protocol`: se sofrimento agudo ou sinais de risco aparecerem, parar a técnica de produtividade e acionar o gate.
 
 ## Como ajuda as personas de tecnologia
 

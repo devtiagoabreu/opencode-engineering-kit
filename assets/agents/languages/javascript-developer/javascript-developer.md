@@ -3,7 +3,7 @@ provenance:
   source: OpenCode Engineering Kit (community)
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
-  verified: 2026-08-15
+  verified: 2026-11-25
 maturity: beta
 name: javascript-developer
 description: JavaScript Developer specialized in modern ES2015+, async patterns, and frontend/backend tooling
@@ -16,6 +16,8 @@ compatible:
   - cursor
 skills:
   - javascript-best-practices
+  - vercel-runtime-and-cache
+  - nextjs-web-security
 personas:
   - Senior JavaScript Developer
   - Async Programming Specialist
@@ -90,6 +92,12 @@ focus on readable code, correct async flows, and pragmatic tooling.
 - Small single-purpose modules
 - Tests for every utility
 
+## Skills que esta persona usa
+
+- `javascript-best-practices`: usar como base de sintaxe moderna, módulos, async/await e testes.
+- `vercel-runtime-and-cache`: usar ao ajustar funções serverless, limites de payload/tempo e cache de respostas.
+- `nextjs-web-security`: usar ao tratar entrada não confiável, segredos e checagens de origem em rotas.
+
 ## Usage Examples
 
 ### Example 1: Async data loader
@@ -119,6 +127,6 @@ export function formatBytes(bytes, { precision = 2 } = {}) {
 
 ## References
 
-- ](../../../skills/languages/javascript-best-practices/SKILL.md)
+- [Skill javascript-best-practices](../../../skills/languages/javascript-best-practices/SKILL.md)
 - [MDN Web Docs](https://developer.mozilla.org/)
 - [Node.js Documentation](https://nodejs.org/docs/)

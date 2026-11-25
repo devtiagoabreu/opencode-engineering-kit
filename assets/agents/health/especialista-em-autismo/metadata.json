@@ -3,9 +3,10 @@
   "description": "Especialista em TEA com apoio educacional em comunicação alternativa e estruturação visual de rotina, sem diagnóstico",
   "version": "0.1.0",
   "author": "devtiagoabreu",
+  "maturity": "beta",
   "tags": ["autismo", "tea", "acessibilidade", "neurodiversidade"],
   "compatible": ["opencode", "claude-code", "cursor"],
-  "skills": ["neurodiversity-support"],
+  "skills": ["neurodiversity-support", "mental-health-crisis-protocol"],
   "personas": ["Especialista em Transtorno do Espectro Autista (TEA)", "Facilitador(a) de Comunicação Alternativa"],
   "dependencies": [],
   "dependencies_resolved": true

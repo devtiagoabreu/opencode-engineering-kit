@@ -148,6 +148,31 @@ SaaS dashboard layout: Header + Sidebar + Breadcrumb + main area + user menu +
 theme selector. On mobile (<768px) collapse the sidebar into a drawer (`Sheet`);
 desktop ≥1024px shows it fixed.
 
+### Step 7: Descubra antes de criar
+
+Antes de montar UI do zero, consulte o catálogo e as informações da versão
+instalada:
+
+```bash
+npx shadcn search dialog       # procure um componente existente
+npx shadcn info --json dialog  # metadados legíveis por ferramenta
+```
+
+`search` evita duplicar padrões; `info --json` permite conferir arquivos,
+dependências e variantes antes de copiar. Fixe a versão do CLI quando o time
+exigir reproducibilidade.
+
+### Step 8: Gate de lint e registries de terceiros
+
+Trate a skill `shadcn-ui/lint` como gate de revisão: rode no PR e falhe quando o
+código sair dos padrões do projeto (tokens, variantes, composição, foco e
+acessibilidade). Gate não substitui teste de teclado nem revisão humana.
+
+Registries de terceiros exigem revisão antes de `add`: verifique origem, versão
+ou commit fixado, arquivos que serão gravados e dependências adicionadas. Não
+aceite registry arbitrário em CI sem revisão; prefira o registry oficial e os
+componentes copiados para o repositório.
+
 ## Examples
 
 ### Themed button variants
@@ -184,6 +209,8 @@ desktop ≥1024px shows it fixed.
 - Use Radix accessibility defaults (focus rings via `--ring`, keyboard nav).
 - Use spacing scale (`space-y-*`, `p-*`, `gap-*`) instead of magic values.
 - Consistent empty/loading/error states across all lists and tables.
+- Rode `npx shadcn search` antes de criar UI e `npx shadcn info --json` antes de copiar.
+- Use `shadcn-ui/lint` como gate; registries de terceiros só após revisão e pinagem.
 
 ## References
 

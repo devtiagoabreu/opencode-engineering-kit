@@ -49,7 +49,10 @@ database/rls-tenancy-pattern
 database/sqlalchemy-alembic
 database/sql-optimization
 database/sql-server-database
+design/design-review-critic
 design/design-system
+design/design-tokens-pipeline
+design/ui-visual-craft
 design/diagram-design
 design/ui-ux-design
 devops/ci-cd-pipeline
@@ -61,6 +64,7 @@ devops/onpremise-deployment
 devops/self-host-deployment
 devops/terraform-aws
 devops/vercel-deployment
+devops/vercel-runtime-and-cache
 documentation/doc-to-markdown
 education/assessment-and-feedback
 education/classroom-management
@@ -85,6 +89,7 @@ finance/financial-statements
 finance/fiscal-engine-integration
 finance/tax-compliance
 finance/usage-based-billing
+frontend/a11y-audit
 frontend/accessibility
 frontend/css-best-practices
 frontend/form-validation
@@ -98,6 +103,10 @@ frontend/state-management
 frontend/tanstack-query
 frontend/transactional-email-patterns
 git/git-workflow
+health/adhd-executive-function
+health/counseling-frameworks
+health/evidence-based-scales
+health/mental-health-crisis-protocol
 health/neurodiversity-support
 health/nutrition
 humanities/criminal-law
@@ -114,10 +123,12 @@ languages/javascript-best-practices
 languages/language-learning
 languages/php-best-practices
 languages/python-best-practices
+languages/python-modern-tooling
 languages/typescript-best-practices
 logistics/route-optimization
 logistics/supply-chain-management
 management/lean-methodology
+management/people-governance-psychology
 marketing/digital-marketing
 marketing/political-campaign-marketing
 marketing/traffic-management
@@ -148,6 +159,7 @@ science/chemistry-basics
 science/physics-applied
 science/scientific-data-retrieval
 security/auth-plugin-architecture
+security/nextjs-web-security
 security/owasp-top-10
 security/rbac-authorization
 security/secure-coding

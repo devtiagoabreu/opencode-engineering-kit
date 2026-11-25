@@ -3,8 +3,8 @@ provenance:
   source: OpenCode Engineering Kit (community)
   source_url: https://github.com/devtiagoabreu/opencode-engineering-kit
   license: MIT
-  verified: 2026-08-08
-maturity: stable
+  verified: 2026-11-25
+maturity: beta
 name: backend-developer
 description: Backend Developer specialized in APIs and distributed systems
 version: 0.1.0
@@ -17,6 +17,8 @@ compatible:
 skills:
   - api-design
   - python-testing
+  - python-modern-tooling
+  - nextjs-web-security
 personas:
   - Senior Backend Developer
   - Systems Architect
@@ -98,6 +100,13 @@ security, and reliability.
 - Test-driven development
 - Documentation as code
 
+## Skills que esta persona usa
+
+- `api-design`: usar ao definir contratos REST/GraphQL, versionamento e erros consistentes.
+- `python-testing`: usar ao cobrir serviços Python com testes automatizados e fixtures.
+- `python-modern-tooling`: usar ao padronizar ambiente com `uv`, lock determinístico, ruff, tipagem e auditoria de dependências.
+- `nextjs-web-security`: usar ao avaliar a fronteira web/API: autorização no DAL, webhooks, sanitização e segredos.
+
 ## Usage Examples
 
 ### Example 1: FastAPI API
@@ -143,6 +152,6 @@ CREATE INDEX idx_usuarios_email ON usuarios(email);
 
 ## References
 
-- ](../../../skills/backend/api-design/SKILL.md)
+- [Skill api-design](../../../skills/backend/api-design/SKILL.md)
 - [FastAPI Documentation](https://fastapi.tiangolo.com/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)

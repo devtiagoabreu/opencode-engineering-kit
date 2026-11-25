@@ -154,6 +154,15 @@
 ## database/sqlalchemy-alembic
   (no dependencies)
 
+## design/design-review-critic
+  (no dependencies)
+
+## design/design-tokens-pipeline
+  (no dependencies)
+
+## design/ui-visual-craft
+  (no dependencies)
+
 ## design/design-system
   (no dependencies)
 
@@ -184,6 +193,9 @@
   (no dependencies)
 
 ## devops/terraform-aws
+  (no dependencies)
+
+## devops/vercel-runtime-and-cache
   (no dependencies)
 
 ## devops/vercel-deployment
@@ -261,6 +273,9 @@
 ## finance/usage-based-billing
   (no dependencies)
 
+## frontend/a11y-audit
+  (no dependencies)
+
 ## frontend/accessibility
   (no dependencies)
 
@@ -298,6 +313,18 @@
   (no dependencies)
 
 ## git/git-workflow
+  (no dependencies)
+
+## health/adhd-executive-function
+  (no dependencies)
+
+## health/counseling-frameworks
+  (no dependencies)
+
+## health/evidence-based-scales
+  (no dependencies)
+
+## health/mental-health-crisis-protocol
   (no dependencies)
 
 ## health/neurodiversity-support
@@ -345,6 +372,9 @@
 ## languages/php-best-practices
   (no dependencies)
 
+## languages/python-modern-tooling
+  (no dependencies)
+
 ## languages/python-best-practices
   (no dependencies)
 
@@ -355,6 +385,9 @@
   (no dependencies)
 
 ## logistics/supply-chain-management
+  (no dependencies)
+
+## management/people-governance-psychology
   (no dependencies)
 
 ## management/lean-methodology
@@ -448,6 +481,9 @@
   (no dependencies)
 
 ## security/auth-plugin-architecture
+  (no dependencies)
+
+## security/nextjs-web-security
   (no dependencies)
 
 ## security/owasp-top-10

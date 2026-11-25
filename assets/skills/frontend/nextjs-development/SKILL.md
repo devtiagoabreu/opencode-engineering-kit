@@ -33,11 +33,12 @@ This skill is a guide to building production-grade applications with Next.js
 using the App Router. It covers project structure, the server/client component
 model, data fetching strategies, and deployment to Vercel. Following these
 patterns keeps applications fast, maintainable, and aligned with the framework
-recommendations. It targets Next.js 14 and newer.
+recommendations. It targets current Next.js versions with the App Router;
+confirme a versão instalada antes de usar qualquer API específica.
 
 ## Prerequisites
 
-- Node.js 18 or newer installed locally
+- Node.js 20 or newer installed locally (confirme o mínimo na versão instalada)
 - An existing Next.js project or the ability to create one
 - Understanding of React fundamentals and JavaScript
 
@@ -114,10 +115,8 @@ export default function SearchInput({ onSearch }) {
 
 ```javascript
 export default async function ProfilePage({ params }) {
-  const res = await fetch(`/api/users/${params.id}`, {
-    next: { revalidate: 3600 },
-  });
-  const user = await res.json();
+  const { id } = await params; // params é assíncrono nas versões recentes
+  const user = await getUser(id); // acesse o serviço/DAL, não um Route Handler interno
   return <h1>{user.name}</h1>;
 }
 ```
@@ -174,12 +173,25 @@ Reference them safely:
 const dbUrl = process.env.DATABASE_URL;
 ```
 
+## Skills complementares e docs versionadas
+
+Para runtime, cache, revalidação, limites de Functions, promoção e verificação
+ponta a ponta, use
+[runtime e cache](../../devops/vercel-runtime-and-cache/SKILL.md). Para XSS/CSRF,
+autorização no DAL, validação de payload, webhooks e segredos, use
+[segurança web Next.js](../../security/nextjs-web-security/SKILL.md).
+
+A API muda entre versões: leia os docs instalados em
+`node_modules/next/dist/docs` em vez de confiar na memória do modelo. Em
+particular, `params` e `searchParams` são assíncronos nas versões recentes —
+use `await` antes de ler os campos e confirme na versão instalada.
+
 ## Common Pitfalls
 
 - Using client components for everything and losing the server rendering benefits
 - Fetching the same data in multiple components instead of lifting to a parent
 - Hard-coding environment variables or API URLs
-- Forgetting `next: { revalidate }` for static content that changes
+- Ignorando tags de cache/revalidação quando o dado muda (veja a skill de runtime e cache)
 
 ## Examples
 
@@ -188,10 +200,12 @@ const dbUrl = process.env.DATABASE_URL;
 ```javascript
 // app/blog/[slug]/page.js
 export default async function PostPage({ params }) {
-  const post = await getPost(params.slug);
+  const { slug } = await params; // params é uma Promise nas versões recentes
+  const post = await getPost(slug);
   return (
     <article>
       <h1>{post.title}</h1>
+      {/* HTML vindo de terceiros exige sanitização: veja security/nextjs-web-security */}
       <div dangerouslySetInnerHTML={{ __html: post.content }} />
     </article>
   );
