@@ -11,8 +11,8 @@ automation-engineer
 backend-developer
 bailarina
 bi-analyst
-cabeleireiro
 c-developer
+cabeleireiro
 code-reviewer
 contador
 controladoria
@@ -25,10 +25,10 @@ data-engineer
 data-scientist
 delphi-developer
 desenhista-tecnico
+design-reviewer
 designer-de-interiores
 designer-de-tecidos
 designer-digital
-design-reviewer
 devops-engineer
 embedded-engineer
 engenheiro-civil
@@ -67,6 +67,7 @@ mobile-developer
 musico
 nextjs-developer
 nutricionista
+operador-google-workspace
 oracle-dba
 orquestrador
 pedreiro

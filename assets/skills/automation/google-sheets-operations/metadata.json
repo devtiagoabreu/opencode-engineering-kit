@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "google-sheets-operations",
+  "version": "0.1.0",
+  "category": "automation",
+  "description": "Read, stage and write Google Sheets v4 ranges safely with A1 notation, batching, value types and approval gates."
+}

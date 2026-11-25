@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "google-drive-operations",
+  "version": "0.1.0",
+  "category": "automation",
+  "description": "Perform safe Drive v3 listing, search, upload, export and permission operations with pagination and human approval for destructive changes."
+}

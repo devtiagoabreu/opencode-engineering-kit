@@ -182,10 +182,12 @@ e `google-cloud-powershell` desde 2026-07-06.
 ## 6. Sobreposição com ativos existentes do kit
 
 Não duplicar: `google-workspace-analytics`, `google-cloud-architecture`, `authentication`,
-`browser-use-automation`, `llm-multi-provider`. Novos ativos, se aprovados, devem ser `beta` e
-complementares — candidatos: `google-workspace-oauth`, `google-drive-operations`,
-`google-sheets-operations`, `google-calendar-operations`, `google-docs-operations`,
-`google-photos-api`, `google-cloud-mcp-toolsets`.
+`browser-use-automation`, `llm-multi-provider`. Os candidatos foram implementados em
+2026-11-25 como ativos `beta` complementares: `google-workspace-oauth`,
+`google-drive-operations`, `google-sheets-operations`, `google-calendar-operations`,
+`google-docs-operations`, `google-photos-api` e `google-cloud-mcp-toolsets`, além do agente
+`operador-google-workspace`. Padrões e checklists foram adaptados das fontes oficiais acima;
+nenhum código/docs upstream foram copiados.
 
 ## 7. Exclusões explícitas
 

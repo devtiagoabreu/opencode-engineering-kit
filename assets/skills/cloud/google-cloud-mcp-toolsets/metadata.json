@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "google-cloud-mcp-toolsets",
+  "version": "0.1.0",
+  "category": "cloud",
+  "description": "Operate Google Cloud through official MCP toolsets with least-privilege IAM, read/apply separation and auditable changes."
+}

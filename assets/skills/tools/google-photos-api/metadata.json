@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "google-photos-api",
+  "version": "0.1.0",
+  "category": "tools",
+  "description": "Work with Google Photos safely via Picker API selection and Library API app-created media, respecting removed scopes and privacy limits."
+}

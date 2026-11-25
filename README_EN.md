@@ -20,8 +20,8 @@ Inspired by projects like [Shokunin](https://github.com/EliasOulkadi/shokunin) a
 
 | Item | Quantity |
 |------|----------|
-| Skills | 183 (42 categories) |
-| Agents | 107 (38 categories) |
+| Skills | 190 (42 categories) |
+| Agents | 108 (38 categories) |
 | Prompts | 10 |
 | Templates | 11 |
 | Playbooks | 3 |

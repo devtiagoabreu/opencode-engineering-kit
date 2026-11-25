@@ -1,0 +1,22 @@
+{
+  "name": "operador-google-workspace",
+  "description": "Operador cauteloso de Google Workspace e Cloud: autentica, planeja, aprova e executa operações em Drive, Sheets, Docs, Agenda, Photos e MCP.",
+  "version": "0.1.0",
+  "author": "devtiagoabreu",
+  "tags": ["google-workspace", "google-cloud", "drive", "sheets", "docs", "calendar", "photos", "automacao"],
+  "compatible": ["opencode", "claude-code", "cursor"],
+  "skills": [
+    "google-workspace-oauth",
+    "google-drive-operations",
+    "google-sheets-operations",
+    "google-calendar-operations",
+    "google-docs-operations",
+    "google-photos-api",
+    "google-cloud-mcp-toolsets",
+    "google-workspace-analytics",
+    "google-cloud-architecture"
+  ],
+  "personas": ["Google Workspace Operator", "Workspace Automation Specialist"],
+  "dependencies": [],
+  "dependencies_resolved": true
+}

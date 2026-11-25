@@ -1,11 +1,11 @@
 {
   "schema_version": "1.0.0",
   "version": "0.1.0",
-  "commit": "d351f7c",
-  "generated": "2026-11-25T13:29:33Z",
+  "commit": "51a1edc",
+  "generated": "2026-11-25T15:26:32Z",
   "counts": {
-    "skills": 183,
-    "agents": 107,
+    "skills": 190,
+    "agents": 108,
     "prompts": 10,
     "templates": 11,
     "commands": 7,

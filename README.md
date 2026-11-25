@@ -19,8 +19,8 @@ Inspirado em projetos como [Shokunin](https://github.com/EliasOulkadi/shokunin) 
 
 | Item | Quantidade |
 |------|-----------|
-| Skills | 183 (42 categorias) |
-| Agents | 107 (38 categorias) |
+| Skills | 190 (42 categorias) |
+| Agents | 108 (38 categorias) |
 | Prompts | 10 |
 | Templates | 11 |
 | Playbooks | 3 |

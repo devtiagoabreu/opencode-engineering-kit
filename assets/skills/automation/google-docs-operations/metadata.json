@@ -1,0 +1,13 @@
+{
+  "schema_version": "1.0.0",
+  "generated_at": "2026-11-25T00:00:00Z",
+  "validated_at": null,
+  "validation_passed": false,
+  "warnings": [],
+  "dependencies_resolved": true,
+  "dependencies": [],
+  "name": "google-docs-operations",
+  "version": "0.1.0",
+  "category": "automation",
+  "description": "Edit Google Docs v1 documents with batchUpdate, index-safe insertion, revision checks and export via Drive."
+}

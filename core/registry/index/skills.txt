@@ -19,6 +19,10 @@
   - hairdressing
   - makeup-artistry
   - screenwriting
+  - google-calendar-operations
+  - google-docs-operations
+  - google-drive-operations
+  - google-sheets-operations
   - llm-workflow-orchestration
   - n8n-workflow-automation
   - aircraft-mechanics
@@ -33,6 +37,7 @@
   - rest-api-design
   - aws-cloud-architecture
   - google-cloud-architecture
+  - google-cloud-mcp-toolsets
   - code-review-checklist
   - customer-relationship
   - ecommerce-commerce
@@ -159,6 +164,7 @@
   - physics-applied
   - scientific-data-retrieval
   - auth-plugin-architecture
+  - google-workspace-oauth
   - nextjs-web-security
   - owasp-top-10
   - rbac-authorization
@@ -170,6 +176,7 @@
   - python-testing
   - unit-testing
   - code-knowledge-graph
+  - google-photos-api
   - git-advanced
   - ocekit-manager
   - repo-to-llm

@@ -19,6 +19,10 @@ arts/fashion-design
 arts/hairdressing
 arts/makeup-artistry
 arts/screenwriting
+automation/google-calendar-operations
+automation/google-docs-operations
+automation/google-drive-operations
+automation/google-sheets-operations
 automation/llm-workflow-orchestration
 automation/n8n-workflow-automation
 automotive/aircraft-mechanics
@@ -33,6 +37,7 @@ backend/prisma-orm
 backend/rest-api-design
 cloud/aws-cloud-architecture
 cloud/google-cloud-architecture
+cloud/google-cloud-mcp-toolsets
 code-review/code-review-checklist
 commercial/customer-relationship
 commercial/ecommerce-commerce
@@ -46,15 +51,15 @@ database/nosql-modeling
 database/oracle-database
 database/postgresql-database
 database/rls-tenancy-pattern
-database/sqlalchemy-alembic
 database/sql-optimization
 database/sql-server-database
+database/sqlalchemy-alembic
 design/design-review-critic
 design/design-system
 design/design-tokens-pipeline
-design/ui-visual-craft
 design/diagram-design
 design/ui-ux-design
+design/ui-visual-craft
 devops/ci-cd-pipeline
 devops/docker-best-practices
 devops/incident-response
@@ -159,6 +164,7 @@ science/chemistry-basics
 science/physics-applied
 science/scientific-data-retrieval
 security/auth-plugin-architecture
+security/google-workspace-oauth
 security/nextjs-web-security
 security/owasp-top-10
 security/rbac-authorization
@@ -171,6 +177,7 @@ testing/python-testing
 testing/unit-testing
 tools/code-knowledge-graph
 tools/git-advanced
+tools/google-photos-api
 tools/ocekit-manager
 tools/repo-to-llm
 tools/session-memory

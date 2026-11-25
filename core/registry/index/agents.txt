@@ -10,6 +10,7 @@
   - maquiador
   - roteirista
   - automation-engineer
+  - operador-google-workspace
   - mecanico
   - mecanico-de-aviao
   - backend-developer

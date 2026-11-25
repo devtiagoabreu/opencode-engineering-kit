@@ -172,6 +172,13 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `financial-statements` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `controllership-close` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `fiscal-engine-integration` | Receita Federal do Brasil — calculadora-rtc-regime-regular | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | 2026-11-24 |
+| `google-workspace-oauth` | OpenCode Engineering Kit (community) — adaptado de google/skills e google-auth-* | https://github.com/google/skills | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-drive-operations` | OpenCode Engineering Kit (community) — adaptado de googleworkspace/apps-script-samples | https://github.com/googleworkspace/apps-script-samples | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-sheets-operations` | OpenCode Engineering Kit (community) — adaptado de googleworkspace/node-samples | https://github.com/googleworkspace/node-samples | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-calendar-operations` | OpenCode Engineering Kit (community) — adaptado de googleworkspace/apps-script-samples | https://github.com/googleworkspace/apps-script-samples | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-docs-operations` | OpenCode Engineering Kit (community) — adaptado de googleworkspace/apps-script-samples | https://github.com/googleworkspace/apps-script-samples | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-photos-api` | OpenCode Engineering Kit (community) — adaptado de googlesamples/google-photos | https://github.com/googlesamples/google-photos | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
+| `google-cloud-mcp-toolsets` | OpenCode Engineering Kit (community) — adaptado de google/mcp e googleapis/gcloud-mcp | https://github.com/google/mcp | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
 
 ## Personas (Agents)
 
@@ -290,3 +297,4 @@ frontmatter. Fontes citadas são públicas e verificadas na data indicada.
 | `billing-meter-spec` | Polar | https://github.com/polarsource/polar | Apache-2.0 | 2026-11-23 |
 | `monthly-close-checklist` | OpenCode Engineering Kit (community) | https://github.com/devtiagoabreu/opencode-engineering-kit | MIT | 2026-11-23 |
 | `fiscal-calculation-record` | Receita Federal do Brasil — calculadora-rtc-regime-regular | https://github.com/ReceitaFederal/calculadora-rtc-regime-regular | MIT | 2026-11-24 |
+| `operador-google-workspace` | OpenCode Engineering Kit (community) — adaptado de google/skills e gemini-cli-extensions/workspace | https://github.com/google/skills | Apache-2.0 (upstream); MIT (adapter) | 2026-11-25 |
