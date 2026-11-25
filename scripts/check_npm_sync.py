@@ -23,7 +23,8 @@ def sha256(path: Path) -> str:
 
 
 def expected_files(cli: Path, patterns: list[str]) -> set[str]:
-    out: set[str] = set()
+    # npm always includes package.json, even when it is not listed in `files`.
+    out: set[str] = {"package.json"}
     for pattern in patterns:
         p = cli / pattern
         if p.is_dir():
@@ -79,16 +80,20 @@ def main() -> int:
                     tf.extractall(unpacked, filter="data")
                 except TypeError:  # Python < 3.12
                     tf.extractall(unpacked)
+            # npm tarballs wrap everything in a top-level `package/` folder.
+            root_dir = unpacked / "package"
+            if not root_dir.is_dir():
+                root_dir = unpacked
             published = {
-                p.relative_to(unpacked).as_posix()
-                for p in unpacked.rglob("*")
+                p.relative_to(root_dir).as_posix()
+                for p in root_dir.rglob("*")
                 if p.is_file()
             }
             report["published_files"] = len(published)
             report["missing_in_npm"] = sorted(expected - published)
             report["extra_in_npm"] = sorted(published - expected)
             for rel in sorted(expected & published):
-                if sha256(root / "cli" / rel) != sha256(unpacked / rel):
+                if sha256(root / "cli" / rel) != sha256(root_dir / rel):
                     report["different"].append(rel)
             report["ok"] = not (
                 report["missing_in_npm"]

@@ -42,6 +42,22 @@ npm whoami --userconfig=$tmp --registry=https://registry.npmjs.org
 
 Se o token apareceu em chat/log, revogue-o e gere outro.
 
+### Armadilhas observadas em 2026-11-25 (publicação 0.1.1)
+
+- O diretório `Temp\opencode` pode ser **limpo** entre comandos, apagando o
+  `.npmrc` e o wrapper. Guarde ambos em `C:\Users\tiago\.local\share\opencode\`
+  (estável). Se `npm publish` der `ENEEDAUTH`, refaça o login antes de continuar.
+- O login deve ser explícito: `npm login --auth-type=web`. Sem isso ele fica
+  preso esperando input e nunca mostra a URL.
+- O PowerShell reporta `Exit code: 1` mesmo quando o login/publish **sucedeu**,
+  porque os `npm notice` vão para stderr e são tratados como erro nativo.
+  Confirme com `npm whoami` e com o próprio texto `+ pacote@versão`, não pelo
+  exit code.
+- São **duas aprovações no browser**: `/login/cli/<id>` (login) e, depois,
+  `/auth/cli/<id>` (publicação). Aprovar um não aprova o outro.
+- Se a URL de publicação ficar em `202` (pending) até expirar, o publish não
+  acontece — gere um novo (`npm publish`) e aprove a nova URL.
+
 ## O problema: 2FA em shell não interativo
 
 Com um token comum, `npm publish` falha assim:
